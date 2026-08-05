@@ -1,0 +1,60 @@
+[
+  {
+    "slug": "hiking",
+    "title": "등산가자 개인정보 처리방침",
+    "src": "01",
+    "langs": [
+      "ko",
+      "en"
+    ]
+  },
+  {
+    "slug": "griddy",
+    "title": "Griddy — 개인정보처리방침 & 고객지원",
+    "src": "04",
+    "langs": [
+      "ko",
+      "en",
+      "ja"
+    ]
+  },
+  {
+    "slug": "sseuk",
+    "title": "쓱쓱가계부 — 고객지원 & 개인정보처리방침",
+    "src": "05"
+  },
+  {
+    "slug": "sseuk-support",
+    "title": "쓱쓱가계부 고객지원",
+    "src": "11"
+  },
+  {
+    "slug": "valley",
+    "title": "계곡가자 개인정보처리방침 & 고객지원",
+    "src": "06",
+    "langs": [
+      "ko",
+      "en"
+    ]
+  },
+  {
+    "slug": "valley-en",
+    "title": "Korea Water Escapes — Privacy Policy & Support",
+    "moved": "https://wingoblin.github.io/policy/valley/#en"
+  },
+  {
+    "slug": "valley-support",
+    "title": "계곡가자 고객지원",
+    "src": "07"
+  },
+  {
+    "slug": "ssagenalja",
+    "title": "싸게날자 개인정보 처리방침",
+    "src": "13"
+  },
+  {
+    "slug": "gwansang",
+    "title": "내가 왕이 될 상인가? 개인정보처리방침",
+    "src": "10"
+  }
+]

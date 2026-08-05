@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>쓱쓱가계부 고객지원 · 네모팩토리</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto; max-width: 720px; padding: 32px 20px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+    font-size: 16px; line-height: 1.75;
+    color: #222; background: #fff;
+    word-break: keep-all; overflow-wrap: anywhere;
+  }
+  h1 { font-size: 26px; line-height: 1.4; margin: 32px 0 8px; }
+  h2 { font-size: 19px; line-height: 1.45; margin: 32px 0 8px; padding-top: 8px; border-top: 1px solid #eee; }
+  h3 { font-size: 17px; margin: 24px 0 6px; }
+  p, ul, ol { margin: 10px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: #1a5fd0; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f6f7f9; }
+  code { background: #f2f3f5; padding: 1px 5px; border-radius: 4px; font-size: 14px; }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid #eee; font-size: 13px; color: #888; }
+  footer a { color: #888; }
+  /* 언어 탭 — JS 가 없으면 탭을 숨기고 모든 언어를 그냥 다 보여준다 */
+  .langs { display: none; }
+  .langs a {
+    display: inline-block; padding: 6px 14px; margin: 0 6px 6px 0;
+    border: 1px solid #ddd; border-radius: 999px;
+    font-size: 14px; text-decoration: none; color: #555;
+  }
+  .langs a.on { background: #222; border-color: #222; color: #fff; }
+  html.js .langs { display: block; margin-bottom: 8px; }
+  html.js .lang { display: none; }
+  html.js .lang.on { display: block; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e3e5e8; background: #16181c; }
+    h2 { border-top-color: #2a2d33; }
+    a { color: #7aa7f0; }
+    th, td { border-color: #2a2d33; }
+    th { background: #1e2126; }
+    code { background: #22262c; }
+    footer { border-top-color: #2a2d33; color: #7d8188; }
+    .langs a { border-color: #333840; color: #b9bec6; }
+    .langs a.on { background: #e3e5e8; border-color: #e3e5e8; color: #16181c; }
+  }
+</style>
+<script>
+  // 탭이 그려지기 전에 붙여야 언어가 바뀌며 깜빡이지 않는다
+  document.documentElement.className = 'js';
+  addEventListener('DOMContentLoaded', function () {
+    var secs = document.querySelectorAll('.lang');
+    if (!secs.length) return;
+    var have = [].map.call(secs, function (s) { return s.dataset.lang; });
+    function pick() {
+      var want = location.hash.slice(1) || (navigator.language || 'en').slice(0, 2);
+      return have.indexOf(want) >= 0 ? want : have[0];
+    }
+    function show() {
+      var on = pick();
+      [].forEach.call(secs, function (s) { s.classList.toggle('on', s.dataset.lang === on); });
+      [].forEach.call(document.querySelectorAll('.langs a'), function (a) {
+        a.classList.toggle('on', a.hash.slice(1) === on);
+      });
+      document.documentElement.lang = on;
+    }
+    addEventListener('hashchange', show);
+    show();
+  });
+</script>
+</head>
+<body>
+<h1>쓱쓱가계부 고객지원</h1><p>가볍게 쓰는 우리 가계부 🐹</p><h2>문의하기</h2><div><p>이용 중 궁금한 점이나 불편한 점이 있으면 이메일로 연락 주세요. 확인 후 빠르게 답변드리겠습니다.</p><p>· 이메일: <a href="mailto:koreatong.kr@gmail.com">koreatong.kr@gmail.com</a></p></div><h2>자주 묻는 질문</h2><div><p>Q. 제 가계부 데이터는 어디에 저장되나요?</p><p>모든 데이터와 사진은 외부 서버로 전송되지 않고 <b>이용자의 기기 안에만</b> 안전하게 저장됩니다.</p></div><div><p>Q. 기기를 바꾸면 데이터를 옮길 수 있나요?</p><p>설정 &gt; 백업/복원에서 데이터를 파일로 <b>백업</b>한 뒤, 새 기기에서 <b>복원</b>하면 그대로 이어서 사용할 수 있습니다.</p></div><div><p>Q. 프리미엄(광고 제거)을 샀는데 광고가 다시 보여요.</p><p>앱의 프리미엄 화면에서 <b>구매 복원</b>을 눌러 주세요. 구매했던 것과 같은 스토어 계정(Apple 또는 Google)이면 추가 비용 없이 다시 적용됩니다.</p></div><div><p>Q. 데이터를 모두 지우고 싶어요.</p><p>앱 안에서 항목을 삭제하거나, 앱을 삭제하면 모든 데이터와 사진이 함께 영구 삭제됩니다.</p></div><h2>개인정보 처리방침</h2><p><a href="../sseuk/">개인정보 처리방침 보기</a></p><div>© 2026 쓱쓱가계부 · 문의: koreatong.kr@gmail.com</div>
+
+<footer>
+  ⓒ Nemo Factory · 문의 <a href="mailto:koreatong.kr@gmail.com">koreatong.kr@gmail.com</a><br>
+  <a href="../">전체 목록</a>
+</footer>
+</body>
+</html>
