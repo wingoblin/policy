@@ -5,7 +5,9 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 const apps = JSON.parse(readFileSync('apps.json', 'utf8'));
 const tpl = readFileSync('_template.html', 'utf8');
 
-const LANG_NAME = { ko: '한국어', en: 'English', ja: '日本語' };
+// 닻(#ko·#en·#ja·#zhHant)은 앱의 locale.ts 가 만드는 LANG 값과 **글자까지 같아야 한다**.
+// 앱이 링크를 열 때 그 값을 그대로 붙인다 — 'zh' 로 줄이면 간체 기기까지 번체 판으로 온다.
+const LANG_NAME = { ko: '한국어', en: 'English', ja: '日本語', zhHant: '繁體中文' };
 
 for (const { slug, title, langs, moved } of apps) {
   // moved: 스토어에 이미 등록된 옛 주소. 죽이지 않고 새 주소로 보낸다.
