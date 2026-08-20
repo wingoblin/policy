@@ -77,5 +77,14 @@
     "slug": "ttangullim",
     "title": "땅울림 개인정보 처리방침",
     "src": "17"
+  },
+  {
+    "slug": "nogeumbiseo",
+    "title": "녹음비서 개인정보처리방침",
+    "src": "18",
+    "langs": [
+      "ko",
+      "en"
+    ]
   }
 ]

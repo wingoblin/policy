@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>녹음비서 개인정보처리방침 · 네모팩토리</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto; max-width: 720px; padding: 32px 20px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+    font-size: 16px; line-height: 1.75;
+    color: #222; background: #fff;
+    word-break: keep-all; overflow-wrap: anywhere;
+  }
+  h1 { font-size: 26px; line-height: 1.4; margin: 32px 0 8px; }
+  h2 { font-size: 19px; line-height: 1.45; margin: 32px 0 8px; padding-top: 8px; border-top: 1px solid #eee; }
+  h3 { font-size: 17px; margin: 24px 0 6px; }
+  p, ul, ol { margin: 10px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: #1a5fd0; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f6f7f9; }
+  code { background: #f2f3f5; padding: 1px 5px; border-radius: 4px; font-size: 14px; }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid #eee; font-size: 13px; color: #888; }
+  footer a { color: #888; }
+  /* 언어 탭 — JS 가 없으면 탭을 숨기고 모든 언어를 그냥 다 보여준다 */
+  .langs { display: none; }
+  .langs a {
+    display: inline-block; padding: 6px 14px; margin: 0 6px 6px 0;
+    border: 1px solid #ddd; border-radius: 999px;
+    font-size: 14px; text-decoration: none; color: #555;
+  }
+  .langs a.on { background: #222; border-color: #222; color: #fff; }
+  html.js .langs { display: block; margin-bottom: 8px; }
+  html.js .lang { display: none; }
+  html.js .lang.on { display: block; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e3e5e8; background: #16181c; }
+    h2 { border-top-color: #2a2d33; }
+    a { color: #7aa7f0; }
+    th, td { border-color: #2a2d33; }
+    th { background: #1e2126; }
+    code { background: #22262c; }
+    footer { border-top-color: #2a2d33; color: #7d8188; }
+    .langs a { border-color: #333840; color: #b9bec6; }
+    .langs a.on { background: #e3e5e8; border-color: #e3e5e8; color: #16181c; }
+  }
+</style>
+<script>
+  // 탭이 그려지기 전에 붙여야 언어가 바뀌며 깜빡이지 않는다
+  document.documentElement.className = 'js';
+  addEventListener('DOMContentLoaded', function () {
+    var secs = document.querySelectorAll('.lang');
+    if (!secs.length) return;
+    var have = [].map.call(secs, function (s) { return s.dataset.lang; });
+    function pick() {
+      var want = location.hash.slice(1);
+      if (!want) {
+        // 닻이 없으면 브라우저 언어로 고른다 — 스토어 목록에서 맨 주소로 들어오는 길이다.
+        // 중국어만 두 글자로 못 자른다. zh-TW·zh-HK·zh-Hant-* 는 번체, zh-CN·zh-SG 는 간체라
+        // 같은 'zh' 로 묶으면 간체 사용자에게 번체 판을 보여주게 된다(앱의 locale.ts 와 같은 판정).
+        var nav = navigator.language || 'en';
+        want = /^zh/i.test(nav) && /(Hant|TW|HK|MO)/i.test(nav) ? 'zhHant' : nav.slice(0, 2);
+      }
+      // 없는 언어로 들어오면 영문 — 첫 구역(한국어)으로 떨구면 간체·프랑스어 기기가 한글 방침을 본다.
+      return have.indexOf(want) >= 0 ? want : have.indexOf('en') >= 0 ? 'en' : have[0];
+    }
+    function show() {
+      var on = pick();
+      [].forEach.call(secs, function (s) { s.classList.toggle('on', s.dataset.lang === on); });
+      [].forEach.call(document.querySelectorAll('.langs a'), function (a) {
+        a.classList.toggle('on', a.hash.slice(1) === on);
+      });
+      document.documentElement.lang = on;
+    }
+    addEventListener('hashchange', show);
+    show();
+  });
+</script>
+</head>
+<body>
+<nav class="langs"><a href="#ko">한국어</a><a href="#en">English</a></nav>
+<section class="lang" data-lang="ko">
+<h1>녹음비서 개인정보처리방침</h1>
+
+<p><strong>시행일:</strong> 2026년 8월 20일<br />
+<strong>문의:</strong> koreatong.kr@gmail.com</p>
+
+<p><strong>한 줄 요약</strong><br />
+녹음비서는 개인정보를 수집하지 않습니다. 회원가입도 로그인도 없으며, <strong>녹음·받아쓰기(전사)·요약이 전부 이용자의 기기 안에서 끝납니다.</strong> 녹음된 소리와 받아쓴 글이 저희를 포함해 어디로도 전송되지 않습니다.</p>
+
+<h2>1. 수집하는 개인정보</h2>
+
+<p>없습니다. 이름·연락처·이메일·기기식별자 등 어떤 개인정보도 수집하지 않습니다. 계정 기능이 없어 가입·로그인 절차 자체가 존재하지 않고, 저희에게는 이용자의 데이터를 받아 둘 서버도 없습니다.</p>
+
+<h2>2. 기기에만 저장되는 것</h2>
+
+<ul>
+<li><strong>녹음 파일</strong> — 녹음 버튼으로 만든 소리 파일입니다.</li>
+<li><strong>받아쓴 글(전사)과 요약</strong> — 녹음을 기기 안의 AI 가 글로 옮긴 것과, 그 글을 정리한 요약입니다.</li>
+<li><strong>녹음 목록</strong> — 제목·날짜·길이.</li>
+<li><strong>내려받은 AI 모델 파일</strong> — 받아쓰기용·요약용 두 개입니다(3항).</li>
+<li><strong>광고 제거 구매 표시</strong> — 광고 제거를 구매하셨다는 표시 하나입니다(6항).</li>
+<li><strong>광고 보호 기록</strong> — 광고가 잘못 눌린 시각입니다(5항).</li>
+</ul>
+
+<p>위 항목은 모두 기기 밖으로 나가지 않습니다. 서버에 저장되지 않으며 저희가 열람할 수 없습니다. 앱을 삭제하면 전부 함께 지워집니다.</p>
+
+<h2>3. 앱이 외부에 보내는 요청</h2>
+
+<p>이 앱의 핵심 동작 — 녹음·받아쓰기·요약·재생 — 은 <strong>네트워크 없이 동작합니다.</strong> 앱이 외부와 통신하는 것은 아래가 전부입니다.</p>
+
+<ul>
+<li><strong>AI 모델 내려받기</strong> — 받아쓰기·요약에 쓰는 모델 파일을 Hugging Face 저장소에서 받아옵니다. 첫 실행 준비 때가 대부분이며, 요청에 이용자를 식별할 수 있는 값은 담기지 않습니다. 해당 서비스는 요청을 처리하면서 통신에 필요한 접속 정보(IP 등)를 자체 정책에 따라 처리할 수 있습니다.</li>
+<li><strong>앱 상태 파일</strong> — 설치된 판이 계속 쓸 수 있는 판인지 확인하기 위해 저희가 올려 둔 작은 설정 파일 하나를 앱을 켤 때 읽습니다. 요청에 실리는 것은 없고, 앱은 받은 값과 설치된 앱 버전을 기기 안에서 비교만 합니다.</li>
+<li><strong>광고 요청</strong> — 광고가 켜진 판에서만, 5항에 적은 값이 광고 사업자에게 전달됩니다.</li>
+</ul>
+
+<h2>4. 마이크</h2>
+
+<p>녹음 버튼을 누른 동안에만 마이크를 씁니다. 녹음된 소리는 기기 안에 파일로 저장될 뿐 어디로도 전송되지 않습니다. 받아쓰기와 요약도 전부 기기 안에서 처리되어, <strong>회의·강의 내용이 외부로 나가지 않습니다.</strong></p>
+
+<p>화면을 끄거나 다른 앱을 보는 동안에도 녹음이 이어지도록 백그라운드 소리 권한(iOS <code>UIBackgroundModes: audio</code>)을 선언해 두었습니다. 이때 하는 일은 <strong>진행 중인 녹음을 계속 담는 것뿐</strong>이며, 녹음 버튼을 누르지 않았는데 마이크가 열리는 일은 없습니다.</p>
+
+<p>마이크 권한을 거부하시면 녹음만 못 할 뿐, 이미 저장된 녹음의 재생·받아쓰기·요약과 파일 앱에서 가져온 소리 파일의 처리는 그대로 쓰실 수 있습니다.</p>
+
+<p><strong>녹음할 때 지킬 일</strong> — 대화를 녹음할 때 상대방의 동의가 필요한지는 나라·상황마다 다릅니다. 녹음에 대한 법적 책임은 이용자에게 있습니다.</p>
+
+<h2>5. 광고</h2>
+
+<p>앱 화면 아래에 배너 광고 한 자리가 표시되고, 요약을 만들 때 전면 광고가 한 번 나올 수 있습니다. <strong>광고를 봐야만 열리는 기능은 없으며</strong>, 광고 제거를 구매하시면(6항) 광고가 전부 사라집니다.</p>
+
+<p><strong>누가 광고를 주나</strong><br />광고는 <strong>유니티 레벨플레이</strong>(Unity LevelPlay, 구 ironSource)라는 미디에이션 서비스를 통해 표시됩니다. 미디에이션은 여러 광고 네트워크 가운데 그때그때 광고를 내주는 곳을 골라 주는 중개 역할을 합니다. 연결하는 네트워크는 다음과 같으며, 앞으로 늘거나 줄 수 있습니다.</p>
+
+<ul>
+<li>Unity Ads · ironSource (Unity Technologies)</li>
+<li>Liftoff Monetize (Liftoff Mobile, Inc.)</li>
+</ul>
+
+<p>각 사의 처리방침은 아래에서 확인하실 수 있습니다.<br /><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity 개인정보 처리방침</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff 개인정보 처리방침</a></p>
+
+<p><strong>무엇이 수집되나</strong><br />광고를 띄우고 그 성과를 세기 위해 위 광고 사업자가 이용자의 기기에서 다음과 같은 정보를 읽고 자사 서버로 가져갈 수 있습니다. <strong>저희는 이 값들을 받지도, 보관하지도, 열람하지도 않습니다.</strong></p>
+
+<ul>
+<li><strong>광고 식별자</strong> — iOS 광고 식별자(IDFA), Android 광고 ID(AAID). 이용자가 기기 설정에서 언제든 초기화하거나 사용을 막을 수 있는 값입니다.</li>
+<li><strong>기기·앱 정보</strong> — 기기 모델, 운영체제 버전, 언어, 국가, 앱 버전, 화면 크기, 네트워크 종류.</li>
+<li><strong>IP 주소</strong> — 광고 요청 과정에서 전달되며, 대략적인 지역(도시 수준)을 추정하는 데 쓰일 수 있습니다.</li>
+<li><strong>광고 상호작용</strong> — 광고가 표시된 횟수와 눌린 횟수.</li>
+<li><strong>광고 코드의 동작 기록</strong> — 광고 요청이 성공했는지, 응답이 얼마나 걸렸는지 같은 광고 코드 자신의 성능·오류 지표입니다.</li>
+</ul>
+
+<p><strong>녹음과 받아쓴 글은 광고에 넘기지 않습니다.</strong> 무엇을 녹음하셨는지, 받아쓴 글에 무슨 내용이 있는지는 광고 사업자에게 전달되지 않습니다. 광고 코드는 소리 파일·전사·요약에 접근하지 못합니다.</p>
+
+<p><strong>iOS — 추적 허용을 물어봅니다</strong><br />광고가 켜진 판에서는 앱을 처음 열 때 「추적을 허용하시겠습니까」라는 시스템 창이 한 번 뜹니다. <strong>허용하지 않으셔도 앱의 모든 기능을 그대로 쓰실 수 있고</strong>, 광고도 그대로 표시됩니다 — 다만 관심사에 맞춘 광고 대신 그렇지 않은 광고가 나옵니다. 거부하시면 광고 식별자(IDFA)가 광고 사업자에게 전달되지 않습니다. 응답하시기 전에는 광고 요청이 한 건도 나가지 않습니다.</p>
+
+<p><strong>맞춤 광고를 끄고 싶으시면</strong><br />iOS 는 설정 &gt; 개인정보 보호 및 보안 &gt; 추적에서 끄실 수 있습니다. Android 는 설정 &gt; Google &gt; 광고에서 광고 ID 를 삭제하거나 맞춤 설정을 끄실 수 있습니다. 끄셔도 앱의 모든 기능을 그대로 쓰실 수 있습니다.</p>
+
+<p><strong>잘못 눌린 광고에 대한 보호</strong><br />배너 광고를 한 번 누르시면 그 자리를 한 시간 동안 숨깁니다. 손가락이 스쳐 광고가 반복해서 열리는 것을 막기 위한 것으로, 이 판단에 쓰는 클릭 시각은 기기에만 남습니다(2항).</p>
+
+<h2>6. 결제 — 광고 제거</h2>
+
+<p>광고를 없애는 일회성 구매 하나가 있습니다. 결제는 <strong>App Store·Google Play 가 처리</strong>하며, 저희는 카드번호 등 결제 정보를 받지도 보지도 못합니다. 앱에 남는 것은 「구매했다」는 표시 하나뿐이고(2항), 기기를 바꾸시면 설정의 <strong>구매 복원</strong>으로 되찾으실 수 있습니다 — 이때 앱은 스토어에 보유 내역을 물을 뿐, 다른 정보를 주고받지 않습니다.</p>
+
+<h2>7. 앱 접근권한 안내</h2>
+
+<p>녹음비서는 <strong>위치·연락처·사진·주소록에 접근하지 않습니다.</strong> 기기에 선언된 권한은 아래가 전부입니다.</p>
+
+<ul>
+<li><strong>마이크</strong>(선택) — 녹음을 위한 것입니다. 4항에 적었습니다.</li>
+<li><strong>네트워크</strong> — 3항의 요청을 보내기 위한 것입니다.</li>
+<li><strong>백그라운드 소리</strong>(iOS <code>UIBackgroundModes: audio</code>) — 화면을 꺼도 녹음이 이어지게 하기 위한 것입니다(4항).</li>
+<li><strong>추적</strong>(선택 · iOS) — 맞춤 광고를 위한 것입니다. 광고가 켜진 판에서만 묻고, 거부하셔도 모든 기능을 그대로 쓰실 수 있습니다(5항).</li>
+<li><strong>광고 ID</strong>(Android <code>com.google.android.gms.permission.AD_ID</code>) — 광고 식별자를 읽기 위해 앱이 선언하는 권한입니다. 별도의 동의 창은 뜨지 않으며, 기기 설정에서 초기화하거나 끄실 수 있습니다.</li>
+</ul>
+
+<h2>8. 국외 이전</h2>
+
+<p>저희는 이용자의 정보를 국외로 옮기지 않습니다. 다만 아래의 경우 이용자의 기기가 국외 서버와 <strong>직접</strong> 통신하게 되어, 그 순간 일부 정보가 국외에서 처리될 수 있습니다.</p>
+
+<ul>
+<li><strong>이전받는 자 · 이전 항목</strong> — Hugging Face, Inc.(AI 모델 파일 호스팅): 접속 IP. Unity Technologies 와 Liftoff Mobile, Inc.(광고): 5항의 값. Netlify, Inc.(앱 상태 파일 호스팅): 접속 IP. <strong>녹음·전사·요약과 이름·연락처 등 개인정보는 어느 쪽에도 포함되지 않습니다.</strong></li>
+<li><strong>이전되는 국가</strong> — 미국 등 각 사업자가 서버를 두고 있는 국가</li>
+<li><strong>이전 시기·방법</strong> — 모델을 내려받는 시점, 앱을 켤 때(앱 상태 파일), 광고가 표시되는 시점에 네트워크를 통해 전송됩니다.</li>
+<li><strong>이용 목적·보유 기간</strong> — 파일 전송, 광고 게재와 성과 측정. 보유 기간은 각 사업자의 방침을 따릅니다(5항 링크).</li>
+<li><strong>거부하는 방법</strong> — 추적을 거부하시거나 광고 식별자를 초기화하시면 광고 식별자가 전달되지 않습니다. 광고 제거를 구매하시면 광고 요청 자체가 나가지 않습니다. 앱을 삭제하시면 모든 이전이 중단됩니다.</li>
+</ul>
+
+<h2>9. 제3자 제공·위탁</h2>
+
+<p>8항에 적은 것 외에, 개인정보를 제3자에게 제공하거나 처리를 위탁하는 곳이 없습니다. 분석 도구·크래시 수집 도구도 싣지 않았습니다.</p>
+
+<h2>10. 문의·제보로 받는 정보</h2>
+
+<p>설정의 문의·제보는 이용자의 <strong>메일 앱</strong>을 열어 저희 주소로 보내는 방식입니다. 저희가 받는 것은 이용자가 적어 주신 내용, (적어 주신 경우) 회신받을 곳, 그리고 앱 버전뿐입니다. <strong>녹음·전사·요약은 문의에 실리지 않습니다.</strong> 받은 메일은 답변과 개선 목적에만 쓰고 다른 곳에 제공하지 않습니다.</p>
+
+<h2>11. 보관 기간</h2>
+
+<p>수집하는 개인정보가 없어 보관 기간도 없습니다. 2항의 내용은 이용자의 기기에만 남고, 앱을 삭제하는 즉시 함께 사라집니다. 문의 메일(10항)은 답변 뒤 최대 3년 보관 후 지웁니다.</p>
+
+<h2>12. 안전조치</h2>
+
+<p>이 앱은 이용자의 정보를 받는 서버를 두지 않습니다. <strong>유출될 자리를 만들지 않는 것</strong>이 이 앱의 안전조치입니다. 앱이 보내는 모든 요청(3항)은 암호화된 연결(HTTPS)로만 이루어집니다.</p>
+
+<h2>13. 이용자의 권리</h2>
+
+<p>녹음·전사·요약은 앱 안에서 하나씩 지우실 수 있고, 앱을 삭제하시면 전부 지워집니다. 별도의 삭제 요청 절차가 필요하지 않습니다. 마이크·추적 권한은 기기 설정에서 언제든 거두어들이실 수 있습니다.</p>
+
+<h2>14. 아동</h2>
+
+<p>만 14세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 알면서 수집하지 않습니다.</p>
+
+<h2>15. 개인정보 보호책임자</h2>
+
+<p>네모팩토리 (개인 개발자)<br />koreatong.kr@gmail.com</p>
+
+<p>위 주소로 보내 주신 개인정보 관련 문의·불만은 지체 없이 답변드립니다.</p>
+
+<h2>16. 권익침해 구제</h2>
+
+<p>개인정보 침해에 대한 신고·상담이 필요하시면 아래 기관에 문의하실 수 있습니다.</p>
+
+<ul>
+<li>개인정보 분쟁조정위원회 1833-6972 (<a href="https://www.kopico.go.kr/">kopico.go.kr</a>)</li>
+<li>개인정보침해 신고센터 118 (<a href="https://privacy.kisa.or.kr/">privacy.kisa.or.kr</a>)</li>
+<li>대검찰청 사이버수사과 1301 · 경찰청 사이버수사국 182</li>
+</ul>
+
+<h2>17. 변경 고지</h2>
+
+<p>이 방침이 바뀌면 시행일과 함께 이 페이지를 갱신합니다. 이용자에게 불리한 변경은 시행 7일 전부터 여기에서 알립니다.</p>
+
+<p>네모팩토리</p>
+</section>
+<section class="lang" data-lang="en">
+<h1>Nogeumbiseo — Privacy Policy</h1>
+
+<p><strong>Effective date:</strong> August 20, 2026<br />
+<strong>Contact:</strong> koreatong.kr@gmail.com</p>
+
+<p><strong>In one line</strong><br />
+Nogeumbiseo collects no personal data. There is no account and no sign-in, and <strong>recording, transcription and summarisation all happen entirely on your device.</strong> Neither the audio you record nor the text it produces is ever sent anywhere — including to us.</p>
+
+<h2>1. Personal data we collect</h2>
+
+<p>None. We collect no name, contact details, email, or device identifier. The app has no accounts, so there is no sign-up or sign-in at all, and we operate no server that could receive your data.</p>
+
+<h2>2. Stored on your device only</h2>
+
+<ul>
+<li><strong>Recording files</strong> — the audio you record with the record button.</li>
+<li><strong>Transcripts and summaries</strong> — the text the on-device AI produces from your recordings.</li>
+<li><strong>The recording list</strong> — titles, dates and durations.</li>
+<li><strong>Downloaded AI model files</strong> — one for transcription, one for summarisation (section 3).</li>
+<li><strong>Your ad-removal purchase flag</strong> — a single marker that you bought ad removal (section 6).</li>
+<li><strong>Ad-protection record</strong> — the time an ad was accidentally tapped (section 5).</li>
+</ul>
+
+<p>None of it leaves the device. Nothing is stored on a server and we cannot read it. Deleting the app removes all of it.</p>
+
+<h2>3. Requests the app makes</h2>
+
+<p>The app's core work — recording, transcribing, summarising, playback — <strong>works without a network connection.</strong> The app only ever talks to the outside world for the following:</p>
+
+<ul>
+<li><strong>Downloading AI models</strong> — the transcription and summary models are fetched from the Hugging Face repository, mostly during first-run setup. The request carries nothing that identifies you. That service may process connection data (such as IP addresses) under its own policy in order to serve the request.</li>
+<li><strong>App status file</strong> — on launch the app reads one small configuration file we host, to check whether the installed version is still supported. Nothing is sent, and the comparison happens on your device.</li>
+<li><strong>Ad requests</strong> — only in builds where ads are enabled, the values listed in section 5 are passed to the ad providers.</li>
+</ul>
+
+<h2>4. Microphone</h2>
+
+<p>The microphone is used only while you are recording. The audio is saved as a file on your device and is not transmitted anywhere. Transcription and summarisation also run entirely on the device, so <strong>the content of your meetings and lectures never leaves your phone.</strong></p>
+
+<p>So that a recording can continue while the screen is off or another app is in front, the app declares background-audio permission (iOS <code>UIBackgroundModes: audio</code>). All it does in the background is <strong>keep capturing the recording you already started</strong> — the microphone is never opened unless you pressed the record button.</p>
+
+<p>If you decline the microphone permission, only recording is unavailable; playback, transcription and summarisation of existing recordings, and of audio files you bring in through the Files app, keep working.</p>
+
+<p><strong>A note on consent</strong> — whether recording a conversation requires the other party's consent differs by country and situation. Legal responsibility for your recordings rests with you.</p>
+
+<h2>5. Advertising</h2>
+
+<p>A banner ad is shown at the bottom of the screen, and a full-screen interstitial may appear when a summary is generated. <strong>No feature is locked behind an ad</strong>, and purchasing ad removal (section 6) removes all ads.</p>
+
+<p><strong>Who serves the ads</strong><br />Ads are served through <strong>Unity LevelPlay</strong> (formerly ironSource) mediation, which picks an ad network for each impression. The networks currently connected are listed below and may change over time.</p>
+
+<ul>
+<li>Unity Ads · ironSource (Unity Technologies)</li>
+<li>Liftoff Monetize (Liftoff Mobile, Inc.)</li>
+</ul>
+
+<p>Their policies:<br /><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity privacy policy</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff privacy policy</a></p>
+
+<p><strong>What they may collect</strong><br />To serve ads and measure their performance, the ad providers above may read the following from your device and send it to their own servers. <strong>We never receive, store, or see these values.</strong></p>
+
+<ul>
+<li><strong>Advertising identifier</strong> — IDFA on iOS, AAID on Android. You can reset or disable it in your device settings at any time.</li>
+<li><strong>Device and app information</strong> — device model, OS version, language, country, app version, screen size, network type.</li>
+<li><strong>IP address</strong> — passed as part of the ad request; may be used to estimate a coarse (city-level) location.</li>
+<li><strong>Ad interactions</strong> — how many times an ad was shown and tapped.</li>
+<li><strong>Ad-code diagnostics</strong> — the ad code's own performance and error metrics, such as whether a request succeeded.</li>
+</ul>
+
+<p><strong>Your recordings and transcripts are never passed to advertisers.</strong> What you recorded and what the transcript says is not shared with ad providers; the ad code has no access to your audio files, transcripts, or summaries.</p>
+
+<p><strong>iOS — the tracking prompt</strong><br />In builds where ads are enabled, iOS shows a one-time system prompt asking whether to allow tracking. <strong>Declining changes nothing about how the app works</strong> and ads still appear — just non-personalised ones. If you decline, the advertising identifier (IDFA) is not passed to ad providers. No ad request is made before you answer the prompt.</p>
+
+<p><strong>Turning off personalised ads</strong><br />iOS: Settings &gt; Privacy &amp; Security &gt; Tracking. Android: Settings &gt; Google &gt; Ads, where you can delete the advertising ID or opt out of personalisation. Everything in the app keeps working either way.</p>
+
+<p><strong>Protection against accidental taps</strong><br />If you tap the banner once, that slot is hidden for an hour. This guards against repeated accidental opens, and the tap timestamp it uses stays on your device (section 2).</p>
+
+<h2>6. Payment — ad removal</h2>
+
+<p>There is a single one-time purchase that removes ads. Payment is <strong>handled by the App Store or Google Play</strong>; we never receive or see your card number or any payment details. All the app keeps is a single "purchased" marker (section 2), and if you change devices you can get it back with <strong>Restore purchase</strong> in Settings — the app only asks the store whether you own the product, and nothing else is exchanged.</p>
+
+<h2>7. App permissions</h2>
+
+<p>Nogeumbiseo does <strong>not</strong> access your location, contacts, photos, or address book. The permissions declared on the device are:</p>
+
+<ul>
+<li><strong>Microphone</strong> (optional) — for recording (section 4).</li>
+<li><strong>Network</strong> — for the requests in section 3.</li>
+<li><strong>Background audio</strong> (iOS <code>UIBackgroundModes: audio</code>) — so a recording continues with the screen off (section 4).</li>
+<li><strong>Tracking</strong> (optional · iOS) — for personalised ads; asked only in builds where ads are enabled, and declining changes nothing (section 5).</li>
+<li><strong>Advertising ID</strong> (Android <code>com.google.android.gms.permission.AD_ID</code>) — declared so the ad code can read the advertising identifier. No consent dialog is shown for it, and you can reset or disable the ID in device settings.</li>
+</ul>
+
+<h2>8. International transfers</h2>
+
+<p>We do not transfer your data abroad ourselves. In the following cases, however, your device communicates <strong>directly</strong> with servers outside your country, so some data is processed abroad at that moment:</p>
+
+<ul>
+<li><strong>Recipients and data</strong> — Hugging Face, Inc. (AI model file hosting): connection IP. Unity Technologies and Liftoff Mobile, Inc. (advertising): the values in section 5. Netlify, Inc. (app status file hosting): connection IP. <strong>Your recordings, transcripts, summaries, and any personal details are included in none of these.</strong></li>
+<li><strong>Countries</strong> — the United States and wherever each provider operates its servers.</li>
+<li><strong>When and how</strong> — over the network when a model is downloaded, when the app launches (status file), and when an ad is shown.</li>
+<li><strong>Purpose and retention</strong> — file delivery, ad serving and measurement. Retention follows each provider's own policy (links in section 5).</li>
+<li><strong>How to refuse</strong> — decline tracking or reset the advertising identifier and it is not passed on; purchase ad removal and no ad request is made at all; delete the app and every transfer stops.</li>
+</ul>
+
+<h2>9. Sharing</h2>
+
+<p>Apart from section 8, no personal data is shared with or processed by third parties. The app ships no analytics and no crash-reporting tools.</p>
+
+<h2>10. What we receive when you contact us</h2>
+
+<p>The contact form in Settings opens <strong>your own mail app</strong> addressed to us. What we receive is what you wrote, a reply address if you chose to give one, and the app version. <strong>Recordings, transcripts and summaries are never attached.</strong> Your mail is used only to reply and to improve the app, and is never passed on.</p>
+
+<h2>11. Retention</h2>
+
+<p>We collect no personal data, so there is no retention period. Everything in section 2 stays on your device and disappears the moment you delete the app. Contact emails (section 10) are kept for at most 3 years after the reply, then deleted.</p>
+
+<h2>12. Security</h2>
+
+<p>This app has no server that receives your data. <strong>Not creating a place for a leak to happen</strong> is this app's security measure. Every request the app makes (section 3) goes over an encrypted connection (HTTPS).</p>
+
+<h2>13. Your rights</h2>
+
+<p>Recordings, transcripts and summaries can be deleted one by one inside the app, and deleting the app removes everything. No separate deletion request is needed. Microphone and tracking permissions can be withdrawn at any time in your device settings.</p>
+
+<h2>14. Children</h2>
+
+<p>The app is not directed at children under 14, and we do not knowingly collect their data.</p>
+
+<h2>15. Data protection contact</h2>
+
+<p>Nemo Factory (independent developer)<br />koreatong.kr@gmail.com</p>
+
+<p>Questions or complaints about privacy sent to that address are answered without delay.</p>
+
+<h2>16. Where to complain</h2>
+
+<p>If you need help with a privacy matter, you may contact the Personal Information Dispute Mediation Committee (<a href="https://www.kopico.go.kr/">kopico.go.kr</a>) or the Korea Internet &amp; Security Agency privacy report centre (<a href="https://privacy.kisa.or.kr/">privacy.kisa.or.kr</a>).</p>
+
+<h2>17. Changes</h2>
+
+<p>If this policy changes, this page is updated together with a new effective date. Changes that are unfavourable to users are announced here at least 7 days before they take effect.</p>
+
+<p>Nemo Factory</p>
+</section>
+<footer>
+  ⓒ Nemo Factory · 문의 <a href="mailto:koreatong.kr@gmail.com">koreatong.kr@gmail.com</a><br>
+  <a href="../">전체 목록</a>
+</footer>
+</body>
+</html>
