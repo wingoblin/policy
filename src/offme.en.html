@@ -1,0 +1,232 @@
+<h1>OFFME — Privacy Policy</h1>
+
+<p><strong>Effective:</strong> August 22, 2026<br /><strong>Contact:</strong> koreatong.kr@gmail.com</p>
+
+<p><strong>In one line</strong><br />OFFME has <strong>no accounts, no sign-in, and we run no servers.</strong> There is no place for your information to be sent to and accumulate. That said, this is an app that blocks the apps you chose, so it has to know <strong>which apps you open and for how long</strong>. Those values are used <strong>only inside your device and never leave it</strong> (sections 3 and 4).</p>
+
+<p><strong>Ads are coming — advance notice</strong><br />The version currently on the store has <strong>no ads.</strong> The ad code is not in the app at all, so no ad request and no tracking prompt is ever sent. However, to keep the app running we <strong>plan to add ads</strong>, and once ads are on, the ad network will read your device's <strong>advertising identifier</strong>. Because that may be a change to your disadvantage, we are <strong>announcing it on this page in advance</strong> (section 15). Everything that will change is written out in <strong>section 7</strong>. On the day ads actually turn on, we will update this paragraph and the effective date.</p>
+
+<p><strong>This app does not monitor you</strong><br />OFFME helps you <strong>manage your own device.</strong> It has <strong>no</strong> feature for looking into someone else's device, and it never sends your usage to a parent, an employer, or any third party. What it reads is used only to show it back to you on screen and to decide whether to block.</p>
+
+<h2>1. Personal information we collect</h2>
+
+<p><strong>None.</strong> We do not collect your name, contact details, email, date of birth, address, or payment information. There is no account feature, so there is no sign-up or sign-in process to begin with.</p>
+
+<p><strong>We run no servers.</strong> There is no place your information could be sent to and stored on our side. Every case in which the app makes a network request is listed exhaustively in <strong>section 8</strong>.</p>
+
+<h2>2. What is stored on your device only</h2>
+
+<p>The values below are saved in the app's private storage on your device (a single settings file) and <strong>never leave the device</strong>.</p>
+
+<ul>
+<li><strong>Blocked app list</strong> — on Android, the <strong>package names</strong> of the apps you chose (e.g. <code>com.google.android.youtube</code>). On iOS, only an <strong>opaque token</strong> given by Apple; we cannot read which apps it refers to (section 3).</li>
+<li><strong>Schedules</strong> — days of the week and start/end times.</li>
+<li><strong>Daily limit</strong> — minutes allowed per day.</li>
+<li><strong>Daily goal</strong> — the minutes the home screen ring is measured against.</li>
+<li><strong>Active lock</strong> — when the timer lock ends, and when it started.</li>
+<li><strong>Emergency access</strong> — when the current emergency window ends.</li>
+<li><strong>Zen (do-nothing) records</strong> — minutes spent today, and the start/end of the current session.</li>
+<li><strong>Lifetime records</strong> — the day you first opened the app, total zen minutes, sessions completed, total minutes locked.</li>
+<li><strong>Language preference</strong> — whether to follow the device language, or a language you picked.</li>
+</ul>
+
+<p><strong>None of this identifies you.</strong> Deleting the app deletes this storage with it (section 11).</p>
+
+<h2>3. Device information the app reads — the most important section</h2>
+
+<p>OFFME blocks the apps you chose, so to block anything it must know <strong>what is open right now</strong>. How that works differs completely between platforms.</p>
+
+<h3>Android</h3>
+
+<p>On Android the app reads the following three things <strong>directly on the device</strong>.</p>
+
+<ul>
+<li><strong>Installed app list</strong> — only apps that have a launcher (home screen) icon, so we can show you their names and icons to choose from. You need a list in order to choose what to block. We do <strong>not</strong> use the <code>QUERY_ALL_PACKAGES</code> permission that would reveal hidden apps.</li>
+<li><strong>The app in the foreground</strong> — the monitoring service checks roughly once per second which app is frontmost. If it is a blocked app, a blocking screen is drawn over it. <strong>We do not read what you do inside an app</strong> — text you type, screen contents, and messages you exchange are not accessible to us and we make no attempt to access them.</li>
+<li><strong>Per-app usage time</strong> — to measure whether your daily limit is exceeded and to show usage in the Records tab, we read <strong>how many minutes each app was used</strong>.</li>
+</ul>
+
+<p>All three rely on Android's <strong>Usage Access permission (<code>PACKAGE_USAGE_STATS</code>)</strong> and the app-list query. <strong>Nothing read this way is sent to our servers — we have no servers to receive it.</strong> The values are used on the device to make a decision and to show information back to you, and that is where they stop.</p>
+
+<p>🛑 <strong>We do not use the Accessibility Service.</strong> It would let us detect app switches faster, but an accessibility service can read text shown on screen, which is a far more powerful permission. OFFME does not request it and has no plan to.</p>
+
+<h3>iOS</h3>
+
+<p>On iOS the app uses Apple's <strong>Screen Time</strong> frameworks (Family Controls, Managed Settings, Device Activity). Here Apple <strong>deliberately hides</strong> app information from us.</p>
+
+<ul>
+<li>The app-picking screen is drawn <strong>by Apple, as a system screen</strong>, and the result comes back as an <strong>opaque token</strong>. <strong>We cannot read which apps you selected.</strong> That is why the app shows only a <strong>count</strong> rather than names.</li>
+<li>Blocking and usage measurement are performed by Apple's system, and those values cannot leave the boundary Apple defines.</li>
+<li>In line with Apple's requirements, Screen Time data is <strong>never transmitted off the device, and never shared with or sold to any third party.</strong></li>
+</ul>
+
+<h2>4. Nothing leaves the device</h2>
+
+<p><strong>None</strong> of the values read in section 3 leaves your device. Specifically, the following are <strong>never transmitted to anyone, including us</strong>:</p>
+
+<ul>
+<li>your installed app list</li>
+<li>the apps you chose to block</li>
+<li>which apps you used, when, and for how many minutes</li>
+<li>the app in the foreground</li>
+<li>every value in section 2 — schedules, limits, goals, zen and lifetime records</li>
+</ul>
+
+<p>We operate no server that could receive these, and the app contains <strong>no code</strong> that uploads them anywhere.</p>
+
+<h2>5. Permissions — what and why</h2>
+
+<h3>Android</h3>
+
+<table>
+<tr><th>Permission</th><th>Why it is needed</th><th>Without it</th></tr>
+<tr>
+  <td><strong>Usage access</strong><br /><code>PACKAGE_USAGE_STATS</code></td>
+  <td>To see which app is in the foreground and to measure per-app usage time</td>
+  <td><strong>Blocking does not work</strong></td>
+</tr>
+<tr>
+  <td><strong>Display over other apps</strong><br /><code>SYSTEM_ALERT_WINDOW</code></td>
+  <td>To draw the blocking screen over a blocked app when it opens</td>
+  <td><strong>Blocking does not work</strong></td>
+</tr>
+<tr>
+  <td><strong>Foreground service</strong><br /><code>FOREGROUND_SERVICE_SPECIAL_USE</code></td>
+  <td>Monitoring must keep running after you close the app. While it runs, one persistent notification stays in your status bar</td>
+  <td>Blocking stops when you close the app</td>
+</tr>
+<tr>
+  <td><strong>Notifications</strong><br /><code>POST_NOTIFICATIONS</code></td>
+  <td>To show that persistent notification. <strong>You can decline and still use the app fully</strong></td>
+  <td>Blocking still works, but you cannot see that it is running</td>
+</tr>
+<tr>
+  <td><strong>Boot completed</strong><br /><code>RECEIVE_BOOT_COMPLETED</code></td>
+  <td>So blocking resumes by itself after you restart the device</td>
+  <td>A restart releases blocking until you open the app again</td>
+</tr>
+</table>
+
+<p>Android treats Usage access and Display over other apps as <strong>special permissions</strong>: they cannot be requested with a prompt, and you must turn them on <strong>yourself in Settings</strong>. You can turn them off again in the same place at any time, and blocking stops immediately when you do.</p>
+
+<h3>iOS</h3>
+
+<table>
+<tr><th>Permission</th><th>Why it is needed</th></tr>
+<tr>
+  <td><strong>Screen Time</strong><br />(Family Controls)</td>
+  <td>Apple's only supported way to block apps. We request it strictly for <strong>managing your own device</strong>, never for supervising another person's (a child's) device through Family Sharing</td>
+</tr>
+<tr>
+  <td><strong>Notifications</strong> (optional)</td>
+  <td>To tell you when a lock has ended. You can decline and still use the app fully</td>
+</tr>
+</table>
+
+<h2>6. Camera, location, contacts, microphone, photos</h2>
+
+<p><strong>We use none of them.</strong> The app does not access location, contacts, call logs, messages, photos, camera, microphone, or health data, and it does not request those permissions.</p>
+
+<h2>7. Ads (planned)</h2>
+
+<p>The current version has no ads. Once ads are added, this is how they will work.</p>
+
+<ul>
+<li><strong>Ad network</strong> — ads will be served through Unity's <strong>LevelPlay (formerly ironSource)</strong>. Other ad networks mediated by LevelPlay may participate.</li>
+<li><strong>What is read</strong> — the ad network reads your device's <strong>advertising identifier</strong> (Android Advertising ID, or IDFA/IDFV on iOS), approximate country and language, device model and OS version, and app version. <strong>The ad network reads these directly from your device; we neither receive nor store them.</strong></li>
+<li><strong>What is not sent</strong> — <strong>the values in sections 3 and 4 (which apps you blocked, what you used and for how long) are not passed to the ad network either.</strong> There is no code that attaches them to an ad request.</li>
+<li><strong>iOS tracking prompt</strong> — on iOS, Apple's <strong>App Tracking Transparency</strong> prompt appears once when ads turn on. <strong>Declining leaves every feature of the app fully usable</strong>; you will simply see non-personalized ads.</li>
+<li><strong>Turning off personalized ads</strong> — on Android, <em>Settings → Google → Ads</em> lets you delete your advertising ID; on iOS, <em>Settings → Privacy &amp; Security → Tracking</em> lets you revoke per-app permission at any time.</li>
+<li><strong>No ads on the blocking screen.</strong> The screen you see when you open a blocked app is a wall you asked us to build, and we will not put an ad on it.</li>
+</ul>
+
+<p>The ad network's handling of data is governed by its own policy — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay Privacy Policy</a>.</p>
+
+<h2>8. Every request the app makes</h2>
+
+<p>For full transparency, here is every case in which the app sends a request over the internet.</p>
+
+<ul>
+<li><strong>Current version:</strong> <strong>none.</strong> Every feature works with no internet connection.</li>
+<li><strong>After ads are enabled:</strong> a single ad request to the <strong>ad network</strong> (section 7).</li>
+<li><strong>Opening this policy page:</strong> tapping "Privacy policy" in the app's settings opens this page (GitHub Pages) in your device browser. GitHub's server logs may record your IP address, exactly as with visiting any web page.</li>
+</ul>
+
+<p>In no case is a request sent to a server of ours. <strong>We do not operate one.</strong></p>
+
+<h2>9. Sharing, processing on our behalf, and sale</h2>
+
+<p><strong>None.</strong> Since we collect no personal information, there is nothing to share with a third party or hand to a processor. <strong>We do not sell any information.</strong></p>
+
+<p>After ads are enabled, the ad network (Unity/LevelPlay and its mediated networks) reads the advertising identifier <strong>directly from your device</strong>. It is not a case of us collecting and passing it on; we never hold that value.</p>
+
+<h2>10. International transfers</h2>
+
+<p>In the current version, <strong>no information is transferred abroad.</strong></p>
+
+<p>After ads are enabled, the values in section 7 may be transmitted to the ad network's overseas servers.</p>
+
+<table>
+<tr><th>Recipient</th><th>Country</th><th>Data</th><th>Purpose</th><th>Retention</th></tr>
+<tr>
+  <td>Unity Technologies (LevelPlay / ironSource) and mediated ad networks</td>
+  <td>United States and other countries where their servers are located</td>
+  <td>Advertising identifier, device/OS/app version, approximate country and language</td>
+  <td>Serving and measuring ads</td>
+  <td>Per that company's policy</td>
+</tr>
+</table>
+
+<p>If you would rather this not happen, you can reset or block the advertising identifier using the paths in section 7.</p>
+
+<h2>11. Retention and deletion</h2>
+
+<p>We hold no information, so <strong>there is nothing to request deletion of.</strong> The values kept on your device (section 2) can be erased by you at any time.</p>
+
+<ul>
+<li><strong>Deleting the app</strong> removes everything in section 2 with it.</li>
+<li>On <strong>Android</strong>, <em>Settings → Apps → OFFME → Storage → Clear data</em> also resets it.</li>
+<li>On <strong>iOS</strong>, revoke Screen Time access under <em>Settings → Screen Time</em>.</li>
+</ul>
+
+<h2>12. Children</h2>
+
+<p>OFFME is <strong>not directed to children</strong> and we do not knowingly collect personal information from children — we collect no personal information from anyone. Apple's Screen Time permission is requested strictly for <strong>managing your own device</strong>, never for a guardian to supervise a child's device.</p>
+
+<h2>13. Your rights</h2>
+
+<p>Depending on where you live, you may have the right to access, correct, delete, or restrict processing of your personal information (for example under the GDPR, the CCPA/CPRA, or Korea's Personal Information Protection Act). Because <strong>we hold no personal information about you</strong>, there is nothing for such a request to act on. Values stored on your device can be erased by you at any time using section 11.</p>
+
+<p>If you have any question, write to <a href="mailto:koreatong.kr@gmail.com">koreatong.kr@gmail.com</a>.</p>
+
+<h2>14. Security measures</h2>
+
+<ul>
+<li><strong>We run no servers.</strong> With no server, there is nothing on a server to leak.</li>
+<li>Values on the device live in the app's <strong>private storage</strong>, which other apps cannot read.</li>
+<li>The app contains <strong>no code</strong> that sends your usage anywhere.</li>
+<li>No analytics SDK is included, and we do not plan to add one even after ads are enabled.</li>
+</ul>
+
+<h2>15. Changes to this policy</h2>
+
+<p>When this policy changes, we update the <strong>effective date</strong> on this page. Changes that may be to your disadvantage — such as <strong>introducing ads</strong> or collecting anything new — are announced here <strong>at least 7 days in advance</strong>. A revised policy takes effect on the day it is posted here.</p>
+
+<h2>16. Who to contact</h2>
+
+<ul>
+<li><strong>Developer:</strong> Nemo Factory</li>
+<li><strong>Privacy contact:</strong> the developer</li>
+<li><strong>Email:</strong> <a href="mailto:koreatong.kr@gmail.com">koreatong.kr@gmail.com</a></li>
+</ul>
+
+<h2>17. Filing a complaint (Korea)</h2>
+
+<p>If you need to report or get advice about a privacy matter, you may contact:</p>
+
+<ul>
+<li>Korea Internet &amp; Security Agency, Privacy Report Center — <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 118</li>
+<li>Personal Information Dispute Mediation Committee — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>Supreme Prosecutors' Office, Cyber Investigation Division — <a href="https://www.spo.go.kr">spo.go.kr</a> / 1301</li>
+<li>Korean National Police Agency, Cyber Bureau — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 182</li>
+</ul>
