@@ -148,7 +148,7 @@
 <p><strong>무엇이 수집되나</strong><br />광고를 띄우고 그 성과를 세기 위해 위 광고 사업자가 이용자의 기기에서 다음과 같은 정보를 읽고 자사 서버로 가져갈 수 있습니다. <strong>저희는 이 값들을 받지도, 보관하지도, 열람하지도 않습니다.</strong></p>
 
 <ul>
-<li><strong>광고 식별자</strong> — iOS 광고 식별자(IDFA), Android 광고 ID(AAID). 이용자가 기기 설정에서 언제든 초기화하거나 사용을 막을 수 있는 값입니다.</li>
+<li><strong>광고 식별자</strong> — iOS 광고 식별자(IDFA). 이용자가 기기 설정에서 언제든 초기화하거나 사용을 막을 수 있는 값입니다.</li>
 <li><strong>기기·앱 정보</strong> — 기기 모델, 운영체제 버전, 언어, 국가, 앱 버전, 화면 크기, 네트워크 종류.</li>
 <li><strong>IP 주소</strong> — 광고 요청 과정에서 전달되며, 대략적인 지역(도시 수준)을 추정하는 데 쓰일 수 있습니다.</li>
 <li><strong>광고 상호작용</strong> — 광고가 표시된 횟수와 눌린 횟수.</li>
@@ -159,7 +159,7 @@
 
 <p><strong>iOS — 추적 허용을 물어봅니다</strong><br />광고가 켜진 판에서는 앱을 처음 열 때 「추적을 허용하시겠습니까」라는 시스템 창이 한 번 뜹니다. <strong>허용하지 않으셔도 앱의 모든 기능을 그대로 쓰실 수 있고</strong>, 광고도 그대로 표시됩니다 — 다만 관심사에 맞춘 광고 대신 그렇지 않은 광고가 나옵니다. 거부하시면 광고 식별자(IDFA)가 광고 사업자에게 전달되지 않습니다. 응답하시기 전에는 광고 요청이 한 건도 나가지 않습니다.</p>
 
-<p><strong>맞춤 광고를 끄고 싶으시면</strong><br />iOS 는 설정 &gt; 개인정보 보호 및 보안 &gt; 추적에서 끄실 수 있습니다. Android 는 설정 &gt; Google &gt; 광고에서 광고 ID 를 삭제하거나 맞춤 설정을 끄실 수 있습니다. 끄셔도 앱의 모든 기능을 그대로 쓰실 수 있습니다.</p>
+<p><strong>맞춤 광고를 끄고 싶으시면</strong><br />설정 &gt; 개인정보 보호 및 보안 &gt; 추적에서 끄실 수 있습니다. 끄셔도 앱의 모든 기능을 그대로 쓰실 수 있습니다.</p>
 
 <p><strong>잘못 눌린 광고에 대한 보호</strong><br />광고를 한 번 누르시면 <strong>한 시간 동안</strong> 광고를 표시하지 않고, 같은 날 두 번 눌리면 <strong>그날 자정까지</strong> 표시하지 않습니다. 손가락이 스쳐 광고가 반복해서 열리는 것을 막기 위한 것입니다. <strong>이 보호는 배너와 기다리는 자리의 사각형 광고에 함께 걸립니다.</strong> 이 판단에 쓰는 클릭 시각은 기기에만 남습니다(2항).</p>
 
@@ -184,8 +184,7 @@
 <li><strong>마이크</strong>(선택) — 녹음을 위한 것입니다. 4항에 적었습니다.</li>
 <li><strong>네트워크</strong> — 3항의 요청을 보내기 위한 것입니다.</li>
 <li><strong>백그라운드 소리</strong>(iOS <code>UIBackgroundModes: audio</code>) — 화면을 꺼도 녹음이 이어지게 하기 위한 것입니다(4항).</li>
-<li><strong>추적</strong>(선택 · iOS) — 맞춤 광고를 위한 것입니다. 광고가 켜진 판에서만 묻고, 거부하셔도 모든 기능을 그대로 쓰실 수 있습니다(5항).</li>
-<li><strong>광고 ID</strong>(Android <code>com.google.android.gms.permission.AD_ID</code>) — 광고 식별자를 읽기 위해 앱이 선언하는 권한입니다. 별도의 동의 창은 뜨지 않으며, 기기 설정에서 초기화하거나 끄실 수 있습니다.</li>
+<li><strong>추적</strong>(선택) — 맞춤 광고를 위한 것입니다. 광고가 켜진 판에서만 묻고, 거부하셔도 모든 기능을 그대로 쓰실 수 있습니다(5항).</li>
 </ul>
 
 <h2>8. 국외 이전</h2>
@@ -310,7 +309,7 @@ Nogeumbiseo collects no personal data. There is no account and no sign-in, and <
 <p><strong>What they may collect</strong><br />To serve ads and measure their performance, the ad providers above may read the following from your device and send it to their own servers. <strong>We never receive, store, or see these values.</strong></p>
 
 <ul>
-<li><strong>Advertising identifier</strong> — IDFA on iOS, AAID on Android. You can reset or disable it in your device settings at any time.</li>
+<li><strong>Advertising identifier</strong> — the iOS advertising identifier (IDFA). You can reset or disable it in your device settings at any time.</li>
 <li><strong>Device and app information</strong> — device model, OS version, language, country, app version, screen size, network type.</li>
 <li><strong>IP address</strong> — passed as part of the ad request; may be used to estimate a coarse (city-level) location.</li>
 <li><strong>Ad interactions</strong> — how many times an ad was shown and tapped.</li>
@@ -321,7 +320,7 @@ Nogeumbiseo collects no personal data. There is no account and no sign-in, and <
 
 <p><strong>iOS — the tracking prompt</strong><br />In builds where ads are enabled, iOS shows a one-time system prompt asking whether to allow tracking. <strong>Declining changes nothing about how the app works</strong> and ads still appear — just non-personalised ones. If you decline, the advertising identifier (IDFA) is not passed to ad providers. No ad request is made before you answer the prompt.</p>
 
-<p><strong>Turning off personalised ads</strong><br />iOS: Settings &gt; Privacy &amp; Security &gt; Tracking. Android: Settings &gt; Google &gt; Ads, where you can delete the advertising ID or opt out of personalisation. Everything in the app keeps working either way.</p>
+<p><strong>Turning off personalised ads</strong><br />Settings &gt; Privacy &amp; Security &gt; Tracking. Everything in the app keeps working either way.</p>
 
 <p><strong>Protection against accidental taps</strong><br />If you tap an ad once, ads are hidden for <strong>an hour</strong>; tap twice on the same day and they stay hidden <strong>until midnight</strong>. This guards against repeated accidental opens. <strong>The protection covers both the banner and the rectangle ad</strong> — tapping either one rests both. The tap timestamp it uses stays on your device (section 2).</p>
 
@@ -346,8 +345,7 @@ Nogeumbiseo collects no personal data. There is no account and no sign-in, and <
 <li><strong>Microphone</strong> (optional) — for recording (section 4).</li>
 <li><strong>Network</strong> — for the requests in section 3.</li>
 <li><strong>Background audio</strong> (iOS <code>UIBackgroundModes: audio</code>) — so a recording continues with the screen off (section 4).</li>
-<li><strong>Tracking</strong> (optional · iOS) — for personalised ads; asked only in builds where ads are enabled, and declining changes nothing (section 5).</li>
-<li><strong>Advertising ID</strong> (Android <code>com.google.android.gms.permission.AD_ID</code>) — declared so the ad code can read the advertising identifier. No consent dialog is shown for it, and you can reset or disable the ID in device settings.</li>
+<li><strong>Tracking</strong> (optional) — for personalised ads; asked only in builds where ads are enabled, and declining changes nothing (section 5).</li>
 </ul>
 
 <h2>8. International transfers</h2>

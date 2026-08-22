@@ -61,7 +61,7 @@ Nogeumbiseo collects no personal data. There is no account and no sign-in, and <
 <p><strong>What they may collect</strong><br />To serve ads and measure their performance, the ad providers above may read the following from your device and send it to their own servers. <strong>We never receive, store, or see these values.</strong></p>
 
 <ul>
-<li><strong>Advertising identifier</strong> — IDFA on iOS, AAID on Android. You can reset or disable it in your device settings at any time.</li>
+<li><strong>Advertising identifier</strong> — the iOS advertising identifier (IDFA). You can reset or disable it in your device settings at any time.</li>
 <li><strong>Device and app information</strong> — device model, OS version, language, country, app version, screen size, network type.</li>
 <li><strong>IP address</strong> — passed as part of the ad request; may be used to estimate a coarse (city-level) location.</li>
 <li><strong>Ad interactions</strong> — how many times an ad was shown and tapped.</li>
@@ -72,7 +72,7 @@ Nogeumbiseo collects no personal data. There is no account and no sign-in, and <
 
 <p><strong>iOS — the tracking prompt</strong><br />In builds where ads are enabled, iOS shows a one-time system prompt asking whether to allow tracking. <strong>Declining changes nothing about how the app works</strong> and ads still appear — just non-personalised ones. If you decline, the advertising identifier (IDFA) is not passed to ad providers. No ad request is made before you answer the prompt.</p>
 
-<p><strong>Turning off personalised ads</strong><br />iOS: Settings &gt; Privacy &amp; Security &gt; Tracking. Android: Settings &gt; Google &gt; Ads, where you can delete the advertising ID or opt out of personalisation. Everything in the app keeps working either way.</p>
+<p><strong>Turning off personalised ads</strong><br />Settings &gt; Privacy &amp; Security &gt; Tracking. Everything in the app keeps working either way.</p>
 
 <p><strong>Protection against accidental taps</strong><br />If you tap an ad once, ads are hidden for <strong>an hour</strong>; tap twice on the same day and they stay hidden <strong>until midnight</strong>. This guards against repeated accidental opens. <strong>The protection covers both the banner and the rectangle ad</strong> — tapping either one rests both. The tap timestamp it uses stays on your device (section 2).</p>
 
@@ -97,8 +97,7 @@ Nogeumbiseo collects no personal data. There is no account and no sign-in, and <
 <li><strong>Microphone</strong> (optional) — for recording (section 4).</li>
 <li><strong>Network</strong> — for the requests in section 3.</li>
 <li><strong>Background audio</strong> (iOS <code>UIBackgroundModes: audio</code>) — so a recording continues with the screen off (section 4).</li>
-<li><strong>Tracking</strong> (optional · iOS) — for personalised ads; asked only in builds where ads are enabled, and declining changes nothing (section 5).</li>
-<li><strong>Advertising ID</strong> (Android <code>com.google.android.gms.permission.AD_ID</code>) — declared so the ad code can read the advertising identifier. No consent dialog is shown for it, and you can reset or disable the ID in device settings.</li>
+<li><strong>Tracking</strong> (optional) — for personalised ads; asked only in builds where ads are enabled, and declining changes nothing (section 5).</li>
 </ul>
 
 <h2>8. International transfers</h2>
