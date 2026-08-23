@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>살래말래 개인정보 처리방침 · 네모팩토리</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto; max-width: 720px; padding: 32px 20px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+    font-size: 16px; line-height: 1.75;
+    color: #222; background: #fff;
+    word-break: keep-all; overflow-wrap: anywhere;
+  }
+  h1 { font-size: 26px; line-height: 1.4; margin: 32px 0 8px; }
+  h2 { font-size: 19px; line-height: 1.45; margin: 32px 0 8px; padding-top: 8px; border-top: 1px solid #eee; }
+  h3 { font-size: 17px; margin: 24px 0 6px; }
+  p, ul, ol { margin: 10px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: #1a5fd0; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f6f7f9; }
+  code { background: #f2f3f5; padding: 1px 5px; border-radius: 4px; font-size: 14px; }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid #eee; font-size: 13px; color: #888; }
+  footer a { color: #888; }
+  /* 언어 탭 — JS 가 없으면 탭을 숨기고 모든 언어를 그냥 다 보여준다 */
+  .langs { display: none; }
+  .langs a {
+    display: inline-block; padding: 6px 14px; margin: 0 6px 6px 0;
+    border: 1px solid #ddd; border-radius: 999px;
+    font-size: 14px; text-decoration: none; color: #555;
+  }
+  .langs a.on { background: #222; border-color: #222; color: #fff; }
+  html.js .langs { display: block; margin-bottom: 8px; }
+  html.js .lang { display: none; }
+  html.js .lang.on { display: block; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e3e5e8; background: #16181c; }
+    h2 { border-top-color: #2a2d33; }
+    a { color: #7aa7f0; }
+    th, td { border-color: #2a2d33; }
+    th { background: #1e2126; }
+    code { background: #22262c; }
+    footer { border-top-color: #2a2d33; color: #7d8188; }
+    .langs a { border-color: #333840; color: #b9bec6; }
+    .langs a.on { background: #e3e5e8; border-color: #e3e5e8; color: #16181c; }
+  }
+</style>
+<script>
+  // 탭이 그려지기 전에 붙여야 언어가 바뀌며 깜빡이지 않는다
+  document.documentElement.className = 'js';
+  addEventListener('DOMContentLoaded', function () {
+    var secs = document.querySelectorAll('.lang');
+    if (!secs.length) return;
+    var have = [].map.call(secs, function (s) { return s.dataset.lang; });
+    function pick() {
+      var want = location.hash.slice(1);
+      if (!want) {
+        // 닻이 없으면 브라우저 언어로 고른다 — 스토어 목록에서 맨 주소로 들어오는 길이다.
+        // 중국어만 두 글자로 못 자른다. zh-TW·zh-HK·zh-Hant-* 는 번체, zh-CN·zh-SG 는 간체라
+        // 같은 'zh' 로 묶으면 간체 사용자에게 번체 판을 보여주게 된다(앱의 locale.ts 와 같은 판정).
+        var nav = navigator.language || 'en';
+        want = /^zh/i.test(nav) && /(Hant|TW|HK|MO)/i.test(nav) ? 'zhHant' : nav.slice(0, 2);
+      }
+      // 없는 언어로 들어오면 영문 — 첫 구역(한국어)으로 떨구면 간체·프랑스어 기기가 한글 방침을 본다.
+      return have.indexOf(want) >= 0 ? want : have.indexOf('en') >= 0 ? 'en' : have[0];
+    }
+    function show() {
+      var on = pick();
+      [].forEach.call(secs, function (s) { s.classList.toggle('on', s.dataset.lang === on); });
+      [].forEach.call(document.querySelectorAll('.langs a'), function (a) {
+        a.classList.toggle('on', a.hash.slice(1) === on);
+      });
+      document.documentElement.lang = on;
+    }
+    addEventListener('hashchange', show);
+    show();
+  });
+</script>
+</head>
+<body>
+<nav class="langs"><a href="#ko">한국어</a><a href="#en">English</a></nav>
+<section class="lang" data-lang="ko">
+<!--
+  살래말래 개인정보 처리방침.
+  🛑 광고 단위 ID 를 받아 실제로 광고를 켜는 날, 「앞으로 광고가 들어갑니다」 문단과
+     7항의 시제를 고치고 시행일을 다시 올린다(15항이 약속한 7일 전 예고).
+  🛑 한/영 두 판이다. 앱은 열 판이지만 방침은 둘이고, 페이지가 navigator.language 로 고른다.
+-->
+
+<h1>살래말래 개인정보 처리방침</h1>
+
+<p><strong>시행일:</strong> 2026년 8월 23일<br /><strong>문의:</strong> koreatong.kr@gmail.com</p>
+
+<p><strong>한 줄 요약</strong><br />살래말래는 <strong>회원가입도 로그인도 없고, 저희는 서버를 두지 않습니다.</strong> 이용자의 정보가 저희에게 전송되어 쌓이는 곳 자체가 없습니다. 찜·장바구니·주문 기록 등 앱 안에서 만드신 모든 것은 <strong>이용자의 기기 안에만</strong> 있습니다(2항).</p>
+
+<p><strong>이 앱은 실제로 물건을 팔지 않습니다 — 가장 먼저 알립니다</strong><br />살래말래는 <strong>가상 쇼핑 시뮬레이션</strong>입니다. 앱에 나오는 브랜드와 상품은 모두 <strong>지어낸 것</strong>이며, 실제 상표·실제 상품이 아닙니다. <strong>실제 결제는 일어나지 않고, 실제 배송도 없습니다.</strong> 「결제하기」를 눌러도 <strong>돈이 빠져나가지 않으며</strong>, 앱은 이용자의 카드·계좌·간편결제 계정에 접근할 수 없습니다. 자세한 내용은 <strong>3항</strong>에 적었습니다.</p>
+
+<p><strong>앞으로 광고가 들어갑니다 — 미리 알립니다</strong><br />지금 판에는 <strong>광고가 없습니다.</strong> 광고 요청도, 추적 동의 창도 나가지 않습니다. 다만 앞으로 앱 유지를 위해 <strong>광고를 넣을 예정</strong>이며, 광고를 붙이면 광고 네트워크가 기기의 <strong>광고 식별자</strong>를 읽게 됩니다. 이용자에게 불리할 수 있는 변경이라 <strong>지금부터 이 페이지에 미리 알립니다</strong>(15항). 무엇이 어떻게 달라지는지는 <strong>7항</strong>에 전부 적어 두었습니다. 광고가 실제로 켜지는 날 이 문단과 시행일을 고쳐 다시 알립니다.</p>
+
+<h2>1. 수집하는 개인정보</h2>
+
+<p><strong>없습니다.</strong> 이름·연락처·이메일·생년월일·주소·결제정보 등 어떤 개인정보도 수집하지 않습니다. 계정 기능이 없어 가입·로그인 절차 자체가 존재하지 않습니다.</p>
+
+<p>저희는 <strong>서버를 두지 않습니다.</strong> 이용자의 정보가 저희에게 전송되어 쌓이는 곳이 없습니다. 앱이 밖으로 요청을 보내는 경우는 <strong>8항</strong>에 하나도 빠짐없이 적었습니다.</p>
+
+<h2>2. 기기에만 저장되는 것</h2>
+
+<p>아래 값은 이용자의 기기 안 앱 전용 저장소에 저장되며 <strong>기기 밖으로 나가지 않습니다.</strong></p>
+
+<ul>
+<li><strong>찜 목록</strong> — 찜한 상품의 번호.</li>
+<li><strong>최근 본 상품</strong> — 최근에 연 상품의 번호(최대 60개).</li>
+<li><strong>장바구니</strong> — 담은 상품의 번호·색·크기·수량.</li>
+<li><strong>주문 기록</strong> — 주문한 상품, 금액, 주문한 시각. <strong>가상 주문입니다</strong>(3항).</li>
+<li><strong>배송지</strong> — 주문서 화면에서 직접 적으신 이름·연락처·주소·메모. <strong>연출을 위한 입력이며 어디로도 전송되지 않습니다</strong>(3항).</li>
+<li><strong>프로필 사진</strong> — MY 화면에 넣으신 사진의 <strong>파일 이름</strong>. 사진 파일 자체는 앱 전용 폴더 안에 있습니다(4항).</li>
+<li><strong>별명</strong> — MY 화면에 적으신 이름. 안 적으시면 <code>Unknown</code> 으로 둡니다.</li>
+<li><strong>최근 검색어</strong> — 검색창에 넣으신 말(최대 10개).</li>
+<li><strong>언어 설정</strong> — 기기 언어를 따라갈지, 직접 고른 언어가 있는지.</li>
+</ul>
+
+<p>이 값들은 <strong>이용자를 알아보기 위한 것이 아니라</strong> 화면을 다시 그리기 위한 것입니다. 앱을 삭제하면 함께 지워집니다(11항).</p>
+
+<p>다만 <strong>배송지 칸에는 이용자가 진짜 이름과 주소를 적으실 수 있습니다.</strong> 그 값도 기기 밖으로 나가지 않지만, 적지 않으셔도 앱은 그대로 동작합니다 — <strong>아무 글자나 적으셔도 됩니다.</strong></p>
+
+<h2>3. 결제와 배송 — 이 앱에서 가장 중요한 안내</h2>
+
+<p>살래말래의 구매·결제·배송은 <strong>전부 연출</strong>입니다.</p>
+
+<ul>
+<li><strong>돈이 오가지 않습니다.</strong> 앱에는 인앱 결제도, 구독도, 외부 결제 연동도 없습니다. 「결제하기」는 앱 안의 숫자만 바꿉니다.</li>
+<li><strong>카드번호를 수집하지 않습니다.</strong> 결제 수단 화면의 카드 칸은 <strong>앞 8자리만 받는 흉내</strong>이고, 뒤 여덟 자리는 <code>**** ****</code> 로 고정되어 있습니다. 적으신 숫자는 <strong>저장되지 않고, 검증되지 않고, 어디로도 전송되지 않으며</strong>, 그 화면을 벗어나는 순간 사라집니다.</li>
+<li><strong>간편결제 계정에 접근하지 않습니다.</strong> 네이버페이·카카오페이·토스·계좌이체는 <strong>이름만 고르는 항목</strong>이며, 해당 서비스와 연결되어 있지 않습니다.</li>
+<li><strong>배송이 실제로 오지 않습니다.</strong> 배송 상태와 「도착」 시각은 앱이 기기 안에서 계산한 값이고, 어떤 택배사와도 연결되어 있지 않습니다. 배송지에 적으신 주소는 <strong>화면에 되돌려 보여드리는 데만</strong> 씁니다.</li>
+<li><strong>브랜드와 상품은 지어낸 것입니다.</strong> 실제 상표·실제 상품이 아니며, 실제 가격과도 관계가 없습니다.</li>
+</ul>
+
+<h2>4. 사진 — 프로필 사진에만 씁니다</h2>
+
+<p>MY 화면에 프로필 사진을 넣으실 때만 <strong>앨범 또는 카메라</strong> 접근을 요청합니다.</p>
+
+<ul>
+<li>고르신 사진 <strong>한 장</strong>만 앱 전용 폴더로 복사합니다. 앨범 전체를 읽거나 훑지 않습니다.</li>
+<li>복사한 사진은 <strong>기기 안에만</strong> 있습니다. 저희 서버로 올라가지 않습니다 — 받을 서버가 없습니다.</li>
+<li>사진의 내용을 분석하지 않고, 얼굴을 인식하지 않으며, 위치 정보 등 사진에 붙은 정보를 읽지 않습니다.</li>
+<li><strong>거절하셔도 앱을 그대로 쓰실 수 있습니다.</strong> 사진이 없으면 앱 마크가 대신 들어갑니다.</li>
+</ul>
+
+<h2>5. 알림 — 기기 안에서만 만듭니다</h2>
+
+<p>가상 주문을 하시면 배송 안내 알림 세 개가 <strong>이용자의 기기 안에서</strong> 예약됩니다(주문 직후, 몇 시간 뒤, 다음 날).</p>
+
+<ul>
+<li><strong>로컬 알림</strong>이라 <strong>푸시 토큰이 없습니다.</strong> 저희가 알림을 보내는 것이 아니라, 기기가 정해진 시각에 스스로 띄웁니다.</li>
+<li>따라서 이용자가 무엇을 주문하셨는지는 <strong>기기 밖으로 나가지 않습니다.</strong></li>
+<li><strong>거절하셔도 앱의 모든 기능을 그대로 쓰실 수 있습니다.</strong> 배송 상태는 앱을 열면 화면에서 확인하실 수 있습니다.</li>
+</ul>
+
+<h2>6. 권한 — 무엇을 왜 받나</h2>
+
+<table>
+<tr><th>권한</th><th>왜 필요한가</th><th>거절하면</th></tr>
+<tr>
+  <td><strong>사진 / 앨범</strong></td>
+  <td>MY 화면의 프로필 사진으로 쓸 사진 한 장을 고르려고</td>
+  <td>앱 마크가 대신 들어갑니다. 그 밖의 기능은 그대로입니다</td>
+</tr>
+<tr>
+  <td><strong>카메라</strong></td>
+  <td>프로필 사진을 직접 찍으려고</td>
+  <td>앨범에서 고르시거나 앱 마크를 그대로 두시면 됩니다</td>
+</tr>
+<tr>
+  <td><strong>알림</strong></td>
+  <td>가상 배송 안내를 기기에서 띄우려고(5항)</td>
+  <td>알림만 안 옵니다. 앱은 전부 그대로 동작합니다</td>
+</tr>
+</table>
+
+<p><strong>위치·연락처·통화기록·문자·마이크·건강 정보에는 접근하지 않으며, 해당 권한을 요청하지 않습니다.</strong> 마이크 권한은 이 앱이 사용하지 않습니다.</p>
+
+<h2>7. 광고 (앞으로 들어갈 예정)</h2>
+
+<p>현재 판에는 광고가 없습니다. 앞으로 광고를 넣게 되면 아래와 같이 동작합니다.</p>
+
+<ul>
+<li><strong>광고 네트워크</strong> — Unity 의 <strong>LevelPlay(구 ironSource)</strong> 를 통해 광고가 표시됩니다. 여기에는 LevelPlay 가 중개하는 다른 광고 네트워크가 함께 붙을 수 있습니다.</li>
+<li><strong>읽어 가는 것</strong> — 광고 네트워크는 기기의 <strong>광고 식별자</strong>(안드로이드 광고 ID, iOS 의 IDFA/IDFV), 대략적인 접속 국가·언어, 기기 종류·OS 버전, 앱 버전 같은 일반적인 기기 정보를 읽습니다. 이 값은 <strong>광고 네트워크가 이용자의 기기에서 직접 읽어 가며, 저희는 그 값을 받지도 보관하지도 않습니다.</strong></li>
+<li><strong>보내지 않는 것</strong> — <strong>2항의 값(찜·장바구니·주문 기록·배송지·검색어·별명·프로필 사진)은 광고 네트워크에도 전달되지 않습니다.</strong> 광고 요청에 그 값을 실을 코드가 들어 있지 않습니다.</li>
+<li><strong>iOS 추적 동의</strong> — iOS 에서는 광고가 켜질 때 애플의 <strong>추적 허용 요청(ATT)</strong> 창이 한 번 뜹니다. <strong>거절해도 앱의 모든 기능을 그대로 쓰실 수 있으며</strong>, 거절하시면 맞춤 광고 대신 일반 광고가 표시됩니다.</li>
+<li><strong>맞춤 광고 끄기</strong> — 안드로이드는 <em>설정 → Google → 광고</em> 에서 「광고 ID 삭제」를, iOS 는 <em>설정 → 개인정보 보호 및 보안 → 추적</em> 에서 앱별 허용을 언제든 끄실 수 있습니다.</li>
+<li><strong>기능을 광고로 잠그지 않습니다.</strong> 광고를 보셔야 열리는 화면은 없습니다.</li>
+</ul>
+
+<p>광고 네트워크의 개인정보 처리는 해당 업체의 방침을 따릅니다 — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay 개인정보 처리방침</a>.</p>
+
+<h2>8. 앱이 밖으로 보내는 요청 — 전부</h2>
+
+<p>투명하게 밝히기 위해, 앱이 인터넷으로 요청을 보내는 경우를 남김없이 적습니다.</p>
+
+<ul>
+<li><strong>버전 확인</strong> — 앱을 켤 때 <strong>한 번</strong>, 「지금 판을 계속 써도 되는지」를 적어 둔 작은 파일 하나를 읽습니다. 급한 문제를 고쳤을 때 옛 판을 막기 위한 것입니다. <strong>보내는 값은 없습니다</strong> — 파일을 읽기만 하며, 이용자의 어떤 값도 실어 보내지 않습니다. 인터넷이 없거나 응답이 이상하면 <strong>막지 않고 그냥 통과</strong>합니다.</li>
+<li><strong>이 방침 페이지를 여는 경우</strong> — 앱에서 「개인정보 처리방침」을 누르시면 기기의 브라우저가 이 페이지(GitHub Pages)를 엽니다. 이때 GitHub 의 서버 기록에 접속 IP 가 남을 수 있으며, 이는 웹페이지를 여는 모든 경우와 같습니다.</li>
+<li><strong>문의를 보내시는 경우</strong> — 「문의·제보」에서 보내기를 누르시면 <strong>기기의 메일 앱이 열립니다.</strong> 앱이 직접 보내지 않으며, <strong>보내실지는 이용자가 메일 앱에서 정하십니다.</strong> 메일에는 이용자가 적으신 글과 앱 버전·기기 종류·OS 버전이 함께 담깁니다. 보내신 메일은 문의에 답하는 데만 쓰고 그 밖의 용도로 쓰지 않습니다.</li>
+<li><strong>광고가 켜진 뒤:</strong> 광고 네트워크로 나가는 광고 요청 하나가 더해집니다(7항).</li>
+</ul>
+
+<p>어느 경우에도 <strong>저희 서버로 가는 요청은 없습니다. 저희는 서버를 두고 있지 않습니다.</strong> 상품 640개와 사진은 <strong>모두 앱 안에</strong> 들어 있어, 인터넷 없이도 앱의 모든 기능이 동작합니다.</p>
+
+<h2>9. 제3자 제공 · 처리위탁 · 판매</h2>
+
+<p><strong>없습니다.</strong> 수집하는 개인정보가 없으므로 제3자에게 제공하거나 처리를 위탁할 정보도 없습니다. 어떤 정보도 판매하지 않습니다.</p>
+
+<p>광고가 켜진 뒤에는 광고 네트워크(Unity/LevelPlay 및 그 중개 네트워크)가 <strong>이용자의 기기에서 직접</strong> 광고 식별자를 읽어 갑니다. 저희가 받아서 넘기는 구조가 아니며, 저희는 그 값을 보유하지 않습니다.</p>
+
+<h2>10. 국외 이전</h2>
+
+<p>지금 판에서는 <strong>국외로 이전되는 정보가 없습니다.</strong></p>
+
+<p>광고가 켜진 뒤에는 광고 식별자 등 7항의 값이 광고 네트워크의 해외 서버로 전송될 수 있습니다.</p>
+
+<table>
+<tr><th>이전받는 자</th><th>이전 국가</th><th>이전 항목</th><th>이전 목적</th><th>보유 기간</th></tr>
+<tr>
+  <td>Unity Technologies (LevelPlay / ironSource) 및 중개 광고 네트워크</td>
+  <td>미국 등 해당 업체 서버 소재국</td>
+  <td>광고 식별자, 기기·OS·앱 버전, 대략적 국가·언어</td>
+  <td>광고 표시 및 성과 측정</td>
+  <td>해당 업체 방침에 따름</td>
+</tr>
+</table>
+
+<p>이전을 원하지 않으시면 7항의 「맞춤 광고 끄기」 경로로 광고 식별자를 초기화·차단하실 수 있습니다.</p>
+
+<h2>11. 보관 기간과 삭제 방법</h2>
+
+<p>저희가 보관하는 정보가 없으므로 <strong>삭제를 요청하실 대상도 없습니다.</strong> 기기에 남는 값(2항)은 이용자가 직접 지우실 수 있습니다.</p>
+
+<ul>
+<li><strong>앱 안에서</strong> — 찜 목록·최근 본 상품은 각 화면 오른쪽 위의 「전체 삭제」로, 최근 검색어는 검색 화면에서, 장바구니는 「편집 → 삭제」로 지우실 수 있습니다.</li>
+<li><strong>앱을 삭제하면</strong> 2항의 모든 값과 프로필 사진이 함께 지워집니다. 주문 기록·배송지·별명은 앱 안에 지우는 자리를 따로 두지 않았고, 앱을 삭제하시면 함께 사라집니다.</li>
+<li><strong>안드로이드</strong>에서는 <em>설정 → 앱 → 살래말래 → 저장공간 → 데이터 삭제</em> 로도 초기화됩니다.</li>
+</ul>
+
+<h2>12. 만 14세 미만 아동</h2>
+
+<p>살래말래는 <strong>만 14세 미만 아동을 대상으로 하지 않으며</strong>, 아동의 개인정보를 알면서 수집하지 않습니다. 애초에 어떤 개인정보도 수집하지 않습니다. 앱 안에서 <strong>실제 결제가 일어나지 않으므로</strong>, 아동이 보호자의 동의 없이 결제하게 되는 일도 없습니다(3항).</p>
+
+<h2>13. 이용자의 권리</h2>
+
+<p>이용자는 개인정보 보호법에 따라 열람·정정·삭제·처리정지를 요구하실 권리가 있습니다. 다만 <strong>저희가 보유한 개인정보가 없어</strong> 요청하실 대상이 존재하지 않습니다. 기기에 저장된 값은 11항의 방법으로 이용자가 직접 언제든지 지우실 수 있습니다.</p>
+
+<p>궁금한 점이 있으시면 <a href="mailto:koreatong.kr@gmail.com">koreatong.kr@gmail.com</a> 으로 문의해 주세요.</p>
+
+<h2>14. 안전성 확보 조치</h2>
+
+<ul>
+<li><strong>서버를 두지 않습니다.</strong> 서버가 없으면 서버에서 새어 나갈 정보도 없습니다.</li>
+<li>기기에 저장되는 값은 <strong>앱 전용 저장소</strong>에 두어 다른 앱이 읽을 수 없습니다.</li>
+<li>앱은 이용자의 사용 기록을 외부로 보내는 코드를 <strong>포함하고 있지 않습니다.</strong></li>
+<li><strong>카드번호를 받는 코드가 없습니다.</strong> 결제 화면의 숫자 칸은 저장도 전송도 하지 않습니다(3항).</li>
+<li>분석 도구(SDK)를 넣지 않았습니다. 광고가 켜진 뒤에도 별도의 분석 SDK 는 넣지 않을 계획입니다.</li>
+</ul>
+
+<h2>15. 방침 변경</h2>
+
+<p>이 방침이 바뀌면 이 페이지에 <strong>시행일</strong>을 고쳐 알립니다. 이용자에게 불리할 수 있는 변경(예: <strong>광고 도입</strong>, 새로운 정보 수집)은 <strong>시행 7일 전부터</strong> 이 페이지에 미리 알립니다. 바뀐 방침은 이 페이지에 올린 날부터 효력이 생깁니다.</p>
+
+<h2>16. 개인정보 보호책임자 및 문의</h2>
+
+<ul>
+<li><strong>제작자:</strong> 네모팩토리 (Nemo Factory)</li>
+<li><strong>개인정보 보호책임자:</strong> 앱 제작자 본인</li>
+<li><strong>문의:</strong> <a href="mailto:koreatong.kr@gmail.com">koreatong.kr@gmail.com</a></li>
+</ul>
+
+<h2>17. 권익침해 구제 방법</h2>
+
+<p>개인정보 침해로 상담·신고가 필요하시면 아래 기관에 문의하실 수 있습니다.</p>
+
+<ul>
+<li>개인정보침해 신고센터 — <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 국번없이 118</li>
+<li>개인정보 분쟁조정위원회 — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>대검찰청 사이버수사과 — <a href="https://www.spo.go.kr">spo.go.kr</a> / 국번없이 1301</li>
+<li>경찰청 사이버수사국 — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 국번없이 182</li>
+</ul>
+</section>
+<section class="lang" data-lang="en">
+<h1>Sallae Mallae — Privacy Policy</h1>
+
+<p><strong>Effective:</strong> August 23, 2026<br /><strong>Contact:</strong> koreatong.kr@gmail.com</p>
+
+<p><strong>In one line</strong><br />Sallae Mallae has <strong>no sign-up, no login, and we run no servers.</strong> There is no place for your information to be sent to and pile up. Everything you create in the app — wishlist, cart, order history — stays <strong>on your device only</strong> (section 2).</p>
+
+<p><strong>This app does not actually sell anything — read this first</strong><br />Sallae Mallae is a <strong>virtual shopping simulation</strong>. Every brand and product in the app is <strong>made up</strong>; none of them are real trademarks or real products. <strong>No real payment takes place and nothing is ever shipped.</strong> Tapping "Pay" <strong>does not move any money</strong>, and the app has no access to your cards, bank accounts, or payment services. Details are in <strong>section 3</strong>.</p>
+
+<p><strong>Ads are coming — an advance notice</strong><br />The current version has <strong>no ads.</strong> It sends no ad requests and shows no tracking consent prompt. To keep the app running we <strong>plan to add ads</strong>, and once we do, the ad network will read your device's <strong>advertising identifier</strong>. Because that change may be to your disadvantage, we are announcing it here <strong>in advance</strong> (section 15). Exactly what changes is written out in <strong>section 7</strong>. On the day ads are actually switched on, we will revise this paragraph and the effective date.</p>
+
+<h2>1. Personal information we collect</h2>
+
+<p><strong>None.</strong> We collect no name, contact details, email address, date of birth, address, or payment information. There is no account feature, so there is no sign-up or login at all.</p>
+
+<p>We <strong>run no servers.</strong> There is nowhere for your information to be sent to and stored. Every request the app makes to the internet is listed exhaustively in <strong>section 8</strong>.</p>
+
+<h2>2. What stays on your device</h2>
+
+<p>The values below are stored in the app's private storage on your device and <strong>never leave it.</strong></p>
+
+<ul>
+<li><strong>Wishlist</strong> — the IDs of products you saved.</li>
+<li><strong>Recently viewed</strong> — the IDs of products you opened (up to 60).</li>
+<li><strong>Cart</strong> — product IDs with the color, size, and quantity you chose.</li>
+<li><strong>Order history</strong> — what you ordered, the amount, and when. <strong>These are virtual orders</strong> (section 3).</li>
+<li><strong>Delivery address</strong> — the name, phone number, address, and note you type on the order screen. <strong>This is input for the simulation and is never transmitted anywhere</strong> (section 3).</li>
+<li><strong>Profile photo</strong> — the <strong>file name</strong> of the photo you set on the MY screen. The photo file itself sits in the app's private folder (section 4).</li>
+<li><strong>Nickname</strong> — the name you type on the MY screen. If you leave it blank it stays <code>Unknown</code>.</li>
+<li><strong>Recent searches</strong> — the words you typed into the search box (up to 10).</li>
+<li><strong>Language setting</strong> — whether to follow the device language, or which language you picked.</li>
+</ul>
+
+<p>These values exist <strong>to redraw your screens, not to identify you.</strong> Deleting the app deletes them (section 11).</p>
+
+<p>Note that the <strong>delivery address field will accept your real name and address if you type them.</strong> That still never leaves your device, and the app works fine without them — <strong>you may type anything you like.</strong></p>
+
+<h2>3. Payment and delivery — the most important notice in this app</h2>
+
+<p>Buying, paying, and shipping in Sallae Mallae are <strong>entirely simulated.</strong></p>
+
+<ul>
+<li><strong>No money changes hands.</strong> The app has no in-app purchases, no subscriptions, and no external payment integration. "Pay" only changes numbers inside the app.</li>
+<li><strong>We do not collect card numbers.</strong> The card field on the payment screen is a <strong>prop that accepts only the first 8 digits</strong>; the remaining eight are fixed on screen as <code>**** ****</code>. What you type is <strong>not stored, not validated, and not transmitted anywhere</strong>, and it disappears the moment you leave that screen.</li>
+<li><strong>We do not touch payment services.</strong> Naver Pay, Kakao Pay, Toss, and bank transfer are <strong>labels you can select</strong>, nothing more; the app is not connected to any of those services.</li>
+<li><strong>Nothing is ever delivered.</strong> The delivery status and "arrived" time are computed by the app on your device and are not connected to any courier. The address you enter is used <strong>only to display it back to you.</strong></li>
+<li><strong>The brands and products are invented.</strong> They are not real trademarks or real products, and the prices bear no relation to real ones.</li>
+</ul>
+
+<h2>4. Photos — used only for your profile picture</h2>
+
+<p>We request access to your <strong>photo library or camera</strong> only when you set a profile picture on the MY screen.</p>
+
+<ul>
+<li>Only the <strong>single photo you pick</strong> is copied into the app's private folder. We do not read or scan your library.</li>
+<li>The copy stays <strong>on your device.</strong> It is not uploaded to our servers — we have no server to receive it.</li>
+<li>We do not analyze the image, do not run face recognition, and do not read metadata attached to it such as location.</li>
+<li><strong>You can decline and keep using the app.</strong> Without a photo, the app's mark is shown instead.</li>
+</ul>
+
+<h2>5. Notifications — created entirely on your device</h2>
+
+<p>When you place a virtual order, three delivery notifications are scheduled <strong>on your device</strong> (just after the order, a few hours later, and the next day).</p>
+
+<ul>
+<li>They are <strong>local notifications</strong>, so there is <strong>no push token.</strong> We do not send them; your device raises them by itself at the scheduled time.</li>
+<li>As a result, what you ordered <strong>never leaves your device.</strong></li>
+<li><strong>You can decline and still use every feature.</strong> Delivery status is visible on screen whenever you open the app.</li>
+</ul>
+
+<h2>6. Permissions — what and why</h2>
+
+<table>
+<tr><th>Permission</th><th>Why it is needed</th><th>If you decline</th></tr>
+<tr>
+  <td><strong>Photos</strong></td>
+  <td>To pick one photo as your profile picture on the MY screen</td>
+  <td>The app's mark is shown instead. Everything else is unaffected</td>
+</tr>
+<tr>
+  <td><strong>Camera</strong></td>
+  <td>To take a profile picture directly</td>
+  <td>Pick one from your library, or keep the app's mark</td>
+</tr>
+<tr>
+  <td><strong>Notifications</strong></td>
+  <td>To raise the virtual delivery notices on your device (section 5)</td>
+  <td>You simply get no notifications. The app works in full</td>
+</tr>
+</table>
+
+<p><strong>We do not access location, contacts, call logs, messages, the microphone, or health data, and we do not request those permissions.</strong> The app does not use the microphone.</p>
+
+<h2>7. Advertising (planned)</h2>
+
+<p>The current version contains no ads. Once ads are added, they will work as follows.</p>
+
+<ul>
+<li><strong>Ad network</strong> — ads are served through Unity's <strong>LevelPlay (formerly ironSource)</strong>. Other ad networks mediated by LevelPlay may serve alongside it.</li>
+<li><strong>What they read</strong> — the ad network reads your device's <strong>advertising identifier</strong> (Android Advertising ID, IDFA/IDFV on iOS), your approximate country and language, device model and OS version, and app version. The ad network reads these <strong>directly from your device; we neither receive nor store them.</strong></li>
+<li><strong>What is not sent</strong> — <strong>none of the values in section 2 (wishlist, cart, order history, address, searches, nickname, profile photo) are passed to the ad network.</strong> There is no code that attaches them to an ad request.</li>
+<li><strong>iOS tracking consent</strong> — on iOS, Apple's <strong>App Tracking Transparency</strong> prompt appears once when ads are enabled. <strong>Declining leaves every feature of the app available</strong>; you will simply see non-personalized ads.</li>
+<li><strong>Turning off personalized ads</strong> — on Android, <em>Settings → Google → Ads</em> → "Delete advertising ID"; on iOS, <em>Settings → Privacy &amp; Security → Tracking</em>.</li>
+<li><strong>No feature is locked behind an ad.</strong> There is no screen you must watch an ad to open.</li>
+</ul>
+
+<p>The ad network's own handling of data is governed by its policy — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay Privacy Policy</a>.</p>
+
+<h2>8. Every request the app makes to the internet</h2>
+
+<p>For transparency, here is the complete list.</p>
+
+<ul>
+<li><strong>Version check</strong> — <strong>once</strong> at launch, the app reads one small file that says whether the installed version may still be used. This exists so that an old version can be blocked after an urgent fix. <strong>Nothing is sent</strong> — the file is only read, and none of your values ride along. If there is no connection or the response is malformed, the app <strong>passes through rather than blocking.</strong></li>
+<li><strong>Opening this policy page</strong> — tapping "Privacy Policy" in the app opens this page (GitHub Pages) in your browser. GitHub's server logs may record your IP address, as they would for any web page you open.</li>
+<li><strong>Sending us a message</strong> — tapping send on the contact screen <strong>opens your device's mail app.</strong> The app does not send anything itself; <strong>whether to send is your decision in the mail app.</strong> The draft contains what you wrote plus the app version, device model, and OS version. We use what you send only to answer you.</li>
+<li><strong>After ads are enabled:</strong> one more request, from the ad network (section 7).</li>
+</ul>
+
+<p>In none of these cases is <strong>any request made to a server of ours. We run no servers.</strong> All 640 products and their images ship <strong>inside the app</strong>, so every feature works with no internet connection.</p>
+
+<h2>9. Sharing, processors, and sale of data</h2>
+
+<p><strong>None.</strong> Since we collect no personal information, there is nothing to share with third parties or hand to a processor. We do not sell any information.</p>
+
+<p>Once ads are enabled, the ad network (Unity/LevelPlay and the networks it mediates) reads the advertising identifier <strong>directly from your device.</strong> It is not something we receive and pass on, and we do not retain it.</p>
+
+<h2>10. International transfers</h2>
+
+<p>In the current version <strong>no information is transferred abroad.</strong></p>
+
+<p>Once ads are enabled, the values in section 7 such as the advertising identifier may be sent to the ad network's overseas servers.</p>
+
+<table>
+<tr><th>Recipient</th><th>Country</th><th>Items</th><th>Purpose</th><th>Retention</th></tr>
+<tr>
+  <td>Unity Technologies (LevelPlay / ironSource) and mediated ad networks</td>
+  <td>United States and other countries where their servers are located</td>
+  <td>Advertising identifier, device/OS/app version, approximate country and language</td>
+  <td>Serving ads and measuring performance</td>
+  <td>Per that company's policy</td>
+</tr>
+</table>
+
+<p>If you do not want this transfer, you can reset or block the advertising identifier using the paths in section 7.</p>
+
+<h2>11. Retention and deletion</h2>
+
+<p>Since we hold nothing, <strong>there is no one to send a deletion request to.</strong> The values on your device (section 2) can be erased by you.</p>
+
+<ul>
+<li><strong>Inside the app</strong> — clear your wishlist and recently viewed items with "Clear all" at the top right of those screens, your recent searches on the search screen, and your cart with "Edit → Delete".</li>
+<li><strong>Deleting the app</strong> erases everything in section 2 along with the profile photo. Order history, the delivery address, and your nickname have no in-app clear button; they go when the app does.</li>
+<li><strong>On Android</strong>, <em>Settings → Apps → Sallae Mallae → Storage → Clear data</em> also resets it.</li>
+</ul>
+
+<h2>12. Children</h2>
+
+<p>Sallae Mallae is <strong>not directed to children under 14</strong> and we do not knowingly collect personal information from children — we collect no personal information from anyone. Because <strong>no real payment can occur in the app</strong>, a child cannot make a purchase without a guardian's consent (section 3).</p>
+
+<h2>13. Your rights</h2>
+
+<p>Depending on where you live, you may have the right to access, correct, delete, or restrict processing of your personal information (for example under the GDPR, the CCPA/CPRA, or Korea's Personal Information Protection Act). Because <strong>we hold no personal information about you</strong>, there is nothing for such a request to act on. Values stored on your device can be erased by you at any time using section 11.</p>
+
+<p>If you have any question, write to <a href="mailto:koreatong.kr@gmail.com">koreatong.kr@gmail.com</a>.</p>
+
+<h2>14. Security measures</h2>
+
+<ul>
+<li><strong>We run no servers.</strong> With no server, there is nothing on a server to leak.</li>
+<li>Values on the device live in the app's <strong>private storage</strong>, which other apps cannot read.</li>
+<li>The app contains <strong>no code</strong> that sends your activity anywhere.</li>
+<li><strong>There is no code that collects a card number.</strong> The digits on the payment screen are neither stored nor transmitted (section 3).</li>
+<li>No analytics SDK is included, and we do not plan to add one even after ads are enabled.</li>
+</ul>
+
+<h2>15. Changes to this policy</h2>
+
+<p>When this policy changes, we update the <strong>effective date</strong> on this page. Changes that may be to your disadvantage — such as <strong>introducing ads</strong> or collecting anything new — are announced here <strong>at least 7 days in advance</strong>. A revised policy takes effect on the day it is posted here.</p>
+
+<h2>16. Who to contact</h2>
+
+<ul>
+<li><strong>Developer:</strong> Nemo Factory</li>
+<li><strong>Privacy contact:</strong> the developer</li>
+<li><strong>Email:</strong> <a href="mailto:koreatong.kr@gmail.com">koreatong.kr@gmail.com</a></li>
+</ul>
+
+<h2>17. Filing a complaint (Korea)</h2>
+
+<p>If you need to report or get advice about a privacy matter, you may contact:</p>
+
+<ul>
+<li>Korea Internet &amp; Security Agency, Privacy Report Center — <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 118</li>
+<li>Personal Information Dispute Mediation Committee — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>Supreme Prosecutors' Office, Cyber Investigation Division — <a href="https://www.spo.go.kr">spo.go.kr</a> / 1301</li>
+<li>Korean National Police Agency, Cyber Bureau — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 182</li>
+</ul>
+</section>
+<footer>
+  ⓒ Nemo Factory · 문의 <a href="mailto:koreatong.kr@gmail.com">koreatong.kr@gmail.com</a><br>
+  <a href="../">전체 목록</a>
+</footer>
+</body>
+</html>
