@@ -19,7 +19,8 @@ Nogeumbiseo collects no personal data. There is no account and no sign-in, and <
 <li><strong>Downloaded AI model files</strong> — one for transcription, one for summarisation (section 3).</li>
 <li><strong>Your Pro flag</strong> — a single marker that you own the one-time purchase or an active subscription (section 6).</li>
 <li><strong>Language setting</strong> — the language you picked in the app.</li>
-<li><strong>Today's free-transcription count</strong> — a date and a number (section 6).</li>
+<li><strong>Today's free-transcription count</strong> — a date, the number used, and the number earned by watching ads (section 6).</li>
+<li><strong>Time last confirmed</strong> — the server time that comes back with the app status file in section 3. It is used to count when your daily allowance refills; it says nothing about you.</li>
 <li><strong>Ad-protection record</strong> — the time an ad was accidentally tapped (section 5).</li>
 <li><strong>Copy of the ad settings</strong> — the ad configuration received from the app status file in section 3 (which ad slots to use, whether to turn ads off) is written to the device so the app still works from the last known settings when offline. It contains nothing about you.</li>
 </ul>
@@ -32,7 +33,7 @@ Nogeumbiseo collects no personal data. There is no account and no sign-in, and <
 
 <ul>
 <li><strong>Downloading AI models</strong> — the transcription and summary models are fetched from the Hugging Face repository, mostly during first-run setup. The request carries nothing that identifies you. That service may process connection data (such as IP addresses) under its own policy in order to serve the request.</li>
-<li><strong>App status file</strong> — on launch the app reads one small configuration file we host. It says whether the installed version is still supported and how ads should be shown (which ad slots to use, whether to turn ads off). Nothing is sent; the app only compares the values on your device and keeps a copy of them (section 2).</li>
+<li><strong>App status file</strong> — on launch the app reads one small configuration file we host. It says whether the installed version is still supported and how ads should be shown (which ad slots to use, whether to turn ads off). Nothing is sent; the app only compares the values on your device and keeps a copy of them (section 2). The <strong>server time</strong> that comes back with that response is also read, so the app can tell exactly when your free transcriptions refill at midnight even if the device clock is wrong (section 6).</li>
 <li><strong>Ad requests</strong> — only in builds where ads are enabled, the values listed in section 5 are passed to the ad providers.</li>
 </ul>
 
@@ -48,7 +49,7 @@ Nogeumbiseo collects no personal data. There is no account and no sign-in, and <
 
 <h2>5. Advertising</h2>
 
-<p>Ads appear in <strong>two</strong> places. <strong>There are no full-screen interstitials and no rewarded ads, and no feature is locked behind an ad.</strong> Purchasing Pro (section 6) <strong>removes the bottom banner.</strong> The rectangle ad shown while you wait remains, Pro or not.</p><ul><li><strong>Bottom banner</strong> — shown at the bottom of the list and detail screens. Its height stays the same whether or not an ad loads, so nothing above it shifts when an ad arrives late.</li><li><strong>Rectangle ad while you wait</strong> (300×250) — shown only in three places: <strong>while transcription is running</strong>, <strong>while a summary is being generated</strong>, and on <strong>the screen telling you a summary is ready</strong>. All three are moments when you are waiting for a result, so nothing you are doing is interrupted. It is spaced away from the cancel button so a stray finger does not hit it.</li></ul>
+<p>Ads appear in <strong>three</strong> places. <strong>There are no full-screen interstitials</strong> — no ad ever covers the screen in the middle of what you are doing. The third place is a video ad that plays <strong>only when you tap it yourself</strong>, and no feature is locked if you skip it. Purchasing Pro (section 6) <strong>removes the bottom banner and the video ad.</strong> The rectangle ad shown while you wait remains, Pro or not.</p><ul><li><strong>Bottom banner</strong> — shown at the bottom of the list and detail screens. Its height stays the same whether or not an ad loads, so nothing above it shifts when an ad arrives late.</li><li><strong>Rectangle ad while you wait</strong> (300×250) — shown only in three places: <strong>while transcription is running</strong>, <strong>while a summary is being generated</strong>, and on <strong>the screen telling you a summary is ready</strong>. All three are moments when you are waiting for a result, so nothing you are doing is interrupted. It is spaced away from the cancel button so a stray finger does not hit it.</li><li><strong>Video ad that earns you one more</strong> — once you have used your <strong>three free transcriptions</strong> for the day, tapping transcribe brings up a notice. A video ad plays <strong>only if you tap “Watch an ad for one more” yourself</strong>, and <strong>watching it to the end</strong> adds one transcription for that day. Closing it partway does nothing and costs you nothing. Even if you never watch it, <strong>your three free transcriptions come back after midnight.</strong></li></ul>
 
 <p><strong>Who serves the ads</strong><br />Ads are served through <strong>Unity LevelPlay</strong> (formerly ironSource) mediation, which picks an ad network for each impression. The networks currently connected are listed below and may change over time.</p>
 
@@ -75,13 +76,13 @@ Nogeumbiseo collects no personal data. There is no account and no sign-in, and <
 
 <p><strong>Turning off personalised ads</strong><br />Settings &gt; Privacy &amp; Security &gt; Tracking. Everything in the app keeps working either way.</p>
 
-<p><strong>Protection against accidental taps</strong><br />If you tap an ad once, ads are hidden for <strong>an hour</strong>; tap twice on the same day and they stay hidden <strong>until midnight</strong>. This guards against repeated accidental opens. <strong>The protection covers both the banner and the rectangle ad</strong> — tapping either one rests both. The tap timestamp it uses stays on your device (section 2).</p>
+<p><strong>Protection against accidental taps</strong><br />If you tap an ad once, ads are hidden for <strong>an hour</strong>; tap twice on the same day and they stay hidden <strong>until midnight</strong>. This guards against repeated accidental opens. <strong>The protection covers both the banner and the rectangle ad</strong> — tapping either one rests both. The video ad only ever appears because you tapped it, so accidental taps are unlikely there: it rests for <strong>two minutes</strong> after a tap, and once you have watched one, <strong>a minute</strong> must pass before the next is offered. The tap timestamp it uses stays on your device (section 2).</p>
 
 <h2>6. Payment — Pro</h2>
 
-<p>Free use includes <strong>three transcriptions a day</strong>. The date and count used to track this stay on your device (section 2).</p>
+<p>Free use includes <strong>three transcriptions a day</strong>, and once those are gone <strong>each video ad you watch to the end adds one more</strong> for that day (section 5). After midnight it refills to three, and anything earned from ads is cleared at the same time. The date and count used to track this stay on your device (section 2).</p>
 
-<p>Pro gives you two things: <strong>unlimited transcription and summaries</strong> and <strong>no bottom banner</strong>. The rectangle ad shown while you wait (section 5) still appears for Pro users. What we sell depends on the country of your store account:</p>
+<p>Pro gives you two things: <strong>unlimited transcription and summaries</strong> and <strong>no bottom banner</strong>. With no daily limit, <strong>you are never offered the video ad either.</strong> The rectangle ad shown while you wait (section 5) still appears for Pro users. What we sell depends on the country of your store account:</p>
 
 <ul>
 <li><strong>Korea</strong> — a single one-time purchase that you keep.</li>
