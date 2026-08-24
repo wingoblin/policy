@@ -29,7 +29,8 @@
 <li><strong>Recent searches</strong> — the words you typed into the search box (up to 10).</li>
 <li><strong>Language setting</strong> — whether to follow the device language, or which language you picked.</li>
 <li><strong>VIP ownership (coming in a future update)</strong> — once the VIP pass is added, whether you bought it (section 3). Only the fact of the purchase; no payment details.</li>
-<li><strong>Ad misfire guard</strong> — a few timestamps of ad taps, used to rest ads if they are tapped repeatedly in a short span. <strong>They never leave your device</strong> (section 7).</li>
+<li><strong>Balance</strong> — the <strong>virtual amount</strong> used inside the app, the date you last received the daily top-up, and how many times you topped up with an ad that day. It is <strong>not real money</strong> (section 3) and never leaves your device.</li>
+<li><strong>Ad misfire guard</strong> — a few timestamps of ad taps and ad displays, used to rest ads if they are tapped repeatedly in a short span. <strong>They never leave your device</strong> (section 7).</li>
 </ul>
 
 <p>These values exist <strong>to redraw your screens, not to identify you.</strong> Deleting the app deletes them (section 11).</p>
@@ -103,14 +104,15 @@
 <p>The app carries ads so that it can stay free. <strong>They are currently on iPhone and iPad only; the Android version has no ads yet.</strong></p>
 
 <ul>
-<li><strong>Ads appear in exactly two places</strong> — a <strong>banner strip at the bottom of the screen</strong>, and a <strong>rectangular ad on the "processing your payment" waiting screen</strong> during a simulated checkout. There are no ads between product listings and none that cover the whole screen.</li>
+<li><strong>Ads appear in exactly three places</strong> — a <strong>banner strip at the bottom of the screen</strong>, a <strong>rectangular ad on the "processing your payment" waiting screen</strong> during a simulated checkout, and a <strong>rewarded video</strong> that plays <strong>only when you tap "Watch an ad" yourself</strong>. There are no ads between product listings, and none that cover the whole screen unless you asked for one.</li>
+<li><strong>The rewarded ad is an option for topping up your balance</strong> — it plays <strong>only when you tap it</strong>, to add to the virtual amount described in section 2. <strong>Every screen and feature works without watching it</strong>, and your balance <strong>refills on its own every midnight</strong>. It is also <strong>limited to twice a day</strong>.</li>
 <li><strong>Ad network</strong> — ads are served through Unity's <strong>LevelPlay (formerly ironSource)</strong>. Other ad networks mediated by LevelPlay may serve alongside it.</li>
 <li><strong>What they read</strong> — the ad network reads your device's <strong>advertising identifier</strong> (IDFA/IDFV on iOS, Android Advertising ID), your approximate country and language, device model and OS version, and app version. The ad network reads these <strong>directly from your device; we neither receive nor store them.</strong></li>
 <li><strong>What is not sent</strong> — <strong>none of the values in section 2 (wishlist, cart, order history, address, searches, nickname, profile photo) are passed to the ad network.</strong> There is no code that attaches them to an ad request.</li>
 <li><strong>iOS tracking consent</strong> — Apple's <strong>App Tracking Transparency</strong> prompt appears once, the first time you open the app. <strong>Declining leaves every feature of the app available</strong>; you will simply see non-personalized ads.</li>
 <li><strong>Turning off personalized ads</strong> — on iOS, <em>Settings → Privacy &amp; Security → Tracking</em>; on Android, <em>Settings → Google → Ads</em> → "Delete advertising ID".</li>
 <li><strong>Once the VIP pass is added, buying it will remove the bottom banner.</strong> The rectangular ad on the waiting screen still appears.</li>
-<li><strong>No feature is locked behind an ad.</strong> There is no screen you must watch an ad to open, and the app moves on whether or not an ad loads.</li>
+<li><strong>No feature is locked behind an ad.</strong> There is no screen you must watch an ad to open, the app moves on whether or not an ad loads, and <strong>your balance is topped up even when an ad fails to load.</strong></li>
 </ul>
 
 <p>The ad network's own handling of data is governed by its policy — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay Privacy Policy</a>.</p>

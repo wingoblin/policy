@@ -95,6 +95,10 @@
   🛑 VIP 는 1.0.2 로 미뤘다(2026-08-24). 광고 빌드(1.0.1)엔 VIP 탭·IAP 가 없어서
      2·3·7·8·9·12·14항의 VIP 를 전부 **미래형**으로 되돌렸다. 1.0.2 에서 VIP 를 켜면
      그 자리들을 현재형으로 되돌리고 com.sallaemallae.vip 를 함께 낸다.
+  ✅ 2026-08-24 잔고(하루 적립 + 보상형 광고 충전)를 넣었다. 2항에 잔고를, 7항에 세 번째
+     광고 자리(보상형)를 적었다. 🛑 「광고를 봐야 열리는 기능은 없다」는 줄은 **지우지 마라** —
+     보상형은 잔고를 더 채우는 선택지일 뿐이고, 안 봐도 앱은 다 돌고 잔고는 자정에 또 들어온다.
+     그 성질이 바뀌는 순간(광고를 봐야만 살 수 있게 되는 등) 그 줄을 먼저 고쳐야 한다.
   🛑 한/영 두 판이다. 앱은 열 판이지만 방침은 둘이고, 페이지가 navigator.language 로 고른다.
 -->
 
@@ -129,7 +133,8 @@
 <li><strong>최근 검색어</strong> — 검색창에 넣으신 말(최대 10개).</li>
 <li><strong>언어 설정</strong> — 기기 언어를 따라갈지, 직접 고른 언어가 있는지.</li>
 <li><strong>VIP 보유 여부(다음 업데이트 예정)</strong> — 앞으로 VIP 영구권이 추가되면, 구매하셨는지 여부만 기록합니다(3항). 구매 사실만 기록하며, 결제 정보는 담지 않습니다.</li>
-<li><strong>광고 오작동 방어 기록</strong> — 광고를 누르신 시각 몇 개. 짧은 시간에 반복해서 눌리면 광고를 잠시 쉬게 하려는 값이며, <strong>기기 밖으로 나가지 않습니다</strong>(7항).</li>
+<li><strong>잔고</strong> — 앱 안에서만 쓰는 <strong>가상 금액</strong>과, 마지막으로 하루치를 받으신 날짜, 그날 광고로 충전하신 횟수. <strong>실제 돈이 아니며</strong>(3항), 기기 밖으로 나가지 않습니다.</li>
+<li><strong>광고 오작동 방어 기록</strong> — 광고를 누르거나 광고가 떴던 시각 몇 개. 짧은 시간에 반복해서 눌리면 광고를 잠시 쉬게 하려는 값이며, <strong>기기 밖으로 나가지 않습니다</strong>(7항).</li>
 </ul>
 
 <p>이 값들은 <strong>이용자를 알아보기 위한 것이 아니라</strong> 화면을 다시 그리기 위한 것입니다. 앱을 삭제하면 함께 지워집니다(11항).</p>
@@ -203,14 +208,15 @@
 <p>앱을 무료로 유지하기 위해 광고가 들어 있습니다. <strong>지금은 iPhone·iPad 판에만 있고, 안드로이드 판에는 아직 광고가 없습니다.</strong></p>
 
 <ul>
-<li><strong>광고가 나오는 자리는 두 곳뿐입니다</strong> — 화면 맨 아래의 <strong>가로 띠 배너</strong>, 그리고 가상 결제가 진행되는 <strong>「결제가 진행중이에요」 대기 화면의 사각 광고</strong>. 상품 목록 사이나 화면 전체를 덮는 광고는 넣지 않았습니다.</li>
+<li><strong>광고가 나오는 자리는 세 곳뿐입니다</strong> — 화면 맨 아래의 <strong>가로 띠 배너</strong>, 가상 결제가 진행되는 <strong>「결제가 진행중이에요」 대기 화면의 사각 광고</strong>, 그리고 <strong>이용자가 「광고 보기」를 직접 누르셨을 때만</strong> 재생되는 <strong>보상형 동영상 광고</strong>. 상품 목록 사이나, 누르지 않았는데 화면 전체를 덮는 광고는 넣지 않았습니다.</li>
+<li><strong>보상형 광고는 잔고를 채우는 선택지입니다</strong> — 앱 안의 가상 금액(2항의 「잔고」)을 더 채우고 싶으실 때 <strong>직접 누르셔야만</strong> 재생됩니다. <strong>안 보셔도 앱의 모든 화면과 기능을 그대로 쓰실 수 있고</strong>, 잔고는 <strong>매일 자정에 저절로 다시 채워집니다.</strong> 하루에 볼 수 있는 횟수도 <strong>2회로 제한</strong>해 두었습니다.</li>
 <li><strong>광고 네트워크</strong> — Unity 의 <strong>LevelPlay(구 ironSource)</strong> 를 통해 광고가 표시됩니다. 여기에는 LevelPlay 가 중개하는 다른 광고 네트워크가 함께 붙을 수 있습니다.</li>
 <li><strong>읽어 가는 것</strong> — 광고 네트워크는 기기의 <strong>광고 식별자</strong>(iOS 의 IDFA/IDFV, 안드로이드 광고 ID), 대략적인 접속 국가·언어, 기기 종류·OS 버전, 앱 버전 같은 일반적인 기기 정보를 읽습니다. 이 값은 <strong>광고 네트워크가 이용자의 기기에서 직접 읽어 가며, 저희는 그 값을 받지도 보관하지도 않습니다.</strong></li>
 <li><strong>보내지 않는 것</strong> — <strong>2항의 값(찜·장바구니·주문 기록·배송지·검색어·별명·프로필 사진)은 광고 네트워크에도 전달되지 않습니다.</strong> 광고 요청에 그 값을 실을 코드가 들어 있지 않습니다.</li>
 <li><strong>iOS 추적 동의</strong> — iOS 에서는 앱을 처음 켤 때 애플의 <strong>추적 허용 요청(ATT)</strong> 창이 한 번 뜹니다. <strong>거절해도 앱의 모든 기능을 그대로 쓰실 수 있으며</strong>, 거절하시면 맞춤 광고 대신 일반 광고가 표시됩니다.</li>
 <li><strong>맞춤 광고 끄기</strong> — iOS 는 <em>설정 → 개인정보 보호 및 보안 → 추적</em> 에서 앱별 허용을, 안드로이드는 <em>설정 → Google → 광고</em> 에서 「광고 ID 삭제」를 언제든 끄실 수 있습니다.</li>
 <li><strong>앞으로 추가될 VIP 영구권을 구매하시면 하단 배너가 사라질 예정입니다.</strong> 대기 화면의 사각 광고는 그대로 나옵니다.</li>
-<li><strong>기능을 광고로 잠그지 않습니다.</strong> 광고를 보셔야 열리는 화면은 없습니다. 광고가 안 떠도 화면은 그대로 넘어갑니다.</li>
+<li><strong>기능을 광고로 잠그지 않습니다.</strong> 광고를 보셔야 열리는 화면은 없습니다. 광고가 안 떠도 화면은 그대로 넘어가며, <strong>광고를 못 받아 온 경우에도 잔고는 채워 드립니다.</strong></li>
 </ul>
 
 <p>광고 네트워크의 개인정보 처리는 해당 업체의 방침을 따릅니다 — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay 개인정보 처리방침</a>.</p>
@@ -339,7 +345,8 @@
 <li><strong>Recent searches</strong> — the words you typed into the search box (up to 10).</li>
 <li><strong>Language setting</strong> — whether to follow the device language, or which language you picked.</li>
 <li><strong>VIP ownership (coming in a future update)</strong> — once the VIP pass is added, whether you bought it (section 3). Only the fact of the purchase; no payment details.</li>
-<li><strong>Ad misfire guard</strong> — a few timestamps of ad taps, used to rest ads if they are tapped repeatedly in a short span. <strong>They never leave your device</strong> (section 7).</li>
+<li><strong>Balance</strong> — the <strong>virtual amount</strong> used inside the app, the date you last received the daily top-up, and how many times you topped up with an ad that day. It is <strong>not real money</strong> (section 3) and never leaves your device.</li>
+<li><strong>Ad misfire guard</strong> — a few timestamps of ad taps and ad displays, used to rest ads if they are tapped repeatedly in a short span. <strong>They never leave your device</strong> (section 7).</li>
 </ul>
 
 <p>These values exist <strong>to redraw your screens, not to identify you.</strong> Deleting the app deletes them (section 11).</p>
@@ -413,14 +420,15 @@
 <p>The app carries ads so that it can stay free. <strong>They are currently on iPhone and iPad only; the Android version has no ads yet.</strong></p>
 
 <ul>
-<li><strong>Ads appear in exactly two places</strong> — a <strong>banner strip at the bottom of the screen</strong>, and a <strong>rectangular ad on the "processing your payment" waiting screen</strong> during a simulated checkout. There are no ads between product listings and none that cover the whole screen.</li>
+<li><strong>Ads appear in exactly three places</strong> — a <strong>banner strip at the bottom of the screen</strong>, a <strong>rectangular ad on the "processing your payment" waiting screen</strong> during a simulated checkout, and a <strong>rewarded video</strong> that plays <strong>only when you tap "Watch an ad" yourself</strong>. There are no ads between product listings, and none that cover the whole screen unless you asked for one.</li>
+<li><strong>The rewarded ad is an option for topping up your balance</strong> — it plays <strong>only when you tap it</strong>, to add to the virtual amount described in section 2. <strong>Every screen and feature works without watching it</strong>, and your balance <strong>refills on its own every midnight</strong>. It is also <strong>limited to twice a day</strong>.</li>
 <li><strong>Ad network</strong> — ads are served through Unity's <strong>LevelPlay (formerly ironSource)</strong>. Other ad networks mediated by LevelPlay may serve alongside it.</li>
 <li><strong>What they read</strong> — the ad network reads your device's <strong>advertising identifier</strong> (IDFA/IDFV on iOS, Android Advertising ID), your approximate country and language, device model and OS version, and app version. The ad network reads these <strong>directly from your device; we neither receive nor store them.</strong></li>
 <li><strong>What is not sent</strong> — <strong>none of the values in section 2 (wishlist, cart, order history, address, searches, nickname, profile photo) are passed to the ad network.</strong> There is no code that attaches them to an ad request.</li>
 <li><strong>iOS tracking consent</strong> — Apple's <strong>App Tracking Transparency</strong> prompt appears once, the first time you open the app. <strong>Declining leaves every feature of the app available</strong>; you will simply see non-personalized ads.</li>
 <li><strong>Turning off personalized ads</strong> — on iOS, <em>Settings → Privacy &amp; Security → Tracking</em>; on Android, <em>Settings → Google → Ads</em> → "Delete advertising ID".</li>
 <li><strong>Once the VIP pass is added, buying it will remove the bottom banner.</strong> The rectangular ad on the waiting screen still appears.</li>
-<li><strong>No feature is locked behind an ad.</strong> There is no screen you must watch an ad to open, and the app moves on whether or not an ad loads.</li>
+<li><strong>No feature is locked behind an ad.</strong> There is no screen you must watch an ad to open, the app moves on whether or not an ad loads, and <strong>your balance is topped up even when an ad fails to load.</strong></li>
 </ul>
 
 <p>The ad network's own handling of data is governed by its policy — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay Privacy Policy</a>.</p>
