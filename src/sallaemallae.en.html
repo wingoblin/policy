@@ -1,12 +1,12 @@
 <h1>Sallae Mallae — Privacy Policy</h1>
 
-<p><strong>Effective:</strong> August 23, 2026<br /><strong>Contact:</strong> koreatong.kr@gmail.com</p>
+<p><strong>Effective:</strong> August 24, 2026<br /><strong>Contact:</strong> koreatong.kr@gmail.com</p>
 
 <p><strong>In one line</strong><br />Sallae Mallae has <strong>no sign-up, no login, and we run no servers.</strong> There is no place for your information to be sent to and pile up. Everything you create in the app — wishlist, cart, order history — stays <strong>on your device only</strong> (section 2).</p>
 
 <p><strong>This app does not actually sell anything — read this first</strong><br />Sallae Mallae is a <strong>virtual shopping simulation</strong>. Every brand and product in the app is <strong>made up</strong>; none of them are real trademarks or real products. <strong>No real payment takes place and nothing is ever shipped.</strong> Tapping "Pay" <strong>does not move any money</strong>, and the app has no access to your cards, bank accounts, or payment services. Details are in <strong>section 3</strong>.</p>
 
-<p><strong>Ads are coming — an advance notice</strong><br />The current version has <strong>no ads.</strong> It sends no ad requests and shows no tracking consent prompt. To keep the app running we <strong>plan to add ads</strong>, and once we do, the ad network will read your device's <strong>advertising identifier</strong>. Because that change may be to your disadvantage, we are announcing it here <strong>in advance</strong> (section 15). Exactly what changes is written out in <strong>section 7</strong>. On the day ads are actually switched on, we will revise this paragraph and the effective date.</p>
+<p><strong>This app shows ads</strong><br />To keep the app free, it <strong>contains ads</strong> (on iPhone and iPad; the Android version has no ads yet). The ad network reads your device's <strong>advertising identifier</strong>, and nothing the app records for you — wishlist, cart, orders, searches — is <strong>ever passed to it.</strong> What is read, and how to turn personalization off, is written out in <strong>section 7</strong>. <strong>No feature is locked behind an ad.</strong></p>
 
 <h2>1. Personal information we collect</h2>
 
@@ -28,6 +28,8 @@
 <li><strong>Nickname</strong> — the name you type on the MY screen. If you leave it blank it stays <code>Unknown</code>.</li>
 <li><strong>Recent searches</strong> — the words you typed into the search box (up to 10).</li>
 <li><strong>Language setting</strong> — whether to follow the device language, or which language you picked.</li>
+<li><strong>VIP ownership</strong> — whether you bought the VIP pass (section 3). Only the fact of the purchase; no payment details.</li>
+<li><strong>Ad misfire guard</strong> — a few timestamps of ad taps, used to rest ads if they are tapped repeatedly in a short span. <strong>They never leave your device</strong> (section 7).</li>
 </ul>
 
 <p>These values exist <strong>to redraw your screens, not to identify you.</strong> Deleting the app deletes them (section 11).</p>
@@ -39,7 +41,8 @@
 <p>Buying, paying, and shipping in Sallae Mallae are <strong>entirely simulated.</strong></p>
 
 <ul>
-<li><strong>No money changes hands.</strong> The app has no in-app purchases, no subscriptions, and no external payment integration. "Pay" only changes numbers inside the app.</li>
+<li><strong>Buying products costs nothing.</strong> "Pay" only changes numbers inside the app. Product purchases have no real payment integration behind them.</li>
+<li><strong>One thing is a real purchase: the VIP pass.</strong> There is <strong>a single in-app purchase</strong> that unlocks the ability to buy VIP items (one payment, not a subscription). It is handled <strong>entirely by the App Store or Google Play</strong>; the app never sees, receives, or stores your card, bank account, or payment account. All that remains in the app is a flag saying you bought it (section 2). Receipts and refunds are managed by the store.</li>
 <li><strong>We do not collect card numbers.</strong> The card field on the payment screen is a <strong>prop that accepts only the first 8 digits</strong>; the remaining eight are fixed on screen as <code>**** ****</code>. What you type is <strong>not stored, not validated, and not transmitted anywhere</strong>, and it disappears the moment you leave that screen.</li>
 <li><strong>We do not touch payment services.</strong> Naver Pay, Kakao Pay, Toss, and bank transfer are <strong>labels you can select</strong>, nothing more; the app is not connected to any of those services.</li>
 <li><strong>Nothing is ever delivered.</strong> The delivery status and "arrived" time are computed by the app on your device and are not connected to any courier. The address you enter is used <strong>only to display it back to you.</strong></li>
@@ -86,21 +89,28 @@
   <td>To raise the virtual delivery notices on your device (section 5)</td>
   <td>You simply get no notifications. The app works in full</td>
 </tr>
+<tr>
+  <td><strong>Tracking (iOS only)</strong></td>
+  <td>To use the advertising identifier for personalized ads (section 7)</td>
+  <td>You see non-personalized ads instead. The app works in full</td>
+</tr>
 </table>
 
 <p><strong>We do not access location, contacts, call logs, messages, the microphone, or health data, and we do not request those permissions.</strong> The app does not use the microphone.</p>
 
-<h2>7. Advertising (planned)</h2>
+<h2>7. Advertising</h2>
 
-<p>The current version contains no ads. Once ads are added, they will work as follows.</p>
+<p>The app carries ads so that it can stay free. <strong>They are currently on iPhone and iPad only; the Android version has no ads yet.</strong></p>
 
 <ul>
+<li><strong>Ads appear in exactly two places</strong> — a <strong>banner strip at the bottom of the screen</strong>, and a <strong>rectangular ad on the "processing your payment" waiting screen</strong> during a simulated checkout. There are no ads between product listings and none that cover the whole screen.</li>
 <li><strong>Ad network</strong> — ads are served through Unity's <strong>LevelPlay (formerly ironSource)</strong>. Other ad networks mediated by LevelPlay may serve alongside it.</li>
-<li><strong>What they read</strong> — the ad network reads your device's <strong>advertising identifier</strong> (Android Advertising ID, IDFA/IDFV on iOS), your approximate country and language, device model and OS version, and app version. The ad network reads these <strong>directly from your device; we neither receive nor store them.</strong></li>
+<li><strong>What they read</strong> — the ad network reads your device's <strong>advertising identifier</strong> (IDFA/IDFV on iOS, Android Advertising ID), your approximate country and language, device model and OS version, and app version. The ad network reads these <strong>directly from your device; we neither receive nor store them.</strong></li>
 <li><strong>What is not sent</strong> — <strong>none of the values in section 2 (wishlist, cart, order history, address, searches, nickname, profile photo) are passed to the ad network.</strong> There is no code that attaches them to an ad request.</li>
-<li><strong>iOS tracking consent</strong> — on iOS, Apple's <strong>App Tracking Transparency</strong> prompt appears once when ads are enabled. <strong>Declining leaves every feature of the app available</strong>; you will simply see non-personalized ads.</li>
-<li><strong>Turning off personalized ads</strong> — on Android, <em>Settings → Google → Ads</em> → "Delete advertising ID"; on iOS, <em>Settings → Privacy &amp; Security → Tracking</em>.</li>
-<li><strong>No feature is locked behind an ad.</strong> There is no screen you must watch an ad to open.</li>
+<li><strong>iOS tracking consent</strong> — Apple's <strong>App Tracking Transparency</strong> prompt appears once, the first time you open the app. <strong>Declining leaves every feature of the app available</strong>; you will simply see non-personalized ads.</li>
+<li><strong>Turning off personalized ads</strong> — on iOS, <em>Settings → Privacy &amp; Security → Tracking</em>; on Android, <em>Settings → Google → Ads</em> → "Delete advertising ID".</li>
+<li><strong>Buying VIP removes the bottom banner.</strong> The rectangular ad on the waiting screen still appears.</li>
+<li><strong>No feature is locked behind an ad.</strong> There is no screen you must watch an ad to open, and the app moves on whether or not an ad loads.</li>
 </ul>
 
 <p>The ad network's own handling of data is governed by its policy — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay Privacy Policy</a>.</p>
@@ -113,7 +123,8 @@
 <li><strong>Version check</strong> — <strong>once</strong> at launch, the app reads one small file that says whether the installed version may still be used. This exists so that an old version can be blocked after an urgent fix. <strong>Nothing is sent</strong> — the file is only read, and none of your values ride along. If there is no connection or the response is malformed, the app <strong>passes through rather than blocking.</strong></li>
 <li><strong>Opening this policy page</strong> — tapping "Privacy Policy" in the app opens this page (GitHub Pages) in your browser. GitHub's server logs may record your IP address, as they would for any web page you open.</li>
 <li><strong>Sending us a message</strong> — tapping send on the contact screen <strong>opens your device's mail app.</strong> The app does not send anything itself; <strong>whether to send is your decision in the mail app.</strong> The draft contains what you wrote plus the app version, device model, and OS version. We use what you send only to answer you.</li>
-<li><strong>After ads are enabled:</strong> one more request, from the ad network (section 7).</li>
+<li><strong>Ad requests</strong> — requests go out to the ad network to fetch ads (section 7). Nothing the app records for you rides along.</li>
+<li><strong>Buying or restoring VIP</strong> — tapping buy or "Restore purchases" <strong>talks to the App Store or Google Play</strong> (section 3). Your device and the store communicate directly; nothing passes through us.</li>
 </ul>
 
 <p>In none of these cases is <strong>any request made to a server of ours. We run no servers.</strong> All 640 products and their images ship <strong>inside the app</strong>, so every feature works with no internet connection.</p>
@@ -122,13 +133,11 @@
 
 <p><strong>None.</strong> Since we collect no personal information, there is nothing to share with third parties or hand to a processor. We do not sell any information.</p>
 
-<p>Once ads are enabled, the ad network (Unity/LevelPlay and the networks it mediates) reads the advertising identifier <strong>directly from your device.</strong> It is not something we receive and pass on, and we do not retain it.</p>
+<p>The ad network (Unity/LevelPlay and the networks it mediates) reads the advertising identifier <strong>directly from your device.</strong> It is not something we receive and pass on, and we do not retain it. VIP purchases are likewise handled by the store, so no information passes through us (section 3).</p>
 
 <h2>10. International transfers</h2>
 
-<p>In the current version <strong>no information is transferred abroad.</strong></p>
-
-<p>Once ads are enabled, the values in section 7 such as the advertising identifier may be sent to the ad network's overseas servers.</p>
+<p>We transfer nothing abroad ourselves. However, the values the <strong>ad network reads directly from your device</strong> (the advertising identifier and the rest of section 7) are sent to that company's overseas servers.</p>
 
 <table>
 <tr><th>Recipient</th><th>Country</th><th>Items</th><th>Purpose</th><th>Retention</th></tr>
@@ -155,7 +164,9 @@
 
 <h2>12. Children</h2>
 
-<p>Sallae Mallae is <strong>not directed to children under 14</strong> and we do not knowingly collect personal information from children — we collect no personal information from anyone. Because <strong>no real payment can occur in the app</strong>, a child cannot make a purchase without a guardian's consent (section 3).</p>
+<p>Sallae Mallae is <strong>not directed to children under 14</strong> and we do not knowingly collect personal information from children — we collect no personal information from anyone.</p>
+
+<p><strong>Buying products in the app costs nothing.</strong> The only real payment is the <strong>VIP pass</strong> (section 3), and that is processed by the App Store or Google Play. Guardians can prevent it using the store's own <strong>Ask to Buy (Family Sharing)</strong> or in-app purchase restrictions.</p>
 
 <h2>13. Your rights</h2>
 
@@ -169,8 +180,8 @@
 <li><strong>We run no servers.</strong> With no server, there is nothing on a server to leak.</li>
 <li>Values on the device live in the app's <strong>private storage</strong>, which other apps cannot read.</li>
 <li>The app contains <strong>no code</strong> that sends your activity anywhere.</li>
-<li><strong>There is no code that collects a card number.</strong> The digits on the payment screen are neither stored nor transmitted (section 3).</li>
-<li>No analytics SDK is included, and we do not plan to add one even after ads are enabled.</li>
+<li><strong>There is no code that collects a card number.</strong> The digits on the simulated payment screen are neither stored nor transmitted, and the one real payment (VIP) runs in the store's own sheet, so card details never pass through the app (section 3).</li>
+<li><strong>No analytics SDK is included.</strong> Apart from the ad SDK, nothing in the app gathers usage data.</li>
 </ul>
 
 <h2>15. Changes to this policy</h2>
