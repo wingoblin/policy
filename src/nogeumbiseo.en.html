@@ -18,7 +18,7 @@ Notevo collects no personal data. There is no account and no sign-in, and <stron
 <li><strong>The recording list</strong> — titles, dates, durations, and any <strong>labels</strong> you add by hand.</li>
 <li><strong>Notes</strong> — the text you type yourself against a recording.</li>
 <li><strong>Photos attached to a note</strong> — photos you pick from your library or take with the camera (section 7). A copy is kept inside the app and <strong>is never sent anywhere.</strong></li>
-<li><strong>Downloaded AI model files</strong> — one for transcription, one for summarisation (section 3).</li>
+<li><strong>Downloaded AI model files</strong> — one for transcription, one for summarisation (section 3). <strong>Depending on what you have used, you may have only one, or none yet</strong> — each model is fetched the first time you tap transcribe or summarise.</li>
 <li><strong>Your Pro flag</strong> — a single marker that you own the one-time purchase (section 6).</li>
 <li><strong>Language setting</strong> — the language you picked in the app.</li>
 <li><strong>Appearance setting</strong> — light or dark, if you chose one (nothing is stored while it follows the system).</li>
@@ -37,7 +37,7 @@ Notevo collects no personal data. There is no account and no sign-in, and <stron
 <p>The app's core work — recording, transcribing, summarising, playback — <strong>works without a network connection.</strong> The app only ever talks to the outside world for the following:</p>
 
 <ul>
-<li><strong>Downloading AI models</strong> — the transcription and summary models are fetched from the Hugging Face repository, mostly during first-run setup. The request carries nothing that identifies you. That service may process connection data (such as IP addresses) under its own policy in order to serve the request.</li>
+<li><strong>Downloading AI models</strong> — the transcription and summary models are fetched from the Hugging Face repository. This happens <strong>the first time you tap transcribe or summarise</strong> — installing the app alone downloads nothing. The request carries nothing that identifies you. That service may process connection data (such as IP addresses) under its own policy in order to serve the request.</li>
 <li><strong>App status file</strong> — on launch the app reads one small configuration file we host. It says whether the installed version is still supported and how ads should be shown (which ad slots to use, whether to turn ads off). Nothing is sent; the app only compares the values on your device and keeps a copy of them (section 2). The <strong>server time</strong> that comes back with that response is also read, so the app can tell exactly when your free transcriptions refill at midnight even if the device clock is wrong (section 6).</li>
 <li><strong>Ad requests</strong> — only in builds where ads are enabled, the values listed in section 5 are passed to the ad providers.</li>
 </ul>
