@@ -59,14 +59,24 @@
     "src": "10"
   },
   {
-    "slug": "nakshigaja",
-    "title": "낚시가자 개인정보 처리방침",
+    "slug": "badagaja",
+    "title": "바다가자 개인정보 처리방침",
     "src": "14"
   },
   {
-    "slug": "nakshigaja-support",
-    "title": "낚시가자 고객지원",
+    "slug": "badagaja-support",
+    "title": "바다가자 고객지원",
     "src": "15"
+  },
+  {
+    "slug": "nakshigaja",
+    "title": "바다가자(옛 낚시가자) 개인정보 처리방침",
+    "moved": "https://wingoblin.github.io/policy/badagaja/"
+  },
+  {
+    "slug": "nakshigaja-support",
+    "title": "바다가자(옛 낚시가자) 고객지원",
+    "moved": "https://wingoblin.github.io/policy/badagaja-support/"
   },
   {
     "slug": "nanotime",
