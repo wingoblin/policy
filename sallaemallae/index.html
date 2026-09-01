@@ -92,11 +92,13 @@
      예고 대상 이용자가 없는 상태**에서 쓴 것이다 — 출시 뒤 광고 조건을 바꿀 때는
      반드시 7일을 지켜라.
   🛑 안드로이드는 아직 광고 키가 없다. 안드 키를 박는 날 7항의 「iOS 판에만」을 지운다.
-  🛑 **인앱 구매를 아예 안 판다**(사용자 결정 2026-08-25). VIP 영구권(com.sallaemallae.vip)을
-     접었고 앱에서 결제 배선(src/iap/)을 통째로 걷었다. 2·3·7·8·9·12·14항의 「앞으로 추가될
-     VIP」 예고를 **전부 지웠다** — 이 앱의 수익은 광고 하나다. VIP 탭은 남지만 파는 게 아니라
-     **제일 비싼 상품이 있는 방**이고, 관문은 잔고(시간·광고)다.
-     되살릴 생각이 들면 mobile/src/logic/wallet.ts 머리말을 먼저 읽어라.
+  ✅ 2026-09-01 **인앱 구매를 열었다**(1.0.5). 위 「아예 안 판다」는 뒤집혔다 — 넷을 판다:
+     하단 배너 제거 + 잔고 3,000만(비소모성) · 잔고 1억 / 5억 / 10억(소모성).
+     3항과 12항의 「인앱 구매가 없습니다」를 고쳤다.
+     🛑 **VIP 탭은 여전히 파는 게 아니다.** 파는 것은 배너 제거와 잔고뿐이고, VIP 는
+        **제일 비싼 상품이 있는 방**이며 관문은 잔고다. 둘을 섞어 적지 마라.
+     🛑 **「광고 제거」라고 적지 마라** — 없어지는 건 하단 배너뿐이고 결제 게이트 MREC 과
+        보상형은 산 사람에게도 그대로 뜬다. 기능과 문구가 어긋나면 그게 반려 사유다.
   🛑 보상형 횟수가 방침 7항에 **숫자로 박혀 있다**(한/영 둘 다). mobile 의 REFILLS_PER_DAY 를
      고치는 날 여기도 같이 고쳐라 — 2026-08-25 에 2→3 으로 올렸다.
   ✅ 2026-08-24 잔고(하루 적립 + 보상형 광고 충전)를 넣었다. 2항에 잔고를, 7항에 세 번째
@@ -159,7 +161,7 @@
 
 <ul>
 <li><strong>상품을 사는 데는 돈이 오가지 않습니다.</strong> 앱 안의 「결제하기」는 앱 안의 숫자만 바꿉니다. 상품 구매에는 실제 결제 연동이 없습니다.</li>
-<li><strong>인앱 구매가 없습니다.</strong> 이 앱은 <strong>유료 상품을 하나도 팔지 않습니다.</strong> 앱 안에서 실제로 돈이 나가는 자리는 <strong>어디에도 없으며</strong>, 앱을 쓰시는 데 드는 비용도 없습니다.</li>
+<li><strong>인앱 구매가 있습니다.</strong> 앱 안의 <strong>상품을 사는 데에는 여전히 돈이 오가지 않지만</strong>, 그와 별개로 <strong>하단 배너 제거</strong>와 <strong>잔고 충전</strong>을 유료로 판매합니다. 결제는 <strong>App Store 를 통해서만</strong> 이루어지며, 저희는 <strong>카드번호를 비롯한 어떤 결제 정보도 받지 않습니다.</strong> 사지 않으셔도 앱의 모든 기능을 쓰실 수 있습니다.</li>
 <li><strong>카드번호를 수집하지 않습니다.</strong> 결제 수단 화면의 카드 칸은 <strong>앞 8자리만 받는 흉내</strong>이고, 뒤 여덟 자리는 <code>**** ****</code> 로 고정되어 있습니다. 적으신 숫자는 <strong>저장되지 않고, 검증되지 않고, 어디로도 전송되지 않으며</strong>, 그 화면을 벗어나는 순간 사라집니다.</li>
 <li><strong>간편결제 계정에 접근하지 않습니다.</strong> 네이버페이·카카오페이·토스·계좌이체는 <strong>이름만 고르는 항목</strong>이며, 해당 서비스와 연결되어 있지 않습니다.</li>
 <li><strong>배송이 실제로 오지 않습니다.</strong> 배송 상태와 「도착」 시각은 앱이 기기 안에서 계산한 값이고, 어떤 택배사와도 연결되어 있지 않습니다. 배송지에 적으신 주소는 <strong>화면에 되돌려 보여드리는 데만</strong> 씁니다.</li>
@@ -282,7 +284,7 @@
 
 <p>살래말래는 <strong>만 14세 미만 아동을 대상으로 하지 않으며</strong>, 아동의 개인정보를 알면서 수집하지 않습니다. 애초에 어떤 개인정보도 수집하지 않습니다.</p>
 
-<p>앱 안의 <strong>상품 구매로는 돈이 나가지 않습니다.</strong> 이 앱에는 <strong>인앱 구매가 없어서</strong> 아이가 실수로 결제할 자리 자체가 없습니다(3항).</p>
+<p>앱 안의 <strong>상품 구매로는 돈이 나가지 않습니다</strong>(3항). 다만 <strong>인앱 구매가 있습니다</strong> — 하단 배너 제거와 잔고 충전입니다. 결제는 <strong>App Store 의 결제 수단을 지나며</strong>, 기기의 <strong>스크린 타임 · 콘텐츠 및 개인정보 보호 제한</strong>에서 인앱 구매를 막아 두시면 아이가 결제할 수 없습니다.</p>
 
 <h2>13. 이용자의 권리</h2>
 
@@ -369,7 +371,7 @@
 
 <ul>
 <li><strong>Buying products costs nothing.</strong> "Pay" only changes numbers inside the app. Product purchases have no real payment integration behind them.</li>
-<li><strong>There are no in-app purchases.</strong> This app sells <strong>nothing at all.</strong> There is <strong>no place in the app where real money changes hands</strong>, and using it costs nothing.</li>
+<li><strong>There are in-app purchases.</strong> Buying products inside the app still <strong>costs nothing</strong>, but separately we sell <strong>removal of the bottom banner</strong> and <strong>balance top-ups</strong>. Payment happens <strong>only through the App Store</strong>, and we never receive card numbers or any other payment details. You can use every feature of the app without buying anything.</li>
 <li><strong>We do not collect card numbers.</strong> The card field on the payment screen is a <strong>prop that accepts only the first 8 digits</strong>; the remaining eight are fixed on screen as <code>**** ****</code>. What you type is <strong>not stored, not validated, and not transmitted anywhere</strong>, and it disappears the moment you leave that screen.</li>
 <li><strong>We do not touch payment services.</strong> Naver Pay, Kakao Pay, Toss, and bank transfer are <strong>labels you can select</strong>, nothing more; the app is not connected to any of those services.</li>
 <li><strong>Nothing is ever delivered.</strong> The delivery status and "arrived" time are computed by the app on your device and are not connected to any courier. The address you enter is used <strong>only to display it back to you.</strong></li>
@@ -492,7 +494,7 @@
 
 <p>Sallae Mallae is <strong>not directed to children under 14</strong> and we do not knowingly collect personal information from children — we collect no personal information from anyone.</p>
 
-<p><strong>Buying products in the app costs nothing.</strong> The app has <strong>no in-app purchases</strong>, so there is no place for a child to spend money by mistake (section 3).</p>
+<p><strong>Buying products in the app costs nothing</strong> (section 3). The app does, however, have <strong>in-app purchases</strong> — removing the bottom banner and topping up the balance. Payment goes through <strong>the App Store's payment method</strong>, and you can block it entirely from the device's <strong>Screen Time &gt; Content &amp; Privacy Restrictions</strong>.</p>
 
 <h2>13. Your rights</h2>
 
