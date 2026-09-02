@@ -114,13 +114,24 @@
      🛑 **저장 키를 새로 만들면 2항도 같이 고쳐라.** 코드가 안 지켜 줘서 조용히 거짓이 된다.
   ✅ 2026-08-27 게임·테크·취미 세 카테고리를 넣어 상품이 640 → 768 개가 됐다(8항 숫자).
      새로 저장하거나 새로 요청하는 값은 **없다** — 권한도 그대로다.
+  ✅ 2026-09-02 **앱과 대조해 네 군데를 보강했다**(1.0.5 를 심사에 넣기 전 점검):
+     ① 2항에 **되판 상품 목록**(`sallae.sold.v1`)이 빠져 있었다 — 08-30 되팔기와 함께
+        생긴 키다. 잔고 항목에도 **일시금을 이미 받았는지**(`premiumGranted`)를 적었다.
+     ② 3항의 인앱 구매를 **상품 넷과 소모성/비소모성·구매 복원·환불 창구**까지 폈다.
+     ③ 8항에 **스토어 결제 통신**과 **안드로이드 결제 알림 한 줄**(`iap/payPing.ts` →
+        `gwansang-server.onrender.com/pay/ping`)을 적었다. 🛑 **이 한 줄은 안드로이드에서만
+        나간다**(`Platform.OS !== 'android'` 이면 즉시 돌아선다). 안드 결제를 열거나 iOS 로
+        넓히는 날 8항과 9항을 같이 고쳐라 — 「저희 서버로 가는 요청은 없습니다」가
+        그날 거짓이 된다.
+     ④ 14항의 「앱에는 실제 결제 자체가 없습니다」를 고쳤다 — 1.0.5 부터 거짓이었다.
+     🛑 저장 키·바깥 요청은 **코드와 대조해서** 고쳐라. 2항과 8항은 코드가 안 지켜 준다.
 -->
 
 <h1>살래말래 개인정보 처리방침</h1>
 
-<p><strong>시행일:</strong> 2026년 8월 27일<br /><strong>문의:</strong> koreatong.kr@gmail.com</p>
+<p><strong>시행일:</strong> 2026년 9월 2일<br /><strong>문의:</strong> koreatong.kr@gmail.com</p>
 
-<p><strong>한 줄 요약</strong><br />살래말래는 <strong>회원가입도 로그인도 없고, 저희는 서버를 두지 않습니다.</strong> 이용자의 정보가 저희에게 전송되어 쌓이는 곳 자체가 없습니다. 찜·장바구니·주문 기록 등 앱 안에서 만드신 모든 것은 <strong>이용자의 기기 안에만</strong> 있습니다(2항).</p>
+<p><strong>한 줄 요약</strong><br />살래말래는 <strong>회원가입도 로그인도 없고, 이용자의 정보를 받아 쌓는 서버를 두지 않습니다.</strong> 이용자의 정보가 저희에게 전송되어 쌓이는 곳 자체가 없습니다. 찜·장바구니·주문 기록 등 앱 안에서 만드신 모든 것은 <strong>이용자의 기기 안에만</strong> 있습니다(2항).</p>
 
 <p><strong>이 앱은 실제로 물건을 팔지 않습니다 — 가장 먼저 알립니다</strong><br />살래말래는 <strong>가상 쇼핑 시뮬레이션</strong>입니다. 앱에 나오는 브랜드와 상품은 모두 <strong>지어낸 것</strong>이며, 실제 상표·실제 상품이 아닙니다. <strong>실제 결제는 일어나지 않고, 실제 배송도 없습니다.</strong> 「결제하기」를 눌러도 <strong>돈이 빠져나가지 않으며</strong>, 앱은 이용자의 카드·계좌·간편결제 계정에 접근할 수 없습니다. 자세한 내용은 <strong>3항</strong>에 적었습니다.</p>
 
@@ -130,7 +141,7 @@
 
 <p><strong>없습니다.</strong> 이름·연락처·이메일·생년월일·주소·결제정보 등 어떤 개인정보도 수집하지 않습니다. 계정 기능이 없어 가입·로그인 절차 자체가 존재하지 않습니다.</p>
 
-<p>저희는 <strong>서버를 두지 않습니다.</strong> 이용자의 정보가 저희에게 전송되어 쌓이는 곳이 없습니다. 앱이 밖으로 요청을 보내는 경우는 <strong>8항</strong>에 하나도 빠짐없이 적었습니다.</p>
+<p>저희는 <strong>이용자의 정보를 받아 쌓는 서버를 두지 않습니다.</strong> 계정이 없어 이용자별로 무언가가 모이는 자리 자체가 없습니다. 앱이 밖으로 요청을 보내는 경우는 <strong>8항</strong>에 하나도 빠짐없이 적었으며, 그중 저희 쪽으로 오는 것은 <strong>안드로이드 판에서 물건이 하나 팔렸다는 한 줄</strong>뿐입니다 — 거기에는 이용자를 알아볼 수 있는 값이 들어 있지 않습니다(8항).</p>
 
 <h2>2. 기기에만 저장되는 것</h2>
 
@@ -146,7 +157,8 @@
 <li><strong>별명</strong> — MY 화면에 적으신 이름. 안 적으시면 <code>Unknown</code> 으로 둡니다.</li>
 <li><strong>최근 검색어</strong> — 검색창에 넣으신 말(최대 10개).</li>
 <li><strong>언어 설정</strong> — 기기 언어를 따라갈지, 직접 고른 언어가 있는지.</li>
-<li><strong>잔고</strong> — 앱 안에서만 쓰는 <strong>가상 금액</strong>과, 마지막으로 하루치를 받으신 날짜, 그날 광고로 충전하신 횟수. <strong>실제 돈이 아니며</strong>(3항), 기기 밖으로 나가지 않습니다.</li>
+<li><strong>잔고</strong> — 앱 안에서만 쓰는 <strong>가상 금액</strong>과, 마지막으로 하루치를 받으신 날짜, 그날 광고로 충전하신 횟수, 그리고 <strong>인앱 구매로 드리는 일시금을 이미 받으셨는지 여부</strong>(3항). <strong>실제 돈이 아니며</strong>, 기기 밖으로 나가지 않습니다.</li>
+<li><strong>되파신 상품 목록</strong> — 재테크 화면에서 되파신 상품의 번호. 같은 상품이 두 번 팔리지 않게 하려는 값이며, 기기 밖으로 나가지 않습니다.</li>
 <li><strong>광고 오작동 방어 기록</strong> — 광고를 누르거나 광고가 떴던 시각 몇 개. 짧은 시간에 반복해서 눌리면 광고를 잠시 쉬게 하려는 값이며, <strong>기기 밖으로 나가지 않습니다</strong>(7항).</li>
 <li><strong>광고 설정 사본</strong> — 8항의 「버전 확인」에서 읽어 온 광고 설정(광고를 켤지 끌지, 어느 광고 자리를 쓸지)을 다음 실행에 쓰려고 그대로 적어 둔 사본입니다. <strong>저희가 앱에 보내는 값이지 이용자에게서 얻은 값이 아니며</strong>, 개인정보가 아닙니다. 인터넷이 없을 때도 광고 설정이 흔들리지 않게 하려고 둡니다.</li>
 </ul>
@@ -161,7 +173,14 @@
 
 <ul>
 <li><strong>상품을 사는 데는 돈이 오가지 않습니다.</strong> 앱 안의 「결제하기」는 앱 안의 숫자만 바꿉니다. 상품 구매에는 실제 결제 연동이 없습니다.</li>
-<li><strong>인앱 구매가 있습니다.</strong> 앱 안의 <strong>상품을 사는 데에는 여전히 돈이 오가지 않지만</strong>, 그와 별개로 <strong>하단 배너 제거</strong>와 <strong>잔고 충전</strong>을 유료로 판매합니다. 결제는 <strong>App Store 를 통해서만</strong> 이루어지며, 저희는 <strong>카드번호를 비롯한 어떤 결제 정보도 받지 않습니다.</strong> 사지 않으셔도 앱의 모든 기능을 쓰실 수 있습니다.</li>
+<li><strong>인앱 구매가 있습니다.</strong> 앱 안의 <strong>상품을 사는 데에는 여전히 돈이 오가지 않지만</strong>, 그와 별개로 아래 넷을 유료로 판매합니다. 결제는 <strong>스토어(App Store · Google Play)를 통해서만</strong> 이루어지며, 저희는 <strong>카드번호를 비롯한 어떤 결제 정보도 받지 않습니다.</strong> 사지 않으셔도 앱의 모든 기능을 쓰실 수 있습니다.
+<ul>
+<li><strong>하단 배너 제거 + 잔고 지급</strong> — 한 번만 살 수 있는 상품입니다. 화면 맨 아래 띠 배너가 사라지고, 가상 잔고를 한 번 드립니다. <strong>「광고 제거」가 아닙니다</strong> — 결제 대기 화면의 사각 광고와 「광고 보기」 보상형 광고는 사신 뒤에도 그대로 있습니다(7항).</li>
+<li><strong>잔고 충전 세 가지</strong> — 가상 잔고만 채우는 상품이며, 필요하실 때마다 여러 번 사실 수 있습니다.</li>
+</ul>
+</li>
+<li><strong>구매 복원과 환불.</strong> 기기를 바꾸시거나 앱을 다시 까시면 프리미엄 화면의 <strong>「구매 복원」</strong>으로 배너 제거 상품을 되찾으실 수 있습니다. <strong>환불은 저희가 아니라 스토어가 처리합니다</strong> — App Store 또는 Google Play 의 환불 창구를 이용해 주세요. 저희는 결제 내역을 보유하지 않아 저희 쪽에서 확인해 드릴 수 있는 것이 없습니다.</li>
+<li><strong>되팔기도 가상입니다.</strong> 재테크 화면에서 산 물건을 되파시면 가상 잔고가 늘어납니다. 실제 돈이 아니고, 현금으로 바꾸거나 다른 분께 넘기실 수 없습니다.</li>
 <li><strong>카드번호를 수집하지 않습니다.</strong> 결제 수단 화면의 카드 칸은 <strong>앞 8자리만 받는 흉내</strong>이고, 뒤 여덟 자리는 <code>**** ****</code> 로 고정되어 있습니다. 적으신 숫자는 <strong>저장되지 않고, 검증되지 않고, 어디로도 전송되지 않으며</strong>, 그 화면을 벗어나는 순간 사라집니다.</li>
 <li><strong>간편결제 계정에 접근하지 않습니다.</strong> 네이버페이·카카오페이·토스·계좌이체는 <strong>이름만 고르는 항목</strong>이며, 해당 서비스와 연결되어 있지 않습니다.</li>
 <li><strong>배송이 실제로 오지 않습니다.</strong> 배송 상태와 「도착」 시각은 앱이 기기 안에서 계산한 값이고, 어떤 택배사와도 연결되어 있지 않습니다. 배송지에 적으신 주소는 <strong>화면에 되돌려 보여드리는 데만</strong> 씁니다.</li>
@@ -243,9 +262,11 @@
 <li><strong>이 방침 페이지를 여는 경우</strong> — 앱에서 「개인정보 처리방침」을 누르시면 기기의 브라우저가 이 페이지(GitHub Pages)를 엽니다. 이때 GitHub 의 서버 기록에 접속 IP 가 남을 수 있으며, 이는 웹페이지를 여는 모든 경우와 같습니다.</li>
 <li><strong>문의를 보내시는 경우</strong> — 「문의·제보」에서 보내기를 누르시면 <strong>기기의 메일 앱이 열립니다.</strong> 앱이 직접 보내지 않으며, <strong>보내실지는 이용자가 메일 앱에서 정하십니다.</strong> 메일에는 이용자가 적으신 글과 앱 버전·기기 종류·OS 버전이 함께 담깁니다. 보내신 메일은 문의에 답하는 데만 쓰고 그 밖의 용도로 쓰지 않습니다.</li>
 <li><strong>광고 요청</strong> — 광고를 받아 오기 위해 광고 네트워크로 요청이 나갑니다(7항). 앱이 만든 기록은 그 요청에 실리지 않습니다.</li>
+<li><strong>인앱 구매</strong> — 결제 화면을 여시거나 「구매 복원」을 누르시면 <strong>스토어(App Store · Google Play)</strong> 와 통신합니다. 상품 목록·가격을 받아 오고, 결제 결과를 확인하기 위한 것입니다. <strong>이 통신은 스토어와 기기 사이에서 이루어지며, 저희는 그 사이에 없습니다</strong> — 카드번호를 비롯한 결제 정보는 저희에게 오지 않습니다(3항).</li>
+<li><strong>결제 알림 한 줄 (안드로이드 판만)</strong> — 안드로이드에서 인앱 구매가 성공하면 <strong>「지금 하나 팔렸다」는 한 줄</strong>이 저희 알림 창구로 나갑니다. 실리는 값은 <strong>앱 이름 · 상품 번호 · 스토어가 보여 준 표시가격 · 스토어가 매긴 주문번호</strong>뿐이며, <strong>이용자를 알아볼 수 있는 값과 2항의 어떤 값도 실리지 않습니다.</strong> 실패해도 다시 보내지 않고, 결제는 그와 무관하게 진행됩니다. <strong>iPhone·iPad 판에서는 이 요청이 아예 나가지 않습니다</strong>(애플이 저희에게 직접 알려 주기 때문입니다).</li>
 </ul>
 
-<p>어느 경우에도 <strong>저희 서버로 가는 요청은 없습니다. 저희는 서버를 두고 있지 않습니다.</strong> 상품 768개와 사진은 <strong>모두 앱 안에</strong> 들어 있어, 인터넷 없이도 앱의 모든 기능이 동작합니다.</p>
+<p>위의 <strong>결제 알림 한 줄을 빼면 저희 쪽으로 오는 요청은 없습니다.</strong> 그 한 줄도 <strong>안드로이드 판의 인앱 구매에서만</strong> 나가고, 이용자를 알아보는 값이 들어 있지 않으며, 이용자의 정보가 쌓이는 계정이나 프로필은 저희에게 없습니다. 상품 768개와 사진은 <strong>모두 앱 안에</strong> 들어 있어, 인터넷 없이도 앱의 모든 기능이 동작합니다.</p>
 
 <h2>9. 제3자 제공 · 처리위탁 · 판매</h2>
 
@@ -284,7 +305,7 @@
 
 <p>살래말래는 <strong>만 14세 미만 아동을 대상으로 하지 않으며</strong>, 아동의 개인정보를 알면서 수집하지 않습니다. 애초에 어떤 개인정보도 수집하지 않습니다.</p>
 
-<p>앱 안의 <strong>상품 구매로는 돈이 나가지 않습니다</strong>(3항). 다만 <strong>인앱 구매가 있습니다</strong> — 하단 배너 제거와 잔고 충전입니다. 결제는 <strong>App Store 의 결제 수단을 지나며</strong>, 기기의 <strong>스크린 타임 · 콘텐츠 및 개인정보 보호 제한</strong>에서 인앱 구매를 막아 두시면 아이가 결제할 수 없습니다.</p>
+<p>앱 안의 <strong>상품 구매로는 돈이 나가지 않습니다</strong>(3항). 다만 <strong>인앱 구매가 있습니다</strong> — 하단 배너 제거와 잔고 충전입니다. 결제는 <strong>스토어의 결제 수단을 지나며</strong>, 보호자께서 기기에서 미리 막아 두실 수 있습니다 — iPhone·iPad 는 <strong>설정 → 스크린 타임 → 콘텐츠 및 개인정보 보호 제한 → 인앱 구입</strong>, 안드로이드는 <strong>Play 스토어 → 설정 → 인증 → 구매 시 인증 필요</strong> 입니다.</p>
 
 <h2>13. 이용자의 권리</h2>
 
@@ -298,7 +319,7 @@
 <li><strong>서버를 두지 않습니다.</strong> 서버가 없으면 서버에서 새어 나갈 정보도 없습니다.</li>
 <li>기기에 저장되는 값은 <strong>앱 전용 저장소</strong>에 두어 다른 앱이 읽을 수 없습니다.</li>
 <li>앱은 이용자의 사용 기록을 외부로 보내는 코드를 <strong>포함하고 있지 않습니다.</strong></li>
-<li><strong>카드번호를 받는 코드가 없습니다.</strong> 가상 결제 화면의 숫자 칸은 저장도 전송도 하지 않습니다. 앱에는 <strong>실제 결제 자체가 없습니다</strong>(3항).</li>
+<li><strong>카드번호를 받는 코드가 없습니다.</strong> 가상 결제 화면의 숫자 칸은 저장도 전송도 하지 않습니다. <strong>실제 돈이 오가는 것은 인앱 구매뿐이고, 그 결제는 스토어가 처리합니다</strong> — 앱에는 결제 정보를 받는 화면도, 그것을 다루는 코드도 없습니다(3항).</li>
 <li><strong>분석 도구(SDK)를 넣지 않았습니다.</strong> 광고 SDK 말고 이용 기록을 모으는 도구는 없습니다.</li>
 </ul>
 
@@ -328,9 +349,9 @@
 <section class="lang" data-lang="en">
 <h1>Sallae Mallae — Privacy Policy</h1>
 
-<p><strong>Effective:</strong> August 27, 2026<br /><strong>Contact:</strong> koreatong.kr@gmail.com</p>
+<p><strong>Effective:</strong> September 2, 2026<br /><strong>Contact:</strong> koreatong.kr@gmail.com</p>
 
-<p><strong>In one line</strong><br />Sallae Mallae has <strong>no sign-up, no login, and we run no servers.</strong> There is no place for your information to be sent to and pile up. Everything you create in the app — wishlist, cart, order history — stays <strong>on your device only</strong> (section 2).</p>
+<p><strong>In one line</strong><br />Sallae Mallae has <strong>no sign-up, no login, and we run no server that collects your information.</strong> There is no place for your information to be sent to and pile up. Everything you create in the app — wishlist, cart, order history — stays <strong>on your device only</strong> (section 2).</p>
 
 <p><strong>This app does not actually sell anything — read this first</strong><br />Sallae Mallae is a <strong>virtual shopping simulation</strong>. Every brand and product in the app is <strong>made up</strong>; none of them are real trademarks or real products. <strong>No real payment takes place and nothing is ever shipped.</strong> Tapping "Pay" <strong>does not move any money</strong>, and the app has no access to your cards, bank accounts, or payment services. Details are in <strong>section 3</strong>.</p>
 
@@ -340,7 +361,7 @@
 
 <p><strong>None.</strong> We collect no name, contact details, email address, date of birth, address, or payment information. There is no account feature, so there is no sign-up or login at all.</p>
 
-<p>We <strong>run no servers.</strong> There is nowhere for your information to be sent to and stored. Every request the app makes to the internet is listed exhaustively in <strong>section 8</strong>.</p>
+<p>We <strong>run no server that collects your information.</strong> With no accounts, there is nowhere for anything to accumulate about you. Every request the app makes to the internet is listed exhaustively in <strong>section 8</strong>, and the only one that reaches us is <strong>a one-line "something just sold" notice from the Android version</strong> — it carries nothing that identifies you (section 8).</p>
 
 <h2>2. What stays on your device</h2>
 
@@ -356,7 +377,8 @@
 <li><strong>Nickname</strong> — the name you type on the MY screen. If you leave it blank it stays <code>Unknown</code>.</li>
 <li><strong>Recent searches</strong> — the words you typed into the search box (up to 10).</li>
 <li><strong>Language setting</strong> — whether to follow the device language, or which language you picked.</li>
-<li><strong>Balance</strong> — the <strong>virtual amount</strong> used inside the app, the date you last received the daily top-up, and how many times you topped up with an ad that day. It is <strong>not real money</strong> (section 3) and never leaves your device.</li>
+<li><strong>Balance</strong> — the <strong>virtual amount</strong> used inside the app, the date you last received the daily top-up, how many times you topped up with an ad that day, and <strong>whether the one-time grant that comes with an in-app purchase has already been given</strong> (section 3). It is <strong>not real money</strong> and never leaves your device.</li>
+<li><strong>List of items you resold</strong> — the numbers of the products you sold back on the investment screen, so the same item cannot be sold twice. It never leaves your device.</li>
 <li><strong>Ad misfire guard</strong> — a few timestamps of ad taps and ad displays, used to rest ads if they are tapped repeatedly in a short span. <strong>They never leave your device</strong> (section 7).</li>
 <li><strong>A copy of the ad settings</strong> — the ad settings read during the version check described in section 8 (whether ads are on, and which ad slots to use), written down so the next launch can reuse them. <strong>This is a value we send to the app, not one taken from you</strong>, and it is not personal data. It is kept so the ad settings stay steady when there is no internet connection.</li>
 </ul>
@@ -371,7 +393,14 @@
 
 <ul>
 <li><strong>Buying products costs nothing.</strong> "Pay" only changes numbers inside the app. Product purchases have no real payment integration behind them.</li>
-<li><strong>There are in-app purchases.</strong> Buying products inside the app still <strong>costs nothing</strong>, but separately we sell <strong>removal of the bottom banner</strong> and <strong>balance top-ups</strong>. Payment happens <strong>only through the App Store</strong>, and we never receive card numbers or any other payment details. You can use every feature of the app without buying anything.</li>
+<li><strong>There are in-app purchases.</strong> Buying products inside the app still <strong>costs nothing</strong>, but separately we sell the four items below. Payment happens <strong>only through the store (App Store · Google Play)</strong>, and we never receive card numbers or any other payment details. You can use every feature of the app without buying anything.
+<ul>
+<li><strong>Bottom banner removal + a balance grant</strong> — a one-time purchase. The banner strip at the bottom disappears and you receive a one-off virtual balance. <strong>It is not "remove ads"</strong> — the rectangular ad on the payment waiting screen and the "Watch an ad" rewarded video remain after you buy it (section 7).</li>
+<li><strong>Three balance top-ups</strong> — they add virtual balance only, and may be bought as often as you like.</li>
+</ul>
+</li>
+<li><strong>Restoring purchases, and refunds.</strong> If you change devices or reinstall, <strong>"Restore purchases"</strong> on the premium screen brings back the banner-removal purchase. <strong>Refunds are handled by the store, not by us</strong> — please use the App Store or Google Play refund process. We hold no purchase records, so there is nothing we can look up on our side.</li>
+<li><strong>Reselling is simulated too.</strong> Selling an item back on the investment screen increases your virtual balance. It is not real money and cannot be cashed out or transferred to anyone.</li>
 <li><strong>We do not collect card numbers.</strong> The card field on the payment screen is a <strong>prop that accepts only the first 8 digits</strong>; the remaining eight are fixed on screen as <code>**** ****</code>. What you type is <strong>not stored, not validated, and not transmitted anywhere</strong>, and it disappears the moment you leave that screen.</li>
 <li><strong>We do not touch payment services.</strong> Naver Pay, Kakao Pay, Toss, and bank transfer are <strong>labels you can select</strong>, nothing more; the app is not connected to any of those services.</li>
 <li><strong>Nothing is ever delivered.</strong> The delivery status and "arrived" time are computed by the app on your device and are not connected to any courier. The address you enter is used <strong>only to display it back to you.</strong></li>
@@ -453,9 +482,11 @@
 <li><strong>Opening this policy page</strong> — tapping "Privacy Policy" in the app opens this page (GitHub Pages) in your browser. GitHub's server logs may record your IP address, as they would for any web page you open.</li>
 <li><strong>Sending us a message</strong> — tapping send on the contact screen <strong>opens your device's mail app.</strong> The app does not send anything itself; <strong>whether to send is your decision in the mail app.</strong> The draft contains what you wrote plus the app version, device model, and OS version. We use what you send only to answer you.</li>
 <li><strong>Ad requests</strong> — requests go out to the ad network to fetch ads (section 7). Nothing the app records for you rides along.</li>
+<li><strong>In-app purchases</strong> — opening the purchase screen or tapping "Restore purchases" talks to <strong>the store (App Store · Google Play)</strong> to fetch the product list and prices and to confirm the outcome of a purchase. <strong>That exchange is between the store and your device; we are not in the middle of it</strong> — no card number or other payment detail reaches us (section 3).</li>
+<li><strong>A one-line sale notice (Android version only)</strong> — when an in-app purchase succeeds on Android, a single <strong>"something just sold"</strong> line goes to our notification endpoint. It carries only the <strong>app name, product number, the display price the store showed, and the order number the store assigned</strong>. <strong>Nothing that identifies you, and none of the values in section 2, is included.</strong> It is never retried if it fails, and your purchase proceeds regardless. <strong>On iPhone and iPad this request is never made at all</strong> (Apple notifies us directly instead).</li>
 </ul>
 
-<p>In none of these cases is <strong>any request made to a server of ours. We run no servers.</strong> All 768 products and their images ship <strong>inside the app</strong>, so every feature works with no internet connection.</p>
+<p>Apart from that <strong>one-line sale notice, no request reaches us.</strong> That line goes out <strong>only for in-app purchases on the Android version</strong>, contains nothing that identifies you, and we hold no account or profile for anything to accumulate against. All 768 products and their images ship <strong>inside the app</strong>, so every feature works with no internet connection.</p>
 
 <h2>9. Sharing, processors, and sale of data</h2>
 
@@ -494,7 +525,7 @@
 
 <p>Sallae Mallae is <strong>not directed to children under 14</strong> and we do not knowingly collect personal information from children — we collect no personal information from anyone.</p>
 
-<p><strong>Buying products in the app costs nothing</strong> (section 3). The app does, however, have <strong>in-app purchases</strong> — removing the bottom banner and topping up the balance. Payment goes through <strong>the App Store's payment method</strong>, and you can block it entirely from the device's <strong>Screen Time &gt; Content &amp; Privacy Restrictions</strong>.</p>
+<p><strong>Buying products in the app costs nothing</strong> (section 3). The app does, however, have <strong>in-app purchases</strong> — removing the bottom banner and topping up the balance. Payment goes through <strong>the store's payment method</strong>, and a guardian can block it on the device in advance — on iPhone and iPad under <strong>Settings → Screen Time → Content &amp; Privacy Restrictions → In-app Purchases</strong>, and on Android under <strong>Play Store → Settings → Authentication → Require authentication for purchases</strong>.</p>
 
 <h2>13. Your rights</h2>
 
@@ -505,10 +536,10 @@
 <h2>14. Security measures</h2>
 
 <ul>
-<li><strong>We run no servers.</strong> With no server, there is nothing on a server to leak.</li>
+<li><strong>We run no server that holds your data.</strong> With nothing stored about you, there is nothing to leak.</li>
 <li>Values on the device live in the app's <strong>private storage</strong>, which other apps cannot read.</li>
 <li>The app contains <strong>no code</strong> that sends your activity anywhere.</li>
-<li><strong>There is no code that collects a card number.</strong> The digits on the simulated payment screen are neither stored nor transmitted, and the app has <strong>no real payment of any kind</strong> (section 3).</li>
+<li><strong>There is no code that collects a card number.</strong> The digits on the simulated payment screen are neither stored nor transmitted. <strong>The only real money involved is an in-app purchase, and the store handles that payment</strong> — the app has no screen that takes payment details and no code that handles them (section 3).</li>
 <li><strong>No analytics SDK is included.</strong> Apart from the ad SDK, nothing in the app gathers usage data.</li>
 </ul>
 
