@@ -53,13 +53,31 @@
 
 <h2>4. 앱 접근권한 안내</h2>
 
-<p>땅울림은 <strong>위치·연락처·사진·저장공간·마이크·카메라에 접근하지 않습니다.</strong> 기기에 선언된 권한은 아래가 전부이며, 셋 다 운영체제가 동의 창을 띄우지 않는 항목입니다.</p>
+<p>땅울림은 <strong>위치·연락처·사진·저장공간·마이크·카메라에 접근하지 않습니다.</strong> 아래는 Android 판 설치 파일에 선언된 권한 <strong>전부</strong>이며, <strong>어느 것도 운영체제가 동의 창을 띄우는 항목이 아닙니다.</strong> 앱이 직접 쓰는 것은 앞의 둘뿐이고, 나머지는 <strong>앱을 만드는 기본 틀과 광고 사업자의 코드가 스스로 선언해 함께 들어오는 것</strong>입니다.</p>
+
+<p><strong>앱이 쓰는 것</strong></p>
 
 <ul>
-<li><strong>네트워크</strong> — 3항의 요청을 보내기 위한 것입니다. 지진 자료를 받아오지 못하면 앱이 할 일이 없습니다.</li>
-<li><strong>진동</strong>(Android <code>VIBRATE</code>) — <strong>선언은 되어 있으나 이 앱은 진동을 울리지 않습니다.</strong> 앱을 만드는 기본 틀(React Native)에 처음부터 들어 있는 항목이며, 앱이 진동을 부르는 코드는 한 곳도 없습니다.</li>
-<li><strong>광고 ID 읽기</strong>(Android <code>AD_ID</code>) — <strong>2026년 9월 3일 이후 Android 판부터</strong> 선언됩니다. 광고 네트워크가 맞춤 광고에 쓰는 기기의 광고 ID 를 읽기 위한 것이며, Android 13 이상에서는 이 권한을 선언해야만 그 값을 읽을 수 있습니다. <strong>이 값을 읽어 가는 것은 광고 네트워크이고 저희가 아닙니다</strong> — 저희는 받지도 보관하지도 않습니다(7항). 기기 설정에서 광고 ID 를 삭제하시면 이 권한이 있어도 값이 전달되지 않습니다. 그 이전 Android 판과 iPhone·iPad 판에는 이 항목이 없습니다.</li>
+<li><strong>네트워크</strong>(<code>INTERNET</code> · <code>ACCESS_NETWORK_STATE</code>) — 3항의 요청을 보내고, 연결이 끊겼는지 확인하기 위한 것입니다. 지진 자료를 받아오지 못하면 앱이 할 일이 없습니다.</li>
+<li><strong>진동</strong>(<code>VIBRATE</code>) — <strong>선언은 되어 있으나 이 앱은 진동을 울리지 않습니다.</strong> 기본 틀(React Native)에 처음부터 들어 있는 항목이며, 앱이 진동을 부르는 코드는 한 곳도 없습니다.</li>
 </ul>
+
+<p><strong>광고 사업자의 코드가 함께 들여오는 것</strong>(2026년 9월 3일 이후 Android 판부터)</p>
+
+<ul>
+<li><strong>광고 ID 읽기</strong>(<code>AD_ID</code>) — 광고 네트워크가 맞춤 광고에 쓰는 기기의 광고 ID 를 읽기 위한 것입니다. Android 13 이상에서는 이 권한을 선언해야만 그 값을 읽을 수 있습니다. <strong>읽어 가는 것은 광고 네트워크이고 저희가 아닙니다</strong> — 저희는 받지도 보관하지도 않습니다(7항). 기기 설정에서 광고 ID 를 삭제하시면 이 권한이 있어도 값이 전달되지 않습니다.</li>
+<li><strong>광고 API 접근</strong>(<code>ACCESS_ADSERVICES_TOPICS</code> · <code>ACCESS_ADSERVICES_ATTRIBUTION</code>) — 구글이 Android 에 넣은 광고 기능을 쓰기 위한 것입니다. 기기 안에서 처리되며 이용자를 가리키는 값이 저희에게 오지 않습니다.</li>
+<li><strong>설치 경로 확인</strong>(<code>BIND_GET_INSTALL_REFERRER_SERVICE</code>) — 광고를 보고 설치한 것인지 광고 사업자가 세기 위한 것입니다(7항의 「광고 상호작용」).</li>
+<li><strong>화면 꺼짐 방지 · 백그라운드 작업</strong>(<code>WAKE_LOCK</code> · <code>FOREGROUND_SERVICE</code> · <code>RECEIVE_BOOT_COMPLETED</code> · <code>BIND_JOB_SERVICE</code>) — 광고를 내려받다 끊긴 작업을 이어서 마치기 위해 광고 사업자의 코드가 선언하는 항목입니다. <strong>땅울림은 이 넷 중 어느 것도 직접 쓰지 않습니다</strong> — 앱을 꺼 두신 동안 무언가를 하거나, 기기를 켤 때 스스로 실행되거나, 알림을 보내는 일은 없습니다.</li>
+</ul>
+
+<p><strong>기타</strong></p>
+
+<ul>
+<li><strong>진단 정보 열람</strong>(<code>DUMP</code>) — 기본 틀의 구성요소가 선언하는 항목입니다. <strong>일반 앱에는 운영체제가 내주지 않는 권한</strong>이라 선언되어 있어도 실제로 쓰이지 않습니다.</li>
+</ul>
+
+<p>iPhone·iPad 판에는 위 항목이 없습니다. Apple 은 권한을 이런 방식으로 선언하지 않으며, 이 앱이 iPhone·iPad 에서 묻는 것은 아래의 추적 허용 창 하나뿐입니다.</p>
 
 <p>따라서 이 앱에는 <strong>이용자가 허용·거부를 선택해야 하는 권한이 하나도 없습니다.</strong></p>
 
