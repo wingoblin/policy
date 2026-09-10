@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>여긴지구 개인정보 처리방침 · 네모팩토리</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto; max-width: 720px; padding: 32px 20px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+    font-size: 16px; line-height: 1.75;
+    color: #222; background: #fff;
+    word-break: keep-all; overflow-wrap: anywhere;
+  }
+  h1 { font-size: 26px; line-height: 1.4; margin: 32px 0 8px; }
+  h2 { font-size: 19px; line-height: 1.45; margin: 32px 0 8px; padding-top: 8px; border-top: 1px solid #eee; }
+  h3 { font-size: 17px; margin: 24px 0 6px; }
+  p, ul, ol { margin: 10px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: #1a5fd0; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f6f7f9; }
+  code { background: #f2f3f5; padding: 1px 5px; border-radius: 4px; font-size: 14px; }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid #eee; font-size: 13px; color: #888; }
+  footer a { color: #888; }
+  /* 언어 탭 — JS 가 없으면 탭을 숨기고 모든 언어를 그냥 다 보여준다 */
+  .langs { display: none; }
+  .langs a {
+    display: inline-block; padding: 6px 14px; margin: 0 6px 6px 0;
+    border: 1px solid #ddd; border-radius: 999px;
+    font-size: 14px; text-decoration: none; color: #555;
+  }
+  .langs a.on { background: #222; border-color: #222; color: #fff; }
+  html.js .langs { display: block; margin-bottom: 8px; }
+  html.js .lang { display: none; }
+  html.js .lang.on { display: block; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e3e5e8; background: #16181c; }
+    h2 { border-top-color: #2a2d33; }
+    a { color: #7aa7f0; }
+    th, td { border-color: #2a2d33; }
+    th { background: #1e2126; }
+    code { background: #22262c; }
+    footer { border-top-color: #2a2d33; color: #7d8188; }
+    .langs a { border-color: #333840; color: #b9bec6; }
+    .langs a.on { background: #e3e5e8; border-color: #e3e5e8; color: #16181c; }
+  }
+</style>
+<script>
+  // 탭이 그려지기 전에 붙여야 언어가 바뀌며 깜빡이지 않는다
+  document.documentElement.className = 'js';
+  addEventListener('DOMContentLoaded', function () {
+    var secs = document.querySelectorAll('.lang');
+    if (!secs.length) return;
+    var have = [].map.call(secs, function (s) { return s.dataset.lang; });
+    function pick() {
+      var want = location.hash.slice(1);
+      if (!want) {
+        // 닻이 없으면 브라우저 언어로 고른다 — 스토어 목록에서 맨 주소로 들어오는 길이다.
+        // 중국어만 두 글자로 못 자른다. zh-TW·zh-HK·zh-Hant-* 는 번체, zh-CN·zh-SG 는 간체라
+        // 같은 'zh' 로 묶으면 간체 사용자에게 번체 판을 보여주게 된다(앱의 locale.ts 와 같은 판정).
+        var nav = navigator.language || 'en';
+        want = /^zh/i.test(nav) && /(Hant|TW|HK|MO)/i.test(nav) ? 'zhHant' : nav.slice(0, 2);
+      }
+      // 없는 언어로 들어오면 영문 — 첫 구역(한국어)으로 떨구면 간체·프랑스어 기기가 한글 방침을 본다.
+      return have.indexOf(want) >= 0 ? want : have.indexOf('en') >= 0 ? 'en' : have[0];
+    }
+    function show() {
+      var on = pick();
+      [].forEach.call(secs, function (s) { s.classList.toggle('on', s.dataset.lang === on); });
+      [].forEach.call(document.querySelectorAll('.langs a'), function (a) {
+        a.classList.toggle('on', a.hash.slice(1) === on);
+      });
+      document.documentElement.lang = on;
+    }
+    addEventListener('hashchange', show);
+    show();
+  });
+</script>
+</head>
+<body>
+<h1>여긴지구 개인정보 처리방침</h1>
+
+<p><strong>시행일:</strong> 2026년 9월 10일<br /><strong>문의:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>한 줄 요약</strong><br />여긴지구는 회원가입도 로그인도 없고, 이름·연락처 같은 개인정보를 받지 않습니다. <strong>저희는 서버를 두지 않습니다.</strong> 쏜 전파의 기록도, 적어 넣은 메시지도 전부 이용자의 기기 안에만 있습니다. 앱이 밖으로 보내는 요청은 <strong>앱 상태 파일 하나</strong>뿐입니다(4항).</p>
+
+<h2>1. 수집하는 개인정보</h2>
+
+<p>없습니다. 이름·연락처·이메일·생년월일 등 어떤 개인정보도 수집하지 않습니다. 계정 기능이 없어 가입·로그인 절차 자체가 존재하지 않습니다.</p>
+
+<p>저희는 <strong>서버를 두지 않습니다.</strong> 이용자의 정보가 저희에게 전송되어 쌓이는 곳이 없습니다.</p>
+
+<h2>2. 기기에만 저장되는 것</h2>
+
+<ul>
+<li><strong>쏜 전파의 기록</strong> — 적어 넣은 메시지, 목표로 고른 별, 발사한 시각, 그때 겨눈 방향(방위·고도)입니다. 화면에 보이는 거리는 이 <strong>발사 시각</strong> 하나에서 계산합니다.</li>
+<li><strong>앱 설정</strong> — 화면에서 고른 값들입니다.</li>
+</ul>
+
+<p>위 항목 모두 이용자의 기기 안에만 있습니다. 저희 서버로 전송되지 않으며 저희가 열람할 수 없습니다. 앱을 삭제하면 전부 함께 지워집니다.</p>
+
+<p><strong>메시지는 어디로도 보내지지 않습니다.</strong> 이 앱은 이용자가 적은 말을 다른 사람에게 전달하지 않으며, 다른 사람이 쓴 글을 화면에 띄우지도 않습니다.</p>
+
+<h2>3. 위치</h2>
+
+<p>앱은 <strong>대략적인 위치</strong>(도시 단위)를 씁니다. 정확한 위치는 요청하지 않으며, 안드로이드에서는 정확한 위치 권한을 매니페스트에서 아예 뺐습니다.</p>
+
+<p><strong>왜 필요한가</strong> — 같은 방향을 겨눠도 서 있는 곳이 다르면 그 자리에 있는 별이 달라집니다. 하늘의 어느 쪽을 겨누고 있는지 계산하려면 관측자의 위치가 있어야 합니다.</p>
+
+<p><strong>어떻게 쓰는가</strong> — 위치값은 <strong>기기 안에서 별의 위치를 계산하는 데만</strong> 쓰입니다. 저희에게 전송되지 않고, 다른 곳으로도 보내지 않으며, 기기에 저장해 두지도 않습니다. 위치 권한을 허용하지 않아도 앱은 쓸 수 있습니다 — 그때는 겨누기 대신 <strong>목표 별을 직접 고르는</strong> 방법으로 씁니다.</p>
+
+<h2>4. 앱이 외부에 보내는 요청</h2>
+
+<p><strong>앱 상태 파일</strong> (<code>beautiful-tulumba-77ca83.netlify.app</code>) — 앱을 켤 때 최소 지원 버전을 적어 둔 공개 JSON 파일 하나를 내려받습니다. 요청에 <strong>아무 값도 싣지 않습니다</strong>(누구나 같은 파일을 받습니다). 다만 이 파일을 두고 있는 호스팅 업체(Netlify)의 서버 기록에 접속 IP가 남을 수 있습니다.</p>
+
+<p>앱이 밖으로 보내는 요청은 이 하나가 전부입니다.</p>
+
+<h2>5. 문의·제보</h2>
+
+<p>설정의 <strong>문의·제보</strong>는 이용자의 <strong>메일 앱을 열어 줄 뿐</strong>입니다. 앱이 내용을 대신 전송하지 않으며, 보내실지는 이용자가 정합니다. 메일을 보내시면 그 메일에 담긴 내용(적어 주신 글, 회신용 주소)이 저희에게 도착하며, 문의에 답하는 데에만 쓰고 답변이 끝나면 지웁니다.</p>
+
+<h2>6. 광고·결제</h2>
+
+<p><strong>이 판에는 광고가 없습니다.</strong> 광고 네트워크가 들어 있지 않아 광고 식별자를 읽어 가는 곳도 없습니다. 넣게 되면 <strong>미리 이 페이지에 알리고</strong> 무엇이 어떻게 달라지는지 적겠습니다.</p>
+
+<p><strong>이 판에는 앱 내 결제가 없습니다.</strong> 결제를 넣을 때에도 결제 처리는 애플·구글이 하며 저희는 카드번호 같은 결제정보를 받지 않습니다.</p>
+
+<h2>7. 만 14세 미만 아동</h2>
+
+<p>이 앱은 개인정보를 수집하지 않으므로 아동의 개인정보를 따로 수집하지도 않습니다.</p>
+
+<h2>8. 이용자의 권리</h2>
+
+<p>기기에 저장된 기록은 <strong>앱 안에서 직접 지울 수 있고</strong>, 앱을 삭제하면 모두 사라집니다. 저희가 보관하는 이용자 정보가 없으므로 저희에게 열람·정정·삭제를 요청하실 대상이 없습니다.</p>
+
+<h2>9. 방침 변경</h2>
+
+<p>내용이 바뀌면 이 페이지에 시행일과 함께 올립니다. 이용자에게 불리할 수 있는 변경은 시행 <strong>7일 전</strong>부터 미리 알립니다.</p>
+
+<footer>
+  ⓒ Nemo Factory · 문의 <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a><br>
+  <a href="../">전체 목록</a>
+</footer>
+</body>
+</html>
