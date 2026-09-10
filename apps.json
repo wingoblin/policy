@@ -118,6 +118,12 @@
   {
     "slug": "garyeojwo",
     "title": "가려줘 개인정보 처리방침",
-    "src": "21"
+    "src": "21",
+    "langs": [
+      "ko",
+      "en",
+      "ja",
+      "zhHant"
+    ]
   }
 ]
