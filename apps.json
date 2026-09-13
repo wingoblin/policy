@@ -130,5 +130,16 @@
     "slug": "earthhere",
     "title": "여기는 지구 개인정보 처리방침",
     "src": "22"
+  },
+  {
+    "slug": "scrap",
+    "title": "Scrap 개인정보 처리방침",
+    "src": "23",
+    "langs": [
+      "ko",
+      "en",
+      "ja",
+      "zhHant"
+    ]
   }
 ]
