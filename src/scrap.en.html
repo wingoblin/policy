@@ -17,7 +17,7 @@
 <ul>
 <li><strong>Reading</strong> — to list your screenshots and photos and show them on the sorting and folder screens.</li>
 <li><strong>Deleting</strong> — the app deletes from your library only the shots you swiped to “delete”, and only <strong>after you confirm at the end of a round.</strong> On iOS the system shows <strong>one more confirmation dialog</strong> right before anything is deleted. Deleting a folder also deletes the photos inside it from your library; the app tells you this before it does it.</li>
-<li><strong>No saving</strong> — the app never creates new photos in your library and never modifies the originals.</li>
+<li><strong>No saving</strong> — the app never creates new photos in your library and never modifies the originals. iOS also carries an “add to library” permission string, because iOS keeps that entry alongside the photo permission; the app has no saving feature, so it is never used.</li>
 <li><strong>Limited access is fine</strong> — you may allow <strong>only selected photos</strong> instead of the whole library. The app works the same way; it simply shows only what you allowed.</li>
 <li><strong>No transmission</strong> — your photos are <strong>never uploaded to us, to advertisers, or anywhere else.</strong> Lists and previews are drawn entirely on the device.</li>
 </ul>
@@ -31,6 +31,7 @@
 <li><strong>Folders</strong> — folder name, icon, order and creation time. The names are the ones you type in.</li>
 <li><strong>App settings</strong> — how many shots per round, the language you chose, and dark mode (system · light · dark).</li>
 <li><strong>Ad-related records</strong> — the <strong>time of an ad tap</strong> (so a mis-tapped ad slot rests for a while), the <strong>time an ad was shown</strong> (so the same slot is not filled again immediately), and the ad settings received from the status file (section 5). None of this identifies a person.</li>
+<li><strong>Running totals</strong> — how much space you have freed in total, and whether the rating prompt has already been shown. The total is stored separately so that it survives when you clear folders or the sorting log.</li>
 </ul>
 
 <p>All of the above stays on your device. It is never sent to us and we cannot read it. Deleting the app deletes all of it.</p>
@@ -40,9 +41,9 @@
 <p>These are the only places the app touches the internet. <strong>Your photos and your sorting decisions go to none of them.</strong></p>
 
 <ul>
-<li><strong>Status file</strong> (<code>beautiful-tulumba-77ca83.netlify.app</code>) — once at launch the app reads <strong>a single public JSON file</strong> holding the minimum supported version and the ad settings. Everyone receives the same file and <strong>we attach nothing of yours to the request.</strong> As with opening any web page, the hosting provider (Netlify) may record your IP address in its server logs. If the read fails, the app simply opens as usual.</li>
+<li><strong>Status file</strong> (<code>beautiful-tulumba-77ca83.netlify.app</code>) — at launch the app reads <strong>a single public JSON file</strong> holding the minimum supported version and the ad settings. Everyone receives the same file and <strong>we attach nothing of yours to the request.</strong> As with opening any web page, the hosting provider (Netlify) may record your IP address in its server logs. If the read fails, the app simply opens as usual.</li>
 <li><strong>Ads</strong> — see section 5.</li>
-<li><strong>Opening this policy · rating the app</strong> — tapping these in Settings opens your browser or the store app, which may leave the same kind of access record.</li>
+<li><strong>Opening this policy · rating the app</strong> — tapping these in Settings opens your browser or the store app, which may leave the same kind of access record. While you use the app, the operating system may also show its own <strong>rating prompt</strong> once; that prompt is displayed and answered entirely by the operating system, and we never learn who rated the app.</li>
 <li><strong>Contact us</strong> — the app does not send anything; it <strong>only opens your mail app</strong> (section 9).</li>
 </ul>
 
@@ -53,7 +54,7 @@
 <p><strong>There are two ad placements.</strong></p>
 
 <ul>
-<li><strong>A banner at the bottom</strong> of the home, library, settings, sorting and folder screens.</li>
+<li><strong>A banner at the bottom</strong> of the home, library, settings, sorting, summary and folder screens.</li>
 <li><strong>One interstitial</strong> shown <strong>after a sorting round has been applied.</strong> It never appears while you are sorting.</li>
 </ul>
 
@@ -80,7 +81,7 @@
 
 <p><strong>iOS — the tracking prompt</strong><br />On iOS, the system asks once whether the app may track you. <strong>You can decline and still use every feature</strong>, and you will still see ads — they simply will not be personalised. If you decline, the advertising identifier (IDFA) is not passed to the ad providers. You can change this at any time in iOS Settings &gt; Privacy &amp; Security &gt; Tracking.</p>
 
-<p><strong>What we declared on the App Store privacy card</strong><br />Apple groups the values above into its own categories. Scrap declares <strong>Device ID · Advertising Data · Product Interaction · Other Usage Data · Coarse Location · Performance Data</strong> — all of it the same data listed above. None of it is linked to your identity (there is no account to link it to), and <strong>the only item used for tracking is the advertising identifier.</strong> <strong>Photos are not on that list</strong>, because they never leave your device.</p>
+<p><strong>What we declared on the App Store privacy card</strong><br />Apple groups the values above into its own categories. Scrap declares <strong>Device ID · Advertising Data · Product Interaction · Other Usage Data · Coarse Location · Performance Data · Other Data</strong> — all of it the same data listed above. None of it is linked to your identity (there is no account to link it to), and <strong>the items declared as used for tracking are the advertising identifier (Device ID) and the ad interaction records (Advertising Data, Product Interaction, Other Usage Data).</strong> <strong>Photos are not on that list</strong>, because they never leave your device.</p>
 
 <p><strong>No ads on Android right now.</strong> The Android build ships without ad settings, so no ad requests are made and no advertising identifier is read. We will update this section if that changes.</p>
 
@@ -136,7 +137,7 @@
 <p>We hold no information about you, so there is nothing for us to disclose, correct or delete on request.</p>
 
 <ul>
-<li><strong>Sorting history</strong> — the ↺ next to “Sorted photos” in Settings clears the whole ledger. Deleting the app removes it too.</li>
+<li><strong>Sorting history</strong> — the ↺ next to “Sorted” in Settings clears the whole ledger. The running total of space freed is not cleared there; deleting the app removes it along with everything in section 3.</li>
 <li><strong>Deleted photos</strong> — photos removed from your library stay in <strong>“Recently Deleted”</strong> in the Photos app for a while and can be restored from there. That is handled by the operating system, not by this app.</li>
 <li><strong>Advertising identifier</strong> — reset it or turn off personalised ads as described in section 5.</li>
 </ul>

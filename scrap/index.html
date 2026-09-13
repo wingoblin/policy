@@ -104,7 +104,7 @@
 <ul>
 <li><strong>읽기</strong> — 캡처와 사진의 목록을 보여드리고, 정리 화면과 폴더 화면에 띄우기 위해 사용합니다.</li>
 <li><strong>삭제</strong> — 정리 중에 「삭제」로 넘기신 장을, 회차 끝에서 <strong>이용자가 적용을 누르셨을 때만</strong> 앨범에서 지웁니다. iOS 에서는 지우기 직전에 <strong>시스템이 한 번 더 확인창</strong>을 띄웁니다. 폴더를 지우실 때 그 안에 담긴 사진도 함께 앨범에서 지워지며, 지우기 전에 그 사실을 먼저 알려드립니다.</li>
-<li><strong>저장하지 않습니다</strong> — 이 앱은 앨범에 사진을 새로 만들거나 원본을 고치지 않습니다.</li>
+<li><strong>저장하지 않습니다</strong> — 이 앱은 앨범에 사진을 새로 만들거나 원본을 고치지 않습니다. iOS 에는 「앨범에 추가」 권한 문구가 함께 들어 있는데, iOS 가 앨범 권한을 다룰 때 같이 두는 항목이라 문구만 있을 뿐 저장 기능이 없어 실제로 쓰이지 않습니다.</li>
 <li><strong>고른 사진만 허용해도 됩니다</strong> — 앨범 전체 대신 <strong>고르신 사진만</strong> 허용하셔도 앱은 그대로 동작합니다. 그때는 허용하신 사진만 보입니다.</li>
 <li><strong>전송</strong> — 사진은 <strong>저희 서버로도, 광고 사업자에게도, 다른 어떤 곳으로도 올라가지 않습니다.</strong> 목록과 미리보기는 전부 기기 안에서 그립니다.</li>
 </ul>
@@ -118,6 +118,7 @@
 <li><strong>폴더</strong> — 폴더 이름·아이콘·순서·만든 시각. 이름은 이용자가 직접 적으시는 값입니다.</li>
 <li><strong>앱 설정</strong> — 한 번에 몇 장씩 넘길지, 고르신 언어, 다크 모드(기기 설정·밝게·어둡게).</li>
 <li><strong>광고 관련 기록</strong> — 잘못 눌린 광고를 잠시 쉬게 하기 위한 <strong>클릭 시각</strong>, 같은 자리에 광고를 잇달아 띄우지 않기 위한 <strong>표시 시각</strong>, 그리고 앱 상태 파일에서 받아 둔 광고 설정값입니다(5항). 개인을 알아볼 수 있는 값은 들어 있지 않습니다.</li>
+<li><strong>누적 기록</strong> — 지금까지 비우신 용량의 합과, 별점 요청 창을 이미 띄웠는지 여부입니다. 용량 합은 폴더나 정리 장부를 비우셔도 남도록 따로 적어 두는 값입니다.</li>
 </ul>
 
 <p>위 항목 모두 이용자의 기기 안에만 있습니다. 저희 서버로 전송되지 않으며 저희가 열람할 수 없습니다. 앱을 삭제하면 전부 함께 지워집니다.</p>
@@ -127,9 +128,9 @@
 <p>앱이 인터넷에 닿는 자리는 아래가 전부입니다. <strong>사진과 정리 내용은 어느 쪽으로도 나가지 않습니다.</strong></p>
 
 <ul>
-<li><strong>앱 상태 파일</strong> (<code>beautiful-tulumba-77ca83.netlify.app</code>) — 앱을 켤 때 한 번, 최소 지원 버전과 광고 설정을 적어 둔 <strong>공개 JSON 파일 하나</strong>를 읽습니다. 누구나 같은 파일을 받으며, <strong>저희가 그 요청에 실어 보내는 정보는 없습니다.</strong> 다만 웹페이지를 열 때와 마찬가지로, 그 파일을 두고 있는 호스팅 업체(Netlify)의 서버 기록에 접속 IP 가 남을 수 있습니다. 읽기에 실패하면 앱은 그냥 평소대로 열립니다.</li>
+<li><strong>앱 상태 파일</strong> (<code>beautiful-tulumba-77ca83.netlify.app</code>) — 앱을 켤 때, 최소 지원 버전과 광고 설정을 적어 둔 <strong>공개 JSON 파일 하나</strong>를 읽습니다. 누구나 같은 파일을 받으며, <strong>저희가 그 요청에 실어 보내는 정보는 없습니다.</strong> 다만 웹페이지를 열 때와 마찬가지로, 그 파일을 두고 있는 호스팅 업체(Netlify)의 서버 기록에 접속 IP 가 남을 수 있습니다. 읽기에 실패하면 앱은 그냥 평소대로 열립니다.</li>
 <li><strong>광고</strong> — 5항에 따로 적었습니다.</li>
-<li><strong>이 방침 열기 · 별점 주기</strong> — 설정에서 누르시면 기기의 웹브라우저나 스토어 앱이 열립니다. 그때도 같은 성격의 접속 기록이 남을 수 있습니다.</li>
+<li><strong>이 방침 열기 · 별점 주기</strong> — 설정에서 누르시면 기기의 웹브라우저나 스토어 앱이 열립니다. 그때도 같은 성격의 접속 기록이 남을 수 있습니다. 앱을 쓰시다 보면 운영체제가 <strong>별점 요청 창</strong>을 한 번 띄울 수 있는데, 그 창을 띄우는 것도 결과를 받는 것도 운영체제이며 저희는 누가 별점을 주셨는지 알 수 없습니다.</li>
 <li><strong>문의·제보</strong> — 앱이 보내는 것이 아니라 <strong>메일 앱을 열어 드릴 뿐</strong>입니다(9항).</li>
 </ul>
 
@@ -140,7 +141,7 @@
 <p><strong>광고가 놓이는 자리는 둘입니다.</strong></p>
 
 <ul>
-<li><strong>화면 아래 배너</strong> — 홈·사진첩·설정·정리·폴더 화면 아래에 놓입니다.</li>
+<li><strong>화면 아래 배너</strong> — 홈·사진첩·설정·정리·결과·폴더 화면 아래에 놓입니다.</li>
 <li><strong>전면 광고</strong> — <strong>정리를 적용하고 난 뒤에 한 번</strong> 표시됩니다. 정리 중에는 뜨지 않습니다.</li>
 </ul>
 
@@ -167,7 +168,7 @@
 
 <p><strong>iOS — 추적 허용을 물어봅니다</strong><br />iOS 에서는 앱을 처음 열 때 「추적을 허용하시겠습니까」라는 시스템 창이 한 번 뜹니다. <strong>허용하지 않으셔도 앱의 모든 기능을 그대로 쓸 수 있고</strong>, 광고도 그대로 표시됩니다 — 다만 관심사에 맞춘 광고 대신 그렇지 않은 광고가 나옵니다. 거부하시면 광고 식별자(IDFA)가 광고 사업자에게 전달되지 않습니다. 맞춤 광고를 끄고 싶으시면 iOS 설정 &gt; 개인정보 보호 및 보안 &gt; 추적에서 언제든 바꾸실 수 있습니다.</p>
 
-<p><strong>App Store 「앱이 수집하는 개인정보」에 적어 둔 것</strong><br />애플은 위 값들을 자기네 분류로 다시 묶어 표시합니다. 스크랩이 그곳에 신고한 항목은 <strong>기기 ID · 광고 데이터 · 제품 상호 작용 · 기타 사용 데이터 · 대략적인 위치 · 실적 데이터</strong>이며, 전부 <strong>위 광고 목록과 같은 값</strong>입니다. 전부 <strong>이용자의 신원과 연결되지 않고</strong>(계정이 없어 연결할 대상 자체가 없습니다), 이 가운데 <strong>추적에 쓰이는 것은 광고 식별자 하나뿐</strong>입니다. <strong>사진은 신고 항목에 들어 있지 않습니다</strong> — 앱 밖으로 나가지 않기 때문입니다.</p>
+<p><strong>App Store 「앱이 수집하는 개인정보」에 적어 둔 것</strong><br />애플은 위 값들을 자기네 분류로 다시 묶어 표시합니다. 스크랩이 그곳에 신고한 항목은 <strong>기기 ID · 광고 데이터 · 제품 상호 작용 · 기타 사용 데이터 · 대략적인 위치 · 실적 데이터 · 기타 데이터</strong>이며, 전부 <strong>위 광고 목록과 같은 값</strong>입니다. 전부 <strong>이용자의 신원과 연결되지 않고</strong>(계정이 없어 연결할 대상 자체가 없습니다), 이 가운데 <strong>추적에 쓰인다고 신고한 것은 광고 식별자(기기 ID)와 광고 상호작용 기록(광고 데이터 · 제품 상호 작용 · 기타 사용 데이터)</strong>입니다. <strong>사진은 신고 항목에 들어 있지 않습니다</strong> — 앱 밖으로 나가지 않기 때문입니다.</p>
 
 <p><strong>안드로이드는 현재 광고가 표시되지 않습니다.</strong> 광고 설정이 들어 있지 않아 광고 요청이 나가지 않으며, 광고 식별자도 읽히지 않습니다. 안드로이드에 광고를 켜게 되면 이 항목을 갱신합니다.</p>
 
@@ -223,7 +224,7 @@
 <p>저희가 보관하는 이용자의 정보가 없으므로 열람·정정·삭제를 요청하실 대상이 없습니다.</p>
 
 <ul>
-<li><strong>정리 기록</strong> — 설정의 「정리한 사진」 옆 ↺ 를 누르시면 장부를 통째로 비울 수 있습니다. 앱을 삭제하셔도 함께 사라집니다.</li>
+<li><strong>정리 기록</strong> — 설정의 「정리한 사진」 옆 ↺ 를 누르시면 장부를 통째로 비울 수 있습니다. 비우신 용량의 합계는 이때 지워지지 않고, 앱을 삭제하시면 3항의 내용과 함께 사라집니다.</li>
 <li><strong>지운 사진</strong> — 앨범에서 지운 사진은 사진 앱의 <strong>「최근 삭제된 항목」</strong>에 일정 기간 남아 있어 그곳에서 되살리실 수 있습니다. 이는 앱이 아니라 운영체제가 관리합니다.</li>
 <li><strong>광고 식별자</strong> — 5항의 방법으로 초기화하거나 맞춤 광고를 끄실 수 있습니다.</li>
 </ul>
@@ -274,7 +275,7 @@
 <ul>
 <li><strong>Reading</strong> — to list your screenshots and photos and show them on the sorting and folder screens.</li>
 <li><strong>Deleting</strong> — the app deletes from your library only the shots you swiped to “delete”, and only <strong>after you confirm at the end of a round.</strong> On iOS the system shows <strong>one more confirmation dialog</strong> right before anything is deleted. Deleting a folder also deletes the photos inside it from your library; the app tells you this before it does it.</li>
-<li><strong>No saving</strong> — the app never creates new photos in your library and never modifies the originals.</li>
+<li><strong>No saving</strong> — the app never creates new photos in your library and never modifies the originals. iOS also carries an “add to library” permission string, because iOS keeps that entry alongside the photo permission; the app has no saving feature, so it is never used.</li>
 <li><strong>Limited access is fine</strong> — you may allow <strong>only selected photos</strong> instead of the whole library. The app works the same way; it simply shows only what you allowed.</li>
 <li><strong>No transmission</strong> — your photos are <strong>never uploaded to us, to advertisers, or anywhere else.</strong> Lists and previews are drawn entirely on the device.</li>
 </ul>
@@ -288,6 +289,7 @@
 <li><strong>Folders</strong> — folder name, icon, order and creation time. The names are the ones you type in.</li>
 <li><strong>App settings</strong> — how many shots per round, the language you chose, and dark mode (system · light · dark).</li>
 <li><strong>Ad-related records</strong> — the <strong>time of an ad tap</strong> (so a mis-tapped ad slot rests for a while), the <strong>time an ad was shown</strong> (so the same slot is not filled again immediately), and the ad settings received from the status file (section 5). None of this identifies a person.</li>
+<li><strong>Running totals</strong> — how much space you have freed in total, and whether the rating prompt has already been shown. The total is stored separately so that it survives when you clear folders or the sorting log.</li>
 </ul>
 
 <p>All of the above stays on your device. It is never sent to us and we cannot read it. Deleting the app deletes all of it.</p>
@@ -297,9 +299,9 @@
 <p>These are the only places the app touches the internet. <strong>Your photos and your sorting decisions go to none of them.</strong></p>
 
 <ul>
-<li><strong>Status file</strong> (<code>beautiful-tulumba-77ca83.netlify.app</code>) — once at launch the app reads <strong>a single public JSON file</strong> holding the minimum supported version and the ad settings. Everyone receives the same file and <strong>we attach nothing of yours to the request.</strong> As with opening any web page, the hosting provider (Netlify) may record your IP address in its server logs. If the read fails, the app simply opens as usual.</li>
+<li><strong>Status file</strong> (<code>beautiful-tulumba-77ca83.netlify.app</code>) — at launch the app reads <strong>a single public JSON file</strong> holding the minimum supported version and the ad settings. Everyone receives the same file and <strong>we attach nothing of yours to the request.</strong> As with opening any web page, the hosting provider (Netlify) may record your IP address in its server logs. If the read fails, the app simply opens as usual.</li>
 <li><strong>Ads</strong> — see section 5.</li>
-<li><strong>Opening this policy · rating the app</strong> — tapping these in Settings opens your browser or the store app, which may leave the same kind of access record.</li>
+<li><strong>Opening this policy · rating the app</strong> — tapping these in Settings opens your browser or the store app, which may leave the same kind of access record. While you use the app, the operating system may also show its own <strong>rating prompt</strong> once; that prompt is displayed and answered entirely by the operating system, and we never learn who rated the app.</li>
 <li><strong>Contact us</strong> — the app does not send anything; it <strong>only opens your mail app</strong> (section 9).</li>
 </ul>
 
@@ -310,7 +312,7 @@
 <p><strong>There are two ad placements.</strong></p>
 
 <ul>
-<li><strong>A banner at the bottom</strong> of the home, library, settings, sorting and folder screens.</li>
+<li><strong>A banner at the bottom</strong> of the home, library, settings, sorting, summary and folder screens.</li>
 <li><strong>One interstitial</strong> shown <strong>after a sorting round has been applied.</strong> It never appears while you are sorting.</li>
 </ul>
 
@@ -337,7 +339,7 @@
 
 <p><strong>iOS — the tracking prompt</strong><br />On iOS, the system asks once whether the app may track you. <strong>You can decline and still use every feature</strong>, and you will still see ads — they simply will not be personalised. If you decline, the advertising identifier (IDFA) is not passed to the ad providers. You can change this at any time in iOS Settings &gt; Privacy &amp; Security &gt; Tracking.</p>
 
-<p><strong>What we declared on the App Store privacy card</strong><br />Apple groups the values above into its own categories. Scrap declares <strong>Device ID · Advertising Data · Product Interaction · Other Usage Data · Coarse Location · Performance Data</strong> — all of it the same data listed above. None of it is linked to your identity (there is no account to link it to), and <strong>the only item used for tracking is the advertising identifier.</strong> <strong>Photos are not on that list</strong>, because they never leave your device.</p>
+<p><strong>What we declared on the App Store privacy card</strong><br />Apple groups the values above into its own categories. Scrap declares <strong>Device ID · Advertising Data · Product Interaction · Other Usage Data · Coarse Location · Performance Data · Other Data</strong> — all of it the same data listed above. None of it is linked to your identity (there is no account to link it to), and <strong>the items declared as used for tracking are the advertising identifier (Device ID) and the ad interaction records (Advertising Data, Product Interaction, Other Usage Data).</strong> <strong>Photos are not on that list</strong>, because they never leave your device.</p>
 
 <p><strong>No ads on Android right now.</strong> The Android build ships without ad settings, so no ad requests are made and no advertising identifier is read. We will update this section if that changes.</p>
 
@@ -393,7 +395,7 @@
 <p>We hold no information about you, so there is nothing for us to disclose, correct or delete on request.</p>
 
 <ul>
-<li><strong>Sorting history</strong> — the ↺ next to “Sorted photos” in Settings clears the whole ledger. Deleting the app removes it too.</li>
+<li><strong>Sorting history</strong> — the ↺ next to “Sorted” in Settings clears the whole ledger. The running total of space freed is not cleared there; deleting the app removes it along with everything in section 3.</li>
 <li><strong>Deleted photos</strong> — photos removed from your library stay in <strong>“Recently Deleted”</strong> in the Photos app for a while and can be restored from there. That is handled by the operating system, not by this app.</li>
 <li><strong>Advertising identifier</strong> — reset it or turn off personalised ads as described in section 5.</li>
 </ul>
@@ -444,7 +446,7 @@
 <ul>
 <li><strong>読み取り</strong> — スクリーンショットや写真の一覧を表示し、整理画面・フォルダ画面に映すために使います。</li>
 <li><strong>削除</strong> — 整理中に「削除」へ送った写真を、<strong>最後に利用者が適用を押したときにだけ</strong>アルバムから削除します。iOS では削除の直前に<strong>システムの確認画面がもう一度</strong>表示されます。フォルダを削除すると中の写真もアルバムから削除され、削除前にその旨をお知らせします。</li>
-<li><strong>保存はしません</strong> — このアプリがアルバムに新しい写真を作ったり、元の写真を書き換えたりすることはありません。</li>
+<li><strong>保存はしません</strong> — このアプリがアルバムに新しい写真を作ったり、元の写真を書き換えたりすることはありません。iOSでは「アルバムへの追加」の説明文も一緒に入っていますが、これはiOSが写真の権限と並べて持つ項目で、保存機能がないため実際には使われません。</li>
 <li><strong>「選択した写真のみ」でも使えます</strong> — アルバム全体ではなく<strong>選択した写真だけ</strong>を許可しても、アプリはそのまま動作します。その場合は許可された写真だけが表示されます。</li>
 <li><strong>送信</strong> — 写真が<strong>当社のサーバーにも、広告事業者にも、他のどこにもアップロードされることはありません。</strong>一覧もプレビューもすべて端末の中で描画しています。</li>
 </ul>
@@ -458,6 +460,7 @@
 <li><strong>フォルダ</strong> — フォルダ名・アイコン・並び順・作成時刻。名前は利用者が入力した値です。</li>
 <li><strong>アプリの設定</strong> — 1回に何枚めくるか、選んだ言語、ダークモード（端末の設定・ライト・ダーク）。</li>
 <li><strong>広告に関する記録</strong> — 誤ってタップされた広告を少し休ませるための<strong>タップ時刻</strong>、同じ場所に広告を続けて出さないための<strong>表示時刻</strong>、状態ファイルから受け取った広告設定です（第5項）。個人を特定できる値は含まれません。</li>
+<li><strong>累計の記録</strong> — これまでに空けた容量の合計と、評価のお願いの画面をすでに表示したかどうかです。合計はフォルダや整理の記録を消しても残るよう、別に書き留めている値です。</li>
 </ul>
 
 <p>これらはすべて利用者の端末の中だけにあります。当社のサーバーへ送信されることはなく、当社が閲覧することもできません。アプリを削除すればすべて一緒に消えます。</p>
@@ -467,9 +470,9 @@
 <p>アプリがインターネットに接続するのは以下だけです。<strong>写真と整理の内容はどちらにも出ていきません。</strong></p>
 
 <ul>
-<li><strong>状態ファイル</strong>（<code>beautiful-tulumba-77ca83.netlify.app</code>） — 起動時に1回、最低サポートバージョンと広告設定を書いた<strong>公開JSONファイル1つ</strong>を読み込みます。誰もが同じファイルを受け取り、<strong>そのリクエストに当社が利用者の情報を載せることはありません。</strong>ただしWebページを開くときと同様に、このファイルを置いているホスティング事業者（Netlify）のサーバー記録に接続IPが残ることがあります。読み込みに失敗しても、アプリは普通どおり起動します。</li>
+<li><strong>状態ファイル</strong>（<code>beautiful-tulumba-77ca83.netlify.app</code>） — 起動時に、最低サポートバージョンと広告設定を書いた<strong>公開JSONファイル1つ</strong>を読み込みます。誰もが同じファイルを受け取り、<strong>そのリクエストに当社が利用者の情報を載せることはありません。</strong>ただしWebページを開くときと同様に、このファイルを置いているホスティング事業者（Netlify）のサーバー記録に接続IPが残ることがあります。読み込みに失敗しても、アプリは普通どおり起動します。</li>
 <li><strong>広告</strong> — 第5項に記載しています。</li>
-<li><strong>このポリシーを開く・評価する</strong> — 設定から押すと端末のブラウザやストアアプリが開きます。その際も同様の接続記録が残ることがあります。</li>
+<li><strong>このポリシーを開く・評価する</strong> — 設定から押すと端末のブラウザやストアアプリが開きます。その際も同様の接続記録が残ることがあります。アプリの利用中に、OSが<strong>評価のお願いの画面</strong>を一度表示することがありますが、その表示も結果の受け取りもすべてOSが行い、誰が評価したかを当社が知ることはありません。</li>
 <li><strong>お問い合わせ</strong> — アプリが送信するのではなく、<strong>メールアプリを開くだけ</strong>です（第9項）。</li>
 </ul>
 
@@ -480,7 +483,7 @@
 <p><strong>広告が置かれる場所は2か所です。</strong></p>
 
 <ul>
-<li><strong>画面下のバナー</strong> — ホーム・アルバム・設定・整理・フォルダの各画面の下に置かれます。</li>
+<li><strong>画面下のバナー</strong> — ホーム・アルバム・設定・整理・結果・フォルダの各画面の下に置かれます。</li>
 <li><strong>インタースティシャル広告</strong> — <strong>整理を適用した後に1回</strong>表示されます。整理中には表示されません。</li>
 </ul>
 
@@ -507,7 +510,7 @@
 
 <p><strong>iOS — トラッキングの許可を尋ねます</strong><br />iOS では初回起動時に「トラッキングを許可しますか」というシステムの画面が一度表示されます。<strong>許可しなくてもアプリのすべての機能をそのまま使えますし</strong>、広告も同じように表示されます — ただし興味関心に合わせた広告ではなくなります。拒否された場合、広告識別子（IDFA）は広告事業者に渡りません。設定 &gt; プライバシーとセキュリティ &gt; トラッキング からいつでも変更できます。</p>
 
-<p><strong>App Store の「収集されるデータ」に申告した内容</strong><br />Apple は上記の値を独自の分類にまとめて表示します。Scrap が申告した項目は<strong>デバイス ID・広告データ・製品との相互作用・その他の使用状況データ・おおよその位置情報・パフォーマンスデータ</strong>で、すべて<strong>上の広告の一覧と同じ値</strong>です。いずれも<strong>利用者の身元とは結び付けられず</strong>（アカウントがないため結び付ける相手がありません）、このうち<strong>トラッキングに使われるのは広告識別子だけ</strong>です。<strong>写真は申告項目に含まれていません</strong> — 端末の外に出ないからです。</p>
+<p><strong>App Store の「収集されるデータ」に申告した内容</strong><br />Apple は上記の値を独自の分類にまとめて表示します。Scrap が申告した項目は<strong>デバイス ID・広告データ・製品との相互作用・その他の使用状況データ・おおよその位置情報・パフォーマンスデータ・その他のデータ</strong>で、すべて<strong>上の広告の一覧と同じ値</strong>です。いずれも<strong>利用者の身元とは結び付けられず</strong>（アカウントがないため結び付ける相手がありません）、このうち<strong>トラッキングに使うと申告したのは広告識別子（デバイス ID）と広告の反応の記録（広告データ・製品との相互作用・その他の使用状況データ）</strong>です。<strong>写真は申告項目に含まれていません</strong> — 端末の外に出ないからです。</p>
 
 <p><strong>Android では現在、広告は表示されません。</strong>広告設定が入っていないため広告リクエストが送られず、広告識別子も読み取られません。Android で広告を有効にする際は、この項目を更新します。</p>
 
@@ -563,7 +566,7 @@
 <p>当社が保管している利用者の情報がないため、開示・訂正・削除を請求する対象がありません。</p>
 
 <ul>
-<li><strong>整理の記録</strong> — 設定の「整理した写真」の横にある ↺ を押すと記録をまとめて消せます。アプリを削除しても一緒に消えます。</li>
+<li><strong>整理の記録</strong> — 設定の「整理した写真」の横にある ↺ を押すと記録をまとめて消せます。空けた容量の合計はこの操作では消えず、アプリを削除すると第3項の内容と一緒に消えます。</li>
 <li><strong>削除した写真</strong> — アルバムから削除した写真は、写真アプリの<strong>「最近削除した項目」</strong>に一定期間残り、そこから復元できます。これはアプリではなく OS が管理しています。</li>
 <li><strong>広告識別子</strong> — 第5項の方法でリセットしたり、パーソナライズ広告をオフにできます。</li>
 </ul>
@@ -614,7 +617,7 @@
 <ul>
 <li><strong>讀取</strong> — 用來顯示截圖與照片的清單，並在整理畫面與資料夾畫面中呈現。</li>
 <li><strong>刪除</strong> — 只有你在整理時滑到「刪除」的照片，而且<strong>只有在你於整理結束時按下套用之後</strong>，才會從相簿中刪除。在 iOS 上，系統會在刪除前<strong>再顯示一次確認視窗</strong>。刪除資料夾時，其中的照片也會一併從相簿刪除，我們會在刪除前先告知你。</li>
-<li><strong>不會儲存</strong> — 這個應用程式不會在相簿中建立新照片，也不會修改原始檔案。</li>
+<li><strong>不會儲存</strong> — 這個應用程式不會在相簿中建立新照片，也不會修改原始檔案。iOS 上另含有「加入相簿」的權限說明，那是 iOS 與照片權限並列保留的項目；由於沒有儲存功能，實際上不會用到。</li>
 <li><strong>只允許選取的照片也可以</strong> — 你可以只允許<strong>選取的照片</strong>而非整個相簿，應用程式仍可照常運作，只會顯示你允許的照片。</li>
 <li><strong>不會傳送</strong> — 照片<strong>不會上傳到我們的伺服器、廣告商或任何其他地方。</strong>清單與預覽全部在裝置上繪製。</li>
 </ul>
@@ -628,6 +631,7 @@
 <li><strong>資料夾</strong> — 名稱、圖示、排序與建立時間。名稱是你自己輸入的。</li>
 <li><strong>應用程式設定</strong> — 一次整理幾張、你選擇的語言，以及深色模式（跟隨裝置・淺色・深色）。</li>
 <li><strong>廣告相關紀錄</strong> — 為了讓誤觸的廣告位置暫時休息而記下的<strong>點擊時間</strong>、避免同一位置連續顯示廣告的<strong>顯示時間</strong>，以及從狀態檔取得的廣告設定（第 5 項）。其中不含可識別個人的資料。</li>
+<li><strong>累計紀錄</strong> — 你至今釋出的容量總和，以及是否已顯示過評分邀請。容量總和另外記錄，因此即使你清空資料夾或整理紀錄也會保留。</li>
 </ul>
 
 <p>以上全部只存在於你的裝置中，不會傳送給我們，我們也無法檢視。刪除應用程式時會一併消失。</p>
@@ -637,9 +641,9 @@
 <p>應用程式連上網路的地方只有以下幾處。<strong>照片與整理內容不會流向其中任何一處。</strong></p>
 
 <ul>
-<li><strong>狀態檔</strong>（<code>beautiful-tulumba-77ca83.netlify.app</code>） — 啟動時讀取一次，是一個記載最低支援版本與廣告設定的<strong>公開 JSON 檔</strong>。所有人拿到的都是同一份檔案，<strong>我們不會在該請求中夾帶你的任何資料。</strong>不過就像開啟任何網頁一樣，存放該檔案的代管商（Netlify）的伺服器紀錄中可能會留下連線 IP。讀取失敗時，應用程式仍會照常開啟。</li>
+<li><strong>狀態檔</strong>（<code>beautiful-tulumba-77ca83.netlify.app</code>） — 啟動時讀取，是一個記載最低支援版本與廣告設定的<strong>公開 JSON 檔</strong>。所有人拿到的都是同一份檔案，<strong>我們不會在該請求中夾帶你的任何資料。</strong>不過就像開啟任何網頁一樣，存放該檔案的代管商（Netlify）的伺服器紀錄中可能會留下連線 IP。讀取失敗時，應用程式仍會照常開啟。</li>
 <li><strong>廣告</strong> — 詳見第 5 項。</li>
-<li><strong>開啟本政策・評分</strong> — 在設定中點選時會開啟裝置的瀏覽器或商店應用程式，同樣可能留下這類連線紀錄。</li>
+<li><strong>開啟本政策・評分</strong> — 在設定中點選時會開啟裝置的瀏覽器或商店應用程式，同樣可能留下這類連線紀錄。使用過程中，作業系統也可能顯示一次<strong>評分邀請</strong>；該視窗的顯示與結果都由作業系統處理，我們無從得知是誰評分。</li>
 <li><strong>意見回饋</strong> — 應用程式不會自行傳送，<strong>只會開啟你的郵件應用程式</strong>（第 9 項）。</li>
 </ul>
 
@@ -650,7 +654,7 @@
 <p><strong>廣告出現的位置有兩處。</strong></p>
 
 <ul>
-<li><strong>畫面下方的橫幅</strong> — 位於首頁、相簿、設定、整理與資料夾畫面的下方。</li>
+<li><strong>畫面下方的橫幅</strong> — 位於首頁、相簿、設定、整理、結果與資料夾畫面的下方。</li>
 <li><strong>插頁廣告</strong> — 在<strong>套用整理之後顯示一次</strong>，整理過程中不會出現。</li>
 </ul>
 
@@ -677,7 +681,7 @@
 
 <p><strong>iOS — 會詢問是否允許追蹤</strong><br />在 iOS 上，首次開啟時系統會詢問一次是否允許追蹤。<strong>即使不允許，所有功能都能照常使用</strong>，廣告也一樣會顯示 — 只是不會依你的興趣個人化。若你拒絕，廣告識別碼（IDFA）就不會傳給廣告業者。你可以隨時在「設定 &gt; 隱私權與安全性 &gt; 追蹤」中變更。</p>
 
-<p><strong>我們在 App Store 隱私標籤申報的內容</strong><br />Apple 會把上述資料歸入自己的分類。Scrap 申報的項目為<strong>裝置 ID・廣告資料・產品互動・其他使用資料・粗略位置・效能資料</strong>，全部就是上面列出的同一批資料。這些都<strong>不會與你的身分連結</strong>（沒有帳號可供連結），其中<strong>用於追蹤的只有廣告識別碼</strong>。<strong>照片不在申報項目中</strong>，因為它們從未離開你的裝置。</p>
+<p><strong>我們在 App Store 隱私標籤申報的內容</strong><br />Apple 會把上述資料歸入自己的分類。Scrap 申報的項目為<strong>裝置 ID・廣告資料・產品互動・其他使用資料・粗略位置・效能資料・其他資料</strong>，全部就是上面列出的同一批資料。這些都<strong>不會與你的身分連結</strong>（沒有帳號可供連結），其中<strong>申報用於追蹤的是廣告識別碼（裝置 ID）與廣告互動紀錄（廣告資料・產品互動・其他使用資料）</strong>。<strong>照片不在申報項目中</strong>，因為它們從未離開你的裝置。</p>
 
 <p><strong>Android 目前不顯示廣告。</strong>Android 版本未內含廣告設定，因此不會發出廣告請求，也不會讀取廣告識別碼。若日後在 Android 啟用廣告，我們會更新本項。</p>
 
@@ -733,7 +737,7 @@
 <p>我們沒有保存你的任何資料，因此沒有可供你要求查閱、更正或刪除的對象。</p>
 
 <ul>
-<li><strong>整理紀錄</strong> — 按下設定中「已整理的照片」旁的 ↺ 即可清空整份紀錄；刪除應用程式時也會一併消失。</li>
+<li><strong>整理紀錄</strong> — 按下設定中「已整理」旁的 ↺ 即可清空整份紀錄。騰出空間的累計總和不會因此清除；刪除應用程式時，它會連同第 3 項的內容一起消失。</li>
 <li><strong>已刪除的照片</strong> — 從相簿刪除的照片會在「照片」App 的<strong>「最近刪除」</strong>中保留一段時間，可從該處復原。這由作業系統管理，而非本應用程式。</li>
 <li><strong>廣告識別碼</strong> — 可依第 5 項的方式重設或關閉個人化廣告。</li>
 </ul>
