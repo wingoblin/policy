@@ -25,6 +25,16 @@
 
 <p><strong>We do not read the location stored in your photos.</strong> It is not needed to cover anything, so the app is built never to request that permission. It does not use the camera or the microphone either — Cover It does not record anything; it only edits files you already have.</p>
 
+<p><strong>Other Android permissions</strong> — all three are granted at install time and read none of your information.</p>
+
+<ul>
+<li><strong>Google Play billing</strong> (<code>BILLING</code>) — for purchasing Cover It Pro.</li>
+<li><strong>Keep screen on</strong> (<code>WAKE_LOCK</code>) — keeps the screen from turning off while a video plays.</li>
+<li><strong>Vibration</strong> (<code>VIBRATE</code>) — declared by the app's base framework. Cover It does not use vibration.</li>
+</ul>
+
+<p>Permissions added for advertising are listed separately in section 6.</p>
+
 <h2>3. Automatic face detection</h2>
 
 <p>Finding faces automatically so they can be covered is <strong>computed entirely on this device.</strong> Nothing leaves the device to be analysed.</p>
@@ -82,7 +92,15 @@
 
 <p><strong>Android has no tracking prompt.</strong> The advertising ID setting on your device plays that role instead. Go to Settings → Google → All services → Ads and tap <strong>Delete advertising ID</strong> (on some devices, Settings → Privacy → Ads). The advertising ID is then no longer passed to advertising providers, and ads switch to non-personalised ads. You do not need to reinstall the app, and every feature keeps working.</p>
 
-<p><strong>Permissions added on Android for advertising</strong><br /><strong>Read advertising ID</strong> (<code>AD_ID</code>) — lets advertising networks read the device's advertising ID used for personalised ads. On Android 13 and later this permission must be declared for that value to be readable. <strong>It is read by the advertising networks, not by us</strong> — we neither receive nor keep it. It is granted at install time and no prompt appears. The advertising components also use internet access and network-state permissions to load ads.</p>
+<p><strong>Permissions added on Android for advertising</strong><br /><strong>Read advertising ID</strong> (<code>AD_ID</code>) — lets advertising networks read the device's advertising ID used for personalised ads. On Android 13 and later this permission must be declared for that value to be readable. <strong>It is read by the advertising networks, not by us</strong> — we neither receive nor keep it. It is granted at install time and no prompt appears. All of these are install-time permissions, so no prompt appears. The advertising components declare the following.</p>
+
+<ul>
+<li><strong>Ad attribution and topics</strong> (<code>ACCESS_ADSERVICES_ATTRIBUTION</code> · <code>ACCESS_ADSERVICES_TOPICS</code>) — to use Android's privacy-preserving ad features (Privacy Sandbox). You can turn these off under Settings → Privacy → Ads privacy.</li>
+<li><strong>Install source</strong> (<code>BIND_GET_INSTALL_REFERRER_SERVICE</code>) — asks the Play Store how the app was installed, for measuring ad performance.</li>
+<li><strong>Ad request verification</strong> (<code>com.amazon.privacypass.ATTEST</code>) — used by the Liftoff component to block fraudulent ad requests.</li>
+<li><strong>Background job scheduling</strong> (<code>RECEIVE_BOOT_COMPLETED</code> · <code>FOREGROUND_SERVICE</code>) — declared by the Android job-scheduling library the advertising components use, to send advertising records later in batches. The app itself has no feature that starts when the device boots.</li>
+<li><strong>Internet and network state</strong> (<code>INTERNET</code> · <code>ACCESS_NETWORK_STATE</code>) — to load ads and hold requests back while offline.</li>
+</ul>
 
 <p>Unity and its partners may process this information over the network in countries outside your own when ads are shown. Their retention and deletion practices are governed by their policies and legal obligations. For details and instructions for privacy requests, see <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity's privacy policy</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff's privacy policy</a>.</p>
 

@@ -112,6 +112,16 @@
 
 <p><strong>촬영 위치 정보는 읽지 않습니다.</strong> 가리는 데 필요하지 않아 관련 권한을 아예 요청하지 않도록 만들었습니다. 카메라와 마이크도 쓰지 않습니다 — 이 앱은 촬영하지 않고 이미 찍힌 파일만 편집합니다.</p>
 
+<p><strong>그 밖의 Android 권한</strong> — 셋 다 설치할 때 자동으로 주어지며, 이용자의 정보를 읽지 않습니다.</p>
+
+<ul>
+<li><strong>Google Play 결제</strong>(<code>BILLING</code>) — 가려줘 Pro 구입에 씁니다.</li>
+<li><strong>화면 켜짐 유지</strong>(<code>WAKE_LOCK</code>) — 동영상을 재생하는 동안 화면이 꺼지지 않게 합니다.</li>
+<li><strong>진동</strong>(<code>VIBRATE</code>) — 앱의 기본 틀이 선언하는 권한입니다. 가려줘는 진동을 쓰지 않습니다.</li>
+</ul>
+
+<p>광고 때문에 더해지는 권한은 6항에 따로 적었습니다.</p>
+
 <h2>3. 얼굴·번호판 자동 찾기</h2>
 
 <p>얼굴이나 번호판을 자동으로 찾아 가려 주는 기능은 <strong>전부 기기 안에서 계산합니다.</strong> 사진과 동영상이 분석을 위해 밖으로 나가는 일은 없습니다.</p>
@@ -170,7 +180,15 @@
 
 <p><strong>Android에는 추적 허용 창이 없습니다.</strong> 대신 기기 설정의 광고 ID 항목이 그 역할을 합니다. 설정 → Google → 모든 서비스 → 광고에서 <strong>「광고 ID 삭제」</strong>를 누르시면(기기 제조사에 따라 설정 → 개인정보 보호 → 광고) 광고 사업자에게 광고 ID가 전달되지 않고, 광고는 맞춤이 아닌 광고로 바뀌어 표시됩니다. 앱을 다시 설치하실 필요는 없고, 끄셔도 앱의 모든 기능을 그대로 쓰실 수 있습니다.</p>
 
-<p><strong>Android에서 광고 때문에 더해지는 권한</strong><br /><strong>광고 ID 읽기</strong>(<code>AD_ID</code>) — 광고 네트워크가 맞춤 광고에 쓰는 기기의 광고 ID를 읽기 위한 것입니다. Android 13 이상에서는 이 권한을 선언해야만 그 값을 읽을 수 있습니다. <strong>읽어 가는 것은 광고 네트워크이고 저희가 아닙니다</strong> — 저희는 받지도 보관하지도 않습니다. 이 권한은 설치할 때 자동으로 주어지며 따로 여쭙는 창은 뜨지 않습니다. 이 밖에 광고 부품이 인터넷 연결과 네트워크 상태 확인 권한을 씁니다 — 광고를 불러오기 위한 것입니다.</p>
+<p><strong>Android에서 광고 때문에 더해지는 권한</strong><br /><strong>광고 ID 읽기</strong>(<code>AD_ID</code>) — 광고 네트워크가 맞춤 광고에 쓰는 기기의 광고 ID를 읽기 위한 것입니다. Android 13 이상에서는 이 권한을 선언해야만 그 값을 읽을 수 있습니다. <strong>읽어 가는 것은 광고 네트워크이고 저희가 아닙니다</strong> — 저희는 받지도 보관하지도 않습니다. 이 권한은 설치할 때 자동으로 주어지며 따로 여쭙는 창은 뜨지 않습니다. 전부 설치할 때 자동으로 주어지는 권한이라 여쭙는 창이 뜨지 않으며, 광고 부품이 선언하는 것은 다음과 같습니다.</p>
+
+<ul>
+<li><strong>광고 기여 측정·관심사 주제</strong>(<code>ACCESS_ADSERVICES_ATTRIBUTION</code> · <code>ACCESS_ADSERVICES_TOPICS</code>) — Android의 개인정보 보호 광고 기능(Privacy Sandbox)을 쓰기 위한 것입니다. 기기 설정 → 개인정보 보호 → 광고 개인 정보 보호에서 끌 수 있습니다.</li>
+<li><strong>설치 경로 확인</strong>(<code>BIND_GET_INSTALL_REFERRER_SERVICE</code>) — 앱이 어떤 경로로 설치되었는지 Play 스토어에 묻는 것입니다. 광고 성과 측정에 쓰입니다.</li>
+<li><strong>광고 요청 검증</strong>(<code>com.amazon.privacypass.ATTEST</code>) — Liftoff 부품이 부정 광고 요청을 막는 데 씁니다.</li>
+<li><strong>백그라운드 작업 예약</strong>(<code>RECEIVE_BOOT_COMPLETED</code> · <code>FOREGROUND_SERVICE</code>) — 광고 부품이 쓰는 안드로이드 작업 예약 라이브러리가 함께 선언합니다. 광고 기록을 나중에 모아 보내는 데 쓰이며, 이 앱이 기기를 켤 때 스스로 실행되는 기능은 없습니다.</li>
+<li><strong>인터넷 · 네트워크 상태 확인</strong>(<code>INTERNET</code> · <code>ACCESS_NETWORK_STATE</code>) — 광고를 불러오고, 연결이 없을 때 요청을 미루기 위한 것입니다.</li>
+</ul>
 
 <p>Unity와 그 파트너는 광고가 표시될 때 네트워크를 통해 위 정보를 국외를 포함한 지역에서 처리할 수 있으며, 보유 기간과 삭제 기준은 각 업체의 정책과 법적 의무에 따릅니다. 자세한 내용과 개인정보 관련 요청 방법은 <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity 개인정보 처리방침</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff 개인정보 처리방침</a>에서 확인할 수 있습니다.</p>
 
@@ -227,6 +245,16 @@
 </ul>
 
 <p><strong>We do not read the location stored in your photos.</strong> It is not needed to cover anything, so the app is built never to request that permission. It does not use the camera or the microphone either — Cover It does not record anything; it only edits files you already have.</p>
+
+<p><strong>Other Android permissions</strong> — all three are granted at install time and read none of your information.</p>
+
+<ul>
+<li><strong>Google Play billing</strong> (<code>BILLING</code>) — for purchasing Cover It Pro.</li>
+<li><strong>Keep screen on</strong> (<code>WAKE_LOCK</code>) — keeps the screen from turning off while a video plays.</li>
+<li><strong>Vibration</strong> (<code>VIBRATE</code>) — declared by the app's base framework. Cover It does not use vibration.</li>
+</ul>
+
+<p>Permissions added for advertising are listed separately in section 6.</p>
 
 <h2>3. Automatic face detection</h2>
 
@@ -285,7 +313,15 @@
 
 <p><strong>Android has no tracking prompt.</strong> The advertising ID setting on your device plays that role instead. Go to Settings → Google → All services → Ads and tap <strong>Delete advertising ID</strong> (on some devices, Settings → Privacy → Ads). The advertising ID is then no longer passed to advertising providers, and ads switch to non-personalised ads. You do not need to reinstall the app, and every feature keeps working.</p>
 
-<p><strong>Permissions added on Android for advertising</strong><br /><strong>Read advertising ID</strong> (<code>AD_ID</code>) — lets advertising networks read the device's advertising ID used for personalised ads. On Android 13 and later this permission must be declared for that value to be readable. <strong>It is read by the advertising networks, not by us</strong> — we neither receive nor keep it. It is granted at install time and no prompt appears. The advertising components also use internet access and network-state permissions to load ads.</p>
+<p><strong>Permissions added on Android for advertising</strong><br /><strong>Read advertising ID</strong> (<code>AD_ID</code>) — lets advertising networks read the device's advertising ID used for personalised ads. On Android 13 and later this permission must be declared for that value to be readable. <strong>It is read by the advertising networks, not by us</strong> — we neither receive nor keep it. It is granted at install time and no prompt appears. All of these are install-time permissions, so no prompt appears. The advertising components declare the following.</p>
+
+<ul>
+<li><strong>Ad attribution and topics</strong> (<code>ACCESS_ADSERVICES_ATTRIBUTION</code> · <code>ACCESS_ADSERVICES_TOPICS</code>) — to use Android's privacy-preserving ad features (Privacy Sandbox). You can turn these off under Settings → Privacy → Ads privacy.</li>
+<li><strong>Install source</strong> (<code>BIND_GET_INSTALL_REFERRER_SERVICE</code>) — asks the Play Store how the app was installed, for measuring ad performance.</li>
+<li><strong>Ad request verification</strong> (<code>com.amazon.privacypass.ATTEST</code>) — used by the Liftoff component to block fraudulent ad requests.</li>
+<li><strong>Background job scheduling</strong> (<code>RECEIVE_BOOT_COMPLETED</code> · <code>FOREGROUND_SERVICE</code>) — declared by the Android job-scheduling library the advertising components use, to send advertising records later in batches. The app itself has no feature that starts when the device boots.</li>
+<li><strong>Internet and network state</strong> (<code>INTERNET</code> · <code>ACCESS_NETWORK_STATE</code>) — to load ads and hold requests back while offline.</li>
+</ul>
 
 <p>Unity and its partners may process this information over the network in countries outside your own when ads are shown. Their retention and deletion practices are governed by their policies and legal obligations. For details and instructions for privacy requests, see <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity's privacy policy</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff's privacy policy</a>.</p>
 
@@ -342,6 +378,16 @@
 </ul>
 
 <p><strong>撮影場所の位置情報は読み取りません。</strong>隠す処理に必要がないため、その権限を要求しない造りにしています。カメラとマイクも使いません — このアプリは撮影を行わず、すでにある写真や動画を編集するだけです。</p>
+
+<p><strong>その他の Android 権限</strong> — 3つともインストール時に自動で付与され、利用者の情報を読み取りません。</p>
+
+<ul>
+<li><strong>Google Play の課金</strong>（<code>BILLING</code>）— Cover It Pro の購入に使います。</li>
+<li><strong>画面のスリープ防止</strong>（<code>WAKE_LOCK</code>）— 動画の再生中に画面が消えないようにします。</li>
+<li><strong>バイブレーション</strong>（<code>VIBRATE</code>）— アプリの基本フレームワークが宣言する権限です。Cover It はバイブレーションを使いません。</li>
+</ul>
+
+<p>広告のために加わる権限は第6項に別途記載しました。</p>
 
 <h2>3. 顔の自動検出について</h2>
 
@@ -400,7 +446,15 @@
 
 <p><strong>Android にはトラッキング許可の画面がありません。</strong>代わりに端末設定の広告 ID の項目がその役割を果たします。設定 → Google → すべてのサービス → 広告 で<strong>「広告 ID を削除」</strong>を押すと（メーカーによっては 設定 → プライバシー → 広告）、広告 ID は広告事業者に渡されなくなり、広告はパーソナライズされない広告に切り替わります。アプリを再インストールする必要はなく、オフにしてもアプリのすべての機能をそのまま使えます。</p>
 
-<p><strong>Android で広告のために加わる権限</strong><br /><strong>広告 ID の読み取り</strong>（<code>AD_ID</code>）— 広告ネットワークがパーソナライズ広告に使う端末の広告 ID を読むためのものです。Android 13 以降はこの権限を宣言しないとその値を読めません。<strong>読み取るのは広告ネットワークで、当社ではありません</strong> — 当社は受け取りも保管もしません。この権限はインストール時に自動で付与され、確認の画面は表示されません。このほか広告部品が、広告を読み込むためにインターネット接続とネットワーク状態確認の権限を使います。</p>
+<p><strong>Android で広告のために加わる権限</strong><br /><strong>広告 ID の読み取り</strong>（<code>AD_ID</code>）— 広告ネットワークがパーソナライズ広告に使う端末の広告 ID を読むためのものです。Android 13 以降はこの権限を宣言しないとその値を読めません。<strong>読み取るのは広告ネットワークで、当社ではありません</strong> — 当社は受け取りも保管もしません。この権限はインストール時に自動で付与され、確認の画面は表示されません。いずれもインストール時に自動で付与される権限のため確認の画面は表示されず、広告部品が宣言するものは次のとおりです。</p>
+
+<ul>
+<li><strong>広告のアトリビューション・トピック</strong>（<code>ACCESS_ADSERVICES_ATTRIBUTION</code>・<code>ACCESS_ADSERVICES_TOPICS</code>）— Android のプライバシー保護型広告機能（プライバシー サンドボックス）を使うためのものです。設定 → プライバシー → 広告のプライバシー でオフにできます。</li>
+<li><strong>インストール経路の確認</strong>（<code>BIND_GET_INSTALL_REFERRER_SERVICE</code>）— アプリがどの経路でインストールされたかを Play ストアに問い合わせるもので、広告効果の測定に使われます。</li>
+<li><strong>広告リクエストの検証</strong>（<code>com.amazon.privacypass.ATTEST</code>）— Liftoff の部品が不正な広告リクエストを防ぐために使います。</li>
+<li><strong>バックグラウンド処理の予約</strong>（<code>RECEIVE_BOOT_COMPLETED</code>・<code>FOREGROUND_SERVICE</code>）— 広告部品が使う Android の処理予約ライブラリがあわせて宣言するもので、広告の記録を後でまとめて送るために使われます。このアプリ自体に、端末の起動時に自動で動く機能はありません。</li>
+<li><strong>インターネット・ネットワーク状態の確認</strong>（<code>INTERNET</code>・<code>ACCESS_NETWORK_STATE</code>）— 広告を読み込み、接続がないときにリクエストを後回しにするためのものです。</li>
+</ul>
 
 <p>Unity とそのパートナーは広告表示時に、国外を含む地域でネットワークを通じて上記情報を処理する場合があります。保存・削除の基準は各社のポリシーと法的義務に従います。詳細とプライバシーに関する請求方法は、<a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity のプライバシーポリシー</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff のプライバシーポリシー</a>をご確認ください。</p>
 
@@ -457,6 +511,16 @@
 </ul>
 
 <p><strong>我們不會讀取照片中的拍攝位置資訊。</strong>遮蔽不需要這項資料，因此程式從一開始就不會索取該權限。我們也不使用相機與麥克風 — 這個應用程式不進行任何拍攝，只編輯你已經有的檔案。</p>
+
+<p><strong>其他 Android 權限</strong> — 三者皆於安裝時自動授予，不會讀取你的資訊。</p>
+
+<ul>
+<li><strong>Google Play 結帳</strong>（<code>BILLING</code>）— 用於購買 Cover It Pro。</li>
+<li><strong>保持螢幕開啟</strong>（<code>WAKE_LOCK</code>）— 在播放影片時避免螢幕關閉。</li>
+<li><strong>震動</strong>（<code>VIBRATE</code>）— 由應用程式的基礎框架宣告。Cover It 不使用震動。</li>
+</ul>
+
+<p>因廣告而增加的權限另列於第 6 項。</p>
 
 <h2>3. 自動偵測人臉</h2>
 
@@ -515,7 +579,15 @@
 
 <p><strong>Android 沒有追蹤授權視窗。</strong>改由裝置設定中的廣告 ID 項目負責。前往 設定 → Google → 所有服務 → 廣告，點選<strong>「刪除廣告 ID」</strong>（部分機型為 設定 → 隱私權 → 廣告），廣告 ID 就不會再傳給廣告業者，廣告會改為非個人化廣告。不需要重新安裝應用程式，關閉後所有功能仍可照常使用。</p>
 
-<p><strong>Android 上因廣告而增加的權限</strong><br /><strong>讀取廣告 ID</strong>（<code>AD_ID</code>）— 讓廣告聯播網讀取用於個人化廣告的裝置廣告 ID。Android 13 以上必須宣告此權限才能讀取該值。<strong>讀取的是廣告聯播網，不是我們</strong> — 我們不會接收也不會保存。此權限在安裝時自動授予，不會跳出詢問視窗。此外，廣告元件會使用網際網路連線與網路狀態權限來載入廣告。</p>
+<p><strong>Android 上因廣告而增加的權限</strong><br /><strong>讀取廣告 ID</strong>（<code>AD_ID</code>）— 讓廣告聯播網讀取用於個人化廣告的裝置廣告 ID。Android 13 以上必須宣告此權限才能讀取該值。<strong>讀取的是廣告聯播網，不是我們</strong> — 我們不會接收也不會保存。此權限在安裝時自動授予，不會跳出詢問視窗。這些都是安裝時自動授予的權限，不會跳出詢問視窗。廣告元件宣告的權限如下。</p>
+
+<ul>
+<li><strong>廣告歸因與主題</strong>（<code>ACCESS_ADSERVICES_ATTRIBUTION</code>・<code>ACCESS_ADSERVICES_TOPICS</code>）— 用於 Android 的隱私保護廣告功能（Privacy Sandbox）。可在 設定 → 隱私權 → 廣告隱私權 中關閉。</li>
+<li><strong>安裝來源確認</strong>（<code>BIND_GET_INSTALL_REFERRER_SERVICE</code>）— 向 Play 商店查詢應用程式的安裝管道，用於衡量廣告成效。</li>
+<li><strong>廣告請求驗證</strong>（<code>com.amazon.privacypass.ATTEST</code>）— Liftoff 元件用來阻擋詐欺性廣告請求。</li>
+<li><strong>背景工作排程</strong>（<code>RECEIVE_BOOT_COMPLETED</code>・<code>FOREGROUND_SERVICE</code>）— 由廣告元件使用的 Android 工作排程程式庫一併宣告，用於稍後批次傳送廣告記錄。本應用程式本身沒有在裝置開機時自動執行的功能。</li>
+<li><strong>網際網路・網路狀態</strong>（<code>INTERNET</code>・<code>ACCESS_NETWORK_STATE</code>）— 用於載入廣告，並在離線時暫緩請求。</li>
+</ul>
 
 <p>顯示廣告時，Unity 及其合作夥伴可能透過網路在你所在國家以外的地區處理上述資訊。保存與刪除方式依各業者的政策及法律義務而定。詳情及隱私權請求方式請參閱 <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity 隱私權政策</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff 隱私權政策</a>。</p>
 

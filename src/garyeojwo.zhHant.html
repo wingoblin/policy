@@ -25,6 +25,16 @@
 
 <p><strong>我們不會讀取照片中的拍攝位置資訊。</strong>遮蔽不需要這項資料，因此程式從一開始就不會索取該權限。我們也不使用相機與麥克風 — 這個應用程式不進行任何拍攝，只編輯你已經有的檔案。</p>
 
+<p><strong>其他 Android 權限</strong> — 三者皆於安裝時自動授予，不會讀取你的資訊。</p>
+
+<ul>
+<li><strong>Google Play 結帳</strong>（<code>BILLING</code>）— 用於購買 Cover It Pro。</li>
+<li><strong>保持螢幕開啟</strong>（<code>WAKE_LOCK</code>）— 在播放影片時避免螢幕關閉。</li>
+<li><strong>震動</strong>（<code>VIBRATE</code>）— 由應用程式的基礎框架宣告。Cover It 不使用震動。</li>
+</ul>
+
+<p>因廣告而增加的權限另列於第 6 項。</p>
+
 <h2>3. 自動偵測人臉</h2>
 
 <p>自動找出人臉以便遮蔽的功能<strong>完全在這台裝置上運算。</strong>不會有任何內容為了分析而離開裝置。</p>
@@ -82,7 +92,15 @@
 
 <p><strong>Android 沒有追蹤授權視窗。</strong>改由裝置設定中的廣告 ID 項目負責。前往 設定 → Google → 所有服務 → 廣告，點選<strong>「刪除廣告 ID」</strong>（部分機型為 設定 → 隱私權 → 廣告），廣告 ID 就不會再傳給廣告業者，廣告會改為非個人化廣告。不需要重新安裝應用程式，關閉後所有功能仍可照常使用。</p>
 
-<p><strong>Android 上因廣告而增加的權限</strong><br /><strong>讀取廣告 ID</strong>（<code>AD_ID</code>）— 讓廣告聯播網讀取用於個人化廣告的裝置廣告 ID。Android 13 以上必須宣告此權限才能讀取該值。<strong>讀取的是廣告聯播網，不是我們</strong> — 我們不會接收也不會保存。此權限在安裝時自動授予，不會跳出詢問視窗。此外，廣告元件會使用網際網路連線與網路狀態權限來載入廣告。</p>
+<p><strong>Android 上因廣告而增加的權限</strong><br /><strong>讀取廣告 ID</strong>（<code>AD_ID</code>）— 讓廣告聯播網讀取用於個人化廣告的裝置廣告 ID。Android 13 以上必須宣告此權限才能讀取該值。<strong>讀取的是廣告聯播網，不是我們</strong> — 我們不會接收也不會保存。此權限在安裝時自動授予，不會跳出詢問視窗。這些都是安裝時自動授予的權限，不會跳出詢問視窗。廣告元件宣告的權限如下。</p>
+
+<ul>
+<li><strong>廣告歸因與主題</strong>（<code>ACCESS_ADSERVICES_ATTRIBUTION</code>・<code>ACCESS_ADSERVICES_TOPICS</code>）— 用於 Android 的隱私保護廣告功能（Privacy Sandbox）。可在 設定 → 隱私權 → 廣告隱私權 中關閉。</li>
+<li><strong>安裝來源確認</strong>（<code>BIND_GET_INSTALL_REFERRER_SERVICE</code>）— 向 Play 商店查詢應用程式的安裝管道，用於衡量廣告成效。</li>
+<li><strong>廣告請求驗證</strong>（<code>com.amazon.privacypass.ATTEST</code>）— Liftoff 元件用來阻擋詐欺性廣告請求。</li>
+<li><strong>背景工作排程</strong>（<code>RECEIVE_BOOT_COMPLETED</code>・<code>FOREGROUND_SERVICE</code>）— 由廣告元件使用的 Android 工作排程程式庫一併宣告，用於稍後批次傳送廣告記錄。本應用程式本身沒有在裝置開機時自動執行的功能。</li>
+<li><strong>網際網路・網路狀態</strong>（<code>INTERNET</code>・<code>ACCESS_NETWORK_STATE</code>）— 用於載入廣告，並在離線時暫緩請求。</li>
+</ul>
 
 <p>顯示廣告時，Unity 及其合作夥伴可能透過網路在你所在國家以外的地區處理上述資訊。保存與刪除方式依各業者的政策及法律義務而定。詳情及隱私權請求方式請參閱 <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity 隱私權政策</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff 隱私權政策</a>。</p>
 

@@ -25,6 +25,16 @@
 
 <p><strong>撮影場所の位置情報は読み取りません。</strong>隠す処理に必要がないため、その権限を要求しない造りにしています。カメラとマイクも使いません — このアプリは撮影を行わず、すでにある写真や動画を編集するだけです。</p>
 
+<p><strong>その他の Android 権限</strong> — 3つともインストール時に自動で付与され、利用者の情報を読み取りません。</p>
+
+<ul>
+<li><strong>Google Play の課金</strong>（<code>BILLING</code>）— Cover It Pro の購入に使います。</li>
+<li><strong>画面のスリープ防止</strong>（<code>WAKE_LOCK</code>）— 動画の再生中に画面が消えないようにします。</li>
+<li><strong>バイブレーション</strong>（<code>VIBRATE</code>）— アプリの基本フレームワークが宣言する権限です。Cover It はバイブレーションを使いません。</li>
+</ul>
+
+<p>広告のために加わる権限は第6項に別途記載しました。</p>
+
 <h2>3. 顔の自動検出について</h2>
 
 <p>顔を自動で見つけて隠す機能は、<strong>すべて端末の中で計算します。</strong>解析のために写真や動画が外部に出ることはありません。</p>
@@ -82,7 +92,15 @@
 
 <p><strong>Android にはトラッキング許可の画面がありません。</strong>代わりに端末設定の広告 ID の項目がその役割を果たします。設定 → Google → すべてのサービス → 広告 で<strong>「広告 ID を削除」</strong>を押すと（メーカーによっては 設定 → プライバシー → 広告）、広告 ID は広告事業者に渡されなくなり、広告はパーソナライズされない広告に切り替わります。アプリを再インストールする必要はなく、オフにしてもアプリのすべての機能をそのまま使えます。</p>
 
-<p><strong>Android で広告のために加わる権限</strong><br /><strong>広告 ID の読み取り</strong>（<code>AD_ID</code>）— 広告ネットワークがパーソナライズ広告に使う端末の広告 ID を読むためのものです。Android 13 以降はこの権限を宣言しないとその値を読めません。<strong>読み取るのは広告ネットワークで、当社ではありません</strong> — 当社は受け取りも保管もしません。この権限はインストール時に自動で付与され、確認の画面は表示されません。このほか広告部品が、広告を読み込むためにインターネット接続とネットワーク状態確認の権限を使います。</p>
+<p><strong>Android で広告のために加わる権限</strong><br /><strong>広告 ID の読み取り</strong>（<code>AD_ID</code>）— 広告ネットワークがパーソナライズ広告に使う端末の広告 ID を読むためのものです。Android 13 以降はこの権限を宣言しないとその値を読めません。<strong>読み取るのは広告ネットワークで、当社ではありません</strong> — 当社は受け取りも保管もしません。この権限はインストール時に自動で付与され、確認の画面は表示されません。いずれもインストール時に自動で付与される権限のため確認の画面は表示されず、広告部品が宣言するものは次のとおりです。</p>
+
+<ul>
+<li><strong>広告のアトリビューション・トピック</strong>（<code>ACCESS_ADSERVICES_ATTRIBUTION</code>・<code>ACCESS_ADSERVICES_TOPICS</code>）— Android のプライバシー保護型広告機能（プライバシー サンドボックス）を使うためのものです。設定 → プライバシー → 広告のプライバシー でオフにできます。</li>
+<li><strong>インストール経路の確認</strong>（<code>BIND_GET_INSTALL_REFERRER_SERVICE</code>）— アプリがどの経路でインストールされたかを Play ストアに問い合わせるもので、広告効果の測定に使われます。</li>
+<li><strong>広告リクエストの検証</strong>（<code>com.amazon.privacypass.ATTEST</code>）— Liftoff の部品が不正な広告リクエストを防ぐために使います。</li>
+<li><strong>バックグラウンド処理の予約</strong>（<code>RECEIVE_BOOT_COMPLETED</code>・<code>FOREGROUND_SERVICE</code>）— 広告部品が使う Android の処理予約ライブラリがあわせて宣言するもので、広告の記録を後でまとめて送るために使われます。このアプリ自体に、端末の起動時に自動で動く機能はありません。</li>
+<li><strong>インターネット・ネットワーク状態の確認</strong>（<code>INTERNET</code>・<code>ACCESS_NETWORK_STATE</code>）— 広告を読み込み、接続がないときにリクエストを後回しにするためのものです。</li>
+</ul>
 
 <p>Unity とそのパートナーは広告表示時に、国外を含む地域でネットワークを通じて上記情報を処理する場合があります。保存・削除の基準は各社のポリシーと法的義務に従います。詳細とプライバシーに関する請求方法は、<a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity のプライバシーポリシー</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff のプライバシーポリシー</a>をご確認ください。</p>
 
