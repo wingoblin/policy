@@ -1,14 +1,16 @@
 <h1>Cover It — Privacy Policy</h1>
 
-<p><strong>Published:</strong> September 15, 2026<br /><strong>Effective:</strong> September 15, 2026<br /><strong>Contact:</strong> contact@nemofactory.co.kr</p>
+<p><strong>Published:</strong> September 22, 2026<br /><strong>Effective:</strong> September 22, 2026<br /><strong>Contact:</strong> contact@nemofactory.co.kr</p>
 
-<p><strong>In one line.</strong> Cover It has no sign-up or sign-in, and we run no server that receives your name, contact details, photos or videos. The media you pick is edited <strong>on this device only</strong> and is never sent anywhere. The app does display advertising, however, and Unity may process device, advertising and connection information to deliver and measure those ads (sections 5–7).</p>
+<p><strong>Notice of change — ads are coming to the Android version</strong><br /><strong>Starting with version 1.0.3</strong>, the Android version shows ads in the same places as the iPhone and iPad versions — a banner under the media lists, a medium-sized ad while scanning, saving or batch covering, and a full-screen ad after saving. From then on the Android advertising ID (AAID) is passed to advertising networks, the advertising providers' code can see <strong>which apps are installed on the device</strong>, and <strong>Liftoff Monetize</strong> joins the advertising networks. Section 6 sets out everything that changes. Earlier Android versions contained no advertising configuration and sent no ad requests at all, and <strong>they never will for as long as you keep using them.</strong></p>
+
+<p><strong>In one line.</strong> Cover It has no sign-up or sign-in, and we run no server that receives your name, contact details, photos or videos. The media you pick is edited <strong>on this device only</strong> and is never sent anywhere. The app does display advertising, however, and Unity (and, on Android, Liftoff) may process device, advertising and connection information to deliver and measure those ads (sections 5–7).</p>
 
 <h2>1. Information we collect</h2>
 
 <p>We do not directly collect your name, contact details, email address, date of birth or similar personal information. The app has no accounts, so there is no sign-up or sign-in at all. The only exception is when you <strong>send us an email yourself</strong>: we then receive the reply address you wrote in it (section 11).</p>
 
-<p>We run no server that receives your photos, videos or identity information. When ads are displayed, however, the third-party services Unity LevelPlay and Unity Ads may automatically process the information described in section 6. We may view aggregated impressions, clicks, revenue and similar performance reports in the advertising dashboard.</p>
+<p>We run no server that receives your photos, videos or identity information. When ads are displayed, however, the third-party services Unity LevelPlay and Unity Ads (and, on Android, Liftoff Monetize) may automatically process the information described in section 6. We may view aggregated impressions, clicks, revenue and similar performance reports in the advertising dashboard.</p>
 
 <h2>2. Photos and videos</h2>
 
@@ -50,7 +52,7 @@
 <ul>
 <li><strong>Version check</strong> — once at launch the app reads a small <strong>version file</strong> we publish, so that you are told to update if a serious problem has been fixed. <strong>We attach none of your information to that request.</strong> As with visiting any web page, the hosting provider's server log may record your IP address and the usual connection details of your device. If the file cannot be read, the app simply opens as normal.</li>
 <li><strong>Opening this policy</strong> — tapping <strong>Privacy Policy</strong> in Settings opens your browser to download this document, which may leave the same kind of access record.</li>
-<li><strong>Advertising requests</strong> — the app contacts Unity's advertising servers to load and display ads and measure their performance. The information involved and your choices are explained in section 6. If an ad cannot be loaded, editing and saving continue to work normally.</li>
+<li><strong>Advertising requests</strong> — the app contacts Unity's advertising servers (and, on Android, Liftoff's) to load and display ads and measure their performance. The information involved and your choices are explained in section 6. If an ad cannot be loaded, editing and saving continue to work normally.</li>
 <li><strong>Purchase notice</strong> — on Android, when an in-app purchase completes, the app sends the <strong>product identifier, the displayed price and the order number</strong> to our server so that we know a sale took place. It carries nothing that identifies you. On iOS, Apple notifies us directly and the app sends nothing.</li>
 </ul>
 
@@ -58,23 +60,37 @@
 
 <p>The app displays advertising to help fund the free service. A banner ad may appear <strong>at the bottom of the photo and video lists</strong>; a medium rectangle ad may appear while face or licence-plate scanning is in progress, while a result is being saved, and while several photos are being hidden at once; and an interstitial ad may appear after saving is complete. <strong>If you make the in-app purchase (Cover It Pro), the banner ad below the lists is no longer shown.</strong></p>
 
-<p><strong>Unity Technologies (Unity LevelPlay and Unity Ads)</strong> and its advertising and measurement partners may automatically process the following information when an ad is requested:</p>
+<p>Ads are served through a mediation service called <strong>Unity LevelPlay</strong> (formerly ironSource). Mediation picks, request by request, which of several advertising networks supplies the ad. The networks currently connected are listed below and may change over time.</p>
 
 <ul>
-<li><strong>Identifiers</strong> — app-scoped device identifiers such as IDFV and, on iOS, the advertising identifier (IDFA) if you allow tracking.</li>
+<li><strong>Unity Ads</strong> — Unity Technologies (iPhone, iPad and Android)</li>
+<li><strong>Liftoff Monetize</strong> (formerly Vungle) — Liftoff Mobile, Inc. (Android)</li>
+</ul>
+
+<p>These advertising providers and their advertising and measurement partners may automatically process the following information when an ad is requested:</p>
+
+<ul>
+<li><strong>Identifiers</strong> — app-scoped device identifiers such as IDFV or the app set ID, and the advertising identifier — on iOS the IDFA if you allow tracking, on Android the Android advertising ID (AAID). Either way it is a value you can reset or block at any time in your device settings.</li>
 <li><strong>Device and connection information</strong> — IP address, approximate country or region inferred from it, device manufacturer and model, operating system and version, language, time zone, screen and network information, and the app's name and version.</li>
 <li><strong>Advertising activity</strong> — ad requests, impressions, clicks, closes and errors, whether an advertised app was installed, and related information needed to measure performance and prevent fraud.</li>
+<li><strong>Installed apps</strong> (Android) — the advertising providers' code can check which apps are installed on the device, to count whether an ad led to an install and to avoid showing ads for apps you already have. <strong>Cover It does not read this, and it never reaches us</strong> — nowhere in the app's own code asks for the installed-app list; this happens inside the advertising providers' code.</li>
 </ul>
 
 <p>This information is used to deliver and frequency-cap ads, measure performance, prevent fraud and improve the service. Where permitted, it may also be used for personalised advertising and measurement across other companies' apps and websites. <strong>Your photos, videos, faces, licence plates and edits are never sent to the advertising provider.</strong></p>
 
-<p>On iOS, the app asks for App Tracking Transparency (ATT) permission before starting the advertising SDK. If you decline, IDFA is unavailable, but ads may still be shown. You can change your choice at any time under <strong>Settings → Privacy &amp; Security → Tracking</strong>, and use the privacy icon within an ad for choices offered by Unity.</p>
+<p>On iOS, the app asks for App Tracking Transparency (ATT) permission before starting the advertising SDK. If you decline, IDFA is unavailable, but ads may still be shown. You can change your choice at any time under <strong>Settings → Privacy &amp; Security → Tracking</strong>, and use the privacy icon within an ad for choices offered by the advertising provider.</p>
 
-<p>Unity and its partners may process this information over the network in countries outside your own when ads are shown. Their retention and deletion practices are governed by their policies and legal obligations. For details and instructions for privacy requests, see <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity's Game Player and App User Privacy Policy</a>.</p>
+<p><strong>Android has no tracking prompt.</strong> The advertising ID setting on your device plays that role instead. Go to Settings → Google → All services → Ads and tap <strong>Delete advertising ID</strong> (on some devices, Settings → Privacy → Ads). The advertising ID is then no longer passed to advertising providers, and ads switch to non-personalised ads. You do not need to reinstall the app, and every feature keeps working.</p>
+
+<p><strong>Permissions added on Android for advertising</strong><br /><strong>Read advertising ID</strong> (<code>AD_ID</code>) — lets advertising networks read the device's advertising ID used for personalised ads. On Android 13 and later this permission must be declared for that value to be readable. <strong>It is read by the advertising networks, not by us</strong> — we neither receive nor keep it. It is granted at install time and no prompt appears. The advertising components also use internet access and network-state permissions to load ads.</p>
+
+<p>Unity and its partners may process this information over the network in countries outside your own when ads are shown. Their retention and deletion practices are governed by their policies and legal obligations. For details and instructions for privacy requests, see <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity's privacy policy</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff's privacy policy</a>.</p>
+
+<p><strong>What we declared in Google Play's "Data safety" section</strong><br />Google groups the same values under its own categories. For the Android version we declared <strong>Device or other IDs (advertising ID) · App activity (app interactions, installed apps) · App info and performance (crash logs, diagnostics) · Approximate location</strong> — all the same values as the advertising list above, read directly by the advertising providers for advertising. Added to these is <strong>Financial info (purchase history)</strong> for the <strong>purchase notice</strong> in section 5 — the only item that comes to our server, and we pass it to no one. With no accounts, <strong>none of it is linked to your identity.</strong></p>
 
 <h2>7. Sharing with third parties</h2>
 
-<p>We do not share your photos, videos or identity information with third parties. To provide advertising, however, the information described in section 6 may be automatically transmitted to and processed by Unity and its advertising and measurement partners. The advertising reports we receive are primarily aggregated.</p>
+<p>We do not share your photos, videos or identity information with third parties. To provide advertising, however, the information described in section 6 may be automatically transmitted to and processed by Unity (and, on Android, Liftoff) and their advertising and measurement partners. The advertising reports we receive are primarily aggregated.</p>
 
 <h2>8. Children's privacy</h2>
 
@@ -82,11 +98,11 @@
 
 <h2>9. Your rights</h2>
 
-<p>We keep no user account indexed by your name or contact details. The settings and temporary files left on your device are <strong>all removed when you delete the app.</strong> You can exercise rights relating to advertising information through the privacy controls inside an ad or the Unity policy linked in section 6. If you contact us, we will provide guidance where we can.</p>
+<p>We keep no user account indexed by your name or contact details. The settings and temporary files left on your device are <strong>all removed when you delete the app.</strong> You can exercise rights relating to advertising information through the privacy controls inside an ad or the advertising providers' policies linked in section 6. On Android you can also delete the advertising ID in your device settings (section 6). If you contact us, we will provide guidance where we can.</p>
 
 <h2>10. Changes to this policy</h2>
 
-<p>If this policy changes, we will post both its publication and effective dates on this page. This update, covering advertising, the in-app contact form and the in-app purchase, was published and took effect on September 15, 2026. We will provide advance notice of future changes that could disadvantage you.</p>
+<p>If this policy changes, we will post both its publication and effective dates on this page. The changes covering advertising, the in-app contact form and the in-app purchase were published and took effect on September 15, 2026. This update, covering ads on Android (advertising ID, installed apps, Liftoff Monetize), was published on September 22, 2026 and applies from Android version 1.0.3, the first to contain those ads. We will provide advance notice of future changes that could disadvantage you.</p>
 
 <h2>11. Contact</h2>
 
