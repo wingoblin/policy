@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>픽셀프렌즈 개인정보 처리방침 · 네모팩토리</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto; max-width: 720px; padding: 32px 20px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+    font-size: 16px; line-height: 1.75;
+    color: #222; background: #fff;
+    word-break: keep-all; overflow-wrap: anywhere;
+  }
+  h1 { font-size: 26px; line-height: 1.4; margin: 32px 0 8px; }
+  h2 { font-size: 19px; line-height: 1.45; margin: 32px 0 8px; padding-top: 8px; border-top: 1px solid #eee; }
+  h3 { font-size: 17px; margin: 24px 0 6px; }
+  p, ul, ol { margin: 10px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: #1a5fd0; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f6f7f9; }
+  code { background: #f2f3f5; padding: 1px 5px; border-radius: 4px; font-size: 14px; }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid #eee; font-size: 13px; color: #888; }
+  footer a { color: #888; }
+  /* 언어 탭 — JS 가 없으면 탭을 숨기고 모든 언어를 그냥 다 보여준다 */
+  .langs { display: none; }
+  .langs a {
+    display: inline-block; padding: 6px 14px; margin: 0 6px 6px 0;
+    border: 1px solid #ddd; border-radius: 999px;
+    font-size: 14px; text-decoration: none; color: #555;
+  }
+  .langs a.on { background: #222; border-color: #222; color: #fff; }
+  html.js .langs { display: block; margin-bottom: 8px; }
+  html.js .lang { display: none; }
+  html.js .lang.on { display: block; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e3e5e8; background: #16181c; }
+    h2 { border-top-color: #2a2d33; }
+    a { color: #7aa7f0; }
+    th, td { border-color: #2a2d33; }
+    th { background: #1e2126; }
+    code { background: #22262c; }
+    footer { border-top-color: #2a2d33; color: #7d8188; }
+    .langs a { border-color: #333840; color: #b9bec6; }
+    .langs a.on { background: #e3e5e8; border-color: #e3e5e8; color: #16181c; }
+  }
+</style>
+<script>
+  // 탭이 그려지기 전에 붙여야 언어가 바뀌며 깜빡이지 않는다
+  document.documentElement.className = 'js';
+  addEventListener('DOMContentLoaded', function () {
+    var secs = document.querySelectorAll('.lang');
+    if (!secs.length) return;
+    var have = [].map.call(secs, function (s) { return s.dataset.lang; });
+    function pick() {
+      var want = location.hash.slice(1);
+      if (!want) {
+        // 닻이 없으면 브라우저 언어로 고른다 — 스토어 목록에서 맨 주소로 들어오는 길이다.
+        // 중국어만 두 글자로 못 자른다. zh-TW·zh-HK·zh-Hant-* 는 번체, zh-CN·zh-SG 는 간체라
+        // 같은 'zh' 로 묶으면 간체 사용자에게 번체 판을 보여주게 된다(앱의 locale.ts 와 같은 판정).
+        var nav = navigator.language || 'en';
+        want = /^zh/i.test(nav) && /(Hant|TW|HK|MO)/i.test(nav) ? 'zhHant' : nav.slice(0, 2);
+      }
+      // 없는 언어로 들어오면 영문 — 첫 구역(한국어)으로 떨구면 간체·프랑스어 기기가 한글 방침을 본다.
+      return have.indexOf(want) >= 0 ? want : have.indexOf('en') >= 0 ? 'en' : have[0];
+    }
+    function show() {
+      var on = pick();
+      [].forEach.call(secs, function (s) { s.classList.toggle('on', s.dataset.lang === on); });
+      [].forEach.call(document.querySelectorAll('.langs a'), function (a) {
+        a.classList.toggle('on', a.hash.slice(1) === on);
+      });
+      document.documentElement.lang = on;
+    }
+    addEventListener('hashchange', show);
+    show();
+  });
+</script>
+</head>
+<body>
+<nav class="langs"><a href="#ko">한국어</a><a href="#en">English</a></nav>
+<section class="lang" data-lang="ko">
+<h1>픽셀프렌즈 개인정보 처리방침</h1>
+
+<p><strong>시행일:</strong> 2026년 9월 26일<br /><strong>문의:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>한 줄 요약</strong><br />픽셀프렌즈는 <strong>회원가입도 로그인도 없고, 저희는 서버를 두지 않습니다.</strong> 고른 펫·레벨·설정은 이용자의 기기 안에만 저장되며 저희에게 전송되지 않습니다. <strong>광고도 분석 도구도 없습니다.</strong></p>
+
+<h2>1. 수집하는 개인정보</h2>
+
+<p><strong>없습니다.</strong> 이름·연락처·이메일·위치·사진 등 어떤 개인정보도 수집하지 않습니다. 계정 기능이 없어 가입·로그인 절차 자체가 존재하지 않습니다.</p>
+
+<p>다만 설정 맨 아래 <strong>문의·제보</strong>를 누르면 기기의 메일 앱이 열립니다. 적으신 내용과 회신 주소(적으신 경우)가 그 메일에 담겨 저희에게 도착합니다. <strong>보내는 것은 이용자의 메일 앱</strong>이며, 앱이 따로 수집하거나 저희 서버로 보내는 정보는 없습니다.</p>
+
+<h2>2. 기기에만 저장되는 것</h2>
+
+<p>아래 값은 기기 안 앱 전용 저장소에 저장되며 <strong>기기 밖으로 나가지 않습니다.</strong></p>
+
+<ul>
+<li><strong>펫 설정</strong> — 고른 펫, 동작(스타일), 아일랜드에서 펫이 설 자리, 아일랜드에 올려 둘지 여부와 올린 시각.</li>
+<li><strong>레벨</strong> — 펫마다 아일랜드에 올려 둔 누적 시간, 먹인 간식.</li>
+<li><strong>테마·언어</strong> — 고른 테마, 직접 고른 언어(없으면 기기 언어를 따릅니다).</li>
+<li><strong>알림 설정</strong> — 펫이 잠들 때 알려 받을지 여부.</li>
+</ul>
+
+<p>레벨을 셀 때 기기가 켜진 뒤 흐른 시간(시스템 가동 시간)을 읽습니다. 기기 시계를 바꿔도 시간이 부풀지 않게 하려는 것이며, 이 값도 기기 안에서만 쓰입니다.</p>
+
+<p>여기에 <strong>이용자를 알아볼 수 있는 값은 들어 있지 않습니다.</strong> 앱을 삭제하면 함께 지워집니다.</p>
+
+<h2>3. 권한</h2>
+
+<table>
+<tr><th>권한</th><th>왜 필요한가</th></tr>
+<tr>
+  <td><strong>실시간 현황</strong><br />(Live Activities)</td>
+  <td>다이내믹 아일랜드와 잠금 화면에 펫을 띄우려고. 이 앱의 핵심 기능입니다</td>
+</tr>
+<tr>
+  <td><strong>알림</strong>(선택)</td>
+  <td>펫이 잠들 때(아일랜드가 내려갈 때) 알려드리고, 시간이 지나 내려간 펫을 다시 띄우려고. 거절해도 앱은 그대로 쓸 수 있습니다</td>
+</tr>
+</table>
+
+<p>위치·연락처·사진·카메라·마이크·건강 정보에는 <strong>접근하지 않으며</strong>, 해당 권한을 요청하지 않습니다.</p>
+
+<h2>4. 광고 · 결제</h2>
+
+<p><strong>광고를 넣지 않습니다.</strong> 광고 도구(SDK)가 앱에 없고, 기기의 광고 식별자(IDFA)를 읽는 코드가 없어 추적 허용 요청(ATT) 창도 뜨지 않습니다.</p>
+
+<p><strong>결제는 App Store 가 처리합니다.</strong> 앱 안에서 파는 것(펫 묶음, 전부 열기, 간식, 구독)은 App Store 결제로만 이루어집니다. 카드번호 같은 결제 정보는 애플이 직접 받아 처리하며, <strong>저희는 보지도, 받지도, 보관하지도 않습니다.</strong> 앱이 받는 것은 「샀다·안 샀다」와 스토어가 정한 가격 문자열뿐입니다.</p>
+
+<p><strong>구독</strong>은 기간이 끝나기 24시간 전까지 해지하지 않으면 같은 기간으로 자동 갱신되며, 요금은 Apple 계정으로 청구됩니다. 해지는 <em>설정 → Apple 계정 → 구독</em> 에서 언제든 할 수 있습니다. 이용 약관은 Apple 의 표준 사용권 계약(<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">EULA</a>)을 따릅니다.</p>
+
+<h2>5. 앱이 밖으로 보내는 요청 — 전부</h2>
+
+<ul>
+<li><strong>펫 띄우기:</strong> 요청이 없습니다. 인터넷 연결 없이 기기 안에서 동작합니다.</li>
+<li><strong>스토어 결제:</strong> 가격을 보여주거나 살 때 기기의 App Store 와 통신합니다. 저희 서버는 관여하지 않습니다.</li>
+<li><strong>이 방침 페이지를 여는 경우:</strong> 기기의 브라우저가 이 페이지(GitHub Pages)를 엽니다. GitHub 서버 기록에 접속 IP 가 남을 수 있으며, 이는 웹페이지를 여는 모든 경우와 같습니다.</li>
+</ul>
+
+<h2>6. 제3자 제공 · 처리위탁 · 국외 이전 · 판매</h2>
+
+<p><strong>없습니다.</strong> 수집하는 개인정보가 없으므로 제3자에게 넘기거나 국외로 이전할 정보도 없습니다. 어떤 정보도 판매하지 않습니다. 결제는 애플이 자체 방침에 따라 직접 처리합니다.</p>
+
+<h2>7. 보관 기간과 삭제</h2>
+
+<p>저희가 보관하는 이용자 데이터가 없어 삭제를 요청하실 대상도 없습니다. 기기의 값은 <strong>앱을 삭제하면</strong> 함께 지워집니다. 문의·제보로 받은 메일은 답변과 문제 해결에 필요한 동안만 보관하고 그 뒤에 지웁니다.</p>
+
+<h2>8. 만 14세 미만 아동</h2>
+
+<p>픽셀프렌즈는 어떤 개인정보도 수집하지 않으며, 아동의 개인정보를 알면서 수집하지 않습니다.</p>
+
+<h2>9. 이용자의 권리</h2>
+
+<p>이용자는 개인정보 보호법에 따라 열람·정정·삭제·처리정지를 요구하실 수 있습니다. 다만 저희가 보유한 개인정보가 없어 요청하실 대상이 없으며, 기기의 값은 7항의 방법으로 언제든 직접 지우실 수 있습니다.</p>
+
+<h2>10. 방침 변경</h2>
+
+<p>이 방침이 바뀌면 이 페이지의 <strong>시행일</strong>을 고쳐 알립니다. 이용자에게 불리할 수 있는 변경(예: 새로운 정보 수집)은 <strong>시행 7일 전부터</strong> 이 페이지에 미리 알립니다.</p>
+
+<h2>11. 개인정보 보호책임자 및 문의</h2>
+
+<ul>
+<li><strong>제작자:</strong> 네모팩토리 (Nemo Factory)</li>
+<li><strong>개인정보 보호책임자:</strong> 앱 제작자 본인</li>
+<li><strong>문의:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+
+<h2>12. 권익침해 구제 방법</h2>
+
+<ul>
+<li>개인정보침해 신고센터 — <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 국번없이 118</li>
+<li>개인정보 분쟁조정위원회 — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>대검찰청 사이버수사과 — <a href="https://www.spo.go.kr">spo.go.kr</a> / 국번없이 1301</li>
+<li>경찰청 사이버수사국 — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 국번없이 182</li>
+</ul>
+</section>
+<section class="lang" data-lang="en">
+<h1>PixelFriends Privacy Policy</h1>
+
+<p><strong>Effective:</strong> September 26, 2026<br /><strong>Contact:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>In one line</strong><br />PixelFriends has <strong>no sign-up, no login, and we run no servers.</strong> Your chosen pet, levels and settings stay on your device and are never sent to us. <strong>There are no ads and no analytics.</strong></p>
+
+<h2>1. Information we collect</h2>
+
+<p><strong>None.</strong> We do not collect your name, contact details, email, location, photos or any other personal information. There are no accounts.</p>
+
+<p>One exception: tapping <strong>Contact</strong> at the bottom of Settings opens the mail app on your device. What you write and the reply address (if you add one) travel in that email to us. <strong>Your mail app sends it</strong> — the app itself collects nothing and sends nothing to our servers.</p>
+
+<h2>2. What is stored on your device only</h2>
+
+<p>The following is kept in the app's private storage and <strong>never leaves your device.</strong></p>
+
+<ul>
+<li><strong>Pet settings</strong> — your chosen pet, its style, which side of the Dynamic Island it sits on, whether it should stay up and when it was last shown.</li>
+<li><strong>Levels</strong> — how long each pet has been on the Dynamic Island, and snacks you have fed.</li>
+<li><strong>Theme and language</strong> — your chosen theme and language (if none, the device language is used).</li>
+<li><strong>Notification setting</strong> — whether to be told when your pet falls asleep.</li>
+</ul>
+
+<p>To count levels, the app reads how long the device has been running since it was switched on (system uptime), so changing the clock cannot inflate the time. This value is used on the device only.</p>
+
+<p>None of this <strong>identifies you.</strong> Deleting the app deletes it all.</p>
+
+<h2>3. Permissions</h2>
+
+<table>
+<tr><th>Permission</th><th>Why</th></tr>
+<tr>
+  <td><strong>Live Activities</strong></td>
+  <td>To show your pet on the Dynamic Island and the Lock Screen. This is the core of the app</td>
+</tr>
+<tr>
+  <td><strong>Notifications</strong> (optional)</td>
+  <td>To tell you when your pet falls asleep (when the Dynamic Island clears), and to bring a pet back after the system has taken it down. You can decline and still use the app</td>
+</tr>
+</table>
+
+<p>The app <strong>does not access</strong> location, contacts, photos, camera, microphone or health data, and never asks for those permissions.</p>
+
+<h2>4. Ads and payments</h2>
+
+<p><strong>There are no ads.</strong> No ad SDK is included, and nothing reads the device's advertising identifier (IDFA), so the App Tracking Transparency prompt never appears.</p>
+
+<p><strong>Payments are handled by the App Store.</strong> Everything sold in the app (pet packs, unlock all, snacks, subscriptions) is paid through the App Store. Card details go straight to Apple — <strong>we never see, receive or keep them.</strong> The app only learns whether something was bought and the price text the store provides.</p>
+
+<p><strong>Subscriptions</strong> renew automatically for the same period unless cancelled at least 24 hours before the period ends, and are charged to your Apple Account. You can cancel any time in <em>Settings → Apple Account → Subscriptions</em>. Terms of use follow Apple's standard <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed Application End User License Agreement</a>.</p>
+
+<h2>5. Every request the app sends out</h2>
+
+<ul>
+<li><strong>Showing your pet:</strong> none. It works entirely on the device, offline.</li>
+<li><strong>App Store purchases:</strong> the app talks to the App Store on your device to show prices and make purchases. Our servers are not involved.</li>
+<li><strong>Opening this page:</strong> your browser opens this page (GitHub Pages). GitHub may log your IP address, as with any web page.</li>
+</ul>
+
+<h2>6. Sharing, processors, overseas transfer, sale</h2>
+
+<p><strong>None.</strong> We collect no personal information, so there is nothing to share, transfer or sell. Payments are processed by Apple under its own policy.</p>
+
+<h2>7. Retention and deletion</h2>
+
+<p>We hold no user data, so there is nothing for us to erase. Data on your device is removed when you <strong>delete the app</strong>. Emails you send through Contact are kept only as long as we need them to reply and fix the problem, then deleted.</p>
+
+<h2>8. Children</h2>
+
+<p>PixelFriends collects no personal information and does not knowingly collect information from children.</p>
+
+<h2>9. Your rights</h2>
+
+<p>You may ask to access, correct, delete or stop processing your personal information. We hold none, so there is nothing to request; data on your device can be deleted at any time as described in section 7.</p>
+
+<h2>10. Changes</h2>
+
+<p>If this policy changes, we will update the <strong>effective date</strong> on this page. Changes that could work against you (such as new data collection) will be posted here <strong>at least 7 days before</strong> they take effect.</p>
+
+<h2>11. Contact</h2>
+
+<ul>
+<li><strong>Developer:</strong> Nemo Factory</li>
+<li><strong>Privacy officer:</strong> the app's developer</li>
+<li><strong>Email:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+</section>
+<footer>
+  ⓒ Nemo Factory · 문의 <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a><br>
+  <a href="../">전체 목록</a>
+</footer>
+</body>
+</html>

@@ -141,5 +141,14 @@
       "ja",
       "zhHant"
     ]
+  },
+  {
+    "slug": "pixelfriends",
+    "title": "픽셀프렌즈 개인정보 처리방침",
+    "src": "24",
+    "langs": [
+      "ko",
+      "en"
+    ]
   }
 ]
