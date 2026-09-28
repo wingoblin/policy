@@ -28,7 +28,9 @@
 <li><strong>Nickname</strong> — the name you type on the MY screen. If you leave it blank it stays <code>Unknown</code>.</li>
 <li><strong>Recent searches</strong> — the words you typed into the search box (up to 10).</li>
 <li><strong>Language setting</strong> — whether to follow the device language, or which language you picked.</li>
-<li><strong>Balance</strong> — the <strong>virtual amount</strong> used inside the app, the date you last received the daily top-up, how many times you topped up with an ad that day, and <strong>whether the one-time grant that comes with an in-app purchase has already been given</strong> (section 3). It is <strong>not real money</strong> and never leaves your device.</li>
+<li><strong>Balance</strong> — the <strong>virtual amount</strong> used inside the app, the date you last received the daily top-up, how many times you topped up with an ad that day, and <strong>whether the one-time grant that comes with an in-app purchase has already been given</strong> (section 3). A <strong>backup copy</strong> of the same value is kept too. It is <strong>not real money</strong> and never leaves your device.</li>
+<li><strong>In-app purchase records</strong> — whether you bought the bottom-banner removal, and the <strong>store transaction IDs</strong> of top-ups already credited (the latest 60), so the same payment is never credited twice. They never leave your device.</li>
+<li><strong>Review prompt record</strong> — when and how many times the rating/review prompt was shown, so we don't ask too often.</li>
 <li><strong>List of items you resold</strong> — the numbers of the products you sold back on the investment screen, so the same item cannot be sold twice. It never leaves your device.</li>
 <li><strong>Ad misfire guard</strong> — a few timestamps of ad taps and ad displays, used to rest ads if they are tapped repeatedly in a short span. <strong>They never leave your device</strong> (section 7).</li>
 <li><strong>Resale clock</strong> — two timestamps used by the resale prices (the latest device time seen and the resale "now"). They stop prices from being inflated by changing the device clock, and <strong>never leave your device.</strong></li>
@@ -51,7 +53,7 @@
 <li><strong>Three balance top-ups</strong> — they add virtual balance only, and may be bought as often as you like.</li>
 </ul>
 </li>
-<li><strong>Restoring purchases, and refunds.</strong> If you change devices or reinstall, <strong>"Restore purchases"</strong> on the premium screen brings back the banner-removal purchase. <strong>Refunds are handled by the store, not by us</strong> — please use the App Store or Google Play refund process. We hold no purchase records, so there is nothing we can look up on our side.</li>
+<li><strong>Restoring purchases, and refunds.</strong> If you change devices or reinstall, <strong>"Restore purchase"</strong> on the premium screen brings back the banner-removal purchase. <strong>Refunds are handled by the store, not by us</strong> — please use the App Store or Google Play refund process. We hold no purchase records, so there is nothing we can look up on our side.</li>
 <li><strong>Reselling is simulated too.</strong> Selling an item back on the investment screen increases your virtual balance. It is not real money and cannot be cashed out or transferred to anyone.</li>
 <li><strong>We do not collect card numbers.</strong> The card field on the payment screen is a <strong>prop that accepts only the first 8 digits</strong>; the remaining eight are fixed on screen as <code>**** ****</code>. What you type is <strong>not stored, not validated, and not transmitted anywhere</strong>, and it disappears the moment you leave that screen.</li>
 <li><strong>We do not touch payment services.</strong> Naver Pay, Kakao Pay, Toss, and bank transfer are <strong>labels you can select</strong>, nothing more; the app is not connected to any of those services.</li>
@@ -134,11 +136,11 @@
 <li><strong>Opening this policy page</strong> — tapping "Privacy Policy" in the app opens this page (GitHub Pages) in your browser. GitHub's server logs may record your IP address, as they would for any web page you open.</li>
 <li><strong>Sending us a message</strong> — tapping send on the contact screen <strong>opens your device's mail app.</strong> The app does not send anything itself; <strong>whether to send is your decision in the mail app.</strong> The draft contains what you wrote plus the app version, device model, and OS version. We use what you send only to answer you.</li>
 <li><strong>Ad requests</strong> — requests go out to the ad network to fetch ads (section 7). Nothing the app records for you rides along.</li>
-<li><strong>In-app purchases</strong> — opening the purchase screen or tapping "Restore purchases" talks to <strong>the store (App Store · Google Play)</strong> to fetch the product list and prices and to confirm the outcome of a purchase. <strong>That exchange is between the store and your device; we are not in the middle of it</strong> — no card number or other payment detail reaches us (section 3).</li>
+<li><strong>In-app purchases</strong> — opening the purchase screen or tapping "Restore purchase" talks to <strong>the store (App Store · Google Play)</strong> to fetch the product list and prices and to confirm the outcome of a purchase. <strong>That exchange is between the store and your device; we are not in the middle of it</strong> — no card number or other payment detail reaches us (section 3).</li>
 <li><strong>A one-line sale notice (Android version only)</strong> — when an in-app purchase succeeds on Android, a single <strong>"something just sold"</strong> line goes to our notification endpoint. It carries only the <strong>app name, product number, the display price the store showed, and the order number the store assigned</strong>. <strong>Nothing that identifies you, and none of the values in section 2, is included.</strong> It is never retried if it fails, and your purchase proceeds regardless. <strong>On iPhone and iPad this request is never made at all</strong> (Apple notifies us directly instead).</li>
 </ul>
 
-<p>Apart from that <strong>one-line sale notice, no request reaches us.</strong> That line goes out <strong>only for in-app purchases on the Android version</strong>, contains nothing that identifies you, and we hold no account or profile for anything to accumulate against. All 768 products and their images ship <strong>inside the app</strong>, so every feature works with no internet connection.</p>
+<p>Apart from that <strong>one-line sale notice, no request reaches us.</strong> That line goes out <strong>only for in-app purchases on the Android version</strong>, contains nothing that identifies you, and we hold no account or profile for anything to accumulate against. All products and their images ship <strong>inside the app</strong>, so shopping, resale and the rest work with no internet connection (in-app purchases and ads need one).</p>
 
 <h2>9. Sharing, processors, and sale of data</h2>
 
@@ -168,7 +170,7 @@
 <p>Since we hold nothing, <strong>there is no one to send a deletion request to.</strong> The values on your device (section 2) can be erased by you.</p>
 
 <ul>
-<li><strong>Inside the app</strong> — clear your wishlist and recently viewed items with "Clear all" at the top right of those screens, your recent searches on the search screen, and your cart with "Edit → Delete".</li>
+<li><strong>Inside the app</strong> — clear your wishlist and recently viewed items with "Clear all" at the top right of those screens, your recent searches on the search screen, and your cart with "Edit → Remove".</li>
 <li><strong>Deleting the app</strong> erases everything in section 2 along with the profile photo. Order history, the delivery address, and your nickname have no in-app clear button; they go when the app does.</li>
 <li><strong>On Android</strong>, <em>Settings → Apps → Maybuy → Storage → Clear data</em> also resets it.</li>
 </ul>
