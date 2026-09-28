@@ -162,7 +162,7 @@
 <li><strong>언어 설정</strong> — 기기 언어를 따라갈지, 직접 고른 언어가 있는지.</li>
 <li><strong>잔고</strong> — 앱 안에서만 쓰는 <strong>가상 금액</strong>과, 마지막으로 하루치를 받으신 날짜, 그날 광고로 충전하신 횟수, 그리고 <strong>인앱 구매로 드리는 일시금을 이미 받으셨는지 여부</strong>(3항). 같은 값의 <strong>백업본</strong>을 하나 더 적어 둡니다. <strong>실제 돈이 아니며</strong>, 기기 밖으로 나가지 않습니다.</li>
 <li><strong>인앱 구매 기록</strong> — 하단 배너 제거를 사셨는지 여부와, 잔고를 이미 넣어 드린 결제 건의 <strong>스토어 거래번호</strong>(최근 60개). 같은 결제로 잔고가 두 번 들어가지 않게 하려는 값이며, 기기 밖으로 나가지 않습니다.</li>
-<li><strong>리뷰 요청 기록</strong> — 별점·리뷰를 부탁하는 창을 띄운 시각과 횟수. 너무 자주 묻지 않으려는 값입니다.</li>
+<li><strong>리뷰 요청 기록</strong> — 앱을 처음 켠 시각, 별점·리뷰를 부탁하는 창을 띄운 시각과 횟수, 그 창에서 「다음에」·「스토어에 남기기」를 고르셨는지. 너무 자주 묻지 않으려는 값입니다.</li>
 <li><strong>되파신 상품 목록</strong> — 재테크 화면에서 되파신 상품의 번호. 같은 상품이 두 번 팔리지 않게 하려는 값이며, 기기 밖으로 나가지 않습니다.</li>
 <li><strong>광고 오작동 방어 기록</strong> — 광고를 누르거나 광고가 떴던 시각 몇 개. 짧은 시간에 반복해서 눌리면 광고를 잠시 쉬게 하려는 값이며, <strong>기기 밖으로 나가지 않습니다</strong>(7항).</li>
 <li><strong>되팔기 시계</strong> — 재테크 시세가 쓰는 시각 두 개(지금까지 본 가장 늦은 시각과 시세용 현재 시각). 기기 시계를 돌려 시세를 부풀리는 것을 막으려는 값이며, <strong>기기 밖으로 나가지 않습니다.</strong></li>
@@ -185,7 +185,7 @@
 <li><strong>잔고 충전 세 가지</strong> — 가상 잔고만 채우는 상품이며, 필요하실 때마다 여러 번 사실 수 있습니다.</li>
 </ul>
 </li>
-<li><strong>구매 복원과 환불.</strong> 기기를 바꾸시거나 앱을 다시 까시면 프리미엄 화면의 <strong>「구매 복원」</strong>으로 배너 제거 상품을 되찾으실 수 있습니다. <strong>환불은 저희가 아니라 스토어가 처리합니다</strong> — App Store 또는 Google Play 의 환불 창구를 이용해 주세요. 저희는 결제 내역을 보유하지 않아 저희 쪽에서 확인해 드릴 수 있는 것이 없습니다.</li>
+<li><strong>구매 복원과 환불.</strong> 기기를 바꾸시거나 앱을 다시 까시면 프리미엄 화면의 <strong>「구매 복원」</strong>으로 배너 제거 상품을 되찾으실 수 있습니다. <strong>환불은 저희가 아니라 스토어가 처리합니다</strong> — App Store 또는 Google Play 의 환불 창구를 이용해 주세요. 결제 조회·취소·환불은 스토어만 할 수 있고, 저희에게는 스토어 결제를 취소하거나 환불할 권한이 없습니다.</li>
 <li><strong>되팔기도 가상입니다.</strong> 재테크 화면에서 산 물건을 되파시면 가상 잔고가 늘어납니다. 실제 돈이 아니고, 현금으로 바꾸거나 다른 분께 넘기실 수 없습니다.</li>
 <li><strong>카드번호를 수집하지 않습니다.</strong> 결제 수단 화면의 카드 칸은 <strong>앞 8자리만 받는 흉내</strong>이고, 뒤 여덟 자리는 <code>**** ****</code> 로 고정되어 있습니다. 적으신 숫자는 <strong>저장되지 않고, 검증되지 않고, 어디로도 전송되지 않으며</strong>, 그 화면을 벗어나는 순간 사라집니다.</li>
 <li><strong>간편결제 계정에 접근하지 않습니다.</strong> 네이버페이·카카오페이·토스·계좌이체는 <strong>이름만 고르는 항목</strong>이며, 해당 서비스와 연결되어 있지 않습니다.</li>
@@ -385,7 +385,7 @@
 <li><strong>Language setting</strong> — whether to follow the device language, or which language you picked.</li>
 <li><strong>Balance</strong> — the <strong>virtual amount</strong> used inside the app, the date you last received the daily top-up, how many times you topped up with an ad that day, and <strong>whether the one-time grant that comes with an in-app purchase has already been given</strong> (section 3). A <strong>backup copy</strong> of the same value is kept too. It is <strong>not real money</strong> and never leaves your device.</li>
 <li><strong>In-app purchase records</strong> — whether you bought the bottom-banner removal, and the <strong>store transaction IDs</strong> of top-ups already credited (the latest 60), so the same payment is never credited twice. They never leave your device.</li>
-<li><strong>Review prompt record</strong> — when and how many times the rating/review prompt was shown, so we don't ask too often.</li>
+<li><strong>Review prompt record</strong> — when the app was first opened, when and how many times the rating/review prompt was shown, and whether you chose "Later" or "Write a review" there, so we don't ask too often.</li>
 <li><strong>List of items you resold</strong> — the numbers of the products you sold back on the investment screen, so the same item cannot be sold twice. It never leaves your device.</li>
 <li><strong>Ad misfire guard</strong> — a few timestamps of ad taps and ad displays, used to rest ads if they are tapped repeatedly in a short span. <strong>They never leave your device</strong> (section 7).</li>
 <li><strong>Resale clock</strong> — two timestamps used by the resale prices (the latest device time seen and the resale "now"). They stop prices from being inflated by changing the device clock, and <strong>never leave your device.</strong></li>
@@ -408,7 +408,7 @@
 <li><strong>Three balance top-ups</strong> — they add virtual balance only, and may be bought as often as you like.</li>
 </ul>
 </li>
-<li><strong>Restoring purchases, and refunds.</strong> If you change devices or reinstall, <strong>"Restore purchase"</strong> on the premium screen brings back the banner-removal purchase. <strong>Refunds are handled by the store, not by us</strong> — please use the App Store or Google Play refund process. We hold no purchase records, so there is nothing we can look up on our side.</li>
+<li><strong>Restoring purchases, and refunds.</strong> If you change devices or reinstall, <strong>"Restore purchase"</strong> on the premium screen brings back the banner-removal purchase. <strong>Refunds are handled by the store, not by us</strong> — please use the App Store or Google Play refund process. Only the store can look up, cancel or refund a payment — we have no power to cancel or refund store purchases.</li>
 <li><strong>Reselling is simulated too.</strong> Selling an item back on the investment screen increases your virtual balance. It is not real money and cannot be cashed out or transferred to anyone.</li>
 <li><strong>We do not collect card numbers.</strong> The card field on the payment screen is a <strong>prop that accepts only the first 8 digits</strong>; the remaining eight are fixed on screen as <code>**** ****</code>. What you type is <strong>not stored, not validated, and not transmitted anywhere</strong>, and it disappears the moment you leave that screen.</li>
 <li><strong>We do not touch payment services.</strong> Naver Pay, Kakao Pay, Toss, and bank transfer are <strong>labels you can select</strong>, nothing more; the app is not connected to any of those services.</li>
