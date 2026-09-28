@@ -1,8 +1,8 @@
 <h1>Scrap — Privacy Policy</h1>
 
-<p><strong>Effective:</strong> September 13, 2026<br /><strong>Contact:</strong> contact@nemofactory.co.kr</p>
+<p><strong>Effective:</strong> September 28, 2026<br /><strong>Contact:</strong> contact@nemofactory.co.kr</p>
 
-<p><strong>In one line.</strong> Scrap has <strong>no server that receives your data.</strong> There is no sign-up and no sign-in, and we never ask for your name, contact details or any other personal information. Your photos are read <strong>on this device only</strong>, and the app deletes from your library exactly the ones you decided to delete — <strong>your photos are never sent anywhere.</strong> The only places the app touches the internet are <strong>one status file</strong> and <strong>ads</strong> (sections 4 and 5).</p>
+<p><strong>In one line.</strong> Scrap has <strong>no server that receives your data.</strong> There is no sign-up and no sign-in, and we never ask for your name, contact details or any other personal information. Your photos are read <strong>on this device only</strong>, and the app deletes from your library exactly the ones you decided to delete — <strong>your photos are never sent anywhere.</strong> The only places the app touches the internet are <strong>one status file</strong>, <strong>ads</strong> and, when you buy something, <strong>the store’s payment system</strong> (sections 4 and 5).</p>
 
 <h2>1. Information we collect</h2>
 
@@ -15,23 +15,26 @@
 <p>Scrap lets you go through the screenshots and photos piled up in your library one card at a time, so it needs <strong>access to your photo library.</strong></p>
 
 <ul>
-<li><strong>Reading</strong> — to list your screenshots and photos and show them on the sorting and folder screens.</li>
-<li><strong>Deleting</strong> — the app deletes from your library only the shots you swiped to “delete”, and only <strong>after you confirm at the end of a round.</strong> On iOS the system shows <strong>one more confirmation dialog</strong> right before anything is deleted. Deleting a folder also deletes the photos inside it from your library; the app tells you this before it does it.</li>
-<li><strong>No saving</strong> — the app never creates new photos in your library and never modifies the originals. iOS also carries an “add to library” permission string, because iOS keeps that entry alongside the photo permission; the app has no saving feature, so it is never used.</li>
+<li><strong>Reading</strong> — to list your screenshots and photos and show them on the sorting and folder screens. The app also reads <strong>the albums you already made in the Photos app and the photos inside them</strong>, to show them next to your folders in the Albums tab; it only reads and displays them and does not store the album list. Photos are also read when finding “Duplicates” (see below).</li>
+<li><strong>Deleting</strong> — the app deletes from your library only the shots you swiped to “delete”, and only <strong>after you confirm at the end of a round</strong>; on the folder, album and “Duplicates” screens it deletes <strong>only the photos you selected and chose to delete.</strong> On iOS the system shows <strong>one more confirmation dialog</strong> right before anything is deleted. Deleting a folder also deletes the photos inside it from your library; the app tells you this before it does it.</li>
+<li><strong>No saving</strong> — the app never creates new photos in your library and never modifies the originals, and it <strong>never creates or changes albums in the Photos app.</strong> Moving photos from an album into a Scrap folder leaves the Photos album as it was; the move is recorded only in the app’s sorting ledger (section 3). iOS also carries an “add to library” permission string, because iOS keeps that entry alongside the photo permission; the app has no saving feature, so it is never used.</li>
 <li><strong>Limited access is fine</strong> — you may allow <strong>only selected photos</strong> instead of the whole library. The app works the same way; it simply shows only what you allowed.</li>
 <li><strong>No transmission</strong> — your photos are <strong>never uploaded to us, to advertisers, or anywhere else.</strong> Lists and previews are drawn entirely on the device.</li>
 </ul>
 
-<p><strong>We do not analyse the content of your photos.</strong> There is no face detection, no text recognition, nothing that identifies what is in a picture. <strong>We do not read capture locations (EXIF) either</strong> — the app never requests location permission. It does not use the camera or the microphone.</p>
+<p><strong>We do not identify what is in your photos.</strong> There is no face detection, no text recognition, nothing that recognises objects in a picture. To group similar shots, however, <strong>“Duplicates”</strong> turns each photo into a <strong>tiny brightness-and-colour value</strong> (a fingerprint) and compares them, also looking at each photo’s <strong>file name, capture time and dimensions</strong>. All of this is computed <strong>on the device</strong>, and the results stay on the device as described in section 3. <strong>We do not read capture locations (EXIF)</strong> — the app never requests location permission. It does not use the camera or the microphone.</p>
 
 <h2>3. Stored on your device only</h2>
 
 <ul>
 <li><strong>The sorting ledger</strong> — a database on your device recording what you decided about each shot: the <strong>photo identifier</strong> (a value your library assigns inside that phone), the decision (deleted · kept · filed to a folder), the folder number, <strong>the size of deleted shots</strong>, and when you decided. <strong>It does not contain the photos themselves.</strong> The identifier only means something on that one device.</li>
 <li><strong>Folders</strong> — folder name, icon, order and creation time. The names are the ones you type in.</li>
-<li><strong>App settings</strong> — how many shots per round, the language you chose, and dark mode (system · light · dark).</li>
+<li><strong>App settings</strong> — how many shots per round, the sorting order (newest · oldest first), the language you chose, dark mode (system · light · dark), the person in the illustrations (boy · girl), and whether you have already seen the prompt that asks how many shots to sort the first time.</li>
 <li><strong>Ad-related records</strong> — the <strong>time of an ad tap</strong> (so a mis-tapped ad slot rests for a while), the <strong>time an ad was shown</strong> (so the same slot is not filled again immediately), and the ad settings received from the status file (section 5). None of this identifies a person.</li>
-<li><strong>Running totals</strong> — how much space you have freed in total, and whether the rating prompt has already been shown. The total is stored separately so that it survives when you clear folders or the sorting log.</li>
+<li><strong>Running totals</strong> — how much space you have freed in total, how many sorting rounds you have finished, and when the rating prompt was shown. The total is stored separately so that it survives when you clear folders or the sorting log.</li>
+<li><strong>Duplicates records</strong> — so that “Duplicates” does not start from scratch every time, the app keeps, per photo identifier, the <strong>fingerprint</strong> from section 2 (a brightness-and-colour value too small to recognise the photo from) with its dimensions, capture time and file name, plus the <strong>last list of groups</strong> it found (photo identifiers and their on-device addresses). <strong>It does not contain the photos themselves.</strong></li>
+<li><strong>Preview copies</strong> — to show photos quickly, the app keeps <strong>reduced copies</strong> of photos already on the device in <strong>its cache folder</strong>. Their amount is capped, the operating system may clear them when storage runs low, and they never leave the device.</li>
+<li><strong>Purchase status</strong> — a single value saying whether you bought “Unlock Duplicates”. It contains no payment details.</li>
 </ul>
 
 <p>All of the above stays on your device. It is never sent to us and we cannot read it. Deleting the app deletes all of it.</p>
@@ -43,19 +46,21 @@
 <ul>
 <li><strong>Status file</strong> (<code>beautiful-tulumba-77ca83.netlify.app</code>) — at launch the app reads <strong>a single public JSON file</strong> holding the minimum supported version and the ad settings. Everyone receives the same file and <strong>we attach nothing of yours to the request.</strong> As with opening any web page, the hosting provider (Netlify) may record your IP address in its server logs. If the read fails, the app simply opens as usual.</li>
 <li><strong>Ads</strong> — see section 5.</li>
-<li><strong>Opening this policy · rating the app</strong> — tapping these in Settings opens your browser or the store app, which may leave the same kind of access record. While you use the app, the operating system may also show its own <strong>rating prompt</strong> once; that prompt is displayed and answered entirely by the operating system, and we never learn who rated the app.</li>
+<li><strong>Purchases</strong> — for “Unlock Duplicates” (a one-time purchase), the app connects to the <strong>App Store or Google Play purchase service</strong> on your device to check for unfinished purchases and to handle buying and restoring. Payment happens in the store’s own payment sheet and is processed by the store; <strong>we never receive your payment method or store account details.</strong> The app only records on the device whether you bought it (section 3).</li>
+<li><strong>Opening this policy · leaving a review</strong> — tapping these in Settings opens your browser or the store app, which may leave the same kind of access record. While you use the app, the operating system may also show its own <strong>rating prompt</strong> once; that prompt is displayed and answered entirely by the operating system, and we never learn who rated the app.</li>
 <li><strong>Contact us</strong> — the app does not send anything; it <strong>only opens your mail app</strong> (section 9).</li>
 </ul>
 
 <h2>5. Ads</h2>
 
-<p><strong>Every feature of this app is free</strong> and ads are the only way it pays for itself. <strong>Nothing is locked behind an ad, and there are no rewarded ads.</strong></p>
+<p><strong>Every feature of this app is free</strong> except one one-time purchase, <strong>“Unlock Duplicates”</strong>, which opens the groups found by “Duplicates” so you can clean them up; the app pays for itself through ads and that purchase. <strong>Nothing is locked behind an ad, and there are no rewarded ads.</strong></p>
 
-<p><strong>There are two ad placements.</strong></p>
+<p><strong>There are three ad placements.</strong></p>
 
 <ul>
-<li><strong>A banner at the bottom</strong> of the home, library, settings, sorting, summary and folder screens.</li>
+<li><strong>A banner at the bottom</strong> of the home, library, settings, sorting, summary and folder screens. If you buy “Unlock Duplicates”, this banner is no longer shown.</li>
 <li><strong>One interstitial</strong> shown <strong>after a sorting round has been applied.</strong> It never appears while you are sorting.</li>
+<li><strong>A rectangular ad on the waiting screen</strong> while “Duplicates” is searching, shown only when the search takes more than a few seconds. This placement remains after a purchase.</li>
 </ul>
 
 <p><strong>Who serves the ads</strong><br />Ads are served through <strong>Unity LevelPlay</strong> (formerly ironSource), a mediation service that picks which ad network fills each request. The networks currently connected are below; this list may grow or shrink.</p>
@@ -137,7 +142,7 @@
 <p>We hold no information about you, so there is nothing for us to disclose, correct or delete on request.</p>
 
 <ul>
-<li><strong>Sorting history</strong> — the ↺ next to “Sorted” in Settings clears the whole ledger. The running total of space freed is not cleared there; deleting the app removes it along with everything in section 3.</li>
+<li><strong>Sorting history</strong> — the ↺ next to “Sorted” in Settings clears the whole ledger. The running total of space freed and the Duplicates records are not cleared there; deleting the app removes them along with everything in section 3.</li>
 <li><strong>Deleted photos</strong> — photos removed from your library stay in <strong>“Recently Deleted”</strong> in the Photos app for a while and can be restored from there. That is handled by the operating system, not by this app.</li>
 <li><strong>Advertising identifier</strong> — reset it or turn off personalised ads as described in section 5.</li>
 </ul>
