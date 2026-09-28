@@ -74,7 +74,7 @@
 
 <h2>5. Notifications — created entirely on your device</h2>
 
-<p>When you place a virtual order, three delivery notifications are scheduled <strong>on your device</strong> (just after the order, a few hours later, and the next day).</p>
+<p>When you place a virtual order, three delivery notifications are scheduled <strong>on your device</strong> (an hour after the order, six hours later, and the next day).</p>
 
 <ul>
 <li>They are <strong>local notifications</strong>, so there is <strong>no push token.</strong> We do not send them; your device raises them by itself at the scheduled time.</li>
@@ -134,7 +134,7 @@
 <ul>
 <li><strong>Version check</strong> — <strong>once</strong> at launch, the app reads one small file that says whether the installed version may still be used. This exists so that an old version can be blocked after an urgent fix. <strong>Nothing is sent</strong> — the file is only read, and none of your values ride along. If there is no connection or the response is malformed, the app <strong>passes through rather than blocking.</strong><br>The same file also carries the <strong>ad settings</strong>, so that ads can be switched off in a hurry without shipping a new version. This too is only read, and what comes back is kept on your device as "a copy of the ad settings" in section 2.</li>
 <li><strong>Opening this policy page</strong> — tapping "Privacy Policy" in the app opens this page (GitHub Pages) in your browser. GitHub's server logs may record your IP address, as they would for any web page you open.</li>
-<li><strong>Sending us a message</strong> — tapping send on the contact screen <strong>opens your device's mail app.</strong> The app does not send anything itself; <strong>whether to send is your decision in the mail app.</strong> The draft contains what you wrote plus the app version, device model, and OS version. We use what you send only to answer you.</li>
+<li><strong>Sending us a message</strong> — tapping send on the contact screen <strong>opens your device's mail app.</strong> The app does not send anything itself; <strong>whether to send is your decision in the mail app.</strong> The draft contains what you wrote plus the the app version and platform (iOS/Android). We use what you send only to answer you.</li>
 <li><strong>Ad requests</strong> — requests go out to the ad network to fetch ads (section 7). Nothing the app records for you rides along.</li>
 <li><strong>In-app purchases</strong> — opening the purchase screen or tapping "Restore purchase" talks to <strong>the store (App Store · Google Play)</strong> to fetch the product list and prices and to confirm the outcome of a purchase. <strong>That exchange is between the store and your device; we are not in the middle of it</strong> — no card number or other payment detail reaches us (section 3).</li>
 <li><strong>A one-line sale notice (Android version only)</strong> — when an in-app purchase succeeds on Android, a single <strong>"something just sold"</strong> line goes to our notification endpoint. It carries only the <strong>app name, product number, the display price the store showed, and the order number the store assigned</strong>. <strong>Nothing that identifies you, and none of the values in section 2, is included.</strong> It is never retried if it fails, and your purchase proceeds regardless. <strong>On iPhone and iPad this request is never made at all</strong> (Apple notifies us directly instead).</li>

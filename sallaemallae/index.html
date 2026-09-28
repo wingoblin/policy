@@ -206,7 +206,7 @@
 
 <h2>5. 알림 — 기기 안에서만 만듭니다</h2>
 
-<p>가상 주문을 하시면 배송 안내 알림 세 개가 <strong>이용자의 기기 안에서</strong> 예약됩니다(주문 직후, 몇 시간 뒤, 다음 날).</p>
+<p>가상 주문을 하시면 배송 안내 알림 세 개가 <strong>이용자의 기기 안에서</strong> 예약됩니다(주문 한 시간 뒤, 여섯 시간 뒤, 다음 날 낮).</p>
 
 <ul>
 <li><strong>로컬 알림</strong>이라 <strong>푸시 토큰이 없습니다.</strong> 저희가 알림을 보내는 것이 아니라, 기기가 정해진 시각에 스스로 띄웁니다.</li>
@@ -266,7 +266,7 @@
 <ul>
 <li><strong>버전 확인</strong> — 앱을 켤 때 <strong>한 번</strong>, 「지금 판을 계속 써도 되는지」를 적어 둔 작은 파일 하나를 읽습니다. 급한 문제를 고쳤을 때 옛 판을 막기 위한 것입니다. <strong>보내는 값은 없습니다</strong> — 파일을 읽기만 하며, 이용자의 어떤 값도 실어 보내지 않습니다. 인터넷이 없거나 응답이 이상하면 <strong>막지 않고 그냥 통과</strong>합니다.<br>같은 파일에 <strong>광고 설정</strong>도 함께 들어 있습니다 — 광고를 급히 꺼야 할 때 앱을 새로 내지 않고 끄기 위한 것입니다. 이 역시 읽기만 하며, 읽어 온 값은 2항의 「광고 설정 사본」으로 기기에 남습니다.</li>
 <li><strong>이 방침 페이지를 여는 경우</strong> — 앱에서 「개인정보 처리방침」을 누르시면 기기의 브라우저가 이 페이지(GitHub Pages)를 엽니다. 이때 GitHub 의 서버 기록에 접속 IP 가 남을 수 있으며, 이는 웹페이지를 여는 모든 경우와 같습니다.</li>
-<li><strong>문의를 보내시는 경우</strong> — 「문의·제보」에서 보내기를 누르시면 <strong>기기의 메일 앱이 열립니다.</strong> 앱이 직접 보내지 않으며, <strong>보내실지는 이용자가 메일 앱에서 정하십니다.</strong> 메일에는 이용자가 적으신 글과 앱 버전·기기 종류·OS 버전이 함께 담깁니다. 보내신 메일은 문의에 답하는 데만 쓰고 그 밖의 용도로 쓰지 않습니다.</li>
+<li><strong>문의를 보내시는 경우</strong> — 「문의·제보」에서 보내기를 누르시면 <strong>기기의 메일 앱이 열립니다.</strong> 앱이 직접 보내지 않으며, <strong>보내실지는 이용자가 메일 앱에서 정하십니다.</strong> 메일에는 이용자가 적으신 글과 앱 버전과 플랫폼(iOS/Android)이 함께 담깁니다. 보내신 메일은 문의에 답하는 데만 쓰고 그 밖의 용도로 쓰지 않습니다.</li>
 <li><strong>광고 요청</strong> — 광고를 받아 오기 위해 광고 네트워크로 요청이 나갑니다(7항). 앱이 만든 기록은 그 요청에 실리지 않습니다.</li>
 <li><strong>인앱 구매</strong> — 결제 화면을 여시거나 「구매 복원」을 누르시면 <strong>스토어(App Store · Google Play)</strong> 와 통신합니다. 상품 목록·가격을 받아 오고, 결제 결과를 확인하기 위한 것입니다. <strong>이 통신은 스토어와 기기 사이에서 이루어지며, 저희는 그 사이에 없습니다</strong> — 카드번호를 비롯한 결제 정보는 저희에게 오지 않습니다(3항).</li>
 <li><strong>결제 알림 한 줄 (안드로이드 판만)</strong> — 안드로이드에서 인앱 구매가 성공하면 <strong>「지금 하나 팔렸다」는 한 줄</strong>이 저희 알림 창구로 나갑니다. 실리는 값은 <strong>앱 이름 · 상품 번호 · 스토어가 보여 준 표시가격 · 스토어가 매긴 주문번호</strong>뿐이며, <strong>이용자를 알아볼 수 있는 값과 2항의 어떤 값도 실리지 않습니다.</strong> 실패해도 다시 보내지 않고, 결제는 그와 무관하게 진행됩니다. <strong>iPhone·iPad 판에서는 이 요청이 아예 나가지 않습니다</strong>(애플이 저희에게 직접 알려 주기 때문입니다).</li>
@@ -429,7 +429,7 @@
 
 <h2>5. Notifications — created entirely on your device</h2>
 
-<p>When you place a virtual order, three delivery notifications are scheduled <strong>on your device</strong> (just after the order, a few hours later, and the next day).</p>
+<p>When you place a virtual order, three delivery notifications are scheduled <strong>on your device</strong> (an hour after the order, six hours later, and the next day).</p>
 
 <ul>
 <li>They are <strong>local notifications</strong>, so there is <strong>no push token.</strong> We do not send them; your device raises them by itself at the scheduled time.</li>
@@ -489,7 +489,7 @@
 <ul>
 <li><strong>Version check</strong> — <strong>once</strong> at launch, the app reads one small file that says whether the installed version may still be used. This exists so that an old version can be blocked after an urgent fix. <strong>Nothing is sent</strong> — the file is only read, and none of your values ride along. If there is no connection or the response is malformed, the app <strong>passes through rather than blocking.</strong><br>The same file also carries the <strong>ad settings</strong>, so that ads can be switched off in a hurry without shipping a new version. This too is only read, and what comes back is kept on your device as "a copy of the ad settings" in section 2.</li>
 <li><strong>Opening this policy page</strong> — tapping "Privacy Policy" in the app opens this page (GitHub Pages) in your browser. GitHub's server logs may record your IP address, as they would for any web page you open.</li>
-<li><strong>Sending us a message</strong> — tapping send on the contact screen <strong>opens your device's mail app.</strong> The app does not send anything itself; <strong>whether to send is your decision in the mail app.</strong> The draft contains what you wrote plus the app version, device model, and OS version. We use what you send only to answer you.</li>
+<li><strong>Sending us a message</strong> — tapping send on the contact screen <strong>opens your device's mail app.</strong> The app does not send anything itself; <strong>whether to send is your decision in the mail app.</strong> The draft contains what you wrote plus the the app version and platform (iOS/Android). We use what you send only to answer you.</li>
 <li><strong>Ad requests</strong> — requests go out to the ad network to fetch ads (section 7). Nothing the app records for you rides along.</li>
 <li><strong>In-app purchases</strong> — opening the purchase screen or tapping "Restore purchase" talks to <strong>the store (App Store · Google Play)</strong> to fetch the product list and prices and to confirm the outcome of a purchase. <strong>That exchange is between the store and your device; we are not in the middle of it</strong> — no card number or other payment detail reaches us (section 3).</li>
 <li><strong>A one-line sale notice (Android version only)</strong> — when an in-app purchase succeeds on Android, a single <strong>"something just sold"</strong> line goes to our notification endpoint. It carries only the <strong>app name, product number, the display price the store showed, and the order number the store assigned</strong>. <strong>Nothing that identifies you, and none of the values in section 2, is included.</strong> It is never retried if it fails, and your purchase proceeds regardless. <strong>On iPhone and iPad this request is never made at all</strong> (Apple notifies us directly instead).</li>
