@@ -1,0 +1,97 @@
+<h1>Earth Here — Política de privacidad</h1>
+
+<p><strong>Fecha de entrada en vigor:</strong> 28 de septiembre de 2026<br /><strong>Contacto:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>En una línea.</strong> Earth Here no tiene registro ni inicio de sesión, y no recibe datos personales como su nombre o sus datos de contacto. <strong>No hay ningún servidor que almacene su información.</strong> El registro de las señales que envía y los mensajes que escribe están únicamente en su dispositivo. La app solo envía dos solicitudes al exterior: el <strong>archivo de estado de la app</strong> y, en Android, en el momento en que se completa una compra, <strong>una línea de aviso de compra</strong> (apartado 7). Aparte de eso, los únicos lugares con los que se comunica la app son las <strong>tiendas de Apple y Google</strong> cuando usted compra algo (apartado 9).</p>
+
+<h2>1. Datos personales que recopilamos</h2>
+
+<p>Ninguno. No recopilamos su nombre, datos de contacto, correo electrónico, fecha de nacimiento ni ningún otro dato personal. La app no tiene cuentas, así que no existe ningún proceso de registro ni de inicio de sesión.</p>
+
+<p>Su información <strong>no se nos envía ni se acumula en ninguna parte.</strong> El aviso de compra de Android (apartado 7) tampoco lleva ningún valor que permita identificarle, y no se conserva una vez mostrado el aviso.</p>
+
+<h2>2. Lo que se guarda solo en su dispositivo</h2>
+
+<ul>
+<li><strong>El registro de las señales enviadas</strong> — el mensaje que escribió, el destino que eligió, la hora de envío y la dirección a la que apuntaba en ese momento (acimut y altura). La distancia que se ve en pantalla se calcula únicamente a partir de esa <strong>hora de envío</strong>.</li>
+<li><strong>Ajustes de la app</strong> — los valores que eligió en pantalla, como el idioma, si quiere recibir avisos de hitos o si eligió «Ahora no» en la pantalla de explicación de Bluetooth.</li>
+<li><strong>Registro de solicitudes de valoración</strong> — solo cuándo y cuántas veces se mostró la ventana de valoración, para no mostrarla con demasiada frecuencia.</li>
+<li><strong>Si ha comprado o no</strong> — solo un valor por producto, «comprado / no comprado» (apartado 9). No se guardan medios de pago ni historial de transacciones.</li>
+</ul>
+
+<p>Todo lo anterior está únicamente en su dispositivo. No se nos envía y no podemos consultarlo. Al eliminar la app, se borra todo junto con ella.</p>
+
+<p><strong>Plazo de conservación</strong> — el registro de una señal enviada <strong>se borra automáticamente del dispositivo 24 horas después de que termine su viaje hasta el destino.</strong> No se guardan registros de señales que no llegaron a salir. Antes de eso, también puede borrarlos usted mismo desde la app.</p>
+
+<p><strong>Los mensajes no se envían a ningún sitio.</strong> Esta app no entrega a otras personas lo que usted escribe, ni muestra en pantalla textos escritos por otras personas.</p>
+
+<h2>3. Ubicación</h2>
+
+<p>La app usa su <strong>ubicación aproximada</strong> (a nivel de ciudad). No solicita la ubicación precisa y, en Android, el permiso de ubicación precisa se ha eliminado por completo del manifiesto.</p>
+
+<p><strong>Por qué se necesita</strong> — aunque apunte en la misma dirección, las estrellas que hay en ese punto del cielo cambian según dónde esté usted. Para calcular a qué parte del cielo está apuntando hace falta la ubicación del observador.</p>
+
+<p><strong>Cómo se usa</strong> — la ubicación se usa <strong>solo para calcular la posición de las estrellas en su dispositivo.</strong> No se nos envía, no se envía a ningún otro lugar y tampoco se guarda en el dispositivo. Puede usar la app sin permitir la ubicación — en ese caso, en lugar de apuntar, la usa <strong>eligiendo el destino directamente</strong>.</p>
+
+<h2>4. Sensores de movimiento (brújula e inclinación)</h2>
+
+<p>Para saber a qué parte del cielo apunta su teléfono, la app usa la <strong>brújula y el sensor de inclinación</strong>. Los valores de los sensores se usan <strong>solo para calcular la dirección en su dispositivo</strong>; no se guardan ni se envían a ningún sitio. En el registro de una señal enviada solo quedan dos números: la dirección a la que apuntaba en ese momento (acimut y altura) (apartado 2). Si su dispositivo no tiene sensores o no los permite, puede elegir el destino directamente.</p>
+
+<h2>5. Bluetooth — emitir la onda de radio</h2>
+
+<p>Al pulsar enviar, la app <strong>emite una onda de radio real (un anuncio BLE) a través del Bluetooth de este teléfono.</strong> El permiso de Bluetooth se usa únicamente para esto.</p>
+
+<ul>
+<li><strong>Lo que lleva la onda de radio</strong> — solo <strong>un identificador corto generado al azar</strong> que apunta a ese registro. <strong>El texto de su mensaje no se transmite</strong> (un anuncio Bluetooth ocupa 31 bytes, así que no hay sitio para él). Tampoco se transmiten su nombre, datos de contacto, ubicación ni identificadores del dispositivo.</li>
+<li><strong>No busca dispositivos cercanos.</strong> La app solo emite; <strong>no escanea ni se conecta.</strong> Por eso los permisos de escaneo y conexión (<code>BLUETOOTH_SCAN</code> · <code>BLUETOOTH_CONNECT</code>) no figuran en la lista de permisos de Android. No hay ninguna vía por la que la información de otros dispositivos entre en la app.</li>
+<li>Emite <strong>solo mientras la pantalla está encendida.</strong> No hay emisión en segundo plano, y se detiene al salir de la pantalla de envío.</li>
+<li><strong>Con esto no se recopila ninguna información.</strong> La onda de radio solo sale; ni nosotros ni usted podemos saber hasta dónde llegó ni quién la recibió. La distancia que muestra la app es <strong>un valor calculado a partir de la hora de envío y la velocidad de la luz.</strong></li>
+</ul>
+
+<p>Puede usar la app sin permitir el Bluetooth. En ese caso no sale ninguna onda de radio, y la app <strong>le dice tal cual que no salió.</strong></p>
+
+<h2>6. Notificaciones</h2>
+
+<p>Le avisamos <strong>cuando una señal que envió pasa un hito</strong>, como la órbita de la Luna o de un planeta, o el límite del sistema solar. La notificación solo contiene la fecha y el nombre del hito; <strong>el mensaje que escribió no se incluye.</strong> Estas notificaciones <strong>se programan en su dispositivo y las muestra su dispositivo</strong> (notificaciones locales).</p>
+
+<p>No usamos ningún servidor de notificaciones push. <strong>No creamos ni recogemos</strong> tokens de dispositivo (identificadores push) para enviar notificaciones. Puede desactivarlas en cualquier momento en los ajustes de la app.</p>
+
+<h2>7. Solicitudes que la app envía al exterior</h2>
+
+<p><strong>Archivo de estado de la app</strong> (<code>beautiful-tulumba-77ca83.netlify.app</code>) — al abrir la app, se descarga un único archivo JSON público que indica la versión mínima compatible. La solicitud <strong>no lleva ningún valor</strong> (todo el mundo recibe el mismo archivo). No obstante, en los registros del servidor del proveedor de alojamiento de este archivo (Netlify) puede quedar su dirección IP.</p>
+
+<p><strong>Aviso de compra (solo Android)</strong> — en Android, en el momento en que se completa una compra, la app envía una única solicitud a nuestro servidor (<code>gwansang-server.onrender.com</code>, alojado en Render) para avisar al desarrollador de que «se ha vendido uno». Solo lleva <strong>el nombre de la app, la plataforma, el ID del producto, el importe y el número de pedido de la tienda</strong>; no lleva nombre, datos de contacto, identificadores del dispositivo ni mensajes. El servidor reenvía este contenido en una línea a la mensajería del desarrollador (Telegram), usa el número de pedido solo brevemente para evitar que el mismo aviso llegue dos veces y <strong>no lo guarda aparte.</strong> Si la solicitud falla, la compra no se ve afectada en absoluto. En iOS no se envía esta solicitud.</p>
+
+<p>Estas dos son todas las solicitudes que se nos envían. Aparte de ellas, los únicos lugares con los que se comunica la app son las tiendas de Apple y Google, para compras y valoraciones (apartado 9).</p>
+
+<h2>8. Consultas e informes</h2>
+
+<p><strong>Contacto</strong>, en los ajustes, <strong>solo abre su app de correo.</strong> La app no envía nada en su nombre; usted decide si lo envía. Si nos envía un correo, nos llega lo que contiene (lo que escribió y su dirección de respuesta); lo usamos solo para responder a su consulta y lo borramos una vez respondida.</p>
+
+<h2>9. Anuncios, compras y valoraciones</h2>
+
+<p><strong>Esta app no tiene anuncios.</strong> No incluye ninguna red publicitaria, así que nada lee su identificador de publicidad. Si algún día incluimos anuncios, <strong>lo anunciaremos antes en esta página</strong> y explicaremos qué cambia y cómo.</p>
+
+<p><strong>Hay compras dentro de la app</strong> — dos productos que, con un solo pago, quedan para siempre en su cuenta («Premium», que desbloquea el envío a las estrellas y los mensajes largos, y «Ver todas las señales», que le permite ver las señales enviadas sin límite de cantidad). No hay pagos periódicos (suscripciones).</p>
+
+<ul>
+<li>Los pagos los gestionan <strong>el App Store de Apple y Google Play.</strong> Ellos también muestran la ventana de pago, y <strong>la información de pago, como el número de tarjeta o de cuenta, no nos llega.</strong> Tampoco podemos verla.</li>
+<li>La app solo pregunta a la tienda <strong>«¿se ha comprado este producto?»</strong> y <strong>el precio que debe mostrar.</strong> Guarda la respuesta en su dispositivo como un único valor, «comprado».</li>
+<li>Al pulsar <strong>Restaurar compra</strong>, se vuelve a consultar a la tienda qué tiene usted. Tampoco aquí interviene nuestro servidor.</li>
+<li>Los registros de pagos y reembolsos los conservan Apple y Google según sus propias políticas. Las consultas sobre pagos también pueden tramitarse a través de la tienda.</li>
+<li>En Android, en el momento en que se completa una compra, le llega al desarrollador un aviso de una línea (apartado 7).</li>
+</ul>
+
+<p><strong>Solicitudes de valoración</strong> — después de usar la app durante un tiempo, de vez en cuando aparece una ventana que le pide una valoración. Esa ventana es <strong>una ventana del sistema que muestran Apple o Google</strong>, y la valoración o reseña que deje la gestiona la tienda. No se nos envía nada aparte.</p>
+
+<h2>10. Menores</h2>
+
+<p>Esta app no recopila datos personales, así que tampoco recopila por separado datos personales de menores.</p>
+
+<h2>11. Sus derechos</h2>
+
+<p>Los registros guardados en su dispositivo <strong>pueden borrarse directamente en la app</strong>, y al eliminar la app desaparecen todos. No conservamos ninguna información sobre usted, así que no hay nada que pueda pedirnos consultar, rectificar o suprimir.</p>
+
+<h2>12. Cambios en la política</h2>
+
+<p>Si el contenido cambia, lo publicaremos en esta página junto con su fecha de entrada en vigor. Los cambios que puedan perjudicarle se anunciarán con <strong>7 días</strong> de antelación.</p>

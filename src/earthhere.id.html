@@ -1,0 +1,97 @@
+<h1>Earth Here — Kebijakan Privasi</h1>
+
+<p><strong>Berlaku sejak:</strong> 28 September 2026<br /><strong>Kontak:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>Singkatnya.</strong> Earth Here tidak punya pendaftaran maupun login, dan tidak menerima data pribadi seperti nama atau kontak Anda. <strong>Tidak ada server yang menyimpan data Anda.</strong> Catatan sinyal yang Anda kirim dan pesan yang Anda tulis semuanya hanya ada di perangkat Anda. Aplikasi hanya mengirim dua permintaan ke luar: <strong>file status aplikasi</strong> dan, di Android pada saat pembelian selesai, <strong>satu baris notifikasi pembelian</strong> (bagian 7). Selain itu, satu-satunya tempat aplikasi berkomunikasi adalah <strong>toko Apple dan Google</strong> saat Anda membeli (bagian 9).</p>
+
+<h2>1. Data pribadi yang kami kumpulkan</h2>
+
+<p>Tidak ada. Kami tidak mengumpulkan nama, kontak, email, tanggal lahir, atau data pribadi apa pun. Aplikasi tidak punya fitur akun, jadi proses pendaftaran dan login memang tidak ada.</p>
+
+<p>Data Anda tidak dikirim kepada kami dan <strong>tidak menumpuk di mana pun.</strong> Notifikasi pembelian Android (bagian 7) juga tidak memuat nilai apa pun yang dapat mengenali Anda, dan tidak disimpan setelah notifikasinya ditampilkan.</p>
+
+<h2>2. Yang hanya disimpan di perangkat</h2>
+
+<ul>
+<li><strong>Catatan sinyal yang dikirim</strong> — pesan yang Anda tulis, tujuan yang Anda pilih, waktu pengiriman, dan arah yang Anda bidik saat itu (azimut dan ketinggian). Jarak yang terlihat di layar dihitung hanya dari <strong>waktu pengiriman</strong> ini.</li>
+<li><strong>Pengaturan aplikasi</strong> — nilai yang Anda pilih di layar, seperti bahasa tampilan, apakah ingin menerima notifikasi tonggak perjalanan, dan apakah Anda memilih “Nanti saja” di layar penjelasan Bluetooth.</li>
+<li><strong>Catatan permintaan ulasan</strong> — hanya kapan dan berapa kali jendela permintaan rating ditampilkan, agar tidak terlalu sering muncul.</li>
+<li><strong>Apakah Anda sudah membeli</strong> — hanya satu nilai per produk, “sudah dibeli / belum dibeli” (bagian 9). Metode pembayaran dan riwayat transaksi tidak disimpan.</li>
+</ul>
+
+<p>Semua hal di atas hanya ada di perangkat Anda. Tidak dikirim kepada kami dan tidak dapat kami lihat. Jika aplikasi dihapus, semuanya ikut terhapus.</p>
+
+<p><strong>Masa simpan</strong> — catatan sinyal yang dikirim <strong>otomatis dihapus dari perangkat 24 jam setelah perjalanannya ke tujuan berakhir.</strong> Sinyal yang tidak berhasil keluar tidak dicatat. Sebelum itu pun Anda bisa menghapusnya sendiri di dalam aplikasi.</p>
+
+<p><strong>Pesan tidak dikirim ke mana pun.</strong> Aplikasi ini tidak menyampaikan apa yang Anda tulis kepada orang lain, dan tidak menampilkan tulisan orang lain di layar.</p>
+
+<h2>3. Lokasi</h2>
+
+<p>Aplikasi menggunakan <strong>lokasi perkiraan</strong> (tingkat kota). Aplikasi tidak meminta lokasi akurat, dan di Android izin lokasi akurat sudah dihapus sepenuhnya dari manifes.</p>
+
+<p><strong>Mengapa diperlukan</strong> — meski membidik ke arah yang sama, bintang di titik langit itu berbeda tergantung di mana Anda berdiri. Untuk menghitung bagian langit mana yang sedang Anda bidik, diperlukan lokasi pengamat.</p>
+
+<p><strong>Bagaimana digunakan</strong> — lokasi digunakan <strong>hanya untuk menghitung posisi bintang di dalam perangkat.</strong> Lokasi tidak dikirim kepada kami, tidak dikirim ke tempat lain, dan tidak disimpan di perangkat. Anda tetap bisa memakai aplikasi tanpa mengizinkan lokasi — dalam hal itu, Anda memakainya dengan <strong>memilih tujuan secara langsung</strong> alih-alih membidik.</p>
+
+<h2>4. Sensor gerak (kompas dan kemiringan)</h2>
+
+<p>Untuk mengetahui bagian langit mana yang sedang dituju ponsel, aplikasi menggunakan <strong>kompas dan sensor kemiringan</strong>. Nilai sensor digunakan <strong>hanya untuk menghitung arah di dalam perangkat</strong>, tidak disimpan, dan tidak dikirim ke mana pun. Dalam catatan sinyal yang dikirim hanya tersisa dua angka: arah yang dibidik saat itu (azimut dan ketinggian) (bagian 2). Jika perangkat tidak punya sensor atau Anda tidak mengizinkannya, Anda tetap bisa memilih tujuan secara langsung.</p>
+
+<h2>5. Bluetooth — memancarkan gelombang radio</h2>
+
+<p>Saat Anda menekan kirim, aplikasi <strong>memancarkan gelombang radio sungguhan (iklan BLE) melalui Bluetooth ponsel ini.</strong> Izin Bluetooth hanya dipakai untuk satu hal ini.</p>
+
+<ul>
+<li><strong>Yang dibawa gelombang radio</strong> — hanya <strong>satu pengenal pendek yang dibuat secara acak</strong> yang merujuk ke catatan tersebut. <strong>Isi pesan Anda tidak ikut dibawa</strong> (satu iklan Bluetooth berukuran 31 bita, jadi tidak ada ruang untuknya). Nama, kontak, lokasi, dan pengenal perangkat juga tidak dibawa.</li>
+<li><strong>Tidak mencari perangkat di sekitar.</strong> Aplikasi hanya memancarkan; <strong>tidak memindai dan tidak menyambung.</strong> Karena itu, izin pindai dan sambung (<code>BLUETOOTH_SCAN</code> · <code>BLUETOOTH_CONNECT</code>) tidak ada dalam daftar izin Android. Tidak ada jalan bagi informasi dari perangkat lain untuk masuk ke aplikasi.</li>
+<li>Memancarkan <strong>hanya selama layar menyala.</strong> Tidak ada fitur pemancaran di latar belakang, dan berhenti saat Anda keluar dari layar pengiriman.</li>
+<li><strong>Tidak ada informasi yang dikumpulkan dengan cara ini.</strong> Gelombang radio hanya keluar; baik kami maupun Anda tidak dapat mengetahui sejauh mana gelombang itu sampai atau siapa yang menerimanya. Jarak yang ditampilkan aplikasi adalah <strong>nilai yang dihitung dari waktu pengiriman dan kecepatan cahaya.</strong></li>
+</ul>
+
+<p>Anda tetap bisa memakai aplikasi tanpa mengizinkan Bluetooth. Dalam hal itu, gelombang radio tidak keluar, dan aplikasi <strong>mengatakan apa adanya bahwa gelombang tidak keluar.</strong></p>
+
+<h2>6. Notifikasi</h2>
+
+<p>Kami memberi tahu Anda <strong>saat sinyal yang Anda kirim melewati tonggak perjalanan</strong>, seperti orbit Bulan atau planet, atau batas Tata Surya. Notifikasi hanya berisi tanggal dan nama tonggak; <strong>pesan yang Anda tulis tidak disertakan.</strong> Notifikasi ini <strong>dijadwalkan di dalam perangkat dan ditampilkan oleh perangkat</strong> (notifikasi lokal).</p>
+
+<p>Kami tidak menggunakan server push. Kami <strong>tidak membuat maupun mengambil</strong> token perangkat (pengenal push) untuk mengirim notifikasi. Anda dapat mematikannya kapan saja di pengaturan aplikasi.</p>
+
+<h2>7. Permintaan yang dikirim aplikasi ke luar</h2>
+
+<p><strong>File status aplikasi</strong> (<code>beautiful-tulumba-77ca83.netlify.app</code>) — saat dibuka, aplikasi mengunduh satu file JSON publik yang berisi versi minimum yang didukung. Permintaan ini <strong>tidak membawa nilai apa pun</strong> (semua orang menerima file yang sama). Namun, alamat IP Anda dapat tercatat di log server penyedia hosting file ini (Netlify).</p>
+
+<p><strong>Notifikasi pembelian (hanya Android)</strong> — di Android, pada saat pembelian selesai, aplikasi mengirim satu permintaan ke server kami (<code>gwansang-server.onrender.com</code>, di-hosting di Render) untuk memberi tahu pengembang bahwa “satu terjual”. Isinya hanya <strong>nama aplikasi, platform, ID produk, jumlah, dan nomor pesanan toko</strong>; tidak ada nama, kontak, pengenal perangkat, atau pesan. Server meneruskan isi ini sebagai satu baris ke messenger pengembang (Telegram), memakai nomor pesanan hanya sebentar untuk mencegah notifikasi yang sama terkirim dua kali, dan <strong>tidak menyimpannya.</strong> Jika permintaan gagal, pembelian sama sekali tidak terpengaruh. Di iOS, permintaan ini tidak dikirim.</p>
+
+<p>Hanya dua itulah permintaan yang dikirim kepada kami. Selain itu, satu-satunya tempat aplikasi berkomunikasi adalah toko Apple dan Google, untuk pembelian dan ulasan (bagian 9).</p>
+
+<h2>8. Pertanyaan dan laporan</h2>
+
+<p><strong>Hubungi kami</strong> di Pengaturan <strong>hanya membuka aplikasi email Anda.</strong> Aplikasi tidak mengirim isi apa pun atas nama Anda; Anda yang memutuskan apakah akan mengirim. Jika Anda mengirim email, isi email itu (tulisan Anda dan alamat balasan) sampai kepada kami; kami hanya memakainya untuk menjawab pertanyaan Anda dan menghapusnya setelah selesai menjawab.</p>
+
+<h2>9. Iklan, pembelian, dan ulasan</h2>
+
+<p><strong>Aplikasi ini tidak memiliki iklan.</strong> Tidak ada jaringan iklan di dalamnya, sehingga tidak ada yang membaca pengenal iklan Anda. Jika suatu saat kami memasang iklan, <strong>kami akan mengumumkannya lebih dulu di halaman ini</strong> dan menjelaskan apa yang berubah dan bagaimana.</p>
+
+<p><strong>Ada pembelian dalam aplikasi</strong> — dua produk yang, dengan sekali bayar, tersimpan permanen di akun Anda (“Premium”, yang membuka pengiriman ke bintang dan pesan panjang, serta “Lihat semua sinyal”, untuk melihat sinyal yang Anda kirim tanpa batas jumlah). Tidak ada pembayaran berulang (langganan).</p>
+
+<ul>
+<li>Pembayaran diproses oleh <strong>App Store milik Apple dan Google Play.</strong> Jendela pembayaran pun mereka yang menampilkan, dan <strong>informasi pembayaran seperti nomor kartu atau rekening tidak sampai kepada kami.</strong> Kami juga tidak dapat melihatnya.</li>
+<li>Aplikasi hanya menanyakan kepada toko <strong>“apakah produk ini sudah dibeli”</strong> dan <strong>harga yang akan ditampilkan.</strong> Jawabannya dicatat di perangkat sebagai satu nilai “sudah dibeli”.</li>
+<li>Saat Anda menekan <strong>Pulihkan pembelian</strong>, aplikasi kembali menanyakan kepemilikan Anda ke toko. Di sini pun server kami tidak terlibat.</li>
+<li>Catatan pembayaran dan pengembalian dana disimpan oleh Apple dan Google sesuai kebijakan masing-masing. Pertanyaan terkait pembayaran juga dapat ditangani melalui toko.</li>
+<li>Di Android, satu baris notifikasi dikirim ke pengembang pada saat pembelian selesai (bagian 7).</li>
+</ul>
+
+<p><strong>Permintaan ulasan</strong> — setelah aplikasi dipakai beberapa lama, sesekali muncul jendela yang meminta Anda memberi rating. Jendela ini adalah <strong>jendela sistem yang ditampilkan oleh Apple atau Google</strong>, dan rating atau ulasan yang Anda berikan diproses oleh toko. Tidak ada yang dikirim secara terpisah kepada kami.</p>
+
+<h2>10. Anak-anak</h2>
+
+<p>Aplikasi ini tidak mengumpulkan data pribadi, sehingga juga tidak mengumpulkan data pribadi anak-anak secara terpisah.</p>
+
+<h2>11. Hak Anda</h2>
+
+<p>Catatan yang tersimpan di perangkat <strong>dapat Anda hapus langsung di dalam aplikasi</strong>, dan semuanya hilang jika aplikasi dihapus. Kami tidak menyimpan informasi apa pun tentang Anda, sehingga tidak ada yang perlu Anda minta untuk kami tampilkan, perbaiki, atau hapus.</p>
+
+<h2>12. Perubahan kebijakan</h2>
+
+<p>Jika isinya berubah, kami akan memuatnya di halaman ini beserta tanggal berlakunya. Perubahan yang dapat merugikan Anda akan diumumkan <strong>7 hari</strong> sebelum berlaku.</p>

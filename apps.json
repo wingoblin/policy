@@ -129,7 +129,25 @@
   {
     "slug": "earthhere",
     "title": "여기는 지구 개인정보 처리방침",
-    "src": "22"
+    "src": "22",
+    "langs": [
+      "ko",
+      "en",
+      "ja",
+      "zhHant",
+      "zhHans",
+      "es",
+      "ptBR",
+      "fr",
+      "de",
+      "ru",
+      "id",
+      "vi",
+      "th",
+      "hi",
+      "ms",
+      "fil"
+    ]
   },
   {
     "slug": "scrap",

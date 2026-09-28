@@ -1,0 +1,97 @@
+<h1>Earth Here — Patakaran sa Privacy</h1>
+
+<p><strong>Petsa ng bisa:</strong> Setyembre 28, 2026<br /><strong>Makipag-ugnayan:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>Sa madaling salita.</strong> Walang sign-up at walang sign-in ang Earth Here, at hindi ito tumatanggap ng personal na impormasyon gaya ng inyong pangalan o contact details. <strong>Walang server na nag-iimbak ng inyong impormasyon.</strong> Ang log ng mga signal na ipinadala ninyo at ang mga mensaheng isinulat ninyo ay nasa inyong device lamang. Dalawang request lang ang ipinapadala ng app palabas: ang <strong>status file ng app</strong> at, sa Android sa sandaling makumpleto ang isang pagbili, ang <strong>isang linyang abiso ng pagbili</strong> (seksyon 7). Bukod dito, ang tanging kinakausap ng app ay ang <strong>mga store ng Apple at Google</strong> kapag bumibili kayo (seksyon 9).</p>
+
+<h2>1. Personal na impormasyong kinokolekta namin</h2>
+
+<p>Wala. Hindi namin kinokolekta ang inyong pangalan, contact details, email, petsa ng kapanganakan o anumang personal na impormasyon. Walang account ang app, kaya wala talagang proseso ng sign-up o sign-in.</p>
+
+<p>Hindi ipinapadala sa amin ang inyong impormasyon at <strong>hindi ito naiipon kahit saan.</strong> Ang abiso ng pagbili sa Android (seksyon 7) ay wala ring dalang anumang value na makakapagpakilala sa inyo, at hindi ito itinatago pagkatapos maipakita ang abiso.</p>
+
+<h2>2. Nakaimbak lamang sa inyong device</h2>
+
+<ul>
+<li><strong>Ang log ng mga ipinadalang signal</strong> — ang mensaheng isinulat ninyo, ang target na pinili ninyo, ang oras ng pagpapadala, at ang direksyong tinututukan ninyo noong sandaling iyon (azimuth at altitude). Ang distansyang nakikita sa screen ay kinukuwenta mula sa <strong>oras ng pagpapadala</strong> na ito lamang.</li>
+<li><strong>Mga setting ng app</strong> — mga value na pinili ninyo sa screen, gaya ng wika ng display, kung gusto ninyong makatanggap ng abiso sa mga milestone, at kung pinili ninyo ang “Hindi muna” sa screen ng paliwanag tungkol sa Bluetooth.</li>
+<li><strong>Record ng paghingi ng review</strong> — kung kailan at ilang beses lang lumabas ang window na humihingi ng rating, para hindi ito lumabas nang masyadong madalas.</li>
+<li><strong>Kung nakabili na kayo</strong> — isang value lang bawat produkto, “nabili / hindi nabili” (seksyon 9). Hindi iniimbak ang paraan ng pagbabayad o ang kasaysayan ng transaksyon.</li>
+</ul>
+
+<p>Lahat ng nasa itaas ay nasa inyong device lamang. Hindi ito ipinapadala sa amin at hindi namin ito makikita. Kapag binura ninyo ang app, mabubura rin ang lahat ng ito.</p>
+
+<p><strong>Tagal ng pag-iimbak</strong> — ang log ng isang ipinadalang signal ay <strong>awtomatikong binubura sa device 24 na oras matapos magtapos ang paglalakbay nito patungo sa target.</strong> Hindi itinatala ang mga signal na hindi nakalabas. Bago pa iyon, maaari rin ninyo itong burahin mismo sa loob ng app.</p>
+
+<p><strong>Hindi ipinapadala kahit saan ang mga mensahe.</strong> Hindi ipinaparating ng app na ito sa ibang tao ang isinulat ninyo, at hindi rin nito ipinapakita sa screen ang isinulat ng ibang tao.</p>
+
+<h2>3. Lokasyon</h2>
+
+<p>Ginagamit ng app ang inyong <strong>tinatayang lokasyon</strong> (antas ng lungsod). Hindi ito humihingi ng eksaktong lokasyon, at sa Android ay tuluyan nang tinanggal sa manifest ang pahintulot para sa eksaktong lokasyon.</p>
+
+<p><strong>Bakit ito kailangan</strong> — kahit iisang direksyon ang tinututukan, nag-iiba ang mga bituin sa bahaging iyon ng langit depende sa kung saan kayo nakatayo. Para makuwenta kung aling bahagi ng langit ang tinututukan ninyo, kailangan ang lokasyon ng nagmamasid.</p>
+
+<p><strong>Paano ito ginagamit</strong> — ginagamit ang lokasyon <strong>para lamang kuwentahin ang posisyon ng mga bituin sa loob ng device.</strong> Hindi ito ipinapadala sa amin, hindi ipinapadala kahit saan, at hindi rin iniimbak sa device. Magagamit pa rin ninyo ang app kahit hindi pinapayagan ang lokasyon — sa ganoong kaso, ginagamit ninyo ito sa pamamagitan ng <strong>direktang pagpili ng target</strong> sa halip na pagtutok.</p>
+
+<h2>4. Mga motion sensor (compass at pagkiling)</h2>
+
+<p>Para malaman kung aling bahagi ng langit ang tinututukan ng inyong phone, ginagamit ng app ang <strong>compass at ang tilt sensor</strong>. Ang mga value ng sensor ay ginagamit <strong>para lamang kuwentahin ang direksyon sa loob ng device</strong>; hindi ito iniimbak at hindi ipinapadala kahit saan. Sa log ng isang ipinadalang signal, dalawang numero lang ang natitira: ang direksyong tinututukan noong sandaling iyon (azimuth at altitude) (seksyon 2). Kung walang sensor ang device o hindi ninyo ito pinapayagan, maaari pa rin kayong pumili ng target nang direkta.</p>
+
+<h2>5. Bluetooth — pagpapalabas ng radio wave</h2>
+
+<p>Kapag pinindot ninyo ang ipadala, <strong>nagpapalabas ang app ng totoong radio wave (isang BLE advertisement) gamit ang Bluetooth ng phone na ito.</strong> Para lamang dito ginagamit ang pahintulot sa Bluetooth.</p>
+
+<ul>
+<li><strong>Ang dala ng radio wave</strong> — <strong>isang maikling identifier na random na ginawa</strong> lamang, na tumuturo sa log na iyon. <strong>Hindi kasama ang teksto ng inyong mensahe</strong> (31 byte lang ang isang Bluetooth advertisement, kaya walang lugar para rito). Hindi rin kasama ang pangalan, contact details, lokasyon, o device identifier.</li>
+<li><strong>Hindi ito naghahanap ng mga kalapit na device.</strong> Nagpapalabas lang ang app; <strong>hindi ito nag-i-scan at hindi kumokonekta.</strong> Kaya wala sa listahan ng mga pahintulot sa Android ang mga pahintulot sa pag-scan at pagkonekta (<code>BLUETOOTH_SCAN</code> · <code>BLUETOOTH_CONNECT</code>). Walang daan para makapasok sa app ang impormasyon mula sa ibang device.</li>
+<li>Nagpapalabas lang ito <strong>habang nakabukas ang screen.</strong> Walang pagpapadala sa background, at humihinto ito kapag umalis kayo sa screen ng pagpapadala.</li>
+<li><strong>Walang impormasyong kinokolekta sa ganitong paraan.</strong> Lumalabas lang ang radio wave; hindi namin at hindi rin ninyo malalaman kung gaano kalayo ito nakarating o kung sino ang nakatanggap nito. Ang distansyang ipinapakita ng app ay <strong>value na kinuwenta mula sa oras ng pagpapadala at sa bilis ng liwanag.</strong></li>
+</ul>
+
+<p>Magagamit pa rin ninyo ang app kahit hindi pinapayagan ang Bluetooth. Sa ganoong kaso, walang radio wave na lalabas, at <strong>tapat na sasabihin ng app na hindi ito lumabas.</strong></p>
+
+<h2>6. Mga notification</h2>
+
+<p>Aabisuhan namin kayo <strong>kapag dumaan ang ipinadala ninyong signal sa isang milestone</strong>, gaya ng orbit ng Buwan o ng isang planeta, o ng hangganan ng Sistemang Solar. Petsa at pangalan ng milestone lang ang laman ng notification; <strong>hindi kasama ang mensaheng isinulat ninyo.</strong> Ang mga notification na ito ay <strong>naka-iskedyul sa loob ng device at ang device mismo ang nagpapakita</strong> (local notification).</p>
+
+<p>Hindi kami gumagamit ng push server. <strong>Hindi kami gumagawa at hindi rin kumukuha</strong> ng device token (push identifier) para magpadala ng notification. Maaari ninyo itong patayin anumang oras sa mga setting ng app.</p>
+
+<h2>7. Mga request na ipinapadala ng app palabas</h2>
+
+<p><strong>Status file ng app</strong> (<code>beautiful-tulumba-77ca83.netlify.app</code>) — pagbukas ng app, nagda-download ito ng iisang pampublikong JSON file na naglalaman ng pinakamababang suportadong bersyon. <strong>Walang anumang value na kasama sa request</strong> (iisang file ang natatanggap ng lahat). Gayunman, maaaring maitala ang inyong IP address sa mga server log ng hosting provider ng file na ito (Netlify).</p>
+
+<p><strong>Abiso ng pagbili (Android lang)</strong> — sa Android, sa sandaling makumpleto ang isang pagbili, nagpapadala ang app ng isang request sa aming server (<code>gwansang-server.onrender.com</code>, naka-host sa Render) para sabihin sa developer na “may isang nabenta”. Ang dala lang nito ay <strong>ang pangalan ng app, platform, product ID, halaga, at order number ng store</strong>; walang pangalan, contact details, device identifier, o mensahe. Ipinapasa ng server ang laman nito bilang isang linya sa messenger ng developer (Telegram), ginagamit lang sandali ang order number para hindi madoble ang parehong abiso, at <strong>hindi ito hiwalay na iniimbak.</strong> Kung pumalya ang request, walang anumang epekto ito sa pagbili. Sa iOS, hindi ipinapadala ang request na ito.</p>
+
+<p>Ang dalawang ito lang ang mga request na ipinapadala sa amin. Bukod dito, ang tanging kinakausap ng app ay ang mga store ng Apple at Google, para sa pagbili at review (seksyon 9).</p>
+
+<h2>8. Pakikipag-ugnayan at pag-uulat</h2>
+
+<p>Ang <strong>Makipag-ugnayan sa amin</strong> sa Settings ay <strong>nagbubukas lang ng inyong mail app.</strong> Hindi nagpapadala ang app ng anuman para sa inyo; kayo ang magpapasya kung ipapadala. Kapag nagpadala kayo ng email, darating sa amin ang laman nito (ang isinulat ninyo at ang inyong reply address); ginagamit lang namin ito para sagutin ang inyong tanong at binubura namin ito pagkatapos sumagot.</p>
+
+<h2>9. Ads, pagbili, at review</h2>
+
+<p><strong>Walang ads ang app na ito.</strong> Walang ad network sa loob nito, kaya walang bumabasa ng inyong advertising identifier. Kung maglalagay kami ng ads balang araw, <strong>ipapaalam muna namin ito sa page na ito</strong> at isusulat kung ano ang magbabago at paano.</p>
+
+<p><strong>May in-app purchase</strong> — dalawang produkto na, sa isang bayad lang, mananatili magpakailanman sa inyong account (“Premium”, na nagbubukas ng pagpapadala sa mga bituin at mahahabang mensahe, at “Tingnan ang bawat signal”, para makita ang mga ipinadala ninyong signal nang walang limitasyon sa bilang). Walang paulit-ulit na bayad (subscription).</p>
+
+<ul>
+<li>Ang pagbabayad ay <strong>hinahawakan ng App Store ng Apple at ng Google Play.</strong> Sila rin ang nagpapakita ng payment window, at <strong>hindi dumarating sa amin ang impormasyon sa pagbabayad gaya ng numero ng card o account.</strong> Hindi rin namin ito makikita.</li>
+<li>Ang itinatanong lang ng app sa store ay <strong>“nabili na ba ang produktong ito?”</strong> at <strong>ang presyong ipapakita.</strong> Itinatala nito ang sagot sa device bilang iisang value na “nabili”.</li>
+<li>Kapag pinindot ninyo ang <strong>I-restore ang binili</strong>, muling itinatanong ng app sa store ang mga pag-aari ninyo. Dito rin, hindi kasali ang aming server.</li>
+<li>Ang mga record ng bayad at refund ay iniingatan ng Apple at Google ayon sa kani-kanilang patakaran. Maaari ding asikasuhin sa store ang mga tanong tungkol sa bayad.</li>
+<li>Sa Android, sa sandaling makumpleto ang isang pagbili, may isang linyang abiso na ipinapadala sa developer (seksyon 7).</li>
+</ul>
+
+<p><strong>Paghingi ng review</strong> — matapos gamitin ang app nang ilang panahon, paminsan-minsan ay may lalabas na window na humihingi ng rating. Ang window na ito ay <strong>system window na ipinapakita ng Apple o Google</strong>, at ang rating o review na iiwan ninyo ay hinahawakan ng store. Walang anumang hiwalay na ipinapadala sa amin.</p>
+
+<h2>10. Mga bata</h2>
+
+<p>Hindi nangongolekta ng personal na impormasyon ang app na ito, kaya hindi rin ito hiwalay na nangongolekta ng personal na impormasyon ng mga bata.</p>
+
+<h2>11. Ang inyong mga karapatan</h2>
+
+<p>Ang mga log na nakaimbak sa device ay <strong>maaaring burahin nang direkta sa loob ng app</strong>, at mawawala ang lahat kapag binura ang app. Wala kaming iniingatang impormasyon tungkol sa inyo, kaya walang anumang maaari ninyong hilingin sa amin na ipakita, itama, o burahin.</p>
+
+<h2>12. Mga pagbabago sa patakaran</h2>
+
+<p>Kapag nagbago ang nilalaman, ipo-post namin ito sa page na ito kasama ang petsa ng bisa. Ang mga pagbabagong maaaring makasama sa inyo ay ipapaalam <strong>7 araw</strong> bago magkabisa.</p>

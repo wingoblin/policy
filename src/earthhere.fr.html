@@ -1,0 +1,97 @@
+<h1>Earth Here — Politique de confidentialité</h1>
+
+<p><strong>Date d’entrée en vigueur :</strong> 28 septembre 2026<br /><strong>Contact :</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>En une ligne.</strong> Earth Here n’a ni inscription ni connexion, et ne reçoit aucune donnée personnelle comme votre nom ou vos coordonnées. <strong>Aucun serveur ne stocke vos données.</strong> Le journal des signaux que vous envoyez et les messages que vous écrivez restent entièrement sur votre appareil. L’app n’envoie que deux requêtes vers l’extérieur : le <strong>fichier d’état de l’app</strong> et, sur Android, au moment où un achat est finalisé, <strong>une ligne de notification d’achat</strong> (section 7). En dehors de cela, les seuls endroits avec lesquels l’app communique sont les <strong>boutiques d’Apple et de Google</strong> lorsque vous effectuez un achat (section 9).</p>
+
+<h2>1. Données personnelles collectées</h2>
+
+<p>Aucune. Nous ne collectons ni votre nom, ni vos coordonnées, ni votre e-mail, ni votre date de naissance, ni aucune autre donnée personnelle. L’app n’a pas de compte, il n’existe donc aucune procédure d’inscription ou de connexion.</p>
+
+<p>Vos informations ne nous sont pas transmises et <strong>ne s’accumulent nulle part.</strong> La notification d’achat Android (section 7) ne contient pas non plus de valeur permettant de vous identifier, et elle n’est pas conservée une fois la notification affichée.</p>
+
+<h2>2. Ce qui est stocké uniquement sur votre appareil</h2>
+
+<ul>
+<li><strong>Le journal des signaux envoyés</strong> — le message que vous avez écrit, la cible choisie, l’heure d’envoi et la direction visée à ce moment-là (azimut et hauteur). La distance affichée à l’écran est calculée à partir de cette seule <strong>heure d’envoi</strong>.</li>
+<li><strong>Réglages de l’app</strong> — les valeurs choisies à l’écran, comme la langue, le fait de recevoir ou non les notifications d’étapes, ou d’avoir choisi « Pas maintenant » sur l’écran d’explication du Bluetooth.</li>
+<li><strong>Historique des demandes d’avis</strong> — uniquement quand et combien de fois la fenêtre de notation a été affichée, pour ne pas l’afficher trop souvent.</li>
+<li><strong>Si vous avez acheté ou non</strong> — une seule valeur par produit, « acheté / non acheté » (section 9). Les moyens de paiement et l’historique des transactions ne sont pas enregistrés.</li>
+</ul>
+
+<p>Tous ces éléments restent uniquement sur votre appareil. Ils ne nous sont pas transmis et nous ne pouvons pas les consulter. Supprimer l’app efface tout.</p>
+
+<p><strong>Durée de conservation</strong> — le journal d’un signal envoyé est <strong>automatiquement effacé de l’appareil 24 heures après la fin de son voyage vers la cible.</strong> Les signaux qui ne sont pas partis ne sont pas enregistrés. Vous pouvez aussi les effacer vous-même dans l’app avant ce délai.</p>
+
+<p><strong>Les messages ne sont envoyés nulle part.</strong> Cette app ne transmet pas ce que vous écrivez à d’autres personnes, et n’affiche pas à l’écran de textes écrits par d’autres.</p>
+
+<h2>3. Localisation</h2>
+
+<p>L’app utilise votre <strong>position approximative</strong> (à l’échelle de la ville). Elle ne demande pas la position précise et, sur Android, l’autorisation de localisation précise a été entièrement retirée du manifeste.</p>
+
+<p><strong>Pourquoi c’est nécessaire</strong> — même en visant la même direction, les étoiles qui s’y trouvent changent selon l’endroit où vous êtes. Pour calculer quelle partie du ciel vous visez, il faut la position de l’observateur.</p>
+
+<p><strong>Comment elle est utilisée</strong> — la position sert <strong>uniquement à calculer la position des étoiles sur votre appareil.</strong> Elle ne nous est pas transmise, n’est envoyée nulle part ailleurs et n’est pas enregistrée sur l’appareil. Vous pouvez utiliser l’app sans autoriser la localisation — dans ce cas, au lieu de viser, vous <strong>choisissez directement la cible</strong>.</p>
+
+<h2>4. Capteurs de mouvement (boussole et inclinaison)</h2>
+
+<p>Pour savoir vers quelle partie du ciel votre téléphone est pointé, l’app utilise la <strong>boussole et le capteur d’inclinaison</strong>. Les valeurs des capteurs servent <strong>uniquement à calculer la direction sur votre appareil</strong> ; elles ne sont ni enregistrées ni envoyées nulle part. Le journal d’un signal envoyé ne garde que deux nombres : la direction visée à ce moment-là (azimut et hauteur) (section 2). Si votre appareil n’a pas de capteurs ou si vous ne les autorisez pas, vous pouvez toujours choisir la cible directement.</p>
+
+<h2>5. Bluetooth — émettre l’onde radio</h2>
+
+<p>Lorsque vous appuyez sur envoyer, l’app <strong>émet une véritable onde radio (une annonce BLE) via le Bluetooth de ce téléphone.</strong> L’autorisation Bluetooth ne sert qu’à cela.</p>
+
+<ul>
+<li><strong>Ce que transporte l’onde radio</strong> — uniquement <strong>un court identifiant généré au hasard</strong> qui renvoie à cette entrée du journal. <strong>Le texte de votre message n’est pas transmis</strong> (une annonce Bluetooth fait 31 octets, il n’y a donc pas de place pour lui). Votre nom, vos coordonnées, votre position et les identifiants de l’appareil ne sont pas transmis non plus.</li>
+<li><strong>Elle ne cherche pas les appareils à proximité.</strong> L’app ne fait qu’émettre ; <strong>elle ne scanne pas et ne se connecte pas.</strong> C’est pourquoi les autorisations de scan et de connexion (<code>BLUETOOTH_SCAN</code> · <code>BLUETOOTH_CONNECT</code>) ne figurent pas dans la liste des autorisations Android. Aucune information provenant d’autres appareils ne peut entrer dans l’app.</li>
+<li>Elle n’émet <strong>que lorsque l’écran est allumé.</strong> Il n’y a pas d’émission en arrière-plan, et l’émission s’arrête quand vous quittez l’écran d’envoi.</li>
+<li><strong>Aucune information n’est collectée de cette façon.</strong> L’onde radio ne fait que partir ; ni nous ni vous ne pouvons savoir jusqu’où elle est allée ni qui l’a reçue. La distance affichée par l’app est <strong>une valeur calculée à partir de l’heure d’envoi et de la vitesse de la lumière.</strong></li>
+</ul>
+
+<p>Vous pouvez utiliser l’app sans autoriser le Bluetooth. Dans ce cas, aucune onde radio ne part, et l’app <strong>vous dit franchement qu’elle n’est pas partie.</strong></p>
+
+<h2>6. Notifications</h2>
+
+<p>Nous vous prévenons <strong>lorsqu’un signal envoyé franchit une étape</strong>, comme l’orbite de la Lune ou d’une planète, ou la limite du Système solaire. La notification ne contient que la date et le nom de l’étape ; <strong>le message que vous avez écrit n’y figure pas.</strong> Ces notifications sont <strong>programmées sur votre appareil et affichées par celui-ci</strong> (notifications locales).</p>
+
+<p>Nous n’utilisons pas de serveur de notifications push. Nous <strong>ne créons ni ne collectons</strong> de jeton d’appareil (identifiant push) pour envoyer des notifications. Vous pouvez les désactiver à tout moment dans les réglages de l’app.</p>
+
+<h2>7. Requêtes que l’app envoie vers l’extérieur</h2>
+
+<p><strong>Fichier d’état de l’app</strong> (<code>beautiful-tulumba-77ca83.netlify.app</code>) — au lancement, l’app télécharge un unique fichier JSON public indiquant la version minimale prise en charge. <strong>Aucune valeur n’est jointe à la requête</strong> (tout le monde reçoit le même fichier). Votre adresse IP peut toutefois rester dans les journaux du serveur de l’hébergeur de ce fichier (Netlify).</p>
+
+<p><strong>Notification d’achat (Android uniquement)</strong> — sur Android, au moment où un achat est finalisé, l’app envoie une seule requête à notre serveur (<code>gwansang-server.onrender.com</code>, hébergé chez Render) pour signaler au développeur qu’« une vente a eu lieu ». Elle ne contient que <strong>le nom de l’app, la plateforme, l’ID du produit, le montant et le numéro de commande de la boutique</strong> ; ni nom, ni coordonnées, ni identifiant d’appareil, ni message. Le serveur transmet ce contenu en une ligne à la messagerie du développeur (Telegram), n’utilise le numéro de commande que brièvement pour éviter que la même notification arrive deux fois, et <strong>ne le conserve pas.</strong> Si la requête échoue, votre achat n’en est aucunement affecté. Sur iOS, cette requête n’est pas envoyée.</p>
+
+<p>Ces deux requêtes sont les seules qui nous sont envoyées. En dehors d’elles, les seuls endroits avec lesquels l’app communique sont les boutiques d’Apple et de Google, pour les achats et les avis (section 9).</p>
+
+<h2>8. Contact et signalements</h2>
+
+<p><strong>Nous écrire</strong>, dans les réglages, <strong>ne fait qu’ouvrir votre app de messagerie.</strong> L’app n’envoie rien à votre place ; c’est vous qui décidez d’envoyer ou non. Si vous nous écrivez, nous recevons le contenu de l’e-mail (ce que vous avez écrit et votre adresse de réponse) ; nous l’utilisons uniquement pour répondre à votre demande et le supprimons une fois la réponse faite.</p>
+
+<h2>9. Publicités, achats et avis</h2>
+
+<p><strong>Cette app ne contient pas de publicité.</strong> Elle n’intègre aucun réseau publicitaire, donc rien ne lit votre identifiant publicitaire. Si nous en ajoutions un jour, <strong>nous l’annoncerions d’abord sur cette page</strong> en précisant ce qui change et comment.</p>
+
+<p><strong>Il y a des achats intégrés</strong> — deux produits qui restent définitivement sur votre compte après un seul paiement (« Premium », qui débloque l’envoi aux étoiles et les messages longs, et « Voir tous les signaux », qui permet de voir les signaux envoyés sans limite de nombre). Il n’y a pas de paiement récurrent (abonnement).</p>
+
+<ul>
+<li>Les paiements sont traités par <strong>l’App Store d’Apple et Google Play.</strong> Ce sont eux qui affichent la fenêtre de paiement, et <strong>les informations de paiement, comme les numéros de carte ou de compte, ne nous parviennent pas.</strong> Nous ne pouvons pas non plus les voir.</li>
+<li>L’app demande uniquement à la boutique <strong>« ce produit a-t-il été acheté ? »</strong> et <strong>le prix à afficher.</strong> Elle enregistre la réponse sur votre appareil sous la forme d’une seule valeur, « acheté ».</li>
+<li>Appuyer sur <strong>Restaurer l’achat</strong> redemande à la boutique ce que vous possédez. Notre serveur n’intervient pas non plus ici.</li>
+<li>Les historiques de paiement et de remboursement sont conservés par Apple et Google selon leurs propres politiques. Les questions liées aux paiements peuvent aussi être traitées auprès de la boutique.</li>
+<li>Sur Android, au moment où un achat est finalisé, une notification d’une ligne est envoyée au développeur (section 7).</li>
+</ul>
+
+<p><strong>Demandes d’avis</strong> — après un certain temps d’utilisation, l’app affiche parfois une fenêtre vous invitant à laisser une note. Cette fenêtre est <strong>une fenêtre système affichée par Apple ou Google</strong>, et la note ou l’avis que vous laissez est traité par la boutique. Rien ne nous est transmis séparément.</p>
+
+<h2>10. Enfants</h2>
+
+<p>Cette app ne collecte aucune donnée personnelle ; elle ne collecte donc pas non plus séparément de données personnelles d’enfants.</p>
+
+<h2>11. Vos droits</h2>
+
+<p>Les journaux enregistrés sur votre appareil <strong>peuvent être effacés directement dans l’app</strong>, et supprimer l’app les fait tous disparaître. Nous ne détenons aucune information vous concernant ; il n’y a donc rien que vous puissiez nous demander de consulter, rectifier ou effacer.</p>
+
+<h2>12. Modifications</h2>
+
+<p>En cas de modification, nous la publions sur cette page avec sa date d’entrée en vigueur. Les modifications susceptibles de vous être défavorables sont annoncées <strong>7 jours</strong> avant leur entrée en vigueur.</p>

@@ -1,0 +1,97 @@
+<h1>Earth Here — Privacy Policy</h1>
+
+<p><strong>Effective:</strong> September 28, 2026<br /><strong>Contact:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>In one line.</strong> Earth Here has no sign-up and no sign-in, and never asks for personal information such as your name or contact details. <strong>There is no server that stores your data.</strong> The log of the signals you send and the messages you write stay entirely on your device. The app sends out only two requests: the <strong>app status file</strong> and, on Android at the moment a purchase completes, a <strong>one-line purchase notification</strong> (section 7). The only other places the app communicates with are the <strong>Apple and Google stores</strong> when you make a purchase (section 9).</p>
+
+<h2>1. Information we collect</h2>
+
+<p>None. We do not collect your name, contact details, email, date of birth or any other personal information. The app has no accounts, so there is no sign-up or sign-in at all.</p>
+
+<p>Your information is sent to us and <strong>accumulated nowhere.</strong> The Android purchase notification (section 7) carries no value that could identify you either, and it is not kept after the notification is shown.</p>
+
+<h2>2. Stored on your device only</h2>
+
+<ul>
+<li><strong>The log of signals you sent</strong> — the message you wrote, the target you chose, the time of sending, and the direction you were aiming at that moment (azimuth and altitude). The distance shown on screen is calculated from this <strong>sending time</strong> alone.</li>
+<li><strong>App settings</strong> — values you chose on screen, such as the display language, whether to receive milestone notifications, and whether you chose “Not now” on the Bluetooth explanation screen.</li>
+<li><strong>Review prompt records</strong> — only when and how many times the rating prompt was shown, so it does not appear too often.</li>
+<li><strong>Whether you have purchased</strong> — just one value per product, “bought / not bought” (section 9). Payment methods and transaction history are not stored.</li>
+</ul>
+
+<p>All of the above stays on your device. It is never sent to us and we cannot read it. Deleting the app deletes all of it.</p>
+
+<p><strong>Retention</strong> — the log of a signal you sent is <strong>automatically deleted from your device 24 hours after its journey to the target ends.</strong> Signals that never went out are not recorded. You can also delete them yourself in the app before then.</p>
+
+<p><strong>Your messages are not sent anywhere.</strong> This app does not deliver what you write to other people, and it does not show anything written by other people.</p>
+
+<h2>3. Location</h2>
+
+<p>The app uses your <strong>approximate location</strong> (city level). It does not request precise location, and on Android the precise location permission has been removed from the manifest altogether.</p>
+
+<p><strong>Why it is needed</strong> — even when aiming in the same direction, the stars in that spot of sky differ depending on where you stand. Working out which part of the sky you are aiming at requires the observer’s location.</p>
+
+<p><strong>How it is used</strong> — the location is used <strong>only to calculate star positions on your device.</strong> It is not sent to us, not sent anywhere else, and not stored on the device. You can use the app without allowing location — in that case you use it by <strong>choosing a target directly</strong> instead of aiming.</p>
+
+<h2>4. Motion sensors (compass and tilt)</h2>
+
+<p>To know which part of the sky your phone is pointing at, the app uses the <strong>compass and tilt sensors</strong>. Sensor values are used <strong>only to calculate the direction on your device</strong>; they are not stored or sent anywhere. The log of a signal you sent keeps only two numbers: the direction you were aiming at that moment (azimuth and altitude) (section 2). If your device has no sensors or you do not allow them, you can still choose a target directly.</p>
+
+<h2>5. Bluetooth — sending out the radio wave</h2>
+
+<p>When you tap send, the app <strong>sends out a real radio wave (a BLE advertisement) through this phone’s Bluetooth.</strong> The Bluetooth permission is used for this one thing only.</p>
+
+<ul>
+<li><strong>What the radio wave carries</strong> — only <strong>one randomly generated short identifier</strong> pointing to that log entry. The <strong>text of your message is not carried</strong> (a single Bluetooth advertisement is 31 bytes, so there is no room for it). Your name, contact details, location and device identifiers are not carried either.</li>
+<li><strong>It does not look for nearby devices.</strong> The app only transmits; it <strong>neither scans nor connects.</strong> That is why the scan and connect permissions (<code>BLUETOOTH_SCAN</code> · <code>BLUETOOTH_CONNECT</code>) are not in the Android permission list. There is no path for information from other devices to enter the app.</li>
+<li>It transmits <strong>only while the screen is on.</strong> There is no background transmission, and it stops when you leave the sending screen.</li>
+<li><strong>No information is collected this way.</strong> The radio wave only goes out; neither we nor you can know how far it travelled or who received it. The distance the app shows is <strong>a value calculated from the sending time and the speed of light.</strong></li>
+</ul>
+
+<p>You can use the app without allowing Bluetooth. In that case no radio wave goes out, and the app <strong>tells you plainly that it did not go out.</strong></p>
+
+<h2>6. Notifications</h2>
+
+<p>We let you know <strong>when a signal you sent passes a milestone</strong>, such as the orbit of the Moon or a planet, or the edge of the Solar System. A notification contains only the date and the milestone name; <strong>the message you wrote is not included.</strong> These notifications are <strong>scheduled on your device and shown by your device</strong> (local notifications).</p>
+
+<p>We do not use a push server. We <strong>neither create nor collect</strong> a device token (push identifier) for sending notifications. You can turn them off at any time in the app’s settings.</p>
+
+<h2>7. Requests the app sends out</h2>
+
+<p><strong>App status file</strong> (<code>beautiful-tulumba-77ca83.netlify.app</code>) — at launch the app downloads a single public JSON file holding the minimum supported version. <strong>Nothing is attached to the request</strong> (everyone receives the same file). However, the hosting provider for this file (Netlify) may keep your IP address in its server logs.</p>
+
+<p><strong>Purchase notification (Android only)</strong> — on Android, at the moment a purchase completes, the app sends one request to our server (<code>gwansang-server.onrender.com</code>, hosted on Render) to tell the developer that “one was sold”. It carries only <strong>the app name, platform, product ID, amount and store order number</strong>; no name, contact details, device identifier or message. The server forwards this as one line to the developer’s messenger (Telegram), uses the order number only briefly to avoid sending the same notification twice, and <strong>does not store it.</strong> If the request fails, your purchase is not affected in any way. On iOS this request is not sent.</p>
+
+<p>These two are the only requests sent to us. The only other places the app communicates with are the Apple and Google stores, for purchases and reviews (section 9).</p>
+
+<h2>8. Contact and reports</h2>
+
+<p><strong>Contact us</strong> in Settings <strong>only opens your mail app.</strong> The app does not send anything on your behalf; whether to send is up to you. If you send an email, what it contains (what you wrote and your reply address) reaches us; we use it only to answer your inquiry and delete it once we have replied.</p>
+
+<h2>9. Ads, purchases and reviews</h2>
+
+<p><strong>This app has no ads.</strong> It contains no ad network, so nothing reads your advertising identifier. If we ever add ads, <strong>we will announce it on this page in advance</strong> and describe what changes and how.</p>
+
+<p><strong>There are in-app purchases</strong> — two products that stay with your account permanently after a single payment (“Premium”, which unlocks sending to the stars and longer messages, and “See every signal”, which lets you see the signals you sent with no limit on the number). There are no subscriptions.</p>
+
+<ul>
+<li>Payments are handled by <strong>Apple’s App Store and Google Play.</strong> They also show the payment sheet, and <strong>payment information such as card or bank account numbers never comes to us.</strong> We cannot see it either.</li>
+<li>The app asks the store only <strong>“has this product been bought?”</strong> and <strong>the price to display.</strong> It records the answer on your device as a single “bought” value.</li>
+<li>Tapping <strong>Restore purchase</strong> asks the store for your purchases again. Our server is not involved here either.</li>
+<li>Payment and refund records are kept by Apple and Google under their own policies. You can also handle payment inquiries through the store.</li>
+<li>On Android, a one-line notification goes to the developer at the moment a purchase completes (section 7).</li>
+</ul>
+
+<p><strong>Review prompts</strong> — after you have used the app for a while, it occasionally shows a prompt asking for a rating. This prompt is <strong>a system prompt shown by Apple or Google</strong>, and any rating or review you leave is handled by the store. Nothing is sent to us separately.</p>
+
+<h2>10. Children</h2>
+
+<p>This app collects no personal information, so it does not separately collect children’s personal information either.</p>
+
+<h2>11. Your rights</h2>
+
+<p>The logs stored on your device <strong>can be deleted directly in the app</strong>, and deleting the app removes all of them. We hold no information about you, so there is nothing for you to ask us to disclose, correct or delete.</p>
+
+<h2>12. Changes</h2>
+
+<p>If this policy changes, we post it on this page with its effective date. Changes that could disadvantage you are announced <strong>7 days</strong> before they take effect.</p>

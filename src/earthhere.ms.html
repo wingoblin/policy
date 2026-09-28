@@ -1,0 +1,97 @@
+<h1>Earth Here — Dasar Privasi</h1>
+
+<p><strong>Tarikh berkuat kuasa:</strong> 28 September 2026<br /><strong>Hubungi:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>Secara ringkas.</strong> Earth Here tiada pendaftaran dan tiada log masuk, dan tidak menerima maklumat peribadi seperti nama atau butiran hubungan anda. <strong>Tiada pelayan yang menyimpan maklumat anda.</strong> Rekod isyarat yang anda hantar dan mesej yang anda tulis semuanya hanya berada dalam peranti anda. Aplikasi hanya menghantar dua permintaan ke luar: <strong>fail status aplikasi</strong> dan, pada Android ketika pembelian selesai, <strong>satu baris makluman pembelian</strong> (seksyen 7). Selain itu, satu-satunya tempat aplikasi berhubung ialah <strong>kedai Apple dan Google</strong> ketika anda membuat pembelian (seksyen 9).</p>
+
+<h2>1. Maklumat peribadi yang kami kumpul</h2>
+
+<p>Tiada. Kami tidak mengumpul nama, butiran hubungan, e-mel, tarikh lahir atau apa-apa maklumat peribadi. Aplikasi tidak mempunyai akaun, jadi proses pendaftaran dan log masuk langsung tidak wujud.</p>
+
+<p>Maklumat anda tidak dihantar kepada kami dan <strong>tidak terkumpul di mana-mana.</strong> Makluman pembelian Android (seksyen 7) juga tidak membawa apa-apa nilai yang boleh mengenal pasti anda, dan tidak disimpan selepas makluman dipaparkan.</p>
+
+<h2>2. Yang disimpan dalam peranti sahaja</h2>
+
+<ul>
+<li><strong>Rekod isyarat yang dihantar</strong> — mesej yang anda tulis, sasaran yang anda pilih, masa penghantaran dan arah yang anda halakan pada saat itu (azimut dan altitud). Jarak yang dipaparkan pada skrin dikira daripada <strong>masa penghantaran</strong> ini sahaja.</li>
+<li><strong>Tetapan aplikasi</strong> — nilai yang anda pilih pada skrin, seperti bahasa paparan, sama ada mahu menerima makluman pencapaian, dan sama ada anda memilih “Bukan sekarang” pada skrin penerangan Bluetooth.</li>
+<li><strong>Rekod permintaan ulasan</strong> — hanya bila dan berapa kali tetingkap permintaan penilaian dipaparkan, supaya ia tidak muncul terlalu kerap.</li>
+<li><strong>Sama ada anda telah membeli</strong> — hanya satu nilai bagi setiap produk, “sudah dibeli / belum dibeli” (seksyen 9). Kaedah pembayaran dan sejarah transaksi tidak disimpan.</li>
+</ul>
+
+<p>Semua perkara di atas hanya berada dalam peranti anda. Ia tidak dihantar kepada kami dan kami tidak dapat melihatnya. Apabila aplikasi dipadam, semuanya turut terpadam.</p>
+
+<p><strong>Tempoh simpanan</strong> — rekod isyarat yang dihantar <strong>dipadam secara automatik daripada peranti 24 jam selepas perjalanannya ke sasaran tamat.</strong> Isyarat yang tidak berjaya keluar tidak direkodkan. Sebelum itu pun, anda boleh memadamnya sendiri dalam aplikasi.</p>
+
+<p><strong>Mesej tidak dihantar ke mana-mana.</strong> Aplikasi ini tidak menyampaikan apa yang anda tulis kepada orang lain, dan tidak memaparkan tulisan orang lain pada skrin.</p>
+
+<h2>3. Lokasi</h2>
+
+<p>Aplikasi menggunakan <strong>lokasi anggaran</strong> (peringkat bandar). Ia tidak meminta lokasi tepat, dan pada Android kebenaran lokasi tepat telah dibuang sepenuhnya daripada manifes.</p>
+
+<p><strong>Mengapa ia diperlukan</strong> — walaupun menghala ke arah yang sama, bintang di titik langit itu berbeza bergantung pada tempat anda berdiri. Untuk mengira bahagian langit mana yang sedang anda halakan, lokasi pemerhati diperlukan.</p>
+
+<p><strong>Bagaimana ia digunakan</strong> — lokasi digunakan <strong>hanya untuk mengira kedudukan bintang di dalam peranti.</strong> Ia tidak dihantar kepada kami, tidak dihantar ke tempat lain, dan tidak disimpan dalam peranti. Anda masih boleh menggunakan aplikasi tanpa membenarkan lokasi — dalam keadaan itu, anda menggunakannya dengan <strong>memilih sasaran secara terus</strong> dan bukannya menghala.</p>
+
+<h2>4. Penderia gerakan (kompas dan kecondongan)</h2>
+
+<p>Untuk mengetahui bahagian langit mana yang dihalakan oleh telefon, aplikasi menggunakan <strong>kompas dan penderia kecondongan</strong>. Nilai penderia digunakan <strong>hanya untuk mengira arah di dalam peranti</strong>; ia tidak disimpan dan tidak dihantar ke mana-mana. Rekod isyarat yang dihantar hanya menyimpan dua nombor: arah yang dihalakan pada saat itu (azimut dan altitud) (seksyen 2). Jika peranti tiada penderia atau anda tidak membenarkannya, anda masih boleh memilih sasaran secara terus.</p>
+
+<h2>5. Bluetooth — memancarkan gelombang radio</h2>
+
+<p>Apabila anda menekan hantar, aplikasi <strong>memancarkan gelombang radio sebenar (iklan BLE) melalui Bluetooth telefon ini.</strong> Kebenaran Bluetooth hanya digunakan untuk satu perkara ini.</p>
+
+<ul>
+<li><strong>Apa yang dibawa oleh gelombang radio</strong> — hanya <strong>satu pengecam pendek yang dijana secara rawak</strong> yang merujuk kepada rekod tersebut. <strong>Teks mesej anda tidak dibawa</strong> (satu iklan Bluetooth hanya 31 bait, jadi tiada ruang untuknya). Nama, butiran hubungan, lokasi dan pengecam peranti juga tidak dibawa.</li>
+<li><strong>Ia tidak mencari peranti berdekatan.</strong> Aplikasi hanya memancar; <strong>ia tidak mengimbas dan tidak menyambung.</strong> Sebab itu kebenaran imbas dan sambung (<code>BLUETOOTH_SCAN</code> · <code>BLUETOOTH_CONNECT</code>) tiada dalam senarai kebenaran Android. Tiada laluan untuk maklumat daripada peranti lain masuk ke dalam aplikasi.</li>
+<li>Ia memancar <strong>hanya semasa skrin menyala.</strong> Tiada pemancaran di latar belakang, dan ia berhenti apabila anda keluar dari skrin penghantaran.</li>
+<li><strong>Tiada maklumat dikumpul dengan cara ini.</strong> Gelombang radio hanya keluar; kami mahupun anda tidak dapat mengetahui sejauh mana ia sampai atau siapa yang menerimanya. Jarak yang dipaparkan oleh aplikasi ialah <strong>nilai yang dikira daripada masa penghantaran dan kelajuan cahaya.</strong></li>
+</ul>
+
+<p>Anda masih boleh menggunakan aplikasi tanpa membenarkan Bluetooth. Dalam keadaan itu, gelombang radio tidak keluar, dan aplikasi <strong>memberitahu anda dengan jujur bahawa ia tidak keluar.</strong></p>
+
+<h2>6. Pemberitahuan</h2>
+
+<p>Kami memaklumkan anda <strong>apabila isyarat yang anda hantar melepasi pencapaian</strong>, seperti orbit Bulan atau planet, atau sempadan Sistem Suria. Pemberitahuan hanya mengandungi tarikh dan nama pencapaian; <strong>mesej yang anda tulis tidak disertakan.</strong> Pemberitahuan ini <strong>dijadualkan di dalam peranti dan dipaparkan oleh peranti</strong> (pemberitahuan setempat).</p>
+
+<p>Kami tidak menggunakan pelayan tolak (push). Kami <strong>tidak mencipta dan tidak mengambil</strong> token peranti (pengecam push) untuk menghantar pemberitahuan. Anda boleh mematikannya pada bila-bila masa dalam tetapan aplikasi.</p>
+
+<h2>7. Permintaan yang dihantar oleh aplikasi ke luar</h2>
+
+<p><strong>Fail status aplikasi</strong> (<code>beautiful-tulumba-77ca83.netlify.app</code>) — apabila dibuka, aplikasi memuat turun satu fail JSON awam yang mencatatkan versi minimum yang disokong. Permintaan ini <strong>tidak membawa sebarang nilai</strong> (semua orang menerima fail yang sama). Namun, alamat IP anda mungkin tercatat dalam log pelayan penyedia pengehosan fail ini (Netlify).</p>
+
+<p><strong>Makluman pembelian (Android sahaja)</strong> — pada Android, ketika pembelian selesai, aplikasi menghantar satu permintaan ke pelayan kami (<code>gwansang-server.onrender.com</code>, dihoskan di Render) untuk memberitahu pembangun bahawa “satu telah terjual”. Ia hanya membawa <strong>nama aplikasi, platform, ID produk, jumlah dan nombor pesanan kedai</strong>; tiada nama, butiran hubungan, pengecam peranti atau mesej. Pelayan memanjangkan kandungan ini sebagai satu baris ke aplikasi pesanan pembangun (Telegram), menggunakan nombor pesanan hanya seketika untuk mengelakkan makluman yang sama dihantar dua kali, dan <strong>tidak menyimpannya secara berasingan.</strong> Jika permintaan gagal, pembelian anda tidak terjejas langsung. Pada iOS, permintaan ini tidak dihantar.</p>
+
+<p>Hanya dua inilah permintaan yang dihantar kepada kami. Selain itu, satu-satunya tempat aplikasi berhubung ialah kedai Apple dan Google, untuk pembelian dan ulasan (seksyen 9).</p>
+
+<h2>8. Pertanyaan dan laporan</h2>
+
+<p><strong>Hubungi kami</strong> dalam Tetapan <strong>hanya membuka aplikasi e-mel anda.</strong> Aplikasi tidak menghantar apa-apa bagi pihak anda; anda yang menentukan sama ada mahu menghantarnya. Jika anda menghantar e-mel, kandungannya (apa yang anda tulis dan alamat balasan anda) akan sampai kepada kami; kami menggunakannya hanya untuk menjawab pertanyaan anda dan memadamnya selepas selesai menjawab.</p>
+
+<h2>9. Iklan, pembelian dan ulasan</h2>
+
+<p><strong>Aplikasi ini tiada iklan.</strong> Tiada rangkaian iklan di dalamnya, jadi tiada apa-apa yang membaca pengecam pengiklanan anda. Jika kami menambah iklan kelak, <strong>kami akan memaklumkannya terlebih dahulu di halaman ini</strong> dan menerangkan apa yang berubah dan bagaimana.</p>
+
+<p><strong>Terdapat pembelian dalam aplikasi</strong> — dua produk yang, dengan sekali bayar, kekal selama-lamanya dalam akaun anda (“Premium”, yang membuka penghantaran ke bintang dan mesej panjang, serta “Lihat setiap isyarat”, untuk melihat isyarat yang anda hantar tanpa had bilangan). Tiada bayaran berulang (langganan).</p>
+
+<ul>
+<li>Pembayaran dikendalikan oleh <strong>App Store Apple dan Google Play.</strong> Tetingkap pembayaran juga dipaparkan oleh mereka, dan <strong>maklumat pembayaran seperti nombor kad atau akaun tidak sampai kepada kami.</strong> Kami juga tidak dapat melihatnya.</li>
+<li>Aplikasi hanya bertanya kepada kedai <strong>“adakah produk ini telah dibeli”</strong> dan <strong>harga untuk dipaparkan.</strong> Jawapannya direkodkan dalam peranti sebagai satu nilai “sudah dibeli”.</li>
+<li>Apabila anda menekan <strong>Pulihkan pembelian</strong>, aplikasi bertanya semula kepada kedai tentang pemilikan anda. Di sini pun pelayan kami tidak terlibat.</li>
+<li>Rekod pembayaran dan bayaran balik disimpan oleh Apple dan Google mengikut dasar masing-masing. Pertanyaan berkaitan pembayaran juga boleh diuruskan melalui kedai.</li>
+<li>Pada Android, satu baris makluman dihantar kepada pembangun ketika pembelian selesai (seksyen 7).</li>
+</ul>
+
+<p><strong>Permintaan ulasan</strong> — selepas aplikasi digunakan untuk seketika, sesekali akan muncul tetingkap yang meminta anda memberi penilaian. Tetingkap ini ialah <strong>tetingkap sistem yang dipaparkan oleh Apple atau Google</strong>, dan penilaian atau ulasan yang anda berikan dikendalikan oleh kedai. Tiada apa-apa yang dihantar kepada kami secara berasingan.</p>
+
+<h2>10. Kanak-kanak</h2>
+
+<p>Aplikasi ini tidak mengumpul maklumat peribadi, jadi ia juga tidak mengumpul maklumat peribadi kanak-kanak secara berasingan.</p>
+
+<h2>11. Hak anda</h2>
+
+<p>Rekod yang disimpan dalam peranti <strong>boleh dipadam terus dalam aplikasi</strong>, dan semuanya hilang apabila aplikasi dipadam. Kami tidak menyimpan sebarang maklumat tentang anda, jadi tiada apa-apa yang perlu anda minta kami paparkan, betulkan atau padam.</p>
+
+<h2>12. Perubahan dasar</h2>
+
+<p>Jika kandungan berubah, kami akan menyiarkannya di halaman ini bersama tarikh berkuat kuasa. Perubahan yang mungkin merugikan anda akan dimaklumkan <strong>7 hari</strong> sebelum berkuat kuasa.</p>
