@@ -1,0 +1,181 @@
+<h1>OFFME — Patakaran sa Privacy</h1>
+
+<p><strong>Epektibo mula:</strong> Setyembre 30, 2026<br /><strong>Makipag-ugnayan:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>Sa isang linya.</strong> Ang OFFME ay <strong>walang account, walang sign-in, at walang server na nag-iimbak ng iyong impormasyon.</strong> Dahil app ito na nagba-block ng mga app na pinili mo, binabasa nito sa iyong device <strong>kung aling mga app ang iba-block, kung aling app ang bukas ngayon, at kung ilang hakbang ang nalakad mo ngayong araw</strong>. Ang mga value na iyon ay <strong>ginagamit lang sa iyong device at hindi kailanman lumalabas dito</strong> (mga seksyon 3, 4 at 5). Ang tanging mga request sa internet na ginagawa ng app ay ang <strong>pagtingin sa isang app status file</strong>, ang <strong>mga bayad sa store</strong>, at, sa Android, ang <strong>isang-linyang abiso ng bayad</strong> sa sandaling makumpleto ang pagbili — nakalista ang lahat ng ito sa seksyon 9. Walang ads at walang analytics tool.</p>
+
+<p><strong>Hindi ka binabantayan ng app na ito.</strong> Tinutulungan ka ng OFFME na pamahalaan ang <strong>sarili mong device</strong>. Wala itong feature para silipin ang device ng ibang tao, at hindi nito kailanman ipinapadala ang iyong paggamit sa magulang, employer o sinumang third party.</p>
+
+<h2>1. Personal na impormasyong kinokolekta namin</h2>
+
+<p><strong>Wala.</strong> Hindi namin kinokolekta ang iyong pangalan, contact details, email, petsa ng kapanganakan, address, impormasyon sa pagbabayad o anumang iba pang personal na impormasyon. Walang account feature, kaya walang sign-up o sign-in kahit kailan.</p>
+
+<p>Ang kasarian, edad, tangkad at timbang na inilalagay mo sa "Tungkol sa akin" (seksyon 2) at ang bilang ng iyong hakbang (seksyon 5) ay <strong>naka-store lang sa iyong device at hindi kailanman ipinapadala sa amin.</strong> Ang abiso ng bayad sa Android (seksyon 9) ay walang dalang anumang makakakilala sa isang tao, at hindi ito itinatago pagkatapos maipakita ang abiso.</p>
+
+<h2>2. Ano ang naka-store lang sa iyong device</h2>
+
+<p>Ang mga value sa ibaba ay sine-save sa <strong>pribadong storage</strong> ng app sa iyong device (isang settings file) at hindi kailanman lumalabas sa device. Sa iOS, ang mga value na kailangan ng blocking screen, ng widget at ng mga Screen Time extension ay isinusulat din sa <strong>isang shared container na ginagamit lang ng app na ito (App Group)</strong>. Nasa iyong device din ang container na iyon, at hindi ito mababasa ng ibang app.</p>
+
+<ul>
+<li><strong>Mga app na iba-block</strong> — sa iOS, isang <strong>opaque token</strong> lang na ibinigay ng Apple; hindi namin mababasa kung aling mga app ang tinutukoy nito (seksyon 3). Sa Android, ang <strong>package name</strong> ng mga app na pinili mo (hal. <code>com.google.android.youtube</code>).</li>
+<li><strong>Mga time lock</strong> — ang pangalan, oras ng simula at oras ng pagtatapos ng timer; ang pangalan, mga araw, oras ng simula/pagtatapos at mga app na iba-block ng schedule; at ang oras ng anumang naka-iskedyul na pag-off o pag-delete.</li>
+<li><strong>Mga step lock</strong> — ang pangalan ng lock, ang araw-araw na step goal, ang mga app na mabubuksan kapag naabot ang goal, at ang oras ng anumang naka-iskedyul na pag-off.</li>
+<li><strong>Tungkol sa akin</strong> — ang <strong>kasarian, edad, tangkad at timbang</strong> na ikaw mismo ang pumili, na inilalagay kapag una kang gumawa ng step lock (puwede itong laktawan) o sa "Tungkol sa akin" sa Ako tab. Ginagamit lang para kalkulahin ang <strong>inirerekomendang step goal, nalakad na distansya at nasunog na calories</strong>; hindi kailanman ginagamit para magpasya kung naka-lock ang mga app.</li>
+<li><strong>Mga record</strong> — mga natapos na timer (oras ng simula at pagtatapos), mga hakbang na nalakad bawat araw at kung naabot ang goal, kabuuang oras na naka-lock, mga pagkakataong tinapos mo nang maaga ang isang lock, mga araw na natupad nang walang multa, at ang araw na una mong binuksan ang app. Ginagamit lang para ipakita ulit sa iyo sa Record at Ako tab.</li>
+<li><strong>Buksan saglit</strong> — kung kailan matatapos ang kasalukuyang pagbubukas, at kung nagamit na ang libreng pagbubukas ngayong araw.</li>
+<li><strong>Status ng pagbili</strong> — kung naka-subscribe ka, ilan ang hindi pa nagagamit mong pass, at ang <strong>mga transaction number ng store</strong> na itinatago para hindi kailanman mailapat nang dalawang beses ang parehong pagbili. Walang detalye ng pagbabayad gaya ng numero ng card.</li>
+<li><strong>Settings</strong> — Proteksyon sa pag-delete ng app naka-on/naka-off (iOS), ang wikang pinili mo, at ang petsa kung kailan ipinakita ang prompt para mag-rate (seksyon 11).</li>
+</ul>
+
+<p>Wala sa mga value na ito ang <strong>ipinapadala sa amin, at hindi namin ito mababasa.</strong> Kapag dinelete ang app, made-delete ang lahat ng ito (seksyon 12).</p>
+
+<h2>3. Impormasyon ng device na binabasa para sa pag-block — ang pinakamahalagang seksyon</h2>
+
+<p>Bina-block ng OFFME ang mga app na pinili mo, kaya kailangan nitong malaman <strong>kung ano ang iba-block at kung ano ang bukas ngayon.</strong> Magkakaiba ang paraan depende sa platform.</p>
+
+<p><strong>iOS</strong> — ginagamit ng app ang mga <strong>Screen Time</strong> framework ng Apple (Family Controls · Managed Settings · Device Activity), kung saan sadyang itinatago ng Apple sa amin ang impormasyon ng app.</p>
+<ul>
+<li>Ang screen para sa pagpili ng mga app ay isang <strong>system screen na iginuguhit ng Apple</strong>, at ang pinili mo ay bumabalik bilang <strong>mga opaque token</strong>. Hindi namin mababasa kung aling mga app ang pinili mo.</li>
+<li>Ang paglalapat at pag-aalis ng mga lock, ang <strong>blocking screen</strong> na lumalabas kapag binuksan mo ang isang naka-lock na app, at ang pag-on at pag-off ng mga schedule sa itinakdang oras ay lahat pinangangasiwaan <strong>sa device ng system ng Apple at ng mga extension ng app na ito.</strong></li>
+<li>Kapag naka-on ang <strong>Proteksyon sa pag-delete ng app</strong> (on/off sa Ako tab), hindi maaaring i-delete ang mga app sa device habang aktibo ang isang lock. Gumagana rin ito sa device lang, sa pamamagitan ng mga setting ng Screen Time.</li>
+<li>Gaya ng hinihingi ng Apple, ang data ng Screen Time ay <strong>hindi kailanman ipinapadala palabas ng device, hindi kailanman ibinabahagi o ibinebenta sa mga third party, at hindi kailanman ginagamit para sa ads o analytics.</strong></li>
+</ul>
+
+<p><strong>Android</strong> — binabasa ng app ang mga sumusunod <strong>nang direkta sa device.</strong></p>
+<ul>
+<li><strong>Listahan ng mga naka-install na app</strong> — ang mga app lang na may launcher (home screen) icon, para maipakita namin ang pangalan at icon nila para mapagpilian mo. Hindi namin ginagamit ang pahintulot na <code>QUERY_ALL_PACKAGES</code> na maglalantad sa mga nakatagong app.</li>
+<li><strong>Ang app na nasa foreground</strong> — sinusuri ng isang monitoring service sa maiikling pagitan kung aling app ang nasa pinakaunahan at, kung ito ay naka-block na app, nagpapakita ng blocking screen sa ibabaw nito. Para gawin ito, binabasa nito ang mga event ng paglipat ng app sa pamamagitan ng pahintulot na <strong>Access sa paggamit</strong> ng Android.</li>
+<li><strong>Hindi namin binabasa kung ano ang ginagawa mo sa loob ng isang app</strong> — ang text na tina-type mo, ang laman ng screen at mga mensahe ay hindi ina-access at hindi namin sinusubukang i-access. <strong>Hindi kami gumagamit ng accessibility service.</strong></li>
+</ul>
+
+<h2>4. Ano ang hindi kailanman lumalabas sa iyong device</h2>
+
+<p>Wala sa mga value na binasa sa ilalim ng mga seksyon 3 at 5, o naka-store sa ilalim ng seksyon 2, ang <strong>kailanman lumalabas sa iyong device.</strong> Partikular, ang mga sumusunod ay hindi ipinapadala kaninuman, kasama kami:</p>
+<ul>
+<li>ang listahan ng mga naka-install na app, ang mga app na pinili mong i-block, at ang app na nasa foreground</li>
+<li>ang iyong mga lock, schedule, step goal at ang mga oras nito</li>
+<li>ang bilang ng iyong hakbang, kasarian, edad, tangkad at timbang, distansya at calories</li>
+<li>bawat record sa Record at Ako tab</li>
+</ul>
+<p>Walang code ang app na nag-a-upload ng mga value na ito kahit saan.</p>
+
+<h2>5. Bilang ng hakbang</h2>
+
+<p>Pinapanatiling naka-lock ng "step lock" ang mga app na pinili mo hanggang maabot mo ang step goal ngayong araw. Para rito, binabasa ng app ang <strong>bilang ng hakbang na nalakad mo ngayong araw.</strong></p>
+<ul>
+<li><strong>iOS</strong> — binabasa nito <strong>ang bilang ng hakbang lang</strong> na binilang ng mga motion sensor ng device (Core Motion). Humihingi ang iOS ng pahintulot na <strong>"Motion &amp; Fitness"</strong>, at ang nakasulat sa prompt ay "Ginagamit para bilangin ang hakbang mo, buksan ang mga naka-lock na app, at ipakita ang talaan ng paglalakad mo."</li>
+<li><strong>Android</strong> — binabasa nito ang step sensor ng device, kung saan humihingi ito ng pahintulot na <strong>Pisikal na aktibidad</strong> (<code>ACTIVITY_RECOGNITION</code>).</li>
+<li>Ang bilang ng hakbang ay ginagamit <strong>lang para tingnan ang step goal, i-unlock ang mga app, itago ang iyong mga record at ipakita ang widget</strong>, at hindi ito kailanman lumalabas sa device. <strong>Hindi ina-access</strong> ng app ang mga health data store gaya ng Apple Health (HealthKit) o Google Health Connect. Hindi nito binabasa ang iyong lokasyon.</li>
+<li>Kung tatanggihan mo ang pahintulot, gagana pa rin ang mga time lock; sasabihin lang ng mga step lock na hindi mabilang ang mga hakbang.</li>
+</ul>
+
+<h2>6. Mga pahintulot — ano at bakit</h2>
+
+<p><strong>iOS</strong></p>
+<ul>
+<li><strong>Screen Time (Family Controls)</strong> — ang tanging paraang ibinibigay ng Apple para mag-block ng mga app. Hinihingi <strong>lang para pamahalaan ang sarili mong device</strong>, hindi kailanman para bantayan ang device ng ibang tao (anak) sa pamamagitan ng Family Sharing. Kung wala ito, hindi gagana ang pag-block.</li>
+<li><strong>Motion &amp; Fitness</strong> — para bilangin ang mga hakbang para sa mga step lock (seksyon 5). Gumagana ang mga time lock kahit wala ito.</li>
+</ul>
+<p>Sa iOS, walang ibang pahintulot na hinihingi ang app. Hindi rin ito humihingi ng pahintulot sa notification.</p>
+
+<p><strong>Android</strong></p>
+<ul>
+<li><strong>Access sa paggamit</strong> (<code>PACKAGE_USAGE_STATS</code>) — para tingnan kung aling app ang nasa foreground. Kung wala ito, hindi gagana ang pag-block.</li>
+<li><strong>Ipakita sa ibabaw ng ibang app</strong> (<code>SYSTEM_ALERT_WINDOW</code>) — para ipakita ang blocking screen sa ibabaw ng naka-block na app. Kung wala ito, hindi gagana ang pag-block.</li>
+<li><strong>Foreground service</strong> (<code>FOREGROUND_SERVICE</code> · <code>FOREGROUND_SERVICE_SPECIAL_USE</code>) — para magpatuloy ang pagmo-monitor kahit isara mo ang app. May notification na nakikita habang tumatakbo ito.</li>
+<li><strong>Mga notification</strong> (<code>POST_NOTIFICATIONS</code>) — para ipakita ang tuloy-tuloy na notification na iyon. Gagana pa rin ang pag-block kahit tanggihan mo.</li>
+<li><strong>Tumakbo sa pag-start</strong> (<code>RECEIVE_BOOT_COMPLETED</code>) — para kusang magpatuloy ang pag-block pagkatapos mag-restart ng device.</li>
+<li><strong>Pisikal na aktibidad</strong> (<code>ACTIVITY_RECOGNITION</code>) — para bilangin ang mga hakbang para sa mga step lock (seksyon 5).</li>
+<li><strong>Internet at billing</strong> (<code>INTERNET</code> · <code>BILLING</code>) — para sa mga request sa seksyon 9 at mga bayad sa Google Play.</li>
+</ul>
+<p>Itinuturing ng Android ang "Access sa paggamit" at "Ipakita sa ibabaw ng ibang app" bilang mga espesyal na pahintulot na ikaw mismo ang mag-o-on sa settings screen, at maaari mo itong i-off doon anumang oras. Kapag in-off ang mga ito, titigil ang pag-block.</p>
+
+<h2>7. Ano ang hindi ginagamit ng app</h2>
+
+<p>Ang app ay <strong>hindi nag-a-access, at hindi humihingi ng pahintulot para sa,</strong> camera, mikropono, mga larawan, lokasyon, mga contact, call log, mga mensahe, kalendaryo o health data (HealthKit · Health Connect). Hindi nito binabasa ang mga advertising identifier (IDFA · Android advertising ID), at hindi nito kailanman ipinapakita ang prompt ng iOS para sa pahintulot sa tracking (ATT).</p>
+
+<h2>8. Ads at analytics</h2>
+
+<p><strong>Walang ads.</strong> Walang kasamang ad network (SDK), kaya walang ipinapadalang ad request. <strong>Wala ring kasamang analytics o crash-reporting tool.</strong> Hindi namin kinokolekta kung paano mo ginagamit ang app.</p>
+
+<h2>9. Bawat request na ipinapadala ng app</h2>
+
+<p>Ang sumusunod ay ang kumpletong listahan ng mga pagkakataon kung kailan nagpapadala ang app ng request sa internet. <strong>Ang pag-block at ang mga step lock mismo ay gumagana sa device nang walang internet.</strong></p>
+<ul>
+<li><strong>App status file</strong> — pagkabukas ng app, binabasa nito ang isang maliit na file sa aming website (naka-host sa Netlify) para tingnan kung masyado nang luma ang iyong bersyon at kailangang i-update. Ang request na ito ay <strong>nagda-download lang ng file at walang dalang anumang value tungkol sa iyo.</strong> Gaya ng pagbubukas ng anumang web page, maaaring maitala sa mga log ng hosting server ang IP address na kumonekta. Kung walang koneksyon, nilalaktawan ang pagtingin at gumagana ang app gaya ng dati.</li>
+<li><strong>Mga bayad sa store</strong> — ang pagpapakita ng presyo, pagbili, at pag-restore ng mga binili ay nakikipag-ugnayan sa App Store · Google Play sa iyong device. Pinangangasiwaan ito ng mga payment system ng Apple at Google; hindi kasali ang aming server (seksyon 10).</li>
+<li><strong>Abiso ng bayad (Android lang)</strong> — sa sandaling makumpleto ang isang pagbili sa Android, nagpapadala ang app ng isang request sa aming server (<code>gwansang-server.onrender.com</code>, naka-host sa Render) para sabihin sa developer na "may isang nabenta". Ang dala lang nito ay <strong>ang pangalan ng app, platform, pangalan at ID ng produkto, halaga at order number ng store</strong> — walang kahit ano gaya ng iyong pangalan, contact details, device identifier, bilang ng hakbang o mga naka-block na app. Ipinapasa ito ng server bilang isang linya sa messenger ng developer (Telegram), ginagamit ang order number nang saglit lang para hindi maipadala nang dalawang beses ang parehong abiso, at <strong>hindi ito sine-save.</strong> Kung pumalya ang request, hindi naaapektuhan ang pagbili. <strong>Hindi kailanman ipinapadala ang request na ito sa iOS.</strong></li>
+<li><strong>Mga link na ikaw mismo ang nag-tap</strong> — ang "Patakaran sa privacy" (ang page na ito, GitHub Pages), "Terms of Use" (ang karaniwang terms page ng Apple), "I-manage ang subscription" (ang subscription screen ng App Store · Google Play) at ang store link sa update screen ay nagbubukas ng <strong>browser o store app ng iyong device.</strong> Mula roon, ang sariling patakaran ng site na iyon ang umiiral.</li>
+</ul>
+
+<h2>10. Mga bayad</h2>
+
+<p>Ibinebenta ng app ang mga sumusunod. Lahat ay <strong>opsyonal</strong>; kahit wala kang bilhin, magagamit mo pa rin ang mga pangunahing feature (mga timer lock, isang schedule o step lock, at isang libreng "Buksan saglit" bawat araw).</p>
+<ul>
+<li><strong>OFFME Pro (buwanan · taunang subscription)</strong> — gumawa ng walang limitasyong schedule at step lock. Awtomatiko itong nare-renew sa parehong presyo maliban kung kanselahin nang hindi bababa sa 24 na oras bago matapos ang panahon; kanselahin sa mga setting ng subscription ng App Store · Google Play.</li>
+<li><strong>Buksan saglit (consumable)</strong> — binubuksan ang mga naka-lock na app nang 10 minuto.</li>
+<li><strong>Tapusin ngayon (consumable)</strong> — i-off o i-delete agad ang isang schedule sa halip na hintayin ang 24 na oras na abiso, o tapusin agad ang tumatakbong timer.</li>
+</ul>
+<ul>
+<li>Ang mga bayad ay pinoproseso ng <strong>App Store ng Apple at Google Play.</strong> Ang mga detalye ng pagbabayad gaya ng numero ng card o account ay <strong>hindi kailanman umaabot sa amin</strong>, at hindi namin ito nakikita.</li>
+<li>Ang tanging natatanggap ng app mula sa store ay <strong>kung ano ang binili, ang lokal na presyong ipapakita, at isang transaction number</strong>, na ginagamit lang sa device para mailapat ang pagbili (seksyon 2).</li>
+<li>Ang <strong>I-restore ang mga binili</strong> ay nagtatanong ulit sa store kung ano ang pagmamay-ari mo. Hindi rin kasali rito ang aming server.</li>
+<li>Ang mga record ng bayad at refund ay itinatago ng Apple at Google alinsunod sa sarili nilang mga patakaran.</li>
+</ul>
+
+<h2>11. Pakikipag-ugnayan at mga prompt para mag-rate</h2>
+
+<p>Ang <strong>Makipag-ugnayan</strong> sa ibaba ng Ako tab ay <strong>nagbubukas lang ng iyong mail app.</strong> Walang ipinapadala ang app para sa iyo; ikaw ang magpapasya kung magpapadala. Kung magpadala ka ng email, ang laman nito (ang isinulat mo at ang iyong reply address) ay makakarating sa amin; ginagamit namin ito <strong>lang para sumagot at binubura ito kapag nasagot na ang tanong.</strong></p>
+
+<p><strong>Prompt para mag-rate</strong> — pagkatapos mong gamitin ang app nang ilang panahon, paminsan-minsan itong nagpapakita ng prompt na humihingi ng star rating. Ito ay isang <strong>system prompt na ipinapakita ng Apple o Google</strong>, at ang anumang rating o review na iiwan mo ay pinangangasiwaan ng store. Walang ipinapadala sa amin. Itinatala lang ng app sa device ang petsa kung kailan ipinakita ang prompt.</p>
+
+<h2>12. Pagtatago at pagbura</h2>
+
+<p>Wala kaming itinatagong impormasyon tungkol sa iyo, kaya walang dapat hilinging burahin namin (binubura ang mga contact email pagkatapos sumagot, gaya ng sa seksyon 11). Maaari mong burahin mismo ang mga value sa iyong device (seksyon 2).</p>
+<ul>
+<li>Kapag dinelete ang app, made-delete ang bawat value sa seksyon 2.</li>
+<li>Sa Android, maaari mo rin itong i-reset sa Mga Setting → Mga App → OFFME → Storage → I-clear ang data.</li>
+<li>Sa iOS, maaari mong bawiin ang access sa Screen Time sa Settings → Screen Time, at ang access sa bilang ng hakbang sa Settings → Privacy &amp; Security → Motion &amp; Fitness.</li>
+</ul>
+
+<h2>13. Pagbabahagi, pagproseso at pagbebenta</h2>
+
+<p><strong>Wala.</strong> Hindi kami nangongolekta ng personal na impormasyon, kaya walang maibabahagi o maipagkakatiwala sa mga third party. Wala kaming ibinebentang impormasyon. Ang mga bayad ay direktang pinangangasiwaan ng Apple at Google alinsunod sa sarili nilang mga patakaran.</p>
+
+<h2>14. Paglilipat sa ibang bansa</h2>
+
+<p>Walang personal na impormasyong inililipat sa ibang bansa. Gayunpaman, ang mga request sa seksyon 9 ay umaabot sa mga server ng mga provider sa ibang bansa — ang app status file ay dumadaan sa Netlify (USA), at ang abiso ng bayad sa Android ay dumadaan sa Render (USA) at Telegram. Walang dalang anumang makakakilala sa isang tao ang mga request na ito.</p>
+
+<h2>15. Mga bata</h2>
+
+<p>Ang OFFME ay <strong>hindi para sa mga batang wala pang 14 na taong gulang</strong>, at hindi namin sinasadyang kolektahin ang personal na impormasyon ng mga bata. Sa simula pa lang, wala kaming kinokolektang personal na impormasyon mula kaninuman. Ang pahintulot sa Screen Time ay hinihingi <strong>lang para pamahalaan ang sarili mong device</strong>, hindi kailanman para sa magulang na nagbabantay sa device ng anak.</p>
+
+<h2>16. Ang iyong mga karapatan</h2>
+
+<p>Sa ilalim ng mga naaangkop na batas sa privacy, may karapatan kang humiling ng access, pagtatama, pagbura o pagsuspinde ng pagproseso. Gayunpaman, wala kaming hawak na impormasyon tungkol sa iyo, kaya walang mahihiling. Maaari mong burahin ang mga value sa iyong device anumang oras gaya ng inilarawan sa seksyon 12. Para sa mga tanong, makipag-ugnayan sa contact@nemofactory.co.kr.</p>
+
+<h2>17. Seguridad</h2>
+
+<p>Wala kaming pinapatakbong server na tumatanggap ng iyong impormasyon, kaya walang maaaring tumagas mula sa isang server. Ang mga value sa device ay itinatago sa <strong>pribadong storage</strong> ng app at sa isang shared container na ginagamit lang ng app na ito, na hindi mababasa ng ibang app. Walang code ang app na nagpapadala ng iyong paggamit, bilang ng hakbang o impormasyon ng katawan palabas ng device.</p>
+
+<h2>18. Mga pagbabago sa patakarang ito</h2>
+
+<p>Kung magbago ang patakarang ito, ia-update namin ang <strong>petsa ng pagkakabisa</strong> sa page na ito. Magkakabisa ang binagong patakaran sa araw na mai-post ito rito.</p>
+
+<h2>19. Privacy officer at pakikipag-ugnayan</h2>
+
+<ul>
+<li>Developer: Nemo Factory (네모팩토리)</li>
+<li>Privacy officer: ang developer ng app</li>
+<li>Makipag-ugnayan: contact@nemofactory.co.kr</li>
+</ul>
+
+<h2>20. Mga remedyo</h2>
+
+<p>Kung kailangan mo ng payo o nais mong mag-ulat ng paglabag sa privacy, maaari kang makipag-ugnayan sa mga sumusunod na awtoridad ng Korea.</p>
+<ul>
+<li>Sentro sa Pag-uulat ng Paglabag sa Personal na Impormasyon (KISA) — privacy.kisa.or.kr / 118</li>
+<li>Komite sa Pamamagitan sa mga Hidwaan sa Personal na Impormasyon — kopico.go.kr / 1833-6972</li>
+<li>Dibisyon ng Cyber Investigation, Supreme Prosecutors' Office — spo.go.kr / 1301</li>
+<li>Cyber Bureau, Korean National Police Agency — ecrm.police.go.kr / 182</li>
+</ul>
