@@ -145,7 +145,7 @@
 
 <ul>
 <li><strong>광고가 나오는 자리는 두 곳뿐입니다</strong> — 성장 탭에서 <strong>이용자가 「생선」을 직접 누르셨을 때</strong> 뜨는 낚시 화면의 <strong>사각 광고</strong>(4초 뒤 저절로 닫히며 생선을 드립니다), 그리고 <strong>「고기」를 직접 누르셨을 때만</strong> 재생되는 <strong>보상형 동영상 광고</strong>입니다. 앱을 켜거나 화면을 넘길 때 저절로 뜨는 광고, 화면 아래 띠 배너는 넣지 않았습니다.</li>
-<li><strong>광고를 보셔야 열리는 기능은 없습니다.</strong> 생선·고기는 레벨 시간을 더해 주는 선택지일 뿐이며, 안 보셔도 앱의 모든 화면과 기능을 그대로 쓰실 수 있습니다. 광고를 못 받아 온 경우에도 먹이는 드립니다.</li>
+<li><strong>광고를 보셔야 열리는 기능은 없습니다.</strong> 생선·고기는 레벨 시간을 더해 주는 선택지일 뿐이며, 안 보셔도 앱의 모든 화면과 기능을 그대로 쓰실 수 있습니다. 생선은 광고를 못 받아 와도 드리지만, 고기는 광고를 끝까지 보셨을 때만 드립니다(못 받아 오면 시간 제한 없이 다시 누르실 수 있습니다).</li>
 <li><strong>광고 네트워크</strong> — Unity 의 <strong>LevelPlay(구 ironSource)</strong> 를 통해 광고가 표시됩니다. 여기에는 LevelPlay 가 중개하는 다른 광고 네트워크(Unity Ads, Liftoff 등)가 함께 붙을 수 있습니다.</li>
 <li><strong>읽어 가는 것</strong> — 광고 네트워크는 기기의 <strong>광고 식별자</strong>(IDFA/IDFV), 대략적인 접속 국가·언어, 기기 종류·OS 버전, 앱 버전 같은 일반적인 기기 정보를 읽습니다. 이 값은 <strong>광고 네트워크가 이용자의 기기에서 직접 읽어 가며, 저희는 받지도 보관하지도 않습니다.</strong></li>
 <li><strong>보내지 않는 것</strong> — 2항의 값(고른 펫·레벨·설정·먹이 기록)은 광고 네트워크에 전달되지 않습니다. 광고 요청에 그 값을 실을 코드가 들어 있지 않습니다.</li>
@@ -279,7 +279,7 @@
 
 <ul>
 <li><strong>Ads appear in two places only</strong> — a <strong>square ad</strong> on the fishing screen that opens when <strong>you tap "Fish"</strong> on the Growth tab (it closes by itself after 4 seconds and gives you the fish), and a <strong>rewarded video</strong> that plays <strong>only when you tap "Meat"</strong>. There are no ads that pop up on launch or between screens, and no banner at the bottom of the screen.</li>
-<li><strong>No feature is locked behind ads.</strong> Fish and meat are optional ways to add level time; you can use every screen and feature without them. If an ad fails to load, you still get the food.</li>
+<li><strong>No feature is locked behind ads.</strong> Fish and meat are optional ways to add level time; you can use every screen and feature without them. Fish is given even if its ad fails to load; meat is given only after you watch its ad to the end (if it fails to load, you can simply tap again).</li>
 <li><strong>Ad network</strong> — ads are served through Unity's <strong>LevelPlay (formerly ironSource)</strong>, which may mediate other ad networks (such as Unity Ads and Liftoff).</li>
 <li><strong>What they read</strong> — ad networks read the device's <strong>advertising identifier</strong> (IDFA/IDFV), approximate country and language, device model, OS version and app version. <strong>They read these directly from your device; we never receive or keep them.</strong></li>
 <li><strong>What is not sent</strong> — the values in section 2 (your pet, levels, settings, feeding record) are never passed to ad networks. The app has no code that puts them in an ad request.</li>
@@ -404,7 +404,7 @@
 
 <ul>
 <li><strong>広告が出るのは2か所だけです</strong> — 成長タブで<strong>「お魚」をタップしたとき</strong>に開く釣りの画面の<strong>四角い広告</strong>（4秒後に自動で閉じ、お魚がもらえます）と、<strong>「お肉」をタップしたときだけ</strong>再生される<strong>リワード動画</strong>です。起動時や画面の切り替え時に出る広告も、画面下部のバナーもありません。</li>
-<li><strong>広告を見ないと使えない機能はありません。</strong>お魚とお肉はレベルの時間を増やすための任意の手段で、それらを使わなくてもすべての画面と機能を利用できます。広告の読み込みに失敗しても、ごはんはもらえます。</li>
+<li><strong>広告を見ないと使えない機能はありません。</strong>お魚とお肉はレベルの時間を増やすための任意の手段で、それらを使わなくてもすべての画面と機能を利用できます。お魚は広告の読み込みに失敗してももらえますが、お肉は広告を最後まで見たときだけもらえます（読み込めなかった場合は、待たずにもう一度タップできます）。</li>
 <li><strong>広告ネットワーク</strong> — 広告は Unity の <strong>LevelPlay（旧 ironSource）</strong>を通じて配信され、LevelPlay は他の広告ネットワーク（Unity Ads、Liftoff など）を仲介することがあります。</li>
 <li><strong>読み取るもの</strong> — 広告ネットワークは端末の<strong>広告識別子</strong>（IDFA/IDFV）、おおよその国と言語、端末の機種、OS のバージョン、アプリのバージョンを読み取ります。<strong>これらは端末から直接読み取られ、私たちが受け取ったり保管したりすることはありません。</strong></li>
 <li><strong>送られないもの</strong> — 第2項の値（ペット、レベル、設定、ごはんの記録）が広告ネットワークに渡ることはありません。アプリにはそれらを広告リクエストに含めるコードがありません。</li>
@@ -529,7 +529,7 @@
 
 <ul>
 <li><strong>廣告只出現在兩個地方</strong>——在「成長」分頁<strong>點一下「魚」</strong>時開啟的釣魚畫面上的<strong>方形廣告</strong>（4 秒後自動關閉，並給您魚），以及<strong>只有在您點一下「大肉塊」時</strong>才會播放的<strong>獎勵影片</strong>。App 沒有啟動時或切換畫面時跳出的廣告，畫面底部也沒有橫幅廣告。</li>
-<li><strong>沒有任何功能被鎖在廣告後面。</strong>魚和大肉塊是增加等級時間的選擇性方式；不使用它們也能使用所有畫面與功能。即使廣告載入失敗，您仍會得到食物。</li>
+<li><strong>沒有任何功能被鎖在廣告後面。</strong>魚和大肉塊是增加等級時間的選擇性方式；不使用它們也能使用所有畫面與功能。即使廣告載入失敗，您仍會得到魚；但大肉塊只有在完整看完廣告後才會給予（若載入失敗，可直接再點一次）。</li>
 <li><strong>廣告聯播網</strong>——廣告透過 Unity 的 <strong>LevelPlay（前身為 ironSource）</strong>提供，LevelPlay 可能會中介其他廣告聯播網（例如 Unity Ads 與 Liftoff）。</li>
 <li><strong>讀取的資料</strong>——廣告聯播網會讀取裝置的<strong>廣告識別碼</strong>（IDFA/IDFV）、大致的國家與語言、裝置型號、作業系統版本及 App 版本。<strong>這些是直接從您的裝置讀取的，我們絕不會收到或保存。</strong></li>
 <li><strong>不會傳送的資料</strong>——第 2 條中的值（您的寵物、等級、設定、餵食紀錄）絕不會傳給廣告聯播網。App 中沒有任何將這些值放入廣告請求的程式碼。</li>
@@ -654,7 +654,7 @@
 
 <ul>
 <li><strong>Los anuncios aparecen solo en dos lugares</strong>: un <strong>anuncio cuadrado</strong> en la pantalla de pesca que se abre cuando <strong>tocas «Pescado»</strong> en la pestaña Crecer (se cierra solo a los 4 segundos y te da el pescado), y un <strong>video con recompensa</strong> que se reproduce <strong>solo cuando tocas «Carne»</strong>. No hay anuncios que aparezcan al abrir la app ni entre pantallas, ni banner en la parte inferior de la pantalla.</li>
-<li><strong>Ninguna función está bloqueada tras los anuncios.</strong> El Pescado y la Carne son formas opcionales de añadir tiempo de nivel; puedes usar todas las pantallas y funciones sin ellos. Si un anuncio no se carga, igualmente recibes la comida.</li>
+<li><strong>Ninguna función está bloqueada tras los anuncios.</strong> El Pescado y la Carne son formas opcionales de añadir tiempo de nivel; puedes usar todas las pantallas y funciones sin ellos. El Pescado se da aunque su anuncio no se cargue; la Carne solo se da si ves su anuncio hasta el final (si no se carga, puedes volver a tocar sin esperar).</li>
 <li><strong>Red publicitaria</strong>: los anuncios se sirven a través de <strong>LevelPlay (antes ironSource)</strong> de Unity, que puede mediar otras redes publicitarias (como Unity Ads y Liftoff).</li>
 <li><strong>Qué leen</strong>: las redes publicitarias leen el <strong>identificador de publicidad</strong> del dispositivo (IDFA/IDFV), el país y el idioma aproximados, el modelo del dispositivo, la versión del sistema operativo y la versión de la app. <strong>Los leen directamente desde tu dispositivo; nosotros nunca los recibimos ni los guardamos.</strong></li>
 <li><strong>Qué no se envía</strong>: los valores de la sección 2 (tu mascota, niveles, ajustes, registro de comidas) nunca se pasan a las redes publicitarias. La app no tiene código que los incluya en una solicitud de anuncio.</li>
@@ -779,7 +779,7 @@
 
 <ul>
 <li><strong>Os anúncios aparecem em apenas dois lugares</strong> — um <strong>anúncio quadrado</strong> na tela de pesca que abre quando <strong>você toca em "Peixe"</strong> na aba Crescer (ele fecha sozinho após 4 segundos e dá o peixe a você), e um <strong>vídeo premiado</strong> que é exibido <strong>somente quando você toca em "Carne"</strong>. Não há anúncios que aparecem ao abrir o app ou entre telas, nem banner na parte inferior da tela.</li>
-<li><strong>Nenhum recurso fica bloqueado por anúncios.</strong> Peixe e Carne são formas opcionais de adicionar tempo de nível; você pode usar todas as telas e recursos sem eles. Se um anúncio não carregar, você recebe a comida mesmo assim.</li>
+<li><strong>Nenhum recurso fica bloqueado por anúncios.</strong> Peixe e Carne são formas opcionais de adicionar tempo de nível; você pode usar todas as telas e recursos sem eles. O Peixe é dado mesmo que o anúncio não carregue; a Carne só é dada depois que você assiste ao anúncio até o fim (se não carregar, você pode tocar de novo sem esperar).</li>
 <li><strong>Rede de anúncios</strong> — os anúncios são veiculados pelo <strong>LevelPlay (antigo ironSource)</strong> da Unity, que pode fazer a mediação de outras redes de anúncios (como Unity Ads e Liftoff).</li>
 <li><strong>O que elas leem</strong> — as redes de anúncios leem o <strong>identificador de publicidade</strong> do dispositivo (IDFA/IDFV), país e idioma aproximados, modelo do dispositivo, versão do sistema operacional e versão do app. <strong>Elas leem esses dados diretamente do seu dispositivo; nós nunca os recebemos nem os guardamos.</strong></li>
 <li><strong>O que não é enviado</strong> — os valores da seção 2 (seu pet, níveis, ajustes, registro de alimentação) nunca são repassados às redes de anúncios. O app não tem nenhum código que os coloque em uma solicitação de anúncio.</li>
@@ -904,7 +904,7 @@
 
 <ul>
 <li><strong>Les publicités n’apparaissent qu’à deux endroits</strong> — une <strong>publicité carrée</strong> sur l’écran de pêche qui s’ouvre lorsque <strong>vous touchez « Poisson »</strong> dans l’onglet Croissance (elle se ferme d’elle-même au bout de 4 secondes et vous donne le poisson), et une <strong>vidéo récompensée</strong> qui ne se lance <strong>que lorsque vous touchez « Viande »</strong>. Il n’y a aucune publicité qui s’affiche au lancement ou entre les écrans, ni de bannière en bas de l’écran.</li>
-<li><strong>Aucune fonctionnalité n’est bloquée derrière une publicité.</strong> Le Poisson et la Viande sont des moyens facultatifs d’ajouter du temps de niveau ; vous pouvez utiliser tous les écrans et toutes les fonctionnalités sans eux. Si une publicité ne se charge pas, vous recevez quand même le repas.</li>
+<li><strong>Aucune fonctionnalité n’est bloquée derrière une publicité.</strong> Le Poisson et la Viande sont des moyens facultatifs d’ajouter du temps de niveau ; vous pouvez utiliser tous les écrans et toutes les fonctionnalités sans eux. Le Poisson est donné même si sa publicité ne se charge pas ; la Viande n’est donnée que si vous regardez sa publicité jusqu’au bout (si elle ne se charge pas, vous pouvez toucher à nouveau sans attendre).</li>
 <li><strong>Régie publicitaire</strong> — les publicités sont diffusées via <strong>LevelPlay (anciennement ironSource)</strong> de Unity, qui peut assurer la médiation d’autres régies publicitaires (comme Unity Ads et Liftoff).</li>
 <li><strong>Ce qu’elles lisent</strong> — les régies publicitaires lisent l’<strong>identifiant publicitaire</strong> de l’appareil (IDFA/IDFV), le pays et la langue approximatifs, le modèle de l’appareil, la version du système d’exploitation et la version de l’app. <strong>Elles les lisent directement depuis votre appareil ; nous ne les recevons ni ne les conservons jamais.</strong></li>
 <li><strong>Ce qui n’est pas envoyé</strong> — les valeurs de la section 2 (votre animal, vos niveaux, vos réglages, votre historique des repas) ne sont jamais transmises aux régies publicitaires. L’app ne contient aucun code qui les inclut dans une requête publicitaire.</li>
@@ -1029,7 +1029,7 @@
 
 <ul>
 <li><strong>Iklan hanya muncul di dua tempat</strong> — <strong>iklan persegi</strong> di layar memancing yang terbuka saat <strong>Anda mengetuk "Ikan"</strong> di tab Tumbuh (tertutup sendiri setelah 4 detik dan memberi Anda ikan), dan <strong>video berhadiah</strong> yang diputar <strong>hanya saat Anda mengetuk "Daging"</strong>. Tidak ada iklan yang muncul saat aplikasi dibuka atau saat berpindah layar, dan tidak ada banner di bagian bawah layar.</li>
-<li><strong>Tidak ada fitur yang dikunci di balik iklan.</strong> Ikan dan Daging hanyalah cara opsional untuk menambah waktu level; Anda dapat menggunakan setiap layar dan fitur tanpanya. Jika iklan gagal dimuat, Anda tetap mendapatkan makanannya.</li>
+<li><strong>Tidak ada fitur yang dikunci di balik iklan.</strong> Ikan dan Daging hanyalah cara opsional untuk menambah waktu level; Anda dapat menggunakan setiap layar dan fitur tanpanya. Ikan tetap diberikan meskipun iklannya gagal dimuat; Daging hanya diberikan setelah Anda menonton iklannya sampai selesai (jika gagal dimuat, Anda bisa langsung mengetuk lagi).</li>
 <li><strong>Jaringan iklan</strong> — iklan ditayangkan melalui <strong>LevelPlay (dahulu ironSource)</strong> milik Unity, yang dapat memediasi jaringan iklan lain (seperti Unity Ads dan Liftoff).</li>
 <li><strong>Yang mereka baca</strong> — jaringan iklan membaca <strong>pengenal iklan</strong> perangkat (IDFA/IDFV), perkiraan negara dan bahasa, model perangkat, versi OS, dan versi aplikasi. <strong>Mereka membacanya langsung dari perangkat Anda; kami tidak pernah menerima maupun menyimpannya.</strong></li>
 <li><strong>Yang tidak dikirim</strong> — nilai-nilai di bagian 2 (pet Anda, level, pengaturan, catatan pemberian makan) tidak pernah diteruskan ke jaringan iklan. Aplikasi tidak memiliki kode yang memasukkannya ke dalam permintaan iklan.</li>
@@ -1154,7 +1154,7 @@
 
 <ul>
 <li><strong>Iklan muncul di dua tempat sahaja</strong> — <strong>iklan segi empat</strong> pada skrin memancing yang dibuka apabila <strong>anda mengetik "Ikan"</strong> pada tab Membesar (ia tertutup sendiri selepas 4 saat dan memberikan anda ikan), dan <strong>video ganjaran</strong> yang dimainkan <strong>hanya apabila anda mengetik "Daging"</strong>. Tiada iklan yang muncul semasa aplikasi dibuka atau semasa bertukar skrin, dan tiada sepanduk di bahagian bawah skrin.</li>
-<li><strong>Tiada ciri yang dikunci di sebalik iklan.</strong> Ikan dan Daging hanyalah cara pilihan untuk menambah masa tahap; anda boleh menggunakan setiap skrin dan ciri tanpanya. Jika iklan gagal dimuatkan, anda tetap mendapat makanan itu.</li>
+<li><strong>Tiada ciri yang dikunci di sebalik iklan.</strong> Ikan dan Daging hanyalah cara pilihan untuk menambah masa tahap; anda boleh menggunakan setiap skrin dan ciri tanpanya. Ikan tetap diberikan walaupun iklannya gagal dimuatkan; Daging hanya diberikan selepas anda menonton iklannya hingga habis (jika gagal dimuatkan, anda boleh terus mengetik semula).</li>
 <li><strong>Rangkaian iklan</strong> — iklan disiarkan melalui <strong>LevelPlay (dahulunya ironSource)</strong> milik Unity, yang mungkin mengantara rangkaian iklan lain (seperti Unity Ads dan Liftoff).</li>
 <li><strong>Perkara yang dibaca</strong> — rangkaian iklan membaca <strong>pengecam pengiklanan</strong> peranti (IDFA/IDFV), anggaran negara dan bahasa, model peranti, versi OS dan versi aplikasi. <strong>Mereka membacanya terus daripada peranti anda; kami tidak pernah menerima atau menyimpannya.</strong></li>
 <li><strong>Perkara yang tidak dihantar</strong> — nilai dalam bahagian 2 (haiwan peliharaan, tahap, seting, rekod pemberian makanan anda) tidak pernah diserahkan kepada rangkaian iklan. Aplikasi tidak mempunyai kod yang memasukkannya ke dalam permintaan iklan.</li>
@@ -1279,7 +1279,7 @@
 
 <ul>
 <li><strong>Quảng cáo chỉ xuất hiện ở hai nơi</strong> — một <strong>quảng cáo hình vuông</strong> trên màn hình câu cá, mở ra khi <strong>bạn chạm vào "Cá"</strong> ở tab Lớn lên (tự đóng sau 4 giây và tặng bạn cá), và một <strong>video có thưởng</strong> chỉ phát <strong>khi bạn chạm vào "Thịt"</strong>. Không có quảng cáo bật lên khi mở ứng dụng hay khi chuyển màn hình, và không có biểu ngữ ở cuối màn hình.</li>
-<li><strong>Không có tính năng nào bị khóa sau quảng cáo.</strong> Cá và Thịt chỉ là cách tùy chọn để cộng thêm thời gian cấp độ; bạn có thể dùng mọi màn hình và tính năng mà không cần chúng. Nếu quảng cáo không tải được, bạn vẫn nhận được món ăn.</li>
+<li><strong>Không có tính năng nào bị khóa sau quảng cáo.</strong> Cá và Thịt chỉ là cách tùy chọn để cộng thêm thời gian cấp độ; bạn có thể dùng mọi màn hình và tính năng mà không cần chúng. Cá vẫn được tặng dù quảng cáo không tải được; Thịt chỉ được tặng khi bạn xem hết quảng cáo (nếu không tải được, bạn có thể chạm lại ngay).</li>
 <li><strong>Mạng quảng cáo</strong> — quảng cáo được phân phối qua <strong>LevelPlay (trước đây là ironSource)</strong> của Unity, có thể làm trung gian cho các mạng quảng cáo khác (như Unity Ads và Liftoff).</li>
 <li><strong>Những gì họ đọc</strong> — các mạng quảng cáo đọc <strong>mã định danh quảng cáo</strong> của thiết bị (IDFA/IDFV), quốc gia và ngôn ngữ ước tính, kiểu máy, phiên bản hệ điều hành và phiên bản ứng dụng. <strong>Họ đọc trực tiếp từ thiết bị của bạn; chúng tôi không bao giờ nhận hay lưu giữ chúng.</strong></li>
 <li><strong>Những gì không được gửi</strong> — các giá trị ở mục 2 (thú cưng, cấp độ, cài đặt, nhật ký cho ăn của bạn) không bao giờ được chuyển cho các mạng quảng cáo. Ứng dụng không có mã nào đưa chúng vào yêu cầu quảng cáo.</li>
@@ -1404,7 +1404,7 @@
 
 <ul>
 <li><strong>โฆษณาปรากฏเพียงสองตำแหน่งเท่านั้น</strong> — <strong>โฆษณาสี่เหลี่ยม</strong>บนหน้าจอตกปลาที่เปิดขึ้นเมื่อ<strong>คุณแตะ "ปลา"</strong> ในแท็บเติบโต (ปิดเองหลังจาก 4 วินาทีและให้ปลาแก่คุณ) และ<strong>วิดีโอรับรางวัล</strong>ที่เล่น<strong>เฉพาะเมื่อคุณแตะ "เนื้อย่าง"</strong> ไม่มีโฆษณาที่เด้งขึ้นตอนเปิดแอปหรือระหว่างเปลี่ยนหน้าจอ และไม่มีแบนเนอร์ที่ด้านล่างของหน้าจอ</li>
-<li><strong>ไม่มีฟีเจอร์ใดถูกล็อกไว้หลังโฆษณา</strong> ปลาและเนื้อย่างเป็นเพียงทางเลือกในการเพิ่มเวลาเลเวล คุณสามารถใช้ทุกหน้าจอและทุกฟีเจอร์ได้โดยไม่ต้องใช้สิ่งเหล่านี้ หากโหลดโฆษณาไม่สำเร็จ คุณก็ยังได้รับอาหาร</li>
+<li><strong>ไม่มีฟีเจอร์ใดถูกล็อกไว้หลังโฆษณา</strong> ปลาและเนื้อย่างเป็นเพียงทางเลือกในการเพิ่มเวลาเลเวล คุณสามารถใช้ทุกหน้าจอและทุกฟีเจอร์ได้โดยไม่ต้องใช้สิ่งเหล่านี้ ปลาจะได้รับแม้โหลดโฆษณาไม่สำเร็จ แต่เนื้อย่างจะได้รับเมื่อดูโฆษณาจนจบเท่านั้น (หากโหลดไม่สำเร็จ แตะใหม่ได้ทันที)</li>
 <li><strong>เครือข่ายโฆษณา</strong> — โฆษณาให้บริการผ่าน <strong>LevelPlay (เดิมชื่อ ironSource)</strong> ของ Unity ซึ่งอาจเป็นตัวกลางให้เครือข่ายโฆษณาอื่น (เช่น Unity Ads และ Liftoff)</li>
 <li><strong>สิ่งที่อ่าน</strong> — เครือข่ายโฆษณาอ่าน<strong>ตัวระบุโฆษณา</strong>ของอุปกรณ์ (IDFA/IDFV) ประเทศและภาษาโดยประมาณ รุ่นอุปกรณ์ เวอร์ชัน OS และเวอร์ชันแอป <strong>เครือข่ายโฆษณาอ่านค่าเหล่านี้โดยตรงจากอุปกรณ์ของคุณ เราไม่เคยได้รับหรือเก็บค่าเหล่านี้</strong></li>
 <li><strong>สิ่งที่ไม่ได้ส่ง</strong> — ค่าในข้อ 2 (สัตว์เลี้ยง เลเวล การตั้งค่า บันทึกการให้อาหารของคุณ) จะไม่ถูกส่งต่อให้เครือข่ายโฆษณา แอปไม่มีโค้ดที่ใส่ค่าเหล่านี้ลงในคำขอโฆษณา</li>
@@ -1529,7 +1529,7 @@
 
 <ul>
 <li><strong>विज्ञापन केवल दो जगह दिखते हैं</strong> — बढ़त टैब पर <strong>आपके "मछली" टैप करने पर</strong> खुलने वाली मछली पकड़ने की स्क्रीन पर एक <strong>चौकोर विज्ञापन</strong> (यह 4 सेकंड बाद अपने-आप बंद हो जाता है और आपको मछली देता है), और एक <strong>रिवॉर्ड वीडियो</strong> जो <strong>केवल आपके "मांस" टैप करने पर</strong> चलता है। ऐप खुलने पर या स्क्रीन बदलते समय अपने-आप आने वाले विज्ञापन नहीं हैं, और स्क्रीन के नीचे कोई बैनर नहीं है।</li>
-<li><strong>कोई भी सुविधा विज्ञापनों के पीछे लॉक नहीं है।</strong> मछली और मांस लेवल समय बढ़ाने के केवल वैकल्पिक तरीके हैं; आप इनके बिना हर स्क्रीन और सुविधा का उपयोग कर सकते हैं। यदि विज्ञापन लोड न हो, तब भी आपको भोजन मिलता है।</li>
+<li><strong>कोई भी सुविधा विज्ञापनों के पीछे लॉक नहीं है।</strong> मछली और मांस लेवल समय बढ़ाने के केवल वैकल्पिक तरीके हैं; आप इनके बिना हर स्क्रीन और सुविधा का उपयोग कर सकते हैं। मछली विज्ञापन लोड न होने पर भी मिलती है; मांस केवल तब मिलता है जब आप उसका विज्ञापन अंत तक देखें (लोड न हो तो आप बिना इंतज़ार दोबारा टैप कर सकते हैं)।</li>
 <li><strong>विज्ञापन नेटवर्क</strong> — विज्ञापन Unity के <strong>LevelPlay (पहले ironSource)</strong> के ज़रिए दिखाए जाते हैं, जो अन्य विज्ञापन नेटवर्क (जैसे Unity Ads और Liftoff) की मध्यस्थता कर सकता है।</li>
 <li><strong>वे क्या पढ़ते हैं</strong> — विज्ञापन नेटवर्क डिवाइस का <strong>विज्ञापन पहचानकर्ता</strong> (IDFA/IDFV), अनुमानित देश और भाषा, डिवाइस मॉडल, OS संस्करण और ऐप संस्करण पढ़ते हैं। <strong>वे इन्हें सीधे आपके डिवाइस से पढ़ते हैं; हम इन्हें न कभी प्राप्त करते हैं, न रखते हैं।</strong></li>
 <li><strong>क्या नहीं भेजा जाता</strong> — अनुभाग 2 के मान (आपका पेट, लेवल, सेटिंग्ज़, खिलाने का रिकॉर्ड) कभी विज्ञापन नेटवर्क को नहीं दिए जाते। ऐप में ऐसा कोई कोड नहीं है जो इन्हें विज्ञापन अनुरोध में डाले।</li>
@@ -1654,7 +1654,7 @@
 
 <ul>
 <li><strong>تظهر الإعلانات في موضعين فقط</strong> — <strong>إعلان مربّع</strong> على شاشة الصيد التي تُفتح عندما <strong>تنقر على «سمكة»</strong> في تبويب النمو (يُغلق تلقائيًا بعد 4 ثوانٍ ويمنحك السمكة)، و<strong>فيديو بمكافأة</strong> لا يُعرض <strong>إلا عندما تنقر على «لحم»</strong>. لا توجد إعلانات تظهر عند فتح التطبيق أو بين الشاشات، ولا يوجد شريط إعلاني أسفل الشاشة.</li>
-<li><strong>لا توجد ميزة مقفلة خلف الإعلانات.</strong> السمكة واللحم مجرد طريقتين اختياريتين لإضافة وقت إلى المستوى؛ ويمكنك استخدام كل شاشة وميزة بدونهما. وإذا تعذّر تحميل الإعلان، تحصل على الطعام مع ذلك.</li>
+<li><strong>لا توجد ميزة مقفلة خلف الإعلانات.</strong> السمكة واللحم مجرد طريقتين اختياريتين لإضافة وقت إلى المستوى؛ ويمكنك استخدام كل شاشة وميزة بدونهما. تحصل على السمكة حتى إذا تعذّر تحميل إعلانها، أما اللحم فلا تحصل عليه إلا بعد مشاهدة إعلانه حتى النهاية (وإذا تعذّر التحميل يمكنك النقر مجددًا دون انتظار).</li>
 <li><strong>شبكة الإعلانات</strong> — تُعرض الإعلانات عبر <strong>LevelPlay (ironSource سابقًا)</strong> التابعة لـ Unity، والتي قد تتوسط لشبكات إعلانات أخرى (مثل Unity Ads وLiftoff).</li>
 <li><strong>ما تقرؤه</strong> — تقرأ شبكات الإعلانات <strong>معرّف الإعلانات</strong> الخاص بالجهاز (IDFA/IDFV)، والبلد واللغة التقريبيين، وطراز الجهاز، وإصدار نظام التشغيل، وإصدار التطبيق. <strong>تقرؤها مباشرةً من جهازك؛ ونحن لا نتلقاها ولا نحتفظ بها أبدًا.</strong></li>
 <li><strong>ما لا يُرسل</strong> — القيم الواردة في القسم 2 (حيوانك الأليف، والمستويات، والإعدادات، وسجل الإطعام) لا تُمرَّر أبدًا إلى شبكات الإعلانات. ولا يحتوي التطبيق على أي شيفرة تضعها في طلب إعلان.</li>
