@@ -1,12 +1,14 @@
 <h1>PixelFriends Privacy Policy</h1>
 
-<p><strong>Effective:</strong> September 28, 2026<br /><strong>Contact:</strong> contact@nemofactory.co.kr</p>
+<p><strong>Effective:</strong> October 2, 2026<br /><strong>Contact:</strong> contact@nemofactory.co.kr</p>
 
-<p><strong>In one line</strong><br />PixelFriends has <strong>no sign-up, no login, and we run no servers.</strong> Your chosen pet, levels and settings stay on your device and are never sent to us. <strong>There are no ads and no analytics.</strong></p>
+<p><strong>In one line</strong><br />PixelFriends has <strong>no sign-up, no login, and we run no servers.</strong> Your chosen pet, levels and settings stay on your device and are never sent to us. To keep the app free, <strong>it contains ads</strong> — ad networks read the device's <strong>advertising identifier</strong>; what they read and how to turn it off is in <strong>section 4</strong>. <strong>There are no analytics.</strong></p>
 
 <h2>1. Information we collect</h2>
 
-<p><strong>None.</strong> We do not collect your name, contact details, email, location, photos or any other personal information. There are no accounts.</p>
+<p><strong>We collect none.</strong> Your name, contact details, email, location, photos and other personal information never reach us. There are no accounts.</p>
+
+<p>However, <strong>ad networks</strong> read the advertising identifier and general device information <strong>directly from your device</strong> to show ads (section 4). We never receive or keep those values.</p>
 
 <p>One exception: tapping <strong>Contact</strong> at the bottom of Settings opens the mail app on your device. What you write and the reply address (if you add one) travel in that email to us. <strong>Your mail app sends it</strong> — the app itself collects nothing and sends nothing to our servers.</p>
 
@@ -19,6 +21,10 @@
 <li><strong>Levels</strong> — how long each pet has been on the Dynamic Island, and snacks you have fed.</li>
 <li><strong>Theme and language</strong> — your chosen theme and language (if none, the device language is used).</li>
 <li><strong>Keep-alive setting</strong> — whether to bring your pet back to the Dynamic Island every 8 hours.</li>
+<li><strong>Feeding record</strong> — when you last gave each free food (rice ball, fish, meat), to count the wait until the next one.</li>
+<li><strong>Hungry alert setting</strong> — whether to notify you when a free rice ball is ready again.</li>
+<li><strong>Ad misuse guard</strong> — a few timestamps of ad taps and ad displays, so ads pause briefly if they are tapped repeatedly (section 4).</li>
+<li><strong>Ad settings copy</strong> — the ad settings read during the "version check" in section 5 (such as whether ads are on), kept for the next launch. <strong>These are values we send to the app, not values taken from you.</strong></li>
 </ul>
 
 <p>To count levels, the app reads how long the device has been running since it was switched on (system uptime), so changing the clock cannot inflate the time. This value is used on the device only.</p>
@@ -35,7 +41,11 @@
 </tr>
 <tr>
   <td><strong>Notifications</strong> (optional)</td>
-  <td>To tell you when your pet falls asleep (when the Dynamic Island clears), and to bring a pet back after the system has taken it down. You can decline and still use the app</td>
+  <td>To tell you when your pet falls asleep (when the Dynamic Island clears) and when it is hungry (a free rice ball is ready), and to bring a pet back after the system has taken it down. You can decline and still use the app</td>
+</tr>
+<tr>
+  <td><strong>Tracking</strong> (optional, ATT)</td>
+  <td>To use the advertising identifier (IDFA) for personalized ads (section 4). If you decline, you see non-personalized ads and the whole app works the same</td>
 </tr>
 </table>
 
@@ -43,7 +53,19 @@
 
 <h2>4. Ads and payments</h2>
 
-<p><strong>There are no ads.</strong> No ad SDK is included, and nothing reads the device's advertising identifier (IDFA), so the App Tracking Transparency prompt never appears.</p>
+<p>To keep the app free, <strong>it contains ads.</strong></p>
+
+<ul>
+<li><strong>Ads appear in two places only</strong> — a <strong>square ad</strong> on the fishing screen that opens when <strong>you tap "Fish"</strong> on the Growth tab (it closes by itself after 4 seconds and gives you the fish), and a <strong>rewarded video</strong> that plays <strong>only when you tap "Meat"</strong>. There are no ads that pop up on launch or between screens, and no banner at the bottom of the screen.</li>
+<li><strong>No feature is locked behind ads.</strong> Fish and meat are optional ways to add level time; you can use every screen and feature without them. If an ad fails to load, you still get the food.</li>
+<li><strong>Ad network</strong> — ads are served through Unity's <strong>LevelPlay (formerly ironSource)</strong>, which may mediate other ad networks (such as Unity Ads and Liftoff).</li>
+<li><strong>What they read</strong> — ad networks read the device's <strong>advertising identifier</strong> (IDFA/IDFV), approximate country and language, device model, OS version and app version. <strong>They read these directly from your device; we never receive or keep them.</strong></li>
+<li><strong>What is not sent</strong> — the values in section 2 (your pet, levels, settings, feeding record) are never passed to ad networks. The app has no code that puts them in an ad request.</li>
+<li><strong>Tracking consent</strong> — the first time you open the app, Apple's <strong>App Tracking Transparency</strong> prompt appears once. You can decline and keep every feature; you will see non-personalized ads instead. You can change this any time in <em>Settings → Privacy &amp; Security → Tracking</em>.</li>
+<li><strong>Ads stay with a subscription.</strong> Both places only show an ad when you tap them, so the subscription (unlock all) is not an ad-removal product.</li>
+</ul>
+
+<p>Ad networks handle data under their own policies — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay Privacy Policy</a>.</p>
 
 <p><strong>Payments are handled by the App Store.</strong> Everything sold in the app (pet packs, unlock all, snacks, subscriptions) is paid through the App Store. Card details go straight to Apple — <strong>we never see, receive or keep them.</strong> The app only learns whether something was bought and the price text the store provides.</p>
 
@@ -53,21 +75,36 @@
 
 <ul>
 <li><strong>Showing your pet:</strong> none. It works entirely on the device, offline.</li>
+<li><strong>Version check:</strong> once at launch, the app reads a small file that says whether this version can still be used. The same file holds <strong>ad settings</strong> (so ads can be switched off quickly without a new release). <strong>It is read-only and carries none of your data.</strong> Without internet, the app simply continues.</li>
+<li><strong>Ad requests:</strong> requests go to ad networks to fetch ads (section 4). Nothing the app records is included.</li>
 <li><strong>App Store purchases:</strong> the app talks to the App Store on your device to show prices and make purchases. Our servers are not involved.</li>
 <li><strong>Opening this page:</strong> your browser opens this page (GitHub Pages). GitHub may log your IP address, as with any web page.</li>
 </ul>
 
 <h2>6. Sharing, processors, overseas transfer, sale</h2>
 
-<p><strong>None.</strong> We collect no personal information, so there is nothing to share, transfer or sell. Payments are processed by Apple under its own policy.</p>
+<p><strong>We share, transfer or sell nothing.</strong> Payments are processed by Apple under its own policy.</p>
+
+<p>However, <strong>values that ad networks read directly from your device</strong> (the advertising identifier and the like, section 4) are sent to those companies' servers abroad.</p>
+
+<table>
+<tr><th>Recipient</th><th>Items</th><th>Purpose</th></tr>
+<tr>
+  <td>Unity Technologies (LevelPlay / ironSource) and mediated ad networks</td>
+  <td>Advertising identifier, device / OS / app version, approximate country and language</td>
+  <td>Showing ads and measuring performance</td>
+</tr>
+</table>
+
+<p>To stop this, turn off tracking (section 3) so the advertising identifier is not provided.</p>
 
 <h2>7. Retention and deletion</h2>
 
-<p>We hold no user data, so there is nothing for us to erase. Data on your device is removed when you <strong>delete the app</strong>. Emails you send through Contact are kept only as long as we need them to reply and fix the problem, then deleted.</p>
+<p>We hold no user data, so there is nothing for us to erase. Values read by ad networks are kept and deleted under their own policies. Data on your device is removed when you <strong>delete the app</strong>. Emails you send through Contact are kept only as long as we need them to reply and fix the problem, then deleted.</p>
 
 <h2>8. Children</h2>
 
-<p>PixelFriends collects no personal information and does not knowingly collect information from children.</p>
+<p>We collect no personal information through PixelFriends and do not knowingly collect information from children. If tracking is turned off (section 3), the advertising identifier is not used for personalized ads.</p>
 
 <h2>9. Your rights</h2>
 
