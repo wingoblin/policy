@@ -11,7 +11,11 @@ const LANG_NAME = {
   ko: '한국어', en: 'English', ja: '日本語', zhHant: '繁體中文', zhHans: '简体中文',
   es: 'Español', ptBR: 'Português (Brasil)', fr: 'Français', de: 'Deutsch', ru: 'Русский',
   id: 'Bahasa Indonesia', vi: 'Tiếng Việt', th: 'ไทย', hi: 'हिन्दी', ms: 'Bahasa Melayu', fil: 'Filipino',
+  ar: 'العربية',
 };
+
+// 오른쪽→왼쪽 말. 그 판 section 에만 dir 을 붙인다(템플릿은 안 건드린다 — 다른 앱 생성물이 바뀐다)
+const RTL = new Set(['ar']);
 
 // 템플릿은 닻이 없으면 navigator.language 앞 두 글자로 고른다. 두 글자로 안 잘리는 판
 // (zh-CN→zhHans · pt-*→ptBR · fil/tl→fil)은 그 판이 있는 페이지에만 이 조각을 넣어 닻을 먼저 세운다.
@@ -43,7 +47,7 @@ for (const { slug, title, langs, moved } of apps) {
   // langs 가 있으면 src/<slug>.<lang>.html 여러 개를 한 페이지에 담고 탭으로 고른다
   const body = langs
     ? aliasScript(langs) + `<nav class="langs">${langs.map(l => `<a href="#${l}">${LANG_NAME[l]}</a>`).join('')}</nav>\n` +
-      langs.map(l => `<section class="lang" data-lang="${l}">\n${readFileSync(`src/${slug}.${l}.html`, 'utf8')}</section>`).join('\n')
+      langs.map(l => `<section class="lang" data-lang="${l}"${RTL.has(l) ? ' dir="rtl"' : ''}>\n${readFileSync(`src/${slug}.${l}.html`, 'utf8')}</section>`).join('\n')
     : readFileSync(`src/${slug}.html`, 'utf8');
   mkdirSync(slug, { recursive: true });
   writeFileSync(`${slug}/index.html`, tpl.replace('{{TITLE}}', title).replace('{{BODY}}', body));

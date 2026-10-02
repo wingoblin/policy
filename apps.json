@@ -192,7 +192,18 @@
     "src": "24",
     "langs": [
       "ko",
-      "en"
+      "en",
+      "ja",
+      "zhHant",
+      "es",
+      "ptBR",
+      "fr",
+      "id",
+      "ms",
+      "vi",
+      "th",
+      "hi",
+      "ar"
     ]
   }
 ]
