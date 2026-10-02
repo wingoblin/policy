@@ -1,14 +1,14 @@
 <h1>Scrap — Privacy Policy</h1>
 
-<p><strong>Effective:</strong> September 30, 2026<br /><strong>Contact:</strong> contact@nemofactory.co.kr</p>
+<p><strong>Effective:</strong> October 3, 2026<br /><strong>Contact:</strong> contact@nemofactory.co.kr</p>
 
-<p><strong>In one line.</strong> Scrap has <strong>no server that receives your data.</strong> There is no sign-up and no sign-in, and we never ask for your name, contact details or any other personal information. Your photos are read <strong>on this device only</strong>, and the app deletes from your library exactly the ones you decided to delete — <strong>your photos are never sent anywhere.</strong> The only places the app touches the internet are <strong>one status file</strong>, <strong>ads</strong> and, when you buy something, <strong>the store’s payment system</strong> (sections 4 and 5).</p>
+<p><strong>In one line.</strong> Scrap has <strong>no server that receives your data.</strong> There is no sign-up and no sign-in, and we never ask for your name, contact details or any other personal information. Your photos are read <strong>on this device only</strong>, and the app deletes from your library exactly the ones you decided to delete — <strong>your photos are never sent anywhere.</strong> The only places the app touches the internet are <strong>one status file</strong>, <strong>ads</strong> and, when you buy something, <strong>the store’s payment system</strong> (sections 4 and 5). On Android, a completed purchase also sends a <strong>one-line sale alert</strong> to our notification server (section 4).</p>
 
 <h2>1. Information we collect</h2>
 
 <p>None. We do not collect your name, contact details, email, date of birth or any other personal information. The app has no accounts, so there is no sign-up or sign-in at all.</p>
 
-<p>We run no server that receives your data. There is nowhere for your information to accumulate on our side.</p>
+<p>We run no server that receives your data. There is nowhere for your information to accumulate on our side. The one exception is Android purchases: when a purchase completes, a one-line sale alert reaches us, carrying nothing that identifies you (section 4).</p>
 
 <h2>2. Photos and library access</h2>
 
@@ -47,6 +47,7 @@
 <li><strong>Status file</strong> (<code>beautiful-tulumba-77ca83.netlify.app</code>) — at launch the app reads <strong>a single public JSON file</strong> holding the minimum supported version and the ad settings. Everyone receives the same file and <strong>we attach nothing of yours to the request.</strong> As with opening any web page, the hosting provider (Netlify) may record your IP address in its server logs. If the read fails, the app simply opens as usual.</li>
 <li><strong>Ads</strong> — see section 5.</li>
 <li><strong>Purchases</strong> — for “Unlock Duplicates” (a one-time purchase), the app connects to the <strong>App Store or Google Play purchase service</strong> on your device to check for unfinished purchases and to handle buying and restoring. Payment happens in the store’s own payment sheet and is processed by the store; <strong>we never receive your payment method or store account details.</strong> The app only records on the device whether you bought it (section 3).</li>
+<li><strong>Sale alert (Android only)</strong> — when a purchase completes on Android, the app sends one line to our notification server. It carries only <strong>the app name, the product ID, the price shown by the store and the order number the store assigned</strong> — <strong>nothing that identifies you, and none of your photos or sorting data.</strong> The server (hosted on Render) passes the line on to our Telegram chat so we know a sale happened. As with any web request, your IP address may appear in the hosting provider’s access logs. If it fails it is not resent, and your purchase goes ahead regardless. <strong>On iPhone and iPad this request is never sent</strong> (Apple notifies us directly).</li>
 <li><strong>Opening this policy · leaving a review</strong> — tapping these in Settings opens your browser or the store app, which may leave the same kind of access record. While you use the app, the operating system may also show its own <strong>rating prompt</strong> once; that prompt is displayed and answered entirely by the operating system, and we never learn who rated the app.</li>
 <li><strong>Contact us</strong> — the app does not send anything; it <strong>only opens your mail app</strong> (section 9).</li>
 </ul>
@@ -91,7 +92,7 @@
 
 <p><strong>What we declared on the App Store privacy card</strong><br />Apple groups the values above into its own categories. Scrap declares <strong>Device ID · Advertising Data · Product Interaction · Other Usage Data · Coarse Location · Performance Data · Other Data</strong> — all of it the same data listed above. None of it is linked to your identity (there is no account to link it to), and <strong>the items declared as used for tracking are the advertising identifier (Device ID) and the ad interaction records (Advertising Data, Product Interaction, Other Usage Data).</strong> <strong>Photos are not on that list</strong>, because they never leave your device.</p>
 
-<p><strong>What we declared in Google Play’s Data safety section</strong><br />Google also groups the values above into its own categories. Scrap declares <strong>Device or other IDs · Approximate location · App activity (App interactions · Installed apps) · App info and performance (Crash logs · Diagnostics)</strong> — all of it the same data listed above. It is <strong>shared with the ad providers, for advertising purposes.</strong> <strong>Photos are not on that list</strong>, because they never leave your device.</p>
+<p><strong>What we declared in Google Play’s Data safety section</strong><br />Google also groups the values above into its own categories. Scrap declares <strong>Device or other IDs · Approximate location · App activity (App interactions · Installed apps) · App info and performance (Crash logs · Diagnostics)</strong> — all of it the same data listed above. It is <strong>shared with the ad providers, for advertising purposes.</strong> <strong>Photos are not on that list</strong>, because they never leave your device. Separately, we declare <strong>Financial info (Purchase history)</strong> — this is the Android sale alert in section 4. It is not shared, and we use it only to count sales (analytics).</p>
 
 <p><strong>Protection against mis-taps</strong><br />When an ad is tapped, that slot rests for a while so a brushing finger cannot open ads over and over. <strong>The tap time used for this stays on your device</strong> (section 3).</p>
 
@@ -102,10 +103,10 @@
 <p>We do not move your information abroad. In the cases below, however, your device communicates <strong>directly</strong> with servers outside your country, so some information may be processed there.</p>
 
 <ul>
-<li><strong>Recipients and data</strong> — Unity Technologies (Unity LevelPlay · ironSource · Unity Ads) and Liftoff Mobile, Inc. (Liftoff Monetize): the values in section 5 (advertising identifier, device and app information, IP address, impression and tap records, and on Android part of the list of installed apps). Netlify, Inc. (status-file hosting): your IP address. <strong>No personal information and no photos are included in either case.</strong></li>
+<li><strong>Recipients and data</strong> — Unity Technologies (Unity LevelPlay · ironSource · Unity Ads) and Liftoff Mobile, Inc. (Liftoff Monetize): the values in section 5 (advertising identifier, device and app information, IP address, impression and tap records, and on Android part of the list of installed apps). Netlify, Inc. (status-file hosting): your IP address. Render Services, Inc. (notification server hosting) and Telegram (alert delivery): the Android sale alert in section 4 (app name, product ID, displayed price, order number) and your IP address. <strong>No personal information and no photos are included in either case.</strong></li>
 <li><strong>Countries</strong> — the United States and other countries where these providers host their servers.</li>
-<li><strong>When and how</strong> — over the network, at launch (status file) and when an ad is shown.</li>
-<li><strong>Purpose and retention</strong> — ad delivery and measurement, file delivery. Retention follows each provider’s own policy (links in section 5).</li>
+<li><strong>When and how</strong> — over the network, at launch (status file) and when an ad is shown. On Android, also when a purchase completes (sale alert).</li>
+<li><strong>Purpose and retention</strong> — ad delivery and measurement, file delivery. Retention follows each provider’s own policy (links in section 5). The sale alert tells us a sale happened and stays in our notification chat as a sales record.</li>
 <li><strong>How to opt out</strong> — decline tracking or reset your advertising identifier and it will not be passed on (section 5). Deleting the app stops all transfers.</li>
 </ul>
 
@@ -134,11 +135,11 @@
 
 <h2>10. Retention</h2>
 
-<p>We collect no personal information, so we have no retention period. Everything in section 3 lives on your device and disappears the moment you delete the app. Contact emails (section 9) are deleted once handled.</p>
+<p>We collect no personal information, so we have no retention period. Everything in section 3 lives on your device and disappears the moment you delete the app. Contact emails (section 9) are deleted once handled. Android sale alerts (section 4) stay in our notification chat as a sales record.</p>
 
 <h2>11. Security</h2>
 
-<p>This app runs no server that receives your data. <strong>Not creating a place for a leak to happen</strong> is this app’s security measure. Every request the app makes uses an encrypted connection (HTTPS).</p>
+<p>This app runs no server that receives your data. <strong>Not creating a place for a leak to happen</strong> is this app’s security measure. Every request the app makes uses an encrypted connection (HTTPS). The sale alert in section 4 carries nothing that identifies you either.</p>
 
 <h2>12. Your rights</h2>
 
