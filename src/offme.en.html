@@ -1,8 +1,8 @@
 <h1>OFFME — Privacy Policy</h1>
 
-<p><strong>Effective:</strong> September 30, 2026<br /><strong>Contact:</strong> contact@nemofactory.co.kr</p>
+<p><strong>Effective:</strong> October 9, 2026<br /><strong>Contact:</strong> contact@nemofactory.co.kr</p>
 
-<p><strong>In one line.</strong> OFFME has <strong>no accounts, no sign-in, and no server that stores your information.</strong> Because it is an app that blocks the apps you choose, it reads <strong>which apps to block, which app is open right now, and how many steps you walked today</strong> on your device. Those values are <strong>used only on your device and never leave it</strong> (sections 3, 4 and 5). The only internet requests the app makes are <strong>checking an app status file</strong>, <strong>store payments</strong>, and, on Android, <strong>a one-line payment notice</strong> at the moment a purchase completes — all listed in section 9. There are no ads and no analytics tools.</p>
+<p><strong>In one line.</strong> OFFME has <strong>no accounts, no sign-in, and no server that stores your information.</strong> Because it is an app that blocks the apps you choose, it reads <strong>which apps to block, which app is open right now, and how many steps you walked today</strong> on your device. Those values are <strong>used only on your device and never leave it</strong> (sections 3, 4 and 5). The only internet requests the app makes are <strong>checking an app status file</strong>, <strong>checking for app updates</strong>, <strong>store payments</strong>, and, on Android, <strong>a one-line payment notice</strong> at the moment a purchase completes — all listed in section 9. There are no ads and no analytics tools.</p>
 
 <p><strong>This app does not monitor you.</strong> OFFME helps you manage <strong>your own device</strong>. It has no feature for looking into someone else's device, and it never sends your usage to a parent, an employer or any third party.</p>
 
@@ -22,9 +22,11 @@
 <li><strong>Step locks</strong> — the lock's name, the daily step goal, the apps that open once the goal is met, and the time of any scheduled turn-off.</li>
 <li><strong>About me</strong> — the <strong>sex, age, height and weight</strong> you pick yourself, entered when you first create a step lock (you can skip it) or under "About me" on the Me tab. Used only to calculate a <strong>recommended step goal, distance walked and calories burned</strong>; never used to decide whether apps are locked.</li>
 <li><strong>Records</strong> — finished timers (start and end times), steps walked each day and whether the goal was met, total time locked, times you ended a lock early, days kept without a fine, and the day you first opened the app. Used only to show them back to you on the Stats and Me tabs.</li>
-<li><strong>Open for a bit</strong> — when the current open window ends, and whether today's free open has been used.</li>
-<li><strong>Purchase status</strong> — whether you are subscribed, how many unused passes you have, and the <strong>store transaction numbers</strong> kept so that the same purchase is never applied twice. No payment details such as card numbers.</li>
-<li><strong>Settings</strong> — uninstall protection on/off (iOS), your chosen language, and the date the rating prompt was shown (section 11).</li>
+<li><strong>Open for a bit</strong> — when the current open window ends, and the times you opened apps during a lock (used for records and quest checks).</li>
+<li><strong>Growth records</strong> — the <strong>Sunshine</strong> (a currency used only inside the app) you earned, received and spent on the Grow tab, badges and quests received, the number of days you cleared every quest, the outfits you own and the ones you are wearing, and the days you mended a streak. Used only to show the Grow tab and to give each reward only once.</li>
+<li><strong>Purchase status</strong> — whether you have Pro (subscription or lifetime), how many Quick Unlock Passes and Force End Passes you have left, Sunshine bought with money and its <strong>store transaction numbers</strong> (so the same purchase is never applied twice, and so a refund takes back the same amount), and the transaction numbers of refunds already applied. No payment details such as card numbers.</li>
+<li><strong>Settings</strong> — uninstall protection on/off (iOS), your chosen language, the notice period you wait before turning off or deleting a lock, the time zone used to split days, markers so a tip you have already seen is not shown again, and the date the rating prompt was shown (section 11).</li>
+<li><strong>App update files</strong> — new app screen files downloaded by the update check in section 9. The app opens with them the next time it starts.</li>
 </ul>
 
 <p>None of these values is <strong>sent to us, and we cannot read them.</strong> Deleting the app deletes all of them (section 12).</p>
@@ -87,6 +89,9 @@
 <li><strong>Run at startup</strong> (<code>RECEIVE_BOOT_COMPLETED</code>) — so blocking resumes by itself after the device restarts.</li>
 <li><strong>Physical activity</strong> (<code>ACTIVITY_RECOGNITION</code>) — to count steps for step locks (section 5).</li>
 <li><strong>Internet and billing</strong> (<code>INTERNET</code> · <code>BILLING</code>) — for the requests in section 9 and Google Play payments.</li>
+<li><strong>View network state</strong> (<code>ACCESS_NETWORK_STATE</code>) — so the update check in section 9 runs only when the internet is connected. Values such as which network you are on are not used.</li>
+<li><strong>Vibration</strong> (<code>VIBRATE</code>) — a permission included in the app's default setup. It does not touch personal information.</li>
+<li><strong>Install referrer</strong> (<code>BIND_GET_INSTALL_REFERRER_SERVICE</code>) — a permission added by the Google Play Billing library. OFFME does not read or send where the app was installed from.</li>
 </ul>
 <p>Android treats "Usage Access" and "Display over other apps" as special permissions that you turn on yourself in the settings screen, and you can turn them off there at any time. Turning them off stops blocking.</p>
 
@@ -103,18 +108,19 @@
 <p>The following is the complete list of cases in which the app sends a request over the internet. <strong>Blocking and step locks themselves work on the device without the internet.</strong></p>
 <ul>
 <li><strong>App status file</strong> — when the app starts, it reads one small file on our website (hosted on Netlify) to check whether your version is too old and must be updated. This request <strong>only downloads the file and carries no values about you.</strong> As with opening any web page, the hosting server's logs may record the connecting IP address. If there is no connection, the check is skipped and the app works as usual.</li>
-<li><strong>Store payments</strong> — showing prices, buying something and restoring purchases talk to the App Store · Google Play on your device. This is handled by Apple's and Google's payment systems; our server is not involved (section 10).</li>
+<li><strong>App update check</strong> — when the app starts, it asks Expo's servers (EAS Update, USA) whether new app screen files are available and, if so, downloads them (section 2). This request carries only what is needed to pick the right files — <strong>app version, platform (iOS · Android), update channel and the current update ID</strong> — and no values such as your name, contact details, device identifiers, step counts or blocked apps. Expo's server logs may record the connecting IP address. If there is no connection, it is skipped and the app works as usual.</li>
+<li><strong>Store payments</strong> — showing prices, buying something and restoring purchases talk to the App Store · Google Play on your device. This is handled by Apple's and Google's payment systems; our server is not involved (section 10). On Android, the Google Play Billing library may send diagnostic information to Google while processing payments; this is governed by Google's policies.</li>
 <li><strong>Payment notice (Android only)</strong> — the moment a purchase completes on Android, the app sends one request to our server (<code>gwansang-server.onrender.com</code>, hosted on Render) to tell the developer "one was sold". It carries only <strong>the app name, platform, product name and ID, amount and store order number</strong> — nothing like your name, contact details, device identifiers, step count or blocked apps. The server forwards it as one line to the developer's messenger (Telegram), uses the order number only briefly so the same notice is not sent twice, and <strong>does not store it.</strong> If the request fails, the purchase is not affected. <strong>This request is never sent on iOS.</strong></li>
 <li><strong>Links you tap yourself</strong> — "Privacy policy" (this page, GitHub Pages), "Terms of Use" (Apple's standard terms page), "Manage subscription" (the App Store · Google Play subscription screen) and the store link on the update screen open <strong>your device's browser or store app.</strong> From there, that site's own policy applies.</li>
 </ul>
 
 <h2>10. Payments</h2>
 
-<p>The app sells the following. All are <strong>optional</strong>; without buying anything you can still use the basics (timer locks, one routine or step lock, and one free "Open for a bit" per day).</p>
+<p>The app sells the following. All are <strong>optional</strong>; without buying anything you can still use the basics (timer locks up to 3 hours a day, one routine or step lock in total, and the Grow tab).</p>
 <ul>
-<li><strong>OFFME Pro (monthly · yearly subscription)</strong> — create unlimited routines and step locks. It renews automatically at the same price unless canceled at least 24 hours before the period ends; cancel in the App Store · Google Play subscription settings.</li>
-<li><strong>Open for a bit (consumable)</strong> — opens locked apps for 10 minutes.</li>
-<li><strong>End now (consumable)</strong> — turn off or delete a routine right away instead of waiting out the 24-hour notice, or end a running timer right away.</li>
+<li><strong>OFFME Pro (monthly · yearly subscription)</strong> — create unlimited routines and step locks, use timers with no daily time limit, and get double Sunshine from quests. It renews automatically at the same price unless canceled at least 24 hours before the period ends; cancel in the App Store · Google Play subscription settings.</li>
+<li><strong>OFFME Pro Lifetime (one-time purchase)</strong> — the same benefits as the subscription, with no time limit. It does not renew automatically.</li>
+<li><strong>Sunshine packs (consumable)</strong> — 50 · 250 · 500 · 1,000 Sunshine. Sunshine is a currency used only inside the app; on the Grow tab you can buy outfits with it or exchange it for a <strong>Quick Unlock Pass</strong> (opens locked apps for 10 minutes) or a <strong>Force End Pass</strong> (ends a lock right away). It cannot be exchanged for cash or transferred to anyone else. Purchased Sunshine is recorded only on your device, so it disappears if you delete the app, and if a payment is refunded, the Sunshine received from that payment is taken back.</li>
 </ul>
 <ul>
 <li>Payments are processed by <strong>Apple's App Store and Google Play.</strong> Payment details such as card or account numbers <strong>never reach us</strong>, and we cannot see them.</li>
@@ -144,7 +150,7 @@
 
 <h2>14. International transfer</h2>
 
-<p>No personal information is transferred abroad. However, the requests in section 9 reach servers of overseas providers — the app status file goes through Netlify (USA), and the Android payment notice goes through Render (USA) and Telegram. These requests carry nothing that identifies a person.</p>
+<p>No personal information is transferred abroad. However, the requests in section 9 reach servers of overseas providers — the app status file goes through Netlify (USA), the app update check goes through Expo (USA), and the Android payment notice goes through Render (USA) and Telegram. These requests carry nothing that identifies a person.</p>
 
 <h2>15. Children</h2>
 

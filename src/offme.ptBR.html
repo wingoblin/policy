@@ -1,8 +1,8 @@
 <h1>OFFME — Política de privacidade</h1>
 
-<p><strong>Vigência:</strong> 30 de setembro de 2026<br /><strong>Contato:</strong> contact@nemofactory.co.kr</p>
+<p><strong>Vigência:</strong> 9 de outubro de 2026<br /><strong>Contato:</strong> contact@nemofactory.co.kr</p>
 
-<p><strong>Em uma linha.</strong> O OFFME <strong>não tem contas, não tem login e não tem nenhum servidor que armazene suas informações.</strong> Por ser um app que bloqueia os apps que você escolhe, ele lê no seu dispositivo <strong>quais apps bloquear, qual app está aberto agora e quantos passos você deu hoje</strong>. Esses valores <strong>são usados só no seu dispositivo e nunca saem dele</strong> (seções 3, 4 e 5). As únicas solicitações que o app faz pela internet são <strong>a consulta a um arquivo de status do app</strong>, <strong>os pagamentos na loja</strong> e, no Android, <strong>um aviso de pagamento de uma linha</strong> no momento em que uma compra é concluída — todas listadas na seção 9. Não há anúncios nem ferramentas de análise.</p>
+<p><strong>Em uma linha.</strong> O OFFME <strong>não tem contas, não tem login e não tem nenhum servidor que armazene suas informações.</strong> Por ser um app que bloqueia os apps que você escolhe, ele lê no seu dispositivo <strong>quais apps bloquear, qual app está aberto agora e quantos passos você deu hoje</strong>. Esses valores <strong>são usados só no seu dispositivo e nunca saem dele</strong> (seções 3, 4 e 5). As únicas solicitações que o app faz pela internet são <strong>a consulta a um arquivo de status do app</strong>, <strong>a verificação de atualizações do app</strong>, <strong>os pagamentos na loja</strong> e, no Android, <strong>um aviso de pagamento de uma linha</strong> no momento em que uma compra é concluída — todas listadas na seção 9. Não há anúncios nem ferramentas de análise.</p>
 
 <p><strong>Este app não monitora você.</strong> O OFFME ajuda você a gerenciar <strong>o seu próprio dispositivo</strong>. Ele não tem nenhum recurso para ver o dispositivo de outra pessoa e nunca envia o seu uso a pais, empregadores ou quaisquer terceiros.</p>
 
@@ -22,9 +22,11 @@
 <li><strong>Bloqueios por passos</strong> — o nome do bloqueio, a meta diária de passos, os apps que abrem quando a meta é atingida e o momento de qualquer desativação agendada.</li>
 <li><strong>Meus dados</strong> — o <strong>sexo, a idade, a altura e o peso</strong> que você mesmo escolhe, informados ao criar seu primeiro bloqueio por passos (você pode pular) ou em “Meus dados”, na aba Eu. Usados só para calcular uma <strong>meta de passos recomendada, a distância percorrida e as calorias queimadas</strong>; nunca usados para decidir se os apps ficam bloqueados.</li>
 <li><strong>Registros</strong> — timers concluídos (horários de início e término), passos dados a cada dia e se a meta foi atingida, tempo total bloqueado, momentos em que você encerrou um bloqueio antes da hora, dias cumpridos sem multa e o dia em que você abriu o app pela primeira vez. Usados só para mostrá-los de volta a você nas abas Dados e Eu.</li>
-<li><strong>Abrir um pouco</strong> — quando termina o período de abertura atual e se a abertura gratuita de hoje já foi usada.</li>
-<li><strong>Status de compra</strong> — se você é assinante, quantos passes não usados você tem e os <strong>números de transação da loja</strong>, guardados para que a mesma compra nunca seja aplicada duas vezes. Nenhum dado de pagamento, como números de cartão.</li>
-<li><strong>Configurações</strong> — proteção contra desinstalação ligada/desligada (iOS), o idioma escolhido e a data em que o pedido de avaliação foi exibido (seção 11).</li>
+<li><strong>Abrir um pouco</strong> — quando termina o período de abertura atual e os momentos em que você abriu algo no meio de um bloqueio (usados nos registros e na verificação das missões).</li>
+<li><strong>Registro de crescimento</strong> — o <strong>sol</strong> (uma moeda usada só dentro do app) da aba Crescer que você ganhou, recebeu e gastou, os selos e missões recebidos, o número de dias em que você concluiu todas as missões, as roupas que você tem e as que o personagem está usando, e os dias em que você recuperou uma sequência. Usado só para mostrar a aba Crescer e para dar cada recompensa uma única vez.</li>
+<li><strong>Status de compra</strong> — se você tem o Pro (assinatura ou vitalício), quantos Passes de abertura rápida e Passes de encerramento forçado restam, o sol comprado com dinheiro e seus <strong>números de transação da loja</strong> (para que a mesma compra nunca seja aplicada duas vezes e para retirar essa quantidade se houver reembolso), e os números de transação dos reembolsos já aplicados. Nenhum dado de pagamento, como números de cartão.</li>
+<li><strong>Configurações</strong> — proteção contra desinstalação ligada/desligada (iOS), o idioma escolhido, o tempo de aviso a esperar para desativar ou apagar um bloqueio, o fuso horário que define onde começa cada dia, marcas para não mostrar de novo avisos já vistos e a data em que o pedido de avaliação foi exibido (seção 11).</li>
+<li><strong>Arquivos de atualização do app</strong> — novos arquivos de telas do app baixados pela verificação de atualizações da seção 9. O app abre com eles na próxima vez que for iniciado.</li>
 </ul>
 
 <p>Nenhum desses valores <strong>é enviado para nós, e não conseguimos lê-los.</strong> Apagar o app apaga todos eles (seção 12).</p>
@@ -87,6 +89,9 @@
 <li><strong>Executar na inicialização</strong> (<code>RECEIVE_BOOT_COMPLETED</code>) — para que o bloqueio seja retomado sozinho depois que o dispositivo reiniciar.</li>
 <li><strong>Atividade física</strong> (<code>ACTIVITY_RECOGNITION</code>) — para contar passos para os bloqueios por passos (seção 5).</li>
 <li><strong>Internet e faturamento</strong> (<code>INTERNET</code> · <code>BILLING</code>) — para as solicitações da seção 9 e os pagamentos do Google Play.</li>
+<li><strong>Ver o estado da rede</strong> (<code>ACCESS_NETWORK_STATE</code>) — para verificar atualizações (seção 9) só quando há conexão com a internet. Valores como a qual rede você está conectado não são usados.</li>
+<li><strong>Vibração</strong> (<code>VIBRATE</code>) — uma permissão incluída na configuração básica do app. Não envolve informações pessoais.</li>
+<li><strong>Origem da instalação</strong> (<code>BIND_GET_INSTALL_REFERRER_SERVICE</code>) — uma permissão adicionada pela biblioteca de faturamento do Google Play. O OFFME não lê nem envia de onde o app foi instalado.</li>
 </ul>
 <p>O Android trata “Acesso ao uso” e “Sobrepor a outros apps” como permissões especiais que você mesmo ativa na tela de configurações, e você pode desativá-las ali a qualquer momento. Desativá-las interrompe o bloqueio.</p>
 
@@ -103,18 +108,19 @@
 <p>Esta é a lista completa dos casos em que o app envia uma solicitação pela internet. <strong>O bloqueio e os bloqueios por passos em si funcionam no dispositivo sem internet.</strong></p>
 <ul>
 <li><strong>Arquivo de status do app</strong> — quando o app é iniciado, ele lê um pequeno arquivo no nosso site (hospedado na Netlify) para verificar se a sua versão está desatualizada demais e precisa ser atualizada. Essa solicitação <strong>apenas baixa o arquivo e não traz nenhum valor sobre você.</strong> Como ao abrir qualquer página da web, os registros do servidor de hospedagem podem anotar o endereço IP da conexão. Se não houver conexão, a verificação é ignorada e o app funciona normalmente.</li>
-<li><strong>Pagamentos na loja</strong> — exibir preços, comprar algo e restaurar compras se comunicam com a App Store · Google Play no seu dispositivo. Isso é tratado pelos sistemas de pagamento da Apple e do Google; nosso servidor não participa (seção 10).</li>
+<li><strong>Verificação de atualizações do app</strong> — ao ser iniciado, o app pergunta aos servidores da Expo (EAS Update, EUA) se há novos arquivos de telas do app e, se houver, os baixa (seção 2). Essa solicitação traz só os valores necessários para escolher os arquivos certos, como <strong>a versão do app, a plataforma (iOS · Android), o canal de atualização e o número da atualização em uso</strong>, e não traz valores como nome, contatos, identificadores do dispositivo, passos ou apps bloqueados. O IP de conexão pode ficar nos registros do servidor da Expo. Se não houver conexão, a verificação é ignorada e o app funciona normalmente.</li>
+<li><strong>Pagamentos na loja</strong> — exibir preços, comprar algo e restaurar compras se comunicam com a App Store · Google Play no seu dispositivo. Isso é tratado pelos sistemas de pagamento da Apple e do Google; nosso servidor não participa (seção 10). No Android, a biblioteca de faturamento do Google Play pode enviar informações de diagnóstico ao Google enquanto processa os pagamentos; isso segue as políticas do Google.</li>
 <li><strong>Aviso de pagamento (só Android)</strong> — no momento em que uma compra é concluída no Android, o app envia uma solicitação ao nosso servidor (<code>gwansang-server.onrender.com</code>, hospedado na Render) para avisar o desenvolvedor de que “uma foi vendida”. Ela traz só <strong>o nome do app, a plataforma, o nome e o ID do produto, o valor e o número do pedido na loja</strong> — nada como seu nome, dados de contato, identificadores do dispositivo, contagem de passos ou apps bloqueados. O servidor encaminha isso como uma linha para o mensageiro do desenvolvedor (Telegram), usa o número do pedido só por um breve momento para que o mesmo aviso não seja enviado duas vezes e <strong>não o armazena.</strong> Se a solicitação falhar, a compra não é afetada. <strong>Essa solicitação nunca é enviada no iOS.</strong></li>
 <li><strong>Links em que você mesmo toca</strong> — “Política de privacidade” (esta página, GitHub Pages), “Termos de uso” (a página de termos padrão da Apple), “Gerenciar assinatura” (a tela de assinaturas da App Store · Google Play) e o link da loja na tela de atualização abrem <strong>o navegador ou o app da loja do seu dispositivo.</strong> A partir daí, vale a política do próprio site.</li>
 </ul>
 
 <h2>10. Pagamentos</h2>
 
-<p>O app vende o seguinte. Tudo é <strong>opcional</strong>; sem comprar nada, você ainda pode usar o básico (bloqueios com timer, um horário ou bloqueio por passos e um “Abrir um pouco” gratuito por dia).</p>
+<p>O app vende o seguinte. Tudo é <strong>opcional</strong>; sem comprar nada, você ainda pode usar o básico (bloqueios com timer de até 3 horas por dia, um horário ou bloqueio por passos no total e a aba Crescer).</p>
 <ul>
-<li><strong>OFFME Pro (assinatura mensal · anual)</strong> — crie horários e bloqueios por passos sem limite. A assinatura é renovada automaticamente pelo mesmo preço, a menos que seja cancelada pelo menos 24 horas antes do fim do período; cancele nas configurações de assinaturas da App Store · Google Play.</li>
-<li><strong>Abrir um pouco (consumível)</strong> — abre os apps bloqueados por 10 minutos.</li>
-<li><strong>Encerrar agora (consumível)</strong> — desative ou apague um horário na hora, em vez de esperar o aviso de 24 horas, ou encerre na hora um timer em andamento.</li>
+<li><strong>OFFME Pro (assinatura mensal · anual)</strong> — crie horários e bloqueios por passos sem limite, use timers sem limite de tempo diário e ganhe o dobro de sol nas missões. A assinatura é renovada automaticamente pelo mesmo preço, a menos que seja cancelada pelo menos 24 horas antes do fim do período; cancele nas configurações de assinaturas da App Store · Google Play.</li>
+<li><strong>OFFME Pro Vitalício (pagamento único)</strong> — os mesmos benefícios da assinatura, sem prazo. Não é renovado automaticamente.</li>
+<li><strong>Pacotes de sol (consumível)</strong> — 50 · 250 · 500 · 1.000 de sol. O sol é uma moeda usada só dentro do app; na aba Crescer você pode comprar roupas com ele ou trocá-lo por um <strong>Passe de abertura rápida</strong> (abre os apps bloqueados por 10 minutos) ou um <strong>Passe de encerramento forçado</strong> (encerra um bloqueio na hora). Ele não pode ser trocado por dinheiro nem transferido para outras pessoas. O sol comprado fica registrado só no seu dispositivo, então desaparece se você apagar o app, e, se um pagamento for reembolsado, o sol recebido com esse pagamento é retirado.</li>
 </ul>
 <ul>
 <li>Os pagamentos são processados pela <strong>App Store da Apple e pelo Google Play.</strong> Dados de pagamento, como números de cartão ou de conta, <strong>nunca chegam até nós</strong>, e não conseguimos vê-los.</li>
@@ -144,7 +150,7 @@
 
 <h2>14. Transferência internacional</h2>
 
-<p>Nenhuma informação pessoal é transferida para o exterior. No entanto, as solicitações da seção 9 chegam a servidores de fornecedores estrangeiros — o arquivo de status do app passa pela Netlify (EUA), e o aviso de pagamento do Android passa pela Render (EUA) e pelo Telegram. Essas solicitações não trazem nada que identifique uma pessoa.</p>
+<p>Nenhuma informação pessoal é transferida para o exterior. No entanto, as solicitações da seção 9 chegam a servidores de fornecedores estrangeiros — o arquivo de status do app passa pela Netlify (EUA), a verificação de atualizações do app passa pela Expo (EUA), e o aviso de pagamento do Android passa pela Render (EUA) e pelo Telegram. Essas solicitações não trazem nada que identifique uma pessoa.</p>
 
 <h2>15. Crianças</h2>
 

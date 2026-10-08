@@ -1,8 +1,8 @@
 <h1>OFFME — 隐私政策</h1>
 
-<p><strong>生效日期：</strong>2026年9月30日<br /><strong>联系方式：</strong>contact@nemofactory.co.kr</p>
+<p><strong>生效日期：</strong>2026年10月9日<br /><strong>联系方式：</strong>contact@nemofactory.co.kr</p>
 
-<p><strong>一句话说明。</strong>OFFME <strong>没有账号、没有登录，也没有存储你信息的服务器。</strong>由于这是一款屏蔽你所选应用的应用，它会在你的设备上读取<strong>要屏蔽哪些应用、当前打开的是哪个应用，以及你今天走了多少步</strong>。这些值<strong>只在你的设备上使用，绝不会离开设备</strong>（第 3、4、5 条）。应用发出的网络请求只有<strong>检查应用状态文件</strong>、<strong>商店支付</strong>，以及在 Android 上购买完成那一刻的<strong>一行支付通知</strong>，全部列于第 9 条。没有广告，也没有分析工具。</p>
+<p><strong>一句话说明。</strong>OFFME <strong>没有账号、没有登录，也没有存储你信息的服务器。</strong>由于这是一款屏蔽你所选应用的应用，它会在你的设备上读取<strong>要屏蔽哪些应用、当前打开的是哪个应用，以及你今天走了多少步</strong>。这些值<strong>只在你的设备上使用，绝不会离开设备</strong>（第 3、4、5 条）。应用发出的网络请求只有<strong>检查应用状态文件</strong>、<strong>检查应用更新</strong>、<strong>商店支付</strong>，以及在 Android 上购买完成那一刻的<strong>一行支付通知</strong>，全部列于第 9 条。没有广告，也没有分析工具。</p>
 
 <p><strong>这款应用不会监视你。</strong>OFFME 帮助你管理<strong>自己的设备</strong>。它没有查看他人设备的功能，也绝不会把你的使用情况发送给父母、雇主或任何第三方。</p>
 
@@ -22,9 +22,11 @@
 <li><strong>步数锁</strong> — 锁定的名称、每日步数目标、达成目标后才会打开的应用，以及任何已预约关闭的时间。</li>
 <li><strong>我的资料</strong> — 你自己选择的<strong>性别、年龄、身高和体重</strong>，在首次创建步数锁时（可以跳过）或在“我的”标签页的“我的资料”中输入。仅用于计算<strong>推荐步数目标、步行距离和消耗的卡路里</strong>，绝不用于判断是否锁定应用。</li>
 <li><strong>记录</strong> — 已结束的计时器（开始和结束时间）、每天走的步数及是否达成目标、累计锁定时长、提前结束锁定的时间、没有交罚金而坚持下来的天数，以及首次打开应用的日期。仅用于在“记录”和“我的”标签页中显示给你看。</li>
-<li><strong>暂时打开</strong> — 当前开放时段结束的时间，以及今天的免费打开是否已使用。</li>
-<li><strong>购买状态</strong> — 是否正在订阅、未使用的使用券数量，以及为避免同一笔购买被重复计入而记录的<strong>商店交易编号</strong>。不包含卡号等支付信息。</li>
-<li><strong>设置</strong> — 防止删除应用的开／关（iOS）、你选择的语言，以及显示评分请求的日期（第 11 条）。</li>
+<li><strong>暂时打开</strong> — 当前开放时段结束的时间，以及锁定期间中途打开的时间（用于记录和任务判定）。</li>
+<li><strong>成长记录</strong> — “成长”标签页中<strong>阳光</strong>（仅在应用内使用的货币）的赚取、领取和使用数量，获得的徽章和任务，完成全部任务的天数，拥有的服装和正在穿的服装，以及接续连续记录的日期。仅用于显示“成长”标签页，并确保每项奖励只发放一次。</li>
+<li><strong>购买状态</strong> — 是否为 Pro（订阅或终身）、剩余的临时解锁券和强制结束券数量、用钱购买的阳光及其<strong>商店交易编号</strong>（用于避免同一笔购买被重复计入，并在退款时扣回相应数量），以及已处理退款的交易编号。不包含卡号等支付信息。</li>
+<li><strong>设置</strong> — 防止删除应用的开／关（iOS）、你选择的语言、关闭或删除锁定时需要等待的预告时间、划分一天的基准时区、已看过的提示不再显示的标记，以及显示评分请求的日期（第 11 条）。</li>
+<li><strong>应用更新文件</strong> — 通过第 9 条的更新检查下载的新应用界面文件。下次启动应用时会使用这些文件打开。</li>
 </ul>
 
 <p>这些值<strong>都不会发送给我们，我们也无法读取。</strong>删除应用即会全部一并删除（第 12 条）。</p>
@@ -87,6 +89,9 @@
 <li><strong>开机时运行</strong>（<code>RECEIVE_BOOT_COMPLETED</code>） — 让设备重启后屏蔽能自动恢复。</li>
 <li><strong>身体活动</strong>（<code>ACTIVITY_RECOGNITION</code>） — 为步数锁统计步数（第 5 条）。</li>
 <li><strong>网络与结算</strong>（<code>INTERNET</code> · <code>BILLING</code>） — 用于第 9 条的请求和 Google Play 支付。</li>
+<li><strong>查看网络状态</strong>（<code>ACCESS_NETWORK_STATE</code>） — 仅在连接互联网时进行第 9 条的更新检查。不会使用连接的是哪个网络之类的值。</li>
+<li><strong>振动</strong>（<code>VIBRATE</code>） — 应用基本配置中自带的权限。不涉及个人信息。</li>
+<li><strong>安装来源查询</strong>（<code>BIND_GET_INSTALL_REFERRER_SERVICE</code>） — Google Play 结算库附带添加的权限。OFFME 不会读取或发送应用是从哪里安装的。</li>
 </ul>
 <p>Android 将“使用情况访问权限”和“显示在其他应用的上层”视为特殊权限，需要你在设置界面中自行开启，并可随时在同一界面中关闭。关闭后屏蔽即会停止。</p>
 
@@ -103,18 +108,19 @@
 <p>以下是应用通过互联网发出请求的完整清单。<strong>屏蔽和步数锁本身无需联网即可在设备上工作。</strong></p>
 <ul>
 <li><strong>应用状态文件</strong> — 应用启动时，会读取我们网站（由 Netlify 托管）上的一个小文件，检查你的版本是否过旧而必须更新。此请求<strong>只下载文件，不包含任何关于你的值。</strong>但与打开任何网页一样，托管服务器的日志可能会记录连接的 IP 地址。如果无法连接，就会跳过检查，应用照常运行。</li>
-<li><strong>商店支付</strong> — 显示价格、购买和恢复购买时，会在你的设备上与 App Store · Google Play 通信。这由 Apple 和 Google 的支付系统处理，我们的服务器不参与（第 10 条）。</li>
+<li><strong>检查应用更新</strong> — 启动应用时，会向 Expo（EAS Update，美国）的服务器询问是否有新的应用界面文件，如有则下载保存（第 2 条）。此请求只包含<strong>应用版本、平台（iOS · Android）、更新渠道和当前使用的更新编号</strong>等挑选正确文件所需的值，不包含姓名、联系方式、设备标识符、步数、屏蔽的应用等值。连接 IP 可能会留在 Expo 服务器的日志中。无法连接时会跳过，应用照常运行。</li>
+<li><strong>商店支付</strong> — 显示价格、购买和恢复购买时，会在你的设备上与 App Store · Google Play 通信。这由 Apple 和 Google 的支付系统处理，我们的服务器不参与（第 10 条）。Android 上的 Google Play 结算库在处理支付时可能会向 Google 发送诊断信息，这遵循 Google 的政策。</li>
 <li><strong>支付通知（仅 Android）</strong> — 在 Android 上购买完成的那一刻，应用会向我们的服务器（<code>gwansang-server.onrender.com</code>，由 Render 托管）发出一次请求，告诉开发者“卖出了一份”。其中只包含<strong>应用名称、平台、商品名称和 ID、金额以及商店订单号</strong>，不包含你的姓名、联系方式、设备标识符、步数或屏蔽的应用等信息。服务器会将其作为一行转发到开发者的即时通讯工具（Telegram），订单号仅短暂用于防止同一通知重复发送，并且<strong>不会保存。</strong>即使请求失败，也不影响购买。<strong>在 iOS 上绝不会发出此请求。</strong></li>
 <li><strong>你自己点按的链接</strong> — “隐私政策”（本页，GitHub Pages）、“使用条款”（Apple 标准条款页面）、“管理订阅”（App Store · Google Play 的订阅界面），以及更新界面上的商店链接，会打开<strong>你设备上的浏览器或商店应用。</strong>之后即适用该网站自身的政策。</li>
 </ul>
 
 <h2>10. 支付</h2>
 
-<p>应用内出售以下项目。全部都是<strong>可选</strong>的；即使不购买任何项目，仍可使用基本功能（计时器锁定、一个计划或步数锁，以及每天一次免费的“暂时打开”）。</p>
+<p>应用内出售以下项目。全部都是<strong>可选</strong>的；即使不购买任何项目，仍可使用基本功能（每天最多 3 小时的计时器锁定、计划和步数锁合计一个，以及“成长”标签页）。</p>
 <ul>
-<li><strong>OFFME Pro（按月 · 按年订阅）</strong> — 可无限制创建计划和步数锁。除非在周期结束前至少 24 小时取消，否则将以相同价格自动续订；请在 App Store · Google Play 的订阅设置中取消。</li>
-<li><strong>暂时打开（消耗型项目）</strong> — 将已锁定的应用打开 10 分钟。</li>
-<li><strong>立即结束（消耗型项目）</strong> — 无需等待 24 小时预告，立即关闭或删除计划，或立即结束正在运行的计时器。</li>
+<li><strong>OFFME Pro（按月 · 按年订阅）</strong> — 可无限制创建计划和步数锁，计时器不受每日时长限制，通过任务获得的阳光翻倍。除非在周期结束前至少 24 小时取消，否则将以相同价格自动续订；请在 App Store · Google Play 的订阅设置中取消。</li>
+<li><strong>OFFME Pro 终身（一次性购买）</strong> — 无期限享有与订阅相同的权益。不会自动续订。</li>
+<li><strong>阳光包（消耗型项目）</strong> — 阳光 50 · 250 · 500 · 1,000。阳光是仅在应用内使用的货币，可在“成长”标签页购买服装，或兑换为<strong>临时解锁券</strong>（将已锁定的应用打开 10 分钟）或<strong>强制结束券</strong>（立即结束锁定）。不能兑换为现金，也不能转让给他人。购买的阳光只记录在设备上，因此删除应用后会一同消失；如果付款被退款，将扣回该笔付款所获得的阳光。</li>
 </ul>
 <ul>
 <li>支付由 <strong>Apple 的 App Store 和 Google Play 处理。</strong>卡号或账号等支付信息<strong>绝不会到达我们这里</strong>，我们也无法看到。</li>
@@ -144,7 +150,7 @@
 
 <h2>14. 跨境传输</h2>
 
-<p>不会将任何个人信息传输至境外。但第 9 条中的请求会到达境外服务商的服务器 — 应用状态文件经由 Netlify（美国），Android 支付通知经由 Render（美国）和 Telegram。这些请求不包含任何可识别个人的值。</p>
+<p>不会将任何个人信息传输至境外。但第 9 条中的请求会到达境外服务商的服务器 — 应用状态文件经由 Netlify（美国），应用更新检查经由 Expo（美国），Android 支付通知经由 Render（美国）和 Telegram。这些请求不包含任何可识别个人的值。</p>
 
 <h2>15. 儿童</h2>
 
