@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>팅글 개인정보 처리방침 · 네모팩토리</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto; max-width: 720px; padding: 32px 20px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+    font-size: 16px; line-height: 1.75;
+    color: #222; background: #fff;
+    word-break: keep-all; overflow-wrap: anywhere;
+  }
+  h1 { font-size: 26px; line-height: 1.4; margin: 32px 0 8px; }
+  h2 { font-size: 19px; line-height: 1.45; margin: 32px 0 8px; padding-top: 8px; border-top: 1px solid #eee; }
+  h3 { font-size: 17px; margin: 24px 0 6px; }
+  p, ul, ol { margin: 10px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: #1a5fd0; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f6f7f9; }
+  code { background: #f2f3f5; padding: 1px 5px; border-radius: 4px; font-size: 14px; }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid #eee; font-size: 13px; color: #888; }
+  footer a { color: #888; }
+  /* 언어 탭 — JS 가 없으면 탭을 숨기고 모든 언어를 그냥 다 보여준다 */
+  .langs { display: none; }
+  .langs a {
+    display: inline-block; padding: 6px 14px; margin: 0 6px 6px 0;
+    border: 1px solid #ddd; border-radius: 999px;
+    font-size: 14px; text-decoration: none; color: #555;
+  }
+  .langs a.on { background: #222; border-color: #222; color: #fff; }
+  html.js .langs { display: block; margin-bottom: 8px; }
+  html.js .lang { display: none; }
+  html.js .lang.on { display: block; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e3e5e8; background: #16181c; }
+    h2 { border-top-color: #2a2d33; }
+    a { color: #7aa7f0; }
+    th, td { border-color: #2a2d33; }
+    th { background: #1e2126; }
+    code { background: #22262c; }
+    footer { border-top-color: #2a2d33; color: #7d8188; }
+    .langs a { border-color: #333840; color: #b9bec6; }
+    .langs a.on { background: #e3e5e8; border-color: #e3e5e8; color: #16181c; }
+  }
+</style>
+<script>
+  // 탭이 그려지기 전에 붙여야 언어가 바뀌며 깜빡이지 않는다
+  document.documentElement.className = 'js';
+  addEventListener('DOMContentLoaded', function () {
+    var secs = document.querySelectorAll('.lang');
+    if (!secs.length) return;
+    var have = [].map.call(secs, function (s) { return s.dataset.lang; });
+    function pick() {
+      var want = location.hash.slice(1);
+      if (!want) {
+        // 닻이 없으면 브라우저 언어로 고른다 — 스토어 목록에서 맨 주소로 들어오는 길이다.
+        // 중국어만 두 글자로 못 자른다. zh-TW·zh-HK·zh-Hant-* 는 번체, zh-CN·zh-SG 는 간체라
+        // 같은 'zh' 로 묶으면 간체 사용자에게 번체 판을 보여주게 된다(앱의 locale.ts 와 같은 판정).
+        var nav = navigator.language || 'en';
+        want = /^zh/i.test(nav) && /(Hant|TW|HK|MO)/i.test(nav) ? 'zhHant' : nav.slice(0, 2);
+      }
+      // 없는 언어로 들어오면 영문 — 첫 구역(한국어)으로 떨구면 간체·프랑스어 기기가 한글 방침을 본다.
+      return have.indexOf(want) >= 0 ? want : have.indexOf('en') >= 0 ? 'en' : have[0];
+    }
+    function show() {
+      var on = pick();
+      [].forEach.call(secs, function (s) { s.classList.toggle('on', s.dataset.lang === on); });
+      [].forEach.call(document.querySelectorAll('.langs a'), function (a) {
+        a.classList.toggle('on', a.hash.slice(1) === on);
+      });
+      document.documentElement.lang = on;
+    }
+    addEventListener('hashchange', show);
+    show();
+  });
+</script>
+</head>
+<body>
+<h1>팅글 개인정보 처리방침</h1>
+
+<p><strong>시행일:</strong> 2026년 10월 15일<br /><strong>문의:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>한 줄 요약</strong><br />팅글은 회원가입도 로그인도 없고, 이름·연락처 같은 개인정보를 받지 않습니다. <strong>팅글 자판으로 입력한 글자는 저장하지도, 어디로 보내지도 않습니다.</strong> 저희는 서버를 두지 않습니다.</p>
+
+<h2>1. 수집하는 개인정보</h2>
+<p>없습니다. 이름·연락처·이메일 등 어떤 개인정보도 수집하지 않습니다. 계정 기능이 없어 가입·로그인 절차가 없습니다.</p>
+
+<h2>2. 자판으로 입력하는 글자</h2>
+<p>팅글 자판은 누른 글자를 지금 쓰고 있는 칸에 넣고, 키를 누를 때 소리를 낼 뿐입니다. 입력한 글자·단어·문장은 <strong>기록하지 않고, 기기 밖으로 보내지 않으며, 저희에게도 전달되지 않습니다.</strong> 맞춤법 학습이나 자동완성을 위해 글자를 모아 두는 기능도 없습니다.</p>
+
+<h2>3. 「전체 접근 허용」을 켜는 이유 (iPhone)</h2>
+<p>iPhone 에서 팅글 자판의 <strong>소리</strong>를 내고, 앱에서 고른 소리·키캡 설정을 자판이 읽으려면 iOS 가 「전체 접근 허용」을 요구합니다. 이 권한으로 하는 일은 소리 재생과 앱·자판 사이의 설정 공유뿐이며, 인터넷 연결이나 입력 내용 전송에는 쓰지 않습니다. 켜지 않아도 글자 입력은 그대로 됩니다.</p>
+
+<h2>4. 마이크</h2>
+<p>팅글은 소리를 녹음하지 않습니다. iPhone 에서는 소리를 재생하는 기능이 마이크 안내 문구를 함께 요구해 설정에 문구가 들어 있을 뿐, 마이크를 켜지 않습니다. Android 에서는 마이크 권한 자체를 요청하지 않습니다.</p>
+
+<h2>5. 앱이 외부에 보내는 요청</h2>
+<ul>
+<li><strong>앱 업데이트 확인 (Expo)</strong> — 앱을 켤 때 새 화면 업데이트가 있는지 Expo 업데이트 서버에 묻습니다. 개인정보를 싣지 않습니다. 해당 서버의 기록에 IP 주소가 남을 수 있습니다.</li>
+</ul>
+<p>앱이 밖으로 보내는 요청은 위 하나가 전부입니다. 자판은 인터넷에 연결하지 않습니다.</p>
+
+<h2>6. 기기에만 저장되는 것</h2>
+<p>고른 소리, 소리 크기, 키캡 색과 모양, 자판 배열(두벌식·천지인·단모음), 진동 켜기 같은 설정입니다. 기기 안(앱과 자판이 함께 쓰는 저장 공간)에만 있으며 앱을 지우면 함께 지워집니다.</p>
+
+<h2>7. 광고</h2>
+<p>현재 판에는 광고가 없습니다. 광고를 넣는 판에서는 같은 날 이 방침을 고쳐 알립니다.</p>
+
+<h2>8. 소리와 그림의 출처</h2>
+<p>키보드 소리는 자유 이용 허락(CC0·CC BY)된 녹음과 저희가 직접 합성한 소리이며, 출처는 앱의 「소리 출처」 화면에 적어 두었습니다. 키캡 그림의 일부는 Microsoft Fluent Emoji(MIT 라이선스)를 씁니다.</p>
+
+<h2>9. 방침의 변경</h2>
+<p>이 방침이 바뀌면 이 페이지에 시행일을 고쳐 알립니다. 바뀐 방침은 이 페이지에 올린 날부터 효력이 생깁니다.</p>
+
+<footer>
+  ⓒ Nemo Factory · 문의 <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a><br>
+  <a href="../">전체 목록</a>
+</footer>
+</body>
+</html>
