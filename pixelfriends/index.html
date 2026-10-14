@@ -83,8 +83,8 @@
 </script>
 </head>
 <body>
-<script>if(!location.hash){var n=navigator.language||'',m=/^pt/i.test(n)?'ptBR':'';if(m)history.replaceState(null,'','#'+m);}</script>
-<nav class="langs"><a href="#ko">한국어</a><a href="#en">English</a><a href="#ja">日本語</a><a href="#zhHant">繁體中文</a><a href="#es">Español</a><a href="#ptBR">Português (Brasil)</a><a href="#fr">Français</a><a href="#id">Bahasa Indonesia</a><a href="#ms">Bahasa Melayu</a><a href="#vi">Tiếng Việt</a><a href="#th">ไทย</a><a href="#hi">हिन्दी</a><a href="#ar">العربية</a></nav>
+<script>if(!location.hash){var n=navigator.language||'',m=/^pt/i.test(n)?'ptBR':/^zh/i.test(n)&&!/(Hant|TW|HK|MO)/i.test(n)?'zhHans':/^(fil|tl)/i.test(n)?'fil':'';if(m)history.replaceState(null,'','#'+m);}</script>
+<nav class="langs"><a href="#ko">한국어</a><a href="#en">English</a><a href="#ja">日本語</a><a href="#zhHant">繁體中文</a><a href="#es">Español</a><a href="#ptBR">Português (Brasil)</a><a href="#fr">Français</a><a href="#id">Bahasa Indonesia</a><a href="#ms">Bahasa Melayu</a><a href="#vi">Tiếng Việt</a><a href="#th">ไทย</a><a href="#hi">हिन्दी</a><a href="#ar">العربية</a><a href="#zhHans">简体中文</a><a href="#bn">বাংলা</a><a href="#ur">اردو</a><a href="#fil">Filipino</a><a href="#ta">தமிழ்</a><a href="#te">తెలుగు</a><a href="#my">မြန်မာ</a></nav>
 <section class="lang" data-lang="ko">
 <h1>픽셀프렌즈 개인정보 처리방침</h1>
 
@@ -1717,6 +1717,881 @@
 <li><strong>المطوّر:</strong> Nemo Factory</li>
 <li><strong>مسؤول الخصوصية:</strong> مطوّر التطبيق</li>
 <li><strong>البريد الإلكتروني:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+</section>
+<section class="lang" data-lang="zhHans">
+<h1>PixelFriends 隐私政策</h1>
+
+<p><strong>生效日期：</strong>2026年10月2日<br /><strong>联系方式：</strong>contact@nemofactory.co.kr</p>
+
+<p><strong>一句话概括</strong><br />PixelFriends <strong>无需注册、无需登录，我们也不运行任何服务器。</strong>您选择的宠物、等级和设置都只保存在您的设备上，绝不会发送给我们。为了让应用保持免费，<strong>应用内含有广告</strong> — 广告网络会读取设备的<strong>广告标识符</strong>；读取哪些内容以及如何关闭，请见<strong>第 4 条</strong>。<strong>应用不含任何分析工具。</strong></p>
+
+<h2>1. 我们收集的信息</h2>
+
+<p><strong>我们不收集任何信息。</strong>您的姓名、联系方式、电子邮箱、位置、照片及其他个人信息都不会到达我们这里。应用没有账户。</p>
+
+<p>不过，<strong>广告网络</strong>会为展示广告<strong>直接从您的设备</strong>读取广告标识符和一般设备信息（第 4 条）。我们绝不会接收或保存这些值。</p>
+
+<p>唯一的例外：点按“设置”底部的<strong>联系我们</strong>会打开您设备上的邮件应用。您写下的内容和回复地址（如果您填写）会随这封邮件发送给我们。<strong>邮件由您的邮件应用发送</strong> — 本应用本身不收集任何信息，也不向我们的服务器发送任何内容。</p>
+
+<h2>2. 仅保存在您设备上的信息</h2>
+
+<p>以下内容保存在应用的私有存储空间中，<strong>绝不会离开您的设备。</strong></p>
+
+<ul>
+<li><strong>宠物设置</strong> — 您选择的宠物、它的样式、它位于灵动岛的哪一侧、是否让它一直显示，以及上次显示的时间。</li>
+<li><strong>等级</strong> — 每只宠物在灵动岛上停留了多长时间，以及您喂过的零食。</li>
+<li><strong>主题和语言</strong> — 您选择的主题和语言（未选择时使用设备语言）。</li>
+<li><strong>保持显示设置</strong> — 是否每 8 小时把您的宠物重新带回灵动岛。</li>
+<li><strong>喂食记录</strong> — 您上次领取每种免费食物（饭团、鱼、肉）的时间，用于计算距下一次还需等待多久。</li>
+<li><strong>饥饿提醒设置</strong> — 免费饭团再次可领取时是否通知您。</li>
+<li><strong>广告滥用防护</strong> — 几条广告点按和广告展示的时间记录，以便在广告被反复点按时短暂暂停广告（第 4 条）。</li>
+<li><strong>广告设置副本</strong> — 第 5 条“版本检查”时读取的广告设置（例如广告是否开启），保存到下次启动时使用。<strong>这些是我们发送给应用的值，而不是从您那里获取的值。</strong></li>
+</ul>
+
+<p>为计算等级，应用会读取设备自开机以来已运行的时长（系统运行时间），因此更改时钟无法虚增时间。此值仅在设备上使用。</p>
+
+<p>以上内容都<strong>无法识别您的身份。</strong>删除应用即会全部删除。</p>
+
+<h2>3. 权限</h2>
+
+<table>
+<tr><th>权限</th><th>用途</th></tr>
+<tr>
+  <td><strong>实时活动</strong></td>
+  <td>在灵动岛和锁定屏幕上显示您的宠物。这是本应用的核心功能</td>
+</tr>
+<tr>
+  <td><strong>通知</strong>（可选）</td>
+  <td>在您的宠物睡着时（灵动岛被清空时）和饿了时（免费饭团可领取时）通知您，并在系统将宠物撤下后把它带回来。您可以拒绝，依然可以使用本应用</td>
+</tr>
+<tr>
+  <td><strong>跟踪</strong>（可选，ATT）</td>
+  <td>使用广告标识符（IDFA）展示个性化广告（第 4 条）。如果您拒绝，您将看到非个性化广告，整个应用的功能完全不变</td>
+</tr>
+</table>
+
+<p>本应用<strong>不会访问</strong>位置、通讯录、照片、相机、麦克风或健康数据，也从不请求这些权限。</p>
+
+<h2>4. 广告和付款</h2>
+
+<p>为了让应用保持免费，<strong>应用内含有广告。</strong></p>
+
+<ul>
+<li><strong>广告只出现在两个地方</strong> — 在“成长”标签中<strong>您点按“鱼”</strong>时打开的钓鱼画面上的<strong>方形广告</strong>（4 秒后自动关闭并给您鱼），以及<strong>仅在您点按“肉”时</strong>播放的<strong>激励视频</strong>。没有启动时或切换画面时弹出的广告，屏幕底部也没有横幅广告。</li>
+<li><strong>没有任何功能被广告锁住。</strong>鱼和肉是增加等级时间的可选方式；不使用它们也可以使用所有画面和功能。鱼和肉只在对应广告展示后发放 — 鱼在方形广告显示 4 秒后发放，肉在您看完其广告后发放。如果广告加载失败，则不会发放食物，您可以立即再次点按。</li>
+<li><strong>广告网络</strong> — 广告通过 Unity 的 <strong>LevelPlay（原 ironSource）</strong>投放，它可能会聚合其他广告网络（例如 Unity Ads 和 Liftoff）。</li>
+<li><strong>读取的内容</strong> — 广告网络会读取设备的<strong>广告标识符</strong>（IDFA/IDFV）、大致的国家和语言、设备型号、操作系统版本和应用版本。<strong>这些内容由它们直接从您的设备读取；我们绝不会接收或保存。</strong></li>
+<li><strong>不会发送的内容</strong> — 第 2 条中的值（您的宠物、等级、设置、喂食记录）绝不会传给广告网络。应用中没有任何把它们放进广告请求的代码。</li>
+<li><strong>跟踪同意</strong> — 您首次打开应用时，Apple 的<strong>应用跟踪透明度</strong>提示会出现一次。您可以拒绝并保留所有功能；届时您将看到非个性化广告。您可以随时在<em>设置 → 隐私与安全性 → 跟踪</em>中更改。</li>
+<li><strong>订阅后广告依然保留。</strong>两个地方都只在您点按时才展示广告，因此订阅（全部解锁）不是去除广告的商品。</li>
+</ul>
+
+<p>广告网络按照其各自的政策处理数据 — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay 隐私政策</a>。</p>
+
+<p><strong>付款由 App Store 处理。</strong>应用内出售的所有内容（宠物包、全部解锁、零食、订阅）都通过 App Store 付款。银行卡信息直接发送给 Apple — <strong>我们绝不会看到、接收或保存。</strong>应用只会得知是否已购买以及商店提供的价格文字。</p>
+
+<p><strong>订阅</strong>除非在当期结束前至少 24 小时取消，否则会按相同周期自动续订，费用从您的 Apple 账户扣除。您可以随时在<em>设置 → Apple 账户 → 订阅</em>中取消。使用条款遵循 Apple 的标准<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">许可应用程序最终用户许可协议</a>。</p>
+
+<h2>5. 应用发出的所有请求</h2>
+
+<ul>
+<li><strong>显示您的宠物：</strong>无。完全在设备上离线运行。</li>
+<li><strong>版本检查：</strong>启动时一次，应用会读取一个小文件，用于确认此版本是否仍可使用。同一文件还包含<strong>广告设置</strong>（这样无需发布新版本就能快速关闭广告）。<strong>该文件只读，不携带您的任何数据。</strong>没有网络时，应用照常继续运行。</li>
+<li><strong>广告请求：</strong>为获取广告，会向广告网络发送请求（第 4 条）。其中不包含应用记录的任何内容。</li>
+<li><strong>App Store 购买：</strong>应用在您的设备上与 App Store 通信，以显示价格和完成购买。我们的服务器不参与其中。</li>
+<li><strong>打开本页面：</strong>您的浏览器会打开本页面（GitHub Pages）。与任何网页一样，GitHub 可能会记录您的 IP 地址。</li>
+</ul>
+
+<h2>6. 共享、受托处理方、跨境传输、出售</h2>
+
+<p><strong>我们不共享、不传输、也不出售任何信息。</strong>付款由 Apple 按照其自身政策处理。</p>
+
+<p>不过，<strong>广告网络直接从您的设备读取的值</strong>（广告标识符等，第 4 条）会被发送到这些公司位于境外的服务器。</p>
+
+<table>
+<tr><th>接收方</th><th>项目</th><th>目的</th></tr>
+<tr>
+  <td>Unity Technologies（LevelPlay / ironSource）及其聚合的广告网络</td>
+  <td>广告标识符、设备 / 操作系统 / 应用版本、大致的国家和语言</td>
+  <td>展示广告和衡量效果</td>
+</tr>
+</table>
+
+<p>如要停止，请关闭跟踪（第 3 条），这样就不会提供广告标识符。</p>
+
+<h2>7. 保存和删除</h2>
+
+<p>我们不持有任何用户数据，因此没有需要我们删除的内容。广告网络读取的值按照其各自的政策保存和删除。您设备上的数据会在您<strong>删除应用</strong>时被移除。您通过“联系我们”发送的邮件只在我们回复和解决问题所需的期间内保存，之后即被删除。</p>
+
+<h2>8. 儿童</h2>
+
+<p>我们不通过 PixelFriends 收集任何个人信息，也不会有意收集儿童的信息。如果关闭跟踪（第 3 条），广告标识符将不会用于个性化广告。</p>
+
+<h2>9. 您的权利</h2>
+
+<p>您可以要求查阅、更正、删除或停止处理您的个人信息。我们不持有任何信息，因此没有可请求的内容；您设备上的数据可随时按第 7 条所述删除。</p>
+
+<h2>10. 变更</h2>
+
+<p>如本政策发生变更，我们将更新本页面上的<strong>生效日期</strong>。</p>
+
+<h2>11. 联系方式</h2>
+
+<ul>
+<li><strong>开发者：</strong>Nemo Factory</li>
+<li><strong>个人信息保护负责人：</strong>本应用的开发者</li>
+<li><strong>电子邮箱：</strong><a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+</section>
+<section class="lang" data-lang="bn">
+<h1>PixelFriends গোপনীয়তা নীতি</h1>
+
+<p><strong>কার্যকর:</strong> 2 অক্টোবর 2026<br /><strong>যোগাযোগ:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>এক লাইনে</strong><br />PixelFriends-এ <strong>কোনো সাইন-আপ নেই, লগইন নেই, আর আমরা কোনো সার্ভার চালাই না।</strong> আপনার বেছে নেওয়া পোষা প্রাণী, লেভেল ও সেটিংস আপনার ডিভাইসেই থাকে এবং কখনো আমাদের কাছে পাঠানো হয় না। অ্যাপটি বিনামূল্যে রাখতে <strong>এতে বিজ্ঞাপন আছে</strong> — বিজ্ঞাপন নেটওয়ার্কগুলো ডিভাইসের <strong>বিজ্ঞাপন শনাক্তকারী</strong> পড়ে; তারা কী পড়ে এবং কীভাবে তা বন্ধ করবেন তা <strong>অনুচ্ছেদ 4</strong>-এ আছে। <strong>কোনো অ্যানালিটিক্স নেই।</strong></p>
+
+<h2>1. আমরা যে তথ্য সংগ্রহ করি</h2>
+
+<p><strong>আমরা কিছুই সংগ্রহ করি না।</strong> আপনার নাম, যোগাযোগের বিবরণ, ইমেইল, অবস্থান, ছবি এবং অন্যান্য ব্যক্তিগত তথ্য কখনো আমাদের কাছে পৌঁছায় না। কোনো অ্যাকাউন্ট নেই।</p>
+
+<p>তবে বিজ্ঞাপন দেখানোর জন্য <strong>বিজ্ঞাপন নেটওয়ার্কগুলো</strong> বিজ্ঞাপন শনাক্তকারী ও ডিভাইসের সাধারণ তথ্য <strong>সরাসরি আপনার ডিভাইস থেকে</strong> পড়ে (অনুচ্ছেদ 4)। আমরা কখনো সেই মানগুলো গ্রহণ বা সংরক্ষণ করি না।</p>
+
+<p>একটি ব্যতিক্রম: সেটিংসের নিচে <strong>যোগাযোগ</strong>-এ ট্যাপ করলে আপনার ডিভাইসের মেইল অ্যাপ খোলে। আপনি যা লেখেন এবং উত্তরের ঠিকানা (যদি যোগ করেন) সেই ইমেইলে আমাদের কাছে আসে। <strong>এটি আপনার মেইল অ্যাপ পাঠায়</strong> — অ্যাপটি নিজে কিছুই সংগ্রহ করে না এবং আমাদের সার্ভারে কিছুই পাঠায় না।</p>
+
+<h2>2. যা শুধু আপনার ডিভাইসে সংরক্ষিত থাকে</h2>
+
+<p>নিচের বিষয়গুলো অ্যাপের ব্যক্তিগত স্টোরেজে রাখা হয় এবং <strong>কখনো আপনার ডিভাইস ছেড়ে যায় না।</strong></p>
+
+<ul>
+<li><strong>পোষা প্রাণীর সেটিংস</strong> — আপনার বেছে নেওয়া পোষা প্রাণী, তার স্টাইল, সেটি Dynamic Island-এর কোন পাশে বসে, সেটি দেখানো থাকবে কি না এবং শেষবার কখন দেখানো হয়েছিল।</li>
+<li><strong>লেভেল</strong> — প্রতিটি পোষা প্রাণী কতক্ষণ Dynamic Island-এ ছিল, এবং আপনি যে স্ন্যাকস খাইয়েছেন।</li>
+<li><strong>থিম ও ভাষা</strong> — আপনার বেছে নেওয়া থিম ও ভাষা (না থাকলে ডিভাইসের ভাষা ব্যবহৃত হয়)।</li>
+<li><strong>কিপ-অ্যালাইভ সেটিং</strong> — প্রতি 8 ঘণ্টায় আপনার পোষা প্রাণীকে Dynamic Island-এ ফিরিয়ে আনা হবে কি না।</li>
+<li><strong>খাওয়ানোর রেকর্ড</strong> — প্রতিটি বিনামূল্যের খাবার (রাইস বল, মাছ, মাংস) শেষবার কখন দিয়েছেন, যাতে পরেরটির জন্য অপেক্ষার সময় গোনা যায়।</li>
+<li><strong>ক্ষুধার সতর্কতা সেটিং</strong> — বিনামূল্যের রাইস বল আবার প্রস্তুত হলে আপনাকে জানানো হবে কি না।</li>
+<li><strong>বিজ্ঞাপনের অপব্যবহার রোধ</strong> — বিজ্ঞাপনে ট্যাপ ও বিজ্ঞাপন দেখানোর কয়েকটি সময়চিহ্ন, যাতে বারবার ট্যাপ হলে বিজ্ঞাপন অল্প সময়ের জন্য থেমে যায় (অনুচ্ছেদ 4)।</li>
+<li><strong>বিজ্ঞাপন সেটিংসের কপি</strong> — অনুচ্ছেদ 5-এর "সংস্করণ যাচাই"-এর সময় পড়া বিজ্ঞাপন সেটিংস (যেমন বিজ্ঞাপন চালু আছে কি না), পরের বার চালুর জন্য রাখা হয়। <strong>এগুলো আমরা অ্যাপে পাঠানো মান, আপনার কাছ থেকে নেওয়া মান নয়।</strong></li>
+</ul>
+
+<p>লেভেল গোনার জন্য অ্যাপটি পড়ে যে ডিভাইস চালু হওয়ার পর থেকে কতক্ষণ চলছে (সিস্টেম আপটাইম), তাই ঘড়ি বদলে সময় বাড়ানো যায় না। এই মান শুধু ডিভাইসেই ব্যবহৃত হয়।</p>
+
+<p>এর কোনোটিই <strong>আপনাকে শনাক্ত করে না।</strong> অ্যাপ মুছে ফেললে সব মুছে যায়।</p>
+
+<h2>3. অনুমতি</h2>
+
+<table>
+<tr><th>অনুমতি</th><th>কেন</th></tr>
+<tr>
+  <td><strong>Live Activities</strong></td>
+  <td>আপনার পোষা প্রাণীকে Dynamic Island ও লক স্ক্রিনে দেখানোর জন্য। এটিই অ্যাপের মূল কাজ</td>
+</tr>
+<tr>
+  <td><strong>নোটিফিকেশন</strong> (ঐচ্ছিক)</td>
+  <td>আপনার পোষা প্রাণী কখন ঘুমিয়ে পড়ে (যখন Dynamic Island খালি হয়) এবং কখন ক্ষুধার্ত (বিনামূল্যের রাইস বল প্রস্তুত) তা জানাতে, এবং সিস্টেম সরিয়ে দেওয়ার পর পোষা প্রাণীকে ফিরিয়ে আনতে। আপনি প্রত্যাখ্যান করেও অ্যাপটি ব্যবহার করতে পারেন</td>
+</tr>
+<tr>
+  <td><strong>ট্র্যাকিং</strong> (ঐচ্ছিক, ATT)</td>
+  <td>ব্যক্তিগতকৃত বিজ্ঞাপনের জন্য বিজ্ঞাপন শনাক্তকারী (IDFA) ব্যবহার করতে (অনুচ্ছেদ 4)। প্রত্যাখ্যান করলে আপনি অ-ব্যক্তিগতকৃত বিজ্ঞাপন দেখবেন এবং পুরো অ্যাপ একইভাবে কাজ করবে</td>
+</tr>
+</table>
+
+<p>অ্যাপটি অবস্থান, পরিচিতি, ছবি, ক্যামেরা, মাইক্রোফোন বা স্বাস্থ্য তথ্য <strong>অ্যাক্সেস করে না</strong>, এবং কখনো সেই অনুমতিগুলো চায় না।</p>
+
+<h2>4. বিজ্ঞাপন ও পেমেন্ট</h2>
+
+<p>অ্যাপটি বিনামূল্যে রাখতে <strong>এতে বিজ্ঞাপন আছে।</strong></p>
+
+<ul>
+<li><strong>বিজ্ঞাপন শুধু দুটি জায়গায় আসে</strong> — বৃদ্ধি ট্যাবে <strong>আপনি "মাছ" ট্যাপ করলে</strong> যে মাছ ধরার স্ক্রিন খোলে তাতে একটি <strong>বর্গাকার বিজ্ঞাপন</strong> (এটি 4 সেকেন্ড পর নিজে বন্ধ হয়ে আপনাকে মাছ দেয়), এবং একটি <strong>পুরস্কারযুক্ত ভিডিও</strong> যা <strong>শুধু আপনি "মাংস" ট্যাপ করলে</strong> চলে। অ্যাপ খোলার সময় বা স্ক্রিনের মাঝে কোনো বিজ্ঞাপন ভেসে ওঠে না, এবং স্ক্রিনের নিচে কোনো ব্যানার নেই।</li>
+<li><strong>কোনো ফিচার বিজ্ঞাপনের পেছনে আটকানো নেই।</strong> মাছ ও মাংস লেভেলের সময় বাড়ানোর ঐচ্ছিক উপায়; এগুলো ছাড়াই আপনি প্রতিটি স্ক্রিন ও ফিচার ব্যবহার করতে পারেন। মাছ ও মাংস শুধু তাদের বিজ্ঞাপন দেখানো হলেই দেওয়া হয় — মাছ বর্গাকার বিজ্ঞাপন 4 সেকেন্ড স্ক্রিনে থাকার পর, আর মাংস তার বিজ্ঞাপন শেষ পর্যন্ত দেখার পর। বিজ্ঞাপন লোড না হলে কোনো খাবার দেওয়া হয় না, এবং আপনি সঙ্গে সঙ্গে আবার ট্যাপ করতে পারেন।</li>
+<li><strong>বিজ্ঞাপন নেটওয়ার্ক</strong> — বিজ্ঞাপন Unity-র <strong>LevelPlay (পূর্বে ironSource)</strong>-এর মাধ্যমে পরিবেশিত হয়, যা অন্যান্য বিজ্ঞাপন নেটওয়ার্কের (যেমন Unity Ads ও Liftoff) মধ্যস্থতা করতে পারে।</li>
+<li><strong>তারা যা পড়ে</strong> — বিজ্ঞাপন নেটওয়ার্কগুলো ডিভাইসের <strong>বিজ্ঞাপন শনাক্তকারী</strong> (IDFA/IDFV), আনুমানিক দেশ ও ভাষা, ডিভাইস মডেল, OS সংস্করণ ও অ্যাপ সংস্করণ পড়ে। <strong>তারা এগুলো সরাসরি আপনার ডিভাইস থেকে পড়ে; আমরা কখনো এগুলো গ্রহণ বা সংরক্ষণ করি না।</strong></li>
+<li><strong>যা পাঠানো হয় না</strong> — অনুচ্ছেদ 2-এর মানগুলো (আপনার পোষা প্রাণী, লেভেল, সেটিংস, খাওয়ানোর রেকর্ড) কখনো বিজ্ঞাপন নেটওয়ার্কে দেওয়া হয় না। অ্যাপে এমন কোনো কোড নেই যা এগুলো বিজ্ঞাপন অনুরোধে রাখে।</li>
+<li><strong>ট্র্যাকিং সম্মতি</strong> — প্রথমবার অ্যাপ খুললে Apple-এর <strong>App Tracking Transparency</strong> বার্তা একবার দেখা যায়। আপনি প্রত্যাখ্যান করেও প্রতিটি ফিচার রাখতে পারেন; তার বদলে অ-ব্যক্তিগতকৃত বিজ্ঞাপন দেখবেন। আপনি যেকোনো সময় <em>Settings → Privacy &amp; Security → Tracking</em>-এ এটি বদলাতে পারেন।</li>
+<li><strong>সাবস্ক্রিপশনেও বিজ্ঞাপন থাকে।</strong> দুটি জায়গাই শুধু আপনি ট্যাপ করলে বিজ্ঞাপন দেখায়, তাই সাবস্ক্রিপশন (সব আনলক) বিজ্ঞাপন সরানোর পণ্য নয়।</li>
+</ul>
+
+<p>বিজ্ঞাপন নেটওয়ার্কগুলো নিজেদের নীতি অনুযায়ী তথ্য পরিচালনা করে — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay গোপনীয়তা নীতি</a>।</p>
+
+<p><strong>পেমেন্ট App Store পরিচালনা করে।</strong> অ্যাপে বিক্রি হওয়া সবকিছু (পোষা প্রাণীর প্যাক, সব আনলক, স্ন্যাকস, সাবস্ক্রিপশন) App Store-এর মাধ্যমে পরিশোধ করা হয়। কার্ডের বিবরণ সরাসরি Apple-এর কাছে যায় — <strong>আমরা কখনো সেগুলো দেখি না, গ্রহণ করি না বা সংরক্ষণ করি না।</strong> অ্যাপ শুধু জানে কিছু কেনা হয়েছে কি না এবং স্টোরের দেওয়া মূল্যের লেখা।</p>
+
+<p><strong>সাবস্ক্রিপশন</strong> মেয়াদ শেষ হওয়ার অন্তত 24 ঘণ্টা আগে বাতিল না করলে একই মেয়াদের জন্য স্বয়ংক্রিয়ভাবে নবায়ন হয়, এবং আপনার Apple অ্যাকাউন্ট থেকে চার্জ করা হয়। আপনি যেকোনো সময় <em>Settings → Apple Account → Subscriptions</em>-এ বাতিল করতে পারেন। ব্যবহারের শর্তাবলি Apple-এর মানক <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed Application End User License Agreement</a> অনুসরণ করে।</p>
+
+<h2>5. অ্যাপ যে সব অনুরোধ বাইরে পাঠায়</h2>
+
+<ul>
+<li><strong>আপনার পোষা প্রাণী দেখানো:</strong> কোনোটিই নয়। এটি সম্পূর্ণভাবে ডিভাইসে, অফলাইনে কাজ করে।</li>
+<li><strong>সংস্করণ যাচাই:</strong> চালুর সময় একবার, অ্যাপটি একটি ছোট ফাইল পড়ে যা জানায় এই সংস্করণ এখনো ব্যবহার করা যাবে কি না। একই ফাইলে <strong>বিজ্ঞাপন সেটিংস</strong> থাকে (যাতে নতুন রিলিজ ছাড়াই দ্রুত বিজ্ঞাপন বন্ধ করা যায়)। <strong>এটি শুধু পড়া হয় এবং এতে আপনার কোনো তথ্য যায় না।</strong> ইন্টারনেট না থাকলে অ্যাপটি স্বাভাবিকভাবে চলতে থাকে।</li>
+<li><strong>বিজ্ঞাপন অনুরোধ:</strong> বিজ্ঞাপন আনতে বিজ্ঞাপন নেটওয়ার্কে অনুরোধ যায় (অনুচ্ছেদ 4)। অ্যাপের রেকর্ড করা কিছুই এতে থাকে না।</li>
+<li><strong>App Store ক্রয়:</strong> মূল্য দেখাতে ও ক্রয় করতে অ্যাপটি আপনার ডিভাইসে App Store-এর সঙ্গে যোগাযোগ করে। আমাদের সার্ভার এতে জড়িত নয়।</li>
+<li><strong>এই পৃষ্ঠা খোলা:</strong> আপনার ব্রাউজার এই পৃষ্ঠা (GitHub Pages) খোলে। যেকোনো ওয়েব পৃষ্ঠার মতো GitHub আপনার IP ঠিকানা লগ করতে পারে।</li>
+</ul>
+
+<h2>6. শেয়ার, প্রসেসর, বিদেশে স্থানান্তর, বিক্রি</h2>
+
+<p><strong>আমরা কিছুই শেয়ার, স্থানান্তর বা বিক্রি করি না।</strong> পেমেন্ট Apple তার নিজস্ব নীতির অধীনে প্রক্রিয়া করে।</p>
+
+<p>তবে <strong>বিজ্ঞাপন নেটওয়ার্কগুলো সরাসরি আপনার ডিভাইস থেকে যে মান পড়ে</strong> (বিজ্ঞাপন শনাক্তকারী ইত্যাদি, অনুচ্ছেদ 4) সেগুলো বিদেশে সেই কোম্পানিগুলোর সার্ভারে পাঠানো হয়।</p>
+
+<table>
+<tr><th>প্রাপক</th><th>বিষয়</th><th>উদ্দেশ্য</th></tr>
+<tr>
+  <td>Unity Technologies (LevelPlay / ironSource) ও মধ্যস্থতাকৃত বিজ্ঞাপন নেটওয়ার্ক</td>
+  <td>বিজ্ঞাপন শনাক্তকারী, ডিভাইস / OS / অ্যাপ সংস্করণ, আনুমানিক দেশ ও ভাষা</td>
+  <td>বিজ্ঞাপন দেখানো ও কার্যকারিতা পরিমাপ</td>
+</tr>
+</table>
+
+<p>এটি বন্ধ করতে ট্র্যাকিং বন্ধ করুন (অনুচ্ছেদ 3), যাতে বিজ্ঞাপন শনাক্তকারী দেওয়া না হয়।</p>
+
+<h2>7. সংরক্ষণ ও মুছে ফেলা</h2>
+
+<p>আমাদের কাছে কোনো ব্যবহারকারীর তথ্য নেই, তাই আমাদের মোছার কিছু নেই। বিজ্ঞাপন নেটওয়ার্কের পড়া মানগুলো তাদের নিজস্ব নীতি অনুযায়ী রাখা ও মোছা হয়। আপনার ডিভাইসের তথ্য <strong>অ্যাপ মুছে ফেললে</strong> সরে যায়। যোগাযোগের মাধ্যমে পাঠানো ইমেইল শুধু উত্তর দিতে ও সমস্যা ঠিক করতে যতদিন প্রয়োজন ততদিন রাখা হয়, তারপর মুছে ফেলা হয়।</p>
+
+<h2>8. শিশু</h2>
+
+<p>আমরা PixelFriends-এর মাধ্যমে কোনো ব্যক্তিগত তথ্য সংগ্রহ করি না এবং জেনেশুনে শিশুদের কাছ থেকে তথ্য সংগ্রহ করি না। ট্র্যাকিং বন্ধ থাকলে (অনুচ্ছেদ 3), বিজ্ঞাপন শনাক্তকারী ব্যক্তিগতকৃত বিজ্ঞাপনের জন্য ব্যবহৃত হয় না।</p>
+
+<h2>9. আপনার অধিকার</h2>
+
+<p>আপনি আপনার ব্যক্তিগত তথ্য দেখা, সংশোধন, মুছে ফেলা বা প্রক্রিয়াকরণ বন্ধ করার অনুরোধ করতে পারেন। আমাদের কাছে কিছুই নেই, তাই অনুরোধ করার কিছু নেই; আপনার ডিভাইসের তথ্য অনুচ্ছেদ 7-এ বর্ণিত উপায়ে যেকোনো সময় মুছে ফেলা যায়।</p>
+
+<h2>10. পরিবর্তন</h2>
+
+<p>এই নীতি পরিবর্তন হলে আমরা এই পৃষ্ঠায় <strong>কার্যকর তারিখ</strong> হালনাগাদ করব।</p>
+
+<h2>11. যোগাযোগ</h2>
+
+<ul>
+<li><strong>ডেভেলপার:</strong> Nemo Factory</li>
+<li><strong>গোপনীয়তা কর্মকর্তা:</strong> অ্যাপের ডেভেলপার</li>
+<li><strong>ইমেইল:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+</section>
+<section class="lang" data-lang="ur" dir="rtl">
+<h1>PixelFriends کی رازداری کی پالیسی</h1>
+
+<p><strong>نافذ العمل:</strong> 2 اکتوبر 2026<br /><strong>رابطہ:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>ایک سطر میں</strong><br />PixelFriends میں <strong>نہ سائن اپ ہے، نہ لاگ اِن، اور ہم کوئی سرور نہیں چلاتے۔</strong> آپ کا منتخب کردہ پالتو، لیولز اور ترتیبات آپ کے آلے پر ہی رہتی ہیں اور کبھی ہمیں نہیں بھیجی جاتیں۔ ایپ کو مفت رکھنے کے لیے <strong>اس میں اشتہارات ہیں</strong> — اشتہاری نیٹ ورکس آلے کا <strong>اشتہاری شناخت کنندہ</strong> پڑھتے ہیں؛ وہ کیا پڑھتے ہیں اور اسے کیسے بند کریں، یہ <strong>سیکشن 4</strong> میں ہے۔ <strong>کوئی اینالیٹکس نہیں ہے۔</strong></p>
+
+<h2>1. ہم کون سی معلومات جمع کرتے ہیں</h2>
+
+<p><strong>ہم کچھ بھی جمع نہیں کرتے۔</strong> آپ کا نام، رابطے کی تفصیلات، ای میل، مقام، تصاویر اور دیگر ذاتی معلومات کبھی ہم تک نہیں پہنچتیں۔ کوئی اکاؤنٹ نہیں ہے۔</p>
+
+<p>البتہ <strong>اشتہاری نیٹ ورکس</strong> اشتہارات دکھانے کے لیے اشتہاری شناخت کنندہ اور آلے کی عمومی معلومات <strong>براہِ راست آپ کے آلے سے</strong> پڑھتے ہیں (سیکشن 4)۔ ہم یہ اقدار کبھی وصول یا محفوظ نہیں کرتے۔</p>
+
+<p>ایک استثنا: ترتیبات کے نیچے <strong>رابطہ</strong> پر ٹیپ کرنے سے آپ کے آلے پر میل ایپ کھلتی ہے۔ آپ جو لکھتے ہیں اور جوابی پتا (اگر آپ شامل کریں) اسی ای میل میں ہم تک آتے ہیں۔ <strong>اسے آپ کی میل ایپ بھیجتی ہے</strong> — ایپ خود نہ کچھ جمع کرتی ہے اور نہ ہمارے سرورز کو کچھ بھیجتی ہے۔</p>
+
+<h2>2. جو صرف آپ کے آلے پر محفوظ رہتا ہے</h2>
+
+<p>درج ذیل چیزیں ایپ کی نجی اسٹوریج میں رکھی جاتی ہیں اور <strong>کبھی آپ کے آلے سے باہر نہیں جاتیں۔</strong></p>
+
+<ul>
+<li><strong>پالتو کی ترتیبات</strong> — آپ کا منتخب کردہ پالتو، اس کا انداز، وہ Dynamic Island کی کس طرف بیٹھتا ہے، کیا اسے دکھائی دیتے رہنا چاہیے اور اسے آخری بار کب دکھایا گیا۔</li>
+<li><strong>لیولز</strong> — ہر پالتو کتنی دیر Dynamic Island پر رہا، اور آپ نے کون سے اسنیکس کھلائے۔</li>
+<li><strong>تھیم اور زبان</strong> — آپ کی منتخب کردہ تھیم اور زبان (اگر کوئی نہ ہو تو آلے کی زبان استعمال ہوتی ہے)۔</li>
+<li><strong>کیپ الائیو ترتیب</strong> — کیا ہر 8 گھنٹے بعد آپ کے پالتو کو Dynamic Island پر واپس لایا جائے۔</li>
+<li><strong>کھلانے کا ریکارڈ</strong> — آپ نے آخری بار ہر مفت کھانا (رائس بال، مچھلی، گوشت) کب دیا، تاکہ اگلے تک انتظار گنا جا سکے۔</li>
+<li><strong>بھوک کی اطلاع کی ترتیب</strong> — جب مفت رائس بال دوبارہ تیار ہو تو کیا آپ کو اطلاع دی جائے۔</li>
+<li><strong>اشتہارات کے غلط استعمال سے حفاظت</strong> — اشتہار پر ٹیپ اور اشتہار دکھائے جانے کے چند اوقات، تاکہ بار بار ٹیپ ہونے پر اشتہارات تھوڑی دیر کے لیے رک جائیں (سیکشن 4)۔</li>
+<li><strong>اشتہاری ترتیبات کی نقل</strong> — سیکشن 5 کی "ورژن جانچ" کے دوران پڑھی گئی اشتہاری ترتیبات (جیسے اشتہارات آن ہیں یا نہیں)، جو اگلی بار کھولنے کے لیے رکھی جاتی ہیں۔ <strong>یہ وہ اقدار ہیں جو ہم ایپ کو بھیجتے ہیں، نہ کہ آپ سے لی گئی اقدار۔</strong></li>
+</ul>
+
+<p>لیولز گننے کے لیے ایپ پڑھتی ہے کہ آلہ آن ہونے کے بعد سے کتنی دیر سے چل رہا ہے (سسٹم اپ ٹائم)، اس لیے گھڑی بدلنے سے وقت نہیں بڑھایا جا سکتا۔ یہ قدر صرف آلے پر استعمال ہوتی ہے۔</p>
+
+<p>ان میں سے کوئی بھی چیز <strong>آپ کی شناخت نہیں کرتی۔</strong> ایپ حذف کرنے سے یہ سب حذف ہو جاتا ہے۔</p>
+
+<h2>3. اجازتیں</h2>
+
+<table>
+<tr><th>اجازت</th><th>کیوں</th></tr>
+<tr>
+  <td><strong>Live Activities</strong></td>
+  <td>آپ کے پالتو کو Dynamic Island اور لاک اسکرین پر دکھانے کے لیے۔ یہی ایپ کا بنیادی کام ہے</td>
+</tr>
+<tr>
+  <td><strong>اطلاعات</strong> (اختیاری)</td>
+  <td>آپ کو بتانے کے لیے کہ آپ کا پالتو کب سو گیا (جب Dynamic Island خالی ہو جائے) اور کب بھوکا ہے (مفت رائس بال تیار ہے)، اور سسٹم کے ہٹا دینے کے بعد پالتو کو واپس لانے کے لیے۔ آپ انکار کر سکتے ہیں اور پھر بھی ایپ استعمال کر سکتے ہیں</td>
+</tr>
+<tr>
+  <td><strong>ٹریکنگ</strong> (اختیاری، ATT)</td>
+  <td>ذاتی نوعیت کے اشتہارات کے لیے اشتہاری شناخت کنندہ (IDFA) استعمال کرنے کے لیے (سیکشن 4)۔ اگر آپ انکار کریں تو آپ کو غیر ذاتی نوعیت کے اشتہارات دکھائی دیں گے اور پوری ایپ ویسے ہی کام کرے گی</td>
+</tr>
+</table>
+
+<p>ایپ مقام، رابطے، تصاویر، کیمرہ، مائیکروفون یا صحت کے ڈیٹا تک <strong>رسائی نہیں کرتی</strong>، اور یہ اجازتیں کبھی نہیں مانگتی۔</p>
+
+<h2>4. اشتہارات اور ادائیگیاں</h2>
+
+<p>ایپ کو مفت رکھنے کے لیے <strong>اس میں اشتہارات ہیں۔</strong></p>
+
+<ul>
+<li><strong>اشتہارات صرف دو جگہوں پر آتے ہیں</strong> — مچھلی پکڑنے کی اسکرین پر ایک <strong>مربع اشتہار</strong> جو گروتھ ٹیب پر <strong>آپ کے "مچھلی" پر ٹیپ کرنے</strong> سے کھلتی ہے (یہ 4 سیکنڈ بعد خود بند ہو کر آپ کو مچھلی دے دیتا ہے)، اور ایک <strong>انعامی ویڈیو</strong> جو <strong>صرف آپ کے "گوشت" پر ٹیپ کرنے پر</strong> چلتی ہے۔ ایپ کھولتے وقت یا اسکرینوں کے درمیان کوئی اشتہار نہیں ابھرتا، اور اسکرین کے نیچے کوئی بینر نہیں ہے۔</li>
+<li><strong>کوئی فیچر اشتہارات کے پیچھے بند نہیں۔</strong> مچھلی اور گوشت لیول کا وقت بڑھانے کے اختیاری طریقے ہیں؛ آپ ان کے بغیر ہر اسکرین اور فیچر استعمال کر سکتے ہیں۔ مچھلی اور گوشت صرف تب دیے جاتے ہیں جب ان کا اشتہار دکھایا جائے — مچھلی مربع اشتہار کے 4 سیکنڈ اسکرین پر رہنے کے بعد، اور گوشت اس کا اشتہار آخر تک دیکھنے کے بعد۔ اگر اشتہار لوڈ نہ ہو تو کوئی کھانا نہیں دیا جاتا، اور آپ فوراً دوبارہ ٹیپ کر سکتے ہیں۔</li>
+<li><strong>اشتہاری نیٹ ورک</strong> — اشتہارات Unity کے <strong>LevelPlay (سابقہ ironSource)</strong> کے ذریعے دکھائے جاتے ہیں، جو دیگر اشتہاری نیٹ ورکس (جیسے Unity Ads اور Liftoff) کی ثالثی کر سکتا ہے۔</li>
+<li><strong>وہ کیا پڑھتے ہیں</strong> — اشتہاری نیٹ ورکس آلے کا <strong>اشتہاری شناخت کنندہ</strong> (IDFA/IDFV)، تخمینی ملک اور زبان، آلے کا ماڈل، OS ورژن اور ایپ ورژن پڑھتے ہیں۔ <strong>وہ انہیں براہِ راست آپ کے آلے سے پڑھتے ہیں؛ ہم انہیں کبھی وصول یا محفوظ نہیں کرتے۔</strong></li>
+<li><strong>کیا نہیں بھیجا جاتا</strong> — سیکشن 2 کی اقدار (آپ کا پالتو، لیولز، ترتیبات، کھلانے کا ریکارڈ) کبھی اشتہاری نیٹ ورکس کو نہیں دی جاتیں۔ ایپ میں کوئی ایسا کوڈ نہیں جو انہیں اشتہاری درخواست میں ڈالے۔</li>
+<li><strong>ٹریکنگ کی رضامندی</strong> — جب آپ پہلی بار ایپ کھولتے ہیں تو Apple کا <strong>App Tracking Transparency</strong> پیغام ایک بار ظاہر ہوتا ہے۔ آپ انکار کر کے بھی ہر فیچر رکھ سکتے ہیں؛ اس کے بجائے آپ کو غیر ذاتی نوعیت کے اشتہارات دکھائی دیں گے۔ آپ اسے کسی بھی وقت <em>Settings → Privacy &amp; Security → Tracking</em> میں بدل سکتے ہیں۔</li>
+<li><strong>سبسکرپشن کے ساتھ بھی اشتہارات رہتے ہیں۔</strong> دونوں جگہیں صرف آپ کے ٹیپ کرنے پر اشتہار دکھاتی ہیں، اس لیے سبسکرپشن (سب کچھ ان لاک) اشتہارات ہٹانے کی پروڈکٹ نہیں ہے۔</li>
+</ul>
+
+<p>اشتہاری نیٹ ورکس ڈیٹا کو اپنی پالیسیوں کے تحت سنبھالتے ہیں — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay کی رازداری کی پالیسی</a>۔</p>
+
+<p><strong>ادائیگیاں App Store سنبھالتا ہے۔</strong> ایپ میں فروخت ہونے والی ہر چیز (پالتو پیکس، سب کچھ ان لاک، اسنیکس، سبسکرپشنز) کی ادائیگی App Store کے ذریعے ہوتی ہے۔ کارڈ کی تفصیلات سیدھی Apple کو جاتی ہیں — <strong>ہم انہیں کبھی نہیں دیکھتے، وصول کرتے یا محفوظ کرتے۔</strong> ایپ کو صرف یہ معلوم ہوتا ہے کہ کچھ خریدا گیا یا نہیں اور اسٹور کی فراہم کردہ قیمت کی عبارت۔</p>
+
+<p><strong>سبسکرپشنز</strong> اسی مدت کے لیے خود بخود تجدید ہوتی ہیں، جب تک مدت ختم ہونے سے کم از کم 24 گھنٹے پہلے منسوخ نہ کی جائیں، اور ان کی رقم آپ کے Apple اکاؤنٹ سے لی جاتی ہے۔ آپ انہیں کسی بھی وقت <em>Settings → Apple Account → Subscriptions</em> میں منسوخ کر سکتے ہیں۔ استعمال کی شرائط Apple کے معیاری <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed Application End User License Agreement</a> کے مطابق ہیں۔</p>
+
+<h2>5. ایپ کی بھیجی جانے والی ہر درخواست</h2>
+
+<ul>
+<li><strong>آپ کا پالتو دکھانا:</strong> کوئی نہیں۔ یہ مکمل طور پر آلے پر، آف لائن کام کرتا ہے۔</li>
+<li><strong>ورژن جانچ:</strong> ایپ کھلنے پر ایک بار، ایپ ایک چھوٹی فائل پڑھتی ہے جو بتاتی ہے کہ یہ ورژن اب بھی استعمال ہو سکتا ہے یا نہیں۔ اسی فائل میں <strong>اشتہاری ترتیبات</strong> ہوتی ہیں (تاکہ نئی ریلیز کے بغیر اشتہارات جلدی بند کیے جا سکیں)۔ <strong>یہ صرف پڑھی جاتی ہے اور اس میں آپ کا کوئی ڈیٹا نہیں جاتا۔</strong> انٹرنیٹ نہ ہو تو ایپ بس چلتی رہتی ہے۔</li>
+<li><strong>اشتہاری درخواستیں:</strong> اشتہارات لانے کے لیے اشتہاری نیٹ ورکس کو درخواستیں جاتی ہیں (سیکشن 4)۔ ان میں ایپ کا ریکارڈ کردہ کچھ بھی شامل نہیں ہوتا۔</li>
+<li><strong>App Store خریداریاں:</strong> ایپ قیمتیں دکھانے اور خریداری کرنے کے لیے آپ کے آلے پر App Store سے بات کرتی ہے۔ ہمارے سرورز اس میں شامل نہیں۔</li>
+<li><strong>یہ صفحہ کھولنا:</strong> آپ کا براؤزر یہ صفحہ (GitHub Pages) کھولتا ہے۔ کسی بھی ویب صفحے کی طرح GitHub آپ کا IP پتا ریکارڈ کر سکتا ہے۔</li>
+</ul>
+
+<h2>6. اشتراک، پروسیسرز، بیرونِ ملک منتقلی، فروخت</h2>
+
+<p><strong>ہم کچھ بھی شیئر، منتقل یا فروخت نہیں کرتے۔</strong> ادائیگیوں پر Apple اپنی پالیسی کے تحت کارروائی کرتا ہے۔</p>
+
+<p>البتہ <strong>وہ اقدار جو اشتہاری نیٹ ورکس براہِ راست آپ کے آلے سے پڑھتے ہیں</strong> (اشتہاری شناخت کنندہ وغیرہ، سیکشن 4) بیرونِ ملک ان کمپنیوں کے سرورز کو بھیجی جاتی ہیں۔</p>
+
+<table>
+<tr><th>وصول کنندہ</th><th>اشیاء</th><th>مقصد</th></tr>
+<tr>
+  <td>Unity Technologies (LevelPlay / ironSource) اور ثالثی شدہ اشتہاری نیٹ ورکس</td>
+  <td>اشتہاری شناخت کنندہ، آلہ / OS / ایپ ورژن، تخمینی ملک اور زبان</td>
+  <td>اشتہارات دکھانا اور کارکردگی ناپنا</td>
+</tr>
+</table>
+
+<p>اسے روکنے کے لیے ٹریکنگ بند کریں (سیکشن 3) تاکہ اشتہاری شناخت کنندہ فراہم نہ ہو۔</p>
+
+<h2>7. محفوظ رکھنا اور حذف کرنا</h2>
+
+<p>ہمارے پاس صارف کا کوئی ڈیٹا نہیں، اس لیے ہمارے مٹانے کے لیے کچھ نہیں ہے۔ اشتہاری نیٹ ورکس کی پڑھی گئی اقدار ان کی اپنی پالیسیوں کے تحت رکھی اور حذف کی جاتی ہیں۔ آپ کے آلے کا ڈیٹا <strong>ایپ حذف کرنے</strong> پر ہٹ جاتا ہے۔ رابطہ کے ذریعے بھیجی گئی ای میلز صرف اتنی دیر رکھی جاتی ہیں جتنی جواب دینے اور مسئلہ حل کرنے کے لیے ضروری ہو، پھر حذف کر دی جاتی ہیں۔</p>
+
+<h2>8. بچے</h2>
+
+<p>ہم PixelFriends کے ذریعے کوئی ذاتی معلومات جمع نہیں کرتے اور جان بوجھ کر بچوں سے معلومات جمع نہیں کرتے۔ اگر ٹریکنگ بند ہو (سیکشن 3) تو اشتہاری شناخت کنندہ ذاتی نوعیت کے اشتہارات کے لیے استعمال نہیں ہوتا۔</p>
+
+<h2>9. آپ کے حقوق</h2>
+
+<p>آپ اپنی ذاتی معلومات تک رسائی، درستی، حذف یا اس پر کارروائی روکنے کی درخواست کر سکتے ہیں۔ ہمارے پاس کچھ نہیں ہے، اس لیے درخواست کرنے کو کچھ نہیں؛ آپ کے آلے کا ڈیٹا سیکشن 7 کے مطابق کسی بھی وقت حذف کیا جا سکتا ہے۔</p>
+
+<h2>10. تبدیلیاں</h2>
+
+<p>اگر یہ پالیسی بدلتی ہے تو ہم اس صفحے پر <strong>نافذ العمل تاریخ</strong> اپ ڈیٹ کریں گے۔</p>
+
+<h2>11. رابطہ</h2>
+
+<ul>
+<li><strong>ڈیولپر:</strong> Nemo Factory</li>
+<li><strong>رازداری افسر:</strong> ایپ کا ڈیولپر</li>
+<li><strong>ای میل:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+</section>
+<section class="lang" data-lang="fil">
+<h1>PixelFriends — Patakaran sa Privacy</h1>
+
+<p><strong>Petsa ng bisa:</strong> Oktubre 2, 2026<br /><strong>Makipag-ugnayan:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>Sa madaling salita</strong><br />Ang PixelFriends ay <strong>walang pag-sign up, walang pag-login, at wala kaming pinapatakbong server.</strong> Ang napili ninyong alaga, mga level at mga setting ay nananatili sa inyong device at hindi kailanman ipinapadala sa amin. Para manatiling libre ang app, <strong>may mga ad ito</strong> — binabasa ng mga ad network ang <strong>advertising identifier</strong> ng device; kung ano ang binabasa nila at kung paano ito i-off ay nasa <strong>seksyon 4</strong>. <strong>Walang analytics.</strong></p>
+
+<h2>1. Impormasyong kinokolekta namin</h2>
+
+<p><strong>Wala kaming kinokolekta.</strong> Ang inyong pangalan, detalye sa pakikipag-ugnayan, email, lokasyon, mga larawan at iba pang personal na impormasyon ay hindi kailanman nakararating sa amin. Walang mga account.</p>
+
+<p>Gayunman, binabasa ng <strong>mga ad network</strong> ang advertising identifier at pangkalahatang impormasyon ng device <strong>direkta mula sa inyong device</strong> para magpakita ng mga ad (seksyon 4). Hindi namin kailanman natatanggap o itinatago ang mga value na iyon.</p>
+
+<p>Isang eksepsiyon: ang pag-tap sa <strong>Makipag-ugnayan</strong> sa ibaba ng Settings ay nagbubukas ng mail app sa inyong device. Ang isinulat ninyo at ang reply address (kung idaragdag ninyo) ay kasama sa email na iyon papunta sa amin. <strong>Ang mail app ninyo ang nagpapadala nito</strong> — ang app mismo ay walang kinokolekta at walang ipinapadala sa aming mga server.</p>
+
+<h2>2. Ang nakaimbak lamang sa inyong device</h2>
+
+<p>Ang mga sumusunod ay itinatago sa pribadong storage ng app at <strong>hindi kailanman umaalis sa inyong device.</strong></p>
+
+<ul>
+<li><strong>Mga setting ng alaga</strong> — ang napili ninyong alaga, ang istilo nito, kung saang panig ng Dynamic Island ito nakapuwesto, kung dapat itong manatiling nakalabas, at kung kailan ito huling ipinakita.</li>
+<li><strong>Mga level</strong> — kung gaano katagal nasa Dynamic Island ang bawat alaga, at ang mga meryendang ipinakain ninyo.</li>
+<li><strong>Tema at wika</strong> — ang napili ninyong tema at wika (kung wala, ang wika ng device ang ginagamit).</li>
+<li><strong>Setting na keep-alive</strong> — kung ibabalik ang inyong alaga sa Dynamic Island tuwing 8 oras.</li>
+<li><strong>Talaan ng pagpapakain</strong> — kung kailan ninyo huling ibinigay ang bawat libreng pagkain (rice ball, isda, karne), para mabilang ang paghihintay hanggang sa susunod.</li>
+<li><strong>Setting ng abiso sa gutom</strong> — kung aabisuhan kayo kapag handa na ulit ang libreng rice ball.</li>
+<li><strong>Bantay laban sa maling paggamit ng ad</strong> — ilang timestamp ng pag-tap sa ad at pagpapakita ng ad, para panandaliang huminto ang mga ad kung paulit-ulit itong tina-tap (seksyon 4).</li>
+<li><strong>Kopya ng mga setting ng ad</strong> — ang mga setting ng ad na binasa sa "pagsusuri ng bersyon" sa seksyon 5 (gaya ng kung naka-on ang mga ad), na itinatago para sa susunod na pagbukas. <strong>Ito ay mga value na ipinapadala namin sa app, hindi mga value na kinuha mula sa inyo.</strong></li>
+</ul>
+
+<p>Para mabilang ang mga level, binabasa ng app kung gaano katagal nang tumatakbo ang device mula nang buksan ito (system uptime), kaya hindi mapalalaki ang oras sa pagpapalit ng orasan. Sa device lamang ginagamit ang value na ito.</p>
+
+<p>Wala sa mga ito ang <strong>makapagpapakilala sa inyo.</strong> Kapag binura ninyo ang app, mabubura ang lahat ng ito.</p>
+
+<h2>3. Mga pahintulot</h2>
+
+<table>
+<tr><th>Pahintulot</th><th>Bakit</th></tr>
+<tr>
+  <td><strong>Live Activities</strong></td>
+  <td>Para ipakita ang inyong alaga sa Dynamic Island at sa Lock Screen. Ito ang pinakaubod ng app</td>
+</tr>
+<tr>
+  <td><strong>Mga notification</strong> (opsyonal)</td>
+  <td>Para sabihin sa inyo kapag nakatulog ang inyong alaga (kapag nawala ito sa Dynamic Island) at kapag gutom ito (handa na ang libreng rice ball), at para ibalik ang alaga matapos itong alisin ng system. Maaari ninyong tanggihan at magagamit pa rin ang app</td>
+</tr>
+<tr>
+  <td><strong>Tracking</strong> (opsyonal, ATT)</td>
+  <td>Para gamitin ang advertising identifier (IDFA) para sa mga personalized na ad (seksyon 4). Kung tatanggihan ninyo, makakakita kayo ng mga hindi personalized na ad at gagana pa rin nang pareho ang buong app</td>
+</tr>
+</table>
+
+<p>Ang app ay <strong>hindi nag-a-access</strong> ng lokasyon, mga contact, mga larawan, camera, mikropono o datos pangkalusugan, at hindi kailanman humihingi ng mga pahintulot na iyon.</p>
+
+<h2>4. Mga ad at pagbabayad</h2>
+
+<p>Para manatiling libre ang app, <strong>may mga ad ito.</strong></p>
+
+<ul>
+<li><strong>Sa dalawang lugar lamang lumalabas ang mga ad</strong> — isang <strong>parisukat na ad</strong> sa screen ng pangingisda na bumubukas kapag <strong>tina-tap ninyo ang "Isda"</strong> sa tab na Paglaki (kusa itong nagsasara pagkalipas ng 4 na segundo at ibinibigay sa inyo ang isda), at isang <strong>rewarded video</strong> na tumutugtog <strong>lamang kapag tina-tap ninyo ang "Karne"</strong>. Walang ad na sumusulpot sa pagbukas ng app o sa pagitan ng mga screen, at walang banner sa ibaba ng screen.</li>
+<li><strong>Walang feature na nakakandado sa likod ng mga ad.</strong> Ang isda at karne ay mga opsyonal na paraan para magdagdag ng oras sa level; magagamit ninyo ang bawat screen at feature nang wala ang mga ito. Ibinibigay lamang ang isda at karne kapag naipakita ang kanilang ad — ang isda matapos manatili sa screen ang parisukat na ad nang 4 na segundo, at ang karne matapos ninyong panoorin ang ad nito hanggang dulo. Kung hindi mag-load ang ad, walang pagkaing ibibigay, at maaari kayong mag-tap ulit kaagad.</li>
+<li><strong>Ad network</strong> — ang mga ad ay inihahatid sa pamamagitan ng <strong>LevelPlay (dating ironSource)</strong> ng Unity, na maaaring mamagitan sa iba pang ad network (gaya ng Unity Ads at Liftoff).</li>
+<li><strong>Ang binabasa nila</strong> — binabasa ng mga ad network ang <strong>advertising identifier</strong> ng device (IDFA/IDFV), tinatayang bansa at wika, modelo ng device, bersyon ng OS at bersyon ng app. <strong>Binabasa nila ang mga ito direkta mula sa inyong device; hindi namin kailanman natatanggap o itinatago ang mga ito.</strong></li>
+<li><strong>Ang hindi ipinapadala</strong> — ang mga value sa seksyon 2 (ang inyong alaga, mga level, mga setting, talaan ng pagpapakain) ay hindi kailanman ipinapasa sa mga ad network. Walang code ang app na naglalagay ng mga ito sa isang ad request.</li>
+<li><strong>Pahintulot sa tracking</strong> — sa unang beses na buksan ninyo ang app, lalabas nang isang beses ang prompt ng <strong>App Tracking Transparency</strong> ng Apple. Maaari ninyong tanggihan at mananatili ang bawat feature; makakakita na lamang kayo ng mga hindi personalized na ad. Mababago ninyo ito anumang oras sa <em>Settings → Privacy &amp; Security → Tracking</em>.</li>
+<li><strong>Nananatili ang mga ad kahit may subscription.</strong> Sa parehong lugar, lumalabas lamang ang ad kapag tina-tap ninyo ang mga ito, kaya ang subscription (i-unlock lahat) ay hindi produktong nag-aalis ng ad.</li>
+</ul>
+
+<p>Pinangangasiwaan ng mga ad network ang datos ayon sa sarili nilang mga patakaran — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Patakaran sa Privacy ng Unity/LevelPlay</a>.</p>
+
+<p><strong>Ang mga pagbabayad ay pinangangasiwaan ng App Store.</strong> Lahat ng ibinebenta sa app (mga pet pack, i-unlock lahat, mga meryenda, mga subscription) ay binabayaran sa pamamagitan ng App Store. Ang mga detalye ng card ay direktang napupunta sa Apple — <strong>hindi namin kailanman nakikita, natatanggap o itinatago ang mga ito.</strong> Ang nalalaman lamang ng app ay kung may nabili at ang tekstong presyo na ibinibigay ng store.</p>
+
+<p>Ang <strong>mga subscription</strong> ay awtomatikong nire-renew para sa parehong panahon maliban kung kanselahin nang hindi bababa sa 24 na oras bago matapos ang panahon, at sinisingil sa inyong Apple Account. Maaari ninyong kanselahin anumang oras sa <em>Settings → Apple Account → Subscriptions</em>. Ang mga tuntunin sa paggamit ay sumusunod sa karaniwang <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed Application End User License Agreement</a> ng Apple.</p>
+
+<h2>5. Bawat request na ipinapadala ng app</h2>
+
+<ul>
+<li><strong>Pagpapakita ng inyong alaga:</strong> wala. Ganap itong gumagana sa device, offline.</li>
+<li><strong>Pagsusuri ng bersyon:</strong> isang beses sa pagbukas, binabasa ng app ang isang maliit na file na nagsasabi kung magagamit pa ang bersyong ito. Nasa parehong file ang <strong>mga setting ng ad</strong> (para mabilis na ma-off ang mga ad nang walang bagong release). <strong>Read-only ito at walang dalang anumang datos ninyo.</strong> Kung walang internet, basta magpapatuloy ang app.</li>
+<li><strong>Mga ad request:</strong> may mga request na napupunta sa mga ad network para kumuha ng mga ad (seksyon 4). Walang anumang itinatala ng app ang kasama rito.</li>
+<li><strong>Mga pagbili sa App Store:</strong> nakikipag-ugnayan ang app sa App Store sa inyong device para ipakita ang mga presyo at gumawa ng mga pagbili. Hindi kasangkot ang aming mga server.</li>
+<li><strong>Pagbubukas ng pahinang ito:</strong> binubuksan ng inyong browser ang pahinang ito (GitHub Pages). Maaaring itala ng GitHub ang inyong IP address, gaya ng sa anumang web page.</li>
+</ul>
+
+<h2>6. Pagbabahagi, mga tagaproseso, paglilipat sa ibang bansa, pagbebenta</h2>
+
+<p><strong>Wala kaming ibinabahagi, inililipat o ibinebenta.</strong> Ang mga pagbabayad ay pinoproseso ng Apple ayon sa sarili nitong patakaran.</p>
+
+<p>Gayunman, ang <strong>mga value na binabasa ng mga ad network direkta mula sa inyong device</strong> (ang advertising identifier at iba pa, seksyon 4) ay ipinapadala sa mga server ng mga kumpanyang iyon sa ibang bansa.</p>
+
+<table>
+<tr><th>Tatanggap</th><th>Mga item</th><th>Layunin</th></tr>
+<tr>
+  <td>Unity Technologies (LevelPlay / ironSource) at mga ad network na pinamamagitanan nito</td>
+  <td>Advertising identifier, bersyon ng device / OS / app, tinatayang bansa at wika</td>
+  <td>Pagpapakita ng mga ad at pagsukat ng resulta</td>
+</tr>
+</table>
+
+<p>Para itigil ito, i-off ang tracking (seksyon 3) para hindi maibigay ang advertising identifier.</p>
+
+<h2>7. Pagtatago at pagbura</h2>
+
+<p>Wala kaming hawak na datos ng user, kaya walang kailangang burahin sa aming panig. Ang mga value na binasa ng mga ad network ay itinatago at binubura ayon sa sarili nilang mga patakaran. Ang datos sa inyong device ay naaalis kapag <strong>binura ninyo ang app</strong>. Ang mga email na ipinadala ninyo sa pamamagitan ng Makipag-ugnayan ay itinatago lamang hangga't kailangan namin ang mga ito para sumagot at ayusin ang problema, saka binubura.</p>
+
+<h2>8. Mga bata</h2>
+
+<p>Wala kaming kinokolektang personal na impormasyon sa pamamagitan ng PixelFriends at hindi kami sadyang nangongolekta ng impormasyon mula sa mga bata. Kung naka-off ang tracking (seksyon 3), hindi ginagamit ang advertising identifier para sa mga personalized na ad.</p>
+
+<h2>9. Ang inyong mga karapatan</h2>
+
+<p>Maaari ninyong hilingin na ma-access, maitama, mabura o itigil ang pagproseso ng inyong personal na impormasyon. Wala kaming hawak nito, kaya walang maaaring hilingin; ang datos sa inyong device ay mabubura anumang oras gaya ng inilarawan sa seksyon 7.</p>
+
+<h2>10. Mga pagbabago</h2>
+
+<p>Kung magbago ang patakarang ito, ia-update namin ang <strong>petsa ng bisa</strong> sa pahinang ito.</p>
+
+<h2>11. Makipag-ugnayan</h2>
+
+<ul>
+<li><strong>Developer:</strong> Nemo Factory</li>
+<li><strong>Opisyal sa privacy:</strong> ang developer ng app</li>
+<li><strong>Email:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+</section>
+<section class="lang" data-lang="ta">
+<h1>PixelFriends தனியுரிமைக் கொள்கை</h1>
+
+<p><strong>நடைமுறைக்கு வரும் நாள்:</strong> 2 அக்டோபர் 2026<br /><strong>தொடர்புக்கு:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>ஒரே வரியில்</strong><br />PixelFriends-இல் <strong>பதிவு இல்லை, உள்நுழைவு இல்லை, நாங்கள் எந்தச் சர்வரையும் இயக்குவதில்லை.</strong> நீங்கள் தேர்ந்தெடுத்த செல்லப் பிராணி, நிலைகள் மற்றும் அமைப்புகள் உங்கள் சாதனத்திலேயே இருக்கும், ஒருபோதும் எங்களுக்கு அனுப்பப்படாது. செயலியை இலவசமாக வைத்திருக்க <strong>இதில் விளம்பரங்கள் உள்ளன</strong> — விளம்பர நெட்வொர்க்குகள் சாதனத்தின் <strong>விளம்பர அடையாளங்காட்டியைப்</strong> படிக்கின்றன; அவை எதைப் படிக்கின்றன, அதை எப்படி அணைப்பது என்பது <strong>பிரிவு 4</strong>-இல் உள்ளது. <strong>எந்தப் பகுப்பாய்வுக் கருவியும் இல்லை.</strong></p>
+
+<h2>1. நாங்கள் சேகரிக்கும் தகவல்</h2>
+
+<p><strong>நாங்கள் எதையும் சேகரிப்பதில்லை.</strong> உங்கள் பெயர், தொடர்பு விவரங்கள், மின்னஞ்சல், இருப்பிடம், புகைப்படங்கள் மற்றும் பிற தனிப்பட்ட தகவல்கள் ஒருபோதும் எங்களை வந்தடைவதில்லை. கணக்குகள் எதுவும் இல்லை.</p>
+
+<p>இருப்பினும், விளம்பரங்களைக் காட்ட <strong>விளம்பர நெட்வொர்க்குகள்</strong> விளம்பர அடையாளங்காட்டியையும் பொதுவான சாதனத் தகவலையும் <strong>நேரடியாக உங்கள் சாதனத்திலிருந்து</strong> படிக்கின்றன (பிரிவு 4). அந்த மதிப்புகளை நாங்கள் ஒருபோதும் பெறுவதோ வைத்திருப்பதோ இல்லை.</p>
+
+<p>ஒரு விதிவிலக்கு: அமைப்புகளின் அடியில் உள்ள <strong>தொடர்பு</strong>-ஐத் தட்டினால் உங்கள் சாதனத்தின் அஞ்சல் செயலி திறக்கும். நீங்கள் எழுதுவதும் பதில் முகவரியும் (சேர்த்தால்) அந்த மின்னஞ்சலில் எங்களுக்கு வரும். <strong>அதை உங்கள் அஞ்சல் செயலியே அனுப்புகிறது</strong> — செயலி தானாக எதையும் சேகரிப்பதில்லை, எங்கள் சர்வர்களுக்கு எதையும் அனுப்புவதில்லை.</p>
+
+<h2>2. உங்கள் சாதனத்தில் மட்டும் சேமிக்கப்படுபவை</h2>
+
+<p>பின்வருபவை செயலியின் தனிப்பட்ட சேமிப்பகத்தில் வைக்கப்படுகின்றன, <strong>ஒருபோதும் உங்கள் சாதனத்தை விட்டு வெளியேறாது.</strong></p>
+
+<ul>
+<li><strong>செல்லப் பிராணி அமைப்புகள்</strong> — நீங்கள் தேர்ந்தெடுத்த செல்லப் பிராணி, அதன் பாணி, அது Dynamic Island-இன் எந்தப் பக்கத்தில் அமர்கிறது, அது காட்டப்பட்டுக்கொண்டே இருக்க வேண்டுமா, கடைசியாக எப்போது காட்டப்பட்டது.</li>
+<li><strong>நிலைகள்</strong> — ஒவ்வொரு செல்லப் பிராணியும் எவ்வளவு நேரம் Dynamic Island-இல் இருந்தது, நீங்கள் ஊட்டிய தின்பண்டங்கள்.</li>
+<li><strong>தீம் மற்றும் மொழி</strong> — நீங்கள் தேர்ந்தெடுத்த தீம் மற்றும் மொழி (இல்லையெனில் சாதன மொழி பயன்படுத்தப்படும்).</li>
+<li><strong>தொடர்ந்து வைத்திருக்கும் அமைப்பு</strong> — ஒவ்வொரு 8 மணி நேரத்திற்கும் உங்கள் செல்லப் பிராணியை Dynamic Island-க்குத் திரும்பக் கொண்டுவர வேண்டுமா.</li>
+<li><strong>உணவளிப்புப் பதிவு</strong> — ஒவ்வொரு இலவச உணவையும் (சோற்று உருண்டை, மீன், இறைச்சி) கடைசியாக எப்போது கொடுத்தீர்கள் என்பது, அடுத்ததற்கான காத்திருப்பைக் கணக்கிட.</li>
+<li><strong>பசி அறிவிப்பு அமைப்பு</strong> — இலவச சோற்று உருண்டை மீண்டும் தயாரானதும் உங்களுக்கு அறிவிக்க வேண்டுமா.</li>
+<li><strong>விளம்பரத் தவறான பயன்பாட்டுக் காப்பு</strong> — விளம்பரத் தட்டல்கள் மற்றும் விளம்பரக் காட்சிகளின் சில நேர முத்திரைகள், விளம்பரங்கள் மீண்டும் மீண்டும் தட்டப்பட்டால் அவை சிறிது நேரம் நிற்கும்படி (பிரிவு 4).</li>
+<li><strong>விளம்பர அமைப்புகளின் நகல்</strong> — பிரிவு 5-இன் "பதிப்புச் சரிபார்ப்பின்" போது படிக்கப்பட்ட விளம்பர அமைப்புகள் (விளம்பரங்கள் இயக்கத்தில் உள்ளனவா போன்றவை), அடுத்த முறை திறப்பதற்காக வைக்கப்படுகின்றன. <strong>இவை நாங்கள் செயலிக்கு அனுப்பும் மதிப்புகள், உங்களிடமிருந்து எடுக்கப்பட்டவை அல்ல.</strong></li>
+</ul>
+
+<p>நிலைகளைக் கணக்கிட, சாதனம் இயக்கப்பட்டதிலிருந்து எவ்வளவு நேரம் இயங்குகிறது (சிஸ்டம் அப்டைம்) என்பதைச் செயலி படிக்கிறது, எனவே கடிகாரத்தை மாற்றி நேரத்தைக் கூட்ட முடியாது. இந்த மதிப்பு சாதனத்தில் மட்டுமே பயன்படுத்தப்படுகிறது.</p>
+
+<p>இவற்றில் எதுவும் <strong>உங்களை அடையாளம் காட்டாது.</strong> செயலியை நீக்கினால் இவை அனைத்தும் நீங்கும்.</p>
+
+<h2>3. அனுமதிகள்</h2>
+
+<table>
+<tr><th>அனுமதி</th><th>ஏன்</th></tr>
+<tr>
+  <td><strong>Live Activities</strong></td>
+  <td>உங்கள் செல்லப் பிராணியை Dynamic Island மற்றும் பூட்டுத் திரையில் காட்ட. இதுவே செயலியின் மையம்</td>
+</tr>
+<tr>
+  <td><strong>அறிவிப்புகள்</strong> (விருப்பத்திற்குரியது)</td>
+  <td>உங்கள் செல்லப் பிராணி தூங்கிவிட்டதையும் (Dynamic Island காலியாகும்போது) பசியாக இருப்பதையும் (இலவச சோற்று உருண்டை தயார்) தெரிவிக்க, சிஸ்டம் அகற்றிய பிறகு செல்லப் பிராணியைத் திரும்பக் கொண்டுவர. நீங்கள் மறுத்தாலும் செயலியைப் பயன்படுத்தலாம்</td>
+</tr>
+<tr>
+  <td><strong>கண்காணிப்பு</strong> (விருப்பத்திற்குரியது, ATT)</td>
+  <td>தனிப்பயனாக்கப்பட்ட விளம்பரங்களுக்கு விளம்பர அடையாளங்காட்டியை (IDFA) பயன்படுத்த (பிரிவு 4). மறுத்தால் தனிப்பயனாக்கப்படாத விளம்பரங்களைப் பார்ப்பீர்கள், செயலி முழுவதும் அப்படியே இயங்கும்</td>
+</tr>
+</table>
+
+<p>செயலி இருப்பிடம், தொடர்புகள், புகைப்படங்கள், கேமரா, மைக்ரோஃபோன் அல்லது உடல்நலத் தரவை <strong>அணுகுவதில்லை</strong>, அந்த அனுமதிகளை ஒருபோதும் கேட்பதில்லை.</p>
+
+<h2>4. விளம்பரங்கள் மற்றும் கட்டணங்கள்</h2>
+
+<p>செயலியை இலவசமாக வைத்திருக்க <strong>இதில் விளம்பரங்கள் உள்ளன.</strong></p>
+
+<ul>
+<li><strong>விளம்பரங்கள் இரண்டு இடங்களில் மட்டுமே வரும்</strong> — வளர்ச்சி தாவலில் <strong>நீங்கள் "மீன்" தட்டும்போது</strong> திறக்கும் மீன்பிடித் திரையில் ஒரு <strong>சதுர விளம்பரம்</strong> (4 விநாடிகளுக்குப் பிறகு அது தானாக மூடி உங்களுக்கு மீனைக் கொடுக்கும்), மற்றும் <strong>நீங்கள் "இறைச்சி" தட்டும்போது மட்டும்</strong> ஓடும் ஒரு <strong>வெகுமதி வீடியோ</strong>. செயலியைத் திறக்கும்போதோ திரைகளுக்கு இடையிலோ தோன்றும் விளம்பரங்கள் இல்லை, திரையின் அடியில் பேனரும் இல்லை.</li>
+<li><strong>எந்த அம்சமும் விளம்பரங்களுக்குப் பின்னால் பூட்டப்படவில்லை.</strong> மீனும் இறைச்சியும் நிலை நேரத்தைச் சேர்க்கும் விருப்ப வழிகள்; அவை இல்லாமலும் ஒவ்வொரு திரையையும் அம்சத்தையும் பயன்படுத்தலாம். அவற்றின் விளம்பரம் காட்டப்பட்டால் மட்டுமே மீனும் இறைச்சியும் கொடுக்கப்படும் — சதுர விளம்பரம் 4 விநாடிகள் திரையில் இருந்த பிறகு மீன், அதன் விளம்பரத்தை இறுதிவரை பார்த்த பிறகு இறைச்சி. விளம்பரம் ஏறவில்லை என்றால் உணவு கொடுக்கப்படாது, உடனே மீண்டும் தட்டலாம்.</li>
+<li><strong>விளம்பர நெட்வொர்க்</strong> — விளம்பரங்கள் Unity-இன் <strong>LevelPlay (முன்பு ironSource)</strong> வழியாக வழங்கப்படுகின்றன, இது பிற விளம்பர நெட்வொர்க்குகளுக்கு (Unity Ads, Liftoff போன்றவை) இடைநிலையாகச் செயல்படலாம்.</li>
+<li><strong>அவை படிப்பவை</strong> — விளம்பர நெட்வொர்க்குகள் சாதனத்தின் <strong>விளம்பர அடையாளங்காட்டி</strong> (IDFA/IDFV), தோராயமான நாடு மற்றும் மொழி, சாதன மாடல், OS பதிப்பு மற்றும் செயலிப் பதிப்பைப் படிக்கின்றன. <strong>அவை இவற்றை நேரடியாக உங்கள் சாதனத்திலிருந்து படிக்கின்றன; நாங்கள் இவற்றை ஒருபோதும் பெறுவதோ வைத்திருப்பதோ இல்லை.</strong></li>
+<li><strong>அனுப்பப்படாதவை</strong> — பிரிவு 2-இல் உள்ள மதிப்புகள் (உங்கள் செல்லப் பிராணி, நிலைகள், அமைப்புகள், உணவளிப்புப் பதிவு) ஒருபோதும் விளம்பர நெட்வொர்க்குகளுக்குக் கொடுக்கப்படுவதில்லை. அவற்றை விளம்பரக் கோரிக்கையில் வைக்கும் எந்தக் குறியீடும் செயலியில் இல்லை.</li>
+<li><strong>கண்காணிப்பு ஒப்புதல்</strong> — நீங்கள் முதன்முறை செயலியைத் திறக்கும்போது Apple-இன் <strong>App Tracking Transparency</strong> அறிவிப்பு ஒருமுறை தோன்றும். நீங்கள் மறுத்தாலும் ஒவ்வொரு அம்சமும் இருக்கும்; அதற்குப் பதிலாகத் தனிப்பயனாக்கப்படாத விளம்பரங்களைப் பார்ப்பீர்கள். இதை எப்போது வேண்டுமானாலும் <em>Settings → Privacy &amp; Security → Tracking</em>-இல் மாற்றலாம்.</li>
+<li><strong>சந்தாவிலும் விளம்பரங்கள் இருக்கும்.</strong> இரண்டு இடங்களும் நீங்கள் தட்டும்போது மட்டுமே விளம்பரம் காட்டுவதால், சந்தா (அனைத்தையும் திறத்தல்) விளம்பரம் நீக்கும் தயாரிப்பு அல்ல.</li>
+</ul>
+
+<p>விளம்பர நெட்வொர்க்குகள் தரவைத் தங்கள் சொந்தக் கொள்கைகளின்படி கையாளுகின்றன — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay தனியுரிமைக் கொள்கை</a>.</p>
+
+<p><strong>கட்டணங்களை App Store கையாளுகிறது.</strong> செயலியில் விற்கப்படும் அனைத்தும் (செல்லப் பிராணி தொகுப்புகள், அனைத்தையும் திறத்தல், தின்பண்டங்கள், சந்தாக்கள்) App Store வழியாகச் செலுத்தப்படுகின்றன. அட்டை விவரங்கள் நேரடியாக Apple-க்குச் செல்கின்றன — <strong>நாங்கள் அவற்றை ஒருபோதும் பார்ப்பதோ, பெறுவதோ, வைத்திருப்பதோ இல்லை.</strong> ஏதேனும் வாங்கப்பட்டதா என்பதும் ஸ்டோர் வழங்கும் விலை உரையும் மட்டுமே செயலிக்குத் தெரியும்.</p>
+
+<p><strong>சந்தாக்கள்</strong> காலம் முடிவதற்குக் குறைந்தது 24 மணி நேரத்திற்கு முன் ரத்து செய்யப்படாவிட்டால் அதே காலத்திற்குத் தானாகப் புதுப்பிக்கப்படும், உங்கள் Apple கணக்கில் கட்டணம் வசூலிக்கப்படும். எப்போது வேண்டுமானாலும் <em>Settings → Apple Account → Subscriptions</em>-இல் ரத்து செய்யலாம். பயன்பாட்டு விதிமுறைகள் Apple-இன் நிலையான <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed Application End User License Agreement</a>-ஐப் பின்பற்றுகின்றன.</p>
+
+<h2>5. செயலி வெளியே அனுப்பும் ஒவ்வொரு கோரிக்கையும்</h2>
+
+<ul>
+<li><strong>உங்கள் செல்லப் பிராணியைக் காட்டுதல்:</strong> எதுவும் இல்லை. இது முழுவதும் சாதனத்திலேயே, ஆஃப்லைனில் இயங்குகிறது.</li>
+<li><strong>பதிப்புச் சரிபார்ப்பு:</strong> தொடங்கும்போது ஒருமுறை, இந்தப் பதிப்பை இன்னும் பயன்படுத்தலாமா என்று சொல்லும் ஒரு சிறிய கோப்பைச் செயலி படிக்கிறது. அதே கோப்பில் <strong>விளம்பர அமைப்புகள்</strong> உள்ளன (புதிய வெளியீடு இல்லாமல் விளம்பரங்களை விரைவாக அணைக்க). <strong>இது படிக்க மட்டுமே, உங்கள் தரவு எதையும் கொண்டு செல்லாது.</strong> இணையம் இல்லையென்றால் செயலி வழக்கம்போல் தொடரும்.</li>
+<li><strong>விளம்பரக் கோரிக்கைகள்:</strong> விளம்பரங்களைப் பெற விளம்பர நெட்வொர்க்குகளுக்குக் கோரிக்கைகள் செல்கின்றன (பிரிவு 4). செயலி பதிவு செய்யும் எதுவும் அதில் சேர்க்கப்படாது.</li>
+<li><strong>App Store வாங்குதல்கள்:</strong> விலைகளைக் காட்டவும் வாங்கவும் செயலி உங்கள் சாதனத்தில் App Store-உடன் தொடர்பு கொள்கிறது. எங்கள் சர்வர்கள் இதில் ஈடுபடுவதில்லை.</li>
+<li><strong>இந்தப் பக்கத்தைத் திறத்தல்:</strong> உங்கள் உலாவி இந்தப் பக்கத்தை (GitHub Pages) திறக்கிறது. எந்த வலைப்பக்கத்தையும் போல GitHub உங்கள் IP முகவரியைப் பதிவு செய்யலாம்.</li>
+</ul>
+
+<h2>6. பகிர்வு, செயலாக்குநர்கள், வெளிநாட்டுப் பரிமாற்றம், விற்பனை</h2>
+
+<p><strong>நாங்கள் எதையும் பகிர்வதோ, பரிமாற்றுவதோ, விற்பதோ இல்லை.</strong> கட்டணங்களை Apple தன் சொந்தக் கொள்கையின்படி செயலாக்குகிறது.</p>
+
+<p>இருப்பினும், <strong>விளம்பர நெட்வொர்க்குகள் நேரடியாக உங்கள் சாதனத்திலிருந்து படிக்கும் மதிப்புகள்</strong> (விளம்பர அடையாளங்காட்டி போன்றவை, பிரிவு 4) வெளிநாட்டில் உள்ள அந்த நிறுவனங்களின் சர்வர்களுக்கு அனுப்பப்படுகின்றன.</p>
+
+<table>
+<tr><th>பெறுநர்</th><th>உருப்படிகள்</th><th>நோக்கம்</th></tr>
+<tr>
+  <td>Unity Technologies (LevelPlay / ironSource) மற்றும் இடைநிலைப்படுத்தப்பட்ட விளம்பர நெட்வொர்க்குகள்</td>
+  <td>விளம்பர அடையாளங்காட்டி, சாதனம் / OS / செயலிப் பதிப்பு, தோராயமான நாடு மற்றும் மொழி</td>
+  <td>விளம்பரங்களைக் காட்டுதல் மற்றும் செயல்திறனை அளவிடுதல்</td>
+</tr>
+</table>
+
+<p>இதை நிறுத்த, கண்காணிப்பை அணைக்கவும் (பிரிவு 3), அப்போது விளம்பர அடையாளங்காட்டி வழங்கப்படாது.</p>
+
+<h2>7. வைத்திருத்தல் மற்றும் நீக்குதல்</h2>
+
+<p>எங்களிடம் பயனர் தரவு எதுவும் இல்லை, எனவே நாங்கள் அழிக்க எதுவும் இல்லை. விளம்பர நெட்வொர்க்குகள் படித்த மதிப்புகள் அவற்றின் சொந்தக் கொள்கைகளின்படி வைக்கப்பட்டு நீக்கப்படுகின்றன. நீங்கள் <strong>செயலியை நீக்கும்போது</strong> உங்கள் சாதனத்தில் உள்ள தரவு அகற்றப்படும். தொடர்பு வழியாக நீங்கள் அனுப்பும் மின்னஞ்சல்கள், பதிலளித்துச் சிக்கலைச் சரிசெய்யத் தேவையான காலம் வரை மட்டுமே வைக்கப்பட்டு, பின்னர் நீக்கப்படும்.</p>
+
+<h2>8. குழந்தைகள்</h2>
+
+<p>PixelFriends மூலம் நாங்கள் எந்தத் தனிப்பட்ட தகவலையும் சேகரிப்பதில்லை, குழந்தைகளிடமிருந்து தெரிந்தே தகவல் சேகரிப்பதில்லை. கண்காணிப்பு அணைக்கப்பட்டிருந்தால் (பிரிவு 3), விளம்பர அடையாளங்காட்டி தனிப்பயனாக்கப்பட்ட விளம்பரங்களுக்குப் பயன்படுத்தப்படாது.</p>
+
+<h2>9. உங்கள் உரிமைகள்</h2>
+
+<p>உங்கள் தனிப்பட்ட தகவலை அணுக, திருத்த, நீக்க அல்லது அதன் செயலாக்கத்தை நிறுத்த நீங்கள் கோரலாம். எங்களிடம் எதுவும் இல்லை, எனவே கோர எதுவும் இல்லை; உங்கள் சாதனத்தில் உள்ள தரவைப் பிரிவு 7-இல் விவரித்தபடி எப்போது வேண்டுமானாலும் நீக்கலாம்.</p>
+
+<h2>10. மாற்றங்கள்</h2>
+
+<p>இந்தக் கொள்கை மாறினால், இந்தப் பக்கத்தில் உள்ள <strong>நடைமுறைக்கு வரும் நாளைப்</strong> புதுப்பிப்போம்.</p>
+
+<h2>11. தொடர்பு</h2>
+
+<ul>
+<li><strong>டெவலப்பர்:</strong> Nemo Factory</li>
+<li><strong>தனியுரிமை அலுவலர்:</strong> செயலியின் டெவலப்பர்</li>
+<li><strong>மின்னஞ்சல்:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+</section>
+<section class="lang" data-lang="te">
+<h1>PixelFriends గోప్యతా విధానం</h1>
+
+<p><strong>అమలులోకి వచ్చే తేదీ:</strong> 2 అక్టోబర్ 2026<br /><strong>సంప్రదించండి:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>ఒక్క వాక్యంలో</strong><br />PixelFriends‌లో <strong>సైన్-అప్ లేదు, లాగిన్ లేదు, మేము ఏ సర్వర్‌నూ నడపము.</strong> మీరు ఎంచుకున్న పెంపుడు జంతువు, లెవెల్స్ మరియు సెట్టింగ్‌లు మీ పరికరంలోనే ఉంటాయి, ఎప్పుడూ మాకు పంపబడవు. యాప్‌ను ఉచితంగా ఉంచడానికి <strong>ఇందులో ప్రకటనలు ఉన్నాయి</strong> — ప్రకటన నెట్‌వర్క్‌లు పరికరం యొక్క <strong>ప్రకటన ఐడెంటిఫైయర్‌</strong>ను చదువుతాయి; అవి ఏమి చదువుతాయి, దాన్ని ఎలా ఆపాలి అనేది <strong>విభాగం 4</strong>లో ఉంది. <strong>ఎలాంటి అనలిటిక్స్ లేవు.</strong></p>
+
+<h2>1. మేము సేకరించే సమాచారం</h2>
+
+<p><strong>మేము ఏమీ సేకరించము.</strong> మీ పేరు, సంప్రదింపు వివరాలు, ఇమెయిల్, స్థానం, ఫోటోలు మరియు ఇతర వ్యక్తిగత సమాచారం ఎప్పుడూ మా వద్దకు చేరవు. ఖాతాలు లేవు.</p>
+
+<p>అయితే, ప్రకటనలు చూపించడానికి <strong>ప్రకటన నెట్‌వర్క్‌లు</strong> ప్రకటన ఐడెంటిఫైయర్‌ను మరియు సాధారణ పరికర సమాచారాన్ని <strong>నేరుగా మీ పరికరం నుండి</strong> చదువుతాయి (విభాగం 4). ఆ విలువలను మేము ఎప్పుడూ స్వీకరించము, ఉంచుకోము.</p>
+
+<p>ఒక మినహాయింపు: సెట్టింగ్‌ల దిగువన ఉన్న <strong>సంప్రదించండి</strong>ని నొక్కితే మీ పరికరంలోని మెయిల్ యాప్ తెరుచుకుంటుంది. మీరు రాసేది మరియు జవాబు చిరునామా (మీరు జోడిస్తే) ఆ ఇమెయిల్‌లో మాకు వస్తాయి. <strong>దాన్ని మీ మెయిల్ యాప్ పంపుతుంది</strong> — యాప్ స్వయంగా ఏమీ సేకరించదు, మా సర్వర్‌లకు ఏమీ పంపదు.</p>
+
+<h2>2. మీ పరికరంలో మాత్రమే నిల్వ అయ్యేవి</h2>
+
+<p>కింది వాటిని యాప్ యొక్క ప్రైవేట్ నిల్వలో ఉంచుతారు, అవి <strong>ఎప్పుడూ మీ పరికరాన్ని వదిలి వెళ్లవు.</strong></p>
+
+<ul>
+<li><strong>పెంపుడు జంతువు సెట్టింగ్‌లు</strong> — మీరు ఎంచుకున్న పెంపుడు జంతువు, దాని శైలి, అది Dynamic Island‌కు ఏ వైపు కూర్చుంటుంది, అది కనిపిస్తూనే ఉండాలా, చివరిసారి ఎప్పుడు చూపబడింది.</li>
+<li><strong>లెవెల్స్</strong> — ప్రతి పెంపుడు జంతువు Dynamic Island‌పై ఎంతసేపు ఉంది, మరియు మీరు తినిపించిన స్నాక్స్.</li>
+<li><strong>థీమ్ మరియు భాష</strong> — మీరు ఎంచుకున్న థీమ్ మరియు భాష (ఏదీ లేకపోతే పరికర భాష వాడబడుతుంది).</li>
+<li><strong>కీప్-అలైవ్ సెట్టింగ్</strong> — ప్రతి 8 గంటలకు మీ పెంపుడు జంతువును Dynamic Island‌కు తిరిగి తీసుకురావాలా.</li>
+<li><strong>తినిపించిన రికార్డు</strong> — ప్రతి ఉచిత ఆహారాన్ని (రైస్ బాల్, చేప, మాంసం) మీరు చివరిసారి ఎప్పుడు ఇచ్చారు, తర్వాతిదానికి వేచి ఉండే సమయాన్ని లెక్కించడానికి.</li>
+<li><strong>ఆకలి హెచ్చరిక సెట్టింగ్</strong> — ఉచిత రైస్ బాల్ మళ్లీ సిద్ధమైనప్పుడు మీకు తెలియజేయాలా.</li>
+<li><strong>ప్రకటన దుర్వినియోగ రక్షణ</strong> — ప్రకటన నొక్కడాలు మరియు ప్రకటన ప్రదర్శనల కొన్ని సమయ ముద్రలు, ప్రకటనలను పదే పదే నొక్కితే అవి కొద్దిసేపు ఆగేలా (విభాగం 4).</li>
+<li><strong>ప్రకటన సెట్టింగ్‌ల కాపీ</strong> — విభాగం 5లోని "వెర్షన్ తనిఖీ" సమయంలో చదివిన ప్రకటన సెట్టింగ్‌లు (ప్రకటనలు ఆన్‌లో ఉన్నాయా వంటివి), తదుపరి ప్రారంభం కోసం ఉంచబడతాయి. <strong>ఇవి మేము యాప్‌కు పంపే విలువలు, మీ నుండి తీసుకున్న విలువలు కావు.</strong></li>
+</ul>
+
+<p>లెవెల్స్ లెక్కించడానికి, పరికరం ఆన్ చేసినప్పటి నుండి ఎంతసేపు నడుస్తోందో (సిస్టమ్ అప్‌టైమ్) యాప్ చదువుతుంది, కాబట్టి గడియారాన్ని మార్చి సమయాన్ని పెంచలేరు. ఈ విలువ పరికరంలో మాత్రమే వాడబడుతుంది.</p>
+
+<p>వీటిలో ఏదీ <strong>మిమ్మల్ని గుర్తించదు.</strong> యాప్‌ను తొలగిస్తే ఇవన్నీ తొలగిపోతాయి.</p>
+
+<h2>3. అనుమతులు</h2>
+
+<table>
+<tr><th>అనుమతి</th><th>ఎందుకు</th></tr>
+<tr>
+  <td><strong>Live Activities</strong></td>
+  <td>మీ పెంపుడు జంతువును Dynamic Island మరియు లాక్ స్క్రీన్‌పై చూపించడానికి. ఇదే యాప్ యొక్క ప్రధాన భాగం</td>
+</tr>
+<tr>
+  <td><strong>నోటిఫికేషన్‌లు</strong> (ఐచ్ఛికం)</td>
+  <td>మీ పెంపుడు జంతువు ఎప్పుడు నిద్రపోయిందో (Dynamic Island ఖాళీ అయినప్పుడు) మరియు ఎప్పుడు ఆకలిగా ఉందో (ఉచిత రైస్ బాల్ సిద్ధం) చెప్పడానికి, మరియు సిస్టమ్ తీసివేసిన తర్వాత పెంపుడు జంతువును తిరిగి తీసుకురావడానికి. మీరు తిరస్కరించినా యాప్‌ను వాడవచ్చు</td>
+</tr>
+<tr>
+  <td><strong>ట్రాకింగ్</strong> (ఐచ్ఛికం, ATT)</td>
+  <td>వ్యక్తిగతీకరించిన ప్రకటనల కోసం ప్రకటన ఐడెంటిఫైయర్‌ను (IDFA) వాడడానికి (విభాగం 4). మీరు తిరస్కరిస్తే వ్యక్తిగతీకరించని ప్రకటనలు చూస్తారు, యాప్ మొత్తం అలాగే పనిచేస్తుంది</td>
+</tr>
+</table>
+
+<p>యాప్ స్థానం, పరిచయాలు, ఫోటోలు, కెమెరా, మైక్రోఫోన్ లేదా ఆరోగ్య డేటాను <strong>యాక్సెస్ చేయదు</strong>, ఆ అనుమతులను ఎప్పుడూ అడగదు.</p>
+
+<h2>4. ప్రకటనలు మరియు చెల్లింపులు</h2>
+
+<p>యాప్‌ను ఉచితంగా ఉంచడానికి <strong>ఇందులో ప్రకటనలు ఉన్నాయి.</strong></p>
+
+<ul>
+<li><strong>ప్రకటనలు రెండు చోట్ల మాత్రమే వస్తాయి</strong> — ఎదుగుదల ట్యాబ్‌లో <strong>మీరు "చేప" నొక్కినప్పుడు</strong> తెరుచుకునే చేపలు పట్టే స్క్రీన్‌పై ఒక <strong>చతురస్ర ప్రకటన</strong> (4 సెకన్ల తర్వాత అది దానంతటదే మూసుకుని మీకు చేపను ఇస్తుంది), మరియు <strong>మీరు "మాంసం" నొక్కినప్పుడు మాత్రమే</strong> ప్లే అయ్యే ఒక <strong>రివార్డ్ వీడియో</strong>. యాప్ తెరిచినప్పుడు లేదా స్క్రీన్‌ల మధ్య పాప్ అయ్యే ప్రకటనలు లేవు, స్క్రీన్ దిగువన బ్యానర్ కూడా లేదు.</li>
+<li><strong>ఏ ఫీచర్ కూడా ప్రకటనల వెనుక లాక్ చేయబడలేదు.</strong> చేప మరియు మాంసం లెవెల్ సమయాన్ని జోడించే ఐచ్ఛిక మార్గాలు; అవి లేకుండానే ప్రతి స్క్రీన్‌ను, ఫీచర్‌ను వాడవచ్చు. వాటి ప్రకటన చూపబడినప్పుడు మాత్రమే చేప మరియు మాంసం ఇవ్వబడతాయి — చతురస్ర ప్రకటన 4 సెకన్లు స్క్రీన్‌పై ఉన్న తర్వాత చేప, దాని ప్రకటనను చివరి వరకు చూసిన తర్వాత మాంసం. ప్రకటన లోడ్ కాకపోతే ఆహారం ఇవ్వబడదు, మీరు వెంటనే మళ్లీ నొక్కవచ్చు.</li>
+<li><strong>ప్రకటన నెట్‌వర్క్</strong> — ప్రకటనలు Unity యొక్క <strong>LevelPlay (గతంలో ironSource)</strong> ద్వారా అందించబడతాయి, ఇది ఇతర ప్రకటన నెట్‌వర్క్‌లకు (Unity Ads, Liftoff వంటివి) మధ్యవర్తిత్వం చేయవచ్చు.</li>
+<li><strong>అవి చదివేవి</strong> — ప్రకటన నెట్‌వర్క్‌లు పరికరం యొక్క <strong>ప్రకటన ఐడెంటిఫైయర్</strong> (IDFA/IDFV), సుమారు దేశం మరియు భాష, పరికర మోడల్, OS వెర్షన్ మరియు యాప్ వెర్షన్‌ను చదువుతాయి. <strong>అవి వీటిని నేరుగా మీ పరికరం నుండి చదువుతాయి; మేము వీటిని ఎప్పుడూ స్వీకరించము, ఉంచుకోము.</strong></li>
+<li><strong>పంపబడనివి</strong> — విభాగం 2లోని విలువలు (మీ పెంపుడు జంతువు, లెవెల్స్, సెట్టింగ్‌లు, తినిపించిన రికార్డు) ఎప్పుడూ ప్రకటన నెట్‌వర్క్‌లకు ఇవ్వబడవు. వాటిని ప్రకటన అభ్యర్థనలో పెట్టే కోడ్ యాప్‌లో లేదు.</li>
+<li><strong>ట్రాకింగ్ సమ్మతి</strong> — మీరు మొదటిసారి యాప్ తెరిచినప్పుడు Apple యొక్క <strong>App Tracking Transparency</strong> సందేశం ఒకసారి కనిపిస్తుంది. మీరు తిరస్కరించినా ప్రతి ఫీచర్ ఉంటుంది; బదులుగా వ్యక్తిగతీకరించని ప్రకటనలు చూస్తారు. దీన్ని ఎప్పుడైనా <em>Settings → Privacy &amp; Security → Tracking</em>లో మార్చవచ్చు.</li>
+<li><strong>సబ్‌స్క్రిప్షన్‌తో కూడా ప్రకటనలు ఉంటాయి.</strong> రెండు చోట్లా మీరు నొక్కినప్పుడు మాత్రమే ప్రకటన చూపబడుతుంది, కాబట్టి సబ్‌స్క్రిప్షన్ (అన్నీ అన్‌లాక్) ప్రకటనలను తొలగించే ఉత్పత్తి కాదు.</li>
+</ul>
+
+<p>ప్రకటన నెట్‌వర్క్‌లు డేటాను తమ సొంత విధానాల ప్రకారం నిర్వహిస్తాయి — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay గోప్యతా విధానం</a>.</p>
+
+<p><strong>చెల్లింపులను App Store నిర్వహిస్తుంది.</strong> యాప్‌లో అమ్మే ప్రతిదీ (పెంపుడు జంతువు ప్యాక్‌లు, అన్నీ అన్‌లాక్, స్నాక్స్, సబ్‌స్క్రిప్షన్‌లు) App Store ద్వారా చెల్లించబడుతుంది. కార్డ్ వివరాలు నేరుగా Apple‌కు వెళ్తాయి — <strong>మేము వాటిని ఎప్పుడూ చూడము, స్వీకరించము, ఉంచుకోము.</strong> ఏదైనా కొన్నారా లేదా మరియు స్టోర్ అందించే ధర పాఠ్యం మాత్రమే యాప్‌కు తెలుస్తుంది.</p>
+
+<p><strong>సబ్‌స్క్రిప్షన్‌లు</strong> వ్యవధి ముగియడానికి కనీసం 24 గంటల ముందు రద్దు చేయకపోతే అదే వ్యవధికి స్వయంచాలకంగా పునరుద్ధరించబడతాయి, మీ Apple ఖాతాకు ఛార్జ్ చేయబడతాయి. మీరు ఎప్పుడైనా <em>Settings → Apple Account → Subscriptions</em>లో రద్దు చేయవచ్చు. వినియోగ నిబంధనలు Apple యొక్క ప్రామాణిక <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed Application End User License Agreement</a>ను అనుసరిస్తాయి.</p>
+
+<h2>5. యాప్ బయటకు పంపే ప్రతి అభ్యర్థన</h2>
+
+<ul>
+<li><strong>మీ పెంపుడు జంతువును చూపించడం:</strong> ఏదీ లేదు. ఇది పూర్తిగా పరికరంలోనే, ఆఫ్‌లైన్‌లో పనిచేస్తుంది.</li>
+<li><strong>వెర్షన్ తనిఖీ:</strong> ప్రారంభంలో ఒకసారి, ఈ వెర్షన్‌ను ఇంకా వాడవచ్చో లేదో చెప్పే ఒక చిన్న ఫైల్‌ను యాప్ చదువుతుంది. అదే ఫైల్‌లో <strong>ప్రకటన సెట్టింగ్‌లు</strong> ఉంటాయి (కొత్త విడుదల లేకుండా ప్రకటనలను త్వరగా ఆపడానికి). <strong>ఇది చదవడానికి మాత్రమే, మీ డేటా ఏదీ తీసుకెళ్లదు.</strong> ఇంటర్నెట్ లేకపోతే యాప్ మామూలుగా కొనసాగుతుంది.</li>
+<li><strong>ప్రకటన అభ్యర్థనలు:</strong> ప్రకటనలు తేవడానికి ప్రకటన నెట్‌వర్క్‌లకు అభ్యర్థనలు వెళ్తాయి (విభాగం 4). యాప్ నమోదు చేసేది ఏదీ వాటిలో ఉండదు.</li>
+<li><strong>App Store కొనుగోళ్లు:</strong> ధరలు చూపించడానికి మరియు కొనుగోళ్లు చేయడానికి యాప్ మీ పరికరంలో App Store‌తో మాట్లాడుతుంది. మా సర్వర్‌లు ఇందులో పాల్గొనవు.</li>
+<li><strong>ఈ పేజీని తెరవడం:</strong> మీ బ్రౌజర్ ఈ పేజీని (GitHub Pages) తెరుస్తుంది. ఏ వెబ్ పేజీ లాగానైనా GitHub మీ IP చిరునామాను లాగ్ చేయవచ్చు.</li>
+</ul>
+
+<h2>6. పంచుకోవడం, ప్రాసెసర్లు, విదేశీ బదిలీ, అమ్మకం</h2>
+
+<p><strong>మేము ఏదీ పంచుకోము, బదిలీ చేయము, అమ్మము.</strong> చెల్లింపులను Apple తన సొంత విధానం ప్రకారం ప్రాసెస్ చేస్తుంది.</p>
+
+<p>అయితే, <strong>ప్రకటన నెట్‌వర్క్‌లు నేరుగా మీ పరికరం నుండి చదివే విలువలు</strong> (ప్రకటన ఐడెంటిఫైయర్ మొదలైనవి, విభాగం 4) విదేశాల్లోని ఆ సంస్థల సర్వర్‌లకు పంపబడతాయి.</p>
+
+<table>
+<tr><th>స్వీకర్త</th><th>అంశాలు</th><th>ప్రయోజనం</th></tr>
+<tr>
+  <td>Unity Technologies (LevelPlay / ironSource) మరియు మధ్యవర్తిత్వం చేయబడిన ప్రకటన నెట్‌వర్క్‌లు</td>
+  <td>ప్రకటన ఐడెంటిఫైయర్, పరికరం / OS / యాప్ వెర్షన్, సుమారు దేశం మరియు భాష</td>
+  <td>ప్రకటనలు చూపించడం మరియు పనితీరును కొలవడం</td>
+</tr>
+</table>
+
+<p>దీన్ని ఆపడానికి, ట్రాకింగ్‌ను ఆఫ్ చేయండి (విభాగం 3), అప్పుడు ప్రకటన ఐడెంటిఫైయర్ అందించబడదు.</p>
+
+<h2>7. నిల్వ మరియు తొలగింపు</h2>
+
+<p>మా వద్ద వినియోగదారు డేటా ఏదీ లేదు, కాబట్టి మేము చెరిపేయాల్సింది ఏమీ లేదు. ప్రకటన నెట్‌వర్క్‌లు చదివిన విలువలు వాటి సొంత విధానాల ప్రకారం ఉంచబడతాయి, తొలగించబడతాయి. మీరు <strong>యాప్‌ను తొలగించినప్పుడు</strong> మీ పరికరంలోని డేటా తీసివేయబడుతుంది. సంప్రదించండి ద్వారా మీరు పంపే ఇమెయిల్‌లు జవాబివ్వడానికి, సమస్యను సరిచేయడానికి అవసరమైనంత కాలం మాత్రమే ఉంచబడి, ఆ తర్వాత తొలగించబడతాయి.</p>
+
+<h2>8. పిల్లలు</h2>
+
+<p>PixelFriends ద్వారా మేము ఎలాంటి వ్యక్తిగత సమాచారాన్నీ సేకరించము, పిల్లల నుండి తెలిసి సమాచారాన్ని సేకరించము. ట్రాకింగ్ ఆఫ్‌లో ఉంటే (విభాగం 3), ప్రకటన ఐడెంటిఫైయర్ వ్యక్తిగతీకరించిన ప్రకటనల కోసం వాడబడదు.</p>
+
+<h2>9. మీ హక్కులు</h2>
+
+<p>మీ వ్యక్తిగత సమాచారాన్ని చూడడానికి, సరిచేయడానికి, తొలగించడానికి లేదా దాని ప్రాసెసింగ్‌ను ఆపడానికి మీరు అడగవచ్చు. మా వద్ద ఏదీ లేదు, కాబట్టి అడగడానికి ఏమీ లేదు; మీ పరికరంలోని డేటాను విభాగం 7లో వివరించినట్లు ఎప్పుడైనా తొలగించవచ్చు.</p>
+
+<h2>10. మార్పులు</h2>
+
+<p>ఈ విధానం మారితే, ఈ పేజీలోని <strong>అమలులోకి వచ్చే తేదీని</strong> మేము నవీకరిస్తాము.</p>
+
+<h2>11. సంప్రదించండి</h2>
+
+<ul>
+<li><strong>డెవలపర్:</strong> Nemo Factory</li>
+<li><strong>గోప్యతా అధికారి:</strong> యాప్ డెవలపర్</li>
+<li><strong>ఇమెయిల్:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+</section>
+<section class="lang" data-lang="my">
+<h1>PixelFriends ကိုယ်ရေးအချက်အလက်ဆိုင်ရာ မူဝါဒ</h1>
+
+<p><strong>အသက်ဝင်သည့်နေ့:</strong> 2026 ခုနှစ် အောက်တိုဘာ 2 ရက်<br /><strong>ဆက်သွယ်ရန်:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>တစ်ကြောင်းတည်းဖြင့်</strong><br />PixelFriends တွင် <strong>စာရင်းသွင်းခြင်း မရှိ၊ အကောင့်ဝင်ခြင်း မရှိ၊ ကျွန်ုပ်တို့သည် မည်သည့်ဆာဗာကိုမျှ မလည်ပတ်ပါ။</strong> သင်ရွေးထားသော အိမ်မွေးတိရစ္ဆာန်၊ အဆင့်များနှင့် ဆက်တင်များသည် သင့်စက်ပေါ်တွင်သာ ရှိနေပြီး ကျွန်ုပ်တို့ထံ ဘယ်တော့မှ မပို့ပါ။ အက်ပ်ကို အခမဲ့ထားရန် <strong>၎င်းတွင် ကြော်ငြာများ ပါဝင်ပါသည်</strong> — ကြော်ငြာကွန်ရက်များသည် စက်၏ <strong>ကြော်ငြာ ID</strong> ကို ဖတ်ပါသည်။ ၎င်းတို့ ဘာဖတ်သည်နှင့် မည်သို့ပိတ်ရမည်ကို <strong>အပိုင်း 4</strong> တွင် ဖော်ပြထားသည်။ <strong>ခွဲခြမ်းစိတ်ဖြာမှု ကိရိယာ မရှိပါ။</strong></p>
+
+<h2>1. ကျွန်ုပ်တို့ စုဆောင်းသော အချက်အလက်</h2>
+
+<p><strong>ကျွန်ုပ်တို့ ဘာမှ မစုဆောင်းပါ။</strong> သင့်အမည်၊ ဆက်သွယ်ရန် အသေးစိတ်၊ အီးမေးလ်၊ တည်နေရာ၊ ဓာတ်ပုံများနှင့် အခြားကိုယ်ရေးအချက်အလက်များသည် ကျွန်ုပ်တို့ထံ ဘယ်တော့မှ မရောက်ပါ။ အကောင့်များ မရှိပါ။</p>
+
+<p>သို့သော် ကြော်ငြာပြရန် <strong>ကြော်ငြာကွန်ရက်များ</strong>သည် ကြော်ငြာ ID နှင့် ယေဘုယျ စက်အချက်အလက်ကို <strong>သင့်စက်မှ တိုက်ရိုက်</strong> ဖတ်ပါသည် (အပိုင်း 4)။ ထိုတန်ဖိုးများကို ကျွန်ုပ်တို့ ဘယ်တော့မှ လက်မခံ၊ မသိမ်းဆည်းပါ။</p>
+
+<p>ခြွင်းချက်တစ်ခု: ဆက်တင်များ၏ အောက်ခြေရှိ <strong>ဆက်သွယ်ရန်</strong> ကို နှိပ်လျှင် သင့်စက်ရှိ မေးလ်အက်ပ် ပွင့်လာပါသည်။ သင်ရေးသားသည့်အရာနှင့် ပြန်စာလိပ်စာ (ထည့်လျှင်) သည် ထိုအီးမေးလ်ဖြင့် ကျွန်ုပ်တို့ထံ ရောက်လာပါသည်။ <strong>၎င်းကို သင့်မေးလ်အက်ပ်က ပို့ပါသည်</strong> — အက်ပ်ကိုယ်တိုင် ဘာမှ မစုဆောင်းဘဲ ကျွန်ုပ်တို့၏ ဆာဗာများသို့ ဘာမှ မပို့ပါ။</p>
+
+<h2>2. သင့်စက်ပေါ်တွင်သာ သိမ်းဆည်းထားသည်များ</h2>
+
+<p>အောက်ပါတို့ကို အက်ပ်၏ သီးသန့်သိုလှောင်ရာတွင် ထားရှိပြီး <strong>သင့်စက်မှ ဘယ်တော့မှ ထွက်မသွားပါ။</strong></p>
+
+<ul>
+<li><strong>အိမ်မွေးတိရစ္ဆာန် ဆက်တင်များ</strong> — သင်ရွေးထားသော အိမ်မွေးတိရစ္ဆာန်၊ ၎င်း၏ပုံစံ၊ ၎င်းသည် Dynamic Island ၏ မည်သည့်ဘက်တွင် ထိုင်သည်၊ ဆက်ပြနေရမလား နှင့် နောက်ဆုံးပြခဲ့သည့်အချိန်။</li>
+<li><strong>အဆင့်များ</strong> — အိမ်မွေးတိရစ္ဆာန်တစ်ကောင်ချင်းစီ Dynamic Island ပေါ်တွင် မည်မျှကြာကြာ ရှိခဲ့သည်နှင့် သင်ကျွေးခဲ့သော မုန့်များ။</li>
+<li><strong>အပြင်အဆင်နှင့် ဘာသာစကား</strong> — သင်ရွေးထားသော အပြင်အဆင်နှင့် ဘာသာစကား (မရွေးထားလျှင် စက်၏ဘာသာစကားကို သုံးသည်)။</li>
+<li><strong>ဆက်ပြထားရန် ဆက်တင်</strong> — သင့်အိမ်မွေးတိရစ္ဆာန်ကို 8 နာရီတိုင်း Dynamic Island သို့ ပြန်ခေါ်လာရမလား။</li>
+<li><strong>အစာကျွေးမှတ်တမ်း</strong> — အခမဲ့အစာ တစ်မျိုးချင်းစီ (ထမင်းလုံး၊ ငါး၊ အသား) ကို နောက်ဆုံး ဘယ်အချိန်က ပေးခဲ့သည်ကို နောက်တစ်ခုအထိ စောင့်ရမည့်အချိန် တွက်ရန်။</li>
+<li><strong>ဗိုက်ဆာသတိပေးချက် ဆက်တင်</strong> — အခမဲ့ထမင်းလုံး ထပ်အဆင်သင့်ဖြစ်သည့်အခါ သင့်ကို အကြောင်းကြားရမလား။</li>
+<li><strong>ကြော်ငြာ အလွဲသုံးမှု ကာကွယ်ချက်</strong> — ကြော်ငြာနှိပ်မှုနှင့် ကြော်ငြာပြသမှု၏ အချိန်မှတ်တမ်း အနည်းငယ်၊ ကြော်ငြာကို ထပ်ခါထပ်ခါ နှိပ်ပါက ကြော်ငြာများ ခဏရပ်စေရန် (အပိုင်း 4)။</li>
+<li><strong>ကြော်ငြာဆက်တင် မိတ္တူ</strong> — အပိုင်း 5 ၏ "ဗားရှင်းစစ်ဆေးခြင်း" အတွင်း ဖတ်ခဲ့သော ကြော်ငြာဆက်တင်များ (ကြော်ငြာ ဖွင့်ထားသလား စသည်) ကို နောက်တစ်ကြိမ် ဖွင့်ရန် ထားရှိသည်။ <strong>၎င်းတို့သည် ကျွန်ုပ်တို့က အက်ပ်သို့ ပို့သော တန်ဖိုးများဖြစ်ပြီး သင့်ထံမှ ယူထားသော တန်ဖိုးများ မဟုတ်ပါ။</strong></li>
+</ul>
+
+<p>အဆင့်များ တွက်ရန် အက်ပ်သည် စက်ဖွင့်ပြီးချိန်မှစ၍ မည်မျှကြာကြာ လည်ပတ်နေသည် (စနစ်လည်ပတ်ချိန်) ကို ဖတ်သဖြင့် နာရီပြောင်း၍ အချိန်ကို တိုးမရပါ။ ဤတန်ဖိုးကို စက်ပေါ်တွင်သာ သုံးပါသည်။</p>
+
+<p>ဤအရာများထဲမှ မည်သည့်အရာမျှ <strong>သင့်ကို ခွဲခြားမသိနိုင်ပါ။</strong> အက်ပ်ကို ဖျက်လိုက်လျှင် အားလုံး ပျက်သွားပါသည်။</p>
+
+<h2>3. ခွင့်ပြုချက်များ</h2>
+
+<table>
+<tr><th>ခွင့်ပြုချက်</th><th>အကြောင်းရင်း</th></tr>
+<tr>
+  <td><strong>Live Activities</strong></td>
+  <td>သင့်အိမ်မွေးတိရစ္ဆာန်ကို Dynamic Island နှင့် လော့ခ်မျက်နှာပြင်ပေါ်တွင် ပြရန်။ ဤအရာသည် အက်ပ်၏ အဓိကဖြစ်သည်</td>
+</tr>
+<tr>
+  <td><strong>အကြောင်းကြားချက်များ</strong> (ရွေးချယ်နိုင်)</td>
+  <td>သင့်အိမ်မွေးတိရစ္ဆာန် အိပ်ပျော်သွားသည့်အခါ (Dynamic Island ရှင်းသွားသည့်အခါ) နှင့် ဗိုက်ဆာသည့်အခါ (အခမဲ့ထမင်းလုံး အဆင်သင့်) ကို ပြောပြရန်၊ စနစ်က ဖယ်ရှားပြီးနောက် အိမ်မွေးတိရစ္ဆာန်ကို ပြန်ခေါ်လာရန်။ ငြင်းပယ်ပြီးလည်း အက်ပ်ကို သုံးနိုင်ပါသည်</td>
+</tr>
+<tr>
+  <td><strong>ခြေရာခံခြင်း</strong> (ရွေးချယ်နိုင်၊ ATT)</td>
+  <td>ကိုယ်ပိုင်ပြုလုပ်ထားသော ကြော်ငြာများအတွက် ကြော်ငြာ ID (IDFA) ကို သုံးရန် (အပိုင်း 4)။ ငြင်းပယ်လျှင် ကိုယ်ပိုင်မပြုလုပ်ထားသော ကြော်ငြာများကို မြင်ရမည်ဖြစ်ပြီး အက်ပ်တစ်ခုလုံး အတူတူ အလုပ်လုပ်ပါသည်</td>
+</tr>
+</table>
+
+<p>အက်ပ်သည် တည်နေရာ၊ အဆက်အသွယ်များ၊ ဓာတ်ပုံများ၊ ကင်မရာ၊ မိုက်ခရိုဖုန်း သို့မဟုတ် ကျန်းမာရေးဒေတာကို <strong>မဝင်ရောက်ပါ</strong>၊ ထိုခွင့်ပြုချက်များကိုလည်း ဘယ်တော့မှ မတောင်းပါ။</p>
+
+<h2>4. ကြော်ငြာများနှင့် ငွေပေးချေမှုများ</h2>
+
+<p>အက်ပ်ကို အခမဲ့ထားရန် <strong>၎င်းတွင် ကြော်ငြာများ ပါဝင်ပါသည်။</strong></p>
+
+<ul>
+<li><strong>ကြော်ငြာများသည် နေရာနှစ်ခုတွင်သာ ပေါ်ပါသည်</strong> — ကြီးထွားမှု တဘ်တွင် <strong>သင် "ငါး" ကို နှိပ်သည့်အခါ</strong> ပွင့်လာသော ငါးမျှားမျက်နှာပြင်ပေါ်ရှိ <strong>စတုရန်းကြော်ငြာ</strong> (4 စက္ကန့်အကြာတွင် အလိုအလျောက် ပိတ်ပြီး သင့်ကို ငါးပေးသည်) နှင့် <strong>သင် "အသား" ကို နှိပ်မှသာ</strong> ဖွင့်သော <strong>ဆုလာဘ်ဗီဒီယို</strong>။ အက်ပ်ဖွင့်ချိန် သို့မဟုတ် မျက်နှာပြင်များကြားတွင် ပေါ်လာသော ကြော်ငြာ မရှိဘဲ မျက်နှာပြင်အောက်ခြေတွင် ဘန်နာလည်း မရှိပါ။</li>
+<li><strong>မည်သည့်လုပ်ဆောင်ချက်ကိုမျှ ကြော်ငြာနောက်တွင် မပိတ်ထားပါ။</strong> ငါးနှင့် အသားသည် အဆင့်အချိန် တိုးရန် ရွေးချယ်နိုင်သော နည်းလမ်းများဖြစ်ပြီး ၎င်းတို့မပါဘဲ မျက်နှာပြင်နှင့် လုပ်ဆောင်ချက်တိုင်းကို သုံးနိုင်ပါသည်။ ငါးနှင့် အသားကို ၎င်းတို့၏ကြော်ငြာ ပြသမှသာ ပေးပါသည် — ငါးကို စတုရန်းကြော်ငြာ မျက်နှာပြင်ပေါ်တွင် 4 စက္ကန့် ရှိပြီးနောက်၊ အသားကို ၎င်း၏ကြော်ငြာကို အဆုံးထိ ကြည့်ပြီးနောက် ပေးပါသည်။ ကြော်ငြာ မတင်နိုင်လျှင် အစာ မပေးဘဲ ချက်ချင်း ထပ်နှိပ်နိုင်ပါသည်။</li>
+<li><strong>ကြော်ငြာကွန်ရက်</strong> — ကြော်ငြာများကို Unity ၏ <strong>LevelPlay (ယခင် ironSource)</strong> မှတစ်ဆင့် ပြသပြီး ၎င်းသည် အခြားကြော်ငြာကွန်ရက်များ (Unity Ads နှင့် Liftoff ကဲ့သို့) ကို ကြားခံပေးနိုင်ပါသည်။</li>
+<li><strong>၎င်းတို့ ဖတ်သည်များ</strong> — ကြော်ငြာကွန်ရက်များသည် စက်၏ <strong>ကြော်ငြာ ID</strong> (IDFA/IDFV)၊ ခန့်မှန်းနိုင်ငံနှင့် ဘာသာစကား၊ စက်မော်ဒယ်၊ OS ဗားရှင်းနှင့် အက်ပ်ဗားရှင်းကို ဖတ်ပါသည်။ <strong>၎င်းတို့သည် ဤအရာများကို သင့်စက်မှ တိုက်ရိုက်ဖတ်ပြီး ကျွန်ုပ်တို့ ဘယ်တော့မှ လက်မခံ၊ မသိမ်းဆည်းပါ။</strong></li>
+<li><strong>မပို့သည်များ</strong> — အပိုင်း 2 ရှိ တန်ဖိုးများ (သင့်အိမ်မွေးတိရစ္ဆာန်၊ အဆင့်များ၊ ဆက်တင်များ၊ အစာကျွေးမှတ်တမ်း) ကို ကြော်ငြာကွန်ရက်များထံ ဘယ်တော့မှ မပေးပါ။ ၎င်းတို့ကို ကြော်ငြာတောင်းဆိုမှုထဲ ထည့်သည့် ကုဒ် အက်ပ်တွင် မရှိပါ။</li>
+<li><strong>ခြေရာခံခြင်း သဘောတူညီချက်</strong> — အက်ပ်ကို ပထမဆုံးဖွင့်သည့်အခါ Apple ၏ <strong>App Tracking Transparency</strong> မေးခွန်း တစ်ကြိမ် ပေါ်လာပါသည်။ ငြင်းပယ်ပြီးလည်း လုပ်ဆောင်ချက်တိုင်း ရှိနေမည်ဖြစ်ပြီး ယင်းအစား ကိုယ်ပိုင်မပြုလုပ်ထားသော ကြော်ငြာများကို မြင်ရပါမည်။ ၎င်းကို <em>Settings → Privacy &amp; Security → Tracking</em> တွင် အချိန်မရွေး ပြောင်းနိုင်ပါသည်။</li>
+<li><strong>စာရင်းသွင်းမှု ရှိလည်း ကြော်ငြာများ ကျန်ပါသည်။</strong> နေရာနှစ်ခုစလုံးသည် သင်နှိပ်မှသာ ကြော်ငြာပြသဖြင့် စာရင်းသွင်းမှု (အားလုံးဖွင့်) သည် ကြော်ငြာဖယ်ရှားသည့် ထုတ်ကုန် မဟုတ်ပါ။</li>
+</ul>
+
+<p>ကြော်ငြာကွန်ရက်များသည် ဒေတာကို ၎င်းတို့၏ကိုယ်ပိုင်မူဝါဒများအတိုင်း ကိုင်တွယ်ပါသည် — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay ကိုယ်ရေးအချက်အလက်ဆိုင်ရာ မူဝါဒ</a>။</p>
+
+<p><strong>ငွေပေးချေမှုများကို App Store က ကိုင်တွယ်ပါသည်။</strong> အက်ပ်တွင် ရောင်းသမျှ (အိမ်မွေးတိရစ္ဆာန် အထုပ်များ၊ အားလုံးဖွင့်၊ မုန့်များ၊ စာရင်းသွင်းမှုများ) ကို App Store မှတစ်ဆင့် ပေးချေပါသည်။ ကတ်အသေးစိတ်များသည် Apple ထံ တိုက်ရိုက်သွားပါသည် — <strong>ကျွန်ုပ်တို့ ၎င်းတို့ကို ဘယ်တော့မှ မမြင်၊ လက်မခံ၊ မသိမ်းဆည်းပါ။</strong> အက်ပ်သည် တစ်ခုခု ဝယ်ခဲ့သလားနှင့် စတိုးက ပေးသော စျေးနှုန်းစာသားကိုသာ သိပါသည်။</p>
+
+<p><strong>စာရင်းသွင်းမှုများ</strong>ကို ကာလမကုန်မီ အနည်းဆုံး 24 နာရီအလိုတွင် မပယ်ဖျက်ပါက တူညီသောကာလအတွက် အလိုအလျောက် သက်တမ်းတိုးပြီး သင့် Apple အကောင့်မှ ငွေကောက်ပါသည်။ <em>Settings → Apple Account → Subscriptions</em> တွင် အချိန်မရွေး ပယ်ဖျက်နိုင်ပါသည်။ အသုံးပြုမှုစည်းကမ်းများသည် Apple ၏ စံ <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed Application End User License Agreement</a> ကို လိုက်နာပါသည်။</p>
+
+<h2>5. အက်ပ်က အပြင်သို့ ပို့သော တောင်းဆိုမှုတိုင်း</h2>
+
+<ul>
+<li><strong>သင့်အိမ်မွေးတိရစ္ဆာန်ကို ပြခြင်း:</strong> မရှိပါ။ ၎င်းသည် စက်ပေါ်တွင် အော့ဖ်လိုင်း လုံးဝ အလုပ်လုပ်ပါသည်။</li>
+<li><strong>ဗားရှင်းစစ်ဆေးခြင်း:</strong> စတင်ချိန်တွင် တစ်ကြိမ်၊ ဤဗားရှင်းကို ဆက်သုံးနိုင်သေးသလား ပြောပြသည့် ဖိုင်ငယ်တစ်ခုကို အက်ပ်က ဖတ်ပါသည်။ ထိုဖိုင်တွင်ပင် <strong>ကြော်ငြာဆက်တင်များ</strong> ပါဝင်ပါသည် (ထုတ်ဝေမှုအသစ် မလိုဘဲ ကြော်ငြာများကို မြန်မြန် ပိတ်နိုင်ရန်)။ <strong>၎င်းကို ဖတ်ရုံသာဖြစ်ပြီး သင့်ဒေတာ မည်သည့်အရာမျှ မပါပါ။</strong> အင်တာနက် မရှိလျှင် အက်ပ်သည် ဆက်လက် လည်ပတ်ပါသည်။</li>
+<li><strong>ကြော်ငြာတောင်းဆိုမှုများ:</strong> ကြော်ငြာများ ရယူရန် ကြော်ငြာကွန်ရက်များထံ တောင်းဆိုမှုများ သွားပါသည် (အပိုင်း 4)။ အက်ပ်က မှတ်တမ်းတင်သည့် မည်သည့်အရာမျှ မပါဝင်ပါ။</li>
+<li><strong>App Store ဝယ်ယူမှုများ:</strong> စျေးနှုန်းပြရန်နှင့် ဝယ်ယူရန် အက်ပ်သည် သင့်စက်ပေါ်ရှိ App Store နှင့် ဆက်သွယ်ပါသည်။ ကျွန်ုပ်တို့၏ ဆာဗာများ မပါဝင်ပါ။</li>
+<li><strong>ဤစာမျက်နှာကို ဖွင့်ခြင်း:</strong> သင့်ဘရောက်ဇာက ဤစာမျက်နှာ (GitHub Pages) ကို ဖွင့်ပါသည်။ မည်သည့်ဝဘ်စာမျက်နှာကဲ့သို့ပင် GitHub သည် သင့် IP လိပ်စာကို မှတ်တမ်းတင်နိုင်ပါသည်။</li>
+</ul>
+
+<h2>6. မျှဝေခြင်း၊ လုပ်ဆောင်သူများ၊ နိုင်ငံရပ်ခြားသို့ လွှဲပြောင်းခြင်း၊ ရောင်းချခြင်း</h2>
+
+<p><strong>ကျွန်ုပ်တို့ ဘာမှ မမျှဝေ၊ မလွှဲပြောင်း၊ မရောင်းချပါ။</strong> ငွေပေးချေမှုများကို Apple က ၎င်း၏ကိုယ်ပိုင်မူဝါဒအတိုင်း လုပ်ဆောင်ပါသည်။</p>
+
+<p>သို့သော် <strong>ကြော်ငြာကွန်ရက်များက သင့်စက်မှ တိုက်ရိုက်ဖတ်သော တန်ဖိုးများ</strong> (ကြော်ငြာ ID စသည်၊ အပိုင်း 4) ကို နိုင်ငံရပ်ခြားရှိ ထိုကုမ္ပဏီများ၏ ဆာဗာများသို့ ပို့ပါသည်။</p>
+
+<table>
+<tr><th>လက်ခံသူ</th><th>အချက်များ</th><th>ရည်ရွယ်ချက်</th></tr>
+<tr>
+  <td>Unity Technologies (LevelPlay / ironSource) နှင့် ကြားခံထားသော ကြော်ငြာကွန်ရက်များ</td>
+  <td>ကြော်ငြာ ID၊ စက် / OS / အက်ပ်ဗားရှင်း၊ ခန့်မှန်းနိုင်ငံနှင့် ဘာသာစကား</td>
+  <td>ကြော်ငြာပြခြင်းနှင့် စွမ်းဆောင်ရည် တိုင်းတာခြင်း</td>
+</tr>
+</table>
+
+<p>ဤအရာကို ရပ်ရန် ခြေရာခံခြင်းကို ပိတ်ပါ (အပိုင်း 3)၊ ထိုအခါ ကြော်ငြာ ID ကို မပေးတော့ပါ။</p>
+
+<h2>7. သိမ်းဆည်းခြင်းနှင့် ဖျက်ခြင်း</h2>
+
+<p>ကျွန်ုပ်တို့ထံ အသုံးပြုသူဒေတာ မရှိသဖြင့် ကျွန်ုပ်တို့ ဖျက်ရန် ဘာမှ မရှိပါ။ ကြော်ငြာကွန်ရက်များ ဖတ်သော တန်ဖိုးများကို ၎င်းတို့၏ကိုယ်ပိုင်မူဝါဒများအတိုင်း ထားရှိ၊ ဖျက်ပါသည်။ သင့်စက်ပေါ်ရှိ ဒေတာသည် <strong>အက်ပ်ကို ဖျက်သည့်အခါ</strong> ဖယ်ရှားခံရပါသည်။ ဆက်သွယ်ရန်မှတစ်ဆင့် သင်ပို့သော အီးမေးလ်များကို ပြန်ဖြေပြီး ပြဿနာ ဖြေရှင်းရန် လိုအပ်သလောက်သာ ထားပြီးနောက် ဖျက်ပါသည်။</p>
+
+<h2>8. ကလေးများ</h2>
+
+<p>ကျွန်ုပ်တို့သည် PixelFriends မှတစ်ဆင့် မည်သည့်ကိုယ်ရေးအချက်အလက်ကိုမျှ မစုဆောင်းဘဲ ကလေးများထံမှ အချက်အလက်ကို သိလျက်နှင့် မစုဆောင်းပါ။ ခြေရာခံခြင်းကို ပိတ်ထားလျှင် (အပိုင်း 3) ကြော်ငြာ ID ကို ကိုယ်ပိုင်ပြုလုပ်ထားသော ကြော်ငြာများအတွက် မသုံးပါ။</p>
+
+<h2>9. သင့်အခွင့်အရေးများ</h2>
+
+<p>သင့်ကိုယ်ရေးအချက်အလက်ကို ကြည့်ရှုရန်၊ ပြင်ဆင်ရန်၊ ဖျက်ရန် သို့မဟုတ် လုပ်ဆောင်ခြင်းကို ရပ်ရန် တောင်းဆိုနိုင်ပါသည်။ ကျွန်ုပ်တို့ထံ ဘာမှ မရှိသဖြင့် တောင်းဆိုစရာ မရှိပါ။ သင့်စက်ပေါ်ရှိ ဒေတာကို အပိုင်း 7 တွင် ဖော်ပြထားသည့်အတိုင်း အချိန်မရွေး ဖျက်နိုင်ပါသည်။</p>
+
+<h2>10. ပြောင်းလဲမှုများ</h2>
+
+<p>ဤမူဝါဒ ပြောင်းလဲပါက ဤစာမျက်နှာရှိ <strong>အသက်ဝင်သည့်နေ့</strong>ကို ကျွန်ုပ်တို့ အပ်ဒိတ်လုပ်ပါမည်။</p>
+
+<h2>11. ဆက်သွယ်ရန်</h2>
+
+<ul>
+<li><strong>ဆော့ဖ်ဝဲရေးသူ:</strong> Nemo Factory</li>
+<li><strong>ကိုယ်ရေးအချက်အလက် တာဝန်ခံ:</strong> အက်ပ်၏ ဆော့ဖ်ဝဲရေးသူ</li>
+<li><strong>အီးမေးလ်:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
 </ul>
 </section>
 <footer>

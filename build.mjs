@@ -11,11 +11,11 @@ const LANG_NAME = {
   ko: '한국어', en: 'English', ja: '日本語', zhHant: '繁體中文', zhHans: '简体中文',
   es: 'Español', ptBR: 'Português (Brasil)', fr: 'Français', de: 'Deutsch', ru: 'Русский',
   id: 'Bahasa Indonesia', vi: 'Tiếng Việt', th: 'ไทย', hi: 'हिन्दी', ms: 'Bahasa Melayu', fil: 'Filipino',
-  ar: 'العربية',
+  ar: 'العربية', bn: 'বাংলা', ur: 'اردو', ta: 'தமிழ்', te: 'తెలుగు', my: 'မြန်မာ',
 };
 
 // 오른쪽→왼쪽 말. 그 판 section 에만 dir 을 붙인다(템플릿은 안 건드린다 — 다른 앱 생성물이 바뀐다)
-const RTL = new Set(['ar']);
+const RTL = new Set(['ar', 'ur']);
 
 // 템플릿은 닻이 없으면 navigator.language 앞 두 글자로 고른다. 두 글자로 안 잘리는 판
 // (zh-CN→zhHans · pt-*→ptBR · fil/tl→fil)은 그 판이 있는 페이지에만 이 조각을 넣어 닻을 먼저 세운다.
