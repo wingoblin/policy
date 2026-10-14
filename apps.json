@@ -126,7 +126,25 @@
     "src": "20",
     "langs": [
       "ko",
-      "en"
+      "en",
+      "ja",
+      "zhHant",
+      "zhHans",
+      "es",
+      "fr",
+      "ptBR",
+      "id",
+      "ms",
+      "vi",
+      "th",
+      "hi",
+      "ar",
+      "bn",
+      "ur",
+      "fil",
+      "ta",
+      "te",
+      "my"
     ]
   },
   {
