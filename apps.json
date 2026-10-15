@@ -282,7 +282,29 @@
   },
   {
     "slug": "tingle",
-    "title": "팅글 개인정보 처리방침",
-    "src": "26"
+    "title": "Tingle 개인정보 처리방침",
+    "src": "26",
+    "langs": [
+      "ko",
+      "en",
+      "ja",
+      "zhHant",
+      "es",
+      "ptBR",
+      "fr",
+      "id",
+      "ms",
+      "vi",
+      "th",
+      "hi",
+      "ar",
+      "zhHans",
+      "bn",
+      "ur",
+      "fil",
+      "ta",
+      "te",
+      "my"
+    ]
   }
 ]
