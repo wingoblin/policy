@@ -277,8 +277,12 @@
   },
   {
     "slug": "weathermuseum",
-    "title": "날씨미술관 개인정보 처리방침",
-    "src": "25"
+    "title": "아르텔 개인정보 처리방침",
+    "src": "25",
+    "langs": [
+      "ko",
+      "en"
+    ]
   },
   {
     "slug": "tingle",
