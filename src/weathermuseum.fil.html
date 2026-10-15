@@ -1,0 +1,83 @@
+<h1>Patakaran sa Privacy ng Artelle</h1>
+
+<p><strong>Petsa ng bisa:</strong> Oktubre 16, 2026<br /><strong>Makipag-ugnayan:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>Sa madaling salita</strong><br />Walang sign-up at walang login ang Artelle (dating Weather Museum), at hindi kami nangongolekta ng personal na impormasyon gaya ng pangalan o contact details mo. Hindi ina-access ng app ang lokasyon, mga larawan o mga contact mo. May ads para sa mga user na walang subscription; ipinapaliwanag sa seksyon 4 kung ano ang binabasa ng ad network. Walang analytics tool.</p>
+
+<h2>1. Personal na impormasyong kinokolekta namin</h2>
+<p>Wala. Walang personal na impormasyon — pangalan, contact details, email, larawan o anupaman — ang nakakarating sa amin. Walang account, kaya walang sign-up o login.</p>
+<p>Gayunman, para magpakita ng ads, binabasa ng ad network ang advertising identifier ng device mo at pangkalahatang impormasyon ng device nang direkta mula sa device mo (seksyon 4). Hindi namin kailanman natatanggap o iniimbak ang mga value na iyon.</p>
+<p>Kapag tinap mo ang Makipag-ugnayan sa ibaba ng Settings, lalabas ang email address namin. Kapag tinap mo ang address, magbubukas ang mail app mo, at ang email na isusulat mo ay makakarating sa amin. Ang mail app mo ang nagpapadala nito; walang kinokolektang anuman ang app mismo.</p>
+
+<h2>2. Mga pahintulot</h2>
+<table>
+<tr><th>Pahintulot</th><th>Bakit</th></tr>
+<tr><td>Notifications (opsyonal)</td><td>Para ipaalala sa iyo ang Painting of the Day tuwing umaga. Naka-schedule ang mga ito sa device mo; walang ginagamit na notification server o device token. Gumagana nang buo ang app kahit tumanggi ka</td></tr>
+<tr><td>Tracking (opsyonal, ATT sa iPhone)</td><td>Para magamit ang advertising identifier (IDFA) sa personalized ads (seksyon 4). Kapag tumanggi ka, gumagana pa rin ang lahat at non-personalized ads ang makikita mo</td></tr>
+<tr><td>Mikropono (description text lang, iPhone)</td><td>Hindi kailanman nagre-record ng tunog ang Artelle. Sa iPhone, kailangan ng component na nagpe-play ng background music ang isang description string para sa mikropono, kaya may text sa Settings, pero hindi kailanman binubuksan ang mikropono. Sa Android, hindi hinihingi ang pahintulot sa mikropono</td></tr>
+</table>
+<p>Hindi ina-access ng app ang lokasyon, mga contact, mga larawan, camera o health data, at hindi nito hinihingi ang mga pahintulot na iyon.</p>
+
+<h2>3. Mga bayad, coin at subscription</h2>
+<p>Binubuksan ang mga video story at museum tour gamit ang mga coin sa loob ng app. Ang mga coin pack at subscription (Member at Curator, buwanan o taunan) ay binabayaran lang sa pamamagitan ng App Store o Google Play. Ang mga detalye ng bayad gaya ng card number ay direktang hinahawakan ng Apple at Google; hindi namin kailanman nakikita, natatanggap o iniimbak ang mga ito.</p>
+<p>Awtomatikong nire-renew ang mga subscription para sa parehong haba ng panahon maliban kung kanselahin nang hindi bababa sa 24 oras bago matapos ang panahon, at sinisingil ito sa store account mo. Sa mga plan na may free trial, ang unang singil ay ginagawa kapag natapos ang trial. Puwede kang magkansela anumang oras — sa iPhone sa Settings → Apple Account → Subscriptions, sa Android sa Google Play → Payments &amp; subscriptions. Sa iPhone, ang Standard End User License Agreement (EULA) ng Apple ang umiiral.</p>
+<p>Ang mga coin na natanggap mula sa isang binayad-pabalik (refunded) na pagbili, at ang mga story na binuksan gamit ang mga coin na iyon, ay babawiin.</p>
+
+<h2>4. Ads</h2>
+<p>Ipinapakita lang ang ads sa mga user na walang subscription — isang banner sa ibaba ng screen at isang rewarded video ad na nagpe-play lang kapag ikaw mismo ang nag-tap ng "Manood ng ad". Nawawala ang lahat ng ads kapag nag-subscribe ka.</p>
+<ul>
+<li><strong>Ad network</strong> — Inihahatid ang ads sa pamamagitan ng LevelPlay ng Unity (dating ironSource). Puwede ring lumahok ang iba pang ad network na pinapamagitanan ng LevelPlay.</li>
+<li><strong>Ang binabasa nito</strong> — Mga advertising identifier (IDFA/IDFV, Advertising ID), impormasyon ng device gaya ng modelo ng device, OS, bersyon ng app at wika, tinatayang bansa/lungsod na hinuha mula sa IP address mo, mga view at tap sa ads, at diagnostics ng ad SDK. Direktang binabasa ito ng ad network mula sa device mo; hindi namin kailanman natatanggap o iniimbak ang mga ito.</li>
+<li><strong>Ang hindi nito nakukuha</strong> — Hindi ibinabahagi sa ad network ang mga painting na tinitingnan mo, ang mga favorite mo, at ang mga record ng coin at subscription mo.</li>
+<li><strong>Pahintulot sa tracking</strong> — Kapag unang binuksan ng user na walang subscription ang app, lalabas nang isang beses ang App Tracking Transparency prompt ng Apple. Magagamit mo ang bawat feature kahit tumanggi ka, at mababago mo ang pinili mo anumang oras sa Settings → Privacy &amp; Security → Tracking.</li>
+</ul>
+<p>Ang paghawak ng ad network sa data ay sumusunod sa sarili nitong patakaran — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Patakaran sa Privacy ng Unity/LevelPlay</a>.</p>
+
+<h2>5. Bawat request na ipinapadala ng app palabas — lahat</h2>
+<ul>
+<li><strong>Mga painting at story (Cloudflare)</strong> — Dina-download ng app ang listahan ng mga painting at story, mga salin para sa wikang pinili mo, at mga image file mula sa art host namin (museum-art.art-cdn.workers.dev, mga static file ng Cloudflare). Pag-download lang ito; walang data mo na ipinapadala. Isang request sa parehong host ang nagtatanong lang ng kasalukuyang oras, para maibigay ang mga subscription coin sa tamang petsa.</li>
+<li><strong>Pag-check ng bersyon</strong> — Pagbukas ng app, binabasa nito ang isang maliit na file na nagsasabi kung puwedeng magpatuloy ang kasalukuyang bersyon, at ang mga ad setting (ginagamit para patayin ang ads kapag may emergency). Nagbabasa lang ito; walang data mo na ipinapadala.</li>
+<li><strong>Pag-check ng update ng app (Expo)</strong> — Pagbukas ng app, tinatanong nito ang update server ng Expo kung may bagong screen update. Walang kasamang personal na impormasyon.</li>
+<li><strong>Mga ad request</strong> — Kumokonekta sa ad network ang mga user na walang subscription para makatanggap ng ads (seksyon 4). Pagkatapos mong mag-subscribe, hindi na kumokonekta ang app sa ad network.</li>
+<li><strong>Mga bayad sa store</strong> — Nakikipag-ugnayan ang app sa App Store o Google Play sa device mo para ipakita ang mga presyo, bumili at i-check ang subscription mo.</li>
+<li><strong>Abiso ng pagbili (Android lang)</strong> — Kapag natapos ang isang pagbili sa Android, nagpapadala ang app ng isang request sa server namin (gwansang-server.onrender.com, naka-host sa Render) para sabihin sa developer na "may isang nabenta". Naglalaman lang ito ng pangalan ng app, platform, product ID, presyo at order number ng store — hindi kailanman ang pangalan, contact details o device identifier mo. Ipinapasa ito ng server bilang isang linya sa messenger ng developer (Telegram) at saglit lang ginagamit ang order number para maiwasan ang dobleng abiso, nang hindi ito iniimbak. Hindi kailanman ipinapadala ng iPhone ang request na ito.</li>
+</ul>
+<p>Puwedeng mag-log ng IP address at oras ng access mo ang mga server na naaabot ng mga request na ito; hinahawakan ng bawat provider ang mga log na iyon ayon sa sarili nitong patakaran. Ang pag-share ng painting ay nag-aabot lang ng larawan at link ng app sa share sheet ng device mo kapag tinap mo ang Share; wala nang iba pang ipinapadala ang app.</p>
+
+<h2>6. Ang nakaimbak lang sa device mo</h2>
+<p>Ang na-download na listahan ng mga painting at mga image file, ang coin ledger mo (mga biniling coin, subscription coin, mga binuksang story), antas ng subscription, mga favorite, mga libreng nabasa, mga posisyon kung saan ka huminto, napiling wika, laki ng caption, mga setting ng music at notification, at ang Painting of the Day para sa home screen widget. Nananatili ang mga ito sa device mo at nabubura kapag binura mo ang app. Wala sa mga ito ang makakakilala sa iyo.</p>
+
+<h2>7. Pagbibigay sa third party, paglilipat sa ibang bansa, pagbebenta</h2>
+<p>Hindi kami nagbabahagi o nagbebenta ng anumang impormasyon sa mga third party. Pinoproseso ng Apple at Google ang mga bayad ayon sa sarili nilang patakaran. Gayunman, ang mga value na direktang binabasa ng ad network mula sa device mo (seksyon 4) ay inililipat sa mga server ng provider na iyon sa ibang bansa.</p>
+<table>
+<tr><th>Tatanggap</th><th>Data</th><th>Layunin</th></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource) at mga pinapamagitanang ad network</td><td>Advertising identifier, device/OS/bersyon ng app, tinatayang bansa at wika, mga interaksyon sa ads</td><td>Pagpapakita ng ads at pagsukat ng performance nito</td></tr>
+</table>
+<p>Kung gusto mo, patayin ang tracking para hindi maibahagi ang advertising identifier.</p>
+
+<h2>8. Pagtatago at pagbura</h2>
+<p>Wala kaming itinatagong data ng user, kaya walang mahihiling na burahin. Ang mga value na binasa ng ad network ay itinatago at binubura ayon sa patakaran ng provider na iyon. Nabubura ang data sa device mo kapag binura mo ang app. Ang mga email na natatanggap namin ay itinatago lang hangga't kailangan para sumagot, at pagkatapos ay binubura.</p>
+
+<h2>9. Mga batang wala pang 14 taong gulang</h2>
+<p>Hindi kami sadyang nangongolekta ng personal na impormasyon mula sa mga bata. Kapag naka-off ang tracking, hindi ginagamit ang advertising identifier para sa personalized ads.</p>
+
+<h2>10. Pinagmulan ng mga painting at larawan</h2>
+<p>Ang mga painting sa app ay mga obrang paso na ang copyright (public domain), sa mga bersyong inilathala sa Wikimedia Commons. Ang mga larawan ng lugar sa mga museum tour ay may malayang lisensya (CC BY at katulad nito), at nakalagay sa screen ang credits.</p>
+
+<h2>11. Ang iyong mga karapatan</h2>
+<p>Ayon sa mga naaangkop na batas sa privacy, puwede mong hilingin ang pag-access, pagtama, pagbura o pagpapahinto ng pagproseso ng personal na impormasyon mo. Dahil wala kaming hawak na personal na impormasyon, walang mahihiling, at puwede mong burahin ang data sa device mo anumang oras sa pamamagitan ng pagbura ng app.</p>
+
+<h2>12. Mga pagbabago sa patakarang ito</h2>
+<p>Kapag nagbago ang patakarang ito, ia-update namin ang petsa ng bisa sa pahinang ito. Magkakabisa ang binagong patakaran sa araw na nai-post ito rito.</p>
+
+<h2>13. Privacy officer at pakikipag-ugnayan</h2>
+<p>Developer: Nemo Factory<br />Privacy officer: ang developer mismo ng app<br />Makipag-ugnayan: contact@nemofactory.co.kr</p>
+
+<h2>14. Mga remedyo</h2>
+<p>Kung kailangan mo ng payo o gusto mong mag-ulat ng paglabag sa privacy, puwede kang makipag-ugnayan sa mga sumusunod na ahensya sa Korea.</p>
+<ul>
+<li>Personal Information Infringement Report Center (KISA) — privacy.kisa.or.kr / 118</li>
+<li>Personal Information Dispute Mediation Committee — kopico.go.kr / 1833-6972</li>
+<li>Supreme Prosecutors' Office Cyber Investigation Division — spo.go.kr / 1301</li>
+<li>Korean National Police Agency Cyber Bureau — ecrm.police.go.kr / 182</li>
+</ul>
