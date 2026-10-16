@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>플러츠 개인정보 처리방침 · 네모팩토리</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto; max-width: 720px; padding: 32px 20px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+    font-size: 16px; line-height: 1.75;
+    color: #222; background: #fff;
+    word-break: keep-all; overflow-wrap: anywhere;
+  }
+  h1 { font-size: 26px; line-height: 1.4; margin: 32px 0 8px; }
+  h2 { font-size: 19px; line-height: 1.45; margin: 32px 0 8px; padding-top: 8px; border-top: 1px solid #eee; }
+  h3 { font-size: 17px; margin: 24px 0 6px; }
+  p, ul, ol { margin: 10px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: #1a5fd0; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f6f7f9; }
+  code { background: #f2f3f5; padding: 1px 5px; border-radius: 4px; font-size: 14px; }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid #eee; font-size: 13px; color: #888; }
+  footer a { color: #888; }
+  /* 언어 탭 — JS 가 없으면 탭을 숨기고 모든 언어를 그냥 다 보여준다 */
+  .langs { display: none; }
+  .langs a {
+    display: inline-block; padding: 6px 14px; margin: 0 6px 6px 0;
+    border: 1px solid #ddd; border-radius: 999px;
+    font-size: 14px; text-decoration: none; color: #555;
+  }
+  .langs a.on { background: #222; border-color: #222; color: #fff; }
+  html.js .langs { display: block; margin-bottom: 8px; }
+  html.js .lang { display: none; }
+  html.js .lang.on { display: block; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e3e5e8; background: #16181c; }
+    h2 { border-top-color: #2a2d33; }
+    a { color: #7aa7f0; }
+    th, td { border-color: #2a2d33; }
+    th { background: #1e2126; }
+    code { background: #22262c; }
+    footer { border-top-color: #2a2d33; color: #7d8188; }
+    .langs a { border-color: #333840; color: #b9bec6; }
+    .langs a.on { background: #e3e5e8; border-color: #e3e5e8; color: #16181c; }
+  }
+</style>
+<script>
+  // 탭이 그려지기 전에 붙여야 언어가 바뀌며 깜빡이지 않는다
+  document.documentElement.className = 'js';
+  addEventListener('DOMContentLoaded', function () {
+    var secs = document.querySelectorAll('.lang');
+    if (!secs.length) return;
+    var have = [].map.call(secs, function (s) { return s.dataset.lang; });
+    function pick() {
+      var want = location.hash.slice(1);
+      if (!want) {
+        // 닻이 없으면 브라우저 언어로 고른다 — 스토어 목록에서 맨 주소로 들어오는 길이다.
+        // 중국어만 두 글자로 못 자른다. zh-TW·zh-HK·zh-Hant-* 는 번체, zh-CN·zh-SG 는 간체라
+        // 같은 'zh' 로 묶으면 간체 사용자에게 번체 판을 보여주게 된다(앱의 locale.ts 와 같은 판정).
+        var nav = navigator.language || 'en';
+        want = /^zh/i.test(nav) && /(Hant|TW|HK|MO)/i.test(nav) ? 'zhHant' : nav.slice(0, 2);
+      }
+      // 없는 언어로 들어오면 영문 — 첫 구역(한국어)으로 떨구면 간체·프랑스어 기기가 한글 방침을 본다.
+      return have.indexOf(want) >= 0 ? want : have.indexOf('en') >= 0 ? 'en' : have[0];
+    }
+    function show() {
+      var on = pick();
+      [].forEach.call(secs, function (s) { s.classList.toggle('on', s.dataset.lang === on); });
+      [].forEach.call(document.querySelectorAll('.langs a'), function (a) {
+        a.classList.toggle('on', a.hash.slice(1) === on);
+      });
+      document.documentElement.lang = on;
+    }
+    addEventListener('hashchange', show);
+    show();
+  });
+</script>
+</head>
+<body>
+<script>if(!location.hash){var n=navigator.language||'',m=/^zh/i.test(n)&&!/(Hant|TW|HK|MO)/i.test(n)?'zhHans':/^pt/i.test(n)?'ptBR':/^(fil|tl)/i.test(n)?'fil':'';if(m)history.replaceState(null,'','#'+m);}</script>
+<nav class="langs"><a href="#ko">한국어</a><a href="#en">English</a><a href="#ja">日本語</a><a href="#zhHant">繁體中文</a><a href="#zhHans">简体中文</a><a href="#es">Español</a><a href="#fr">Français</a><a href="#ptBR">Português (Brasil)</a><a href="#id">Bahasa Indonesia</a><a href="#ms">Bahasa Melayu</a><a href="#vi">Tiếng Việt</a><a href="#th">ไทย</a><a href="#hi">हिन्दी</a><a href="#ar">العربية</a><a href="#bn">বাংলা</a><a href="#ur">اردو</a><a href="#fil">Filipino</a><a href="#ta">தமிழ்</a><a href="#te">తెలుగు</a><a href="#my">မြန်မာ</a></nav>
+<section class="lang" data-lang="ko">
+<h1>플러츠 개인정보 처리방침</h1>
+
+<p><strong>시행일:</strong> 2026년 10월 16일<br /><strong>문의:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>한 줄 요약</strong><br />플러츠(Flirts)는 회원가입도 로그인도 없고, 이름·연락처 같은 개인정보를 받지 않습니다. 게임 진행은 이용자의 기기에만 저장되며 저희에게 오지 않습니다. 광고·분석 도구는 없습니다.</p>
+
+<h2>1. 수집하는 개인정보</h2>
+<p><strong>저희가 수집하는 개인정보는 없습니다.</strong> 이름·연락처·이메일·사진 등 어떤 개인정보도 저희에게 오지 않습니다. 계정 기능이 없어 가입·로그인 절차가 없습니다.</p>
+<p>게임 속에 나오는 폰·인물·메시지·사진은 모두 지어낸 이야기이며, 이용자의 실제 폰 내용(사진·연락처·메시지)을 읽지 않습니다.</p>
+<p>사건 목록 맨 아래 <strong>문의·제보</strong>를 누르면 저희 메일 주소가 뜹니다. 주소를 누르면 기기의 메일 앱이 열리고, 이용자가 직접 쓴 메일이 저희에게 도착합니다. 보내는 것은 이용자의 메일 앱이며, 앱이 따로 수집하는 정보는 없습니다.</p>
+
+<h2>2. 권한</h2>
+<table>
+<tr><th>권한</th><th>왜 필요한가</th></tr>
+<tr><td><strong>마이크</strong>(iPhone 설정에 문구만)</td><td>플러츠는 소리를 녹음하지 않습니다. iPhone 에서는 배경 음악을 트는 재생기가 마이크 안내 문구를 함께 요구해 설정에 문구가 들어 있을 뿐, 마이크를 켜지 않습니다. Android 에서는 마이크 권한을 요청하지 않습니다</td></tr>
+<tr><td><strong>사진</strong>(iPhone 설정에 문구만)</td><td>플러츠는 사진첩을 열지도, 사진첩에 저장하지도 않습니다. 앱에 들어 있는 파일 부품이 안내 문구를 함께 요구해 설정에 문구가 들어 있을 뿐입니다</td></tr>
+</table>
+<p>위치·연락처·카메라·건강 정보에는 접근하지 않으며, 해당 권한을 요청하지 않습니다.</p>
+
+<h2>3. 앱이 밖으로 보내는 요청 — 전부</h2>
+<ul>
+<li><strong>버전 확인:</strong> 앱을 켤 때 「지금 판을 계속 써도 되는지」를 적어 둔 작은 파일 하나를 읽습니다. 읽기만 하며 이용자의 어떤 값도 실어 보내지 않습니다.</li>
+<li><strong>앱 업데이트 확인(Expo):</strong> 앱을 켤 때 새 화면 업데이트가 있는지 Expo 업데이트 서버에 묻습니다. 개인정보를 싣지 않으며, 해당 서버 기록에 IP 주소가 남을 수 있습니다.</li>
+</ul>
+<p>그 밖에는 인터넷에 연결하지 않습니다. 게임 진행·증거함·보고서는 기기 밖으로 나가지 않습니다.</p>
+
+<h2>4. 기기에만 저장되는 것</h2>
+<p>사건마다의 진행(폰 시계, 잠금 해제 여부, 주운 증거, 의뢰인과 주고받은 말, 쓰던 보고서, 결말)과 고른 언어입니다. 기기 안에만 있으며 <strong>앱을 지우면 함께 지워집니다.</strong> 이용자를 알아볼 수 있는 값은 들어 있지 않습니다.</p>
+
+<h2>5. 제3자 제공 · 국외 이전 · 판매</h2>
+<p>저희가 제3자에게 넘기거나 판매하는 정보는 없습니다.</p>
+
+<h2>6. 보관 기간과 삭제</h2>
+<p>저희가 보관하는 이용자 데이터가 없어 삭제를 요청하실 대상도 없습니다. 기기의 값은 앱을 삭제하면 함께 지워집니다. 문의로 받은 메일은 답변에 필요한 동안만 보관하고 그 뒤에 지웁니다.</p>
+
+<h2>7. 만 14세 미만 아동</h2>
+<p>저희는 아동의 개인정보를 알면서 수집하지 않습니다.</p>
+
+<h2>8. 음악의 출처</h2>
+<p>배경 음악은 저희가 직접 작곡하고 합성한 곡이며, 다른 사람의 녹음이나 샘플을 쓰지 않았습니다.</p>
+
+<h2>9. 이용자의 권리</h2>
+<p>이용자는 개인정보 보호법에 따라 열람·정정·삭제·처리정지를 요구하실 수 있습니다. 다만 저희가 보유한 개인정보가 없어 요청하실 대상이 없으며, 기기의 값은 앱을 삭제해 언제든 직접 지우실 수 있습니다.</p>
+
+<h2>10. 방침의 변경</h2>
+<p>이 방침이 바뀌면 이 페이지에 시행일을 고쳐 알립니다. 바뀐 방침은 이 페이지에 올린 날부터 효력이 생깁니다.</p>
+
+<h2>11. 개인정보 보호책임자 및 문의</h2>
+<ul>
+<li><strong>제작자:</strong> 네모팩토리 (Nemo Factory)</li>
+<li><strong>개인정보 보호책임자:</strong> 앱 제작자 본인</li>
+<li><strong>문의:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+
+<h2>12. 권익침해 구제 방법</h2>
+<ul>
+<li>개인정보침해 신고센터 — <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 국번없이 118</li>
+<li>개인정보 분쟁조정위원회 — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>대검찰청 사이버수사과 — <a href="https://www.spo.go.kr">spo.go.kr</a> / 국번없이 1301</li>
+<li>경찰청 사이버수사국 — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 국번없이 182</li>
+</ul>
+</section>
+<section class="lang" data-lang="en">
+<h1>Flirts Privacy Policy</h1>
+
+<p><strong>Effective:</strong> October 16, 2026<br /><strong>Contact:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>In one line</strong><br />Flirts has no sign-up and no login, and does not ask for personal information such as your name or contact details. Your game progress is saved only on your device and never reaches us. There are no ads and no analytics.</p>
+
+<h2>1. Personal information we collect</h2>
+<p><strong>We collect none.</strong> No personal information such as your name, contact details, email or photos ever reaches us. There are no accounts, so there is no sign-up or login.</p>
+<p>The phones, people, messages and photos in the game are all fiction. The app never reads what is on your real phone (photos, contacts or messages).</p>
+<p>Tapping <strong>Contact</strong> at the bottom of the case list shows our email address. Tapping the address opens the mail app on your device, and the email you write yourself comes to us. Your mail app sends it; the app itself collects nothing.</p>
+
+<h2>2. Permissions</h2>
+<table>
+<tr><th>Permission</th><th>Why</th></tr>
+<tr><td><strong>Microphone</strong> (wording in iPhone Settings only)</td><td>Flirts records nothing. On iPhone, the player that plays the background music requires a microphone description, so the wording sits in Settings, but the microphone is never turned on. On Android, the microphone permission is not requested</td></tr>
+<tr><td><strong>Photos</strong> (wording in iPhone Settings only)</td><td>Flirts never opens your photo library or saves anything to it. A file component built into the app requires the description, so the wording sits in Settings</td></tr>
+</table>
+<p>The app does not access location, contacts, camera or health data, and does not request those permissions.</p>
+
+<h2>3. Every request the app sends out</h2>
+<ul>
+<li><strong>Version check:</strong> When the app starts, it reads one small file that says whether the current version may still be used. It only reads; none of your values are sent.</li>
+<li><strong>App update check (Expo):</strong> When the app starts, it asks Expo's update server whether a new screen update is available. No personal information is sent; the server log may record your IP address.</li>
+</ul>
+<p>Otherwise the app does not connect to the internet. Your game progress, evidence and reports never leave your device.</p>
+
+<h2>4. What is stored only on your device</h2>
+<p>Progress for each case (the in-game phone clock, whether you unlocked it, the evidence you picked up, your messages with the client, the report you were writing and the ending) and the language you chose. It stays on your device and <strong>is deleted when you delete the app.</strong> It contains nothing that identifies you.</p>
+
+<h2>5. Sharing, overseas transfer and sale</h2>
+<p>We do not share or sell any information with third parties.</p>
+
+<h2>6. Retention and deletion</h2>
+<p>We keep no user data, so there is nothing to ask us to delete. Values on your device are deleted together with the app. Emails we receive are kept only as long as needed to reply, then deleted.</p>
+
+<h2>7. Children</h2>
+<p>We do not knowingly collect personal information from children.</p>
+
+<h2>8. Music</h2>
+<p>The background music was composed and synthesized by us. No one else's recordings or samples were used.</p>
+
+<h2>9. Your rights</h2>
+<p>You may request access, correction, deletion or suspension of processing of your personal information. As we hold none, there is nothing to request, and you can delete the values on your device at any time by deleting the app.</p>
+
+<h2>10. Changes to this policy</h2>
+<p>If this policy changes, we will update the effective date on this page. The revised policy takes effect on the day it is posted here.</p>
+
+<h2>11. Privacy officer and contact</h2>
+<ul>
+<li><strong>Developer:</strong> Nemo Factory</li>
+<li><strong>Privacy officer:</strong> the app's developer</li>
+<li><strong>Contact:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+
+<h2>12. Remedies</h2>
+<p>If you need advice or wish to report a privacy violation, you may contact the following Korean authorities.</p>
+<ul>
+<li>Personal Information Infringement Report Center (KISA) — <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 118</li>
+<li>Personal Information Dispute Mediation Committee — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>Supreme Prosecutors' Office Cyber Investigation Division — <a href="https://www.spo.go.kr">spo.go.kr</a> / 1301</li>
+<li>Korean National Police Agency Cyber Bureau — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 182</li>
+</ul>
+</section>
+<section class="lang" data-lang="ja">
+<h1>Flirts プライバシーポリシー</h1>
+
+<p><strong>施行日:</strong> 2026年10月16日<br /><strong>お問い合わせ:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>ひとことで</strong><br />Flirts には会員登録もログインもなく、氏名や連絡先などの個人情報をお預かりしません。ゲームの進行は利用者の端末にだけ保存され、当社には届きません。広告・分析ツールはありません。</p>
+
+<h2>1. 収集する個人情報</h2>
+<p><strong>当社が収集する個人情報はありません。</strong>氏名・連絡先・メールアドレス・写真など、いかなる個人情報も当社には届きません。アカウント機能がないため、登録・ログインの手続きもありません。</p>
+<p>ゲームに登場するスマホ・人物・メッセージ・写真はすべて作り話であり、利用者の実際のスマホの中身（写真・連絡先・メッセージ）を読み取ることはありません。</p>
+<p>事件リストの一番下の<strong>お問い合わせ</strong>をタップすると、当社のメールアドレスが表示されます。アドレスをタップすると端末のメールアプリが開き、利用者ご自身が書いたメールが当社に届きます。送信するのは利用者のメールアプリであり、アプリが別途収集する情報はありません。</p>
+
+<h2>2. 権限</h2>
+<table>
+<tr><th>権限</th><th>必要な理由</th></tr>
+<tr><td><strong>マイク</strong>（iPhone の設定に説明文のみ）</td><td>Flirts は音を録音しません。iPhone では BGM を再生するプレーヤーがマイクの説明文もあわせて求めるため設定に文言が入っているだけで、マイクはオンにしません。Android ではマイクの権限を求めません</td></tr>
+<tr><td><strong>写真</strong>（iPhone の設定に説明文のみ）</td><td>Flirts は写真ライブラリを開くことも、写真ライブラリに保存することもありません。アプリに組み込まれたファイル部品が説明文もあわせて求めるため、設定に文言が入っているだけです</td></tr>
+</table>
+<p>位置情報・連絡先・カメラ・ヘルスケア情報にはアクセスせず、これらの権限も求めません。</p>
+
+<h2>3. アプリが外部に送るリクエスト — すべて</h2>
+<ul>
+<li><strong>バージョン確認:</strong> アプリを開くとき、「いまのバージョンを使い続けてよいか」を記した小さなファイルを一つ読みます。読むだけで、利用者のいかなる値も送りません。</li>
+<li><strong>アプリのアップデート確認（Expo）:</strong> アプリを開くとき、新しい画面のアップデートがあるかを Expo のアップデートサーバーに問い合わせます。個人情報は含まず、そのサーバーの記録に IP アドレスが残ることがあります。</li>
+</ul>
+<p>それ以外にインターネットに接続することはありません。ゲームの進行・証拠・報告書が端末の外に出ることはありません。</p>
+
+<h2>4. 端末にだけ保存されるもの</h2>
+<p>事件ごとの進行（ゲーム内のスマホの時計、ロック解除の有無、拾った証拠、依頼人とのやりとり、書きかけの報告書、結末）と、選んだ言語です。これらは端末の中にだけあり、<strong>アプリを削除すると一緒に消えます。</strong>利用者を特定できる値は含まれていません。</p>
+
+<h2>5. 第三者提供・国外移転・販売</h2>
+<p>当社が第三者に渡したり販売したりする情報はありません。</p>
+
+<h2>6. 保管期間と削除</h2>
+<p>当社が保管する利用者データはないため、削除を求める対象もありません。端末の値はアプリを削除すると一緒に消えます。お問い合わせで受け取ったメールは、返信に必要な間だけ保管し、その後削除します。</p>
+
+<h2>7. 14歳未満の子ども</h2>
+<p>当社は子どもの個人情報を知りながら収集することはありません。</p>
+
+<h2>8. 音楽の出典</h2>
+<p>BGM は当社が自ら作曲・合成した曲で、他者の録音やサンプルは使用していません。</p>
+
+<h2>9. 利用者の権利</h2>
+<p>利用者は、適用される個人情報保護法令に基づき、開示・訂正・削除・処理の停止を求めることができます。ただし、当社が保有する個人情報はないため請求の対象はなく、端末の値はアプリを削除することでいつでもご自身で消せます。</p>
+
+<h2>10. 本ポリシーの変更</h2>
+<p>本ポリシーを変更する場合は、このページの施行日を更新してお知らせします。変更後のポリシーは、このページに掲載した日から効力を生じます。</p>
+
+<h2>11. 個人情報保護責任者とお問い合わせ先</h2>
+<ul>
+<li><strong>開発者:</strong> Nemo Factory</li>
+<li><strong>個人情報保護責任者:</strong> アプリの開発者本人</li>
+<li><strong>お問い合わせ:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+
+<h2>12. 権利侵害の救済</h2>
+<p>個人情報の侵害について相談や申告が必要な場合は、以下の韓国の機関にお問い合わせいただけます。</p>
+<ul>
+<li>個人情報侵害申告センター（韓国インターネット振興院 KISA） — <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 118</li>
+<li>個人情報紛争調停委員会 — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>大検察庁 サイバー捜査課 — <a href="https://www.spo.go.kr">spo.go.kr</a> / 1301</li>
+<li>警察庁 サイバー捜査局 — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 182</li>
+</ul>
+</section>
+<section class="lang" data-lang="zhHant">
+<h1>Flirts 隱私權政策</h1>
+
+<p><strong>生效日期：</strong>2026年10月16日<br /><strong>聯絡方式：</strong>contact@nemofactory.co.kr</p>
+
+<p><strong>一句話摘要</strong><br />Flirts 沒有會員註冊也沒有登入，不會向你索取姓名、聯絡方式等個人資料。遊戲進度只儲存在你的裝置上，不會傳到我們這裡。沒有廣告，也沒有分析工具。</p>
+
+<h2>1. 我們蒐集的個人資料</h2>
+<p><strong>我們不蒐集任何個人資料。</strong>姓名、聯絡方式、電子郵件、照片等任何個人資料都不會傳到我們這裡。沒有帳號功能，因此沒有註冊或登入程序。</p>
+<p>遊戲中出現的手機、人物、訊息和照片全都是虛構的，本 App 不會讀取你真實手機裡的內容（照片、聯絡人、訊息）。</p>
+<p>點一下案件清單最下方的<strong>聯絡我們</strong>，就會顯示我們的電子郵件地址。點一下地址會開啟裝置上的郵件 App，由你親自撰寫的郵件會寄到我們這裡。寄出郵件的是你的郵件 App，本 App 不會另外蒐集任何資訊。</p>
+
+<h2>2. 權限</h2>
+<table>
+<tr><th>權限</th><th>為什麼需要</th></tr>
+<tr><td><strong>麥克風</strong>（僅 iPhone 設定中的說明文字）</td><td>Flirts 不會錄音。在 iPhone 上，播放背景音樂的播放器同時要求提供麥克風說明文字，所以設定中只是放了這段文字，並不會開啟麥克風。在 Android 上不會要求麥克風權限</td></tr>
+<tr><td><strong>照片</strong>（僅 iPhone 設定中的說明文字）</td><td>Flirts 不會開啟你的照片圖庫，也不會儲存任何東西到照片圖庫。App 內建的檔案元件同時要求提供說明文字，所以設定中只是放了這段文字</td></tr>
+</table>
+<p>本 App 不會存取位置、聯絡人、相機或健康資料，也不會要求這些權限。</p>
+
+<h2>3. App 對外發出的請求——全部</h2>
+<ul>
+<li><strong>版本確認：</strong>開啟 App 時，會讀取一個小檔案，裡面記載「目前版本是否可以繼續使用」。只會讀取，不會附帶你的任何資料。</li>
+<li><strong>App 更新確認（Expo）：</strong>開啟 App 時，會向 Expo 更新伺服器詢問是否有新的畫面更新。不附帶個人資料，但該伺服器的紀錄中可能會留下 IP 位址。</li>
+</ul>
+<p>除此之外不會連上網路。遊戲進度、證據和報告都不會離開你的裝置。</p>
+
+<h2>4. 只儲存在裝置上的資料</h2>
+<p>每個案件的進度（遊戲中手機的時鐘、是否已解鎖、撿到的證據、與委託人往來的訊息、正在寫的報告、結局）以及選擇的語言。這些只存在裝置內，<strong>刪除 App 時會一併刪除。</strong>其中沒有可以辨識你身分的值。</p>
+
+<h2>5. 提供第三方、跨境傳輸、出售</h2>
+<p>我們不會把任何資訊交給第三方或出售。</p>
+
+<h2>6. 保存期間與刪除</h2>
+<p>我們沒有保存任何使用者資料，因此也沒有可以要求刪除的對象。裝置上的值會在刪除 App 時一併刪除。透過聯絡收到的郵件，只在回覆所需期間內保存，之後即刪除。</p>
+
+<h2>7. 未滿 14 歲的兒童</h2>
+<p>我們不會在知情的情況下蒐集兒童的個人資料。</p>
+
+<h2>8. 音樂的出處</h2>
+<p>背景音樂是我們自行作曲並合成的曲子，沒有使用他人的錄音或取樣。</p>
+
+<h2>9. 你的權利</h2>
+<p>你可依適用的個人資料保護法令，要求查閱、更正、刪除或停止處理個人資料。不過，我們沒有持有任何個人資料，因此沒有可以要求的對象；裝置上的值隨時可以透過刪除 App 自行刪除。</p>
+
+<h2>10. 本政策的變更</h2>
+<p>本政策若有變更，會更新本頁的生效日期加以公告。變更後的政策自刊登於本頁之日起生效。</p>
+
+<h2>11. 個人資料保護負責人與聯絡方式</h2>
+<ul>
+<li><strong>開發者：</strong>Nemo Factory</li>
+<li><strong>個人資料保護負責人：</strong>App 開發者本人</li>
+<li><strong>聯絡方式：</strong><a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+
+<h2>12. 救濟途徑</h2>
+<p>如需諮詢或檢舉個人資料侵害，可聯絡以下韓國機關。</p>
+<ul>
+<li>個人資料侵害申報中心（KISA）— <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 118</li>
+<li>個人資料紛爭調解委員會 — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>大檢察廳 網路犯罪偵查科 — <a href="https://www.spo.go.kr">spo.go.kr</a> / 1301</li>
+<li>警察廳 網路犯罪偵查局 — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 182</li>
+</ul>
+</section>
+<section class="lang" data-lang="zhHans">
+<h1>Flirts 隐私政策</h1>
+
+<p><strong>生效日期：</strong>2026年10月16日<br /><strong>联系方式：</strong>contact@nemofactory.co.kr</p>
+
+<p><strong>一句话概要</strong><br />Flirts 没有注册也没有登录，不会向你索取姓名、联系方式等个人信息。游戏进度只保存在你的设备上，不会到达我们这里。没有广告，也没有分析工具。</p>
+
+<h2>1. 我们收集的个人信息</h2>
+<p><strong>我们不收集任何个人信息。</strong>姓名、联系方式、电子邮件、照片等任何个人信息都不会到达我们这里。没有账户功能，因此没有注册或登录流程。</p>
+<p>游戏中出现的手机、人物、消息和照片全都是虚构的，本应用不会读取你真实手机里的内容（照片、通讯录、消息）。</p>
+<p>点按案件列表最下方的<strong>联系我们</strong>，会显示我们的电子邮件地址。点按地址会打开设备上的邮件应用，由你亲自撰写的邮件会发送给我们。发送邮件的是你的邮件应用，本应用不会另外收集任何信息。</p>
+
+<h2>2. 权限</h2>
+<table>
+<tr><th>权限</th><th>为什么需要</th></tr>
+<tr><td><strong>麦克风</strong>（仅 iPhone 设置中的说明文字）</td><td>Flirts 不会录音。在 iPhone 上，播放背景音乐的播放器同时要求提供麦克风说明文字，所以设置中只是放了这段文字，并不会打开麦克风。在 Android 上不会请求麦克风权限</td></tr>
+<tr><td><strong>照片</strong>（仅 iPhone 设置中的说明文字）</td><td>Flirts 不会打开你的相册，也不会向相册保存任何内容。应用内置的文件组件同时要求提供说明文字，所以设置中只是放了这段文字</td></tr>
+</table>
+<p>本应用不会访问位置、通讯录、相机或健康数据，也不会请求这些权限。</p>
+
+<h2>3. 应用对外发出的请求——全部</h2>
+<ul>
+<li><strong>版本检查：</strong>打开应用时，会读取一个小文件，其中写有「当前版本是否可以继续使用」。只读取，不会附带你的任何数据。</li>
+<li><strong>应用更新检查（Expo）：</strong>打开应用时，会向 Expo 更新服务器询问是否有新的界面更新。不附带个人信息，但该服务器的日志中可能会留下 IP 地址。</li>
+</ul>
+<p>除此之外不会连接互联网。游戏进度、证据和报告都不会离开你的设备。</p>
+
+<h2>4. 只保存在设备上的数据</h2>
+<p>每个案件的进度（游戏中手机的时钟、是否已解锁、捡到的证据、与委托人往来的消息、正在写的报告、结局）以及选择的语言。这些只存在于设备内，<strong>删除应用时会一并删除。</strong>其中没有可以识别你身份的值。</p>
+
+<h2>5. 向第三方提供、跨境传输、出售</h2>
+<p>我们不会把任何信息交给第三方或出售。</p>
+
+<h2>6. 保存期限与删除</h2>
+<p>我们没有保存任何用户数据，因此也没有可以要求删除的对象。设备上的值会在删除应用时一并删除。通过联系收到的邮件，只在回复所需期间内保存，之后即删除。</p>
+
+<h2>7. 未满 14 周岁的儿童</h2>
+<p>我们不会在知情的情况下收集儿童的个人信息。</p>
+
+<h2>8. 音乐的来源</h2>
+<p>背景音乐是我们自行作曲并合成的曲子，没有使用他人的录音或采样。</p>
+
+<h2>9. 你的权利</h2>
+<p>你可以根据适用的个人信息保护法律，要求查阅、更正、删除或停止处理个人信息。不过，我们没有持有任何个人信息，因此没有可以要求的对象；设备上的值随时可以通过删除应用自行删除。</p>
+
+<h2>10. 本政策的变更</h2>
+<p>本政策如有变更，会更新本页的生效日期予以公告。变更后的政策自发布于本页之日起生效。</p>
+
+<h2>11. 个人信息保护负责人及联系方式</h2>
+<ul>
+<li><strong>开发者：</strong>Nemo Factory</li>
+<li><strong>个人信息保护负责人：</strong>应用开发者本人</li>
+<li><strong>联系方式：</strong><a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+
+<h2>12. 救济途径</h2>
+<p>如需咨询或举报个人信息侵害，可以联系以下韩国机构。</p>
+<ul>
+<li>个人信息侵害举报中心（KISA）— <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 118</li>
+<li>个人信息纠纷调解委员会 — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>大检察厅 网络犯罪侦查科 — <a href="https://www.spo.go.kr">spo.go.kr</a> / 1301</li>
+<li>警察厅 网络犯罪侦查局 — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 182</li>
+</ul>
+</section>
+<section class="lang" data-lang="es">
+<h1>Política de privacidad de Flirts</h1>
+
+<p><strong>Vigente desde:</strong> 16 de octubre de 2026<br /><strong>Contacto:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>En una línea</strong><br />Flirts no tiene registro ni inicio de sesión, y no pide información personal como tu nombre o tus datos de contacto. Tu progreso en el juego se guarda solo en tu dispositivo y nunca nos llega. No hay anuncios ni herramientas de análisis.</p>
+
+<h2>1. Información personal que recopilamos</h2>
+<p><strong>No recopilamos ninguna.</strong> Ningún dato personal, como tu nombre, datos de contacto, correo electrónico o fotos, llega a nosotros. No hay cuentas, así que no hay registro ni inicio de sesión.</p>
+<p>Los teléfonos, las personas, los mensajes y las fotos del juego son todos ficticios. La app nunca lee lo que hay en tu teléfono real (fotos, contactos o mensajes).</p>
+<p>Al tocar <strong>Contacto</strong> en la parte inferior de la lista de casos, aparece nuestra dirección de correo. Al tocar la dirección se abre la app de correo de tu dispositivo, y el correo que escribas tú mismo nos llega. Quien lo envía es tu app de correo; la app no recopila nada por su cuenta.</p>
+
+<h2>2. Permisos</h2>
+<table>
+<tr><th>Permiso</th><th>Para qué</th></tr>
+<tr><td><strong>Micrófono</strong> (solo el texto de descripción, iPhone)</td><td>Flirts no graba sonido. En iPhone, el reproductor de la música de fondo también exige un texto de descripción del micrófono, por eso ese texto figura en los ajustes, pero el micrófono nunca se activa. En Android no se pide permiso de micrófono</td></tr>
+<tr><td><strong>Fotos</strong> (solo el texto de descripción, iPhone)</td><td>Flirts nunca abre tu fototeca ni guarda nada en ella. Un componente de archivos incluido en la app también exige el texto de descripción, por eso figura en los ajustes</td></tr>
+</table>
+<p>La app no accede a la ubicación, los contactos, la cámara ni los datos de salud, y no pide esos permisos.</p>
+
+<h2>3. Todas las solicitudes que envía la app</h2>
+<ul>
+<li><strong>Comprobación de versión:</strong> al abrir la app, lee un pequeño archivo que indica si la versión actual se puede seguir usando. Solo se lee y no incluye ningún dato tuyo.</li>
+<li><strong>Comprobación de actualizaciones (Expo):</strong> al abrir la app, pregunta al servidor de actualizaciones de Expo si hay una nueva actualización de pantallas. No incluye información personal; tu dirección IP puede quedar en los registros de ese servidor.</li>
+</ul>
+<p>Fuera de esto, la app no se conecta a internet. Tu progreso en el juego, las pruebas y los informes nunca salen de tu dispositivo.</p>
+
+<h2>4. Lo que se guarda solo en tu dispositivo</h2>
+<p>El progreso de cada caso (el reloj del teléfono dentro del juego, si lo desbloqueaste, las pruebas que recogiste, tus mensajes con el cliente, el informe que estabas escribiendo y el final) y el idioma que elegiste. Todo esto está solo en el dispositivo y <strong>se borra al eliminar la app.</strong> Nada de ello te identifica.</p>
+
+<h2>5. Cesión a terceros, transferencia internacional y venta</h2>
+<p>No cedemos ni vendemos ninguna información a terceros.</p>
+
+<h2>6. Conservación y eliminación</h2>
+<p>No guardamos datos de usuarios, así que no hay nada que nos puedas pedir que borremos. Los valores del dispositivo se borran al eliminar la app. Los correos recibidos a través de Contacto se conservan solo el tiempo necesario para responder y después se eliminan.</p>
+
+<h2>7. Menores de 14 años</h2>
+<p>No recopilamos a sabiendas información personal de menores.</p>
+
+<h2>8. Origen de la música</h2>
+<p>La música de fondo la hemos compuesto y sintetizado nosotros mismos. No se han usado grabaciones ni muestras de otras personas.</p>
+
+<h2>9. Tus derechos</h2>
+<p>Según la legislación de privacidad aplicable, puedes solicitar el acceso, la rectificación, la supresión o la suspensión del tratamiento de tus datos personales. Sin embargo, no tenemos ningún dato personal, así que no hay nada que solicitar; puedes borrar tú mismo los valores del dispositivo en cualquier momento eliminando la app.</p>
+
+<h2>10. Cambios en esta política</h2>
+<p>Si esta política cambia, lo comunicaremos actualizando la fecha de entrada en vigor en esta página. La política modificada surte efecto desde el día en que se publica en esta página.</p>
+
+<h2>11. Responsable de privacidad y contacto</h2>
+<ul>
+<li><strong>Desarrollador:</strong> Nemo Factory</li>
+<li><strong>Responsable de privacidad:</strong> el propio desarrollador de la app</li>
+<li><strong>Contacto:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+
+<h2>12. Vías de reclamación</h2>
+<p>Si necesitas asesoramiento o quieres denunciar una vulneración de tu privacidad, puedes dirigirte a los siguientes organismos coreanos.</p>
+<ul>
+<li>Centro de Denuncias de Vulneración de Datos Personales (KISA) — <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 118</li>
+<li>Comité de Mediación de Conflictos sobre Datos Personales — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>División de Investigación Cibernética de la Fiscalía Suprema — <a href="https://www.spo.go.kr">spo.go.kr</a> / 1301</li>
+<li>Oficina de Investigación Cibernética de la Agencia Nacional de Policía de Corea — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 182</li>
+</ul>
+</section>
+<section class="lang" data-lang="fr">
+<h1>Politique de confidentialité de Flirts</h1>
+
+<p><strong>Date d’entrée en vigueur :</strong> 16 octobre 2026<br /><strong>Contact :</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>En une ligne</strong><br />Flirts n’a ni inscription ni connexion, et ne demande aucune donnée personnelle comme votre nom ou vos coordonnées. Votre progression dans le jeu est enregistrée uniquement sur votre appareil et ne nous parvient jamais. Il n’y a ni publicité ni outil d’analyse.</p>
+
+<h2>1. Données personnelles que nous collectons</h2>
+<p><strong>Nous n’en collectons aucune.</strong> Aucune donnée personnelle, comme votre nom, vos coordonnées, votre adresse e-mail ou vos photos, ne nous parvient. Il n’y a pas de compte, donc ni inscription ni connexion.</p>
+<p>Les téléphones, les personnes, les messages et les photos du jeu sont entièrement fictifs. L’app ne lit jamais le contenu de votre vrai téléphone (photos, contacts ou messages).</p>
+<p>En touchant <strong>Contact</strong> en bas de la liste des affaires, notre adresse e-mail s’affiche. En touchant l’adresse, l’app de messagerie de votre appareil s’ouvre, et l’e-mail que vous rédigez vous-même nous parvient. C’est votre app de messagerie qui l’envoie ; l’app ne collecte rien de son côté.</p>
+
+<h2>2. Autorisations</h2>
+<table>
+<tr><th>Autorisation</th><th>Pourquoi</th></tr>
+<tr><td><strong>Microphone</strong> (texte de description seulement, iPhone)</td><td>Flirts n’enregistre aucun son. Sur iPhone, le lecteur de la musique de fond exige aussi un texte de description du microphone ; ce texte figure donc dans les réglages, mais le microphone n’est jamais activé. Sur Android, l’autorisation du microphone n’est pas demandée</td></tr>
+<tr><td><strong>Photos</strong> (texte de description seulement, iPhone)</td><td>Flirts n’ouvre jamais votre photothèque et n’y enregistre rien. Un composant de fichiers intégré à l’app exige aussi ce texte de description ; il figure donc dans les réglages</td></tr>
+</table>
+<p>L’app n’accède ni à la localisation, ni aux contacts, ni à l’appareil photo, ni aux données de santé, et ne demande pas ces autorisations.</p>
+
+<h2>3. Toutes les requêtes envoyées par l’app</h2>
+<ul>
+<li><strong>Vérification de version :</strong> à l’ouverture, l’app lit un petit fichier qui indique si la version actuelle peut encore être utilisée. Il est lu uniquement et ne transporte aucune de vos données.</li>
+<li><strong>Vérification des mises à jour (Expo) :</strong> à l’ouverture, l’app demande au serveur de mises à jour d’Expo si une nouvelle mise à jour des écrans est disponible. Aucune donnée personnelle n’est incluse ; votre adresse IP peut rester dans les journaux de ce serveur.</li>
+</ul>
+<p>En dehors de cela, l’app ne se connecte pas à Internet. Votre progression, vos preuves et vos rapports ne quittent jamais votre appareil.</p>
+
+<h2>4. Ce qui est enregistré uniquement sur votre appareil</h2>
+<p>La progression de chaque affaire (l’horloge du téléphone dans le jeu, son déverrouillage ou non, les preuves ramassées, vos échanges avec le client, le rapport en cours de rédaction et la fin) ainsi que la langue choisie. Tout cela reste uniquement sur l’appareil et <strong>est supprimé quand vous supprimez l’app.</strong> Rien de tout cela ne permet de vous identifier.</p>
+
+<h2>5. Communication à des tiers, transfert international et vente</h2>
+<p>Nous ne transmettons ni ne vendons aucune information à des tiers.</p>
+
+<h2>6. Conservation et suppression</h2>
+<p>Nous ne conservons aucune donnée utilisateur, il n’y a donc rien dont vous pourriez demander la suppression. Les valeurs de l’appareil sont supprimées avec l’app. Les e-mails reçus via Contact ne sont conservés que le temps nécessaire pour répondre, puis supprimés.</p>
+
+<h2>7. Enfants de moins de 14 ans</h2>
+<p>Nous ne collectons pas sciemment de données personnelles d’enfants.</p>
+
+<h2>8. Origine de la musique</h2>
+<p>La musique de fond a été composée et synthétisée par nos soins. Aucun enregistrement ni échantillon d’autrui n’a été utilisé.</p>
+
+<h2>9. Vos droits</h2>
+<p>Conformément aux lois applicables en matière de protection des données, vous pouvez demander l’accès, la rectification, l’effacement ou la suspension du traitement de vos données personnelles. Toutefois, nous ne détenons aucune donnée personnelle, il n’y a donc rien à demander ; vous pouvez effacer vous-même à tout moment les valeurs de l’appareil en supprimant l’app.</p>
+
+<h2>10. Modifications de cette politique</h2>
+<p>Si cette politique change, nous l’indiquerons en mettant à jour la date d’entrée en vigueur sur cette page. La politique modifiée prend effet le jour de sa publication sur cette page.</p>
+
+<h2>11. Responsable de la protection des données et contact</h2>
+<ul>
+<li><strong>Développeur :</strong> Nemo Factory</li>
+<li><strong>Responsable de la protection des données :</strong> le développeur de l’app lui-même</li>
+<li><strong>Contact :</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+
+<h2>12. Voies de recours</h2>
+<p>Si vous avez besoin de conseils ou souhaitez signaler une atteinte à votre vie privée, vous pouvez contacter les organismes coréens suivants.</p>
+<ul>
+<li>Centre de signalement des atteintes aux données personnelles (KISA) — <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 118</li>
+<li>Comité de médiation des litiges relatifs aux données personnelles — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>Division des enquêtes cybernétiques du Parquet suprême — <a href="https://www.spo.go.kr">spo.go.kr</a> / 1301</li>
+<li>Bureau des enquêtes cybernétiques de l’Agence nationale de police coréenne — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 182</li>
+</ul>
+</section>
+<section class="lang" data-lang="ptBR">
+<h1>Política de Privacidade do Flirts</h1>
+
+<p><strong>Vigência:</strong> 16 de outubro de 2026<br /><strong>Contato:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>Em uma linha</strong><br />O Flirts não tem cadastro nem login e não pede informações pessoais como seu nome ou contato. Seu progresso no jogo fica salvo só no seu aparelho e nunca chega até nós. Não há anúncios nem ferramentas de análise.</p>
+
+<h2>1. Informações pessoais que coletamos</h2>
+<p><strong>Não coletamos nenhuma.</strong> Nenhuma informação pessoal, como nome, contato, e-mail ou fotos, chega até nós. Não há contas, então não há cadastro nem login.</p>
+<p>Os celulares, as pessoas, as mensagens e as fotos do jogo são todos fictícios. O app nunca lê o que há no seu celular de verdade (fotos, contatos ou mensagens).</p>
+<p>Ao tocar em <strong>Contato</strong> no fim da lista de casos, aparece nosso endereço de e-mail. Ao tocar no endereço, o app de e-mail do aparelho é aberto, e o e-mail que você mesmo escrever chega até nós. Quem envia é o seu app de e-mail; o app não coleta nada por conta própria.</p>
+
+<h2>2. Permissões</h2>
+<table>
+<tr><th>Permissão</th><th>Por que é necessária</th></tr>
+<tr><td><strong>Microfone</strong> (apenas o texto de descrição, iPhone)</td><td>O Flirts não grava som. No iPhone, o player que toca a música de fundo também exige um texto de descrição do microfone, por isso o texto está nos ajustes, mas o microfone nunca é ligado. No Android, a permissão de microfone não é solicitada</td></tr>
+<tr><td><strong>Fotos</strong> (apenas o texto de descrição, iPhone)</td><td>O Flirts nunca abre sua fototeca nem salva nada nela. Um componente de arquivos incluído no app também exige o texto de descrição, por isso ele está nos ajustes</td></tr>
+</table>
+<p>O app não acessa localização, contatos, câmera ou dados de saúde e não pede essas permissões.</p>
+
+<h2>3. Todas as solicitações que o app envia</h2>
+<ul>
+<li><strong>Verificação de versão:</strong> ao abrir, o app lê um pequeno arquivo que informa se a versão atual ainda pode ser usada. É apenas leitura e não leva nenhum dado seu.</li>
+<li><strong>Verificação de atualização do app (Expo):</strong> ao abrir, o app pergunta ao servidor de atualizações da Expo se há uma nova atualização de telas. Nenhuma informação pessoal é incluída; seu endereço IP pode ficar nos registros desse servidor.</li>
+</ul>
+<p>Fora isso, o app não se conecta à internet. Seu progresso no jogo, as provas e os relatórios nunca saem do seu aparelho.</p>
+
+<h2>4. O que fica salvo só no seu aparelho</h2>
+<p>O progresso de cada caso (o relógio do celular no jogo, se você o desbloqueou, as provas que recolheu, suas mensagens com o cliente, o relatório que estava escrevendo e o final) e o idioma escolhido. Tudo isso fica só no aparelho e <strong>é apagado quando você exclui o app.</strong> Nada disso identifica você.</p>
+
+<h2>5. Compartilhamento com terceiros, transferência internacional e venda</h2>
+<p>Não repassamos nem vendemos nenhuma informação a terceiros.</p>
+
+<h2>6. Retenção e exclusão</h2>
+<p>Não guardamos dados de usuários, então não há nada que você precise nos pedir para apagar. Os valores do aparelho são apagados quando você exclui o app. E-mails recebidos pelo Contato são mantidos apenas pelo tempo necessário para responder e depois apagados.</p>
+
+<h2>7. Crianças menores de 14 anos</h2>
+<p>Não coletamos intencionalmente informações pessoais de crianças.</p>
+
+<h2>8. Origem da música</h2>
+<p>A música de fundo foi composta e sintetizada por nós mesmos. Não usamos gravações nem samples de outras pessoas.</p>
+
+<h2>9. Seus direitos</h2>
+<p>De acordo com as leis de privacidade aplicáveis, você pode solicitar acesso, correção, exclusão ou suspensão do tratamento dos seus dados pessoais. No entanto, não temos nenhum dado pessoal, então não há o que solicitar; você pode apagar os valores do aparelho a qualquer momento excluindo o app.</p>
+
+<h2>10. Alterações nesta política</h2>
+<p>Se esta política mudar, avisaremos atualizando a data de vigência nesta página. A política alterada passa a valer a partir do dia em que for publicada nesta página.</p>
+
+<h2>11. Encarregado de privacidade e contato</h2>
+<ul>
+<li><strong>Desenvolvedor:</strong> Nemo Factory</li>
+<li><strong>Encarregado de privacidade:</strong> o próprio desenvolvedor do app</li>
+<li><strong>Contato:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+
+<h2>12. Canais de reclamação</h2>
+<p>Se precisar de orientação ou quiser denunciar uma violação de privacidade, você pode entrar em contato com os seguintes órgãos coreanos.</p>
+<ul>
+<li>Centro de Denúncias de Violação de Dados Pessoais (KISA) — <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 118</li>
+<li>Comitê de Mediação de Disputas sobre Dados Pessoais — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>Divisão de Investigação Cibernética da Procuradoria Suprema — <a href="https://www.spo.go.kr">spo.go.kr</a> / 1301</li>
+<li>Departamento de Investigação Cibernética da Agência Nacional de Polícia da Coreia — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 182</li>
+</ul>
+</section>
+<section class="lang" data-lang="id">
+<h1>Kebijakan Privasi Flirts</h1>
+
+<p><strong>Berlaku sejak:</strong> 16 Oktober 2026<br /><strong>Kontak:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>Ringkasnya</strong><br />Flirts tidak memiliki pendaftaran maupun login, dan tidak meminta informasi pribadi seperti nama atau kontak Anda. Progres permainan Anda hanya disimpan di perangkat Anda dan tidak pernah sampai kepada kami. Tidak ada iklan dan tidak ada alat analitik.</p>
+
+<h2>1. Informasi pribadi yang kami kumpulkan</h2>
+<p><strong>Kami tidak mengumpulkan apa pun.</strong> Tidak ada informasi pribadi seperti nama, kontak, email, atau foto yang sampai kepada kami. Tidak ada fitur akun, jadi tidak ada pendaftaran atau login.</p>
+<p>Ponsel, orang, pesan, dan foto di dalam game semuanya fiksi. Aplikasi ini tidak pernah membaca isi ponsel Anda yang sebenarnya (foto, kontak, atau pesan).</p>
+<p>Mengetuk <strong>Kontak</strong> di bagian paling bawah daftar kasus akan menampilkan alamat email kami. Mengetuk alamat itu akan membuka aplikasi email di perangkat Anda, dan email yang Anda tulis sendiri akan sampai kepada kami. Yang mengirimnya adalah aplikasi email Anda; aplikasi ini tidak mengumpulkan informasi apa pun secara terpisah.</p>
+
+<h2>2. Izin</h2>
+<table>
+<tr><th>Izin</th><th>Mengapa diperlukan</th></tr>
+<tr><td><strong>Mikrofon</strong> (hanya teks keterangan di pengaturan iPhone)</td><td>Flirts tidak merekam suara. Di iPhone, pemutar musik latar juga mewajibkan teks keterangan mikrofon, sehingga teks itu hanya tercantum di pengaturan; mikrofon tidak pernah dinyalakan. Di Android, izin mikrofon tidak diminta</td></tr>
+<tr><td><strong>Foto</strong> (hanya teks keterangan di pengaturan iPhone)</td><td>Flirts tidak pernah membuka galeri foto Anda dan tidak menyimpan apa pun ke sana. Komponen file yang ada di dalam aplikasi juga mewajibkan teks keterangan, sehingga teks itu hanya tercantum di pengaturan</td></tr>
+</table>
+<p>Aplikasi tidak mengakses lokasi, kontak, kamera, atau data kesehatan, dan tidak meminta izin tersebut.</p>
+
+<h2>3. Semua permintaan yang dikirim aplikasi</h2>
+<ul>
+<li><strong>Pemeriksaan versi:</strong> saat dibuka, aplikasi membaca satu file kecil yang berisi apakah versi saat ini masih boleh dipakai. Hanya dibaca dan tidak membawa data Anda sama sekali.</li>
+<li><strong>Pemeriksaan pembaruan aplikasi (Expo):</strong> saat dibuka, aplikasi menanyakan ke server pembaruan Expo apakah ada pembaruan layar baru. Tidak menyertakan informasi pribadi; alamat IP Anda mungkin tercatat di log server tersebut.</li>
+</ul>
+<p>Selain itu, aplikasi tidak terhubung ke internet. Progres permainan, barang bukti, dan laporan Anda tidak pernah keluar dari perangkat.</p>
+
+<h2>4. Yang hanya disimpan di perangkat Anda</h2>
+<p>Progres setiap kasus (jam ponsel di dalam game, apakah sudah dibuka kuncinya, barang bukti yang Anda kumpulkan, percakapan Anda dengan klien, laporan yang sedang Anda tulis, dan akhir cerita) serta bahasa yang Anda pilih. Semua ini hanya ada di perangkat dan <strong>ikut terhapus saat Anda menghapus aplikasi.</strong> Tidak ada yang dapat mengidentifikasi Anda.</p>
+
+<h2>5. Pemberian kepada pihak ketiga, transfer ke luar negeri, penjualan</h2>
+<p>Kami tidak memberikan atau menjual informasi apa pun kepada pihak ketiga.</p>
+
+<h2>6. Masa penyimpanan dan penghapusan</h2>
+<p>Kami tidak menyimpan data pengguna, jadi tidak ada yang perlu Anda minta untuk dihapus. Nilai di perangkat ikut terhapus saat aplikasi dihapus. Email yang diterima melalui Kontak hanya disimpan selama diperlukan untuk membalas, lalu dihapus.</p>
+
+<h2>7. Anak di bawah 14 tahun</h2>
+<p>Kami tidak dengan sengaja mengumpulkan informasi pribadi anak-anak.</p>
+
+<h2>8. Sumber musik</h2>
+<p>Musik latar kami gubah dan sintesis sendiri. Tidak ada rekaman atau sampel milik orang lain yang digunakan.</p>
+
+<h2>9. Hak Anda</h2>
+<p>Berdasarkan undang-undang privasi yang berlaku, Anda dapat meminta akses, perbaikan, penghapusan, atau penghentian pemrosesan informasi pribadi Anda. Namun, kami tidak memiliki informasi pribadi apa pun, jadi tidak ada yang dapat diminta; nilai di perangkat dapat Anda hapus sendiri kapan saja dengan menghapus aplikasi.</p>
+
+<h2>10. Perubahan kebijakan ini</h2>
+<p>Jika kebijakan ini berubah, kami akan memberitahukannya dengan memperbarui tanggal berlaku di halaman ini. Kebijakan yang diubah berlaku sejak hari diunggah ke halaman ini.</p>
+
+<h2>11. Petugas privasi dan kontak</h2>
+<ul>
+<li><strong>Pengembang:</strong> Nemo Factory</li>
+<li><strong>Petugas privasi:</strong> pengembang aplikasi sendiri</li>
+<li><strong>Kontak:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+
+<h2>12. Upaya pemulihan</h2>
+<p>Jika Anda memerlukan konsultasi atau ingin melaporkan pelanggaran privasi, Anda dapat menghubungi lembaga Korea berikut.</p>
+<ul>
+<li>Pusat Pelaporan Pelanggaran Informasi Pribadi (KISA) — <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 118</li>
+<li>Komite Mediasi Sengketa Informasi Pribadi — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>Divisi Investigasi Siber Kejaksaan Agung — <a href="https://www.spo.go.kr">spo.go.kr</a> / 1301</li>
+<li>Biro Investigasi Siber Badan Kepolisian Nasional Korea — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 182</li>
+</ul>
+</section>
+<section class="lang" data-lang="ms">
+<h1>Dasar Privasi Flirts</h1>
+
+<p><strong>Berkuat kuasa:</strong> 16 Oktober 2026<br /><strong>Hubungi:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>Secara ringkas</strong><br />Flirts tiada pendaftaran dan tiada log masuk, dan tidak meminta maklumat peribadi seperti nama atau butiran hubungan anda. Kemajuan permainan anda disimpan pada peranti anda sahaja dan tidak pernah sampai kepada kami. Tiada iklan dan tiada alat analitik.</p>
+
+<h2>1. Maklumat peribadi yang kami kumpul</h2>
+<p><strong>Kami tidak mengumpul apa-apa.</strong> Tiada maklumat peribadi seperti nama, butiran hubungan, e-mel atau foto yang sampai kepada kami. Tiada fungsi akaun, jadi tiada pendaftaran atau log masuk.</p>
+<p>Telefon, orang, mesej dan foto dalam permainan semuanya rekaan. Apl ini tidak pernah membaca kandungan telefon sebenar anda (foto, kenalan atau mesej).</p>
+<p>Mengetik <strong>Hubungi</strong> di bahagian paling bawah senarai kes akan memaparkan alamat e-mel kami. Mengetik alamat itu membuka apl e-mel pada peranti anda, dan e-mel yang anda tulis sendiri akan sampai kepada kami. Yang menghantarnya ialah apl e-mel anda; apl ini tidak mengumpul apa-apa maklumat secara berasingan.</p>
+
+<h2>2. Kebenaran</h2>
+<table>
+<tr><th>Kebenaran</th><th>Mengapa perlu</th></tr>
+<tr><td><strong>Mikrofon</strong> (hanya teks keterangan dalam tetapan iPhone)</td><td>Flirts tidak merakam bunyi. Pada iPhone, pemain muzik latar juga memerlukan teks keterangan mikrofon, jadi teks itu hanya ada dalam tetapan; mikrofon tidak pernah dihidupkan. Pada Android, kebenaran mikrofon tidak diminta</td></tr>
+<tr><td><strong>Foto</strong> (hanya teks keterangan dalam tetapan iPhone)</td><td>Flirts tidak pernah membuka pustaka foto anda dan tidak menyimpan apa-apa ke dalamnya. Komponen fail yang terbina dalam apl juga memerlukan teks keterangan, jadi teks itu hanya ada dalam tetapan</td></tr>
+</table>
+<p>Apl tidak mengakses lokasi, kenalan, kamera atau data kesihatan, dan tidak meminta kebenaran tersebut.</p>
+
+<h2>3. Semua permintaan yang dihantar oleh apl</h2>
+<ul>
+<li><strong>Semakan versi:</strong> apabila dibuka, apl membaca satu fail kecil yang menyatakan sama ada versi semasa masih boleh digunakan. Ia hanya dibaca dan tidak membawa sebarang data anda.</li>
+<li><strong>Semakan kemas kini apl (Expo):</strong> apabila dibuka, apl bertanya kepada pelayan kemas kini Expo sama ada terdapat kemas kini skrin baharu. Tiada maklumat peribadi disertakan; alamat IP anda mungkin tercatat dalam log pelayan tersebut.</li>
+</ul>
+<p>Selain itu, apl tidak bersambung ke internet. Kemajuan permainan, bahan bukti dan laporan anda tidak pernah keluar dari peranti.</p>
+
+<h2>4. Apa yang disimpan pada peranti anda sahaja</h2>
+<p>Kemajuan setiap kes (jam telefon dalam permainan, sama ada anda telah membukanya, bahan bukti yang anda kutip, perbualan anda dengan klien, laporan yang sedang anda tulis dan pengakhirannya) serta bahasa yang anda pilih. Semua ini hanya berada dalam peranti dan <strong>dipadam bersama apabila anda memadam apl.</strong> Tiada satu pun yang boleh mengenal pasti anda.</p>
+
+<h2>5. Pemberian kepada pihak ketiga, pemindahan ke luar negara, penjualan</h2>
+<p>Kami tidak memberikan atau menjual sebarang maklumat kepada pihak ketiga.</p>
+
+<h2>6. Tempoh penyimpanan dan pemadaman</h2>
+<p>Kami tidak menyimpan data pengguna, jadi tiada apa-apa untuk anda minta dipadam. Nilai pada peranti dipadam bersama apabila apl dipadam. E-mel yang diterima melalui Hubungi hanya disimpan selama diperlukan untuk membalas, kemudian dipadam.</p>
+
+<h2>7. Kanak-kanak bawah 14 tahun</h2>
+<p>Kami tidak dengan sengaja mengumpul maklumat peribadi kanak-kanak.</p>
+
+<h2>8. Sumber muzik</h2>
+<p>Muzik latar digubah dan disintesis sendiri oleh kami. Tiada rakaman atau sampel milik orang lain digunakan.</p>
+
+<h2>9. Hak anda</h2>
+<p>Di bawah undang-undang privasi yang terpakai, anda boleh meminta akses, pembetulan, pemadaman atau penghentian pemprosesan maklumat peribadi anda. Walau bagaimanapun, kami tidak memegang sebarang maklumat peribadi, jadi tiada apa-apa untuk diminta; nilai pada peranti boleh anda padam sendiri bila-bila masa dengan memadam apl.</p>
+
+<h2>10. Perubahan pada dasar ini</h2>
+<p>Jika dasar ini berubah, kami akan memaklumkannya dengan mengemas kini tarikh berkuat kuasa pada halaman ini. Dasar yang diubah berkuat kuasa mulai hari ia disiarkan pada halaman ini.</p>
+
+<h2>11. Pegawai privasi dan hubungan</h2>
+<ul>
+<li><strong>Pembangun:</strong> Nemo Factory</li>
+<li><strong>Pegawai privasi:</strong> pembangun apl sendiri</li>
+<li><strong>Hubungi:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+
+<h2>12. Remedi</h2>
+<p>Jika anda memerlukan nasihat atau ingin melaporkan pelanggaran privasi, anda boleh menghubungi pihak berkuasa Korea berikut.</p>
+<ul>
+<li>Pusat Laporan Pelanggaran Maklumat Peribadi (KISA) — <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 118</li>
+<li>Jawatankuasa Pengantaraan Pertikaian Maklumat Peribadi — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>Bahagian Siasatan Siber Pejabat Pendakwa Agung — <a href="https://www.spo.go.kr">spo.go.kr</a> / 1301</li>
+<li>Biro Siasatan Siber Agensi Polis Kebangsaan Korea — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 182</li>
+</ul>
+</section>
+<section class="lang" data-lang="vi">
+<h1>Chính sách quyền riêng tư của Flirts</h1>
+
+<p><strong>Ngày hiệu lực:</strong> 16 tháng 10 năm 2026<br /><strong>Liên hệ:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>Tóm tắt một dòng</strong><br />Flirts không có đăng ký hay đăng nhập, và không yêu cầu thông tin cá nhân như tên hay thông tin liên hệ của bạn. Tiến trình chơi của bạn chỉ được lưu trên thiết bị của bạn và không bao giờ đến chỗ chúng tôi. Không có quảng cáo và không có công cụ phân tích.</p>
+
+<h2>1. Thông tin cá nhân chúng tôi thu thập</h2>
+<p><strong>Chúng tôi không thu thập gì cả.</strong> Không có thông tin cá nhân nào như tên, thông tin liên hệ, email hay ảnh đến được chỗ chúng tôi. Không có tính năng tài khoản nên không có đăng ký hay đăng nhập.</p>
+<p>Điện thoại, nhân vật, tin nhắn và ảnh trong trò chơi đều là hư cấu. Ứng dụng không bao giờ đọc nội dung trên điện thoại thật của bạn (ảnh, danh bạ hay tin nhắn).</p>
+<p>Chạm vào <strong>Liên hệ</strong> ở cuối danh sách vụ án sẽ hiện địa chỉ email của chúng tôi. Chạm vào địa chỉ sẽ mở ứng dụng email trên thiết bị, và email do chính bạn viết sẽ được gửi đến chúng tôi. Người gửi là ứng dụng email của bạn; ứng dụng không thu thập thêm thông tin nào.</p>
+
+<h2>2. Quyền</h2>
+<table>
+<tr><th>Quyền</th><th>Vì sao cần</th></tr>
+<tr><td><strong>Micrô</strong> (chỉ có dòng mô tả trong cài đặt iPhone)</td><td>Flirts không ghi âm. Trên iPhone, trình phát nhạc nền đòi hỏi kèm dòng mô tả micrô nên dòng chữ đó chỉ nằm trong cài đặt, micrô không bao giờ được bật. Trên Android, ứng dụng không xin quyền micrô</td></tr>
+<tr><td><strong>Ảnh</strong> (chỉ có dòng mô tả trong cài đặt iPhone)</td><td>Flirts không bao giờ mở thư viện ảnh của bạn và không lưu gì vào đó. Một thành phần tệp có sẵn trong ứng dụng đòi hỏi kèm dòng mô tả nên dòng chữ đó chỉ nằm trong cài đặt</td></tr>
+</table>
+<p>Ứng dụng không truy cập vị trí, danh bạ, camera hay dữ liệu sức khoẻ, và không xin các quyền đó.</p>
+
+<h2>3. Mọi yêu cầu mà ứng dụng gửi ra ngoài</h2>
+<ul>
+<li><strong>Kiểm tra phiên bản:</strong> khi mở, ứng dụng đọc một tệp nhỏ ghi rằng phiên bản hiện tại có còn được dùng tiếp hay không. Chỉ đọc, không gửi kèm bất kỳ giá trị nào của bạn.</li>
+<li><strong>Kiểm tra cập nhật ứng dụng (Expo):</strong> khi mở, ứng dụng hỏi máy chủ cập nhật của Expo xem có bản cập nhật màn hình mới không. Không kèm thông tin cá nhân; địa chỉ IP của bạn có thể còn lại trong nhật ký của máy chủ đó.</li>
+</ul>
+<p>Ngoài ra, ứng dụng không kết nối internet. Tiến trình chơi, bằng chứng và báo cáo của bạn không bao giờ rời khỏi thiết bị.</p>
+
+<h2>4. Những gì chỉ lưu trên thiết bị</h2>
+<p>Tiến trình của từng vụ án (đồng hồ điện thoại trong trò chơi, đã mở khoá hay chưa, bằng chứng đã nhặt được, tin nhắn qua lại với thân chủ, bản báo cáo đang viết và kết cục) cùng ngôn ngữ bạn đã chọn. Những dữ liệu này chỉ nằm trong thiết bị và <strong>bị xoá cùng khi bạn xoá ứng dụng.</strong> Không có giá trị nào giúp nhận ra bạn.</p>
+
+<h2>5. Cung cấp cho bên thứ ba, chuyển ra nước ngoài, bán</h2>
+<p>Chúng tôi không chuyển giao hay bán thông tin nào cho bên thứ ba.</p>
+
+<h2>6. Thời gian lưu giữ và xoá</h2>
+<p>Chúng tôi không lưu giữ dữ liệu người dùng nào nên cũng không có gì để bạn yêu cầu xoá. Giá trị trên thiết bị bị xoá cùng khi xoá ứng dụng. Email nhận được qua Liên hệ chỉ được giữ trong thời gian cần để trả lời, sau đó bị xoá.</p>
+
+<h2>7. Trẻ em dưới 14 tuổi</h2>
+<p>Chúng tôi không cố ý thu thập thông tin cá nhân của trẻ em.</p>
+
+<h2>8. Nguồn âm nhạc</h2>
+<p>Nhạc nền do chính chúng tôi sáng tác và tổng hợp. Không sử dụng bản thu âm hay mẫu âm thanh của người khác.</p>
+
+<h2>9. Quyền của bạn</h2>
+<p>Theo luật về quyền riêng tư hiện hành, bạn có thể yêu cầu xem, sửa, xoá hoặc ngừng xử lý thông tin cá nhân của mình. Tuy nhiên, chúng tôi không nắm giữ thông tin cá nhân nào nên không có gì để yêu cầu; giá trị trên thiết bị bạn có thể tự xoá bất cứ lúc nào bằng cách xoá ứng dụng.</p>
+
+<h2>10. Thay đổi chính sách này</h2>
+<p>Nếu chính sách này thay đổi, chúng tôi sẽ thông báo bằng cách cập nhật ngày hiệu lực trên trang này. Chính sách đã thay đổi có hiệu lực kể từ ngày được đăng trên trang này.</p>
+
+<h2>11. Người phụ trách quyền riêng tư và liên hệ</h2>
+<ul>
+<li><strong>Nhà phát triển:</strong> Nemo Factory</li>
+<li><strong>Người phụ trách quyền riêng tư:</strong> chính nhà phát triển ứng dụng</li>
+<li><strong>Liên hệ:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+
+<h2>12. Biện pháp khắc phục</h2>
+<p>Nếu bạn cần tư vấn hoặc muốn báo cáo hành vi xâm phạm quyền riêng tư, bạn có thể liên hệ các cơ quan Hàn Quốc sau.</p>
+<ul>
+<li>Trung tâm tiếp nhận báo cáo xâm phạm thông tin cá nhân (KISA) — <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 118</li>
+<li>Uỷ ban hoà giải tranh chấp thông tin cá nhân — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>Phòng Điều tra Mạng, Viện Kiểm sát Tối cao — <a href="https://www.spo.go.kr">spo.go.kr</a> / 1301</li>
+<li>Cục Điều tra Mạng, Cơ quan Cảnh sát Quốc gia Hàn Quốc — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 182</li>
+</ul>
+</section>
+<section class="lang" data-lang="th">
+<h1>นโยบายความเป็นส่วนตัวของ Flirts</h1>
+
+<p><strong>มีผลบังคับใช้:</strong> 16 ตุลาคม 2026<br /><strong>ติดต่อ:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>สรุปสั้น ๆ</strong><br />Flirts ไม่มีการสมัครสมาชิกและไม่มีการเข้าสู่ระบบ และไม่ขอข้อมูลส่วนบุคคลอย่างชื่อหรือช่องทางติดต่อของคุณ ความคืบหน้าในเกมจะบันทึกไว้ในอุปกรณ์ของคุณเท่านั้นและไม่ส่งมาถึงเรา ไม่มีโฆษณาและไม่มีเครื่องมือวิเคราะห์</p>
+
+<h2>1. ข้อมูลส่วนบุคคลที่เราเก็บรวบรวม</h2>
+<p><strong>เราไม่เก็บข้อมูลส่วนบุคคลใดเลย</strong> ไม่มีข้อมูลส่วนบุคคลใด ๆ เช่น ชื่อ ช่องทางติดต่อ อีเมล หรือรูปภาพ มาถึงเรา ไม่มีระบบบัญชี จึงไม่มีขั้นตอนสมัครหรือเข้าสู่ระบบ</p>
+<p>โทรศัพท์ บุคคล ข้อความ และรูปภาพในเกมล้วนเป็นเรื่องแต่งทั้งหมด แอปไม่อ่านเนื้อหาในโทรศัพท์จริงของคุณ (รูปภาพ รายชื่อติดต่อ หรือข้อความ)</p>
+<p>เมื่อแตะ<strong>ติดต่อเรา</strong>ที่ด้านล่างสุดของรายการคดี ที่อยู่อีเมลของเราจะปรากฏขึ้น เมื่อแตะที่อยู่ แอปอีเมลในอุปกรณ์จะเปิดขึ้น และอีเมลที่คุณเขียนเองจะส่งมาถึงเรา ผู้ส่งคือแอปอีเมลของคุณ แอปนี้ไม่ได้เก็บข้อมูลใดเพิ่มเติม</p>
+
+<h2>2. สิทธิ์การเข้าถึง</h2>
+<table>
+<tr><th>สิทธิ์</th><th>ทำไมจึงต้องใช้</th></tr>
+<tr><td><strong>ไมโครโฟน</strong> (มีเพียงข้อความคำอธิบายในการตั้งค่า iPhone)</td><td>Flirts ไม่บันทึกเสียง บน iPhone ตัวเล่นเพลงประกอบกำหนดให้ต้องมีข้อความคำอธิบายไมโครโฟนด้วย จึงมีเพียงข้อความนั้นอยู่ในการตั้งค่า แต่ไม่ได้เปิดไมโครโฟน บน Android ไม่มีการขอสิทธิ์ไมโครโฟน</td></tr>
+<tr><td><strong>รูปภาพ</strong> (มีเพียงข้อความคำอธิบายในการตั้งค่า iPhone)</td><td>Flirts ไม่เปิดคลังรูปภาพของคุณและไม่บันทึกสิ่งใดลงไป ส่วนประกอบไฟล์ที่ติดมากับแอปกำหนดให้ต้องมีข้อความคำอธิบายด้วย จึงมีเพียงข้อความนั้นอยู่ในการตั้งค่า</td></tr>
+</table>
+<p>แอปไม่เข้าถึงตำแหน่ง รายชื่อติดต่อ กล้อง หรือข้อมูลสุขภาพ และไม่ขอสิทธิ์เหล่านั้น</p>
+
+<h2>3. คำขอทั้งหมดที่แอปส่งออกไป</h2>
+<ul>
+<li><strong>การตรวจสอบเวอร์ชัน:</strong> เมื่อเปิดแอป จะอ่านไฟล์เล็ก ๆ หนึ่งไฟล์ที่ระบุว่า "เวอร์ชันปัจจุบันยังใช้ต่อได้หรือไม่" อ่านอย่างเดียว ไม่ได้แนบค่าใด ๆ ของคุณไป</li>
+<li><strong>การตรวจสอบอัปเดตแอป (Expo):</strong> เมื่อเปิดแอป จะถามเซิร์ฟเวอร์อัปเดตของ Expo ว่ามีอัปเดตหน้าจอใหม่หรือไม่ ไม่ได้แนบข้อมูลส่วนบุคคล แต่ที่อยู่ IP อาจถูกบันทึกในบันทึกของเซิร์ฟเวอร์นั้น</li>
+</ul>
+<p>นอกจากนี้แอปไม่เชื่อมต่ออินเทอร์เน็ต ความคืบหน้าในเกม หลักฐาน และรายงานของคุณจะไม่ออกไปนอกอุปกรณ์</p>
+
+<h2>4. สิ่งที่เก็บไว้ในอุปกรณ์เท่านั้น</h2>
+<p>ความคืบหน้าของแต่ละคดี (นาฬิกาโทรศัพท์ในเกม การปลดล็อกแล้วหรือยัง หลักฐานที่เก็บได้ ข้อความที่คุยกับผู้ว่าจ้าง รายงานที่กำลังเขียน และตอนจบ) และภาษาที่เลือก ข้อมูลเหล่านี้อยู่ในอุปกรณ์เท่านั้น และ<strong>จะถูกลบไปพร้อมกันเมื่อคุณลบแอป</strong> ไม่มีค่าใดที่ระบุตัวคุณได้</p>
+
+<h2>5. การให้ข้อมูลแก่บุคคลที่สาม การโอนไปต่างประเทศ และการขาย</h2>
+<p>เราไม่ได้ส่งต่อหรือขายข้อมูลใดให้บุคคลที่สาม</p>
+
+<h2>6. ระยะเวลาการเก็บรักษาและการลบ</h2>
+<p>เราไม่ได้เก็บข้อมูลผู้ใช้ จึงไม่มีสิ่งใดให้คุณขอลบ ค่าในอุปกรณ์จะถูกลบไปพร้อมกันเมื่อลบแอป อีเมลที่ได้รับผ่านการติดต่อจะเก็บไว้เฉพาะช่วงที่จำเป็นต่อการตอบกลับ แล้วจึงลบ</p>
+
+<h2>7. เด็กอายุต่ำกว่า 14 ปี</h2>
+<p>เราไม่เก็บข้อมูลส่วนบุคคลของเด็กโดยรู้เห็น</p>
+
+<h2>8. ที่มาของเพลง</h2>
+<p>เพลงประกอบเป็นเพลงที่เราแต่งและสังเคราะห์เสียงขึ้นเอง ไม่ได้ใช้การบันทึกเสียงหรือแซมเปิลของผู้อื่น</p>
+
+<h2>9. สิทธิ์ของคุณ</h2>
+<p>ตามกฎหมายคุ้มครองข้อมูลส่วนบุคคลที่ใช้บังคับ คุณขอเข้าถึง แก้ไข ลบ หรือระงับการประมวลผลข้อมูลส่วนบุคคลได้ อย่างไรก็ตาม เราไม่ได้ถือครองข้อมูลส่วนบุคคลใด จึงไม่มีสิ่งใดให้ขอ ส่วนค่าในอุปกรณ์ คุณลบเองได้ทุกเมื่อด้วยการลบแอป</p>
+
+<h2>10. การเปลี่ยนแปลงนโยบายนี้</h2>
+<p>หากนโยบายนี้เปลี่ยนแปลง เราจะแจ้งโดยแก้ไขวันที่มีผลบังคับใช้ในหน้านี้ นโยบายที่เปลี่ยนแปลงจะมีผลตั้งแต่วันที่เผยแพร่ในหน้านี้</p>
+
+<h2>11. เจ้าหน้าที่คุ้มครองข้อมูลส่วนบุคคลและการติดต่อ</h2>
+<ul>
+<li><strong>ผู้พัฒนา:</strong> Nemo Factory</li>
+<li><strong>เจ้าหน้าที่คุ้มครองข้อมูลส่วนบุคคล:</strong> ผู้พัฒนาแอปเอง</li>
+<li><strong>ติดต่อ:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+
+<h2>12. การเยียวยา</h2>
+<p>หากต้องการคำปรึกษาหรือต้องการแจ้งการละเมิดความเป็นส่วนตัว คุณติดต่อหน่วยงานของเกาหลีต่อไปนี้ได้</p>
+<ul>
+<li>ศูนย์รับแจ้งการละเมิดข้อมูลส่วนบุคคล (KISA) — <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 118</li>
+<li>คณะกรรมการไกล่เกลี่ยข้อพิพาทข้อมูลส่วนบุคคล — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>แผนกสืบสวนไซเบอร์ สำนักงานอัยการสูงสุด — <a href="https://www.spo.go.kr">spo.go.kr</a> / 1301</li>
+<li>สำนักสืบสวนไซเบอร์ สำนักงานตำรวจแห่งชาติเกาหลี — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 182</li>
+</ul>
+</section>
+<section class="lang" data-lang="hi">
+<h1>Flirts गोपनीयता नीति</h1>
+
+<p><strong>प्रभावी तिथि:</strong> 16 अक्टूबर 2026<br /><strong>संपर्क:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>एक पंक्ति में</strong><br />Flirts में न साइन-अप है, न लॉगिन, और यह आपका नाम या संपर्क जैसी कोई व्यक्तिगत जानकारी नहीं माँगता। आपकी गेम प्रगति केवल आपके डिवाइस पर सहेजी जाती है और कभी हम तक नहीं पहुँचती। न कोई विज्ञापन है, न कोई एनालिटिक्स टूल।</p>
+
+<h2>1. हम कौन-सी व्यक्तिगत जानकारी एकत्र करते हैं</h2>
+<p><strong>हम कोई व्यक्तिगत जानकारी एकत्र नहीं करते।</strong> नाम, संपर्क, ईमेल, फ़ोटो जैसी कोई भी व्यक्तिगत जानकारी हम तक नहीं पहुँचती। खाते की सुविधा नहीं है, इसलिए साइन-अप या लॉगिन की कोई प्रक्रिया नहीं है।</p>
+<p>गेम में दिखने वाले फ़ोन, लोग, संदेश और फ़ोटो सब काल्पनिक हैं। ऐप आपके असली फ़ोन की सामग्री (फ़ोटो, संपर्क या संदेश) कभी नहीं पढ़ता।</p>
+<p>केस सूची में सबसे नीचे <strong>संपर्क करें</strong> पर टैप करने पर हमारा ईमेल पता दिखता है। पते पर टैप करने से आपके डिवाइस का ईमेल ऐप खुलता है, और आप जो ईमेल ख़ुद लिखते हैं, वह हम तक पहुँचता है। ईमेल आपका ईमेल ऐप भेजता है; यह ऐप अलग से कोई जानकारी एकत्र नहीं करता।</p>
+
+<h2>2. अनुमतियाँ</h2>
+<table>
+<tr><th>अनुमति</th><th>क्यों ज़रूरी है</th></tr>
+<tr><td><strong>माइक्रोफ़ोन</strong> (iPhone सेटिंग में केवल विवरण-पाठ)</td><td>Flirts कोई आवाज़ रिकॉर्ड नहीं करता। iPhone पर बैकग्राउंड संगीत बजाने वाले प्लेयर के साथ माइक्रोफ़ोन का विवरण-पाठ भी अनिवार्य है, इसलिए सेटिंग में केवल वह पाठ मौजूद है; माइक्रोफ़ोन कभी चालू नहीं होता। Android पर माइक्रोफ़ोन की अनुमति नहीं माँगी जाती</td></tr>
+<tr><td><strong>फ़ोटो</strong> (iPhone सेटिंग में केवल विवरण-पाठ)</td><td>Flirts आपकी फ़ोटो लाइब्रेरी कभी नहीं खोलता और उसमें कुछ भी सहेजता नहीं। ऐप में शामिल एक फ़ाइल घटक के साथ विवरण-पाठ अनिवार्य है, इसलिए सेटिंग में केवल वह पाठ मौजूद है</td></tr>
+</table>
+<p>ऐप स्थान, संपर्क, कैमरा या स्वास्थ्य डेटा तक नहीं पहुँचता, और ये अनुमतियाँ नहीं माँगता।</p>
+
+<h2>3. ऐप द्वारा बाहर भेजे जाने वाले अनुरोध — सभी</h2>
+<ul>
+<li><strong>वर्ज़न जाँच:</strong> ऐप खोलने पर यह एक छोटी फ़ाइल पढ़ता है, जिसमें लिखा होता है कि "क्या मौजूदा वर्ज़न इस्तेमाल करते रहना ठीक है"। यह केवल पढ़ता है और आपका कोई भी मान नहीं भेजता।</li>
+<li><strong>ऐप अपडेट जाँच (Expo):</strong> ऐप खोलने पर यह Expo के अपडेट सर्वर से पूछता है कि कोई नया स्क्रीन अपडेट है या नहीं। इसमें कोई व्यक्तिगत जानकारी नहीं होती; उस सर्वर के रिकॉर्ड में IP पता रह सकता है।</li>
+</ul>
+<p>इसके अलावा ऐप इंटरनेट से नहीं जुड़ता। आपकी गेम प्रगति, सबूत और रिपोर्ट कभी आपके डिवाइस से बाहर नहीं जाते।</p>
+
+<h2>4. केवल डिवाइस पर सहेजी जाने वाली चीज़ें</h2>
+<p>हर केस की प्रगति (गेम के अंदर फ़ोन की घड़ी, फ़ोन अनलॉक हुआ या नहीं, आपके उठाए सबूत, क्लाइंट के साथ आपके संदेश, आप जो रिपोर्ट लिख रहे थे और अंत) और आपकी चुनी हुई भाषा। ये सब केवल डिवाइस के अंदर रहते हैं और <strong>ऐप हटाने पर साथ में मिट जाते हैं।</strong> इनमें कोई ऐसा मान नहीं है जिससे आपकी पहचान हो सके।</p>
+
+<h2>5. तीसरे पक्ष को देना, विदेश स्थानांतरण, बिक्री</h2>
+<p>हम कोई भी जानकारी तीसरे पक्ष को न देते हैं, न बेचते हैं।</p>
+
+<h2>6. संग्रहण अवधि और मिटाना</h2>
+<p>हम कोई उपयोगकर्ता डेटा नहीं रखते, इसलिए मिटाने का अनुरोध करने के लिए कुछ नहीं है। डिवाइस के मान ऐप हटाने पर साथ में मिट जाते हैं। संपर्क के ज़रिए मिले ईमेल केवल जवाब देने के लिए ज़रूरी समय तक रखे जाते हैं, फिर मिटा दिए जाते हैं।</p>
+
+<h2>7. 14 वर्ष से कम आयु के बच्चे</h2>
+<p>हम जानबूझकर बच्चों की व्यक्तिगत जानकारी एकत्र नहीं करते।</p>
+
+<h2>8. संगीत का स्रोत</h2>
+<p>बैकग्राउंड संगीत हमने ख़ुद रचा और सिंथेसाइज़ किया है। किसी और की रिकॉर्डिंग या सैंपल का उपयोग नहीं किया गया।</p>
+
+<h2>9. आपके अधिकार</h2>
+<p>लागू गोपनीयता क़ानूनों के तहत आप अपनी व्यक्तिगत जानकारी देखने, सुधारने, मिटाने या उसका प्रसंस्करण रोकने का अनुरोध कर सकते हैं। हालाँकि, हमारे पास कोई व्यक्तिगत जानकारी नहीं है, इसलिए अनुरोध करने के लिए कुछ नहीं है; डिवाइस के मान आप कभी भी ऐप हटाकर ख़ुद मिटा सकते हैं।</p>
+
+<h2>10. इस नीति में बदलाव</h2>
+<p>यह नीति बदलने पर हम इस पेज पर प्रभावी तिथि बदलकर सूचित करेंगे। बदली हुई नीति इस पेज पर प्रकाशित होने के दिन से लागू होती है।</p>
+
+<h2>11. गोपनीयता अधिकारी और संपर्क</h2>
+<ul>
+<li><strong>डेवलपर:</strong> Nemo Factory</li>
+<li><strong>गोपनीयता अधिकारी:</strong> ऐप के डेवलपर स्वयं</li>
+<li><strong>संपर्क:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+
+<h2>12. उपचार</h2>
+<p>अगर आपको सलाह चाहिए या आप गोपनीयता उल्लंघन की शिकायत करना चाहते हैं, तो आप निम्नलिखित कोरियाई संस्थाओं से संपर्क कर सकते हैं।</p>
+<ul>
+<li>व्यक्तिगत जानकारी उल्लंघन शिकायत केंद्र (KISA) — <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 118</li>
+<li>व्यक्तिगत जानकारी विवाद मध्यस्थता समिति — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>सर्वोच्च अभियोजन कार्यालय, साइबर जाँच विभाग — <a href="https://www.spo.go.kr">spo.go.kr</a> / 1301</li>
+<li>कोरियाई राष्ट्रीय पुलिस एजेंसी, साइबर जाँच ब्यूरो — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 182</li>
+</ul>
+</section>
+<section class="lang" data-lang="ar" dir="rtl">
+<h1>سياسة الخصوصية لتطبيق Flirts</h1>
+
+<p><strong>تاريخ السريان:</strong> 16 أكتوبر 2026<br /><strong>التواصل:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>باختصار</strong><br />لا يتطلب Flirts تسجيلًا ولا تسجيل دخول، ولا يطلب معلومات شخصية مثل اسمك أو بيانات التواصل معك. يُحفَظ تقدّمك في اللعبة على جهازك فقط ولا يصلنا أبدًا. لا توجد إعلانات ولا أدوات تحليل.</p>
+
+<h2>1. المعلومات الشخصية التي نجمعها</h2>
+<p><strong>لا نجمع أي معلومات شخصية.</strong> لا تصلنا أي معلومات شخصية مثل الاسم أو بيانات التواصل أو البريد الإلكتروني أو الصور. لا توجد حسابات، لذا لا يوجد تسجيل ولا تسجيل دخول.</p>
+<p>الهواتف والأشخاص والرسائل والصور في اللعبة كلها خيالية. ولا يقرأ التطبيق أبدًا ما في هاتفك الحقيقي (الصور أو جهات الاتصال أو الرسائل).</p>
+<p>عند النقر على <strong>تواصل معنا</strong> أسفل قائمة القضايا يظهر عنوان بريدنا الإلكتروني. وعند النقر على العنوان يُفتح تطبيق البريد على جهازك، وتصلنا الرسالة التي تكتبها بنفسك. الذي يرسلها هو تطبيق البريد لديك، ولا يجمع التطبيق أي معلومات من تلقاء نفسه.</p>
+
+<h2>2. الأذونات</h2>
+<table>
+<tr><th>الإذن</th><th>سبب الحاجة إليه</th></tr>
+<tr><td><strong>الميكروفون</strong> (نص توضيحي فقط في إعدادات iPhone)</td><td>لا يسجّل Flirts أي صوت. على iPhone يتطلب المشغّل الذي يشغّل موسيقى الخلفية وجود نص توضيحي للميكروفون أيضًا، لذا يوجد هذا النص في الإعدادات فقط، ولا يُشغَّل الميكروفون أبدًا. على Android لا يُطلب إذن الميكروفون</td></tr>
+<tr><td><strong>الصور</strong> (نص توضيحي فقط في إعدادات iPhone)</td><td>لا يفتح Flirts مكتبة صورك أبدًا ولا يحفظ فيها أي شيء. يتطلب مكوّن ملفات مدمج في التطبيق وجود النص التوضيحي أيضًا، لذا يوجد هذا النص في الإعدادات فقط</td></tr>
+</table>
+<p>لا يصل التطبيق إلى الموقع أو جهات الاتصال أو الكاميرا أو البيانات الصحية، ولا يطلب هذه الأذونات.</p>
+
+<h2>3. كل الطلبات التي يرسلها التطبيق إلى الخارج</h2>
+<ul>
+<li><strong>التحقق من الإصدار:</strong> عند فتح التطبيق يقرأ ملفًا صغيرًا واحدًا يذكر ما إذا كان الإصدار الحالي لا يزال صالحًا للاستخدام. يُقرأ فقط ولا يحمل أي قيمة من قيمك.</li>
+<li><strong>التحقق من تحديثات التطبيق (Expo):</strong> عند فتح التطبيق يسأل خادم تحديثات Expo عمّا إذا كان هناك تحديث جديد للشاشات. لا يتضمن معلومات شخصية، وقد يبقى عنوان IP في سجلّات ذلك الخادم.</li>
+</ul>
+<p>وفيما عدا ذلك لا يتصل التطبيق بالإنترنت. ولا يغادر تقدّمك في اللعبة وأدلّتك وتقاريرك جهازك أبدًا.</p>
+
+<h2>4. ما يُحفَظ على جهازك فقط</h2>
+<p>تقدّم كل قضية (ساعة الهاتف داخل اللعبة، وما إذا فتحت قفله، والأدلة التي التقطتها، ورسائلك مع العميل، والتقرير الذي كنت تكتبه، والنهاية) واللغة التي اخترتها. كل ذلك موجود داخل الجهاز فقط و<strong>يُحذف معه عند حذف التطبيق.</strong> ولا يتضمن أي قيمة تكشف هويتك.</p>
+
+<h2>5. المشاركة مع أطراف ثالثة والنقل الدولي والبيع</h2>
+<p>لا نسلّم أي معلومات لأطراف ثالثة ولا نبيعها.</p>
+
+<h2>6. مدة الاحتفاظ والحذف</h2>
+<p>لا نحتفظ بأي بيانات للمستخدمين، لذا لا يوجد ما تطلب حذفه. وتُحذف القيم الموجودة على الجهاز مع حذف التطبيق. أما الرسائل الواردة عبر التواصل فلا نحتفظ بها إلا طوال المدة اللازمة للرد، ثم نحذفها.</p>
+
+<h2>7. الأطفال دون 14 عامًا</h2>
+<p>لا نجمع عن علم المعلومات الشخصية للأطفال.</p>
+
+<h2>8. مصدر الموسيقى</h2>
+<p>موسيقى الخلفية من تأليفنا وتوليفنا بأنفسنا. ولم نستخدم تسجيلات أو عيّنات لأي شخص آخر.</p>
+
+<h2>9. حقوقك</h2>
+<p>بموجب قوانين الخصوصية المعمول بها، يحق لك طلب الاطلاع على معلوماتك الشخصية أو تصحيحها أو حذفها أو إيقاف معالجتها. غير أننا لا نحتفظ بأي معلومات شخصية، لذا لا يوجد ما تطلبه، ويمكنك حذف القيم الموجودة على الجهاز بنفسك في أي وقت بحذف التطبيق.</p>
+
+<h2>10. التغييرات على هذه السياسة</h2>
+<p>إذا تغيّرت هذه السياسة، فسنُعلِم بذلك بتحديث تاريخ السريان في هذه الصفحة. وتسري السياسة المعدّلة من يوم نشرها في هذه الصفحة.</p>
+
+<h2>11. مسؤول الخصوصية والتواصل</h2>
+<ul>
+<li><strong>المطوّر:</strong> Nemo Factory</li>
+<li><strong>مسؤول الخصوصية:</strong> مطوّر التطبيق نفسه</li>
+<li><strong>التواصل:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+
+<h2>12. سُبل الانتصاف</h2>
+<p>إذا احتجت إلى مشورة أو أردت الإبلاغ عن انتهاك للخصوصية، يمكنك التواصل مع الجهات الكورية التالية.</p>
+<ul>
+<li>مركز الإبلاغ عن انتهاكات المعلومات الشخصية (KISA) — <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 118</li>
+<li>لجنة الوساطة في نزاعات المعلومات الشخصية — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>قسم التحقيقات الإلكترونية في النيابة العامة العليا — <a href="https://www.spo.go.kr">spo.go.kr</a> / 1301</li>
+<li>مكتب الجرائم الإلكترونية في وكالة الشرطة الوطنية الكورية — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 182</li>
+</ul>
+</section>
+<section class="lang" data-lang="bn">
+<h1>Flirts গোপনীয়তা নীতি</h1>
+
+<p><strong>কার্যকর:</strong> 16 অক্টোবর 2026<br /><strong>যোগাযোগ:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>এক লাইনে</strong><br />Flirts-এ কোনো সাইন-আপ বা লগইন নেই, এবং এটি আপনার নাম বা যোগাযোগের তথ্যের মতো কোনো ব্যক্তিগত তথ্য চায় না। আপনার গেমের অগ্রগতি শুধু আপনার ডিভাইসে সংরক্ষিত থাকে এবং কখনো আমাদের কাছে আসে না। কোনো বিজ্ঞাপন নেই, কোনো অ্যানালিটিক্স টুলও নেই।</p>
+
+<h2>1. আমরা যে ব্যক্তিগত তথ্য সংগ্রহ করি</h2>
+<p><strong>আমরা কোনো ব্যক্তিগত তথ্য সংগ্রহ করি না।</strong> নাম, যোগাযোগের তথ্য, ইমেল, ছবির মতো কোনো ব্যক্তিগত তথ্যই আমাদের কাছে আসে না। অ্যাকাউন্ট ফিচার নেই, তাই সাইন-আপ বা লগইনের কোনো ধাপ নেই।</p>
+<p>গেমের ফোন, মানুষ, মেসেজ ও ছবি সবই কাল্পনিক। অ্যাপটি কখনো আপনার আসল ফোনের বিষয়বস্তু (ছবি, পরিচিতি বা মেসেজ) পড়ে না।</p>
+<p>কেস তালিকার একেবারে নিচে <strong>যোগাযোগ</strong>-এ ট্যাপ করলে আমাদের ইমেল ঠিকানা দেখা যায়। ঠিকানায় ট্যাপ করলে ডিভাইসের মেল অ্যাপ খোলে, এবং আপনি নিজে যে ইমেল লেখেন তা আমাদের কাছে আসে। পাঠায় আপনার মেল অ্যাপ; এই অ্যাপ আলাদাভাবে কোনো তথ্য সংগ্রহ করে না।</p>
+
+<h2>2. অনুমতি</h2>
+<table>
+<tr><th>অনুমতি</th><th>কেন দরকার</th></tr>
+<tr><td><strong>মাইক্রোফোন</strong> (iPhone সেটিংসে শুধু বর্ণনার লেখা)</td><td>Flirts কোনো শব্দ রেকর্ড করে না। iPhone-এ ব্যাকগ্রাউন্ড মিউজিক বাজানোর প্লেয়ারটি মাইক্রোফোনের বর্ণনার লেখাও চায়, তাই সেটিংসে শুধু লেখাটি আছে; মাইক্রোফোন কখনো চালু হয় না। Android-এ মাইক্রোফোন অনুমতি চাওয়া হয় না</td></tr>
+<tr><td><strong>ছবি</strong> (iPhone সেটিংসে শুধু বর্ণনার লেখা)</td><td>Flirts কখনো আপনার ছবির লাইব্রেরি খোলে না এবং সেখানে কিছু সংরক্ষণও করে না। অ্যাপের ভেতরের একটি ফাইল উপাদান বর্ণনার লেখা চায়, তাই সেটিংসে শুধু লেখাটি আছে</td></tr>
+</table>
+<p>অ্যাপটি অবস্থান, পরিচিতি, ক্যামেরা বা স্বাস্থ্য তথ্যে প্রবেশ করে না, এবং এসব অনুমতি চায় না।</p>
+
+<h2>3. অ্যাপ বাইরে যত অনুরোধ পাঠায় — সব</h2>
+<ul>
+<li><strong>সংস্করণ যাচাই:</strong> অ্যাপ খোলার সময় একটি ছোট ফাইল পড়ে, যাতে লেখা থাকে "বর্তমান সংস্করণ চালিয়ে যাওয়া যাবে কি না"। শুধু পড়ে, আপনার কোনো মান পাঠায় না।</li>
+<li><strong>অ্যাপ আপডেট যাচাই (Expo):</strong> অ্যাপ খোলার সময় Expo-এর আপডেট সার্ভারকে জিজ্ঞেস করে নতুন স্ক্রিন আপডেট আছে কি না। কোনো ব্যক্তিগত তথ্য থাকে না; সেই সার্ভারের রেকর্ডে IP ঠিকানা থেকে যেতে পারে।</li>
+</ul>
+<p>এর বাইরে অ্যাপটি ইন্টারনেটে সংযুক্ত হয় না। আপনার গেমের অগ্রগতি, প্রমাণ ও রিপোর্ট কখনো ডিভাইসের বাইরে যায় না।</p>
+
+<h2>4. যা শুধু ডিভাইসে সংরক্ষিত থাকে</h2>
+<p>প্রতিটি কেসের অগ্রগতি (গেমের ভেতরের ফোনের ঘড়ি, আনলক করেছেন কি না, কুড়িয়ে পাওয়া প্রমাণ, ক্লায়েন্টের সঙ্গে আপনার মেসেজ, যে রিপোর্ট লিখছিলেন এবং সমাপ্তি) ও আপনার বেছে নেওয়া ভাষা। এগুলো শুধু ডিভাইসের ভেতরে থাকে এবং <strong>অ্যাপ মুছলে একসঙ্গে মুছে যায়।</strong> এতে আপনাকে চেনা যায় এমন কোনো মান নেই।</p>
+
+<h2>5. তৃতীয় পক্ষকে দেওয়া, বিদেশে স্থানান্তর, বিক্রি</h2>
+<p>আমরা কোনো তথ্য তৃতীয় পক্ষকে দিই না বা বিক্রি করি না।</p>
+
+<h2>6. সংরক্ষণের মেয়াদ ও মুছে ফেলা</h2>
+<p>আমরা কোনো ব্যবহারকারীর ডেটা রাখি না, তাই মুছতে বলার মতো কিছু নেই। ডিভাইসের মান অ্যাপ মুছলে একসঙ্গে মুছে যায়। যোগাযোগের মাধ্যমে পাওয়া ইমেল শুধু উত্তর দেওয়ার জন্য যতদিন দরকার ততদিন রাখা হয়, তারপর মুছে ফেলা হয়।</p>
+
+<h2>7. 14 বছরের কম বয়সী শিশু</h2>
+<p>আমরা জেনেশুনে শিশুদের ব্যক্তিগত তথ্য সংগ্রহ করি না।</p>
+
+<h2>8. সংগীতের উৎস</h2>
+<p>ব্যাকগ্রাউন্ড মিউজিক আমরা নিজেরাই সুর করেছি ও সিন্থেসাইজ করেছি। অন্য কারও রেকর্ডিং বা স্যাম্পল ব্যবহার করা হয়নি।</p>
+
+<h2>9. আপনার অধিকার</h2>
+<p>প্রযোজ্য গোপনীয়তা আইন অনুযায়ী আপনি আপনার ব্যক্তিগত তথ্য দেখা, সংশোধন, মুছে ফেলা বা প্রক্রিয়াকরণ বন্ধের অনুরোধ করতে পারেন। তবে আমাদের কাছে কোনো ব্যক্তিগত তথ্য নেই, তাই অনুরোধ করার মতো কিছু নেই; ডিভাইসের মান যেকোনো সময় অ্যাপ মুছে নিজেই মুছে ফেলতে পারেন।</p>
+
+<h2>10. এই নীতির পরিবর্তন</h2>
+<p>এই নীতি বদলালে আমরা এই পেজে কার্যকর তারিখ বদলে জানাব। পরিবর্তিত নীতি এই পেজে প্রকাশের দিন থেকে কার্যকর হয়।</p>
+
+<h2>11. গোপনীয়তা কর্মকর্তা ও যোগাযোগ</h2>
+<ul>
+<li><strong>ডেভেলপার:</strong> Nemo Factory</li>
+<li><strong>গোপনীয়তা কর্মকর্তা:</strong> অ্যাপের ডেভেলপার নিজে</li>
+<li><strong>যোগাযোগ:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+
+<h2>12. প্রতিকার</h2>
+<p>পরামর্শ প্রয়োজন হলে বা গোপনীয়তা লঙ্ঘনের অভিযোগ জানাতে চাইলে, আপনি নিচের কোরীয় সংস্থাগুলোর সঙ্গে যোগাযোগ করতে পারেন।</p>
+<ul>
+<li>ব্যক্তিগত তথ্য লঙ্ঘন অভিযোগ কেন্দ্র (KISA) — <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 118</li>
+<li>ব্যক্তিগত তথ্য বিরোধ মধ্যস্থতা কমিটি — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>সুপ্রিম প্রসিকিউটরস অফিস, সাইবার তদন্ত বিভাগ — <a href="https://www.spo.go.kr">spo.go.kr</a> / 1301</li>
+<li>কোরিয়ান ন্যাশনাল পুলিশ এজেন্সি, সাইবার তদন্ত ব্যুরো — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 182</li>
+</ul>
+</section>
+<section class="lang" data-lang="ur" dir="rtl">
+<h1>Flirts رازداری کی پالیسی</h1>
+
+<p><strong>نافذ العمل:</strong> 16 اکتوبر 2026<br /><strong>رابطہ:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>ایک سطر میں</strong><br />Flirts میں نہ سائن اپ ہے نہ لاگ اِن، اور یہ آپ کا نام یا رابطے کی تفصیلات جیسی کوئی ذاتی معلومات نہیں مانگتی۔ آپ کی گیم کی پیش رفت صرف آپ کی ڈیوائس پر محفوظ ہوتی ہے اور کبھی ہم تک نہیں پہنچتی۔ نہ کوئی اشتہار ہے نہ کوئی تجزیاتی ٹول۔</p>
+
+<h2>1. ہم کون سی ذاتی معلومات جمع کرتے ہیں</h2>
+<p><strong>ہم کوئی ذاتی معلومات جمع نہیں کرتے۔</strong> نام، رابطے کی تفصیلات، ای میل، تصاویر جیسی کوئی بھی ذاتی معلومات ہم تک نہیں پہنچتی۔ اکاؤنٹ کی سہولت نہیں ہے، اس لیے سائن اپ یا لاگ اِن کا کوئی مرحلہ نہیں۔</p>
+<p>گیم میں دکھائی دینے والے فون، لوگ، پیغامات اور تصاویر سب فرضی ہیں۔ ایپ کبھی آپ کے اصلی فون کا مواد (تصاویر، رابطے یا پیغامات) نہیں پڑھتی۔</p>
+<p>کیس کی فہرست کے بالکل نیچے <strong>رابطہ کریں</strong> پر ٹیپ کرنے سے ہمارا ای میل پتہ دکھائی دیتا ہے۔ پتے پر ٹیپ کرنے سے ڈیوائس کی میل ایپ کھلتی ہے، اور آپ کی خود لکھی ہوئی ای میل ہم تک پہنچتی ہے۔ بھیجتی آپ کی میل ایپ ہے؛ یہ ایپ الگ سے کوئی معلومات جمع نہیں کرتی۔</p>
+
+<h2>2. اجازتیں</h2>
+<table>
+<tr><th>اجازت</th><th>کیوں ضروری ہے</th></tr>
+<tr><td><strong>مائیکروفون</strong> (iPhone ترتیبات میں صرف وضاحتی متن)</td><td>Flirts کوئی آواز ریکارڈ نہیں کرتی۔ iPhone پر پس منظر کی موسیقی بجانے والا پلیئر مائیکروفون کا وضاحتی متن بھی لازمی بناتا ہے، اس لیے ترتیبات میں صرف وہ متن موجود ہے؛ مائیکروفون کبھی آن نہیں ہوتا۔ Android پر مائیکروفون کی اجازت نہیں مانگی جاتی</td></tr>
+<tr><td><strong>تصاویر</strong> (iPhone ترتیبات میں صرف وضاحتی متن)</td><td>Flirts کبھی آپ کی تصویری لائبریری نہیں کھولتی اور نہ اس میں کچھ محفوظ کرتی ہے۔ ایپ میں شامل ایک فائل جزو وضاحتی متن لازمی بناتا ہے، اس لیے ترتیبات میں صرف وہ متن موجود ہے</td></tr>
+</table>
+<p>ایپ مقام، رابطوں، کیمرے یا صحت کے ڈیٹا تک رسائی نہیں کرتی، اور یہ اجازتیں نہیں مانگتی۔</p>
+
+<h2>3. ایپ کی باہر بھیجی جانے والی درخواستیں — سب</h2>
+<ul>
+<li><strong>ورژن کی جانچ:</strong> ایپ کھولنے پر یہ ایک چھوٹی فائل پڑھتی ہے جس میں لکھا ہوتا ہے کہ "کیا موجودہ ورژن استعمال جاری رکھا جا سکتا ہے"۔ یہ صرف پڑھتی ہے اور آپ کی کوئی قدر نہیں بھیجتی۔</li>
+<li><strong>ایپ اپڈیٹ کی جانچ (Expo):</strong> ایپ کھولنے پر یہ Expo کے اپڈیٹ سرور سے پوچھتی ہے کہ کوئی نئی اسکرین اپڈیٹ ہے یا نہیں۔ اس میں کوئی ذاتی معلومات نہیں ہوتی؛ اس سرور کے ریکارڈ میں IP پتہ رہ سکتا ہے۔</li>
+</ul>
+<p>اس کے علاوہ ایپ انٹرنیٹ سے نہیں جڑتی۔ آپ کی گیم کی پیش رفت، ثبوت اور رپورٹیں کبھی آپ کی ڈیوائس سے باہر نہیں جاتیں۔</p>
+
+<h2>4. جو صرف ڈیوائس پر محفوظ ہوتا ہے</h2>
+<p>ہر کیس کی پیش رفت (گیم کے اندر فون کی گھڑی، فون کھلا یا نہیں، آپ کے اٹھائے ہوئے ثبوت، مؤکل کے ساتھ آپ کے پیغامات، جو رپورٹ آپ لکھ رہے تھے اور انجام) اور آپ کی چنی ہوئی زبان۔ یہ سب صرف ڈیوائس کے اندر رہتا ہے اور <strong>ایپ حذف کرنے پر ساتھ ہی مٹ جاتا ہے۔</strong> اس میں کوئی ایسی قدر نہیں جس سے آپ کی شناخت ہو سکے۔</p>
+
+<h2>5. تیسرے فریق کو دینا، بیرونِ ملک منتقلی، فروخت</h2>
+<p>ہم کوئی بھی معلومات تیسرے فریق کو نہ دیتے ہیں نہ بیچتے ہیں۔</p>
+
+<h2>6. محفوظ رکھنے کی مدت اور حذف کرنا</h2>
+<p>ہم کوئی صارف ڈیٹا نہیں رکھتے، اس لیے حذف کرنے کی درخواست کے لیے کچھ نہیں ہے۔ ڈیوائس کی قدریں ایپ حذف کرنے پر ساتھ ہی مٹ جاتی ہیں۔ رابطے کے ذریعے موصول ای میلز صرف جواب دینے کے لیے ضروری مدت تک رکھی جاتی ہیں، پھر حذف کر دی جاتی ہیں۔</p>
+
+<h2>7. 14 سال سے کم عمر بچے</h2>
+<p>ہم جان بوجھ کر بچوں کی ذاتی معلومات جمع نہیں کرتے۔</p>
+
+<h2>8. موسیقی کا ماخذ</h2>
+<p>پس منظر کی موسیقی ہم نے خود ترتیب دی اور سنتھیسائز کی ہے۔ کسی اور کی ریکارڈنگ یا سیمپل استعمال نہیں کیا گیا۔</p>
+
+<h2>9. آپ کے حقوق</h2>
+<p>قابلِ اطلاق رازداری کے قوانین کے تحت آپ اپنی ذاتی معلومات دیکھنے، درست کرنے، حذف کرنے یا اس کی پروسیسنگ روکنے کی درخواست کر سکتے ہیں۔ البتہ ہمارے پاس کوئی ذاتی معلومات نہیں، اس لیے درخواست کے لیے کچھ نہیں ہے؛ ڈیوائس کی قدریں آپ کسی بھی وقت ایپ حذف کر کے خود مٹا سکتے ہیں۔</p>
+
+<h2>10. اس پالیسی میں تبدیلیاں</h2>
+<p>اگر یہ پالیسی بدلی تو ہم اس صفحے پر نافذ العمل تاریخ بدل کر مطلع کریں گے۔ بدلی ہوئی پالیسی اس صفحے پر شائع ہونے کے دن سے نافذ ہوتی ہے۔</p>
+
+<h2>11. رازداری افسر اور رابطہ</h2>
+<ul>
+<li><strong>ڈیولپر:</strong> Nemo Factory</li>
+<li><strong>رازداری افسر:</strong> ایپ کا ڈیولپر خود</li>
+<li><strong>رابطہ:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+
+<h2>12. ازالے کے ذرائع</h2>
+<p>اگر آپ کو مشورہ درکار ہو یا آپ رازداری کی خلاف ورزی کی شکایت کرنا چاہیں تو آپ درج ذیل کوریائی اداروں سے رابطہ کر سکتے ہیں۔</p>
+<ul>
+<li>ذاتی معلومات کی خلاف ورزی کی شکایت کا مرکز (KISA) — <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 118</li>
+<li>ذاتی معلومات کے تنازعات کی ثالثی کمیٹی — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>سپریم پراسیکیوٹرز آفس، سائبر تفتیشی شعبہ — <a href="https://www.spo.go.kr">spo.go.kr</a> / 1301</li>
+<li>کوریائی قومی پولیس ایجنسی، سائبر تفتیشی بیورو — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 182</li>
+</ul>
+</section>
+<section class="lang" data-lang="fil">
+<h1>Patakaran sa Privacy ng Flirts</h1>
+
+<p><strong>Petsa ng bisa:</strong> Oktubre 16, 2026<br /><strong>Makipag-ugnayan:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>Sa isang linya</strong><br />Walang sign-up at walang login ang Flirts, at hindi ito humihingi ng personal na impormasyon gaya ng pangalan o contact details mo. Sa device mo lang naka-save ang progreso mo sa laro at hindi ito kailanman nakakarating sa amin. Walang ads at walang analytics.</p>
+
+<h2>1. Personal na impormasyong kinokolekta namin</h2>
+<p><strong>Wala kaming kinokolekta.</strong> Walang personal na impormasyon gaya ng pangalan, contact details, email o mga larawan ang nakakarating sa amin. Walang account feature, kaya walang sign-up o login.</p>
+<p>Kathang-isip lahat ang mga telepono, tao, mensahe at larawan sa laro. Hindi kailanman binabasa ng app ang laman ng totoong telepono mo (mga larawan, contacts o mensahe).</p>
+<p>Kapag tinap mo ang <strong>Makipag-ugnayan</strong> sa pinakaibaba ng listahan ng mga kaso, lalabas ang email address namin. Kapag tinap ang address, bubukas ang mail app ng device mo, at ang email na ikaw mismo ang sumulat ay darating sa amin. Ang mail app mo ang nagpapadala nito; walang hiwalay na kinokolektang impormasyon ang app.</p>
+
+<h2>2. Mga pahintulot</h2>
+<table>
+<tr><th>Pahintulot</th><th>Bakit kailangan</th></tr>
+<tr><td><strong>Mikropono</strong> (paglalarawang teksto lang sa settings ng iPhone)</td><td>Hindi nagre-record ng tunog ang Flirts. Sa iPhone, kinakailangan din ng player na nagpapatugtog ng background music ang paglalarawang teksto para sa mikropono, kaya nasa settings lang ang teksto; hindi kailanman binubuksan ang mikropono. Sa Android, hindi hinihingi ang pahintulot sa mikropono</td></tr>
+<tr><td><strong>Mga larawan</strong> (paglalarawang teksto lang sa settings ng iPhone)</td><td>Hindi kailanman binubuksan ng Flirts ang photo library mo at wala itong sine-save doon. Kinakailangan din ng isang file component na nakapaloob sa app ang paglalarawang teksto, kaya nasa settings lang ang teksto</td></tr>
+</table>
+<p>Hindi ina-access ng app ang lokasyon, contacts, camera o health data, at hindi nito hinihingi ang mga pahintulot na iyon.</p>
+
+<h2>3. Bawat request na ipinapadala ng app palabas — lahat</h2>
+<ul>
+<li><strong>Pag-check ng bersyon:</strong> pagbukas ng app, binabasa nito ang isang maliit na file na nagsasabi kung puwede pang gamitin ang kasalukuyang bersyon. Binabasa lang ito at walang dalang anumang value mo.</li>
+<li><strong>Pag-check ng update ng app (Expo):</strong> pagbukas ng app, tinatanong nito ang update server ng Expo kung may bagong update sa mga screen. Walang kasamang personal na impormasyon; maaaring maiwan ang IP address mo sa mga log ng server na iyon.</li>
+</ul>
+<p>Bukod dito, hindi kumokonekta sa internet ang app. Hindi kailanman lumalabas sa device mo ang progreso mo sa laro, ang mga ebidensya at ang mga ulat.</p>
+
+<h2>4. Ang nakaimbak lang sa device mo</h2>
+<p>Ang progreso sa bawat kaso (ang orasan ng telepono sa laro, kung na-unlock mo na ito, ang mga ebidensyang napulot mo, ang mga mensahe ninyo ng kliyente, ang ulat na sinusulat mo at ang ending) at ang wikang pinili mo. Nasa loob lang ng device ang lahat ng ito at <strong>nabubura kasabay kapag binura mo ang app.</strong> Walang value rito na makakakilala sa iyo.</p>
+
+<h2>5. Pagbibigay sa third party, paglilipat sa ibang bansa, pagbebenta</h2>
+<p>Wala kaming ibinibigay o ibinebentang impormasyon sa third party.</p>
+
+<h2>6. Pagtatago at pagbura</h2>
+<p>Wala kaming itinatagong data ng user, kaya walang kailangang hilingin na burahin. Nabubura ang mga value sa device kasabay ng pagbura ng app. Ang mga email na natanggap sa pamamagitan ng Makipag-ugnayan ay itinatago lang habang kailangan para sumagot, at pagkatapos ay binubura.</p>
+
+<h2>7. Mga batang wala pang 14 taong gulang</h2>
+<p>Hindi namin sadyang kinokolekta ang personal na impormasyon ng mga bata.</p>
+
+<h2>8. Pinagmulan ng musika</h2>
+<p>Kami mismo ang kumatha at nag-synthesize ng background music. Walang ginamit na recording o sample ng ibang tao.</p>
+
+<h2>9. Ang iyong mga karapatan</h2>
+<p>Ayon sa mga naaangkop na batas sa privacy, puwede mong hilingin ang pag-access, pagtama, pagbura o pagpapahinto ng pagproseso ng personal na impormasyon mo. Gayunman, wala kaming hawak na personal na impormasyon, kaya walang mahihiling; ang mga value sa device ay puwede mong burahin mismo anumang oras sa pamamagitan ng pagbura ng app.</p>
+
+<h2>10. Mga pagbabago sa patakarang ito</h2>
+<p>Kapag nagbago ang patakarang ito, ipapaalam namin sa pamamagitan ng pag-update ng petsa ng bisa sa pahinang ito. Magkakabisa ang binagong patakaran mula sa araw na nai-post ito sa pahinang ito.</p>
+
+<h2>11. Privacy officer at pakikipag-ugnayan</h2>
+<ul>
+<li><strong>Developer:</strong> Nemo Factory</li>
+<li><strong>Privacy officer:</strong> ang developer mismo ng app</li>
+<li><strong>Makipag-ugnayan:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+
+<h2>12. Mga remedyo</h2>
+<p>Kung kailangan mo ng payo o gusto mong mag-ulat ng paglabag sa privacy, puwede kang makipag-ugnayan sa mga sumusunod na ahensya sa Korea.</p>
+<ul>
+<li>Personal Information Infringement Report Center (KISA) — <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 118</li>
+<li>Personal Information Dispute Mediation Committee — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>Supreme Prosecutors' Office Cyber Investigation Division — <a href="https://www.spo.go.kr">spo.go.kr</a> / 1301</li>
+<li>Korean National Police Agency Cyber Bureau — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 182</li>
+</ul>
+</section>
+<section class="lang" data-lang="ta">
+<h1>Flirts தனியுரிமைக் கொள்கை</h1>
+
+<p><strong>நடைமுறைக்கு வரும் நாள்:</strong> 16 அக்டோபர் 2026<br /><strong>தொடர்புக்கு:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>ஒரே வரியில்</strong><br />Flirts-இல் பதிவுசெய்தலும் இல்லை, உள்நுழைவும் இல்லை; உங்கள் பெயர், தொடர்பு விவரங்கள் போன்ற எந்தத் தனிப்பட்ட தகவலையும் அது கேட்பதில்லை. உங்கள் விளையாட்டு முன்னேற்றம் உங்கள் சாதனத்தில் மட்டுமே சேமிக்கப்படுகிறது; ஒருபோதும் எங்களை வந்தடைவதில்லை. விளம்பரங்களும் இல்லை, பகுப்பாய்வுக் கருவிகளும் இல்லை.</p>
+
+<h2>1. நாங்கள் சேகரிக்கும் தனிப்பட்ட தகவல்</h2>
+<p><strong>நாங்கள் எந்தத் தனிப்பட்ட தகவலையும் சேகரிப்பதில்லை.</strong> பெயர், தொடர்பு விவரங்கள், மின்னஞ்சல், புகைப்படங்கள் போன்ற எந்தத் தனிப்பட்ட தகவலும் எங்களை வந்தடைவதில்லை. கணக்கு வசதி இல்லாததால் பதிவுசெய்தல் அல்லது உள்நுழைவு நடைமுறை இல்லை.</p>
+<p>விளையாட்டில் வரும் தொலைபேசிகள், நபர்கள், செய்திகள், புகைப்படங்கள் அனைத்தும் கற்பனையானவை. உங்கள் உண்மையான தொலைபேசியில் உள்ளவற்றை (புகைப்படங்கள், தொடர்புகள், செய்திகள்) செயலி ஒருபோதும் படிப்பதில்லை.</p>
+<p>வழக்குப் பட்டியலின் கீழே உள்ள <strong>தொடர்புகொள்ள</strong> என்பதைத் தட்டினால் எங்கள் மின்னஞ்சல் முகவரி தெரியும். முகவரியைத் தட்டினால் உங்கள் சாதனத்தின் மின்னஞ்சல் செயலி திறக்கும்; நீங்களே எழுதும் மின்னஞ்சல் எங்களை வந்தடையும். அதை அனுப்புவது உங்கள் மின்னஞ்சல் செயலி; இந்தச் செயலி தனியாக எந்தத் தகவலையும் சேகரிப்பதில்லை.</p>
+
+<h2>2. அனுமதிகள்</h2>
+<table>
+<tr><th>அனுமதி</th><th>ஏன் தேவை</th></tr>
+<tr><td><strong>மைக்ரோஃபோன்</strong> (iPhone அமைப்புகளில் விளக்க உரை மட்டும்)</td><td>Flirts ஒலியைப் பதிவுசெய்வதில்லை. iPhone-இல் பின்னணி இசையை இசைக்கும் பிளேயர் மைக்ரோஃபோன் விளக்க உரையையும் கோருவதால், அமைப்புகளில் அந்த உரை மட்டுமே உள்ளது; மைக்ரோஃபோன் ஒருபோதும் இயக்கப்படுவதில்லை. Android-இல் மைக்ரோஃபோன் அனுமதி கேட்கப்படுவதில்லை</td></tr>
+<tr><td><strong>புகைப்படங்கள்</strong> (iPhone அமைப்புகளில் விளக்க உரை மட்டும்)</td><td>Flirts உங்கள் புகைப்பட நூலகத்தை ஒருபோதும் திறப்பதில்லை, அதில் எதையும் சேமிப்பதுமில்லை. செயலியில் உள்ள ஒரு கோப்புக் கூறு விளக்க உரையைக் கோருவதால், அமைப்புகளில் அந்த உரை மட்டுமே உள்ளது</td></tr>
+</table>
+<p>செயலி இருப்பிடம், தொடர்புகள், கேமரா அல்லது உடல்நலத் தரவை அணுகுவதில்லை; அந்த அனுமதிகளைக் கேட்பதுமில்லை.</p>
+
+<h2>3. செயலி வெளியே அனுப்பும் கோரிக்கைகள் — அனைத்தும்</h2>
+<ul>
+<li><strong>பதிப்புச் சரிபார்ப்பு:</strong> செயலியைத் திறக்கும்போது, "தற்போதைய பதிப்பைத் தொடர்ந்து பயன்படுத்தலாமா" என்பதைக் குறிக்கும் ஒரு சிறிய கோப்பைப் படிக்கிறது. படிப்பது மட்டுமே; உங்கள் எந்த மதிப்பையும் அனுப்புவதில்லை.</li>
+<li><strong>செயலிப் புதுப்பிப்புச் சரிபார்ப்பு (Expo):</strong> செயலியைத் திறக்கும்போது புதிய திரைப் புதுப்பிப்பு உள்ளதா என Expo புதுப்பிப்புச் சேவையகத்திடம் கேட்கிறது. தனிப்பட்ட தகவல் எதுவும் இல்லை; அந்தச் சேவையகப் பதிவுகளில் IP முகவரி இருக்கக்கூடும்.</li>
+</ul>
+<p>இவற்றைத் தவிர செயலி இணையத்துடன் இணைவதில்லை. உங்கள் விளையாட்டு முன்னேற்றம், சான்றுகள், அறிக்கைகள் ஒருபோதும் சாதனத்தை விட்டு வெளியேறுவதில்லை.</p>
+
+<h2>4. சாதனத்தில் மட்டுமே சேமிக்கப்படுபவை</h2>
+<p>ஒவ்வொரு வழக்கின் முன்னேற்றம் (விளையாட்டுக்குள் தொலைபேசியின் கடிகாரம், பூட்டைத் திறந்தீர்களா, நீங்கள் எடுத்த சான்றுகள், வாடிக்கையாளருடன் நீங்கள் பரிமாறிய செய்திகள், நீங்கள் எழுதிக்கொண்டிருந்த அறிக்கை, முடிவு) மற்றும் நீங்கள் தேர்ந்தெடுத்த மொழி. இவை சாதனத்திற்குள் மட்டுமே இருக்கும்; <strong>செயலியை நீக்கினால் சேர்ந்து அழிந்துவிடும்.</strong> உங்களை அடையாளம் காணக்கூடிய மதிப்பு எதுவும் இல்லை.</p>
+
+<h2>5. மூன்றாம் தரப்புக்கு வழங்குதல், வெளிநாட்டுப் பரிமாற்றம், விற்பனை</h2>
+<p>நாங்கள் எந்தத் தகவலையும் மூன்றாம் தரப்புக்கு வழங்குவதோ விற்பதோ இல்லை.</p>
+
+<h2>6. வைத்திருக்கும் காலமும் நீக்குதலும்</h2>
+<p>நாங்கள் பயனர் தரவு எதையும் வைத்திருப்பதில்லை; எனவே நீக்கக் கோர எதுவும் இல்லை. சாதனத்தில் உள்ள மதிப்புகள் செயலியை நீக்கும்போது சேர்ந்து அழிகின்றன. தொடர்பு மூலம் பெறப்பட்ட மின்னஞ்சல்கள் பதிலளிக்கத் தேவையான காலம் வரை மட்டுமே வைக்கப்பட்டு, பின்னர் நீக்கப்படுகின்றன.</p>
+
+<h2>7. 14 வயதுக்குட்பட்ட குழந்தைகள்</h2>
+<p>குழந்தைகளின் தனிப்பட்ட தகவலை நாங்கள் தெரிந்தே சேகரிப்பதில்லை.</p>
+
+<h2>8. இசையின் மூலம்</h2>
+<p>பின்னணி இசையை நாங்களே இயற்றி ஒருங்கிணைத்தோம். வேறு எவருடைய பதிவுகளோ மாதிரிகளோ பயன்படுத்தப்படவில்லை.</p>
+
+<h2>9. உங்கள் உரிமைகள்</h2>
+<p>பொருந்தும் தனியுரிமைச் சட்டங்களின்படி, உங்கள் தனிப்பட்ட தகவலை அணுக, திருத்த, நீக்க அல்லது செயலாக்கத்தை நிறுத்தக் கோரலாம். இருப்பினும், எங்களிடம் தனிப்பட்ட தகவல் எதுவும் இல்லாததால் கோர எதுவும் இல்லை; சாதனத்தில் உள்ள மதிப்புகளைச் செயலியை நீக்குவதன் மூலம் எப்போது வேண்டுமானாலும் நீங்களே அழிக்கலாம்.</p>
+
+<h2>10. இந்தக் கொள்கையில் மாற்றங்கள்</h2>
+<p>இந்தக் கொள்கை மாறினால், இந்தப் பக்கத்தில் நடைமுறைக்கு வரும் நாளைத் திருத்தி அறிவிப்போம். மாற்றப்பட்ட கொள்கை இந்தப் பக்கத்தில் வெளியிடப்பட்ட நாளிலிருந்து நடைமுறைக்கு வரும்.</p>
+
+<h2>11. தனியுரிமை அலுவலரும் தொடர்பும்</h2>
+<ul>
+<li><strong>டெவலப்பர்:</strong> Nemo Factory</li>
+<li><strong>தனியுரிமை அலுவலர்:</strong> செயலியின் டெவலப்பரே</li>
+<li><strong>தொடர்புக்கு:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+
+<h2>12. தீர்வு வழிகள்</h2>
+<p>ஆலோசனை தேவைப்பட்டால் அல்லது தனியுரிமை மீறலைப் புகாரளிக்க விரும்பினால், பின்வரும் கொரிய அமைப்புகளைத் தொடர்புகொள்ளலாம்.</p>
+<ul>
+<li>தனிப்பட்ட தகவல் மீறல் புகார் மையம் (KISA) — <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 118</li>
+<li>தனிப்பட்ட தகவல் சர்ச்சை சமரசக் குழு — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>உச்ச அரசு வழக்கறிஞர் அலுவலக சைபர் புலனாய்வுப் பிரிவு — <a href="https://www.spo.go.kr">spo.go.kr</a> / 1301</li>
+<li>கொரிய தேசிய காவல் முகமை சைபர் பணியகம் — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 182</li>
+</ul>
+</section>
+<section class="lang" data-lang="te">
+<h1>Flirts గోప్యతా విధానం</h1>
+
+<p><strong>అమలులోకి వచ్చే తేదీ:</strong> 16 అక్టోబర్ 2026<br /><strong>సంప్రదించండి:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>ఒక్క వాక్యంలో</strong><br />Flirts లో సైన్-అప్ గానీ లాగిన్ గానీ లేవు; మీ పేరు, సంప్రదింపు వివరాల వంటి వ్యక్తిగత సమాచారం ఏదీ అడగదు. మీ గేమ్ పురోగతి మీ పరికరంలో మాత్రమే సేవ్ అవుతుంది, ఎప్పుడూ మాకు చేరదు. ప్రకటనలు లేవు, విశ్లేషణ సాధనాలు లేవు.</p>
+
+<h2>1. మేము సేకరించే వ్యక్తిగత సమాచారం</h2>
+<p><strong>మేము ఏ వ్యక్తిగత సమాచారాన్నీ సేకరించము.</strong> పేరు, సంప్రదింపు వివరాలు, ఇమెయిల్, ఫోటోల వంటి ఏ వ్యక్తిగత సమాచారమూ మాకు చేరదు. ఖాతా సదుపాయం లేనందున సైన్-అప్ లేదా లాగిన్ ప్రక్రియ లేదు.</p>
+<p>గేమ్‌లోని ఫోన్‌లు, వ్యక్తులు, సందేశాలు, ఫోటోలు అన్నీ కల్పితం. మీ నిజమైన ఫోన్‌లోని విషయాలను (ఫోటోలు, కాంటాక్ట్‌లు లేదా సందేశాలు) యాప్ ఎప్పుడూ చదవదు.</p>
+<p>కేసుల జాబితా అట్టడుగున ఉన్న <strong>సంప్రదించండి</strong> ను నొక్కితే మా ఇమెయిల్ చిరునామా కనిపిస్తుంది. చిరునామాను నొక్కితే పరికరంలోని మెయిల్ యాప్ తెరుచుకుంటుంది; మీరే రాసిన ఇమెయిల్ మాకు చేరుతుంది. పంపేది మీ మెయిల్ యాప్; ఈ యాప్ విడిగా ఏ సమాచారాన్నీ సేకరించదు.</p>
+
+<h2>2. అనుమతులు</h2>
+<table>
+<tr><th>అనుమతి</th><th>ఎందుకు అవసరం</th></tr>
+<tr><td><strong>మైక్రోఫోన్</strong> (iPhone సెట్టింగ్‌లలో వివరణ వచనం మాత్రమే)</td><td>Flirts శబ్దాన్ని రికార్డ్ చేయదు. iPhone లో నేపథ్య సంగీతాన్ని వినిపించే ప్లేయర్ మైక్రోఫోన్ వివరణ వచనాన్ని కూడా కోరుతుంది కాబట్టి సెట్టింగ్‌లలో ఆ వచనం మాత్రమే ఉంది; మైక్రోఫోన్ ఎప్పుడూ ఆన్ కాదు. Android లో మైక్రోఫోన్ అనుమతి అడగబడదు</td></tr>
+<tr><td><strong>ఫోటోలు</strong> (iPhone సెట్టింగ్‌లలో వివరణ వచనం మాత్రమే)</td><td>Flirts మీ ఫోటో లైబ్రరీని ఎప్పుడూ తెరవదు, అందులో ఏదీ సేవ్ చేయదు. యాప్‌లో ఉన్న ఒక ఫైల్ భాగం వివరణ వచనాన్ని కోరుతుంది కాబట్టి సెట్టింగ్‌లలో ఆ వచనం మాత్రమే ఉంది</td></tr>
+</table>
+<p>యాప్ లొకేషన్, కాంటాక్ట్‌లు, కెమెరా లేదా ఆరోగ్య డేటాను యాక్సెస్ చేయదు, ఆ అనుమతులను అడగదు.</p>
+
+<h2>3. యాప్ బయటకు పంపే అభ్యర్థనలు — అన్నీ</h2>
+<ul>
+<li><strong>వెర్షన్ తనిఖీ:</strong> యాప్ తెరిచినప్పుడు, "ప్రస్తుత వెర్షన్‌ను కొనసాగించవచ్చా" అనే విషయం రాసి ఉన్న ఒక చిన్న ఫైల్‌ను చదువుతుంది. చదవడం మాత్రమే; మీ ఏ విలువనూ పంపదు.</li>
+<li><strong>యాప్ అప్‌డేట్ తనిఖీ (Expo):</strong> యాప్ తెరిచినప్పుడు కొత్త స్క్రీన్ అప్‌డేట్ ఉందా అని Expo అప్‌డేట్ సర్వర్‌ను అడుగుతుంది. వ్యక్తిగత సమాచారం ఉండదు; ఆ సర్వర్ రికార్డులలో IP చిరునామా మిగిలి ఉండవచ్చు.</li>
+</ul>
+<p>ఇవి తప్ప యాప్ ఇంటర్నెట్‌కు కనెక్ట్ కాదు. మీ గేమ్ పురోగతి, సాక్ష్యాలు, నివేదికలు ఎప్పుడూ పరికరం బయటకు వెళ్లవు.</p>
+
+<h2>4. పరికరంలో మాత్రమే నిల్వ అయ్యేవి</h2>
+<p>ప్రతి కేసు పురోగతి (గేమ్‌లోని ఫోన్ గడియారం, అన్‌లాక్ చేశారా లేదా, మీరు సేకరించిన సాక్ష్యాలు, క్లయింట్‌తో మీ సందేశాలు, మీరు రాస్తున్న నివేదిక, ముగింపు) మరియు మీరు ఎంచుకున్న భాష. ఇవి పరికరం లోపల మాత్రమే ఉంటాయి, <strong>యాప్‌ను తొలగిస్తే వాటితో పాటే తొలగిపోతాయి.</strong> మిమ్మల్ని గుర్తించగల విలువ ఏదీ ఇందులో లేదు.</p>
+
+<h2>5. మూడవ పక్షానికి అందించడం, విదేశీ బదిలీ, అమ్మకం</h2>
+<p>మేము ఏ సమాచారాన్నీ మూడవ పక్షానికి ఇవ్వము, అమ్మము.</p>
+
+<h2>6. నిల్వ వ్యవధి, తొలగింపు</h2>
+<p>మేము ఏ వినియోగదారు డేటానూ ఉంచుకోము, కాబట్టి తొలగించమని అడగడానికి ఏమీ లేదు. పరికరంలోని విలువలు యాప్‌ను తొలగించినప్పుడు వాటితో పాటే తొలగిపోతాయి. సంప్రదింపు ద్వారా అందిన ఇమెయిల్‌లు సమాధానం ఇవ్వడానికి అవసరమైనంత కాలం మాత్రమే ఉంచబడి, ఆ తర్వాత తొలగించబడతాయి.</p>
+
+<h2>7. 14 ఏళ్లలోపు పిల్లలు</h2>
+<p>మేము తెలిసి పిల్లల వ్యక్తిగత సమాచారాన్ని సేకరించము.</p>
+
+<h2>8. సంగీతం మూలం</h2>
+<p>నేపథ్య సంగీతాన్ని మేమే స్వరపరిచి సింథసైజ్ చేశాము. ఇతరుల రికార్డింగ్‌లు లేదా శాంపిల్స్ ఉపయోగించలేదు.</p>
+
+<h2>9. మీ హక్కులు</h2>
+<p>వర్తించే గోప్యతా చట్టాల ప్రకారం, మీ వ్యక్తిగత సమాచారాన్ని చూడటానికి, సరిచేయడానికి, తొలగించడానికి లేదా ప్రాసెసింగ్‌ను ఆపడానికి మీరు అభ్యర్థించవచ్చు. అయితే, మా వద్ద ఏ వ్యక్తిగత సమాచారమూ లేనందున అభ్యర్థించడానికి ఏమీ లేదు; పరికరంలోని విలువలను యాప్‌ను తొలగించడం ద్వారా ఎప్పుడైనా మీరే తొలగించవచ్చు.</p>
+
+<h2>10. ఈ విధానంలో మార్పులు</h2>
+<p>ఈ విధానం మారితే, ఈ పేజీలో అమలులోకి వచ్చే తేదీని సవరించి తెలియజేస్తాము. మారిన విధానం ఈ పేజీలో ప్రచురించిన రోజు నుండి అమలులోకి వస్తుంది.</p>
+
+<h2>11. గోప్యతా అధికారి, సంప్రదింపు</h2>
+<ul>
+<li><strong>డెవలపర్:</strong> Nemo Factory</li>
+<li><strong>గోప్యతా అధికారి:</strong> యాప్ డెవలపర్ స్వయంగా</li>
+<li><strong>సంప్రదించండి:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+
+<h2>12. పరిష్కార మార్గాలు</h2>
+<p>మీకు సలహా కావాలన్నా లేదా గోప్యతా ఉల్లంఘనను నివేదించాలనుకున్నా, మీరు కింది కొరియన్ సంస్థలను సంప్రదించవచ్చు.</p>
+<ul>
+<li>వ్యక్తిగత సమాచార ఉల్లంఘన నివేదన కేంద్రం (KISA) — <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 118</li>
+<li>వ్యక్తిగత సమాచార వివాద మధ్యవర్తిత్వ కమిటీ — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>సుప్రీం ప్రాసిక్యూటర్స్ ఆఫీస్ సైబర్ దర్యాప్తు విభాగం — <a href="https://www.spo.go.kr">spo.go.kr</a> / 1301</li>
+<li>కొరియా జాతీయ పోలీసు ఏజెన్సీ సైబర్ బ్యూరో — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 182</li>
+</ul>
+</section>
+<section class="lang" data-lang="my">
+<h1>Flirts ကိုယ်ရေးအချက်အလက်ဆိုင်ရာ မူဝါဒ</h1>
+
+<p><strong>အသက်ဝင်သည့်နေ့:</strong> 2026 ခုနှစ် အောက်တိုဘာ 16 ရက်<br /><strong>ဆက်သွယ်ရန်:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>တစ်ကြောင်းတည်းဖြင့်</strong><br />Flirts တွင် အကောင့်ဖွင့်ခြင်းနှင့် အကောင့်ဝင်ခြင်း မရှိပါ၊ သင့်အမည် သို့မဟုတ် ဆက်သွယ်ရန်အချက်အလက်ကဲ့သို့ ကိုယ်ရေးအချက်အလက်များကို မတောင်းပါ။ သင့်ဂိမ်းတိုးတက်မှုကို သင့်စက်ပေါ်တွင်သာ သိမ်းဆည်းပြီး ကျွန်ုပ်တို့ထံ ဘယ်တော့မှ မရောက်ပါ။ ကြော်ငြာလည်း မရှိ၊ ခွဲခြမ်းစိတ်ဖြာရေးကိရိယာလည်း မရှိပါ။</p>
+
+<h2>1. ကျွန်ုပ်တို့ စုဆောင်းသော ကိုယ်ရေးအချက်အလက်</h2>
+<p><strong>ကျွန်ုပ်တို့ မည်သည့် ကိုယ်ရေးအချက်အလက်ကိုမျှ မစုဆောင်းပါ။</strong> အမည်၊ ဆက်သွယ်ရန်အချက်အလက်၊ အီးမေးလ်၊ ဓာတ်ပုံ စသည့် မည်သည့် ကိုယ်ရေးအချက်အလက်မျှ ကျွန်ုပ်တို့ထံ မရောက်ပါ။ အကောင့်လုပ်ဆောင်ချက် မရှိသဖြင့် အကောင့်ဖွင့်ခြင်း သို့မဟုတ် အကောင့်ဝင်ခြင်း အဆင့် မရှိပါ။</p>
+<p>ဂိမ်းထဲရှိ ဖုန်းများ၊ လူများ၊ မက်ဆေ့ချ်များနှင့် ဓာတ်ပုံများ အားလုံးသည် စိတ်ကူးယဉ်သာ ဖြစ်ပါသည်။ အက်ပ်သည် သင့်တကယ့်ဖုန်းထဲရှိ အကြောင်းအရာများ (ဓာတ်ပုံ၊ အဆက်အသွယ် သို့မဟုတ် မက်ဆေ့ချ်) ကို ဘယ်တော့မှ မဖတ်ပါ။</p>
+<p>အမှုစာရင်း၏ အောက်ဆုံးရှိ <strong>ဆက်သွယ်ရန်</strong> ကို နှိပ်လျှင် ကျွန်ုပ်တို့၏ အီးမေးလ်လိပ်စာ ပေါ်လာပါမည်။ လိပ်စာကို နှိပ်လျှင် သင့်စက်ရှိ မေးလ်အက်ပ် ပွင့်လာပြီး သင်ကိုယ်တိုင် ရေးသော အီးမေးလ်သည် ကျွန်ုပ်တို့ထံ ရောက်ပါမည်။ ပို့သူမှာ သင့်မေးလ်အက်ပ် ဖြစ်ပြီး ဤအက်ပ်က သီးခြား အချက်အလက် မစုဆောင်းပါ။</p>
+
+<h2>2. ခွင့်ပြုချက်များ</h2>
+<table>
+<tr><th>ခွင့်ပြုချက်</th><th>ဘာကြောင့် လိုအပ်သနည်း</th></tr>
+<tr><td><strong>မိုက်ခရိုဖုန်း</strong> (iPhone ဆက်တင်တွင် ရှင်းလင်းချက်စာသားသာ)</td><td>Flirts သည် အသံ မဖမ်းပါ။ iPhone တွင် နောက်ခံဂီတဖွင့်သည့် ပလေယာက မိုက်ခရိုဖုန်း ရှင်းလင်းချက်စာသားကိုပါ လိုအပ်သဖြင့် ဆက်တင်တွင် ထိုစာသားသာ ပါဝင်ပြီး မိုက်ခရိုဖုန်းကို ဘယ်တော့မှ မဖွင့်ပါ။ Android တွင် မိုက်ခရိုဖုန်း ခွင့်ပြုချက် မတောင်းပါ</td></tr>
+<tr><td><strong>ဓာတ်ပုံများ</strong> (iPhone ဆက်တင်တွင် ရှင်းလင်းချက်စာသားသာ)</td><td>Flirts သည် သင့်ဓာတ်ပုံစုစည်းမှုကို ဘယ်တော့မှ မဖွင့်ပါ၊ ထိုထဲသို့ ဘာမျှ မသိမ်းပါ။ အက်ပ်တွင် ပါဝင်သော ဖိုင်အစိတ်အပိုင်းတစ်ခုက ရှင်းလင်းချက်စာသားကို လိုအပ်သဖြင့် ဆက်တင်တွင် ထိုစာသားသာ ပါဝင်ပါသည်</td></tr>
+</table>
+<p>အက်ပ်သည် တည်နေရာ၊ အဆက်အသွယ်များ၊ ကင်မရာ သို့မဟုတ် ကျန်းမာရေးဒေတာကို မသုံးစွဲပါ၊ ထိုခွင့်ပြုချက်များကိုလည်း မတောင်းပါ။</p>
+
+<h2>3. အက်ပ်က အပြင်သို့ ပို့သော တောင်းဆိုမှုများ — အားလုံး</h2>
+<ul>
+<li><strong>ဗားရှင်း စစ်ဆေးခြင်း:</strong> အက်ပ်ဖွင့်သည့်အခါ "လက်ရှိဗားရှင်းကို ဆက်သုံးနိုင်သလား" ကို ရေးထားသော ဖိုင်ငယ်တစ်ခုကို ဖတ်ပါသည်။ ဖတ်ရုံသာဖြစ်ပြီး သင့် မည်သည့်တန်ဖိုးကိုမျှ မပို့ပါ။</li>
+<li><strong>အက်ပ် အပ်ဒိတ် စစ်ဆေးခြင်း (Expo):</strong> အက်ပ်ဖွင့်သည့်အခါ စခရင်အပ်ဒိတ်အသစ် ရှိမရှိကို Expo အပ်ဒိတ်ဆာဗာထံ မေးပါသည်။ ကိုယ်ရေးအချက်အလက် မပါဝင်ပါ၊ ထိုဆာဗာ၏ မှတ်တမ်းတွင် IP လိပ်စာ ကျန်နိုင်ပါသည်။</li>
+</ul>
+<p>ထို့အပြင် အက်ပ်သည် အင်တာနက်နှင့် မချိတ်ဆက်ပါ။ သင့်ဂိမ်းတိုးတက်မှု၊ သက်သေများနှင့် အစီရင်ခံစာများသည် စက်ပြင်ပသို့ ဘယ်တော့မှ မထွက်ပါ။</p>
+
+<h2>4. စက်ပေါ်တွင်သာ သိမ်းဆည်းထားသည့်အရာ</h2>
+<p>အမှုတစ်ခုချင်းစီ၏ တိုးတက်မှု (ဂိမ်းထဲရှိ ဖုန်းနာရီ၊ လော့ခ်ဖွင့်ပြီးမပြီး၊ သင်ကောက်ယူထားသော သက်သေများ၊ အမှုအပ်သူနှင့် သင်ပြောဆိုထားသော မက်ဆေ့ချ်များ၊ သင်ရေးနေသော အစီရင်ခံစာနှင့် နိဂုံး) နှင့် သင်ရွေးထားသော ဘာသာစကား ဖြစ်ပါသည်။ ဤအရာများသည် စက်အတွင်းတွင်သာ ရှိပြီး <strong>အက်ပ်ကို ဖျက်လျှင် တစ်ပါတည်း ပျက်သွားပါမည်။</strong> သင့်ကို ခွဲခြားသိနိုင်သည့် တန်ဖိုး မပါဝင်ပါ။</p>
+
+<h2>5. ပြင်ပအဖွဲ့ထံ ပေးခြင်း၊ နိုင်ငံခြားသို့ လွှဲပြောင်းခြင်း၊ ရောင်းချခြင်း</h2>
+<p>ကျွန်ုပ်တို့သည် မည်သည့် အချက်အလက်ကိုမျှ ပြင်ပအဖွဲ့ထံ မပေး၊ မရောင်းပါ။</p>
+
+<h2>6. သိမ်းဆည်းကာလနှင့် ဖျက်ခြင်း</h2>
+<p>ကျွန်ုပ်တို့ သိမ်းထားသော အသုံးပြုသူဒေတာ မရှိသဖြင့် ဖျက်ရန် တောင်းဆိုစရာလည်း မရှိပါ။ စက်ပေါ်ရှိ တန်ဖိုးများသည် အက်ပ်ကို ဖျက်လျှင် တစ်ပါတည်း ပျက်သွားပါသည်။ ဆက်သွယ်ရန်မှတစ်ဆင့် ရရှိသော အီးမေးလ်များကို ပြန်စာပို့ရန် လိုအပ်သည့် ကာလအတွင်းသာ သိမ်းထားပြီး ထို့နောက် ဖျက်ပါသည်။</p>
+
+<h2>7. အသက် 14 နှစ်အောက် ကလေးများ</h2>
+<p>ကျွန်ုပ်တို့သည် ကလေးများ၏ ကိုယ်ရေးအချက်အလက်ကို သိလျက်နှင့် မစုဆောင်းပါ။</p>
+
+<h2>8. ဂီတ၏ ရင်းမြစ်</h2>
+<p>နောက်ခံဂီတကို ကျွန်ုပ်တို့ကိုယ်တိုင် ရေးစပ်ပြီး ပေါင်းစပ်ဖန်တီးထားပါသည်။ အခြားသူ၏ အသံသွင်းမှု သို့မဟုတ် နမူနာကို မသုံးထားပါ။</p>
+
+<h2>9. သင့်အခွင့်အရေးများ</h2>
+<p>သက်ဆိုင်ရာ ကိုယ်ရေးအချက်အလက် ကာကွယ်ရေး ဥပဒေများအရ သင့်ကိုယ်ရေးအချက်အလက်ကို ကြည့်ရှုခြင်း၊ ပြင်ဆင်ခြင်း၊ ဖျက်ခြင်း သို့မဟုတ် လုပ်ဆောင်မှု ရပ်တန့်ခြင်းကို တောင်းဆိုနိုင်ပါသည်။ သို့ရာတွင် ကျွန်ုပ်တို့ထံ ကိုယ်ရေးအချက်အလက် မရှိသဖြင့် တောင်းဆိုစရာ မရှိပါ၊ စက်ပေါ်ရှိ တန်ဖိုးများကို အက်ပ်ဖျက်ခြင်းဖြင့် အချိန်မရွေး ကိုယ်တိုင် ဖျက်နိုင်ပါသည်။</p>
+
+<h2>10. ဤမူဝါဒ ပြောင်းလဲမှုများ</h2>
+<p>ဤမူဝါဒ ပြောင်းလဲပါက ဤစာမျက်နှာရှိ အသက်ဝင်သည့်နေ့ကို ပြင်ဆင်၍ အသိပေးပါမည်။ ပြောင်းလဲထားသော မူဝါဒသည် ဤစာမျက်နှာတွင် တင်သည့်နေ့မှစ၍ အသက်ဝင်ပါသည်။</p>
+
+<h2>11. ကိုယ်ရေးအချက်အလက် တာဝန်ခံနှင့် ဆက်သွယ်ရန်</h2>
+<ul>
+<li><strong>ဆော့ဖ်ဝဲရေးသူ:</strong> Nemo Factory</li>
+<li><strong>ကိုယ်ရေးအချက်အလက် တာဝန်ခံ:</strong> အက်ပ်ဆော့ဖ်ဝဲရေးသူ ကိုယ်တိုင်</li>
+<li><strong>ဆက်သွယ်ရန်:</strong> <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a></li>
+</ul>
+
+<h2>12. ကုစားရေး နည်းလမ်းများ</h2>
+<p>အကြံဉာဏ် လိုအပ်ပါက သို့မဟုတ် ကိုယ်ရေးအချက်အလက် ချိုးဖောက်မှုကို တိုင်ကြားလိုပါက အောက်ပါ ကိုရီးယား အာဏာပိုင်အဖွဲ့များကို ဆက်သွယ်နိုင်ပါသည်။</p>
+<ul>
+<li>ကိုယ်ရေးအချက်အလက် ချိုးဖောက်မှု တိုင်ကြားရေးစင်တာ (KISA) — <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a> / 118</li>
+<li>ကိုယ်ရေးအချက်အလက် အငြင်းပွားမှု ဖျန်ဖြေရေးကော်မတီ — <a href="https://www.kopico.go.kr">kopico.go.kr</a> / 1833-6972</li>
+<li>ရှေ့နေချုပ်ရုံး (Supreme Prosecutors’ Office) ဆိုက်ဘာစုံစမ်းစစ်ဆေးရေး ဌာနခွဲ — <a href="https://www.spo.go.kr">spo.go.kr</a> / 1301</li>
+<li>ကိုရီးယား အမျိုးသားရဲအေဂျင်စီ ဆိုက်ဘာဗျူရို — <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a> / 182</li>
+</ul>
+</section>
+<footer>
+  ⓒ Nemo Factory · 문의 <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a><br>
+  <a href="../">전체 목록</a>
+</footer>
+</body>
+</html>
