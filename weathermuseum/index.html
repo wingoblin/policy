@@ -103,6 +103,7 @@
 <tr><td>알림(선택)</td><td>매일 아침 「오늘의 그림」을 알려 드리려고. 기기 안에서 예약하는 알림이며, 알림을 보내는 서버나 기기 토큰을 쓰지 않습니다. 거절하셔도 앱은 그대로 동작합니다</td></tr>
 <tr><td>추적 허용(선택, iPhone ATT)</td><td>맞춤 광고를 위해 광고 식별자(IDFA)를 쓰려고(4항). 거절하셔도 앱은 전부 그대로 동작하며, 맞춤 광고 대신 일반 광고가 나옵니다</td></tr>
 <tr><td>마이크(iPhone 설정에 문구만)</td><td>아르토는 소리를 녹음하지 않습니다. iPhone 에서는 배경 음악을 재생하는 기능이 마이크 안내 문구를 함께 요구해 설정에 문구가 들어 있을 뿐, 마이크를 켜지 않습니다. Android 에서는 마이크 권한을 요청하지 않습니다</td></tr>
+<tr><td>사진(iPhone 설정에 문구만)</td><td>아르토는 사진을 열거나 저장하지 않습니다. iPhone 에서는 앱에 들어 있는 파일 기능이 사진 안내 문구를 함께 요구해 문구가 들어 있을 뿐, 사진 접근을 요청하지 않습니다. Android 에서는 사진 권한을 요청하지 않습니다</td></tr>
 </table>
 <p>위치·연락처·사진·카메라·건강 정보에는 접근하지 않으며, 해당 권한을 요청하지 않습니다.</p>
 
@@ -187,6 +188,7 @@
 <tr><td>Notifications (optional)</td><td>To remind you of the Painting of the Day each morning. These are scheduled on your device; no notification server or device token is used. The app works fully if you decline</td></tr>
 <tr><td>Tracking (optional, iPhone ATT)</td><td>To use the advertising identifier (IDFA) for personalized ads (section 4). If you decline, everything still works and you see non-personalized ads instead</td></tr>
 <tr><td>Microphone (description text only, iPhone)</td><td>Arto never records sound. On iPhone, the component that plays background music requires a microphone description string, so the text exists in Settings, but the microphone is never turned on. On Android the microphone permission is not requested</td></tr>
+<tr><td>Photos (description text only, iPhone)</td><td>Arto never opens or saves photos. On iPhone, a file component included in the app requires a photo library description string, so the text exists, but photo access is never requested. On Android no photo permission is requested</td></tr>
 </table>
 <p>The app does not access location, contacts, photos, camera or health data, and does not request those permissions.</p>
 
@@ -272,6 +274,7 @@
 <tr><td>通知（任意）</td><td>毎朝「今日の絵」をお知らせするため。端末内で予約する通知で、通知を送るサーバーや端末トークンは使いません。拒否してもアプリはそのまま動作します</td></tr>
 <tr><td>トラッキングの許可（任意、iPhone ATT）</td><td>パーソナライズ広告のために広告識別子（IDFA）を使うため（第4条）。拒否してもアプリはすべてそのまま動作し、パーソナライズ広告の代わりに一般の広告が表示されます</td></tr>
 <tr><td>マイク（iPhone の設定に説明文のみ）</td><td>Arto は音を録音しません。iPhone では BGM を再生する機能がマイクの説明文もあわせて求めるため設定に文言が入っているだけで、マイクはオンにしません。Android ではマイクの権限を求めません</td></tr>
+<tr><td>写真（iPhone の説明文のみ）</td><td>Arto は写真を開いたり保存したりしません。iPhone ではアプリに含まれるファイル部品が写真の説明文を必要とするため文言が入っているだけで、写真へのアクセスは求めません。Android では写真の権限を求めません</td></tr>
 </table>
 <p>位置情報・連絡先・写真・カメラ・ヘルスケア情報にはアクセスせず、これらの権限も求めません。</p>
 
@@ -357,6 +360,7 @@
 <tr><td>通知（選用）</td><td>為了每天早上提醒你「今日畫作」。這是在裝置內排程的通知，不使用推播伺服器或裝置權杖。即使拒絕，App 也能照常運作</td></tr>
 <tr><td>允許追蹤（選用，iPhone ATT）</td><td>為了將廣告識別碼（IDFA）用於個人化廣告（第 4 條）。即使拒絕，App 的所有功能都能照常運作，只是會顯示一般廣告而非個人化廣告</td></tr>
 <tr><td>麥克風（僅 iPhone 設定中的說明文字）</td><td>Arto 不會錄音。在 iPhone 上，播放背景音樂的功能會一併要求麥克風說明文字，因此設定中只是有這段文字，App 不會開啟麥克風。在 Android 上不會要求麥克風權限</td></tr>
+<tr><td>照片（僅 iPhone 說明文字）</td><td>Arto 不會打開或儲存照片。在 iPhone 上，App 內建的檔案元件要求附帶照片說明文字，因此只是存在這段文字，App 從不要求存取照片。在 Android 上不要求照片權限</td></tr>
 </table>
 <p>App 不會存取位置、聯絡人、照片、相機或健康資料，也不會要求這些權限。</p>
 
@@ -442,6 +446,7 @@
 <tr><td>Notificaciones (opcional)</td><td>Para recordarte cada mañana la Pintura del Día. Se programan en tu dispositivo; no se usa ningún servidor de notificaciones ni token del dispositivo. La app funciona por completo si lo rechazas</td></tr>
 <tr><td>Rastreo (opcional, ATT de iPhone)</td><td>Para usar el identificador publicitario (IDFA) en anuncios personalizados (sección 4). Si lo rechazas, todo sigue funcionando y verás anuncios no personalizados</td></tr>
 <tr><td>Micrófono (solo texto descriptivo, iPhone)</td><td>Arto nunca graba sonido. En iPhone, el componente que reproduce la música de fondo exige un texto descriptivo del micrófono, por eso el texto aparece en Ajustes, pero el micrófono nunca se activa. En Android no se solicita el permiso de micrófono</td></tr>
+<tr><td>Fotos (solo texto descriptivo, iPhone)</td><td>Arto nunca abre ni guarda fotos. En iPhone, un componente de archivos incluido en la app exige un texto descriptivo de la fototeca, por eso existe el texto, pero nunca se solicita acceso a las fotos. En Android no se solicita el permiso de fotos</td></tr>
 </table>
 <p>La app no accede a la ubicación, los contactos, las fotos, la cámara ni los datos de salud, y no solicita esos permisos.</p>
 
@@ -527,6 +532,7 @@
 <tr><td>Notificações (opcional)</td><td>Para lembrar você da Pintura do Dia toda manhã. Elas são agendadas no seu aparelho; nenhum servidor de notificações ou token do aparelho é usado. O app funciona normalmente se você recusar</td></tr>
 <tr><td>Rastreamento (opcional, ATT do iPhone)</td><td>Para usar o identificador de publicidade (IDFA) em anúncios personalizados (seção 4). Se você recusar, tudo continua funcionando e você vê anúncios não personalizados</td></tr>
 <tr><td>Microfone (apenas texto de descrição, iPhone)</td><td>O Arto nunca grava som. No iPhone, o componente que toca a música de fundo exige um texto de descrição do microfone, por isso o texto aparece em Ajustes, mas o microfone nunca é ligado. No Android, a permissão de microfone não é solicitada</td></tr>
+<tr><td>Fotos (apenas texto de descrição, iPhone)</td><td>O Arto nunca abre nem salva fotos. No iPhone, um componente de arquivos incluído no app exige um texto de descrição da fototeca, por isso o texto existe, mas o acesso às fotos nunca é solicitado. No Android, a permissão de fotos não é solicitada</td></tr>
 </table>
 <p>O app não acessa localização, contatos, fotos, câmera nem dados de saúde, e não solicita essas permissões.</p>
 
@@ -612,6 +618,7 @@
 <tr><td>Notifications (facultatif)</td><td>Pour vous rappeler chaque matin le Tableau du jour. Elles sont programmées sur votre appareil ; aucun serveur de notifications ni jeton d’appareil n’est utilisé. L’app fonctionne pleinement si vous refusez</td></tr>
 <tr><td>Suivi (facultatif, ATT sur iPhone)</td><td>Pour utiliser l’identifiant publicitaire (IDFA) à des fins de publicité personnalisée (section 4). Si vous refusez, tout fonctionne quand même et vous voyez des publicités non personnalisées</td></tr>
 <tr><td>Microphone (texte descriptif uniquement, iPhone)</td><td>Arto n’enregistre jamais de son. Sur iPhone, le composant qui lit la musique de fond exige un texte descriptif pour le microphone ; ce texte figure donc dans les Réglages, mais le microphone n’est jamais activé. Sur Android, l’autorisation du microphone n’est pas demandée</td></tr>
+<tr><td>Photos (texte descriptif uniquement, iPhone)</td><td>Arto n'ouvre ni n'enregistre jamais de photos. Sur iPhone, un composant de fichiers intégré à l'app exige un texte descriptif pour la photothèque : le texte existe donc, mais l'accès aux photos n'est jamais demandé. Sur Android, aucune autorisation photo n'est demandée</td></tr>
 </table>
 <p>L’app n’accède ni à la position, ni aux contacts, ni aux photos, ni à l’appareil photo, ni aux données de santé, et ne demande pas ces autorisations.</p>
 
@@ -697,6 +704,7 @@
 <tr><td>Notifikasi (opsional)</td><td>Untuk mengingatkan Anda tentang Lukisan Hari Ini setiap pagi. Notifikasi dijadwalkan di perangkat Anda; tidak ada server notifikasi atau token perangkat yang digunakan. Aplikasi tetap berfungsi penuh jika Anda menolak</td></tr>
 <tr><td>Pelacakan (opsional, ATT iPhone)</td><td>Untuk menggunakan ID iklan (IDFA) bagi iklan yang dipersonalisasi (bagian 4). Jika Anda menolak, semuanya tetap berfungsi dan Anda melihat iklan yang tidak dipersonalisasi</td></tr>
 <tr><td>Mikrofon (hanya teks keterangan, iPhone)</td><td>Arto tidak pernah merekam suara. Di iPhone, komponen yang memutar musik latar mewajibkan teks keterangan mikrofon, sehingga teks itu ada di Pengaturan, tetapi mikrofon tidak pernah dinyalakan. Di Android, izin mikrofon tidak diminta</td></tr>
+<tr><td>Foto (hanya teks keterangan, iPhone)</td><td>Arto tidak pernah membuka atau menyimpan foto. Di iPhone, komponen file bawaan aplikasi mewajibkan teks keterangan galeri foto, jadi teksnya ada, tetapi akses foto tidak pernah diminta. Di Android izin foto tidak diminta</td></tr>
 </table>
 <p>Aplikasi tidak mengakses lokasi, kontak, foto, kamera, atau data kesehatan, dan tidak meminta izin tersebut.</p>
 
@@ -782,6 +790,7 @@
 <tr><td>Pemberitahuan (pilihan)</td><td>Untuk mengingatkan anda tentang Lukisan Hari Ini setiap pagi. Ia dijadualkan pada peranti anda; tiada pelayan pemberitahuan atau token peranti digunakan. Apl berfungsi sepenuhnya jika anda menolak</td></tr>
 <tr><td>Penjejakan (pilihan, ATT iPhone)</td><td>Untuk menggunakan pengecam pengiklanan (IDFA) bagi iklan diperibadikan (seksyen 4). Jika anda menolak, semuanya masih berfungsi dan anda melihat iklan tidak diperibadikan</td></tr>
 <tr><td>Mikrofon (teks penerangan sahaja, iPhone)</td><td>Arto tidak pernah merakam bunyi. Pada iPhone, komponen yang memainkan muzik latar memerlukan teks penerangan mikrofon, jadi teks itu wujud dalam Tetapan, tetapi mikrofon tidak pernah dihidupkan. Pada Android, kebenaran mikrofon tidak diminta</td></tr>
+<tr><td>Foto (teks penerangan sahaja, iPhone)</td><td>Arto tidak pernah membuka atau menyimpan foto. Di iPhone, komponen fail terbina dalam aplikasi memerlukan teks penerangan galeri foto, jadi teks itu ada, tetapi akses foto tidak pernah diminta. Di Android kebenaran foto tidak diminta</td></tr>
 </table>
 <p>Apl tidak mengakses lokasi, kenalan, foto, kamera atau data kesihatan, dan tidak meminta kebenaran tersebut.</p>
 
@@ -867,6 +876,7 @@
 <tr><td>Thông báo (tuỳ chọn)</td><td>Để nhắc bạn về "Bức tranh hôm nay" mỗi sáng. Đây là thông báo được hẹn giờ ngay trên thiết bị, không dùng máy chủ gửi thông báo hay mã thiết bị. Nếu bạn từ chối, ứng dụng vẫn hoạt động bình thường</td></tr>
 <tr><td>Cho phép theo dõi (tuỳ chọn, iPhone ATT)</td><td>Để dùng mã nhận dạng quảng cáo (IDFA) cho quảng cáo được cá nhân hoá (mục 4). Nếu bạn từ chối, mọi tính năng vẫn hoạt động bình thường và bạn sẽ thấy quảng cáo thông thường thay cho quảng cáo được cá nhân hoá</td></tr>
 <tr><td>Micrô (chỉ có dòng mô tả trong Cài đặt iPhone)</td><td>Arto không ghi âm. Trên iPhone, chức năng phát nhạc nền yêu cầu kèm dòng mô tả micrô nên dòng chữ này chỉ có trong Cài đặt; ứng dụng không bật micrô. Trên Android, ứng dụng không yêu cầu quyền micrô</td></tr>
+<tr><td>Ảnh (chỉ có dòng mô tả, iPhone)</td><td>Arto không bao giờ mở hay lưu ảnh. Trên iPhone, một thành phần tệp có sẵn trong ứng dụng yêu cầu dòng mô tả thư viện ảnh nên dòng chữ này có mặt, nhưng ứng dụng không bao giờ xin quyền truy cập ảnh. Trên Android không xin quyền ảnh</td></tr>
 </table>
 <p>Ứng dụng không truy cập vị trí, danh bạ, ảnh, camera hay dữ liệu sức khoẻ, và không yêu cầu các quyền đó.</p>
 
@@ -952,6 +962,7 @@
 <tr><td>การแจ้งเตือน (ไม่บังคับ)</td><td>เพื่อแจ้ง "ภาพวาดของวันนี้" ให้คุณทุกเช้า เป็นการแจ้งเตือนที่ตั้งเวลาไว้ภายในอุปกรณ์ ไม่ใช้เซิร์ฟเวอร์ส่งการแจ้งเตือนหรือโทเค็นอุปกรณ์ แม้คุณปฏิเสธ แอปก็ยังทำงานได้ตามปกติ</td></tr>
 <tr><td>การอนุญาตให้ติดตาม (ไม่บังคับ, iPhone ATT)</td><td>เพื่อใช้ตัวระบุโฆษณา (IDFA) สำหรับโฆษณาที่ปรับให้เหมาะกับคุณ (ข้อ 4) แม้คุณปฏิเสธ แอปก็ยังทำงานได้ครบทุกอย่าง และจะแสดงโฆษณาทั่วไปแทนโฆษณาที่ปรับให้เหมาะกับคุณ</td></tr>
 <tr><td>ไมโครโฟน (มีเพียงข้อความอธิบายในการตั้งค่า iPhone)</td><td>Arto ไม่บันทึกเสียง บน iPhone ฟีเจอร์ที่เล่นเพลงประกอบต้องมีข้อความอธิบายการใช้ไมโครโฟนด้วย จึงมีข้อความนี้อยู่ในการตั้งค่าเท่านั้น แอปไม่เปิดไมโครโฟน บน Android แอปไม่ขอสิทธิ์ไมโครโฟน</td></tr>
+<tr><td>รูปภาพ (มีเพียงข้อความอธิบาย, iPhone)</td><td>Arto ไม่เปิดหรือบันทึกรูปภาพเลย บน iPhone ส่วนจัดการไฟล์ที่มีอยู่ในแอปกำหนดให้มีข้อความอธิบายคลังรูปภาพ จึงมีข้อความนี้อยู่ แต่แอปไม่เคยขอสิทธิ์เข้าถึงรูปภาพ บน Android ไม่ขอสิทธิ์รูปภาพ</td></tr>
 </table>
 <p>แอปไม่เข้าถึงตำแหน่ง รายชื่อติดต่อ รูปภาพ กล้อง หรือข้อมูลสุขภาพ และไม่ขอสิทธิ์เหล่านั้น</p>
 
@@ -1037,6 +1048,7 @@
 <tr><td>सूचनाएँ (वैकल्पिक)</td><td>हर सुबह "आज का चित्र" याद दिलाने के लिए। ये सूचनाएँ आपके डिवाइस पर ही शेड्यूल होती हैं; कोई सूचना सर्वर या डिवाइस टोकन इस्तेमाल नहीं होता। मना करने पर भी ऐप पूरी तरह काम करता है</td></tr>
 <tr><td>ट्रैकिंग (वैकल्पिक, iPhone ATT)</td><td>व्यक्तिगत विज्ञापनों के लिए विज्ञापन पहचानकर्ता (IDFA) का उपयोग करने हेतु (खंड 4)। मना करने पर भी सब कुछ वैसे ही काम करता है, और व्यक्तिगत विज्ञापनों की जगह सामान्य विज्ञापन दिखते हैं</td></tr>
 <tr><td>माइक्रोफ़ोन (iPhone पर केवल विवरण-पाठ)</td><td>Arto कभी आवाज़ रिकॉर्ड नहीं करता। iPhone पर पृष्ठभूमि संगीत बजाने वाले घटक के लिए माइक्रोफ़ोन विवरण-पाठ अनिवार्य है, इसलिए सेटिंग्ज़ में वह पाठ मौजूद है, लेकिन माइक्रोफ़ोन कभी चालू नहीं होता। Android पर माइक्रोफ़ोन की अनुमति नहीं माँगी जाती</td></tr>
+<tr><td>फ़ोटो (केवल विवरण पाठ, iPhone)</td><td>Arto कभी फ़ोटो नहीं खोलता या सेव नहीं करता। iPhone पर ऐप में शामिल फ़ाइल घटक को फ़ोटो लाइब्रेरी का विवरण पाठ चाहिए, इसलिए पाठ मौजूद है, पर फ़ोटो की अनुमति कभी नहीं माँगी जाती। Android पर फ़ोटो की अनुमति नहीं माँगी जाती</td></tr>
 </table>
 <p>ऐप स्थान, संपर्क, फ़ोटो, कैमरा या स्वास्थ्य डेटा तक नहीं पहुँचता, और ये अनुमतियाँ नहीं माँगता।</p>
 
@@ -1122,6 +1134,7 @@
 <tr><td>الإشعارات (اختياري)</td><td>لتذكيرك بـ«لوحة اليوم» كل صباح. تُجدوَل هذه الإشعارات على جهازك، ولا يُستخدم خادم إشعارات ولا رمز جهاز. يعمل التطبيق بالكامل إن رفضت</td></tr>
 <tr><td>التتبع (اختياري، ATT على iPhone)</td><td>لاستخدام معرّف الإعلانات (IDFA) في الإعلانات المخصّصة (القسم 4). إن رفضت، يعمل كل شيء كما هو وتظهر لك إعلانات غير مخصّصة بدلًا منها</td></tr>
 <tr><td>الميكروفون (نص توضيحي فقط، iPhone)</td><td>لا يسجّل Arto أي صوت أبدًا. على iPhone يتطلب المكوّن الذي يشغّل الموسيقى الخلفية وجود نص توضيحي للميكروفون، لذا يوجد هذا النص في الإعدادات، لكن الميكروفون لا يُشغَّل أبدًا. على Android لا يُطلب إذن الميكروفون</td></tr>
+<tr><td>الصور (نص توضيحي فقط، iPhone)</td><td>لا يفتح Arto الصور ولا يحفظها أبدًا. على iPhone يتطلب مكوّن الملفات المدمج في التطبيق نصًا توضيحيًا لمكتبة الصور، لذلك يوجد النص، لكن لا يُطلب الوصول إلى الصور أبدًا. على Android لا يُطلب إذن الصور</td></tr>
 </table>
 <p>لا يصل التطبيق إلى الموقع أو جهات الاتصال أو الصور أو الكاميرا أو البيانات الصحية، ولا يطلب هذه الأذونات.</p>
 
@@ -1207,6 +1220,7 @@
 <tr><td>通知（可选）</td><td>为了每天早上提醒你「今日画作」。这是在设备内预约的通知，不使用推送服务器或设备令牌。即使拒绝，应用也能照常运行</td></tr>
 <tr><td>允许跟踪（可选，iPhone ATT）</td><td>为了将广告标识符（IDFA）用于个性化广告（第 4 条）。即使拒绝，应用的所有功能都能照常运行，只是会显示普通广告而不是个性化广告</td></tr>
 <tr><td>麦克风（仅 iPhone 设置中的说明文字）</td><td>Arto 不会录音。在 iPhone 上，播放背景音乐的功能会一并要求麦克风说明文字，因此设置中只是有这段文字，应用不会打开麦克风。在 Android 上不会请求麦克风权限</td></tr>
+<tr><td>照片（仅 iPhone 说明文字）</td><td>Arto 不会打开或保存照片。在 iPhone 上，应用内置的文件组件要求附带照片说明文字，因此只是存在这段文字，应用从不请求访问照片。在 Android 上不请求照片权限</td></tr>
 </table>
 <p>应用不会访问位置、通讯录、照片、相机或健康数据，也不会请求这些权限。</p>
 
@@ -1292,6 +1306,7 @@
 <tr><td>নোটিফিকেশন (ঐচ্ছিক)</td><td>প্রতিদিন সকালে "আজকের ছবি"-র কথা মনে করিয়ে দিতে। এগুলো আপনার ডিভাইসেই নির্ধারিত হয়; কোনো নোটিফিকেশন সার্ভার বা ডিভাইস টোকেন ব্যবহার হয় না। অনুমতি না দিলেও অ্যাপ পুরোপুরি কাজ করে</td></tr>
 <tr><td>ট্র্যাকিং (ঐচ্ছিক, iPhone ATT)</td><td>ব্যক্তিগতকৃত বিজ্ঞাপনের জন্য বিজ্ঞাপন শনাক্তকারী (IDFA) ব্যবহার করতে (অনুচ্ছেদ 4)। অনুমতি না দিলেও সবকিছু কাজ করে, এবং তার বদলে সাধারণ বিজ্ঞাপন দেখা যায়</td></tr>
 <tr><td>মাইক্রোফোন (শুধু বিবরণ-লেখা, iPhone)</td><td>Arto কখনো শব্দ রেকর্ড করে না। iPhone-এ পটভূমির সংগীত বাজানোর উপাদানটির জন্য মাইক্রোফোনের বিবরণ-লেখা আবশ্যক, তাই Settings-এ লেখাটি আছে, কিন্তু মাইক্রোফোন কখনো চালু হয় না। Android-এ মাইক্রোফোনের অনুমতি চাওয়া হয় না</td></tr>
+<tr><td>ছবি (শুধু বিবরণ লেখা, iPhone)</td><td>Arto কখনো ছবি খোলে না বা সংরক্ষণ করে না। iPhone-এ অ্যাপের ভেতরের ফাইল উপাদানের জন্য ফটো লাইব্রেরির বিবরণ লেখা লাগে, তাই লেখাটি আছে, কিন্তু ছবির অনুমতি কখনো চাওয়া হয় না। Android-এ ছবির অনুমতি চাওয়া হয় না</td></tr>
 </table>
 <p>অ্যাপটি অবস্থান, পরিচিতি, ছবি, ক্যামেরা বা স্বাস্থ্য তথ্যে প্রবেশ করে না, এবং এসব অনুমতি চায় না।</p>
 
@@ -1377,6 +1392,7 @@
 <tr><td>اطلاعات (اختیاری)</td><td>ہر صبح "آج کی تصویر" یاد دلانے کے لیے۔ یہ اطلاعات آپ کی ڈیوائس پر ہی شیڈول ہوتی ہیں؛ کوئی اطلاعاتی سرور یا ڈیوائس ٹوکن استعمال نہیں ہوتا۔ انکار کرنے پر بھی ایپ پوری طرح کام کرتی ہے</td></tr>
 <tr><td>ٹریکنگ (اختیاری، iPhone ATT)</td><td>ذاتی نوعیت کے اشتہارات کے لیے اشتہاری شناخت کنندہ (IDFA) استعمال کرنے کے لیے (حصہ 4)۔ انکار کرنے پر بھی سب کچھ کام کرتا ہے، اور اس کی جگہ عمومی اشتہارات دکھائے جاتے ہیں</td></tr>
 <tr><td>مائیکروفون (صرف وضاحتی متن، iPhone)</td><td>Arto کبھی آواز ریکارڈ نہیں کرتی۔ iPhone پر پس منظر کی موسیقی چلانے والے جزو کے لیے مائیکروفون کا وضاحتی متن لازمی ہے، اس لیے یہ متن Settings میں موجود ہے، لیکن مائیکروفون کبھی آن نہیں ہوتا۔ Android پر مائیکروفون کی اجازت نہیں مانگی جاتی</td></tr>
+<tr><td>تصاویر (صرف وضاحتی متن، iPhone)</td><td>Arto کبھی تصاویر نہیں کھولتا یا محفوظ نہیں کرتا۔ iPhone پر ایپ میں شامل فائل کے حصے کو فوٹو لائبریری کا وضاحتی متن درکار ہے، اس لیے متن موجود ہے، لیکن تصاویر تک رسائی کبھی نہیں مانگی جاتی۔ Android پر تصاویر کی اجازت نہیں مانگی جاتی</td></tr>
 </table>
 <p>ایپ مقام، رابطوں، تصاویر، کیمرے یا صحت کے ڈیٹا تک رسائی نہیں کرتی، اور یہ اجازتیں نہیں مانگتی۔</p>
 
@@ -1462,6 +1478,7 @@
 <tr><td>Notifications (opsyonal)</td><td>Para ipaalala sa iyo ang Painting of the Day tuwing umaga. Naka-schedule ang mga ito sa device mo; walang ginagamit na notification server o device token. Gumagana nang buo ang app kahit tumanggi ka</td></tr>
 <tr><td>Tracking (opsyonal, ATT sa iPhone)</td><td>Para magamit ang advertising identifier (IDFA) sa personalized ads (seksyon 4). Kapag tumanggi ka, gumagana pa rin ang lahat at non-personalized ads ang makikita mo</td></tr>
 <tr><td>Mikropono (description text lang, iPhone)</td><td>Hindi kailanman nagre-record ng tunog ang Arto. Sa iPhone, kailangan ng component na nagpe-play ng background music ang isang description string para sa mikropono, kaya may text sa Settings, pero hindi kailanman binubuksan ang mikropono. Sa Android, hindi hinihingi ang pahintulot sa mikropono</td></tr>
+<tr><td>Mga larawan (description text lang, iPhone)</td><td>Hindi kailanman nagbubukas o nagse-save ng larawan ang Arto. Sa iPhone, kailangan ng file component na kasama sa app ang description text ng photo library kaya naroon ang text, pero hindi kailanman humihingi ng access sa mga larawan. Sa Android, hindi humihingi ng pahintulot sa larawan</td></tr>
 </table>
 <p>Hindi ina-access ng app ang lokasyon, mga contact, mga larawan, camera o health data, at hindi nito hinihingi ang mga pahintulot na iyon.</p>
 
@@ -1547,6 +1564,7 @@
 <tr><td>அறிவிப்புகள் (விருப்பத்தேர்வு)</td><td>ஒவ்வொரு காலையும் "இன்றைய ஓவியம்" பற்றி நினைவூட்ட. இவை உங்கள் சாதனத்திலேயே திட்டமிடப்படுகின்றன; அறிவிப்புச் சேவையகமோ சாதன டோக்கனோ பயன்படுத்தப்படுவதில்லை. மறுத்தாலும் செயலி முழுமையாக இயங்கும்</td></tr>
 <tr><td>கண்காணிப்பு (விருப்பத்தேர்வு, iPhone ATT)</td><td>தனிப்பயனாக்கப்பட்ட விளம்பரங்களுக்கு விளம்பர அடையாளங்காட்டியை (IDFA) பயன்படுத்த (பிரிவு 4). மறுத்தாலும் எல்லாம் இயங்கும்; அதற்குப் பதிலாகப் பொதுவான விளம்பரங்கள் காட்டப்படும்</td></tr>
 <tr><td>மைக்ரோஃபோன் (விளக்க உரை மட்டும், iPhone)</td><td>Arto ஒருபோதும் ஒலியைப் பதிவுசெய்வதில்லை. iPhone-இல் பின்னணி இசையை இயக்கும் கூறுக்கு மைக்ரோஃபோன் விளக்க உரை கட்டாயம் என்பதால் அந்த உரை Settings-இல் உள்ளது; ஆனால் மைக்ரோஃபோன் ஒருபோதும் இயக்கப்படுவதில்லை. Android-இல் மைக்ரோஃபோன் அனுமதி கோரப்படுவதில்லை</td></tr>
+<tr><td>படங்கள் (விளக்க உரை மட்டும், iPhone)</td><td>Arto ஒருபோதும் படங்களைத் திறப்பதோ சேமிப்பதோ இல்லை. iPhone-இல் செயலியில் உள்ள கோப்புப் பகுதிக்கு புகைப்பட நூலக விளக்க உரை தேவைப்படுவதால் உரை உள்ளது; ஆனால் படங்களுக்கான அணுகல் ஒருபோதும் கேட்கப்படுவதில்லை. Android-இல் படங்களுக்கான அனுமதி கேட்கப்படுவதில்லை</td></tr>
 </table>
 <p>செயலி இருப்பிடம், தொடர்புகள், புகைப்படங்கள், கேமரா அல்லது உடல்நலத் தரவை அணுகுவதில்லை; அந்த அனுமதிகளைக் கோருவதுமில்லை.</p>
 
@@ -1632,6 +1650,7 @@
 <tr><td>నోటిఫికేషన్‌లు (ఐచ్ఛికం)</td><td>ప్రతి ఉదయం "ఈరోజు చిత్రం" గురించి గుర్తు చేయడానికి. ఇవి మీ పరికరంలోనే షెడ్యూల్ అవుతాయి; నోటిఫికేషన్ సర్వర్ గానీ పరికర టోకెన్ గానీ ఉపయోగించబడవు. నిరాకరించినా యాప్ పూర్తిగా పనిచేస్తుంది</td></tr>
 <tr><td>ట్రాకింగ్ (ఐచ్ఛికం, iPhone ATT)</td><td>వ్యక్తిగతీకరించిన ప్రకటనల కోసం ప్రకటన గుర్తింపును (IDFA) ఉపయోగించడానికి (విభాగం 4). నిరాకరించినా అన్నీ పనిచేస్తాయి, దానికి బదులు సాధారణ ప్రకటనలు కనిపిస్తాయి</td></tr>
 <tr><td>మైక్రోఫోన్ (వివరణ పాఠం మాత్రమే, iPhone)</td><td>Arto ఎప్పుడూ శబ్దాన్ని రికార్డ్ చేయదు. iPhone లో నేపథ్య సంగీతాన్ని ప్లే చేసే భాగానికి మైక్రోఫోన్ వివరణ పాఠం తప్పనిసరి కాబట్టి ఆ పాఠం Settings లో ఉంది, కానీ మైక్రోఫోన్ ఎప్పుడూ ఆన్ కాదు. Android లో మైక్రోఫోన్ అనుమతి అడగబడదు</td></tr>
+<tr><td>ఫోటోలు (వివరణ పాఠ్యం మాత్రమే, iPhone)</td><td>Arto ఎప్పుడూ ఫోటోలను తెరవదు, సేవ్ చేయదు. iPhoneలో యాప్‌లోని ఫైల్ భాగానికి ఫోటో లైబ్రరీ వివరణ పాఠ్యం అవసరం కాబట్టి పాఠ్యం ఉంది, కానీ ఫోటోల యాక్సెస్ ఎప్పుడూ అడగదు. Androidలో ఫోటోల అనుమతి అడగదు</td></tr>
 </table>
 <p>యాప్ స్థానం, కాంటాక్ట్‌లు, ఫోటోలు, కెమెరా లేదా ఆరోగ్య డేటాను యాక్సెస్ చేయదు, ఆ అనుమతులను అడగదు.</p>
 
@@ -1717,6 +1736,7 @@
 <tr><td>အသိပေးချက် (ရွေးချယ်နိုင်)</td><td>နံနက်တိုင်း "ယနေ့ ပန်းချီကား" ကို အသိပေးရန်။ စက်အတွင်း၌ အချိန်ဇယားသတ်မှတ်သော အသိပေးချက်ဖြစ်ပြီး အသိပေးချက်ပို့သည့် ဆာဗာ သို့မဟုတ် စက်တိုကင်ကို မသုံးပါ။ ငြင်းပယ်သော်လည်း အက်ပ်သည် ပုံမှန်အတိုင်း အလုပ်လုပ်ပါသည်</td></tr>
 <tr><td>ခြေရာခံခွင့်ပြုချက် (ရွေးချယ်နိုင်, iPhone ATT)</td><td>ကိုယ်ပိုင်ပြင်ဆင်ထားသော ကြော်ငြာများအတွက် ကြော်ငြာသတ်မှတ်ချက် (IDFA) ကို သုံးရန် (အပိုင်း 4)။ ငြင်းပယ်သော်လည်း လုပ်ဆောင်ချက်အားလုံး ပုံမှန်အတိုင်း အလုပ်လုပ်ပြီး ကိုယ်ပိုင်ပြင်ဆင်ထားသော ကြော်ငြာအစား ယေဘုယျကြော်ငြာများ ပြသပါမည်</td></tr>
 <tr><td>မိုက်ခရိုဖုန်း (iPhone ဆက်တင်တွင် ဖော်ပြချက်စာသားသာ)</td><td>Arto သည် အသံမဖမ်းပါ။ iPhone တွင် နောက်ခံဂီတဖွင့်သည့် လုပ်ဆောင်ချက်က မိုက်ခရိုဖုန်း ဖော်ပြချက်စာသားကိုပါ လိုအပ်သဖြင့် ဆက်တင်တွင် စာသားသာ ပါဝင်ပြီး မိုက်ခရိုဖုန်းကို မဖွင့်ပါ။ Android တွင် မိုက်ခရိုဖုန်း ခွင့်ပြုချက်ကို မတောင်းပါ</td></tr>
+<tr><td>ဓာတ်ပုံများ (ရှင်းလင်းချက်စာသားသာ၊ iPhone)</td><td>Arto သည် ဓာတ်ပုံများကို ဘယ်တော့မှ မဖွင့်၊ မသိမ်းပါ။ iPhone တွင် အက်ပ်ထဲပါသော ဖိုင်အစိတ်အပိုင်းက ဓာတ်ပုံစာကြည့်တိုက် ရှင်းလင်းချက်စာသား လိုအပ်သဖြင့် စာသားပါရှိသော်လည်း ဓာတ်ပုံဝင်ခွင့်ကို ဘယ်တော့မှ မတောင်းပါ။ Android တွင် ဓာတ်ပုံခွင့်ပြုချက် မတောင်းပါ</td></tr>
 </table>
 <p>တည်နေရာ၊ အဆက်အသွယ်များ၊ ဓာတ်ပုံများ၊ ကင်မရာ သို့မဟုတ် ကျန်းမာရေးဒေတာကို မဝင်ရောက်ဘဲ ထိုခွင့်ပြုချက်များကိုလည်း မတောင်းပါ။</p>
 
