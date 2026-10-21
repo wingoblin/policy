@@ -9,7 +9,7 @@ const tpl = readFileSync('_template.html', 'utf8');
 // 앱이 링크를 열 때 그 값을 그대로 붙인다 — 'zh' 로 줄이면 간체 기기까지 번체 판으로 온다.
 const LANG_NAME = {
   ko: '한국어', en: 'English', ja: '日本語', zhHant: '繁體中文', zhHans: '简体中文',
-  es: 'Español', ptBR: 'Português (Brasil)', fr: 'Français', de: 'Deutsch', ru: 'Русский',
+  es: 'Español', ptBR: 'Português (Brasil)', fr: 'Français', de: 'Deutsch', it: 'Italiano', pl: 'Polski', tr: 'Türkçe', ru: 'Русский',
   id: 'Bahasa Indonesia', vi: 'Tiếng Việt', th: 'ไทย', hi: 'हिन्दी', ms: 'Bahasa Melayu', fil: 'Filipino',
   ar: 'العربية', bn: 'বাংলা', ur: 'اردو', ta: 'தமிழ்', te: 'తెలుగు', my: 'မြန်မာ',
 };

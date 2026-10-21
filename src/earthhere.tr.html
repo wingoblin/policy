@@ -1,0 +1,97 @@
+<h1>Earth Here — Gizlilik Politikası</h1>
+
+<p><strong>Yürürlük tarihi:</strong> 28 Eylül 2026<br /><strong>İletişim:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>Tek satırda.</strong> Earth Here’da üyelik ve giriş yoktur; adın ya da iletişim bilgilerin gibi kişisel bilgiler asla istenmez. <strong>Verilerini saklayan bir sunucu yoktur.</strong> Gönderdiğin sinyallerin kaydı ve yazdığın mesajlar tamamen cihazında kalır. Uygulama dışarıya yalnızca iki istek gönderir: <strong>uygulama durum dosyası</strong> ve Android’de bir satın alma tamamlandığı anda <strong>tek satırlık bir satın alma bildirimi</strong> (bölüm 7). Uygulamanın iletişim kurduğu diğer tek yer, satın alma yaptığında <strong>Apple ve Google mağazalarıdır</strong> (bölüm 9).</p>
+
+<h2>1. Topladığımız bilgiler</h2>
+
+<p>Hiçbiri. Adını, iletişim bilgilerini, e-posta adresini, doğum tarihini ya da başka hiçbir kişisel bilgiyi toplamayız. Uygulamada hesap olmadığı için üyelik ya da giriş de hiç yoktur.</p>
+
+<p>Bilgilerin bize gönderilmez ve <strong>hiçbir yerde biriktirilmez.</strong> Android satın alma bildirimi (bölüm 7) de seni tanımlayabilecek hiçbir değer taşımaz ve bildirim gösterildikten sonra saklanmaz.</p>
+
+<h2>2. Yalnızca cihazında saklananlar</h2>
+
+<ul>
+<li><strong>Gönderdiğin sinyallerin kaydı</strong> — yazdığın mesaj, seçtiğin hedef, gönderme zamanı ve o anda nişan aldığın yön (azimut ve yükseklik). Ekranda gösterilen uzaklık yalnızca bu <strong>gönderme zamanından</strong> hesaplanır.</li>
+<li><strong>Uygulama ayarları</strong> — ekranda seçtiğin değerler; örneğin görüntüleme dili, durak bildirimlerini alıp almayacağın ve Bluetooth açıklama ekranında “Şimdi değil”i seçip seçmediğin.</li>
+<li><strong>Değerlendirme isteği kayıtları</strong> — çok sık çıkmaması için yalnızca puanlama isteğinin ne zaman ve kaç kez gösterildiği.</li>
+<li><strong>Satın alıp almadığın</strong> — ürün başına yalnızca tek bir değer, “satın alındı / alınmadı” (bölüm 9). Ödeme yöntemleri ve işlem geçmişi saklanmaz.</li>
+</ul>
+
+<p>Yukarıdakilerin hepsi cihazında kalır. Bize asla gönderilmez ve biz okuyamayız. Uygulamayı silmek hepsini siler.</p>
+
+<p><strong>Saklama süresi</strong> — gönderdiğin bir sinyalin kaydı, <strong>hedefe yolculuğu bittikten 24 saat sonra cihazından otomatik olarak silinir.</strong> Hiç çıkmayan sinyaller kaydedilmez. Bundan önce de uygulamada kendin silebilirsin.</p>
+
+<p><strong>Mesajların hiçbir yere gönderilmez.</strong> Bu uygulama yazdıklarını başka insanlara iletmez ve başka insanların yazdığı hiçbir şeyi göstermez.</p>
+
+<h2>3. Konum</h2>
+
+<p>Uygulama <strong>yaklaşık konumunu</strong> (şehir düzeyinde) kullanır. Kesin konum istemez; Android’de kesin konum izni manifestten tamamen kaldırılmıştır.</p>
+
+<p><strong>Neden gerekli</strong> — aynı yöne nişan alsan bile, gökyüzünün o noktasındaki yıldızlar nerede durduğuna göre değişir. Gökyüzünün hangi bölümüne nişan aldığını bulmak için gözlemcinin konumu gerekir.</p>
+
+<p><strong>Nasıl kullanılır</strong> — konum <strong>yalnızca cihazında yıldız konumlarını hesaplamak için</strong> kullanılır. Bize gönderilmez, başka bir yere gönderilmez ve cihazda saklanmaz. Konuma izin vermeden de uygulamayı kullanabilirsin — bu durumda nişan almak yerine <strong>hedefi doğrudan seçerek</strong> kullanırsın.</p>
+
+<h2>4. Hareket sensörleri (pusula ve eğim)</h2>
+
+<p>Telefonunun gökyüzünün hangi bölümüne doğru tutulduğunu bilmek için uygulama <strong>pusula ve eğim sensörlerini</strong> kullanır. Sensör değerleri <strong>yalnızca cihazında yönü hesaplamak için</strong> kullanılır; hiçbir yerde saklanmaz ya da gönderilmez. Gönderdiğin bir sinyalin kaydında yalnızca iki sayı tutulur: o anda nişan aldığın yön (azimut ve yükseklik) (bölüm 2). Cihazında sensör yoksa ya da izin vermezsen, yine de hedefi doğrudan seçebilirsin.</p>
+
+<h2>5. Bluetooth — radyo dalgasını göndermek</h2>
+
+<p>Gönder’e dokunduğunda uygulama <strong>bu telefonun Bluetooth’u üzerinden gerçek bir radyo dalgası (bir BLE yayını) gönderir.</strong> Bluetooth izni yalnızca bu tek iş için kullanılır.</p>
+
+<ul>
+<li><strong>Radyo dalgasının taşıdığı</strong> — yalnızca o kayda işaret eden <strong>rastgele üretilmiş tek bir kısa tanımlayıcı</strong>. <strong>Mesajının metni taşınmaz</strong> (tek bir Bluetooth yayını 31 bayttır, yani ona yer yoktur). Adın, iletişim bilgilerin, konumun ve cihaz tanımlayıcıların da taşınmaz.</li>
+<li><strong>Yakındaki cihazları aramaz.</strong> Uygulama yalnızca yayın yapar; <strong>ne tarama yapar ne de bağlanır.</strong> Bu yüzden tarama ve bağlanma izinleri (<code>BLUETOOTH_SCAN</code> · <code>BLUETOOTH_CONNECT</code>) Android izin listesinde yoktur. Başka cihazlardan gelen bilgilerin uygulamaya girebileceği bir yol yoktur.</li>
+<li><strong>Yalnızca ekran açıkken</strong> yayın yapar. Arka planda yayın yoktur ve gönderme ekranından çıktığında durur.</li>
+<li><strong>Bu yolla hiçbir bilgi toplanmaz.</strong> Radyo dalgası yalnızca dışarı çıkar; ne biz ne de sen onun ne kadar uzağa gittiğini ya da kimin aldığını bilebiliriz. Uygulamanın gösterdiği uzaklık, <strong>gönderme zamanı ve ışık hızından hesaplanan bir değerdir.</strong></li>
+</ul>
+
+<p>Bluetooth’a izin vermeden de uygulamayı kullanabilirsin. Bu durumda hiçbir radyo dalgası çıkmaz ve uygulama <strong>çıkmadığını açıkça söyler.</strong></p>
+
+<h2>6. Bildirimler</h2>
+
+<p><strong>Gönderdiğin bir sinyal bir durağı geçtiğinde</strong>, örneğin Ay’ın ya da bir gezegenin yörüngesini veya Güneş Sistemi’nin sınırını geçtiğinde sana haber veririz. Bir bildirimde yalnızca tarih ve durağın adı bulunur; <strong>yazdığın mesaj yer almaz.</strong> Bu bildirimler <strong>cihazında planlanır ve cihazın tarafından gösterilir</strong> (yerel bildirimler).</p>
+
+<p>Push sunucusu kullanmayız. Bildirim göndermek için bir cihaz belirteci (push tanımlayıcısı) <strong>ne oluştururuz ne de toplarız.</strong> Bildirimleri istediğin zaman uygulamanın ayarlarından kapatabilirsin.</p>
+
+<h2>7. Uygulamanın dışarıya gönderdiği istekler</h2>
+
+<p><strong>Uygulama durum dosyası</strong> (<code>beautiful-tulumba-77ca83.netlify.app</code>) — açılışta uygulama, desteklenen en düşük sürümü içeren tek bir herkese açık JSON dosyasını indirir. <strong>İsteğe hiçbir şey eklenmez</strong> (herkes aynı dosyayı alır). Ancak bu dosyanın barındırma sağlayıcısı (Netlify) IP adresini sunucu kayıtlarında tutabilir.</p>
+
+<p><strong>Satın alma bildirimi (yalnızca Android)</strong> — Android’de bir satın alma tamamlandığı anda uygulama, geliştiriciye “bir tane satıldı” demek için sunucumuza (<code>gwansang-server.onrender.com</code>, Render üzerinde barındırılır) bir istek gönderir. Bu istek yalnızca <strong>uygulama adını, platformu, ürün kimliğini, tutarı ve mağaza sipariş numarasını</strong> taşır; ad, iletişim bilgisi, cihaz tanımlayıcısı ya da mesaj taşımaz. Sunucu bunu tek satır olarak geliştiricinin mesajlaşma uygulamasına (Telegram) iletir, aynı bildirimi iki kez göndermemek için sipariş numarasını yalnızca kısa bir süre kullanır ve <strong>saklamaz.</strong> İstek başarısız olursa satın alman hiçbir şekilde etkilenmez. iOS’ta bu istek gönderilmez.</p>
+
+<p>Bize gönderilen istekler yalnızca bu ikisidir. Uygulamanın iletişim kurduğu diğer tek yer, satın almalar ve değerlendirmeler için Apple ve Google mağazalarıdır (bölüm 9).</p>
+
+<h2>8. İletişim ve bildirimler</h2>
+
+<p>Ayarlar’daki <strong>Bize ulaş</strong> <strong>yalnızca e-posta uygulamanı açar.</strong> Uygulama senin adına hiçbir şey göndermez; göndermek sana kalmıştır. Bir e-posta gönderirsen, içeriği (yazdıkların ve yanıt adresin) bize ulaşır; bunu yalnızca sorunu yanıtlamak için kullanırız ve yanıtladıktan sonra sileriz.</p>
+
+<h2>9. Reklamlar, satın almalar ve değerlendirmeler</h2>
+
+<p><strong>Bu uygulamada reklam yoktur.</strong> Hiçbir reklam ağı içermez, bu yüzden reklam tanımlayıcını okuyan hiçbir şey yoktur. Bir gün reklam eklersek, <strong>bunu önceden bu sayfada duyururuz</strong> ve neyin nasıl değiştiğini açıklarız.</p>
+
+<p><strong>Uygulama içi satın almalar vardır</strong> — tek bir ödemeden sonra hesabında kalıcı olarak kalan iki ürün (yıldızlara göndermeyi ve daha uzun mesajları açan “Premium” ile gönderdiğin sinyalleri sayı sınırı olmadan görmeni sağlayan “Tüm sinyalleri gör”). Abonelik yoktur.</p>
+
+<ul>
+<li>Ödemeler <strong>Apple’ın App Store’u ve Google Play</strong> tarafından yürütülür. Ödeme ekranını da onlar gösterir ve <strong>kart ya da banka hesap numarası gibi ödeme bilgileri asla bize gelmez.</strong> Biz de göremeyiz.</li>
+<li>Uygulama mağazaya yalnızca <strong>“bu ürün satın alındı mı?”</strong> diye ve <strong>gösterilecek fiyatı</strong> sorar. Yanıtı cihazına tek bir “satın alındı” değeri olarak kaydeder.</li>
+<li><strong>Satın almayı geri yükle</strong>’ye dokunmak, satın aldıklarını mağazaya yeniden sorar. Burada da sunucumuz devreye girmez.</li>
+<li>Ödeme ve iade kayıtları Apple ve Google tarafından kendi politikalarına göre tutulur. Ödemeyle ilgili soruları mağaza üzerinden de çözebilirsin.</li>
+<li>Android’de bir satın alma tamamlandığı anda geliştiriciye tek satırlık bir bildirim gider (bölüm 7).</li>
+</ul>
+
+<p><strong>Değerlendirme istekleri</strong> — uygulamayı bir süre kullandıktan sonra ara sıra puan isteyen bir pencere çıkar. Bu pencere <strong>Apple ya da Google’ın gösterdiği bir sistem penceresidir</strong> ve bıraktığın puan ya da yorum mağaza tarafından işlenir. Bize ayrıca hiçbir şey gönderilmez.</p>
+
+<h2>10. Çocuklar</h2>
+
+<p>Bu uygulama kişisel bilgi toplamaz, dolayısıyla çocukların kişisel bilgilerini de ayrıca toplamaz.</p>
+
+<h2>11. Hakların</h2>
+
+<p>Cihazında saklanan kayıtlar <strong>doğrudan uygulamada silinebilir</strong> ve uygulamayı silmek hepsini kaldırır. Hakkında hiçbir bilgi tutmadığımız için bizden göstermemizi, düzeltmemizi ya da silmemizi isteyeceğin bir şey yoktur.</p>
+
+<h2>12. Değişiklikler</h2>
+
+<p>Bu politika değişirse, yürürlük tarihiyle birlikte bu sayfada yayımlarız.</p>
