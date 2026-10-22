@@ -83,6 +83,8 @@
 </script>
 </head>
 <body>
+<nav class="langs"><a href="#ko">한국어</a><a href="#en">English</a><a href="#ja">日本語</a><a href="#zhHant">繁體中文</a></nav>
+<section class="lang" data-lang="ko">
 <h1>나노타임 개인정보 처리방침</h1>
 
 <p><strong>시행일:</strong> 2026년 10월 23일 (개정)<br /><strong>직전 방침 시행일:</strong> 2026년 8월 22일<br /><strong>문의:</strong> contact@nemofactory.co.kr</p>
@@ -303,7 +305,673 @@
 <p>이 방침이 바뀌면 이 페이지에 시행일과 함께 갱신합니다.</p>
 
 <p>네모팩토리</p>
+</section>
+<section class="lang" data-lang="en">
+<h1>Nanotime — Privacy Policy</h1>
 
+<p><strong>Effective:</strong> October 23, 2026 (revised)<br /><strong>Previous effective date:</strong> August 22, 2026<br /><strong>Contact:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>In one line</strong><br />Nanotime has no sign-up and no sign-in, and never asks for personal information such as your name or contact details. <strong>We do not run a server.</strong> However, this app reads the clock of a site you choose, so <strong>your device connects directly to that site</strong> (section 3). At that moment your IP address may be recorded in that site’s server logs, and this is the most important notice for this app. In builds with ads turned on, one more item is added: <strong>the advertising identifier read by ad networks</strong> (section 4).</p>
+
+<p><strong>Not an auto-booking tool or macro</strong><br />Nanotime <strong>only shows the time</strong>; it never signs in to a booking site, presses buttons or sends requests on your behalf. It does not ask for your booking-site account details, and the app contains no booking screen and no web browser.</p>
+
+<h2>1. Information we collect</h2>
+
+<p>None. We do not collect your name, contact details, email, date of birth or any other personal information. The app has no accounts, so there is no sign-up or sign-in at all.</p>
+
+<p>We <strong>do not run a server.</strong> There is nowhere your information is sent to us and accumulated. Section 3 lists every single case in which the app sends a request out, and all of those requests go to <strong>the site you chose</strong>, <strong>the hosting provider that holds the app status file</strong> or <strong>ad networks</strong> — none of them come to a server of ours.</p>
+
+<p>The advertising identifier is read directly from your device by the ad networks. <strong>We neither receive nor keep that value</strong> (section 4).</p>
+
+<h2>2. Stored on your device only</h2>
+
+<ul>
+<li><strong>Favorites</strong> — the list of sites you collected by tapping the star. Addresses you typed in yourself are kept here too.</li>
+<li><strong>Last site viewed</strong> — one site is noted so that the app starts at the same place when you open it again.</li>
+<li><strong>Rehearsal records</strong> — only the <strong>arrival error (in milliseconds) measured in Rehearsal and the verdict at that time</strong>, for the five most recent rounds. These are just numbers showing the accuracy of your tap, and have nothing to do with who booked what, or when.</li>
+<li><strong>App settings</strong> — the display language, the type of sound chosen for the on-the-dot signal, vibration strength, screen color, sync strength, the look of the Pop-up clock (PiP) and the time it closes itself, and whether opening alerts are turned on.</li>
+<li><strong>Ad-related records</strong> (builds with ads turned on) — the <strong>click time</strong> used to hide ads for a while after an accidental tap, the <strong>display time</strong> used to avoid showing ads back to back, and the ad settings downloaded from the app status file (section 4). They contain no value that could identify you.</li>
+</ul>
+
+<p>All of the above stays on your device only. It is never sent to a server of ours and we cannot read it. Deleting the app deletes all of it.</p>
+
+<p><strong>Reservations you set stay on your device</strong> — the site you chose, the opening time, the alert time you set for each reservation, and whether you turned that alert off. This is so that the countdown and alerts carry on when you close the app and open it again later; past reservations are deleted rather than restored. What you were trying to book (anything beyond the site name) is recorded nowhere. This, too, stays on your device only and is never sent to us.</p>
+
+<h2>3. Requests the app sends out</h2>
+
+<p><strong>Requests to the site you chose — the core of this app.</strong></p>
+
+<p>The only way to find out a server’s clock is to actually ask that server. The app sends an <strong>HTTP HEAD request</strong> to the site you chose, then measures the <code>Date</code> header in the response (the current time according to that server) and the round-trip time to calculate the offset.</p>
+
+<p><strong>Quite a few sites do not accept HEAD.</strong> For those, the app instead <strong>sends a GET request but receives only the first byte of the body</strong> (<code>Range: bytes=0-0</code>). It does not download the whole page, but we cannot say that it “receives no body at all”, so we note it here. Either way, the only thing we use is the <code>Date</code> header; whatever is received is neither read nor stored, and is discarded on the spot.</p>
+
+<ul>
+<li><strong>What is sent</strong> — only the address and the request itself. No personal information such as your name, contact details or account is carried, and no cookies or sign-in details are attached.</li>
+<li><strong>The value added to the end of the address</strong> — the app adds <strong>a one-time number that changes every time</strong> (<code>?_=…</code>) to the end of the request address. This is because if an intermediate cache returns a stale response it stored earlier, its <code>Date</code> is not the current time but the time a few minutes ago, and the clock silently drifts. This value is just a sequence number generated on the spot; it is not information that could identify your device or you.</li>
+<li><strong>What is left behind</strong> — as with any ordinary web visit, <strong>your IP address, the access time and device information (User-Agent) may be recorded in that site’s server logs.</strong> This is the same kind of record as when you visit that site in a browser, and that site handles the record under its own policy. We neither receive nor can see that record.</li>
+<li><strong>When it is sent</strong> — while the clock screen is open, the app resyncs <strong>every 30 seconds by default</strong>. Depending on the sync strength in settings, this interval changes between 20 and 60 seconds, and the app syncs once more 20 seconds before the target time. It keeps at least 10 seconds between syncs to one site, and sends no request at all during the 3 seconds before and after the target time.</li>
+<li><strong>How many at a time</strong> — each sync sends <strong>a few dozen requests</strong> (32 by default, 16 to 40 depending on sync strength), spread over 1 to 2 seconds. Measuring only once would turn the network conditions of that moment directly into error, so the app measures many times and uses only the ones that came back fastest. We note this as well because each sync leaves that many lines in the target site’s logs.</li>
+<li><strong>Where it is sent</strong> — to <strong>the place you chose</strong>. The app never picks another site on its own to connect to. However, if the address you chose <strong>forwards to another address (a redirect)</strong>, the app follows it to the forwarded address just as a web browser would, and <strong>from then on sends straight to the forwarded address</strong> — because adding the forwarding round trip every time would make the time that much less accurate, and the inaccuracy always leans toward “making you tap too early”, which is dangerous. As a result, access records may be left in the server logs of a <strong>host different</strong> from the one you chose.</li>
+</ul>
+
+<p><strong>App status file</strong> (<code>beautiful-tulumba-77ca83.netlify.app</code>) — at launch the app downloads a single public JSON file holding the minimum supported version and ad settings. <strong>Nothing is attached to the request</strong> (everyone receives the same file). However, the hosting provider for this file (Netlify) may keep your IP address in its server logs.</p>
+
+<p><strong>Ads</strong> — this happens only in builds with ads turned on. It is described in section 4.</p>
+
+<p>These three are the only requests the app sends out.</p>
+
+<h2>4. Ads</h2>
+
+<p>The app shows ads. <strong>There are no rewarded ads, and no feature is unlocked by watching an ad.</strong> This is an app for waiting for the exact moment, so it is a principle of this app not to place ads that would cover that moment.</p>
+
+<p><strong>The only ad is one interstitial ad while you have the app open.</strong> There are no banners at the bottom of the screen and no rectangle ads within the screen.</p>
+
+<ul>
+<li><strong>Interstitial ad</strong> (full screen) — shown <strong>only once while the app is open</strong>, when you choose a site from the site list and the app starts syncing to that site’s server clock. Before it is shown, a notice saying “An ad will play just once” appears for a little over 2 seconds. You can close the ad with its close button, and when you come back the clock is still running. It is not shown again until you fully quit the app and open it again.</li>
+</ul>
+
+<p><strong>When the interstitial ad does not appear</strong><br />The core of this app is that single tap at the exact moment, so ads are not shown in the cases below.</p>
+
+<ul>
+<li><strong>When the target time is within 1 minute</strong>, or when a target is set but the remaining time is not yet known — an ad never covers the countdown. If the time comes within 1 minute while the notice is showing, the notice is removed immediately and no ad is shown.</li>
+<li><strong>During Rehearsal</strong> — because the whole screen is the place you need to tap.</li>
+<li><strong>The first screen you see after opening the app</strong>, and when the site changes because you <strong>tapped a reservation in the reservation list</strong>.</li>
+<li>When an ad could not be loaded in advance (no fill), or when the <strong>protection against accidental ad taps</strong> below is in effect.</li>
+</ul>
+
+<p><strong>Ads are shown in both the iPhone/iPad and Android versions.</strong></p>
+
+<p><strong>How ads are turned on and off</strong><br />Whether ads are actually shown is also determined by the settings written in the <strong>app status file</strong> in section 3. This means ads can be turned off or on without you downloading a new version of the app. The request that fetches this file carries no value pointing to you (section 3), and while ads are turned off the ad providers’ code <strong>does not start at all</strong>, so none of the values under “What is collected” below are read.</p>
+
+<p><strong>Who serves the ads</strong><br />Ads are shown through a mediation service called <strong>Unity LevelPlay</strong> (formerly ironSource). Mediation acts as an intermediary that picks, each time, which of several ad networks supplies the ad. The networks currently connected are as follows, and may increase or decrease in the future.</p>
+
+<ul>
+<li>Unity Ads · ironSource (Unity Technologies)</li>
+<li>Liftoff Monetize (Liftoff Mobile, Inc.)</li>
+</ul>
+
+<p>You can read each company’s privacy policy below.<br /><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity Privacy Policy</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff Privacy Policy</a></p>
+
+<p><strong>What is collected</strong><br />To show ads and measure their performance, the ad providers above may read the following information from your device and take it to their own servers. <strong>We neither receive, keep nor see these values.</strong></p>
+
+<ul>
+<li><strong>Advertising identifier</strong> — the iOS advertising identifier (IDFA) and the Android Advertising ID (AAID). These are values you can reset or block at any time in your device settings.</li>
+<li><strong>Device and app information</strong> — device model, operating system version, language, country, app version, screen size and network type.</li>
+<li><strong>Installed apps</strong> (Android) — the ad providers’ code may read part of the list of apps installed on your device, and use it to avoid showing ads for apps already installed or to measure ad performance. Nanotime itself does not read this list.</li>
+<li><strong>IP address</strong> — passed along in the course of ad requests, and may be used to estimate your approximate region (city level).</li>
+<li><strong>Ad interactions</strong> — how many times ads were shown and tapped.</li>
+<li><strong>Ad code activity records</strong> — <strong>performance and error metrics of the ad code itself</strong>, such as whether an ad request succeeded and how long the response took. The ad providers use them to fix their own code. <strong>They contain no diagnostic information about Nanotime itself</strong>, such as whether the app slowed down or on which screen it froze (section 7).</li>
+<li><strong>Usage records around the ad placement</strong> — records the ad code uses to count its own activity, such as the time the app was opened and the time the interstitial ad appeared on screen. <strong>They do not include which site you chose, what time you set, or which buttons you pressed.</strong></li>
+</ul>
+
+<p><strong>The site you are viewing is not passed to ads.</strong> Which booking site’s clock you are syncing to, and what time you have set as your target, are not passed to the ad providers. <strong>This app has no feature that uses the location permission</strong> — it does not read satellite location (GPS), and the “approximate region” in the list above means the country or city level that ad providers infer from the IP address carried in the ad request.</p>
+
+<p><strong>What we declared in the App Store “App Privacy” section</strong><br />Apple regroups the values above into its own categories. The items Nanotime declared there are seven: <strong>Device ID · Product Interaction · Advertising Data · Other Usage Data · Coarse Location · Performance Data · Other Data</strong>, and all of them are <strong>the same values as the ad list above</strong>. None of them are <strong>linked to your identity</strong> (there is no account, so there is nothing to link them to), and of these <strong>the only one used for tracking is the advertising identifier</strong>.</p>
+
+<p><strong>What we declared in the Google Play “Data safety” section</strong><br />The Android version declared <strong>Device or other IDs · App activity (App interactions · Installed apps) · App info and performance · Approximate location</strong> to Google Play. All of them are <strong>the same values as the ad list above</strong>; the purpose of collection is advertising, and they are encrypted in transit.</p>
+
+<p><strong>iOS — we ask for permission to track</strong><br />On iOS, a system prompt asking whether to allow tracking appears once when you first open the app. <strong>Even if you do not allow it, you can use every feature of the app as before</strong>, and ads are still shown — only, ads not tailored to your interests appear instead of tailored ones. If you decline, the advertising identifier (IDFA) is not passed to the ad providers, and the app also tells the mediation service “no consent to personalized ads”. This prompt appears only in builds where ads are actually turned on, and not a single ad request goes out until you respond.</p>
+
+<p><strong>If you want to turn off personalized ads</strong><br />On iOS, go to Settings &gt; Privacy &amp; Security &gt; Tracking and turn off “Allow Apps to Request to Track”, or switch off Nanotime. On Android, go to Settings &gt; Privacy &gt; Ads and delete or reset the advertising ID. You do not need to reinstall the app, and even with it turned off you can use every feature of the app as before. In that case, ads are shown as non-personalized ads instead.</p>
+
+<p><strong>Protection against accidental ad taps</strong><br />If you tap an ad once, no ads are shown for <strong>60 minutes</strong>, and if ads are tapped twice on the same day, none are shown <strong>until midnight that day</strong>. This is to prevent ads from opening repeatedly when a finger brushes against them. The <strong>click times used for this decision stay on your device only</strong> (section 2).</p>
+
+<h2>5. App permissions</h2>
+
+<p>Nanotime <strong>does not access your location, contacts, photos, address book or storage.</strong> The permissions declared on the device are only those below.</p>
+
+<ul>
+<li><strong>Network</strong> — to send the requests in section 3. The app’s only job is to read server time, so it does not work without a connection.</li>
+<li><strong>Vibration</strong> — to let you know through your fingertips as the exact moment approaches. No separate consent prompt appears.</li>
+<li><strong>Sound playback</strong> (Android <code>MODIFY_AUDIO_SETTINGS</code>) — to play the on-the-dot signal.</li>
+<li><strong>Background execution</strong> (iOS <code>UIBackgroundModes: audio</code>, Android <code>FOREGROUND_SERVICE</code>·<code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>) — described separately below.</li>
+<li><strong>Notifications</strong> (iOS notification permission · Android 13 and later <code>POST_NOTIFICATIONS</code>) — <strong>only if you turn on “Alerts”</strong> on the home screen, the app shows a pre-opening alert for each reservation you set, at the time you chose for it. The alert time can be set separately or turned off for each reservation. Alerts are <strong>local notifications created on your device</strong>, so they do not go through a server, and no device-identifying value such as a push token is received. Notification permission is asked once when you first turn on “Alerts”, and turning it off deletes all scheduled alerts. On Android, this permission is also used for the <strong>one-line indicator</strong> telling you “this app is now running in the background” while the background execution below is running, and that indicator disappears when you close the app.</li>
+<li><strong>Microphone</strong> (iOS <code>NSMicrophoneUsageDescription</code>) — <strong>declared, but this app never opens the microphone.</strong> Described separately below. The Android recording permission (<code>RECORD_AUDIO</code>) was removed in the August 2026 version.</li>
+<li><strong>Tracking</strong> (optional · iOS) — for personalized ads. It is asked <strong>only in builds with ads turned on</strong>, and even if you decline you can use every feature as before (section 4).</li>
+<li><strong>Advertising ID</strong> (Android <code>com.google.android.gms.permission.AD_ID</code>) — a permission the app declares in order to read the advertising identifier. No separate consent prompt appears, and you can reset or turn it off in your device settings. It is not read while ads are turned off (section 4).</li>
+</ul>
+
+<h3>Why the microphone permission is on the list</h3>
+
+<p>The <strong>sound playback library (expo-audio)</strong> used to play the on-the-dot signal contains both playback and recording functions, so <strong>the microphone permission is automatically declared along with it when the app is built.</strong> We were unable to strip out just that item, so it remains as is.</p>
+
+<p><strong>Nanotime has no recording feature.</strong> There is not a single place in the app’s code that turns on the microphone; it only <strong>outputs</strong> sound. Since there is never a moment when it actually requests the microphone, <strong>no consent prompt asking to use the microphone appears either</strong> (iOS shows the prompt only when an app actually opens the microphone). The app never listens to surrounding sound, nor records, stores or sends it.</p>
+
+<p>The Android recording permission was removed in the August 2026 version. The iOS declaration remains because <strong>removing it would actually be worse</strong> — even if only the declaration were removed, the library’s recording code would remain inside the app, and Apple would see it as “an app that contains the function but has no explanation”. So we kept the declaration and <strong>wrote in that explanation exactly what this app does not do with the microphone.</strong></p>
+
+<h3>Background execution</h3>
+
+<p><strong>iPhone and iPad</strong> — there is a <strong>Pop-up clock (PiP)</strong> feature that floats the clock over other apps. Because the clock must keep running while you look at the booking page, <strong>the app keeps running in the background</strong> while the Pop-up clock is on.</p>
+
+<p><strong>Android</strong> — when the target time is within two hours, the app runs in the background so that the countdown and the on-the-dot signal continue even if you switch to the booking page. During that time, a one-line indicator saying “now running in the background” appears in the notification shade.</p>
+
+<p>In either case, all the app does at that time is <strong>count and display the time and play the on-the-dot signal</strong>.</p>
+
+<p>It does not check location in the background, and <strong>sends no data to us in the background</strong> (we have no server to receive it in the first place). The server-time requests in section 3 go only to the site you chose.</p>
+
+<h2>6. International transfers</h2>
+
+<p>We do not move your information abroad. However, in the cases below your device communicates <strong>directly</strong> with servers abroad, and some information may be processed abroad at that moment.</p>
+
+<ul>
+<li><strong>Recipients and items transferred</strong> — Unity Technologies (Unity LevelPlay · ironSource · Unity Ads) and Liftoff Mobile, Inc. (Liftoff Monetize): the values in section 4 (advertising identifier, device and app information, IP address, ad display and click records). Netlify, Inc. (app status file hosting): access IP. And <strong>if you yourself chose a site whose server is located abroad</strong>, the operator of that site: access IP, access time and device information (section 3). <strong>No personal information such as your name or contact details, and no sign-up information, is included in any of them.</strong></li>
+<li><strong>Destination countries</strong> — the United States and other countries where each provider has its servers</li>
+<li><strong>When and how</strong> — sent over the network when the app launches (app status file), when an ad is shown, and when the app reads the clock of the site you chose.</li>
+<li><strong>Purpose of use and retention period</strong> — serving ads and measuring their performance, file delivery, and server-time responses. Retention periods follow each provider’s policy (links in section 4).</li>
+<li><strong>How to refuse</strong> — if you decline tracking or reset your advertising identifier, the advertising identifier is not passed on (section 4). If you choose only domestic sites, no requests go to sites abroad. Deleting the app stops all transfers.</li>
+</ul>
+
+<h2>7. Analytics and crash collection</h2>
+
+<p>We have not included any analytics tool that collects usage records or any crash collection tool. We cannot know which sites you viewed, or which screens you looked at and for how long.</p>
+
+<p>However, we can see the <strong>anonymous statistics</strong> that the App Store and Google Play aggregate at the store level and show to developers (number of installs, distribution by device type, number of crashes and so on). These are provided by the stores, cannot identify individuals, and are not collected separately by the app.</p>
+
+<p><strong>Performance Data</strong> appears in the App Store listing because of <strong>the metrics the ad code uses to measure its own activity</strong> (section 4); it does not mean Nanotime analyzes your use of the app or gathers crash logs. <strong>We did not include Crash Data among the declared items.</strong></p>
+
+<h2>8. Third-party provision and outsourcing</h2>
+
+<p>We never provide or sell your personal information to third parties. We hold no user information to begin with.</p>
+
+<p>However, <strong>serving ads and measuring their performance</strong> is carried out by the providers below. This is not done by us handing information over; instead, the ad code inside your device reads the values in section 4 directly and sends them to the providers’ own servers.</p>
+
+<ul>
+<li>Unity Technologies (Unity LevelPlay · ironSource · Unity Ads)</li>
+<li>Liftoff Mobile, Inc. (Liftoff Monetize)</li>
+</ul>
+
+<p>In all three cases in section 3, your device communicates <strong>directly</strong> with the outside; it is not a matter of us handing information over.</p>
+
+<h2>9. Information received through contact and reports</h2>
+
+<p>Contact and reports in the app <strong>only show our email address and open your mail app</strong>; the app does not send the content to a server of ours. Whether to send is up to you, in your mail app.</p>
+
+<p>If you send an email, we receive <strong>your email address and what you wrote</strong> in that email, along with <strong>the operating system and app version</strong> that are pre-filled in the subject line. We use this information only to answer your inquiry and fix problems, and delete it once handled.</p>
+
+<h2>10. Retention</h2>
+
+<p>We collect no personal information, so there is no retention period on our side. The contents of section 2 remain only on your device and disappear as soon as you delete the app. Inquiry emails in section 9 are deleted once handled.</p>
+
+<h2>11. Security</h2>
+
+<p>This app does not run a server that receives your information. <strong>Not creating a place for a leak to happen</strong> is this app’s security measure. Every request the app sends out uses an encrypted connection (HTTPS) — even if you type an address with <code>http://</code>, the app changes it to <code>https://</code> before sending.</p>
+
+<h2>12. Your rights</h2>
+
+<p>Everything stored on your device is deleted when you delete the app. No separate deletion request process is needed. Favorites can be removed by tapping the star again. The <strong>advertising identifier</strong> can be reset, or personalized ads turned off, using the methods in section 4.</p>
+
+<p>If there is anything about your personal information you would like to check, send it to the address below and we will reply without delay.</p>
+
+<h2>13. Children</h2>
+
+<p>The app is not directed at children under 14, and we do not knowingly collect children’s personal information.</p>
+
+<h2>14. Data protection officer</h2>
+
+<p>Nemo Factory (independent developer)<br />Contact: contact@nemofactory.co.kr</p>
+
+<p>Questions or complaints about personal information sent to the address above are answered without delay.</p>
+
+<h2>15. Remedies for infringement</h2>
+
+<p>If you need help with an infringement of your personal information, you can contact the organizations below.</p>
+
+<ul>
+<li>Personal Information Dispute Mediation Committee — 1833-6972 (<a href="https://www.kopico.go.kr/">kopico.go.kr</a>)</li>
+<li>Privacy Infringement Report Center — 118 (<a href="https://privacy.kisa.or.kr/">privacy.kisa.or.kr</a>)</li>
+<li>Supreme Prosecutors’ Office Cyber Investigation Division — 1301 · Korean National Police Agency Cyber Bureau — 182</li>
+</ul>
+
+<h2>16. Changes</h2>
+
+<p>If this policy changes, we update this page together with its effective date.</p>
+
+<p>Nemo Factory</p>
+</section>
+<section class="lang" data-lang="ja">
+<h1>ナノタイム プライバシーポリシー</h1>
+
+<p><strong>施行日:</strong> 2026年10月23日（改定）<br /><strong>前回のポリシーの施行日:</strong> 2026年8月22日<br /><strong>お問い合わせ:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>ひとことで</strong><br />ナノタイムには会員登録もログインもなく、氏名や連絡先などの個人情報を受け取りません。<strong>私たちはサーバーを置いていません。</strong>ただし、このアプリは利用者が選んだサイトの時計を読み取るアプリなので、<strong>利用者の端末がそのサイトに直接接続します</strong>（第3項）。その瞬間、そのサイトのサーバー記録に利用者の IP アドレスが残ることがあり、これがこのアプリで最も重要なお知らせです。広告が有効な版では、これに<strong>広告ネットワークが読み取る広告識別子</strong>が1つ加わります（第4項）。</p>
+
+<p><strong>自動予約・マクロではありません</strong><br />ナノタイムは<strong>時刻を表示するだけ</strong>で、利用者に代わって予約サイトにログインしたり、ボタンを押したり、リクエストを送ったりはしません。予約サイトのアカウント情報を尋ねることはなく、アプリ内に予約画面やウェブブラウザも置いていません。</p>
+
+<h2>1. 収集する個人情報</h2>
+
+<p>ありません。氏名・連絡先・メールアドレス・生年月日など、いかなる個人情報も収集しません。アカウント機能がないため、登録やログインの手続きそのものが存在しません。</p>
+
+<p>私たちは<strong>サーバーを置いていません。</strong>利用者の情報が私たちに送信されて蓄積される場所はありません。第3項に、アプリが外部にリクエストを送る場合をひとつ残らず記載しましたが、それらのリクエストはすべて<strong>利用者が選んだサイト</strong>・<strong>アプリの状態ファイルを置いているホスティング事業者</strong>・<strong>広告ネットワーク</strong>へ送られるもので、私たちのサーバーに届くものではありません。</p>
+
+<p>広告識別子は、広告ネットワークが利用者の端末から直接読み取ります。<strong>私たちはその値を受け取ることも、保管することもありません</strong>（第4項）。</p>
+
+<h2>2. 端末にだけ保存されるもの</h2>
+
+<ul>
+<li><strong>お気に入り</strong> — 星を押して集めたサイトの一覧です。直接入力したアドレスもここに一緒に残ります。</li>
+<li><strong>最後に見たサイト</strong> — アプリを再び開いたときに同じところから始められるよう、1か所を記録しておきます。</li>
+<li><strong>リハーサルの記録</strong> — 「リハーサル」で測った<strong>到着誤差（ミリ秒）とそのときの判定</strong>だけを、直近5回分残します。手の正確さを表す数字にすぎず、誰がいつ何を予約したかとは一切関係ありません。</li>
+<li><strong>アプリの設定</strong> — 表示言語、時報として選んだ音の種類、振動の強さ、画面の色、同期の強度、「ポップアップ時計（PiP）」の形と自動で閉じる時刻、オープン通知をオンにしたかどうかです。</li>
+<li><strong>広告に関する記録</strong>（広告が有効な版） — 誤って押された広告をしばらく隠すための<strong>クリック時刻</strong>、同じ広告を続けて表示しないための<strong>表示時刻</strong>、そしてアプリの状態ファイルから受け取っておいた広告の設定値です（第4項）。個人を識別できる値は含まれていません。</li>
+</ul>
+
+<p>上記の項目はすべて利用者の端末の中にだけあります。私たちのサーバーに送信されることはなく、私たちが閲覧することもできません。アプリを削除すると、すべて一緒に消えます。</p>
+
+<p><strong>設定した予約は端末の中に残ります</strong> — 選んだサイト、オープン時刻、予約ごとに決めた通知時刻と、通知をオフにしたかどうかです。アプリを閉じてから再び開いたときにカウントダウンと通知が続くようにするためのもので、過ぎた予約は復元せずに削除します。何を予約しようとしていたか（サイト名以外の内容）はどこにも記録しません。この値も端末の中にだけあり、私たちに送信されることはありません。</p>
+
+<h2>3. アプリが外部に送るリクエスト</h2>
+
+<p><strong>利用者が選んだサイトに送るリクエスト — このアプリの中核です。</strong></p>
+
+<p>サーバーの時計を知る方法は、そのサーバーに実際に問い合わせることしかありません。アプリは利用者が選んだサイトに<strong>HTTP HEAD リクエスト</strong>を送り、応答に含まれる <code>Date</code> ヘッダー（そのサーバーが示す現在時刻）と往復にかかった時間を測って誤差を計算します。</p>
+
+<p><strong>HEAD を受け付けないサイトも少なくありません。</strong>そうしたサイトには代わりに<strong>GET リクエストを送り、本文の最初の1バイトだけを受け取ります</strong>（<code>Range: bytes=0-0</code>）。ページ全体をダウンロードするわけではありませんが、「本文をまったく受け取らない」とは言えないため、ここに記載しておきます。いずれの場合も私たちが使うのは <code>Date</code> ヘッダー1つだけで、受け取った内容は読むことも保存することもなく、その場で破棄します。</p>
+
+<ul>
+<li><strong>送る値</strong> — アドレスとリクエストそのものだけです。氏名・連絡先・アカウントなどの個人情報は載せず、Cookie やログイン情報も付けません。</li>
+<li><strong>アドレスの末尾に付く値</strong> — リクエストのアドレスの末尾に、<strong>毎回変わる使い捨ての数字</strong>（<code>?_=…</code>）を1つ付けます。途中のキャッシュが保存しておいた古い応答を返すと、その <code>Date</code> は今の時刻ではなく数分前の時刻なので、時計が気づかないうちにずれてしまうからです。この値はその都度作る通し番号にすぎず、端末や利用者を識別できる情報ではありません。</li>
+<li><strong>残るもの</strong> — 一般的なウェブ接続と同じく、<strong>そのサイトのサーバー記録に利用者の IP アドレス・接続時刻・端末情報（User-Agent）が残ることがあります。</strong>これはそのサイトをブラウザで訪れたときと同じ性質の記録で、その記録はそのサイトが自社のポリシーに従って取り扱います。私たちはその記録を受け取ることも、閲覧することもできません。</li>
+<li><strong>いつ送るか</strong> — 時計の画面が開いている間、<strong>標準では30秒ごとに</strong>合わせ直します。設定の同期の強度によってこの間隔は20秒から60秒の間で変わり、目標時刻の20秒前にもう一度合わせます。1つのサイトに対して最低10秒の間隔を守り、目標時刻の前後3秒間はリクエストを一切送りません。</li>
+<li><strong>一度にいくつ送るか</strong> — 1回合わせるたびに<strong>数十件のリクエスト</strong>（標準32件、同期の強度によって16〜40件）を1〜2秒かけて分けて送ります。1回だけ測ると、その瞬間の回線の状況がそのまま誤差になってしまうため、何度も測って最も速く往復したものだけを使います。対象サイトの記録には合わせるたびにその分の行が残ることになるため、あわせて記載しておきます。</li>
+<li><strong>どこへ送るか</strong> — <strong>利用者が選んだところ</strong>へ送ります。アプリが勝手にほかのサイトを選んで接続することはありません。ただし、選んだアドレスが<strong>別のアドレスへ転送する（リダイレクト）</strong>場合は、ウェブブラウザと同じくアプリも転送先までたどり、<strong>それ以降は転送先のアドレスへ直接送ります</strong> — 毎回転送を受ける往復が加わるとその分だけ時刻が不正確になり、不正確になる方向は常に「早く押しすぎてしまう」方向なので危険だからです。そのため、利用者が選んだところとは<strong>別のホスト</strong>のサーバー記録に接続記録が残ることがあります。</li>
+</ul>
+
+<p><strong>アプリの状態ファイル</strong>（<code>beautiful-tulumba-77ca83.netlify.app</code>） — アプリの起動時に、最低サポートバージョンと広告の設定を記した公開 JSON ファイルを1つダウンロードします。リクエストには<strong>何の値も載せません</strong>（誰もが同じファイルを受け取ります）。ただし、このファイルを置いているホスティング事業者（Netlify）のサーバー記録に接続元の IP アドレスが残ることがあります。</p>
+
+<p><strong>広告</strong> — 広告が有効な版でのみ発生します。第4項に記載しました。</p>
+
+<p>アプリが外部に送るリクエストは、上記の3つがすべてです。</p>
+
+<h2>4. 広告</h2>
+
+<p>アプリには広告が表示されます。<strong>リワード広告は入れておらず、広告を見ないと使えない機能もありません。</strong>正時を待つアプリなので、その瞬間を覆い隠す広告は置かないというのがこのアプリの原則です。</p>
+
+<p><strong>広告は、アプリを起動して使っている間に全画面広告が1回だけです。</strong>画面下部のバナーや画面内の四角い広告はありません。</p>
+
+<ul>
+<li><strong>全画面広告</strong>（画面全体） — サイト一覧からサイトを選び、そのサイトのサーバー時計を合わせ始めるときに、<strong>アプリを起動している間に1回だけ</strong>表示されます。表示する前に「広告が1回だけ流れます」という案内が2秒あまり先に表示されます。広告は閉じるボタンで閉じることができ、閉じて戻ると時計はそのまま動き続けています。アプリを完全に終了して再び起動するまでは、再表示されません。</li>
+</ul>
+
+<p><strong>全画面広告が表示されないとき</strong><br />このアプリの中核は正時に押すその1回なので、次の場合には広告を表示しません。</p>
+
+<ul>
+<li><strong>目標時刻まで1分を切ったとき</strong>、または目標が設定されているのに残り時間がまだわからないとき — カウントダウンを広告が覆うことはありません。案内が表示されている間に1分を切った場合は、案内をすぐに取り下げ、広告も表示しません。</li>
+<li><strong>「リハーサル」中のとき</strong> — 画面全体が押すための場所だからです。</li>
+<li><strong>アプリを開いて最初に表示される画面</strong>、そして<strong>予約一覧で予約を押して</strong>サイトが切り替わったとき。</li>
+<li>広告を事前に読み込めなかったとき（ノーフィル）、または下記の<strong>誤って押された広告に対する保護</strong>がかかっているとき。</li>
+</ul>
+
+<p><strong>iPhone・iPad 版と Android 版の両方に表示されます。</strong></p>
+
+<p><strong>オン・オフの仕組み</strong><br />広告を実際に表示するかどうかは、第3項の<strong>アプリの状態ファイル</strong>に記された設定によっても決まります。そのため、アプリを新たにダウンロードしなくても広告がオフになったりオンになったりすることがあります。このファイルを受け取るリクエストには利用者を示す値は載らず（第3項）、広告がオフになっている間は広告事業者のコードが<strong>まったく起動しない</strong>ため、下記「何が収集されるか」の値は1つも読み取られません。</p>
+
+<p><strong>誰が広告を配信するか</strong><br />広告は<strong>Unity LevelPlay</strong>（旧 ironSource）というメディエーションサービスを通じて表示されます。メディエーションとは、複数の広告ネットワークの中から、その都度広告を配信するところを選ぶ仲介の役割を担うものです。現在接続しているネットワークは次のとおりで、今後増えたり減ったりすることがあります。</p>
+
+<ul>
+<li>Unity Ads・ironSource（Unity Technologies）</li>
+<li>Liftoff Monetize（Liftoff Mobile, Inc.）</li>
+</ul>
+
+<p>各社のプライバシーポリシーは、以下でご確認いただけます。<br /><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity プライバシーポリシー</a>・<a href="https://liftoff.io/privacy-policy/">Liftoff プライバシーポリシー</a></p>
+
+<p><strong>何が収集されるか</strong><br />広告を表示し、その成果を数えるために、上記の広告事業者が利用者の端末から次のような情報を読み取り、自社のサーバーへ持ち帰ることがあります。<strong>私たちはこれらの値を受け取ることも、保管することも、閲覧することもありません。</strong></p>
+
+<ul>
+<li><strong>広告識別子</strong> — iOS の広告識別子（IDFA）、Android の広告 ID（AAID）。利用者が端末の設定からいつでもリセットしたり、使用を制限したりできる値です。</li>
+<li><strong>端末・アプリの情報</strong> — 端末のモデル、OS のバージョン、言語、国、アプリのバージョン、画面サイズ、ネットワークの種類。</li>
+<li><strong>インストール済みのアプリ</strong>（Android） — 広告事業者のコードが端末にインストールされているアプリの一覧の一部を読み取り、すでにインストールされているアプリの広告を再表示しないようにしたり、広告の成果を数えたりするのに使うことがあります。ナノタイム自体はこの一覧を読み取りません。</li>
+<li><strong>IP アドレス</strong> — 広告リクエストの過程で送られ、おおよその地域（都市単位）を推定するのに使われることがあります。</li>
+<li><strong>広告とのやり取り</strong> — 広告が表示された回数と押された回数。</li>
+<li><strong>広告コードの動作記録</strong> — 広告リクエストが成功したかどうか、応答にどれくらいかかったかといった、<strong>広告コード自身のパフォーマンス・エラーの指標</strong>です。広告事業者が自社のコードを改善するのに使います。アプリが遅くなったか、どの画面で止まったかといった<strong>ナノタイム自体の診断情報は含まれていません</strong>（第7項）。</li>
+<li><strong>広告が置かれた場所の使用記録</strong> — アプリが起動した時刻、全画面広告が画面に表示された時刻など、広告コードが自身の動作を数えるのに使う記録です。<strong>どのサイトを選んだか、何時に合わせたか、どのボタンを押したかは含まれません。</strong></li>
+</ul>
+
+<p><strong>利用者が見ているサイトを広告に渡すことはありません。</strong>どの予約サイトの時計を合わせているか、何時を目標に設定しているかは、広告事業者に伝わりません。<strong>位置情報の権限を使う機能はこのアプリにはありません</strong> — 衛星測位（GPS）を読み取ることはなく、上記の一覧の「おおよその地域」とは、広告リクエストに載って送られた IP アドレスから広告事業者が推測する国・都市単位のものを指します。</p>
+
+<p><strong>App Store の「App のプライバシー」に記載したもの</strong><br />Apple は上記の値を独自の分類でまとめ直して表示します。ナノタイムがそこに申告した項目は<strong>デバイス ID・製品の操作・広告データ・その他の使用状況データ・おおよその場所・パフォーマンスデータ・その他のデータ</strong>の7つで、すべて<strong>上記の広告の一覧と同じ値</strong>です。すべて<strong>利用者の身元とは関連付けられず</strong>（アカウントがないため、関連付ける対象そのものがありません）、このうち<strong>トラッキングに使われるのは広告識別子1つだけ</strong>です。</p>
+
+<p><strong>Google Play の「データ セーフティ」に記載したもの</strong><br />Android 版は Google Play に<strong>デバイスまたはその他の ID・アプリのアクティビティ（アプリの操作・インストール済みのアプリ）・アプリの情報とパフォーマンス・おおよその位置情報</strong>を申告しました。すべて<strong>上記の広告の一覧と同じ値</strong>で、収集の目的は広告であり、送信中は暗号化されます。</p>
+
+<p><strong>iOS — トラッキングの許可をお尋ねします</strong><br />iOS では、アプリを初めて開いたときに「トラッキングを許可しますか」というシステムのウィンドウが1回表示されます。<strong>許可しなくてもアプリのすべての機能をそのまま使うことができ</strong>、広告もそのまま表示されます — ただし、興味・関心に合わせた広告の代わりに、そうでない広告が表示されます。拒否すると広告識別子（IDFA）は広告事業者に伝わらず、アプリはメディエーションにも「パーソナライズ広告への同意なし」をあわせて伝えます。このウィンドウは広告が実際に有効な版でのみ表示され、応答するまでは広告リクエストが1件も送られません。</p>
+
+<p><strong>パーソナライズ広告をオフにしたい場合</strong><br />iOS では、設定 &gt; プライバシーとセキュリティ &gt; トラッキング で「App からのトラッキング要求を許可」をオフにするか、ナノタイムのスイッチをオフにしてください。Android では、設定 &gt; プライバシー &gt; 広告 で広告 ID を削除またはリセットしてください。アプリを再インストールする必要はなく、オフにしてもアプリのすべての機能をそのまま使えます。この場合、広告はパーソナライズされていない広告に切り替わって表示されます。</p>
+
+<p><strong>誤って押された広告に対する保護</strong><br />広告を1回押すと<strong>60分間</strong>広告を表示せず、同じ日に2回押された場合は<strong>その日の午前0時まで</strong>表示しません。指が触れて広告が繰り返し開いてしまうのを防ぐためのものです。この判断に使う<strong>クリック時刻は端末にだけ残ります</strong>（第2項）。</p>
+
+<h2>5. アプリのアクセス権限について</h2>
+
+<p>ナノタイムは<strong>位置情報・連絡先・写真・アドレス帳・ストレージにアクセスしません。</strong>端末に宣言されている権限は、以下がすべてです。</p>
+
+<ul>
+<li><strong>ネットワーク</strong> — 第3項のリクエストを送るためのものです。このアプリの唯一の仕事はサーバーの時刻を読み取ることなので、通信なしでは動作しません。</li>
+<li><strong>振動</strong> — 正時が近づいたときに指先で知らせるためのものです。別途、同意を求めるウィンドウは表示されません。</li>
+<li><strong>音の再生</strong>（Android <code>MODIFY_AUDIO_SETTINGS</code>） — 時報を鳴らすためのものです。</li>
+<li><strong>バックグラウンド実行</strong>（iOS <code>UIBackgroundModes: audio</code>、Android <code>FOREGROUND_SERVICE</code>・<code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>） — 下記に別途記載しました。</li>
+<li><strong>通知</strong>（iOS の通知の許可・Android 13 以降 <code>POST_NOTIFICATIONS</code>） — ホームの<strong>「通知」をオンにした場合にのみ</strong>、設定した予約ごとに決めた時刻にオープン前の通知を表示します。通知時刻は予約ごとに個別に決めたり、オフにしたりできます。通知は<strong>端末の中で作られるローカル通知</strong>なのでサーバーを経由せず、プッシュトークンのような端末を識別する値も受け取りません。通知の許可は「通知」を初めてオンにするときに1回お尋ねし、オフにすると設定済みの通知をすべて削除します。Android ではこのほか、下記のバックグラウンド実行が動いている間に「今このアプリが画面の裏で動いている」ことを知らせる<strong>1行の表示</strong>にもこの権限が使われ、その表示はアプリを閉じると一緒に消えます。</li>
+<li><strong>マイク</strong>（iOS <code>NSMicrophoneUsageDescription</code>） — <strong>宣言はされていますが、このアプリはマイクを開きません。</strong>下記に別途記載しました。Android 側の録音権限（<code>RECORD_AUDIO</code>）は、2026年8月の版で取り除きました。</li>
+<li><strong>トラッキング</strong>（任意・iOS） — パーソナライズ広告のためのものです。<strong>広告が有効な版でのみ</strong>お尋ねし、拒否してもすべての機能をそのまま使えます（第4項）。</li>
+<li><strong>広告 ID</strong>（Android <code>com.google.android.gms.permission.AD_ID</code>） — 広告識別子を読み取るためにアプリが宣言する権限です。別途、同意を求めるウィンドウは表示されず、端末の設定からリセットしたりオフにしたりできます。広告がオフになっている間は読み取りません（第4項）。</li>
+</ul>
+
+<h3>なぜマイクの権限が一覧にあるのか</h3>
+
+<p>時報を鳴らすために使っている<strong>音声再生ライブラリ（expo-audio）</strong>が再生と録音の機能を一緒に含んでいるため、アプリをビルドするときに<strong>マイクの権限が自動的に一緒に宣言されます。</strong>私たちがその項目だけを切り離すことができず、そのまま残っているものです。</p>
+
+<p><strong>ナノタイムには録音機能がありません。</strong>アプリにはマイクをオンにするコードが1か所もなく、音を<strong>出すだけ</strong>です。実際にマイクを求める場面がないため、<strong>マイクの使用を尋ねる同意のウィンドウも表示されません</strong>（iOS はアプリが実際にマイクを開くときにだけウィンドウを表示します）。周囲の音を聞いたり、録音して保存・送信したりすることはありません。</p>
+
+<p>Android 側の録音権限は、2026年8月の版で取り除きました。iOS 側の宣言は残っていますが、これは<strong>削除するほうがかえって悪いため</strong>です — 宣言だけを削除してもライブラリの録音コードはアプリ内にそのまま残り、Apple からは「機能は入っているのに説明がないアプリ」とみなされます。そのため宣言は残し、<strong>このアプリがマイクで何をしないのかを、その説明にそのまま書きました。</strong></p>
+
+<h3>バックグラウンド実行</h3>
+
+<p><strong>iPhone・iPad</strong> — ほかのアプリの上に時計を表示する<strong>「ポップアップ時計（PiP）」</strong>機能があります。予約ページを見ている間も時計が動き続ける必要があるため、ポップアップ時計をオンにしておくと<strong>アプリが画面の裏で実行され続けます。</strong></p>
+
+<p><strong>Android</strong> — 目標時刻まで2時間を切ったとき、予約ページに移ってもカウントダウンと時報が続くよう、アプリが画面の裏で実行されます。その間、通知欄に「今、画面の裏で動いている」ことを示す1行の表示が出ます。</p>
+
+<p>いずれの場合も、このとき行うのは<strong>時刻を数えて表示することと、時報を鳴らすことだけ</strong>です。</p>
+
+<p>バックグラウンドで位置情報を確認することはなく、<strong>バックグラウンドで私たちにいかなるデータも送りません</strong>（私たちには受け取るサーバーそのものがありません）。第3項のサーバー時刻のリクエストは、利用者が選んだサイトにだけ送られます。</p>
+
+<h2>6. 国外移転</h2>
+
+<p>私たちは利用者の情報を国外へ移転しません。ただし、以下の場合には利用者の端末が国外のサーバーと<strong>直接</strong>通信することになり、その瞬間に一部の情報が国外で処理されることがあります。</p>
+
+<ul>
+<li><strong>移転先・移転項目</strong> — Unity Technologies（Unity LevelPlay・ironSource・Unity Ads）と Liftoff Mobile, Inc.（Liftoff Monetize）：第4項の値（広告識別子、端末・アプリの情報、IP アドレス、広告の表示・クリックの記録）。Netlify, Inc.（アプリの状態ファイルのホスティング）：接続元の IP アドレス。そして<strong>利用者が国外にサーバーを置くサイトを自ら選んだ場合</strong>、そのサイトの運営者：接続元の IP アドレス・接続時刻・端末情報（第3項）。<strong>氏名・連絡先などの個人情報や登録情報は、いずれにも含まれません。</strong></li>
+<li><strong>移転先の国</strong> — 米国など、各事業者がサーバーを置いている国</li>
+<li><strong>移転の時期・方法</strong> — アプリの起動時（アプリの状態ファイル）、広告が表示される時点、そして利用者が選んだサイトの時計を読み取る時点に、ネットワークを通じて送信されます。</li>
+<li><strong>利用目的・保有期間</strong> — 広告の掲載と成果の測定、ファイルの送信、サーバー時刻の応答。保有期間は各事業者のポリシーに従います（第4項のリンク）。</li>
+<li><strong>拒否する方法</strong> — トラッキングを拒否するか広告識別子をリセットすると、広告識別子は送られません（第4項）。国内のサイトだけを選べば、国外のサイトへ送られるリクエストは発生しません。アプリを削除すると、すべての移転が停止します。</li>
+</ul>
+
+<h2>7. 分析・クラッシュの収集</h2>
+
+<p>使用記録を収集する分析ツールやクラッシュ収集ツールは入れていません。どのサイトを見たか、どの画面をどれくらい見たかを、私たちが知ることはできません。</p>
+
+<p>ただし、App Store・Google Play がストア単位で集計して開発者に表示する<strong>匿名の統計</strong>（インストール数、端末の種類別の分布、クラッシュの発生件数など）は、私たちも見ることができます。これはストアが提供するもので個人を特定することはできず、アプリが別途収集するものではありません。</p>
+
+<p>App Store の表示に<strong>パフォーマンスデータ</strong>が記載されているのは<strong>広告コードが自身の動作を測る指標</strong>のためであり（第4項）、ナノタイムが利用者のアプリの使い方を分析したり、クラッシュログを集めたりしているわけではありません。<strong>クラッシュデータは申告項目に入れていません。</strong></p>
+
+<h2>8. 第三者提供・委託</h2>
+
+<p>私たちが利用者の個人情報を第三者に提供したり販売したりすることはありません。私たちが保管している利用者の情報そのものがありません。</p>
+
+<p>ただし、<strong>広告の掲載と成果の測定</strong>は以下の事業者が行います。私たちが情報を渡す方式ではなく、利用者の端末に入っている広告コードが第4項の値を直接読み取り、自社のサーバーへ送る方式です。</p>
+
+<ul>
+<li>Unity Technologies（Unity LevelPlay・ironSource・Unity Ads）</li>
+<li>Liftoff Mobile, Inc.（Liftoff Monetize）</li>
+</ul>
+
+<p>第3項の3つの場合はいずれも利用者の端末が<strong>直接</strong>外部と通信するもので、私たちが情報を渡す方式ではありません。</p>
+
+<h2>9. お問い合わせ・ご報告で受け取る情報</h2>
+
+<p>アプリ内のお問い合わせ・ご報告は、私たちのメールアドレスを表示して利用者の<strong>メールアプリを開くだけ</strong>で、アプリが内容を私たちのサーバーへ送ることはありません。送るかどうかは、メールアプリで利用者がお決めになります。</p>
+
+<p>メールを送っていただくと、そのメールに含まれる<strong>送信者のメールアドレスと書いていただいた内容</strong>、そしてメールの件名にあらかじめ入力される<strong>OS とアプリのバージョン</strong>を私たちが受け取ることになります。この情報はお問い合わせへの返信と問題の修正にのみ使い、対応が終わったら削除します。</p>
+
+<h2>10. 保管期間</h2>
+
+<p>私たちが収集する個人情報はないため、私たちの側の保管期間もありません。第2項の内容は利用者の端末にだけ残り、アプリを削除するとすぐに一緒に消えます。第9項のお問い合わせメールは、対応の完了後に削除します。</p>
+
+<h2>11. 安全管理措置</h2>
+
+<p>このアプリは、利用者の情報を受け取るサーバーを置いていません。<strong>漏えいする場所を作らないこと</strong>が、このアプリの安全管理措置です。アプリが外部に送るリクエストはすべて暗号化された接続（HTTPS）を使います — 利用者が <code>http://</code> でアドレスを入力しても、アプリが <code>https://</code> に変えて送ります。</p>
+
+<h2>12. 利用者の権利</h2>
+
+<p>端末に保存された内容は、アプリを削除するとすべて消えます。別途、削除を依頼する手続きは必要ありません。お気に入りは星をもう一度押すと削除できます。<strong>広告識別子</strong>は第4項の方法でリセットしたり、パーソナライズ広告をオフにしたりできます。</p>
+
+<p>個人情報に関して確認したいことがあれば、下記のアドレスへお送りいただければ、遅滞なくお返事します。</p>
+
+<h2>13. 児童</h2>
+
+<p>満14歳未満の児童を対象としておらず、児童の個人情報を知りながら収集することはありません。</p>
+
+<h2>14. 個人情報保護責任者</h2>
+
+<p>Nemo Factory（個人開発者）<br />連絡先: contact@nemofactory.co.kr</p>
+
+<p>個人情報に関するお問い合わせ・苦情は、上記のアドレスへお送りいただければ、遅滞なくお返事します。</p>
+
+<h2>15. 権利侵害の救済</h2>
+
+<p>個人情報の侵害でお困りの場合は、以下の機関にお問い合わせいただけます。</p>
+
+<ul>
+<li>個人情報紛争調停委員会 — 1833-6972（<a href="https://www.kopico.go.kr/">kopico.go.kr</a>）</li>
+<li>個人情報侵害申告センター — 118（<a href="https://privacy.kisa.or.kr/">privacy.kisa.or.kr</a>）</li>
+<li>大検察庁 サイバー捜査課 — 1301・警察庁 サイバー捜査局 — 182</li>
+</ul>
+
+<h2>16. 変更のお知らせ</h2>
+
+<p>このポリシーが変わった場合は、このページに施行日とともに更新します。</p>
+
+<p>Nemo Factory</p>
+</section>
+<section class="lang" data-lang="zhHant">
+<h1>Nanotime 隱私權政策</h1>
+
+<p><strong>生效日期：</strong>2026年10月23日（修訂）<br /><strong>前一版政策生效日期：</strong>2026年8月22日<br /><strong>聯絡方式：</strong>contact@nemofactory.co.kr</p>
+
+<p><strong>一句話摘要</strong><br />Nanotime 不需要註冊，也不需要登入，不會收取姓名、聯絡方式等個人資料。<strong>我們沒有架設伺服器。</strong>不過，這個應用程式是讀取你所選網站時鐘的應用程式，因此<strong>你的裝置會直接連線到該網站</strong>（第 3 項）。在那一刻，該網站的伺服器紀錄中可能會留下你的 IP 位址，這是本應用程式最重要的說明。在啟用廣告的版本中，還會多一項<strong>由廣告網路讀取的廣告識別碼</strong>（第 4 項）。</p>
+
+<p><strong>這不是自動搶票或巨集程式</strong><br />Nanotime <strong>只顯示時間</strong>，不會代替你登入購票網站、按下按鈕或送出請求。我們不會詢問購票網站的帳號資訊，應用程式內也沒有購票畫面或網頁瀏覽器。</p>
+
+<h2>1. 蒐集的個人資料</h2>
+
+<p>沒有。我們不蒐集姓名、聯絡方式、電子郵件、出生日期等任何個人資料。應用程式沒有帳號功能，因此根本不存在註冊或登入的程序。</p>
+
+<p>我們<strong>沒有架設伺服器。</strong>你的資料不會傳送給我們並累積在任何地方。第 3 項毫無遺漏地列出了應用程式對外送出請求的所有情況，這些請求全都是送往<strong>你所選的網站</strong>、<strong>存放應用程式狀態檔的主機服務商</strong>以及<strong>廣告網路</strong>，並不是送到我們的伺服器。</p>
+
+<p>廣告識別碼是由廣告網路直接從你的裝置讀取。<strong>我們既不接收，也不保存這個值</strong>（第 4 項）。</p>
+
+<h2>2. 只儲存在裝置上的資料</h2>
+
+<ul>
+<li><strong>我的最愛</strong> — 按下星號收藏的網站清單。你自行輸入的網址也會一起留在這裡。</li>
+<li><strong>最後查看的網站</strong> — 記下一個網站，讓你再次開啟應用程式時從同一個地方開始。</li>
+<li><strong>預演紀錄</strong> — 只保留最近五次預演中測得的<strong>抵達誤差（毫秒）及當時的判定</strong>。這只是代表手指準確度的數字，與誰在何時預訂了什麼完全無關。</li>
+<li><strong>應用程式設定</strong> — 介面語言、選為整點訊號的音效種類、震動強度、畫面顏色、同步強度、浮窗時鐘（PiP）的樣式與自動關閉時間，以及是否開啟開賣通知。</li>
+<li><strong>廣告相關紀錄</strong>（啟用廣告的版本） — 為了暫時隱藏誤觸的廣告而記錄的<strong>點擊時間</strong>、為了不連續顯示同一則廣告而記錄的<strong>顯示時間</strong>，以及從應用程式狀態檔取得的廣告設定值（第 4 項）。其中不含任何能辨識個人的值。</li>
+</ul>
+
+<p>以上項目全都只存在你的裝置裡，不會傳送到我們的伺服器，我們也無法查看。刪除應用程式後，會全部一併刪除。</p>
+
+<p><strong>你設定的預約會留在裝置內</strong> — 包括所選的網站、開賣時間、每筆預約各自設定的通知時間，以及是否關閉了通知。這是為了讓你關閉應用程式後再次開啟時，倒數與通知能接續進行；已過期的預約不會恢復，而是會刪除。你打算預訂什麼（網站名稱以外的內容）不會記錄在任何地方。這些值同樣只存在裝置內，不會傳送給我們。</p>
+
+<h2>3. 應用程式對外送出的請求</h2>
+
+<p><strong>送往你所選網站的請求 — 這是本應用程式的核心。</strong></p>
+
+<p>要得知伺服器的時鐘，唯一的方法就是實際向那台伺服器詢問。應用程式會向你所選的網站送出 <strong>HTTP HEAD 請求</strong>，並測量回應中的 <code>Date</code> 標頭（該伺服器所說的目前時間）與往返所花的時間，藉此計算誤差。</p>
+
+<p><strong>不接受 HEAD 的網站並不少。</strong>對於這類網站，應用程式會改為<strong>送出 GET 請求，但只接收內文的第一個位元組</strong>（<code>Range: bytes=0-0</code>）。雖然不會下載整個頁面，但無法說「完全不接收內文」，因此在此註明。無論哪一種方式，我們使用的只有 <code>Date</code> 標頭這一項，收到的內容既不讀取也不儲存，當下即丟棄。</p>
+
+<ul>
+<li><strong>送出的值</strong> — 只有網址與請求本身。不附帶姓名、聯絡方式、帳號等個人資料，也不附加 Cookie 或登入資訊。</li>
+<li><strong>網址末尾附加的值</strong> — 請求網址的末尾會附加一個<strong>每次都不同的一次性數字</strong>（<code>?_=…</code>）。這是因為如果中間的快取回傳先前存下的舊回應，那個 <code>Date</code> 就不是現在的時間，而是幾分鐘前的時間，時鐘會在不知不覺中跑偏。這個值只是每次當下產生的流水號，並不是能辨識裝置或使用者的資訊。</li>
+<li><strong>會留下什麼</strong> — 與一般的網頁連線相同，<strong>該網站的伺服器紀錄中可能會留下你的 IP 位址、連線時間與裝置資訊（User-Agent）。</strong>這與用瀏覽器造訪該網站時留下的紀錄性質相同，該紀錄由該網站依其自身政策處理。我們既無法接收，也無法查看這些紀錄。</li>
+<li><strong>何時送出</strong> — 時鐘畫面開啟期間，<strong>預設每 30 秒</strong>重新校準一次。依設定中的同步強度，這個間隔會在 20 秒到 60 秒之間變動，並在目標時間前 20 秒再校準一次。對同一個網站至少間隔 10 秒，且在目標時間前後 3 秒內不會送出任何請求。</li>
+<li><strong>一次送出多少</strong> — 每次校準時，會在 1～2 秒內分批送出<strong>數十個請求</strong>（預設 32 個，依同步強度為 16～40 個）。因為只測一次的話，當下的網路狀況就會直接變成誤差，所以會測量多次，只採用往返最快的那幾次。每次校準都會在目標網站的紀錄中留下相應數量的紀錄行，因此一併在此註明。</li>
+<li><strong>送往何處</strong> — 送往<strong>你所選的地方</strong>。應用程式不會擅自選擇其他網站連線。不過，若你所選的網址<strong>轉址到其他網址（重新導向）</strong>，應用程式會像網頁瀏覽器一樣跟隨到轉址後的地方，而且<strong>之後會直接送往轉址後的網址</strong> — 因為若每次都多一趟轉址的往返，時間就會相應地變得不準確，而不準確的方向總是「讓你太早按下」，這很危險。因此，與你所選地方<strong>不同的主機</strong>的伺服器紀錄中，可能會留下連線紀錄。</li>
+</ul>
+
+<p><strong>應用程式狀態檔</strong>（<code>beautiful-tulumba-77ca83.netlify.app</code>） — 開啟應用程式時，會下載一個記載最低支援版本與廣告設定的公開 JSON 檔案。請求中<strong>不附帶任何值</strong>（每個人收到的都是同一個檔案）。不過，存放這個檔案的主機服務商（Netlify）的伺服器紀錄中可能會留下連線 IP。</p>
+
+<p><strong>廣告</strong> — 只會在啟用廣告的版本中發生，詳見第 4 項。</p>
+
+<p>應用程式對外送出的請求，就只有以上三種。</p>
+
+<h2>4. 廣告</h2>
+
+<p>應用程式中會顯示廣告。<strong>我們不放獎勵型廣告，也沒有必須看廣告才能解鎖的功能。</strong>這是一款等待整點的應用程式，因此本應用程式的原則是不放置會遮住那一刻的廣告。</p>
+
+<p><strong>在你開啟應用程式使用的期間，廣告只有一次插頁式廣告。</strong>沒有畫面下方的橫幅廣告，也沒有畫面中的方形廣告。</p>
+
+<ul>
+<li><strong>插頁式廣告</strong>（全螢幕） — 當你從網站清單中選擇網站、開始校準該網站的伺服器時鐘時，<strong>在應用程式開啟期間只會顯示一次</strong>。顯示前，會先出現約 2 秒多的「廣告只會出現一次」提示。廣告可以用關閉按鈕關閉，關閉後回到應用程式時，時鐘仍照常運轉。在你完全關閉應用程式再重新開啟之前，不會再次顯示。</li>
+</ul>
+
+<p><strong>不會顯示插頁式廣告的時候</strong><br />本應用程式的核心就是在整點按下的那一次，因此在下列情況不會顯示廣告。</p>
+
+<ul>
+<li><strong>距離目標時間不到 1 分鐘時</strong>，或已設定目標但還不知道剩餘時間時 — 廣告絕不會遮住倒數。若在提示顯示期間進入 1 分鐘內，會立即收起提示，也不會顯示廣告。</li>
+<li><strong>預演進行中時</strong> — 因為整個畫面都是需要按下的地方。</li>
+<li><strong>開啟應用程式後看到的第一個畫面</strong>，以及<strong>在預約清單中點選預約</strong>而切換網站時。</li>
+<li>未能事先載入廣告（無填充），或下方的<strong>誤觸廣告保護</strong>正在生效時。</li>
+</ul>
+
+<p><strong>iPhone、iPad 版與 Android 版都會顯示。</strong></p>
+
+<p><strong>開啟與關閉的方式</strong><br />是否實際顯示廣告，也取決於第 3 項<strong>應用程式狀態檔</strong>中記載的設定。因此，即使你沒有重新下載應用程式，廣告也可能被關閉或開啟。取得這個檔案的請求中不附帶任何指向使用者的值（第 3 項）；廣告關閉期間，廣告業者的程式碼<strong>完全不會啟動</strong>，下方「蒐集哪些資料」中的值一個也不會被讀取。</p>
+
+<p><strong>由誰提供廣告</strong><br />廣告透過名為 <strong>Unity LevelPlay</strong>（前身為 ironSource）的中介服務顯示。中介服務扮演仲介的角色，在多個廣告網路中，隨時挑選當下提供廣告的一方。目前串接的網路如下，日後可能增加或減少。</p>
+
+<ul>
+<li>Unity Ads、ironSource（Unity Technologies）</li>
+<li>Liftoff Monetize（Liftoff Mobile, Inc.）</li>
+</ul>
+
+<p>各公司的隱私權政策可在下方查看。<br /><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity 隱私權政策</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff 隱私權政策</a></p>
+
+<p><strong>蒐集哪些資料</strong><br />為了顯示廣告並計算其成效，上述廣告業者可能會從你的裝置讀取以下資訊，並傳回其自家伺服器。<strong>我們既不接收、不保存，也不查看這些值。</strong></p>
+
+<ul>
+<li><strong>廣告識別碼</strong> — iOS 廣告識別碼（IDFA）、Android 廣告 ID（AAID）。這是你隨時可以在裝置設定中重設或禁止使用的值。</li>
+<li><strong>裝置與應用程式資訊</strong> — 裝置型號、作業系統版本、語言、國家、應用程式版本、螢幕尺寸、網路類型。</li>
+<li><strong>已安裝的應用程式</strong>（Android） — 廣告業者的程式碼可能會讀取裝置上已安裝應用程式清單的一部分，用於避免再次顯示已安裝應用程式的廣告，或用於計算廣告成效。Nanotime 本身不會讀取這份清單。</li>
+<li><strong>IP 位址</strong> — 在廣告請求的過程中傳送，可能用於推估大略地區（城市層級）。</li>
+<li><strong>廣告互動</strong> — 廣告顯示的次數與被點擊的次數。</li>
+<li><strong>廣告程式碼的運作紀錄</strong> — 例如廣告請求是否成功、回應花了多久等<strong>廣告程式碼本身的效能與錯誤指標</strong>。廣告業者用來修正自家程式碼。其中<strong>不含 Nanotime 本身的診斷資訊</strong>，例如應用程式是否變慢、在哪個畫面停住（第 7 項）。</li>
+<li><strong>廣告所在位置的使用紀錄</strong> — 例如應用程式開啟的時間、插頁式廣告出現在畫面上的時間等，廣告程式碼用來計算自身運作的紀錄。<strong>不包括你選了哪個網站、設定在幾點，或按了哪個按鈕。</strong></li>
+</ul>
+
+<p><strong>你正在查看的網站不會交給廣告。</strong>你正在校準哪個購票網站的時鐘、設定以幾點為目標，都不會傳送給廣告業者。<strong>本應用程式沒有使用位置權限的功能</strong> — 不讀取衛星定位（GPS），上方清單中的「大略地區」，是指廣告業者根據隨廣告請求送出的 IP 位址所推測的國家、城市層級。</p>
+
+<p><strong>在 App Store「App 所蒐集的資料」中申報的內容</strong><br />Apple 會依其自身的分類重新歸納並顯示上述的值。Nanotime 在那裡申報的項目為<strong>裝置 ID、產品互動、廣告資料、其他使用資料、大致位置、效能資料、其他資料</strong>共七項，全部都是<strong>與上方廣告清單相同的值</strong>。這些全都<strong>不與你的身分連結</strong>（沒有帳號，因此根本沒有可連結的對象），其中<strong>用於追蹤的只有廣告識別碼一項</strong>。</p>
+
+<p><strong>在 Google Play「資料安全性」中申報的內容</strong><br />Android 版在 Google Play 申報了<strong>裝置或其他 ID、應用程式活動（應用程式互動、已安裝的應用程式）、應用程式資訊和效能、大概位置</strong>。全部都是<strong>與上方廣告清單相同的值</strong>，蒐集目的是廣告，並在傳輸過程中加密。</p>
+
+<p><strong>iOS — 會詢問是否允許追蹤</strong><br />在 iOS 上，第一次開啟應用程式時，會跳出一次「是否允許追蹤」的系統視窗。<strong>即使不允許，也能照常使用應用程式的所有功能</strong>，廣告也會照常顯示 — 只是會以非依興趣量身打造的廣告取代個人化廣告。若你拒絕，廣告識別碼（IDFA）不會傳送給廣告業者，應用程式也會一併向中介服務傳達「未同意個人化廣告」。這個視窗只會在實際啟用廣告的版本中出現，在你回應之前，不會送出任何一筆廣告請求。</p>
+
+<p><strong>若想關閉個人化廣告</strong><br />iOS 請前往「設定 &gt; 隱私權與安全性 &gt; 追蹤」，關閉「允許 App 要求追蹤」，或關閉 Nanotime 的開關。Android 請前往「設定 &gt; 隱私權 &gt; 廣告」，刪除或重設廣告 ID。不需要重新安裝應用程式，關閉後也能照常使用應用程式的所有功能。此時廣告會改為顯示非個人化廣告。</p>
+
+<p><strong>誤觸廣告保護</strong><br />點擊一次廣告後，<strong>60 分鐘內</strong>不會顯示廣告；同一天被點擊兩次時，<strong>到當天午夜為止</strong>都不會顯示。這是為了防止手指不小心擦過而反覆開啟廣告。用於這項判斷的<strong>點擊時間只會留在裝置上</strong>（第 2 項）。</p>
+
+<h2>5. 應用程式存取權限說明</h2>
+
+<p>Nanotime <strong>不會存取位置、聯絡人、照片、通訊錄或儲存空間。</strong>裝置上宣告的權限就只有以下這些。</p>
+
+<ul>
+<li><strong>網路</strong> — 用於送出第 3 項的請求。本應用程式唯一的工作就是讀取伺服器時間，因此沒有網路就無法運作。</li>
+<li><strong>震動</strong> — 用於在整點將近時以指尖觸感提醒你。不會另外跳出同意視窗。</li>
+<li><strong>播放聲音</strong>（Android <code>MODIFY_AUDIO_SETTINGS</code>） — 用於發出整點訊號音。</li>
+<li><strong>背景執行</strong>（iOS <code>UIBackgroundModes: audio</code>，Android <code>FOREGROUND_SERVICE</code>、<code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>） — 另於下方說明。</li>
+<li><strong>通知</strong>（iOS 通知權限、Android 13 以上 <code>POST_NOTIFICATIONS</code>） — <strong>只有在你開啟首頁的「通知」時</strong>，才會在你為每筆預約設定的時間顯示開賣前通知。通知時間可以為每筆預約分別設定或關閉。通知是<strong>在裝置內產生的本機通知</strong>，不經過伺服器，也不會收取推播權杖等裝置識別值。通知權限只會在你第一次開啟「通知」時詢問一次，關閉後會刪除所有已設定的通知。在 Android 上，此權限還會用於下方背景執行期間，顯示告知「此應用程式正在背景執行」的<strong>一行提示</strong>，關閉應用程式後該提示也會一併消失。</li>
+<li><strong>麥克風</strong>（iOS <code>NSMicrophoneUsageDescription</code>） — <strong>雖有宣告，但本應用程式不會開啟麥克風。</strong>另於下方說明。Android 端的錄音權限（<code>RECORD_AUDIO</code>）已於 2026年8月版中移除。</li>
+<li><strong>追蹤</strong>（選擇性、iOS） — 用於個人化廣告。<strong>只在啟用廣告的版本中</strong>詢問，即使拒絕也能照常使用所有功能（第 4 項）。</li>
+<li><strong>廣告 ID</strong>（Android <code>com.google.android.gms.permission.AD_ID</code>） — 應用程式為讀取廣告識別碼而宣告的權限。不會另外跳出同意視窗，你可以在裝置設定中重設或關閉。廣告關閉期間不會讀取（第 4 項）。</li>
+</ul>
+
+<h3>為什麼清單中有麥克風權限</h3>
+
+<p>用於發出整點訊號音的<strong>音訊播放函式庫（expo-audio）</strong>同時包含播放與錄音功能，因此在建置應用程式時，<strong>麥克風權限會自動一併宣告。</strong>我們無法單獨拿掉這一項，所以它仍保留著。</p>
+
+<p><strong>Nanotime 沒有錄音功能。</strong>應用程式中沒有任何一處開啟麥克風的程式碼，只會<strong>播放</strong>聲音。由於實際上從不需要麥克風，<strong>也不會跳出詢問是否使用麥克風的同意視窗</strong>（iOS 只會在應用程式實際開啟麥克風時才跳出視窗）。不會聆聽周遭聲音，也不會錄音並儲存或傳送。</p>
+
+<p>Android 端的錄音權限已於 2026年8月版中移除。iOS 端的宣告仍保留，這是因為<strong>刪除反而更糟</strong> — 即使只刪除宣告，函式庫的錄音程式碼仍會原封不動地留在應用程式內，Apple 會將其視為「含有功能卻沒有說明的應用程式」。因此我們保留宣告，並<strong>在該說明中如實寫明本應用程式不會用麥克風做什麼。</strong></p>
+
+<h3>背景執行</h3>
+
+<p><strong>iPhone、iPad</strong> — 有可在其他應用程式上方顯示時鐘的<strong>浮窗時鐘（PiP）</strong>功能。由於在查看購票頁面時時鐘也必須持續走動，開啟浮窗時鐘後，<strong>應用程式會在背景持續執行。</strong></p>
+
+<p><strong>Android</strong> — 當距離目標時間不到兩小時時，為了讓你切換到購票頁面後倒數與整點訊號音仍能持續，應用程式會在背景執行。這段期間，通知欄會顯示一行「目前正在背景執行」的提示。</p>
+
+<p>無論哪一種，這段期間所做的事<strong>只有計時顯示時間與發出整點訊號音</strong>。</p>
+
+<p>不會在背景確認位置，<strong>也不會在背景傳送任何資料給我們</strong>（我們根本沒有接收用的伺服器）。第 3 項的伺服器時間請求只會送往你所選的網站。</p>
+
+<h2>6. 跨境傳輸</h2>
+
+<p>我們不會將你的資料傳輸到國外。不過，在下列情況下，你的裝置會與國外伺服器<strong>直接</strong>通訊，在那一刻部分資訊可能會在國外被處理。</p>
+
+<ul>
+<li><strong>接收者與傳輸項目</strong> — Unity Technologies（Unity LevelPlay、ironSource、Unity Ads）與 Liftoff Mobile, Inc.（Liftoff Monetize）：第 4 項的值（廣告識別碼、裝置與應用程式資訊、IP 位址、廣告顯示與點擊紀錄）。Netlify, Inc.（應用程式狀態檔託管）：連線 IP。以及<strong>你直接選擇伺服器位於國外的網站時</strong>，該網站的營運者：連線 IP、連線時間、裝置資訊（第 3 項）。<strong>任何一方都不包含姓名、聯絡方式等個人資料及註冊資訊。</strong></li>
+<li><strong>傳輸的國家</strong> — 美國等各業者設置伺服器的國家</li>
+<li><strong>傳輸時間與方式</strong> — 在開啟應用程式時（應用程式狀態檔）、廣告顯示時，以及讀取你所選網站時鐘時，透過網路傳送。</li>
+<li><strong>使用目的與保存期間</strong> — 廣告投放與成效評估、檔案傳送、伺服器時間回應。保存期間依各業者的政策而定（第 4 項連結）。</li>
+<li><strong>拒絕的方法</strong> — 拒絕追蹤或重設廣告識別碼後，廣告識別碼就不會被傳送（第 4 項）。只選擇國內網站，就不會產生送往國外網站的請求。刪除應用程式後，所有傳輸都會停止。</li>
+</ul>
+
+<h2>7. 分析與當機資料蒐集</h2>
+
+<p>我們沒有加入任何蒐集使用紀錄的分析工具或當機資料蒐集工具。你看了哪些網站、哪個畫面看了多久，我們都無從得知。</p>
+
+<p>不過，App Store 與 Google Play 在商店層級彙整後提供給開發者的<strong>匿名統計</strong>（安裝數、各裝置類型分布、當機次數等），我們可以看到。這是由商店提供的資料，無法識別特定個人，也不是應用程式另外蒐集的。</p>
+
+<p>App Store 標示中列有<strong>效能資料</strong>，是因為<strong>廣告程式碼測量自身運作的指標</strong>（第 4 項），並不是 Nanotime 在分析你的應用程式使用情形或收集當機紀錄。<strong>當機資料並未列入申報項目。</strong></p>
+
+<h2>8. 提供予第三方與委託處理</h2>
+
+<p>我們不會將你的個人資料提供或出售給第三方。我們本身就沒有保存任何使用者資料。</p>
+
+<p>不過，<strong>廣告投放與成效評估</strong>由下列業者執行。這並不是由我們交出資訊，而是你裝置中的廣告程式碼直接讀取第 4 項的值，並傳送到其自家伺服器。</p>
+
+<ul>
+<li>Unity Technologies（Unity LevelPlay、ironSource、Unity Ads）</li>
+<li>Liftoff Mobile, Inc.（Liftoff Monetize）</li>
+</ul>
+
+<p>第 3 項的三種情況，都是你的裝置<strong>直接</strong>與外部通訊，並不是由我們交出資訊。</p>
+
+<h2>9. 透過聯絡與回報收到的資訊</h2>
+
+<p>應用程式內的聯絡與回報功能<strong>只會顯示我們的電子郵件地址並打開你的郵件應用程式</strong>，應用程式不會把內容傳送到我們的伺服器。是否寄出，由你在郵件應用程式中決定。</p>
+
+<p>你寄出郵件後，我們會收到郵件中的<strong>寄件人電子郵件地址與你所寫的內容</strong>，以及預先填入郵件主旨的<strong>作業系統與應用程式版本</strong>。這些資訊只用於回覆詢問與修正問題，處理完畢後即刪除。</p>
+
+<h2>10. 保存期間</h2>
+
+<p>我們沒有蒐集任何個人資料，因此我們這邊也沒有保存期間。第 2 項的內容只留在你的裝置上，刪除應用程式後會立即一併消失。第 9 項的詢問郵件會在處理完畢後刪除。</p>
+
+<h2>11. 安全措施</h2>
+
+<p>本應用程式沒有架設接收使用者資料的伺服器。<strong>不製造可能外洩的地方</strong>，就是本應用程式的安全措施。應用程式對外送出的請求全都使用加密連線（HTTPS） — 即使你以 <code>http://</code> 輸入網址，應用程式也會改為 <code>https://</code> 送出。</p>
+
+<h2>12. 使用者的權利</h2>
+
+<p>儲存在裝置上的內容，刪除應用程式後會全部刪除，不需要另外的刪除申請程序。我的最愛可以再按一次星號來刪除。<strong>廣告識別碼</strong>可以依第 4 項的方法重設，或關閉個人化廣告。</p>
+
+<p>若有任何與個人資料相關、想要確認的事項，請寄信至下方地址，我們會儘速回覆。</p>
+
+<h2>13. 兒童</h2>
+
+<p>本應用程式並非以未滿 14 歲的兒童為對象，也不會在知情的情況下蒐集兒童的個人資料。</p>
+
+<h2>14. 個人資料保護負責人</h2>
+
+<p>Nemo Factory（個人開發者）<br />聯絡方式：contact@nemofactory.co.kr</p>
+
+<p>與個人資料相關的詢問或申訴，請寄信至上方地址，我們會儘速回覆。</p>
+
+<h2>15. 權益受侵害時的救濟</h2>
+
+<p>若因個人資料受侵害而需要協助，可以向下列機關洽詢。</p>
+
+<ul>
+<li>個人資料糾紛調解委員會 — 1833-6972（<a href="https://www.kopico.go.kr/">kopico.go.kr</a>）</li>
+<li>個人資料侵害申報中心 — 118（<a href="https://privacy.kisa.or.kr/">privacy.kisa.or.kr</a>）</li>
+<li>大檢察廳網路犯罪調查科 — 1301 · 警察廳網路犯罪調查局 — 182</li>
+</ul>
+
+<h2>16. 變更公告</h2>
+
+<p>本政策如有變更，會連同生效日期更新於本頁。</p>
+
+<p>Nemo Factory</p>
+</section>
 <footer>
   ⓒ Nemo Factory · 문의 <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a><br>
   <a href="../">전체 목록</a>

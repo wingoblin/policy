@@ -101,7 +101,13 @@
   {
     "slug": "nanotime",
     "title": "나노타임 개인정보 처리방침",
-    "src": "16"
+    "src": "16",
+    "langs": [
+      "ko",
+      "en",
+      "ja",
+      "zhHant"
+    ]
   },
   {
     "slug": "ttangullim",

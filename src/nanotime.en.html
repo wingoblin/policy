@@ -1,0 +1,220 @@
+<h1>Nanotime — Privacy Policy</h1>
+
+<p><strong>Effective:</strong> October 23, 2026 (revised)<br /><strong>Previous effective date:</strong> August 22, 2026<br /><strong>Contact:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>In one line</strong><br />Nanotime has no sign-up and no sign-in, and never asks for personal information such as your name or contact details. <strong>We do not run a server.</strong> However, this app reads the clock of a site you choose, so <strong>your device connects directly to that site</strong> (section 3). At that moment your IP address may be recorded in that site’s server logs, and this is the most important notice for this app. In builds with ads turned on, one more item is added: <strong>the advertising identifier read by ad networks</strong> (section 4).</p>
+
+<p><strong>Not an auto-booking tool or macro</strong><br />Nanotime <strong>only shows the time</strong>; it never signs in to a booking site, presses buttons or sends requests on your behalf. It does not ask for your booking-site account details, and the app contains no booking screen and no web browser.</p>
+
+<h2>1. Information we collect</h2>
+
+<p>None. We do not collect your name, contact details, email, date of birth or any other personal information. The app has no accounts, so there is no sign-up or sign-in at all.</p>
+
+<p>We <strong>do not run a server.</strong> There is nowhere your information is sent to us and accumulated. Section 3 lists every single case in which the app sends a request out, and all of those requests go to <strong>the site you chose</strong>, <strong>the hosting provider that holds the app status file</strong> or <strong>ad networks</strong> — none of them come to a server of ours.</p>
+
+<p>The advertising identifier is read directly from your device by the ad networks. <strong>We neither receive nor keep that value</strong> (section 4).</p>
+
+<h2>2. Stored on your device only</h2>
+
+<ul>
+<li><strong>Favorites</strong> — the list of sites you collected by tapping the star. Addresses you typed in yourself are kept here too.</li>
+<li><strong>Last site viewed</strong> — one site is noted so that the app starts at the same place when you open it again.</li>
+<li><strong>Rehearsal records</strong> — only the <strong>arrival error (in milliseconds) measured in Rehearsal and the verdict at that time</strong>, for the five most recent rounds. These are just numbers showing the accuracy of your tap, and have nothing to do with who booked what, or when.</li>
+<li><strong>App settings</strong> — the display language, the type of sound chosen for the on-the-dot signal, vibration strength, screen color, sync strength, the look of the Pop-up clock (PiP) and the time it closes itself, and whether opening alerts are turned on.</li>
+<li><strong>Ad-related records</strong> (builds with ads turned on) — the <strong>click time</strong> used to hide ads for a while after an accidental tap, the <strong>display time</strong> used to avoid showing ads back to back, and the ad settings downloaded from the app status file (section 4). They contain no value that could identify you.</li>
+</ul>
+
+<p>All of the above stays on your device only. It is never sent to a server of ours and we cannot read it. Deleting the app deletes all of it.</p>
+
+<p><strong>Reservations you set stay on your device</strong> — the site you chose, the opening time, the alert time you set for each reservation, and whether you turned that alert off. This is so that the countdown and alerts carry on when you close the app and open it again later; past reservations are deleted rather than restored. What you were trying to book (anything beyond the site name) is recorded nowhere. This, too, stays on your device only and is never sent to us.</p>
+
+<h2>3. Requests the app sends out</h2>
+
+<p><strong>Requests to the site you chose — the core of this app.</strong></p>
+
+<p>The only way to find out a server’s clock is to actually ask that server. The app sends an <strong>HTTP HEAD request</strong> to the site you chose, then measures the <code>Date</code> header in the response (the current time according to that server) and the round-trip time to calculate the offset.</p>
+
+<p><strong>Quite a few sites do not accept HEAD.</strong> For those, the app instead <strong>sends a GET request but receives only the first byte of the body</strong> (<code>Range: bytes=0-0</code>). It does not download the whole page, but we cannot say that it “receives no body at all”, so we note it here. Either way, the only thing we use is the <code>Date</code> header; whatever is received is neither read nor stored, and is discarded on the spot.</p>
+
+<ul>
+<li><strong>What is sent</strong> — only the address and the request itself. No personal information such as your name, contact details or account is carried, and no cookies or sign-in details are attached.</li>
+<li><strong>The value added to the end of the address</strong> — the app adds <strong>a one-time number that changes every time</strong> (<code>?_=…</code>) to the end of the request address. This is because if an intermediate cache returns a stale response it stored earlier, its <code>Date</code> is not the current time but the time a few minutes ago, and the clock silently drifts. This value is just a sequence number generated on the spot; it is not information that could identify your device or you.</li>
+<li><strong>What is left behind</strong> — as with any ordinary web visit, <strong>your IP address, the access time and device information (User-Agent) may be recorded in that site’s server logs.</strong> This is the same kind of record as when you visit that site in a browser, and that site handles the record under its own policy. We neither receive nor can see that record.</li>
+<li><strong>When it is sent</strong> — while the clock screen is open, the app resyncs <strong>every 30 seconds by default</strong>. Depending on the sync strength in settings, this interval changes between 20 and 60 seconds, and the app syncs once more 20 seconds before the target time. It keeps at least 10 seconds between syncs to one site, and sends no request at all during the 3 seconds before and after the target time.</li>
+<li><strong>How many at a time</strong> — each sync sends <strong>a few dozen requests</strong> (32 by default, 16 to 40 depending on sync strength), spread over 1 to 2 seconds. Measuring only once would turn the network conditions of that moment directly into error, so the app measures many times and uses only the ones that came back fastest. We note this as well because each sync leaves that many lines in the target site’s logs.</li>
+<li><strong>Where it is sent</strong> — to <strong>the place you chose</strong>. The app never picks another site on its own to connect to. However, if the address you chose <strong>forwards to another address (a redirect)</strong>, the app follows it to the forwarded address just as a web browser would, and <strong>from then on sends straight to the forwarded address</strong> — because adding the forwarding round trip every time would make the time that much less accurate, and the inaccuracy always leans toward “making you tap too early”, which is dangerous. As a result, access records may be left in the server logs of a <strong>host different</strong> from the one you chose.</li>
+</ul>
+
+<p><strong>App status file</strong> (<code>beautiful-tulumba-77ca83.netlify.app</code>) — at launch the app downloads a single public JSON file holding the minimum supported version and ad settings. <strong>Nothing is attached to the request</strong> (everyone receives the same file). However, the hosting provider for this file (Netlify) may keep your IP address in its server logs.</p>
+
+<p><strong>Ads</strong> — this happens only in builds with ads turned on. It is described in section 4.</p>
+
+<p>These three are the only requests the app sends out.</p>
+
+<h2>4. Ads</h2>
+
+<p>The app shows ads. <strong>There are no rewarded ads, and no feature is unlocked by watching an ad.</strong> This is an app for waiting for the exact moment, so it is a principle of this app not to place ads that would cover that moment.</p>
+
+<p><strong>The only ad is one interstitial ad while you have the app open.</strong> There are no banners at the bottom of the screen and no rectangle ads within the screen.</p>
+
+<ul>
+<li><strong>Interstitial ad</strong> (full screen) — shown <strong>only once while the app is open</strong>, when you choose a site from the site list and the app starts syncing to that site’s server clock. Before it is shown, a notice saying “An ad will play just once” appears for a little over 2 seconds. You can close the ad with its close button, and when you come back the clock is still running. It is not shown again until you fully quit the app and open it again.</li>
+</ul>
+
+<p><strong>When the interstitial ad does not appear</strong><br />The core of this app is that single tap at the exact moment, so ads are not shown in the cases below.</p>
+
+<ul>
+<li><strong>When the target time is within 1 minute</strong>, or when a target is set but the remaining time is not yet known — an ad never covers the countdown. If the time comes within 1 minute while the notice is showing, the notice is removed immediately and no ad is shown.</li>
+<li><strong>During Rehearsal</strong> — because the whole screen is the place you need to tap.</li>
+<li><strong>The first screen you see after opening the app</strong>, and when the site changes because you <strong>tapped a reservation in the reservation list</strong>.</li>
+<li>When an ad could not be loaded in advance (no fill), or when the <strong>protection against accidental ad taps</strong> below is in effect.</li>
+</ul>
+
+<p><strong>Ads are shown in both the iPhone/iPad and Android versions.</strong></p>
+
+<p><strong>How ads are turned on and off</strong><br />Whether ads are actually shown is also determined by the settings written in the <strong>app status file</strong> in section 3. This means ads can be turned off or on without you downloading a new version of the app. The request that fetches this file carries no value pointing to you (section 3), and while ads are turned off the ad providers’ code <strong>does not start at all</strong>, so none of the values under “What is collected” below are read.</p>
+
+<p><strong>Who serves the ads</strong><br />Ads are shown through a mediation service called <strong>Unity LevelPlay</strong> (formerly ironSource). Mediation acts as an intermediary that picks, each time, which of several ad networks supplies the ad. The networks currently connected are as follows, and may increase or decrease in the future.</p>
+
+<ul>
+<li>Unity Ads · ironSource (Unity Technologies)</li>
+<li>Liftoff Monetize (Liftoff Mobile, Inc.)</li>
+</ul>
+
+<p>You can read each company’s privacy policy below.<br /><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity Privacy Policy</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff Privacy Policy</a></p>
+
+<p><strong>What is collected</strong><br />To show ads and measure their performance, the ad providers above may read the following information from your device and take it to their own servers. <strong>We neither receive, keep nor see these values.</strong></p>
+
+<ul>
+<li><strong>Advertising identifier</strong> — the iOS advertising identifier (IDFA) and the Android Advertising ID (AAID). These are values you can reset or block at any time in your device settings.</li>
+<li><strong>Device and app information</strong> — device model, operating system version, language, country, app version, screen size and network type.</li>
+<li><strong>Installed apps</strong> (Android) — the ad providers’ code may read part of the list of apps installed on your device, and use it to avoid showing ads for apps already installed or to measure ad performance. Nanotime itself does not read this list.</li>
+<li><strong>IP address</strong> — passed along in the course of ad requests, and may be used to estimate your approximate region (city level).</li>
+<li><strong>Ad interactions</strong> — how many times ads were shown and tapped.</li>
+<li><strong>Ad code activity records</strong> — <strong>performance and error metrics of the ad code itself</strong>, such as whether an ad request succeeded and how long the response took. The ad providers use them to fix their own code. <strong>They contain no diagnostic information about Nanotime itself</strong>, such as whether the app slowed down or on which screen it froze (section 7).</li>
+<li><strong>Usage records around the ad placement</strong> — records the ad code uses to count its own activity, such as the time the app was opened and the time the interstitial ad appeared on screen. <strong>They do not include which site you chose, what time you set, or which buttons you pressed.</strong></li>
+</ul>
+
+<p><strong>The site you are viewing is not passed to ads.</strong> Which booking site’s clock you are syncing to, and what time you have set as your target, are not passed to the ad providers. <strong>This app has no feature that uses the location permission</strong> — it does not read satellite location (GPS), and the “approximate region” in the list above means the country or city level that ad providers infer from the IP address carried in the ad request.</p>
+
+<p><strong>What we declared in the App Store “App Privacy” section</strong><br />Apple regroups the values above into its own categories. The items Nanotime declared there are seven: <strong>Device ID · Product Interaction · Advertising Data · Other Usage Data · Coarse Location · Performance Data · Other Data</strong>, and all of them are <strong>the same values as the ad list above</strong>. None of them are <strong>linked to your identity</strong> (there is no account, so there is nothing to link them to), and of these <strong>the only one used for tracking is the advertising identifier</strong>.</p>
+
+<p><strong>What we declared in the Google Play “Data safety” section</strong><br />The Android version declared <strong>Device or other IDs · App activity (App interactions · Installed apps) · App info and performance · Approximate location</strong> to Google Play. All of them are <strong>the same values as the ad list above</strong>; the purpose of collection is advertising, and they are encrypted in transit.</p>
+
+<p><strong>iOS — we ask for permission to track</strong><br />On iOS, a system prompt asking whether to allow tracking appears once when you first open the app. <strong>Even if you do not allow it, you can use every feature of the app as before</strong>, and ads are still shown — only, ads not tailored to your interests appear instead of tailored ones. If you decline, the advertising identifier (IDFA) is not passed to the ad providers, and the app also tells the mediation service “no consent to personalized ads”. This prompt appears only in builds where ads are actually turned on, and not a single ad request goes out until you respond.</p>
+
+<p><strong>If you want to turn off personalized ads</strong><br />On iOS, go to Settings &gt; Privacy &amp; Security &gt; Tracking and turn off “Allow Apps to Request to Track”, or switch off Nanotime. On Android, go to Settings &gt; Privacy &gt; Ads and delete or reset the advertising ID. You do not need to reinstall the app, and even with it turned off you can use every feature of the app as before. In that case, ads are shown as non-personalized ads instead.</p>
+
+<p><strong>Protection against accidental ad taps</strong><br />If you tap an ad once, no ads are shown for <strong>60 minutes</strong>, and if ads are tapped twice on the same day, none are shown <strong>until midnight that day</strong>. This is to prevent ads from opening repeatedly when a finger brushes against them. The <strong>click times used for this decision stay on your device only</strong> (section 2).</p>
+
+<h2>5. App permissions</h2>
+
+<p>Nanotime <strong>does not access your location, contacts, photos, address book or storage.</strong> The permissions declared on the device are only those below.</p>
+
+<ul>
+<li><strong>Network</strong> — to send the requests in section 3. The app’s only job is to read server time, so it does not work without a connection.</li>
+<li><strong>Vibration</strong> — to let you know through your fingertips as the exact moment approaches. No separate consent prompt appears.</li>
+<li><strong>Sound playback</strong> (Android <code>MODIFY_AUDIO_SETTINGS</code>) — to play the on-the-dot signal.</li>
+<li><strong>Background execution</strong> (iOS <code>UIBackgroundModes: audio</code>, Android <code>FOREGROUND_SERVICE</code>·<code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>) — described separately below.</li>
+<li><strong>Notifications</strong> (iOS notification permission · Android 13 and later <code>POST_NOTIFICATIONS</code>) — <strong>only if you turn on “Alerts”</strong> on the home screen, the app shows a pre-opening alert for each reservation you set, at the time you chose for it. The alert time can be set separately or turned off for each reservation. Alerts are <strong>local notifications created on your device</strong>, so they do not go through a server, and no device-identifying value such as a push token is received. Notification permission is asked once when you first turn on “Alerts”, and turning it off deletes all scheduled alerts. On Android, this permission is also used for the <strong>one-line indicator</strong> telling you “this app is now running in the background” while the background execution below is running, and that indicator disappears when you close the app.</li>
+<li><strong>Microphone</strong> (iOS <code>NSMicrophoneUsageDescription</code>) — <strong>declared, but this app never opens the microphone.</strong> Described separately below. The Android recording permission (<code>RECORD_AUDIO</code>) was removed in the August 2026 version.</li>
+<li><strong>Tracking</strong> (optional · iOS) — for personalized ads. It is asked <strong>only in builds with ads turned on</strong>, and even if you decline you can use every feature as before (section 4).</li>
+<li><strong>Advertising ID</strong> (Android <code>com.google.android.gms.permission.AD_ID</code>) — a permission the app declares in order to read the advertising identifier. No separate consent prompt appears, and you can reset or turn it off in your device settings. It is not read while ads are turned off (section 4).</li>
+</ul>
+
+<h3>Why the microphone permission is on the list</h3>
+
+<p>The <strong>sound playback library (expo-audio)</strong> used to play the on-the-dot signal contains both playback and recording functions, so <strong>the microphone permission is automatically declared along with it when the app is built.</strong> We were unable to strip out just that item, so it remains as is.</p>
+
+<p><strong>Nanotime has no recording feature.</strong> There is not a single place in the app’s code that turns on the microphone; it only <strong>outputs</strong> sound. Since there is never a moment when it actually requests the microphone, <strong>no consent prompt asking to use the microphone appears either</strong> (iOS shows the prompt only when an app actually opens the microphone). The app never listens to surrounding sound, nor records, stores or sends it.</p>
+
+<p>The Android recording permission was removed in the August 2026 version. The iOS declaration remains because <strong>removing it would actually be worse</strong> — even if only the declaration were removed, the library’s recording code would remain inside the app, and Apple would see it as “an app that contains the function but has no explanation”. So we kept the declaration and <strong>wrote in that explanation exactly what this app does not do with the microphone.</strong></p>
+
+<h3>Background execution</h3>
+
+<p><strong>iPhone and iPad</strong> — there is a <strong>Pop-up clock (PiP)</strong> feature that floats the clock over other apps. Because the clock must keep running while you look at the booking page, <strong>the app keeps running in the background</strong> while the Pop-up clock is on.</p>
+
+<p><strong>Android</strong> — when the target time is within two hours, the app runs in the background so that the countdown and the on-the-dot signal continue even if you switch to the booking page. During that time, a one-line indicator saying “now running in the background” appears in the notification shade.</p>
+
+<p>In either case, all the app does at that time is <strong>count and display the time and play the on-the-dot signal</strong>.</p>
+
+<p>It does not check location in the background, and <strong>sends no data to us in the background</strong> (we have no server to receive it in the first place). The server-time requests in section 3 go only to the site you chose.</p>
+
+<h2>6. International transfers</h2>
+
+<p>We do not move your information abroad. However, in the cases below your device communicates <strong>directly</strong> with servers abroad, and some information may be processed abroad at that moment.</p>
+
+<ul>
+<li><strong>Recipients and items transferred</strong> — Unity Technologies (Unity LevelPlay · ironSource · Unity Ads) and Liftoff Mobile, Inc. (Liftoff Monetize): the values in section 4 (advertising identifier, device and app information, IP address, ad display and click records). Netlify, Inc. (app status file hosting): access IP. And <strong>if you yourself chose a site whose server is located abroad</strong>, the operator of that site: access IP, access time and device information (section 3). <strong>No personal information such as your name or contact details, and no sign-up information, is included in any of them.</strong></li>
+<li><strong>Destination countries</strong> — the United States and other countries where each provider has its servers</li>
+<li><strong>When and how</strong> — sent over the network when the app launches (app status file), when an ad is shown, and when the app reads the clock of the site you chose.</li>
+<li><strong>Purpose of use and retention period</strong> — serving ads and measuring their performance, file delivery, and server-time responses. Retention periods follow each provider’s policy (links in section 4).</li>
+<li><strong>How to refuse</strong> — if you decline tracking or reset your advertising identifier, the advertising identifier is not passed on (section 4). If you choose only domestic sites, no requests go to sites abroad. Deleting the app stops all transfers.</li>
+</ul>
+
+<h2>7. Analytics and crash collection</h2>
+
+<p>We have not included any analytics tool that collects usage records or any crash collection tool. We cannot know which sites you viewed, or which screens you looked at and for how long.</p>
+
+<p>However, we can see the <strong>anonymous statistics</strong> that the App Store and Google Play aggregate at the store level and show to developers (number of installs, distribution by device type, number of crashes and so on). These are provided by the stores, cannot identify individuals, and are not collected separately by the app.</p>
+
+<p><strong>Performance Data</strong> appears in the App Store listing because of <strong>the metrics the ad code uses to measure its own activity</strong> (section 4); it does not mean Nanotime analyzes your use of the app or gathers crash logs. <strong>We did not include Crash Data among the declared items.</strong></p>
+
+<h2>8. Third-party provision and outsourcing</h2>
+
+<p>We never provide or sell your personal information to third parties. We hold no user information to begin with.</p>
+
+<p>However, <strong>serving ads and measuring their performance</strong> is carried out by the providers below. This is not done by us handing information over; instead, the ad code inside your device reads the values in section 4 directly and sends them to the providers’ own servers.</p>
+
+<ul>
+<li>Unity Technologies (Unity LevelPlay · ironSource · Unity Ads)</li>
+<li>Liftoff Mobile, Inc. (Liftoff Monetize)</li>
+</ul>
+
+<p>In all three cases in section 3, your device communicates <strong>directly</strong> with the outside; it is not a matter of us handing information over.</p>
+
+<h2>9. Information received through contact and reports</h2>
+
+<p>Contact and reports in the app <strong>only show our email address and open your mail app</strong>; the app does not send the content to a server of ours. Whether to send is up to you, in your mail app.</p>
+
+<p>If you send an email, we receive <strong>your email address and what you wrote</strong> in that email, along with <strong>the operating system and app version</strong> that are pre-filled in the subject line. We use this information only to answer your inquiry and fix problems, and delete it once handled.</p>
+
+<h2>10. Retention</h2>
+
+<p>We collect no personal information, so there is no retention period on our side. The contents of section 2 remain only on your device and disappear as soon as you delete the app. Inquiry emails in section 9 are deleted once handled.</p>
+
+<h2>11. Security</h2>
+
+<p>This app does not run a server that receives your information. <strong>Not creating a place for a leak to happen</strong> is this app’s security measure. Every request the app sends out uses an encrypted connection (HTTPS) — even if you type an address with <code>http://</code>, the app changes it to <code>https://</code> before sending.</p>
+
+<h2>12. Your rights</h2>
+
+<p>Everything stored on your device is deleted when you delete the app. No separate deletion request process is needed. Favorites can be removed by tapping the star again. The <strong>advertising identifier</strong> can be reset, or personalized ads turned off, using the methods in section 4.</p>
+
+<p>If there is anything about your personal information you would like to check, send it to the address below and we will reply without delay.</p>
+
+<h2>13. Children</h2>
+
+<p>The app is not directed at children under 14, and we do not knowingly collect children’s personal information.</p>
+
+<h2>14. Data protection officer</h2>
+
+<p>Nemo Factory (independent developer)<br />Contact: contact@nemofactory.co.kr</p>
+
+<p>Questions or complaints about personal information sent to the address above are answered without delay.</p>
+
+<h2>15. Remedies for infringement</h2>
+
+<p>If you need help with an infringement of your personal information, you can contact the organizations below.</p>
+
+<ul>
+<li>Personal Information Dispute Mediation Committee — 1833-6972 (<a href="https://www.kopico.go.kr/">kopico.go.kr</a>)</li>
+<li>Privacy Infringement Report Center — 118 (<a href="https://privacy.kisa.or.kr/">privacy.kisa.or.kr</a>)</li>
+<li>Supreme Prosecutors’ Office Cyber Investigation Division — 1301 · Korean National Police Agency Cyber Bureau — 182</li>
+</ul>
+
+<h2>16. Changes</h2>
+
+<p>If this policy changes, we update this page together with its effective date.</p>
+
+<p>Nemo Factory</p>
