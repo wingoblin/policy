@@ -108,6 +108,7 @@
 <li><strong>마지막으로 본 사이트</strong> — 앱을 다시 열었을 때 같은 곳에서 시작하도록 한 곳을 적어 둡니다.</li>
 <li><strong>리허설 기록</strong> — 리허설에서 잰 <strong>도착 오차(밀리초)와 그때의 판정</strong>만 최근 다섯 판 남깁니다. 손의 정확도를 나타내는 숫자일 뿐이며, 누가 언제 무엇을 예매했는지와는 아무 관련이 없습니다.</li>
 <li><strong>앱 설정</strong> — 화면 언어, 정각 신호로 고른 소리 종류, 진동 세기, 화면 색, 동기화 강도, 팝업 시계(PiP) 모양과 스스로 닫힐 시각, 오픈 알림을 켰는지입니다.</li>
+<li><strong>구매 기록</strong> — 광고 제거(나노타임 Pro)를 사셨는지 여부입니다. 광고를 띄울지 정하는 데만 쓰며, 기기 밖으로 나가지 않습니다.</li>
 <li><strong>광고 관련 기록</strong>(광고가 켜진 판) — 잘못 눌린 광고를 잠시 숨기기 위한 <strong>클릭 시각</strong>, 같은 광고를 잇달아 띄우지 않기 위한 <strong>표시 시각</strong>, 그리고 앱 상태 파일에서 받아 둔 광고 설정값입니다(4항). 개인을 알아볼 수 있는 값은 들어 있지 않습니다.</li>
 </ul>
 
@@ -136,19 +137,26 @@
 
 <p><strong>광고</strong> — 광고가 켜진 판에서만 일어납니다. 4항에 적었습니다.</p>
 
-<p>앱이 밖으로 보내는 요청은 위 세 가지가 전부입니다.</p>
+<p><strong>인앱 구매</strong> — 설정의 나노타임 Pro 화면을 여시거나 「구매 복원」을 누르시면 <strong>스토어(App Store · Google Play)</strong>와 통신해 상품과 가격을 받아 오고 결제 결과를 확인합니다. <strong>이 통신은 스토어와 기기 사이에서 이루어지며</strong>, 카드번호를 비롯한 결제 정보는 저희에게 오지 않습니다.</p>
+
+<p><strong>결제 알림 한 줄 (Android 판만)</strong> — Android에서 구매가 성공하면 「지금 하나 팔렸다」는 한 줄이 저희 알림 창구로 나갑니다. 실리는 값은 <strong>앱 이름 · 상품 번호 · 스토어가 보여 준 표시가격 · 스토어가 매긴 주문번호</strong>뿐이며, 이용자를 알아볼 수 있는 값은 실리지 않습니다. 실패해도 다시 보내지 않고, 결제는 그와 무관하게 진행됩니다. iPhone·iPad 판에서는 이 요청이 나가지 않습니다.</p>
+
+<p>앱이 밖으로 보내는 요청은 위가 전부입니다.</p>
 
 <h2>4. 광고</h2>
 
-<p>앱에 광고가 표시됩니다. <strong>보상형 광고는 넣지 않으며, 광고를 봐야 열리는 기능도 없습니다.</strong> 정각을 기다리는 앱이라 그 순간을 가리는 광고는 두지 않는다는 것이 이 앱의 원칙입니다.</p>
+<p>앱에 광고가 표시됩니다. 정각을 기다리는 앱이라 <strong>그 순간을 가리는 광고는 두지 않는다</strong>는 것이 이 앱의 원칙입니다. <strong>광고 제거(나노타임 Pro)</strong>를 사시면 아래 광고가 모두 사라지고, 광고 사업자의 코드도 시작되지 않습니다.</p>
 
-<p><strong>광고는 앱을 켜서 쓰는 동안 전면 광고 한 번뿐입니다.</strong> 화면 아래 배너나 화면 속 사각형 광고는 없습니다.</p>
+<p><strong>광고는 네 가지입니다.</strong></p>
 
 <ul>
-<li><strong>전면 광고</strong>(화면 전체) — 사이트 목록에서 사이트를 고르셔서 그 사이트의 서버 시계를 맞추기 시작할 때, <strong>앱을 켠 동안 한 번만</strong> 표시됩니다. 표시하기 전에 「광고가 한 번만 나와요」라는 안내가 2초가 채 안 되게 먼저 섭니다. 광고는 닫기 단추로 닫으실 수 있고, 닫고 돌아오시면 시계는 그대로 돌고 있습니다. 앱을 완전히 껐다 다시 켜시기 전에는 다시 표시되지 않습니다.</li>
+<li><strong>하단 배너</strong> — 홈·연습·설정 화면과 전체 화면 보기의 가장자리에 작은 띠로 붙습니다. 배너 자리는 광고가 있든 없든 늘 같은 높이로 비워 두어, 광고가 늦게 떠도 위 단추가 밀려 올라가지 않습니다.</li>
+<li><strong>시계 게이트</strong>(사각형 광고) — 사이트 목록에서 다른 사이트를 고르셔서 그 사이트의 서버 시계를 새로 맞추는 동안(보통 1~3초) 화면을 덮는 판에 함께 붙습니다. 시계가 맞으면 스스로 걷힙니다. 같은 고름에 아래 전면 광고가 뜨면 서지 않습니다.</li>
+<li><strong>전면 광고</strong>(화면 전체) — 사이트를 고르셔서 그 사이트의 서버 시계를 맞추기 시작할 때, <strong>앱을 켠 동안 한 번만</strong> 표시됩니다. 표시하기 전에 「광고가 한 번만 나와요」라는 안내가 2초가 채 안 되게 먼저 섭니다. 앱을 완전히 껐다 다시 켜시기 전에는 다시 표시되지 않습니다.</li>
+<li><strong>보상형 광고</strong> — 연습 탭의 「광고 보고 연습하기」를 누르시면 영상 광고가 나오고, 끝까지 보시면 리허설이 시작됩니다. 중간에 닫으시면 리허설이 시작되지 않습니다. <strong>광고를 띄울 수 없는 때(광고가 없거나 연결이 없을 때)에는 광고 없이 바로 시작됩니다.</strong> 실전 초읽기·알림·팝업 시계처럼 정각에 쓰는 기능은 광고와 상관없이 늘 열려 있습니다.</li>
 </ul>
 
-<p><strong>전면 광고가 뜨지 않는 때</strong><br />이 앱의 핵심은 정각에 누르는 그 한 번이라, 아래 경우에는 광고를 띄우지 않습니다.</p>
+<p><strong>시계 게이트와 전면 광고가 뜨지 않는 때</strong><br />이 앱의 핵심은 정각에 누르는 그 한 번이라, 아래 경우에는 광고를 띄우지 않습니다.</p>
 
 <ul>
 <li><strong>목표 시각이 1분 안으로 들어왔을 때</strong>, 또는 목표가 걸려 있는데 남은 시간을 아직 모를 때 — 초읽기를 광고가 덮는 일은 없습니다. 안내가 서 있는 사이 1분 안으로 들어오면 안내를 곧바로 걷고 광고도 띄우지 않습니다.</li>
@@ -330,6 +338,7 @@
 <li><strong>Last site viewed</strong> — one site is noted so that the app starts at the same place when you open it again.</li>
 <li><strong>Rehearsal records</strong> — only the <strong>arrival error (in milliseconds) measured in Rehearsal and the verdict at that time</strong>, for the five most recent rounds. These are just numbers showing the accuracy of your tap, and have nothing to do with who booked what, or when.</li>
 <li><strong>App settings</strong> — the display language, the type of sound chosen for the on-the-dot signal, vibration strength, screen color, sync strength, the look of the Pop-up clock (PiP) and the time it closes itself, and whether opening alerts are turned on.</li>
+<li><strong>Purchase record</strong> — whether you bought ad removal (NanoTime Pro). It is used only to decide whether to show ads and never leaves your device.</li>
 <li><strong>Ad-related records</strong> (builds with ads turned on) — the <strong>click time</strong> used to hide ads for a while after an accidental tap, the <strong>display time</strong> used to avoid showing ads back to back, and the ad settings downloaded from the app status file (section 4). They contain no value that could identify you.</li>
 </ul>
 
@@ -358,19 +367,26 @@
 
 <p><strong>Ads</strong> — this happens only in builds with ads turned on. It is described in section 4.</p>
 
-<p>These three are the only requests the app sends out.</p>
+<p><strong>In-app purchase</strong> — when you open the NanoTime Pro screen in Settings or tap “Restore purchase”, the app talks to <strong>the store (App Store · Google Play)</strong> to load the product and price and to confirm the result of a payment. <strong>This communication happens between the store and your device</strong>, and no payment information such as card numbers comes to us.</p>
+
+<p><strong>One-line payment notice (Android only)</strong> — when a purchase succeeds on Android, a one-line “one was just sold” notice is sent to our notification endpoint. It contains only <strong>the app name · product ID · the display price shown by the store · the order number assigned by the store</strong>, and nothing that identifies you. If it fails it is not resent, and the payment proceeds regardless. This request is not sent from the iPhone/iPad version.</p>
+
+<p>These are the only requests the app sends out.</p>
 
 <h2>4. Ads</h2>
 
-<p>The app shows ads. <strong>There are no rewarded ads, and no feature is unlocked by watching an ad.</strong> This is an app for waiting for the exact moment, so it is a principle of this app not to place ads that would cover that moment.</p>
+<p>The app shows ads. Because this is an app for waiting for the exact moment, its principle is <strong>never to place an ad that covers that moment</strong>. If you buy <strong>ad removal (NanoTime Pro)</strong>, all of the ads below disappear and the ad providers’ code does not start at all.</p>
 
-<p><strong>The only ad is one interstitial ad while you have the app open.</strong> There are no banners at the bottom of the screen and no rectangle ads within the screen.</p>
+<p><strong>There are four kinds of ads.</strong></p>
 
 <ul>
-<li><strong>Interstitial ad</strong> (full screen) — shown <strong>only once while the app is open</strong>, when you choose a site from the site list and the app starts syncing to that site’s server clock. Before it is shown, a notice saying “An ad will play just once” appears for just under 2 seconds. You can close the ad with its close button, and when you come back the clock is still running. It is not shown again until you fully quit the app and open it again.</li>
+<li><strong>Bottom banner</strong> — a small strip at the edge of the Home, Practice, and Settings screens and the full-screen view. The banner space is always kept at the same height whether or not an ad is shown, so buttons above it never jump when an ad loads late.</li>
+<li><strong>Clock gate</strong> (rectangular ad) — appears on a panel that covers the screen while the server clock of a site you newly chose from the site list is being synced (usually 1–3 seconds). It goes away on its own once the clock is synced. It does not appear when the interstitial ad below is shown for the same choice.</li>
+<li><strong>Interstitial ad</strong> (full screen) — shown <strong>only once while the app is open</strong>, when you choose a site and the app starts syncing that site’s server clock. Before it appears, a notice saying “An ad will show just once” stands for under 2 seconds. It is not shown again until you fully close and reopen the app.</li>
+<li><strong>Rewarded ad</strong> — tapping “Watch an ad to practice” in the Practice tab plays a video ad, and Rehearsal starts once you watch it to the end. If you close it midway, Rehearsal does not start. <strong>If no ad can be shown (no ad available or no connection), Rehearsal starts right away without an ad.</strong> Features you use at the exact moment — the real countdown, alerts, and the pop-up clock — are always available regardless of ads.</li>
 </ul>
 
-<p><strong>When the interstitial ad does not appear</strong><br />The core of this app is that single tap at the exact moment, so ads are not shown in the cases below.</p>
+<p><strong>When the clock gate and interstitial ad do not appear</strong><br />The core of this app is that single tap at the exact moment, so ads are not shown in the cases below.</p>
 
 <ul>
 <li><strong>When the target time is within 1 minute</strong>, or when a target is set but the remaining time is not yet known — an ad never covers the countdown. If the time comes within 1 minute while the notice is showing, the notice is removed immediately and no ad is shown.</li>
@@ -552,6 +568,7 @@
 <li><strong>最後に見たサイト</strong> — アプリを再び開いたときに同じところから始められるよう、1か所を記録しておきます。</li>
 <li><strong>リハーサルの記録</strong> — 「リハーサル」で測った<strong>到着誤差（ミリ秒）とそのときの判定</strong>だけを、直近5回分残します。手の正確さを表す数字にすぎず、誰がいつ何を予約したかとは一切関係ありません。</li>
 <li><strong>アプリの設定</strong> — 表示言語、時報として選んだ音の種類、振動の強さ、画面の色、同期の強度、「ポップアップ時計（PiP）」の形と自動で閉じる時刻、オープン通知をオンにしたかどうかです。</li>
+<li><strong>購入の記録</strong> — 広告の削除（ナノタイム Pro）を購入したかどうかです。広告を表示するかを決めるためだけに使い、端末の外には出ません。</li>
 <li><strong>広告に関する記録</strong>（広告が有効な版） — 誤って押された広告をしばらく隠すための<strong>クリック時刻</strong>、同じ広告を続けて表示しないための<strong>表示時刻</strong>、そしてアプリの状態ファイルから受け取っておいた広告の設定値です（第4項）。個人を識別できる値は含まれていません。</li>
 </ul>
 
@@ -580,19 +597,26 @@
 
 <p><strong>広告</strong> — 広告が有効な版でのみ発生します。第4項に記載しました。</p>
 
-<p>アプリが外部に送るリクエストは、上記の3つがすべてです。</p>
+<p><strong>アプリ内課金</strong> — 設定のナノタイム Pro 画面を開いたり「購入を復元」を押したりすると、<strong>ストア（App Store・Google Play）</strong>と通信して商品と価格を受け取り、決済の結果を確認します。<strong>この通信はストアと端末の間で行われ</strong>、カード番号をはじめとする決済情報は私たちには届きません。</p>
+
+<p><strong>決済通知1行（Android 版のみ）</strong> — Android で購入が成功すると、「今ひとつ売れた」という1行が私たちの通知窓口に送られます。含まれる値は<strong>アプリ名・商品番号・ストアが表示した価格・ストアが付けた注文番号</strong>だけで、利用者を識別できる値は含まれません。失敗しても再送せず、決済はそれと関係なく進みます。iPhone・iPad 版ではこのリクエストは送られません。</p>
+
+<p>アプリが外部に送るリクエストは、上記がすべてです。</p>
 
 <h2>4. 広告</h2>
 
-<p>アプリには広告が表示されます。<strong>リワード広告は入れておらず、広告を見ないと使えない機能もありません。</strong>正時を待つアプリなので、その瞬間を覆い隠す広告は置かないというのがこのアプリの原則です。</p>
+<p>アプリには広告が表示されます。正時を待つアプリなので、<strong>その瞬間を覆う広告は置かない</strong>ことがこのアプリの原則です。<strong>広告の削除（ナノタイム Pro）</strong>を購入すると、下記の広告はすべて消え、広告事業者のコードも起動しません。</p>
 
-<p><strong>広告は、アプリを起動して使っている間に全画面広告が1回だけです。</strong>画面下部のバナーや画面内の四角い広告はありません。</p>
+<p><strong>広告は4種類です。</strong></p>
 
 <ul>
-<li><strong>全画面広告</strong>（画面全体） — サイト一覧からサイトを選び、そのサイトのサーバー時計を合わせ始めるときに、<strong>アプリを起動している間に1回だけ</strong>表示されます。表示する前に「広告が1回だけ流れます」という案内が2秒弱先に表示されます。広告は閉じるボタンで閉じることができ、閉じて戻ると時計はそのまま動き続けています。アプリを完全に終了して再び起動するまでは、再表示されません。</li>
+<li><strong>下部バナー</strong> — ホーム・練習・設定の各画面と全画面表示の端に小さな帯として表示されます。バナーの場所は広告の有無にかかわらず常に同じ高さで空けてあるので、広告が遅れて表示されても上のボタンが押し上げられることはありません。</li>
+<li><strong>時計ゲート</strong>（四角形の広告） — サイト一覧から別のサイトを選び、そのサイトのサーバー時計を新たに合わせている間（通常1〜3秒）、画面を覆うパネルに一緒に表示されます。時計が合うと自動で消えます。同じ選択で下記の全画面広告が表示される場合は表示されません。</li>
+<li><strong>全画面広告</strong>（画面全体） — サイトを選び、そのサイトのサーバー時計を合わせ始めるとき、<strong>アプリを起動している間に1回だけ</strong>表示されます。表示の前に「広告は1回だけ表示されます」という案内が2秒足らず先に出ます。アプリを完全に閉じて再起動するまで、再び表示されることはありません。</li>
+<li><strong>リワード広告</strong> — 練習タブの「広告を見て練習する」を押すと動画広告が流れ、最後まで見るとリハーサルが始まります。途中で閉じるとリハーサルは始まりません。<strong>広告を表示できないとき（広告がない・接続がないとき）は、広告なしですぐに始まります。</strong>本番のカウントダウン・通知・ポップアップ時計のように正時に使う機能は、広告とは関係なく常に使えます。</li>
 </ul>
 
-<p><strong>全画面広告が表示されないとき</strong><br />このアプリの中核は正時に押すその1回なので、次の場合には広告を表示しません。</p>
+<p><strong>時計ゲートと全画面広告が表示されないとき</strong><br />このアプリの中核は正時に押すその1回なので、次の場合には広告を表示しません。</p>
 
 <ul>
 <li><strong>目標時刻まで1分を切ったとき</strong>、または目標が設定されているのに残り時間がまだわからないとき — カウントダウンを広告が覆うことはありません。案内が表示されている間に1分を切った場合は、案内をすぐに取り下げ、広告も表示しません。</li>
@@ -774,6 +798,7 @@
 <li><strong>最後查看的網站</strong> — 記下一個網站，讓你再次開啟應用程式時從同一個地方開始。</li>
 <li><strong>預演紀錄</strong> — 只保留最近五次預演中測得的<strong>抵達誤差（毫秒）及當時的判定</strong>。這只是代表手指準確度的數字，與誰在何時預訂了什麼完全無關。</li>
 <li><strong>應用程式設定</strong> — 介面語言、選為整點訊號的音效種類、震動強度、畫面顏色、同步強度、浮窗時鐘（PiP）的樣式與自動關閉時間，以及是否開啟開賣通知。</li>
+<li><strong>購買紀錄</strong> — 你是否購買了移除廣告（Nanotime Pro）。只用來決定是否顯示廣告，不會離開你的裝置。</li>
 <li><strong>廣告相關紀錄</strong>（啟用廣告的版本） — 為了暫時隱藏誤觸的廣告而記錄的<strong>點擊時間</strong>、為了不連續顯示同一則廣告而記錄的<strong>顯示時間</strong>，以及從應用程式狀態檔取得的廣告設定值（第 4 項）。其中不含任何能辨識個人的值。</li>
 </ul>
 
@@ -802,19 +827,26 @@
 
 <p><strong>廣告</strong> — 只會在啟用廣告的版本中發生，詳見第 4 項。</p>
 
-<p>應用程式對外送出的請求，就只有以上三種。</p>
+<p><strong>應用程式內購買</strong> — 當你開啟設定中的 Nanotime Pro 畫面或按下「恢復購買」時，應用程式會與<strong>商店（App Store・Google Play）</strong>連線，取得商品與價格並確認付款結果。<strong>這項連線發生在商店與你的裝置之間</strong>，卡號等任何付款資訊都不會傳到我們這裡。</p>
+
+<p><strong>一行付款通知（僅 Android 版）</strong> — 在 Android 上購買成功時，會有一行「剛賣出一件」的通知送到我們的通知窗口。其中只包含<strong>應用程式名稱・商品編號・商店顯示的價格・商店給的訂單編號</strong>，不含任何可識別你的值。失敗時不會重送，付款也與此無關地照常進行。iPhone・iPad 版不會送出這項請求。</p>
+
+<p>應用程式對外送出的請求，就只有以上這些。</p>
 
 <h2>4. 廣告</h2>
 
-<p>應用程式中會顯示廣告。<strong>我們不放獎勵型廣告，也沒有必須看廣告才能解鎖的功能。</strong>這是一款等待整點的應用程式，因此本應用程式的原則是不放置會遮住那一刻的廣告。</p>
+<p>應用程式中會顯示廣告。這是等待整點的應用程式，因此<strong>絕不放置會遮住那一刻的廣告</strong>是本應用程式的原則。購買<strong>移除廣告（Nanotime Pro）</strong>後，下列廣告會全部消失，廣告業者的程式碼也不會啟動。</p>
 
-<p><strong>在你開啟應用程式使用的期間，廣告只有一次插頁式廣告。</strong>沒有畫面下方的橫幅廣告，也沒有畫面中的方形廣告。</p>
+<p><strong>廣告共有四種。</strong></p>
 
 <ul>
-<li><strong>插頁式廣告</strong>（全螢幕） — 當你從網站清單中選擇網站、開始校準該網站的伺服器時鐘時，<strong>在應用程式開啟期間只會顯示一次</strong>。顯示前，會先出現不到 2 秒的「廣告只會出現一次」提示。廣告可以用關閉按鈕關閉，關閉後回到應用程式時，時鐘仍照常運轉。在你完全關閉應用程式再重新開啟之前，不會再次顯示。</li>
+<li><strong>底部橫幅</strong> — 以小條狀顯示在首頁、練習、設定畫面與全螢幕顯示的邊緣。不論有沒有廣告，橫幅位置都會保留相同高度，因此廣告晚出現時上方按鈕也不會被往上推。</li>
+<li><strong>時鐘閘門</strong>（方形廣告） — 當你從網站清單選擇另一個網站、正在重新校準該網站的伺服器時鐘時（通常 1～3 秒），會顯示在覆蓋畫面的面板上。時鐘校準完成後會自動消失。同一次選擇若顯示下方的插頁式廣告，就不會出現。</li>
+<li><strong>插頁式廣告</strong>（全螢幕） — 當你選擇網站、開始校準該網站的伺服器時鐘時，<strong>在應用程式開啟期間只顯示一次</strong>。顯示前會先出現不到 2 秒的「廣告只會出現一次」提示。在完全關閉並重新開啟應用程式之前，不會再次顯示。</li>
+<li><strong>獎勵型廣告</strong> — 在練習分頁按下「看廣告後練習」會播放影片廣告，看完後就會開始預演。中途關閉則不會開始預演。<strong>無法顯示廣告時（沒有廣告或沒有連線），會不經廣告直接開始。</strong>實戰倒數、通知、彈出式時鐘等在整點使用的功能，與廣告無關，隨時都能使用。</li>
 </ul>
 
-<p><strong>不會顯示插頁式廣告的時候</strong><br />本應用程式的核心就是在整點按下的那一次，因此在下列情況不會顯示廣告。</p>
+<p><strong>不會顯示時鐘閘門與插頁式廣告的時候</strong><br />本應用程式的核心就是在整點按下的那一次，因此在下列情況不會顯示廣告。</p>
 
 <ul>
 <li><strong>距離目標時間不到 1 分鐘時</strong>，或已設定目標但還不知道剩餘時間時 — 廣告絕不會遮住倒數。若在提示顯示期間進入 1 分鐘內，會立即收起提示，也不會顯示廣告。</li>

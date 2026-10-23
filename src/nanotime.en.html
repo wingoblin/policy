@@ -21,6 +21,7 @@
 <li><strong>Last site viewed</strong> — one site is noted so that the app starts at the same place when you open it again.</li>
 <li><strong>Rehearsal records</strong> — only the <strong>arrival error (in milliseconds) measured in Rehearsal and the verdict at that time</strong>, for the five most recent rounds. These are just numbers showing the accuracy of your tap, and have nothing to do with who booked what, or when.</li>
 <li><strong>App settings</strong> — the display language, the type of sound chosen for the on-the-dot signal, vibration strength, screen color, sync strength, the look of the Pop-up clock (PiP) and the time it closes itself, and whether opening alerts are turned on.</li>
+<li><strong>Purchase record</strong> — whether you bought ad removal (NanoTime Pro). It is used only to decide whether to show ads and never leaves your device.</li>
 <li><strong>Ad-related records</strong> (builds with ads turned on) — the <strong>click time</strong> used to hide ads for a while after an accidental tap, the <strong>display time</strong> used to avoid showing ads back to back, and the ad settings downloaded from the app status file (section 4). They contain no value that could identify you.</li>
 </ul>
 
@@ -49,19 +50,26 @@
 
 <p><strong>Ads</strong> — this happens only in builds with ads turned on. It is described in section 4.</p>
 
-<p>These three are the only requests the app sends out.</p>
+<p><strong>In-app purchase</strong> — when you open the NanoTime Pro screen in Settings or tap “Restore purchase”, the app talks to <strong>the store (App Store · Google Play)</strong> to load the product and price and to confirm the result of a payment. <strong>This communication happens between the store and your device</strong>, and no payment information such as card numbers comes to us.</p>
+
+<p><strong>One-line payment notice (Android only)</strong> — when a purchase succeeds on Android, a one-line “one was just sold” notice is sent to our notification endpoint. It contains only <strong>the app name · product ID · the display price shown by the store · the order number assigned by the store</strong>, and nothing that identifies you. If it fails it is not resent, and the payment proceeds regardless. This request is not sent from the iPhone/iPad version.</p>
+
+<p>These are the only requests the app sends out.</p>
 
 <h2>4. Ads</h2>
 
-<p>The app shows ads. <strong>There are no rewarded ads, and no feature is unlocked by watching an ad.</strong> This is an app for waiting for the exact moment, so it is a principle of this app not to place ads that would cover that moment.</p>
+<p>The app shows ads. Because this is an app for waiting for the exact moment, its principle is <strong>never to place an ad that covers that moment</strong>. If you buy <strong>ad removal (NanoTime Pro)</strong>, all of the ads below disappear and the ad providers’ code does not start at all.</p>
 
-<p><strong>The only ad is one interstitial ad while you have the app open.</strong> There are no banners at the bottom of the screen and no rectangle ads within the screen.</p>
+<p><strong>There are four kinds of ads.</strong></p>
 
 <ul>
-<li><strong>Interstitial ad</strong> (full screen) — shown <strong>only once while the app is open</strong>, when you choose a site from the site list and the app starts syncing to that site’s server clock. Before it is shown, a notice saying “An ad will play just once” appears for just under 2 seconds. You can close the ad with its close button, and when you come back the clock is still running. It is not shown again until you fully quit the app and open it again.</li>
+<li><strong>Bottom banner</strong> — a small strip at the edge of the Home, Practice, and Settings screens and the full-screen view. The banner space is always kept at the same height whether or not an ad is shown, so buttons above it never jump when an ad loads late.</li>
+<li><strong>Clock gate</strong> (rectangular ad) — appears on a panel that covers the screen while the server clock of a site you newly chose from the site list is being synced (usually 1–3 seconds). It goes away on its own once the clock is synced. It does not appear when the interstitial ad below is shown for the same choice.</li>
+<li><strong>Interstitial ad</strong> (full screen) — shown <strong>only once while the app is open</strong>, when you choose a site and the app starts syncing that site’s server clock. Before it appears, a notice saying “An ad will show just once” stands for under 2 seconds. It is not shown again until you fully close and reopen the app.</li>
+<li><strong>Rewarded ad</strong> — tapping “Watch an ad to practice” in the Practice tab plays a video ad, and Rehearsal starts once you watch it to the end. If you close it midway, Rehearsal does not start. <strong>If no ad can be shown (no ad available or no connection), Rehearsal starts right away without an ad.</strong> Features you use at the exact moment — the real countdown, alerts, and the pop-up clock — are always available regardless of ads.</li>
 </ul>
 
-<p><strong>When the interstitial ad does not appear</strong><br />The core of this app is that single tap at the exact moment, so ads are not shown in the cases below.</p>
+<p><strong>When the clock gate and interstitial ad do not appear</strong><br />The core of this app is that single tap at the exact moment, so ads are not shown in the cases below.</p>
 
 <ul>
 <li><strong>When the target time is within 1 minute</strong>, or when a target is set but the remaining time is not yet known — an ad never covers the countdown. If the time comes within 1 minute while the notice is showing, the notice is removed immediately and no ad is shown.</li>
