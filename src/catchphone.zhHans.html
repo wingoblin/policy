@@ -32,8 +32,9 @@
 <h2>4. 广告</h2>
 <p>未订阅的版本会显示广告：屏幕上方或下方的横幅、破案过程中穿插在问题之间（大约每答对四个问题一次）、并在案件结果前再显示一次的全屏广告，以及由你自己选择观看的<strong>激励广告</strong>（查看提示或解锁下一个故事时）。</p>
 <ul>
-<li><strong>广告聚合：</strong>我们使用 Unity Technologies 的 <strong>LevelPlay</strong>。LevelPlay 会从多个广告网络中选出展示广告的一方，这些网络也会直接与你的设备通信。</li>
+<li><strong>广告聚合：</strong>我们使用 Unity Technologies 的 <strong>LevelPlay</strong>。LevelPlay 会从多个广告网络中选出展示广告的一方，这些网络也会直接与你的设备通信。目前是 Unity Ads 和 Liftoff Monetize。</li>
 <li><strong>广告网络读取的值：</strong>广告标识符（iPhone 仅在你允许跟踪时读取 IDFA，Android 为广告 ID）、IP 地址、设备类型、操作系统版本、语言等设备信息，以及观看或点击广告的记录。这些值用于挑选广告、避免同一则广告出现得太频繁，以及过滤无效点击。</li>
+<li><strong>已安装应用信息（Android）：</strong>广告网络的代码可能会查看你的设备上安装了哪些应用，用于统计你是否在看到广告后安装了该应用，以及避免再次展示你已安装应用的广告。<strong>这不是 UNCLUE 读取的，也不会到达我们这里</strong>——应用的代码中没有任何查询已安装应用列表的地方，这一操作发生在广告网络的代码内部。我们也在 Google Play 的“数据安全”中，以广告目的申报了<strong>应用活动 &gt; 已安装的应用</strong>。</li>
 <li>这些值由<strong>广告网络直接</strong>接收，不会到达我们这里。各网络按照其自身政策处理。Unity 隐私政策：<a href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a></li>
 <li><strong>关闭方法：</strong>iPhone 请前往“设置”→“隐私与安全性”→“跟踪”，Android 请前往“设置”→“隐私”→“广告”，即可关闭个性化广告或删除广告 ID。订阅后则完全不会显示广告。</li>
 </ul>

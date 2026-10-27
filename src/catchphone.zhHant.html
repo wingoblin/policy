@@ -32,8 +32,9 @@
 <h2>4. 廣告</h2>
 <p>未訂閱的版本會顯示廣告：畫面上方或下方的橫幅、破案過程中穿插在問題之間（大約每答對四個問題一次）、並在案件結果前再顯示一次的全螢幕廣告，以及由你自行選擇觀看的<strong>獎勵廣告</strong>（查看提示或開啟下一個故事時）。</p>
 <ul>
-<li><strong>廣告中介：</strong>我們使用 Unity Technologies 的 <strong>LevelPlay</strong>。LevelPlay 會從多個廣告聯播網中選出要顯示廣告的一方，而這些聯播網也會直接與你的裝置通訊。</li>
+<li><strong>廣告中介：</strong>我們使用 Unity Technologies 的 <strong>LevelPlay</strong>。LevelPlay 會從多個廣告聯播網中選出要顯示廣告的一方，而這些聯播網也會直接與你的裝置通訊。目前是 Unity Ads 和 Liftoff Monetize。</li>
 <li><strong>廣告聯播網讀取的值：</strong>廣告識別碼（iPhone 僅在你允許追蹤時讀取 IDFA，Android 為廣告 ID）、IP 位址、裝置類型、作業系統版本、語言等裝置資訊，以及觀看或點擊廣告的紀錄。這些值用於挑選廣告、避免同一則廣告太常出現，以及過濾無效點擊。</li>
+<li><strong>已安裝的 App 資訊（Android）：</strong>廣告聯播網的程式碼可能會查看你的裝置上安裝了哪些 App，用於計算你是否在看到廣告後安裝了該 App，以及避免再次顯示你已安裝 App 的廣告。<strong>這並非 UNCLUE 讀取的資料，也不會傳到我們這裡</strong>——App 的程式碼中沒有任何查詢已安裝 App 清單的地方，這項動作發生在廣告聯播網的程式碼內。我們也在 Google Play 的「資料安全性」中，以廣告目的申報了<strong>應用程式活動 &gt; 已安裝的應用程式</strong>。</li>
 <li>這些值由<strong>廣告聯播網直接</strong>接收，不會傳到我們這裡。各聯播網依其自身政策處理。Unity 隱私權政策：<a href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a></li>
 <li><strong>關閉方式：</strong>iPhone 請前往「設定」→「隱私權與安全性」→「追蹤」，Android 請前往「設定」→「隱私權」→「廣告」，即可關閉個人化廣告或刪除廣告 ID。訂閱後則完全不會顯示廣告。</li>
 </ul>
