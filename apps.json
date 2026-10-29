@@ -365,7 +365,7 @@
     ]
   },
   {
-    "slug": "catchphone",
+    "slug": "unclue",
     "title": "언클루 개인정보 처리방침",
     "src": "27",
     "langs": [
@@ -387,5 +387,10 @@
       "hi",
       "ar"
     ]
+  },
+  {
+    "slug": "catchphone",
+    "title": "언클루 개인정보 처리방침",
+    "moved": "https://wingoblin.github.io/policy/unclue/"
   }
 ]
