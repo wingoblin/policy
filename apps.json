@@ -397,5 +397,35 @@
     "slug": "bestill",
     "title": "Be Still — Privacy Policy",
     "src": "28"
+  },
+  {
+    "slug": "shortcuthub",
+    "title": "Shortcut Hub — Privacy Policy",
+    "src": "29",
+    "langs": [
+      "ko",
+      "en",
+      "ja",
+      "zhHant",
+      "es",
+      "fr",
+      "ptBR",
+      "de",
+      "it",
+      "pl",
+      "tr",
+      "id",
+      "ms",
+      "vi",
+      "th",
+      "hi",
+      "ar",
+      "bn",
+      "ur",
+      "fil",
+      "ta",
+      "te",
+      "my"
+    ]
   }
 ]
