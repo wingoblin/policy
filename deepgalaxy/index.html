@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deep Galaxy — Privacy Policy · 네모팩토리</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto; max-width: 720px; padding: 32px 20px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+    font-size: 16px; line-height: 1.75;
+    color: #222; background: #fff;
+    word-break: keep-all; overflow-wrap: anywhere;
+  }
+  h1 { font-size: 26px; line-height: 1.4; margin: 32px 0 8px; }
+  h2 { font-size: 19px; line-height: 1.45; margin: 32px 0 8px; padding-top: 8px; border-top: 1px solid #eee; }
+  h3 { font-size: 17px; margin: 24px 0 6px; }
+  p, ul, ol { margin: 10px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: #1a5fd0; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f6f7f9; }
+  code { background: #f2f3f5; padding: 1px 5px; border-radius: 4px; font-size: 14px; }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid #eee; font-size: 13px; color: #888; }
+  footer a { color: #888; }
+  /* 언어 탭 — JS 가 없으면 탭을 숨기고 모든 언어를 그냥 다 보여준다 */
+  .langs { display: none; }
+  .langs a {
+    display: inline-block; padding: 6px 14px; margin: 0 6px 6px 0;
+    border: 1px solid #ddd; border-radius: 999px;
+    font-size: 14px; text-decoration: none; color: #555;
+  }
+  .langs a.on { background: #222; border-color: #222; color: #fff; }
+  html.js .langs { display: block; margin-bottom: 8px; }
+  html.js .lang { display: none; }
+  html.js .lang.on { display: block; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e3e5e8; background: #16181c; }
+    h2 { border-top-color: #2a2d33; }
+    a { color: #7aa7f0; }
+    th, td { border-color: #2a2d33; }
+    th { background: #1e2126; }
+    code { background: #22262c; }
+    footer { border-top-color: #2a2d33; color: #7d8188; }
+    .langs a { border-color: #333840; color: #b9bec6; }
+    .langs a.on { background: #e3e5e8; border-color: #e3e5e8; color: #16181c; }
+  }
+</style>
+<script>
+  // 탭이 그려지기 전에 붙여야 언어가 바뀌며 깜빡이지 않는다
+  document.documentElement.className = 'js';
+  addEventListener('DOMContentLoaded', function () {
+    var secs = document.querySelectorAll('.lang');
+    if (!secs.length) return;
+    var have = [].map.call(secs, function (s) { return s.dataset.lang; });
+    function pick() {
+      var want = location.hash.slice(1);
+      if (!want) {
+        // 닻이 없으면 브라우저 언어로 고른다 — 스토어 목록에서 맨 주소로 들어오는 길이다.
+        // 중국어만 두 글자로 못 자른다. zh-TW·zh-HK·zh-Hant-* 는 번체, zh-CN·zh-SG 는 간체라
+        // 같은 'zh' 로 묶으면 간체 사용자에게 번체 판을 보여주게 된다(앱의 locale.ts 와 같은 판정).
+        var nav = navigator.language || 'en';
+        want = /^zh/i.test(nav) && /(Hant|TW|HK|MO)/i.test(nav) ? 'zhHant' : nav.slice(0, 2);
+      }
+      // 없는 언어로 들어오면 영문 — 첫 구역(한국어)으로 떨구면 간체·프랑스어 기기가 한글 방침을 본다.
+      return have.indexOf(want) >= 0 ? want : have.indexOf('en') >= 0 ? 'en' : have[0];
+    }
+    function show() {
+      var on = pick();
+      [].forEach.call(secs, function (s) { s.classList.toggle('on', s.dataset.lang === on); });
+      [].forEach.call(document.querySelectorAll('.langs a'), function (a) {
+        a.classList.toggle('on', a.hash.slice(1) === on);
+      });
+      document.documentElement.lang = on;
+    }
+    addEventListener('hashchange', show);
+    show();
+  });
+</script>
+</head>
+<body>
+<nav class="langs"><a href="#en">English</a><a href="#ko">한국어</a></nav>
+<section class="lang" data-lang="en">
+<h1>Deep Galaxy — Privacy Policy</h1>
+
+<p><strong>Effective:</strong> November 12, 2026<br /><strong>Contact:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>In one line.</strong> Deep Galaxy has <strong>no accounts, no sign-in, no ads, no analytics and no server that stores your information.</strong> The planets, moons, stars and black hole are drawn on your device from images built into the app. The only internet request the app makes on its own is <strong>checking an app status file</strong> (section 5).</p>
+
+<h2>1. Personal information we collect</h2>
+
+<p><strong>None.</strong> We do not collect your name, email, contact details, location, payment details or any other personal information. There is no account feature, so there is no sign-up or sign-in.</p>
+
+<h2>2. What is stored on your device</h2>
+
+<p>Nothing about you. The app does not save your views, history or settings. It follows your device's language.</p>
+
+<h2>3. Permissions</h2>
+
+<p>The app asks for <strong>no permissions</strong>. It does not access the camera, microphone, photos, location, contacts, calendars or health data. It does not read the advertising identifier and never shows a tracking prompt.</p>
+
+<h2>4. Ads and analytics</h2>
+
+<p><strong>There are no ads, and no analytics or crash-reporting tools are included.</strong> We do not collect how you use the app.</p>
+
+<h2>5. Every request the app sends out</h2>
+<ul>
+<li><strong>App status file</strong> — when the app starts, it reads one small file on our website (hosted on Netlify) to check whether your version must be updated. The request <strong>only downloads the file and carries no values about you.</strong> As with any web page, the hosting server's logs may record the connecting IP address. Without a connection the check is skipped.</li>
+<li><strong>Links you tap yourself</strong> — "Rate the app" (the App Store or Google Play), "Privacy Policy" (this page, GitHub Pages) and "Contact" (your mail app) open on your device; from there that service's own policy applies.</li>
+</ul>
+<p>All images and star data are inside the app, so exploring works without the internet.</p>
+
+<h2>6. Images and data</h2>
+
+<p>Planet and moon maps and star data come from Solar System Scope (CC BY 4.0), NASA and USGS (public domain) and the HYG Database (CC BY-SA 4.0). Full credits are in the app under Settings › Credits.</p>
+
+<h2>7. Children</h2>
+
+<p>The app is not directed at children under 13 and collects no information from anyone.</p>
+
+<h2>8. Changes</h2>
+
+<p>If this policy changes, we will update this page and its effective date.</p>
+
+<h2>9. Contact</h2>
+
+<p>contact@nemofactory.co.kr</p>
+</section>
+<section class="lang" data-lang="ko">
+<h1>Deep Galaxy 개인정보 처리방침</h1>
+
+<p><strong>시행일:</strong> 2026년 11월 12일<br /><strong>문의:</strong> contact@nemofactory.co.kr</p>
+
+<p><strong>한 줄 요약.</strong> Deep Galaxy 에는 <strong>계정·로그인·광고·분석 도구가 없고, 이용자 정보를 저장하는 서버도 없습니다.</strong> 행성·달·별·블랙홀은 앱 안에 든 그림으로 기기에서 직접 그립니다. 앱이 스스로 인터넷에 보내는 요청은 <strong>앱 상태 파일 확인</strong> 하나뿐입니다(5항).</p>
+
+<h2>1. 수집하는 개인정보</h2>
+
+<p><strong>없습니다.</strong> 이름·이메일·연락처·위치·결제 정보 등 어떤 개인정보도 수집하지 않습니다. 계정 기능이 없어 가입이나 로그인도 없습니다.</p>
+
+<h2>2. 기기에 저장되는 것</h2>
+
+<p>이용자에 관한 값은 저장하지 않습니다. 본 화면·기록·설정을 저장하지 않으며, 언어는 기기 언어를 따릅니다.</p>
+
+<h2>3. 앱 접근권한</h2>
+
+<p>앱은 <strong>어떤 권한도 요청하지 않습니다.</strong> 카메라·마이크·사진·위치·연락처·캘린더·건강 정보에 접근하지 않습니다. 광고 식별자를 읽지 않으며 추적 허용 창도 띄우지 않습니다.</p>
+
+<h2>4. 광고와 분석</h2>
+
+<p><strong>광고가 없고, 분석·충돌 보고 도구도 넣지 않았습니다.</strong> 앱을 어떻게 쓰는지 수집하지 않습니다.</p>
+
+<h2>5. 앱이 밖으로 보내는 요청 전부</h2>
+<ul>
+<li><strong>앱 상태 파일</strong> — 앱이 켜질 때 저희 웹사이트(Netlify 호스팅)의 작은 파일 하나를 읽어 지금 판을 꼭 업데이트해야 하는지 확인합니다. 이 요청은 <strong>파일을 받아 오기만 하고 이용자에 관한 값은 싣지 않습니다.</strong> 여느 웹페이지처럼 호스팅 서버 기록에 접속 IP 주소가 남을 수 있습니다. 연결이 없으면 확인을 건너뜁니다.</li>
+<li><strong>이용자가 직접 누르는 링크</strong> — 「리뷰 남기기」(App Store 또는 Google Play), 「개인정보 처리방침」(이 페이지, GitHub Pages), 「문의」(메일 앱)는 기기에서 열리며, 그다음부터는 그 서비스의 방침이 적용됩니다.</li>
+</ul>
+<p>그림과 별 자료가 모두 앱 안에 있어 인터넷 없이도 둘러볼 수 있습니다.</p>
+
+<h2>6. 그림과 자료</h2>
+
+<p>행성·달 지도와 별 자료는 Solar System Scope(CC BY 4.0), NASA·USGS(퍼블릭 도메인), HYG Database(CC BY-SA 4.0)에서 가져왔습니다. 전체 출처는 앱의 설정 › 출처에 있습니다.</p>
+
+<h2>7. 아동</h2>
+
+<p>앱은 만 13세 미만 아동을 대상으로 하지 않으며, 누구의 정보도 수집하지 않습니다.</p>
+
+<h2>8. 변경</h2>
+
+<p>방침이 바뀌면 이 페이지와 시행일을 고칩니다.</p>
+
+<h2>9. 문의</h2>
+
+<p>contact@nemofactory.co.kr</p>
+</section>
+<footer>
+  ⓒ Nemo Factory · 문의 <a href="mailto:contact@nemofactory.co.kr">contact@nemofactory.co.kr</a><br>
+  <a href="../">전체 목록</a>
+</footer>
+</body>
+</html>
