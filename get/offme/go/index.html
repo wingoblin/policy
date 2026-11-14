@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18303636053"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18303636053');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OFFME 오프미</title>
+<!-- 구글 광고 전환 칸: 이 페이지가 뜨면 「스토어 단추 누름」 한 번. 2초 뒤 스토어로 — ?to=ios|android, 없으면 기기로 고름 -->
+<style>body{background:#F4F7F2;color:#14161A;font-family:-apple-system,"Apple SD Gothic Neo",sans-serif;text-align:center;padding-top:40vh}a{color:#3E8E6A}</style>
+</head>
+<body>
+<p>스토어로 넘어가요. 안 넘어가면 <a id="l" href="https://play.google.com/store/apps/details?id=com.offme.app">여기</a>를 눌러 주세요.</p>
+<script>
+  var to = new URLSearchParams(location.search).get('to');
+  var ios = to ? to === 'ios' : /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent) && !/Android/.test(navigator.userAgent);
+  var url = ios ? 'https://apps.apple.com/kr/app/id6804173114' : 'https://play.google.com/store/apps/details?id=com.offme.app';
+  document.getElementById('l').href = url;
+  setTimeout(function () { location.replace(url); }, 2000);
+</script>
+</body>
+</html>
