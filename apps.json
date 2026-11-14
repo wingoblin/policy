@@ -449,5 +449,21 @@
       "te",
       "my"
     ]
+  },
+  {
+    "slug": "unseen",
+    "title": "언씬 개인정보 처리방침",
+    "langs": [
+      "ko",
+      "en",
+      "ja",
+      "zhHant",
+      "es",
+      "fr",
+      "de",
+      "it",
+      "pl",
+      "ptBR"
+    ]
   }
 ]
