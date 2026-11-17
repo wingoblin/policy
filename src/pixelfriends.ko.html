@@ -59,7 +59,7 @@
 <ul>
 <li><strong>광고가 나오는 자리는 두 곳뿐입니다</strong> — 성장 탭에서 <strong>이용자가 「생선」을 직접 누르셨을 때</strong> 뜨는 낚시 화면의 <strong>사각 광고</strong>(4초 뒤 저절로 닫히며 생선을 드립니다), 그리고 <strong>「고기」를 직접 누르셨을 때만</strong> 재생되는 <strong>보상형 동영상 광고</strong>입니다. 앱을 켜거나 화면을 넘길 때 저절로 뜨는 광고, 화면 아래 띠 배너는 넣지 않았습니다.</li>
 <li><strong>광고를 보셔야 열리는 기능은 없습니다.</strong> 생선·고기는 레벨 시간을 더해 주는 선택지일 뿐이며, 안 보셔도 앱의 모든 화면과 기능을 그대로 쓰실 수 있습니다. 생선과 고기는 광고가 떴을 때만 드립니다 — 생선은 사각 광고가 뜬 뒤 4초, 고기는 광고를 끝까지 보셨을 때입니다. 광고를 못 받아 오면 드리지 않으며, 기다릴 필요 없이 다시 누르실 수 있습니다.</li>
-<li><strong>광고 네트워크</strong> — Unity 의 <strong>LevelPlay(구 ironSource)</strong> 를 통해 광고가 표시됩니다. 여기에는 LevelPlay 가 중개하는 다른 광고 네트워크(Unity Ads, Liftoff, Meta Audience Network 등)가 함께 붙을 수 있습니다.</li>
+<li><strong>광고 네트워크</strong> — Unity 의 <strong>LevelPlay(구 ironSource)</strong> 를 통해 광고가 표시됩니다. 여기에는 LevelPlay 가 중개하는 다른 광고 네트워크가 함께 붙을 수 있습니다. LevelPlay 가 중개하는 광고 네트워크에는 Unity Ads, Liftoff Monetize, Meta Audience Network(Meta Platforms, Inc.)가 포함됩니다.</li>
 <li><strong>읽어 가는 것</strong> — 광고 네트워크는 기기의 <strong>광고 식별자</strong>(IDFA/IDFV), 대략적인 접속 국가·언어, 기기 종류·OS 버전, 앱 버전 같은 일반적인 기기 정보를 읽습니다. 이 값은 <strong>광고 네트워크가 이용자의 기기에서 직접 읽어 가며, 저희는 받지도 보관하지도 않습니다.</strong></li>
 <li><strong>보내지 않는 것</strong> — 2항의 값(고른 펫·레벨·설정·먹이 기록)은 광고 네트워크에 전달되지 않습니다. 광고 요청에 그 값을 실을 코드가 들어 있지 않습니다.</li>
 <li><strong>추적 동의</strong> — 앱을 처음 켤 때 애플의 <strong>추적 허용 요청(ATT)</strong> 창이 한 번 뜹니다. 거절하셔도 모든 기능을 그대로 쓰실 수 있으며, 맞춤 광고 대신 일반 광고가 나옵니다. 허용 여부는 <em>설정 → 개인정보 보호 및 보안 → 추적</em> 에서 언제든 바꾸실 수 있습니다.</li>
@@ -67,7 +67,7 @@
 <li><strong>광고는 구독하셔도 그대로입니다.</strong> 두 자리 모두 이용자가 직접 누르셔야 뜨는 광고라, 구독(전부 열기)은 광고를 없애는 상품이 아닙니다.</li>
 </ul>
 
-<p>광고 네트워크의 개인정보 처리는 해당 업체의 방침을 따릅니다 — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay 개인정보 처리방침</a>.</p>
+<p>광고 네트워크의 개인정보 처리는 해당 업체의 방침을 따릅니다 — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay 개인정보 처리방침</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff 개인정보 처리방침</a> · <a href="https://www.facebook.com/privacy/policy/">Meta 개인정보 처리방침</a>.</p>
 
 <p><strong>결제는 App Store 가 처리합니다.</strong> 앱 안에서 파는 것(펫 묶음, 전부 열기, 간식, 구독)은 App Store 결제로만 이루어집니다. 카드번호 같은 결제 정보는 애플이 직접 받아 처리하며, <strong>저희는 보지도, 받지도, 보관하지도 않습니다.</strong> 앱이 받는 것은 「샀다·안 샀다」와 스토어가 정한 가격 문자열뿐입니다.</p>
 
@@ -92,7 +92,17 @@
 <table>
 <tr><th>받는 곳</th><th>항목</th><th>목적</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) 및 중개 광고 네트워크</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) 및 중개 광고 네트워크</td>
+  <td>광고 식별자, 기기·OS·앱 버전, 대략적 국가·언어</td>
+  <td>광고 표시 및 성과 측정</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>광고 식별자, 기기·OS·앱 버전, 대략적 국가·언어</td>
+  <td>광고 표시 및 성과 측정</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>광고 식별자, 기기·OS·앱 버전, 대략적 국가·언어</td>
   <td>광고 표시 및 성과 측정</td>
 </tr>

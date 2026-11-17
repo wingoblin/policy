@@ -59,7 +59,7 @@
 <ul>
 <li><strong>Quảng cáo chỉ xuất hiện ở hai nơi</strong> — một <strong>quảng cáo hình vuông</strong> trên màn hình câu cá, mở ra khi <strong>bạn chạm vào "Cá"</strong> ở tab Lớn lên (tự đóng sau 4 giây và tặng bạn cá), và một <strong>video có thưởng</strong> chỉ phát <strong>khi bạn chạm vào "Thịt"</strong>. Không có quảng cáo bật lên khi mở ứng dụng hay khi chuyển màn hình, và không có biểu ngữ ở cuối màn hình.</li>
 <li><strong>Không có tính năng nào bị khóa sau quảng cáo.</strong> Cá và Thịt chỉ là cách tùy chọn để cộng thêm thời gian cấp độ; bạn có thể dùng mọi màn hình và tính năng mà không cần chúng. Cá và Thịt chỉ được tặng khi quảng cáo hiển thị: Cá sau khi quảng cáo vuông hiện 4 giây, Thịt khi bạn xem hết quảng cáo. Nếu quảng cáo không tải được, bạn sẽ không nhận được món ăn và có thể chạm lại ngay.</li>
-<li><strong>Mạng quảng cáo</strong> — quảng cáo được phân phối qua <strong>LevelPlay (trước đây là ironSource)</strong> của Unity, có thể làm trung gian cho các mạng quảng cáo khác (như Unity Ads, Liftoff và Meta Audience Network).</li>
+<li><strong>Mạng quảng cáo</strong> — quảng cáo được phân phối qua <strong>LevelPlay (trước đây là ironSource)</strong> của Unity, có thể làm trung gian cho các mạng quảng cáo khác. Các mạng quảng cáo do LevelPlay trung gian bao gồm Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.).</li>
 <li><strong>Những gì họ đọc</strong> — các mạng quảng cáo đọc <strong>mã định danh quảng cáo</strong> của thiết bị (IDFA/IDFV), quốc gia và ngôn ngữ ước tính, kiểu máy, phiên bản hệ điều hành và phiên bản ứng dụng. <strong>Họ đọc trực tiếp từ thiết bị của bạn; chúng tôi không bao giờ nhận hay lưu giữ chúng.</strong></li>
 <li><strong>Những gì không được gửi</strong> — các giá trị ở mục 2 (thú cưng, cấp độ, cài đặt, nhật ký cho ăn của bạn) không bao giờ được chuyển cho các mạng quảng cáo. Ứng dụng không có mã nào đưa chúng vào yêu cầu quảng cáo.</li>
 <li><strong>Đồng ý theo dõi</strong> — lần đầu bạn mở ứng dụng, lời nhắc <strong>App Tracking Transparency</strong> của Apple sẽ xuất hiện một lần. Bạn có thể từ chối mà vẫn giữ mọi tính năng; thay vào đó bạn sẽ thấy quảng cáo không được cá nhân hóa. Bạn có thể thay đổi bất cứ lúc nào trong <em>Cài đặt → Quyền riêng tư &amp; Bảo mật → Theo dõi</em>.</li>
@@ -67,7 +67,7 @@
 <li><strong>Quảng cáo vẫn còn khi đăng ký.</strong> Cả hai nơi chỉ hiện quảng cáo khi bạn chạm vào, nên gói đăng ký (Mở khóa tất cả) không phải là sản phẩm xóa quảng cáo.</li>
 </ul>
 
-<p>Các mạng quảng cáo xử lý dữ liệu theo chính sách riêng của họ — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Chính sách quyền riêng tư của Unity/LevelPlay</a>.</p>
+<p>Các mạng quảng cáo xử lý dữ liệu theo chính sách riêng của họ — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Chính sách quyền riêng tư của Unity/LevelPlay</a> · <a href="https://liftoff.io/privacy-policy/">Chính sách quyền riêng tư của Liftoff</a> · <a href="https://www.facebook.com/privacy/policy/">Chính sách quyền riêng tư của Meta</a>.</p>
 
 <p><strong>Thanh toán do App Store xử lý.</strong> Mọi thứ được bán trong ứng dụng (gói thú cưng, Mở khóa tất cả, đồ ăn vặt, gói đăng ký) đều được thanh toán qua App Store. Thông tin thẻ được gửi thẳng cho Apple — <strong>chúng tôi không bao giờ xem, nhận hay lưu giữ chúng.</strong> Ứng dụng chỉ biết một món đã được mua hay chưa và chuỗi giá do cửa hàng cung cấp.</p>
 
@@ -92,7 +92,17 @@
 <table>
 <tr><th>Bên nhận</th><th>Hạng mục</th><th>Mục đích</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) và các mạng quảng cáo trung gian</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) và các mạng quảng cáo trung gian</td>
+  <td>Mã định danh quảng cáo, phiên bản thiết bị / hệ điều hành / ứng dụng, quốc gia và ngôn ngữ ước tính</td>
+  <td>Hiển thị quảng cáo và đo lường hiệu quả</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>Mã định danh quảng cáo, phiên bản thiết bị / hệ điều hành / ứng dụng, quốc gia và ngôn ngữ ước tính</td>
+  <td>Hiển thị quảng cáo và đo lường hiệu quả</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>Mã định danh quảng cáo, phiên bản thiết bị / hệ điều hành / ứng dụng, quốc gia và ngôn ngữ ước tính</td>
   <td>Hiển thị quảng cáo và đo lường hiệu quả</td>
 </tr>

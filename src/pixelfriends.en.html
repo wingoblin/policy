@@ -59,7 +59,7 @@
 <ul>
 <li><strong>Ads appear in two places only</strong> — a <strong>square ad</strong> on the fishing screen that opens when <strong>you tap "Fish"</strong> on the Growth tab (it closes by itself after 4 seconds and gives you the fish), and a <strong>rewarded video</strong> that plays <strong>only when you tap "Meat"</strong>. There are no ads that pop up on launch or between screens, and no banner at the bottom of the screen.</li>
 <li><strong>No feature is locked behind ads.</strong> Fish and meat are optional ways to add level time; you can use every screen and feature without them. Fish and meat are given only when their ad is shown — fish after the square ad has been on screen for 4 seconds, meat after you watch its ad to the end. If an ad fails to load, no food is given, and you can tap again right away.</li>
-<li><strong>Ad network</strong> — ads are served through Unity's <strong>LevelPlay (formerly ironSource)</strong>, which may mediate other ad networks (such as Unity Ads, Liftoff and Meta Audience Network).</li>
+<li><strong>Ad network</strong> — ads are served through Unity's <strong>LevelPlay (formerly ironSource)</strong>, which may mediate other ad networks. The ad networks mediated by LevelPlay include Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.).</li>
 <li><strong>What they read</strong> — ad networks read the device's <strong>advertising identifier</strong> (IDFA/IDFV), approximate country and language, device model, OS version and app version. <strong>They read these directly from your device; we never receive or keep them.</strong></li>
 <li><strong>What is not sent</strong> — the values in section 2 (your pet, levels, settings, feeding record) are never passed to ad networks. The app has no code that puts them in an ad request.</li>
 <li><strong>Tracking consent</strong> — the first time you open the app, Apple's <strong>App Tracking Transparency</strong> prompt appears once. You can decline and keep every feature; you will see non-personalized ads instead. You can change this any time in <em>Settings → Privacy &amp; Security → Tracking</em>.</li>
@@ -67,7 +67,7 @@
 <li><strong>Ads stay with a subscription.</strong> Both places only show an ad when you tap them, so the subscription (unlock all) is not an ad-removal product.</li>
 </ul>
 
-<p>Ad networks handle data under their own policies — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay Privacy Policy</a>.</p>
+<p>Ad networks handle data under their own policies — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay Privacy Policy</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff Privacy Policy</a> · <a href="https://www.facebook.com/privacy/policy/">Meta Privacy Policy</a>.</p>
 
 <p><strong>Payments are handled by the App Store.</strong> Everything sold in the app (pet packs, unlock all, snacks, subscriptions) is paid through the App Store. Card details go straight to Apple — <strong>we never see, receive or keep them.</strong> The app only learns whether something was bought and the price text the store provides.</p>
 
@@ -92,7 +92,17 @@
 <table>
 <tr><th>Recipient</th><th>Items</th><th>Purpose</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) and mediated ad networks</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) and mediated ad networks</td>
+  <td>Advertising identifier, device / OS / app version, approximate country and language</td>
+  <td>Showing ads and measuring performance</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>Advertising identifier, device / OS / app version, approximate country and language</td>
+  <td>Showing ads and measuring performance</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>Advertising identifier, device / OS / app version, approximate country and language</td>
   <td>Showing ads and measuring performance</td>
 </tr>

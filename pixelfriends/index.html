@@ -147,7 +147,7 @@
 <ul>
 <li><strong>광고가 나오는 자리는 두 곳뿐입니다</strong> — 성장 탭에서 <strong>이용자가 「생선」을 직접 누르셨을 때</strong> 뜨는 낚시 화면의 <strong>사각 광고</strong>(4초 뒤 저절로 닫히며 생선을 드립니다), 그리고 <strong>「고기」를 직접 누르셨을 때만</strong> 재생되는 <strong>보상형 동영상 광고</strong>입니다. 앱을 켜거나 화면을 넘길 때 저절로 뜨는 광고, 화면 아래 띠 배너는 넣지 않았습니다.</li>
 <li><strong>광고를 보셔야 열리는 기능은 없습니다.</strong> 생선·고기는 레벨 시간을 더해 주는 선택지일 뿐이며, 안 보셔도 앱의 모든 화면과 기능을 그대로 쓰실 수 있습니다. 생선과 고기는 광고가 떴을 때만 드립니다 — 생선은 사각 광고가 뜬 뒤 4초, 고기는 광고를 끝까지 보셨을 때입니다. 광고를 못 받아 오면 드리지 않으며, 기다릴 필요 없이 다시 누르실 수 있습니다.</li>
-<li><strong>광고 네트워크</strong> — Unity 의 <strong>LevelPlay(구 ironSource)</strong> 를 통해 광고가 표시됩니다. 여기에는 LevelPlay 가 중개하는 다른 광고 네트워크(Unity Ads, Liftoff, Meta Audience Network 등)가 함께 붙을 수 있습니다.</li>
+<li><strong>광고 네트워크</strong> — Unity 의 <strong>LevelPlay(구 ironSource)</strong> 를 통해 광고가 표시됩니다. 여기에는 LevelPlay 가 중개하는 다른 광고 네트워크가 함께 붙을 수 있습니다. LevelPlay 가 중개하는 광고 네트워크에는 Unity Ads, Liftoff Monetize, Meta Audience Network(Meta Platforms, Inc.)가 포함됩니다.</li>
 <li><strong>읽어 가는 것</strong> — 광고 네트워크는 기기의 <strong>광고 식별자</strong>(IDFA/IDFV), 대략적인 접속 국가·언어, 기기 종류·OS 버전, 앱 버전 같은 일반적인 기기 정보를 읽습니다. 이 값은 <strong>광고 네트워크가 이용자의 기기에서 직접 읽어 가며, 저희는 받지도 보관하지도 않습니다.</strong></li>
 <li><strong>보내지 않는 것</strong> — 2항의 값(고른 펫·레벨·설정·먹이 기록)은 광고 네트워크에 전달되지 않습니다. 광고 요청에 그 값을 실을 코드가 들어 있지 않습니다.</li>
 <li><strong>추적 동의</strong> — 앱을 처음 켤 때 애플의 <strong>추적 허용 요청(ATT)</strong> 창이 한 번 뜹니다. 거절하셔도 모든 기능을 그대로 쓰실 수 있으며, 맞춤 광고 대신 일반 광고가 나옵니다. 허용 여부는 <em>설정 → 개인정보 보호 및 보안 → 추적</em> 에서 언제든 바꾸실 수 있습니다.</li>
@@ -155,7 +155,7 @@
 <li><strong>광고는 구독하셔도 그대로입니다.</strong> 두 자리 모두 이용자가 직접 누르셔야 뜨는 광고라, 구독(전부 열기)은 광고를 없애는 상품이 아닙니다.</li>
 </ul>
 
-<p>광고 네트워크의 개인정보 처리는 해당 업체의 방침을 따릅니다 — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay 개인정보 처리방침</a>.</p>
+<p>광고 네트워크의 개인정보 처리는 해당 업체의 방침을 따릅니다 — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay 개인정보 처리방침</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff 개인정보 처리방침</a> · <a href="https://www.facebook.com/privacy/policy/">Meta 개인정보 처리방침</a>.</p>
 
 <p><strong>결제는 App Store 가 처리합니다.</strong> 앱 안에서 파는 것(펫 묶음, 전부 열기, 간식, 구독)은 App Store 결제로만 이루어집니다. 카드번호 같은 결제 정보는 애플이 직접 받아 처리하며, <strong>저희는 보지도, 받지도, 보관하지도 않습니다.</strong> 앱이 받는 것은 「샀다·안 샀다」와 스토어가 정한 가격 문자열뿐입니다.</p>
 
@@ -180,7 +180,17 @@
 <table>
 <tr><th>받는 곳</th><th>항목</th><th>목적</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) 및 중개 광고 네트워크</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) 및 중개 광고 네트워크</td>
+  <td>광고 식별자, 기기·OS·앱 버전, 대략적 국가·언어</td>
+  <td>광고 표시 및 성과 측정</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>광고 식별자, 기기·OS·앱 버전, 대략적 국가·언어</td>
+  <td>광고 표시 및 성과 측정</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>광고 식별자, 기기·OS·앱 버전, 대략적 국가·언어</td>
   <td>광고 표시 및 성과 측정</td>
 </tr>
@@ -296,7 +306,7 @@
 <ul>
 <li><strong>Ads appear in two places only</strong> — a <strong>square ad</strong> on the fishing screen that opens when <strong>you tap "Fish"</strong> on the Growth tab (it closes by itself after 4 seconds and gives you the fish), and a <strong>rewarded video</strong> that plays <strong>only when you tap "Meat"</strong>. There are no ads that pop up on launch or between screens, and no banner at the bottom of the screen.</li>
 <li><strong>No feature is locked behind ads.</strong> Fish and meat are optional ways to add level time; you can use every screen and feature without them. Fish and meat are given only when their ad is shown — fish after the square ad has been on screen for 4 seconds, meat after you watch its ad to the end. If an ad fails to load, no food is given, and you can tap again right away.</li>
-<li><strong>Ad network</strong> — ads are served through Unity's <strong>LevelPlay (formerly ironSource)</strong>, which may mediate other ad networks (such as Unity Ads, Liftoff and Meta Audience Network).</li>
+<li><strong>Ad network</strong> — ads are served through Unity's <strong>LevelPlay (formerly ironSource)</strong>, which may mediate other ad networks. The ad networks mediated by LevelPlay include Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.).</li>
 <li><strong>What they read</strong> — ad networks read the device's <strong>advertising identifier</strong> (IDFA/IDFV), approximate country and language, device model, OS version and app version. <strong>They read these directly from your device; we never receive or keep them.</strong></li>
 <li><strong>What is not sent</strong> — the values in section 2 (your pet, levels, settings, feeding record) are never passed to ad networks. The app has no code that puts them in an ad request.</li>
 <li><strong>Tracking consent</strong> — the first time you open the app, Apple's <strong>App Tracking Transparency</strong> prompt appears once. You can decline and keep every feature; you will see non-personalized ads instead. You can change this any time in <em>Settings → Privacy &amp; Security → Tracking</em>.</li>
@@ -304,7 +314,7 @@
 <li><strong>Ads stay with a subscription.</strong> Both places only show an ad when you tap them, so the subscription (unlock all) is not an ad-removal product.</li>
 </ul>
 
-<p>Ad networks handle data under their own policies — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay Privacy Policy</a>.</p>
+<p>Ad networks handle data under their own policies — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay Privacy Policy</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff Privacy Policy</a> · <a href="https://www.facebook.com/privacy/policy/">Meta Privacy Policy</a>.</p>
 
 <p><strong>Payments are handled by the App Store.</strong> Everything sold in the app (pet packs, unlock all, snacks, subscriptions) is paid through the App Store. Card details go straight to Apple — <strong>we never see, receive or keep them.</strong> The app only learns whether something was bought and the price text the store provides.</p>
 
@@ -329,7 +339,17 @@
 <table>
 <tr><th>Recipient</th><th>Items</th><th>Purpose</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) and mediated ad networks</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) and mediated ad networks</td>
+  <td>Advertising identifier, device / OS / app version, approximate country and language</td>
+  <td>Showing ads and measuring performance</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>Advertising identifier, device / OS / app version, approximate country and language</td>
+  <td>Showing ads and measuring performance</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>Advertising identifier, device / OS / app version, approximate country and language</td>
   <td>Showing ads and measuring performance</td>
 </tr>
@@ -436,7 +456,7 @@
 <ul>
 <li><strong>広告が出るのは2か所だけです</strong> — 成長タブで<strong>「お魚」をタップしたとき</strong>に開く釣りの画面の<strong>四角い広告</strong>（4秒後に自動で閉じ、お魚がもらえます）と、<strong>「お肉」をタップしたときだけ</strong>再生される<strong>リワード動画</strong>です。起動時や画面の切り替え時に出る広告も、画面下部のバナーもありません。</li>
 <li><strong>広告を見ないと使えない機能はありません。</strong>お魚とお肉はレベルの時間を増やすための任意の手段で、それらを使わなくてもすべての画面と機能を利用できます。お魚とお肉は広告が表示されたときだけもらえます。お魚は四角い広告が表示されてから4秒後、お肉は広告を最後まで見たときです。広告を読み込めなかった場合はもらえませんが、待たずにもう一度タップできます。</li>
-<li><strong>広告ネットワーク</strong> — 広告は Unity の <strong>LevelPlay（旧 ironSource）</strong>を通じて配信され、LevelPlay は他の広告ネットワーク（Unity Ads、Liftoff、Meta Audience Network など）を仲介することがあります。</li>
+<li><strong>広告ネットワーク</strong> — 広告は Unity の <strong>LevelPlay（旧 ironSource）</strong>を通じて配信され、LevelPlay は他の広告ネットワークを仲介することがあります。LevelPlay が仲介する広告ネットワークには、Unity Ads、Liftoff Monetize、Meta Audience Network（Meta Platforms, Inc.）が含まれます。</li>
 <li><strong>読み取るもの</strong> — 広告ネットワークは端末の<strong>広告識別子</strong>（IDFA/IDFV）、おおよその国と言語、端末の機種、OS のバージョン、アプリのバージョンを読み取ります。<strong>これらは端末から直接読み取られ、私たちが受け取ったり保管したりすることはありません。</strong></li>
 <li><strong>送られないもの</strong> — 第2項の値（ペット、レベル、設定、ごはんの記録）が広告ネットワークに渡ることはありません。アプリにはそれらを広告リクエストに含めるコードがありません。</li>
 <li><strong>トラッキングの同意</strong> — 初めてアプリを開いたとき、Apple の <strong>App Tracking Transparency</strong> の確認画面が一度だけ表示されます。許可しなくてもすべての機能を使え、代わりにパーソナライズされていない広告が表示されます。この設定は<em>設定 → プライバシーとセキュリティ → トラッキング</em>でいつでも変更できます。</li>
@@ -444,7 +464,7 @@
 <li><strong>サブスクリプション中も広告は残ります。</strong>どちらの場所も、タップしたときにだけ広告が出るため、サブスクリプション（ぜんぶ開ける）は広告を消すための商品ではありません。</li>
 </ul>
 
-<p>広告ネットワークは各社のポリシーに従ってデータを取り扱います — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay プライバシーポリシー</a>。</p>
+<p>広告ネットワークは各社のポリシーに従ってデータを取り扱います — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay プライバシーポリシー</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff プライバシーポリシー</a> · <a href="https://www.facebook.com/privacy/policy/">Meta プライバシーポリシー</a>。</p>
 
 <p><strong>決済は App Store が処理します。</strong>アプリ内で販売するもの（ペットパック、ぜんぶ開ける、おやつ、サブスクリプション）はすべて App Store で支払われます。カード情報は直接 Apple に送られ、<strong>私たちが見たり、受け取ったり、保管したりすることはありません。</strong>アプリが知るのは、購入されたかどうかと、ストアが提供する価格の表示だけです。</p>
 
@@ -469,7 +489,17 @@
 <table>
 <tr><th>受け取る者</th><th>項目</th><th>目的</th></tr>
 <tr>
-  <td>Unity Technologies（LevelPlay / ironSource）および仲介される広告ネットワーク</td>
+  <td>Unity Technologies（LevelPlay / ironSource · Unity Ads）および仲介される広告ネットワーク</td>
+  <td>広告識別子、端末 / OS / アプリのバージョン、おおよその国と言語</td>
+  <td>広告の表示と効果の測定</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>広告識別子、端末 / OS / アプリのバージョン、おおよその国と言語</td>
+  <td>広告の表示と効果の測定</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>広告識別子、端末 / OS / アプリのバージョン、おおよその国と言語</td>
   <td>広告の表示と効果の測定</td>
 </tr>
@@ -576,7 +606,7 @@
 <ul>
 <li><strong>廣告只出現在兩個地方</strong>——在「成長」分頁<strong>點一下「魚」</strong>時開啟的釣魚畫面上的<strong>方形廣告</strong>（4 秒後自動關閉，並給您魚），以及<strong>只有在您點一下「大肉塊」時</strong>才會播放的<strong>獎勵影片</strong>。App 沒有啟動時或切換畫面時跳出的廣告，畫面底部也沒有橫幅廣告。</li>
 <li><strong>沒有任何功能被鎖在廣告後面。</strong>魚和大肉塊是增加等級時間的選擇性方式；不使用它們也能使用所有畫面與功能。魚和大肉塊只有在廣告顯示後才會給予：魚是在方形廣告顯示 4 秒後，大肉塊是在完整看完廣告後。若廣告載入失敗則不會給予，您可以不必等待直接再點一次。</li>
-<li><strong>廣告聯播網</strong>——廣告透過 Unity 的 <strong>LevelPlay（前身為 ironSource）</strong>提供，LevelPlay 可能會中介其他廣告聯播網（例如 Unity Ads、Liftoff 與 Meta Audience Network）。</li>
+<li><strong>廣告聯播網</strong>——廣告透過 Unity 的 <strong>LevelPlay（前身為 ironSource）</strong>提供，LevelPlay 可能會中介其他廣告聯播網。LevelPlay 所聚合的廣告聯播網包括 Unity Ads、Liftoff Monetize、Meta Audience Network（Meta Platforms, Inc.）。</li>
 <li><strong>讀取的資料</strong>——廣告聯播網會讀取裝置的<strong>廣告識別碼</strong>（IDFA/IDFV）、大致的國家與語言、裝置型號、作業系統版本及 App 版本。<strong>這些是直接從您的裝置讀取的，我們絕不會收到或保存。</strong></li>
 <li><strong>不會傳送的資料</strong>——第 2 條中的值（您的寵物、等級、設定、餵食紀錄）絕不會傳給廣告聯播網。App 中沒有任何將這些值放入廣告請求的程式碼。</li>
 <li><strong>追蹤同意</strong>——第一次開啟 App 時，Apple 的 <strong>App Tracking Transparency</strong> 提示會出現一次。您可以拒絕並保有所有功能，屆時將看到非個人化廣告。您可以隨時在<em>設定 → 隱私權與安全性 → 追蹤</em>中變更。</li>
@@ -584,7 +614,7 @@
 <li><strong>訂閱後廣告依然存在。</strong>兩個地方都只在您點擊時才顯示廣告，因此訂閱（全部解鎖）並不是移除廣告的商品。</li>
 </ul>
 
-<p>廣告聯播網依其各自的政策處理資料——<a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay 隱私權政策</a>。</p>
+<p>廣告聯播網依其各自的政策處理資料——<a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay 隱私權政策</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff 隱私權政策</a> · <a href="https://www.facebook.com/privacy/policy/">Meta 隱私權政策</a>。</p>
 
 <p><strong>付款由 App Store 處理。</strong>App 內販售的所有項目（寵物包、全部解鎖、點心、訂閱）都透過 App Store 付款。卡片資料直接傳給 Apple——<strong>我們絕不會看到、收到或保存。</strong>App 只會知道是否已購買，以及商店提供的價格文字。</p>
 
@@ -609,7 +639,17 @@
 <table>
 <tr><th>接收者</th><th>項目</th><th>目的</th></tr>
 <tr>
-  <td>Unity Technologies（LevelPlay / ironSource）及其中介的廣告聯播網</td>
+  <td>Unity Technologies（LevelPlay / ironSource · Unity Ads）及其中介的廣告聯播網</td>
+  <td>廣告識別碼、裝置 / 作業系統 / App 版本、大致的國家與語言</td>
+  <td>顯示廣告與衡量成效</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>廣告識別碼、裝置 / 作業系統 / App 版本、大致的國家與語言</td>
+  <td>顯示廣告與衡量成效</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>廣告識別碼、裝置 / 作業系統 / App 版本、大致的國家與語言</td>
   <td>顯示廣告與衡量成效</td>
 </tr>
@@ -718,7 +758,7 @@
 <ul>
 <li><strong>Los anuncios aparecen solo en dos lugares</strong>: un <strong>anuncio cuadrado</strong> en la pantalla de pesca que se abre cuando <strong>tocas «Pescado»</strong> en la pestaña Crecer (se cierra solo a los 4 segundos y te da el pescado), y un <strong>video con recompensa</strong> que se reproduce <strong>solo cuando tocas «Carne»</strong>. No hay anuncios que aparezcan al abrir la app ni entre pantallas, ni banner en la parte inferior de la pantalla.</li>
 <li><strong>Ninguna función está bloqueada tras los anuncios.</strong> El Pescado y la Carne son formas opcionales de añadir tiempo de nivel; puedes usar todas las pantallas y funciones sin ellos. El Pescado y la Carne solo se dan cuando se muestra su anuncio: el Pescado tras 4 segundos del anuncio cuadrado en pantalla y la Carne cuando ves su anuncio hasta el final. Si el anuncio no se carga, no se da la comida y puedes volver a tocar sin esperar.</li>
-<li><strong>Red publicitaria</strong>: los anuncios se sirven a través de <strong>LevelPlay (antes ironSource)</strong> de Unity, que puede mediar otras redes publicitarias (como Unity Ads, Liftoff y Meta Audience Network).</li>
+<li><strong>Red publicitaria</strong>: los anuncios se sirven a través de <strong>LevelPlay (antes ironSource)</strong> de Unity, que puede mediar otras redes publicitarias. Entre las redes publicitarias que LevelPlay media se incluyen Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.).</li>
 <li><strong>Qué leen</strong>: las redes publicitarias leen el <strong>identificador de publicidad</strong> del dispositivo (IDFA/IDFV), el país y el idioma aproximados, el modelo del dispositivo, la versión del sistema operativo y la versión de la app. <strong>Los leen directamente desde tu dispositivo; nosotros nunca los recibimos ni los guardamos.</strong></li>
 <li><strong>Qué no se envía</strong>: los valores de la sección 2 (tu mascota, niveles, ajustes, registro de comidas) nunca se pasan a las redes publicitarias. La app no tiene código que los incluya en una solicitud de anuncio.</li>
 <li><strong>Consentimiento de rastreo</strong>: la primera vez que abres la app, aparece una vez el aviso de <strong>App Tracking Transparency</strong> de Apple. Puedes rechazarlo y conservar todas las funciones; en su lugar verás anuncios no personalizados. Puedes cambiarlo en cualquier momento en <em>Ajustes → Privacidad y seguridad → Rastreo</em>.</li>
@@ -726,7 +766,7 @@
 <li><strong>Los anuncios siguen con una suscripción.</strong> Ambos lugares solo muestran un anuncio cuando los tocas, así que la suscripción (Desbloquea todo) no es un producto para quitar anuncios.</li>
 </ul>
 
-<p>Las redes publicitarias tratan los datos según sus propias políticas: <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Política de privacidad de Unity/LevelPlay</a>.</p>
+<p>Las redes publicitarias tratan los datos según sus propias políticas: <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Política de privacidad de Unity/LevelPlay</a> · <a href="https://liftoff.io/privacy-policy/">Política de privacidad de Liftoff</a> · <a href="https://www.facebook.com/privacy/policy/">Política de privacidad de Meta</a>.</p>
 
 <p><strong>Los pagos los gestiona el App Store.</strong> Todo lo que se vende en la app (paquetes de mascotas, Desbloquea todo, bocadillos, suscripciones) se paga a través del App Store. Los datos de la tarjeta van directamente a Apple: <strong>nunca los vemos, recibimos ni guardamos.</strong> La app solo sabe si se compró algo y el texto de precio que proporciona la tienda.</p>
 
@@ -751,7 +791,17 @@
 <table>
 <tr><th>Destinatario</th><th>Datos</th><th>Finalidad</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) y las redes publicitarias mediadas</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) y las redes publicitarias mediadas</td>
+  <td>Identificador de publicidad, versión del dispositivo / sistema operativo / app, país e idioma aproximados</td>
+  <td>Mostrar anuncios y medir su rendimiento</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>Identificador de publicidad, versión del dispositivo / sistema operativo / app, país e idioma aproximados</td>
+  <td>Mostrar anuncios y medir su rendimiento</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>Identificador de publicidad, versión del dispositivo / sistema operativo / app, país e idioma aproximados</td>
   <td>Mostrar anuncios y medir su rendimiento</td>
 </tr>
@@ -858,7 +908,7 @@
 <ul>
 <li><strong>Os anúncios aparecem em apenas dois lugares</strong> — um <strong>anúncio quadrado</strong> na tela de pesca que abre quando <strong>você toca em "Peixe"</strong> na aba Crescer (ele fecha sozinho após 4 segundos e dá o peixe a você), e um <strong>vídeo premiado</strong> que é exibido <strong>somente quando você toca em "Carne"</strong>. Não há anúncios que aparecem ao abrir o app ou entre telas, nem banner na parte inferior da tela.</li>
 <li><strong>Nenhum recurso fica bloqueado por anúncios.</strong> Peixe e Carne são formas opcionais de adicionar tempo de nível; você pode usar todas as telas e recursos sem eles. O Peixe e a Carne só são dados quando o anúncio aparece: o Peixe depois de 4 segundos do anúncio quadrado na tela e a Carne depois que você assiste ao anúncio até o fim. Se o anúncio não carregar, a comida não é dada e você pode tocar de novo sem esperar.</li>
-<li><strong>Rede de anúncios</strong> — os anúncios são veiculados pelo <strong>LevelPlay (antigo ironSource)</strong> da Unity, que pode fazer a mediação de outras redes de anúncios (como Unity Ads, a Liftoff e Meta Audience Network).</li>
+<li><strong>Rede de anúncios</strong> — os anúncios são veiculados pelo <strong>LevelPlay (antigo ironSource)</strong> da Unity, que pode fazer a mediação de outras redes de anúncios. Entre as redes de anúncios intermediadas pelo LevelPlay estão Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.).</li>
 <li><strong>O que elas leem</strong> — as redes de anúncios leem o <strong>identificador de publicidade</strong> do dispositivo (IDFA/IDFV), país e idioma aproximados, modelo do dispositivo, versão do sistema operacional e versão do app. <strong>Elas leem esses dados diretamente do seu dispositivo; nós nunca os recebemos nem os guardamos.</strong></li>
 <li><strong>O que não é enviado</strong> — os valores da seção 2 (seu pet, níveis, ajustes, registro de alimentação) nunca são repassados às redes de anúncios. O app não tem nenhum código que os coloque em uma solicitação de anúncio.</li>
 <li><strong>Consentimento de rastreamento</strong> — na primeira vez que você abre o app, o aviso de <strong>App Tracking Transparency</strong> da Apple aparece uma vez. Você pode recusar e manter todos os recursos; em vez disso, verá anúncios não personalizados. Você pode mudar isso a qualquer momento em <em>Ajustes → Privacidade e Segurança → Rastreamento</em>.</li>
@@ -866,7 +916,7 @@
 <li><strong>Os anúncios continuam com uma assinatura.</strong> Os dois lugares só mostram um anúncio quando você toca neles, então a assinatura (Desbloqueie tudo) não é um produto para remover anúncios.</li>
 </ul>
 
-<p>As redes de anúncios tratam os dados de acordo com suas próprias políticas — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Política de Privacidade da Unity/LevelPlay</a>.</p>
+<p>As redes de anúncios tratam os dados de acordo com suas próprias políticas — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Política de Privacidade da Unity/LevelPlay</a> · <a href="https://liftoff.io/privacy-policy/">Política de Privacidade da Liftoff</a> · <a href="https://www.facebook.com/privacy/policy/">Política de Privacidade da Meta</a>.</p>
 
 <p><strong>Os pagamentos são processados pela App Store.</strong> Tudo o que é vendido no app (pacotes de pets, Desbloqueie tudo, petiscos, assinaturas) é pago pela App Store. Os dados do cartão vão diretamente para a Apple — <strong>nós nunca os vemos, recebemos nem guardamos.</strong> O app só fica sabendo se algo foi comprado e o texto de preço fornecido pela loja.</p>
 
@@ -891,7 +941,17 @@
 <table>
 <tr><th>Destinatário</th><th>Itens</th><th>Finalidade</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) e redes de anúncios mediadas</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) e redes de anúncios mediadas</td>
+  <td>Identificador de publicidade, versão do dispositivo / sistema operacional / app, país e idioma aproximados</td>
+  <td>Exibir anúncios e medir o desempenho</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>Identificador de publicidade, versão do dispositivo / sistema operacional / app, país e idioma aproximados</td>
+  <td>Exibir anúncios e medir o desempenho</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>Identificador de publicidade, versão do dispositivo / sistema operacional / app, país e idioma aproximados</td>
   <td>Exibir anúncios e medir o desempenho</td>
 </tr>
@@ -998,7 +1058,7 @@
 <ul>
 <li><strong>Les publicités n’apparaissent qu’à deux endroits</strong> — une <strong>publicité carrée</strong> sur l’écran de pêche qui s’ouvre lorsque <strong>vous touchez « Poisson »</strong> dans l’onglet Croissance (elle se ferme d’elle-même au bout de 4 secondes et vous donne le poisson), et une <strong>vidéo récompensée</strong> qui ne se lance <strong>que lorsque vous touchez « Viande »</strong>. Il n’y a aucune publicité qui s’affiche au lancement ou entre les écrans, ni de bannière en bas de l’écran.</li>
 <li><strong>Aucune fonctionnalité n’est bloquée derrière une publicité.</strong> Le Poisson et la Viande sont des moyens facultatifs d’ajouter du temps de niveau ; vous pouvez utiliser tous les écrans et toutes les fonctionnalités sans eux. Le Poisson et la Viande ne sont donnés que lorsque leur publicité s’affiche : le Poisson après 4 secondes d’affichage de la publicité carrée, la Viande après avoir regardé sa publicité jusqu’au bout. Si la publicité ne se charge pas, rien n’est donné et vous pouvez toucher à nouveau sans attendre.</li>
-<li><strong>Régie publicitaire</strong> — les publicités sont diffusées via <strong>LevelPlay (anciennement ironSource)</strong> de Unity, qui peut assurer la médiation d’autres régies publicitaires (comme Unity Ads, Liftoff et Meta Audience Network).</li>
+<li><strong>Régie publicitaire</strong> — les publicités sont diffusées via <strong>LevelPlay (anciennement ironSource)</strong> de Unity, qui peut assurer la médiation d’autres régies publicitaires. Parmi les réseaux publicitaires médiatisés par LevelPlay figurent Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.).</li>
 <li><strong>Ce qu’elles lisent</strong> — les régies publicitaires lisent l’<strong>identifiant publicitaire</strong> de l’appareil (IDFA/IDFV), le pays et la langue approximatifs, le modèle de l’appareil, la version du système d’exploitation et la version de l’app. <strong>Elles les lisent directement depuis votre appareil ; nous ne les recevons ni ne les conservons jamais.</strong></li>
 <li><strong>Ce qui n’est pas envoyé</strong> — les valeurs de la section 2 (votre animal, vos niveaux, vos réglages, votre historique des repas) ne sont jamais transmises aux régies publicitaires. L’app ne contient aucun code qui les inclut dans une requête publicitaire.</li>
 <li><strong>Consentement au suivi</strong> — la première fois que vous ouvrez l’app, la demande <strong>App Tracking Transparency</strong> d’Apple s’affiche une seule fois. Vous pouvez refuser et conserver toutes les fonctionnalités ; vous verrez alors des publicités non personnalisées. Vous pouvez modifier ce choix à tout moment dans <em>Réglages → Confidentialité et sécurité → Suivi</em>.</li>
@@ -1006,7 +1066,7 @@
 <li><strong>Les publicités restent avec un abonnement.</strong> Les deux endroits n’affichent une publicité que lorsque vous les touchez ; l’abonnement (Tout débloquer) n’est donc pas un produit de suppression des publicités.</li>
 </ul>
 
-<p>Les régies publicitaires traitent les données selon leurs propres politiques — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Politique de confidentialité de Unity/LevelPlay</a>.</p>
+<p>Les régies publicitaires traitent les données selon leurs propres politiques — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Politique de confidentialité de Unity/LevelPlay</a> · <a href="https://liftoff.io/privacy-policy/">Politique de confidentialité de Liftoff</a> · <a href="https://www.facebook.com/privacy/policy/">Politique de confidentialité de Meta</a>.</p>
 
 <p><strong>Les paiements sont gérés par l’App Store.</strong> Tout ce qui est vendu dans l’app (packs d’animaux, Tout débloquer, friandises, abonnements) est payé via l’App Store. Les données de carte vont directement à Apple — <strong>nous ne les voyons, ne les recevons ni ne les conservons jamais.</strong> L’app sait seulement si un achat a eu lieu et connaît le texte de prix fourni par la boutique.</p>
 
@@ -1031,7 +1091,17 @@
 <table>
 <tr><th>Destinataire</th><th>Éléments</th><th>Finalité</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) et les régies publicitaires en médiation</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) et les régies publicitaires en médiation</td>
+  <td>Identifiant publicitaire, version de l’appareil / du système / de l’app, pays et langue approximatifs</td>
+  <td>Afficher des publicités et mesurer leurs performances</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>Identifiant publicitaire, version de l’appareil / du système / de l’app, pays et langue approximatifs</td>
+  <td>Afficher des publicités et mesurer leurs performances</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>Identifiant publicitaire, version de l’appareil / du système / de l’app, pays et langue approximatifs</td>
   <td>Afficher des publicités et mesurer leurs performances</td>
 </tr>
@@ -1138,7 +1208,7 @@
 <ul>
 <li><strong>Anzeigen erscheinen nur an zwei Stellen</strong> — eine <strong>quadratische Anzeige</strong> auf dem Angel-Bildschirm, der sich öffnet, wenn <strong>Sie im Tab „Wachstum“ auf „Fisch“ tippen</strong> (sie schließt sich nach 4 Sekunden von selbst und gibt Ihnen den Fisch), und ein <strong>Video mit Belohnung</strong>, das <strong>nur abgespielt wird, wenn Sie auf „Fleisch“ tippen</strong>. Es gibt keine Anzeigen, die beim Start oder zwischen Bildschirmen aufspringen, und kein Banner am unteren Bildschirmrand.</li>
 <li><strong>Keine Funktion ist hinter einer Anzeige gesperrt.</strong> Fisch und Fleisch sind optionale Wege, Level-Zeit hinzuzufügen; Sie können jeden Bildschirm und jede Funktion ohne sie nutzen. Fisch und Fleisch gibt es nur, wenn ihre Anzeige eingeblendet wird — Fisch, nachdem die quadratische Anzeige 4 Sekunden lang zu sehen war, Fleisch, nachdem Sie die zugehörige Anzeige bis zum Ende angesehen haben. Wenn eine Anzeige nicht lädt, gibt es kein Futter, und Sie können sofort erneut tippen.</li>
-<li><strong>Werbenetzwerk</strong> — Anzeigen werden über <strong>LevelPlay (früher ironSource)</strong> von Unity ausgeliefert, das andere Werbenetzwerke (etwa Unity Ads, Liftoff und Meta Audience Network) vermitteln kann.</li>
+<li><strong>Werbenetzwerk</strong> — Anzeigen werden über <strong>LevelPlay (früher ironSource)</strong> von Unity ausgeliefert, das andere Werbenetzwerke vermitteln kann. Zu den von LevelPlay vermittelten Werbenetzwerken gehören Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.).</li>
 <li><strong>Was sie auslesen</strong> — Werbenetzwerke lesen die <strong>Werbe-ID</strong> des Geräts (IDFA/IDFV), das ungefähre Land und die Sprache, das Gerätemodell, die Betriebssystemversion und die App-Version aus. <strong>Sie lesen diese Werte direkt von Ihrem Gerät aus; wir erhalten oder speichern sie niemals.</strong></li>
 <li><strong>Was nicht gesendet wird</strong> — die Werte aus Abschnitt 2 (Ihr Haustier, Level, Einstellungen, Fütterungsprotokoll) werden niemals an Werbenetzwerke weitergegeben. Die App enthält keinen Code, der sie in eine Werbeanfrage aufnimmt.</li>
 <li><strong>Einwilligung zum Tracking</strong> — wenn Sie die App zum ersten Mal öffnen, erscheint einmalig Apples Abfrage zur <strong>App-Tracking-Transparenz</strong>. Sie können ablehnen und behalten alle Funktionen; Sie sehen dann nicht personalisierte Anzeigen. Sie können dies jederzeit unter <em>Einstellungen → Datenschutz &amp; Sicherheit → Tracking</em> ändern.</li>
@@ -1146,7 +1216,7 @@
 <li><strong>Werbung bleibt auch mit einem Abo.</strong> An beiden Stellen erscheint eine Anzeige nur, wenn Sie darauf tippen; das Abo („Alles freischalten“) ist daher kein Produkt zum Entfernen von Werbung.</li>
 </ul>
 
-<p>Werbenetzwerke verarbeiten Daten nach ihren eigenen Richtlinien — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Datenschutzerklärung von Unity/LevelPlay</a>.</p>
+<p>Werbenetzwerke verarbeiten Daten nach ihren eigenen Richtlinien — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Datenschutzerklärung von Unity/LevelPlay</a> · <a href="https://liftoff.io/privacy-policy/">Datenschutzerklärung von Liftoff</a> · <a href="https://www.facebook.com/privacy/policy/">Datenschutzerklärung von Meta</a>.</p>
 
 <p><strong>Zahlungen werden vom App Store abgewickelt.</strong> Alles, was in der App verkauft wird (Haustier-Pakete, „Alles freischalten“, Snacks, Abos), wird über den App Store bezahlt. Kartendaten gehen direkt an Apple — <strong>wir sehen, erhalten oder speichern sie niemals.</strong> Die App erfährt nur, ob etwas gekauft wurde, und den Preistext, den der Store bereitstellt.</p>
 
@@ -1171,7 +1241,17 @@
 <table>
 <tr><th>Empfänger</th><th>Daten</th><th>Zweck</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) und vermittelte Werbenetzwerke</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) und vermittelte Werbenetzwerke</td>
+  <td>Werbe-ID, Geräte-, Betriebssystem- und App-Version, ungefähres Land und Sprache</td>
+  <td>Einblenden von Anzeigen und Messen ihrer Leistung</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>Werbe-ID, Geräte-, Betriebssystem- und App-Version, ungefähres Land und Sprache</td>
+  <td>Einblenden von Anzeigen und Messen ihrer Leistung</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>Werbe-ID, Geräte-, Betriebssystem- und App-Version, ungefähres Land und Sprache</td>
   <td>Einblenden von Anzeigen und Messen ihrer Leistung</td>
 </tr>
@@ -1278,7 +1358,7 @@
 <ul>
 <li><strong>Gli annunci compaiono solo in due punti</strong> — un <strong>annuncio quadrato</strong> nella schermata di pesca che si apre quando <strong>tocchi «Pesce»</strong> nella scheda Crescita (si chiude da solo dopo 4 secondi e ti dà il pesce), e un <strong>video con ricompensa</strong> che parte <strong>solo quando tocchi «Carne»</strong>. Non ci sono annunci che compaiono all’avvio o tra una schermata e l’altra, né banner in fondo allo schermo.</li>
 <li><strong>Nessuna funzione è bloccata dietro un annuncio.</strong> Pesce e Carne sono modi facoltativi per aggiungere tempo ai livelli; puoi usare ogni schermata e funzione senza di essi. Pesce e Carne vengono dati solo quando il relativo annuncio viene mostrato — il Pesce dopo che l’annuncio quadrato è rimasto sullo schermo per 4 secondi, la Carne dopo che hai guardato il suo annuncio fino alla fine. Se un annuncio non si carica, il cibo non viene dato e puoi toccare di nuovo subito.</li>
-<li><strong>Rete pubblicitaria</strong> — gli annunci sono forniti tramite <strong>LevelPlay (in precedenza ironSource)</strong> di Unity, che può fare da mediatore per altre reti pubblicitarie (come Unity Ads, Liftoff e Meta Audience Network).</li>
+<li><strong>Rete pubblicitaria</strong> — gli annunci sono forniti tramite <strong>LevelPlay (in precedenza ironSource)</strong> di Unity, che può fare da mediatore per altre reti pubblicitarie. Tra le reti pubblicitarie mediate da LevelPlay rientrano Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.).</li>
 <li><strong>Cosa leggono</strong> — le reti pubblicitarie leggono l’<strong>identificativo pubblicitario</strong> del dispositivo (IDFA/IDFV), il paese e la lingua approssimativi, il modello del dispositivo, la versione del sistema operativo e la versione dell’app. <strong>Li leggono direttamente dal tuo dispositivo; noi non li riceviamo né li conserviamo mai.</strong></li>
 <li><strong>Cosa non viene inviato</strong> — i valori della sezione 2 (il tuo animaletto, livelli, impostazioni, registro dei pasti) non vengono mai passati alle reti pubblicitarie. L’app non contiene codice che li inserisca in una richiesta di annuncio.</li>
 <li><strong>Consenso al tracciamento</strong> — la prima volta che apri l’app, compare una sola volta la richiesta <strong>Trasparenza del tracciamento delle app</strong> di Apple. Puoi rifiutare e mantenere tutte le funzioni; vedrai invece annunci non personalizzati. Puoi cambiare questa scelta in qualsiasi momento in <em>Impostazioni → Privacy e sicurezza → Tracciamento</em>.</li>
@@ -1286,7 +1366,7 @@
 <li><strong>Gli annunci restano anche con l’abbonamento.</strong> In entrambi i punti un annuncio compare solo quando lo tocchi, quindi l’abbonamento («Sblocca tutto») non è un prodotto per rimuovere gli annunci.</li>
 </ul>
 
-<p>Le reti pubblicitarie trattano i dati secondo le proprie informative — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Informativa sulla privacy di Unity/LevelPlay</a>.</p>
+<p>Le reti pubblicitarie trattano i dati secondo le proprie informative — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Informativa sulla privacy di Unity/LevelPlay</a> · <a href="https://liftoff.io/privacy-policy/">Informativa sulla privacy di Liftoff</a> · <a href="https://www.facebook.com/privacy/policy/">Informativa sulla privacy di Meta</a>.</p>
 
 <p><strong>I pagamenti sono gestiti dall’App Store.</strong> Tutto ciò che è in vendita nell’app (pacchetti di animaletti, «Sblocca tutto», snack, abbonamenti) si paga tramite l’App Store. I dati della carta vanno direttamente ad Apple — <strong>noi non li vediamo, non li riceviamo e non li conserviamo mai.</strong> L’app sa solo se qualcosa è stato acquistato e il testo del prezzo fornito dallo store.</p>
 
@@ -1311,7 +1391,17 @@
 <table>
 <tr><th>Destinatario</th><th>Dati</th><th>Finalità</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) e reti pubblicitarie mediate</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) e reti pubblicitarie mediate</td>
+  <td>Identificativo pubblicitario, versione di dispositivo / sistema operativo / app, paese e lingua approssimativi</td>
+  <td>Mostrare gli annunci e misurarne il rendimento</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>Identificativo pubblicitario, versione di dispositivo / sistema operativo / app, paese e lingua approssimativi</td>
+  <td>Mostrare gli annunci e misurarne il rendimento</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>Identificativo pubblicitario, versione di dispositivo / sistema operativo / app, paese e lingua approssimativi</td>
   <td>Mostrare gli annunci e misurarne il rendimento</td>
 </tr>
@@ -1418,7 +1508,7 @@
 <ul>
 <li><strong>Reklamy pojawiają się tylko w dwóch miejscach</strong> — <strong>kwadratowa reklama</strong> na ekranie łowienia, który otwiera się, gdy <strong>stukniesz „Ryba”</strong> na karcie Rozwój (zamyka się sama po 4 sekundach i daje Ci rybę), oraz <strong>wideo z nagrodą</strong>, które odtwarza się <strong>tylko wtedy, gdy stukniesz „Mięso”</strong>. Nie ma reklam wyskakujących przy uruchomieniu ani między ekranami i nie ma banera na dole ekranu.</li>
 <li><strong>Żadna funkcja nie jest zablokowana za reklamami.</strong> Ryba i mięso to tylko opcjonalne sposoby na dodanie czasu do poziomu; z każdego ekranu i każdej funkcji można korzystać bez nich. Ryba i mięso są przyznawane tylko wtedy, gdy ich reklama zostanie wyświetlona — ryba po tym, jak kwadratowa reklama była na ekranie przez 4 sekundy, mięso po obejrzeniu reklamy do końca. Jeśli reklama się nie wczyta, posiłek nie jest przyznawany i można od razu stuknąć ponownie.</li>
-<li><strong>Sieć reklamowa</strong> — reklamy są dostarczane przez <strong>LevelPlay (dawniej ironSource)</strong> firmy Unity, który może pośredniczyć dla innych sieci reklamowych (np. Unity Ads, Liftoff i Meta Audience Network).</li>
+<li><strong>Sieć reklamowa</strong> — reklamy są dostarczane przez <strong>LevelPlay (dawniej ironSource)</strong> firmy Unity, który może pośredniczyć dla innych sieci reklamowych. Wśród sieci reklamowych pośredniczonych przez LevelPlay są Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.).</li>
 <li><strong>Co odczytują</strong> — sieci reklamowe odczytują <strong>identyfikator wyświetlania reklam</strong> urządzenia (IDFA/IDFV), przybliżony kraj i język, model urządzenia, wersję systemu i wersję aplikacji. <strong>Odczytują je bezpośrednio z urządzenia; my nigdy ich nie otrzymujemy ani nie przechowujemy.</strong></li>
 <li><strong>Czego się nie wysyła</strong> — wartości z sekcji 2 (Twój zwierzak, poziomy, ustawienia, rejestr karmienia) nigdy nie są przekazywane sieciom reklamowym. Aplikacja nie zawiera kodu, który umieszczałby je w żądaniu reklamy.</li>
 <li><strong>Zgoda na śledzenie</strong> — przy pierwszym uruchomieniu aplikacji jednorazowo pojawia się okno <strong>App Tracking Transparency</strong> firmy Apple. Można odmówić i zachować wszystkie funkcje; zamiast tego będą wyświetlane reklamy niespersonalizowane. Ustawienie to można w każdej chwili zmienić w <em>Ustawienia → Prywatność i ochrona → Śledzenie</em>.</li>
@@ -1426,7 +1516,7 @@
 <li><strong>Reklamy pozostają także przy subskrypcji.</strong> Oba miejsca wyświetlają reklamę tylko po stuknięciu, więc subskrypcja („Odblokuj wszystko”) nie jest produktem usuwającym reklamy.</li>
 </ul>
 
-<p>Sieci reklamowe przetwarzają dane zgodnie z własnymi politykami — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Polityka prywatności Unity/LevelPlay</a>.</p>
+<p>Sieci reklamowe przetwarzają dane zgodnie z własnymi politykami — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Polityka prywatności Unity/LevelPlay</a> · <a href="https://liftoff.io/privacy-policy/">Polityka prywatności Liftoff</a> · <a href="https://www.facebook.com/privacy/policy/">Polityka prywatności Meta</a>.</p>
 
 <p><strong>Płatności obsługuje App Store.</strong> Wszystko, co jest sprzedawane w aplikacji (pakiety zwierzaków, „Odblokuj wszystko”, przysmaki, subskrypcje), jest opłacane przez App Store. Dane karty trafiają bezpośrednio do Apple — <strong>my nigdy ich nie widzimy, nie otrzymujemy ani nie przechowujemy.</strong> Aplikacja dowiaduje się jedynie, czy coś zostało kupione, oraz otrzymuje tekst ceny podany przez sklep.</p>
 
@@ -1451,7 +1541,17 @@
 <table>
 <tr><th>Odbiorca</th><th>Dane</th><th>Cel</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) oraz sieci reklamowe objęte mediacją</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) oraz sieci reklamowe objęte mediacją</td>
+  <td>Identyfikator wyświetlania reklam, wersja urządzenia / systemu / aplikacji, przybliżony kraj i język</td>
+  <td>Wyświetlanie reklam i pomiar ich skuteczności</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>Identyfikator wyświetlania reklam, wersja urządzenia / systemu / aplikacji, przybliżony kraj i język</td>
+  <td>Wyświetlanie reklam i pomiar ich skuteczności</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>Identyfikator wyświetlania reklam, wersja urządzenia / systemu / aplikacji, przybliżony kraj i język</td>
   <td>Wyświetlanie reklam i pomiar ich skuteczności</td>
 </tr>
@@ -1558,7 +1658,7 @@
 <ul>
 <li><strong>Reklamlar yalnızca iki yerde görünür</strong> — Gelişim sekmesinde <strong>“Balık”a dokunduğunuzda</strong> açılan balık tutma ekranındaki <strong>kare reklam</strong> (4 saniye sonra kendiliğinden kapanır ve size balığı verir) ve <strong>yalnızca “Et”e dokunduğunuzda</strong> oynatılan <strong>ödüllü video</strong>. Açılışta veya ekranlar arasında beliren reklam yoktur ve ekranın altında banner yoktur.</li>
 <li><strong>Hiçbir özellik reklamların arkasına kilitlenmez.</strong> Balık ve et, seviye süresi eklemenin yalnızca isteğe bağlı yollarıdır; her ekranı ve özelliği bunlar olmadan kullanabilirsiniz. Balık ve et yalnızca reklamları gösterildiğinde verilir — balık, kare reklam 4 saniye ekranda kaldıktan sonra; et, reklamını sonuna kadar izledikten sonra. Bir reklam yüklenemezse yiyecek verilmez ve hemen yeniden dokunabilirsiniz.</li>
-<li><strong>Reklam ağı</strong> — reklamlar Unity’nin <strong>LevelPlay (eski adıyla ironSource)</strong> hizmeti üzerinden sunulur; bu hizmet diğer reklam ağlarına (Unity Ads, Liftoff ve Meta Audience Network gibi) aracılık edebilir.</li>
+<li><strong>Reklam ağı</strong> — reklamlar Unity’nin <strong>LevelPlay (eski adıyla ironSource)</strong> hizmeti üzerinden sunulur; bu hizmet diğer reklam ağlarına aracılık edebilir. LevelPlay’in aracılık ettiği reklam ağları arasında Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.) da bulunur.</li>
 <li><strong>Neyi okudukları</strong> — reklam ağları cihazın <strong>reklam tanımlayıcısını</strong> (IDFA/IDFV), yaklaşık ülke ve dili, cihaz modelini, işletim sistemi sürümünü ve uygulama sürümünü okur. <strong>Bunları doğrudan cihazınızdan okurlar; biz bunları hiçbir zaman almayız ve saklamayız.</strong></li>
 <li><strong>Neyin gönderilmediği</strong> — Bölüm 2’deki değerler (evcil hayvanınız, seviyeler, ayarlar, besleme kaydı) hiçbir zaman reklam ağlarına iletilmez. Uygulamada bunları bir reklam isteğine koyan hiçbir kod yoktur.</li>
 <li><strong>İzleme onayı</strong> — uygulamayı ilk açtığınızda Apple’ın <strong>App Tracking Transparency</strong> istemi bir kez görünür. Reddedip tüm özellikleri kullanmaya devam edebilirsiniz; bunun yerine kişiselleştirilmemiş reklamlar görürsünüz. Bunu istediğiniz zaman <em>Ayarlar → Gizlilik ve Güvenlik → İzleme</em> bölümünden değiştirebilirsiniz.</li>
@@ -1566,7 +1666,7 @@
 <li><strong>Abonelikte de reklamlar kalır.</strong> Her iki yer de yalnızca siz dokunduğunuzda reklam gösterir; bu nedenle abonelik (“Tümünü aç”) bir reklam kaldırma ürünü değildir.</li>
 </ul>
 
-<p>Reklam ağları verileri kendi politikalarına göre işler — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay Gizlilik Politikası</a>.</p>
+<p>Reklam ağları verileri kendi politikalarına göre işler — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay Gizlilik Politikası</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff Gizlilik Politikası</a> · <a href="https://www.facebook.com/privacy/policy/">Meta Gizlilik Politikası</a>.</p>
 
 <p><strong>Ödemeler App Store tarafından yürütülür.</strong> Uygulamada satılan her şey (evcil hayvan paketleri, “Tümünü aç”, atıştırmalıklar, abonelikler) App Store üzerinden ödenir. Kart bilgileri doğrudan Apple’a gider — <strong>bunları hiçbir zaman görmeyiz, almayız ve saklamayız.</strong> Uygulama yalnızca bir şeyin satın alınıp alınmadığını ve mağazanın sağladığı fiyat metnini öğrenir.</p>
 
@@ -1591,7 +1691,17 @@
 <table>
 <tr><th>Alıcı</th><th>Öğeler</th><th>Amaç</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) ve aracılık edilen reklam ağları</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) ve aracılık edilen reklam ağları</td>
+  <td>Reklam tanımlayıcısı, cihaz / işletim sistemi / uygulama sürümü, yaklaşık ülke ve dil</td>
+  <td>Reklam göstermek ve performansı ölçmek</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>Reklam tanımlayıcısı, cihaz / işletim sistemi / uygulama sürümü, yaklaşık ülke ve dil</td>
+  <td>Reklam göstermek ve performansı ölçmek</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>Reklam tanımlayıcısı, cihaz / işletim sistemi / uygulama sürümü, yaklaşık ülke ve dil</td>
   <td>Reklam göstermek ve performansı ölçmek</td>
 </tr>
@@ -1698,7 +1808,7 @@
 <ul>
 <li><strong>Iklan hanya muncul di dua tempat</strong> — <strong>iklan persegi</strong> di layar memancing yang terbuka saat <strong>Anda mengetuk "Ikan"</strong> di tab Tumbuh (tertutup sendiri setelah 4 detik dan memberi Anda ikan), dan <strong>video berhadiah</strong> yang diputar <strong>hanya saat Anda mengetuk "Daging"</strong>. Tidak ada iklan yang muncul saat aplikasi dibuka atau saat berpindah layar, dan tidak ada banner di bagian bawah layar.</li>
 <li><strong>Tidak ada fitur yang dikunci di balik iklan.</strong> Ikan dan Daging hanyalah cara opsional untuk menambah waktu level; Anda dapat menggunakan setiap layar dan fitur tanpanya. Ikan dan Daging hanya diberikan saat iklannya tampil: Ikan setelah iklan kotak tampil selama 4 detik, Daging setelah Anda menonton iklannya sampai selesai. Jika iklan gagal dimuat, makanan tidak diberikan dan Anda bisa langsung mengetuk lagi.</li>
-<li><strong>Jaringan iklan</strong> — iklan ditayangkan melalui <strong>LevelPlay (dahulu ironSource)</strong> milik Unity, yang dapat memediasi jaringan iklan lain (seperti Unity Ads, Liftoff dan Meta Audience Network).</li>
+<li><strong>Jaringan iklan</strong> — iklan ditayangkan melalui <strong>LevelPlay (dahulu ironSource)</strong> milik Unity, yang dapat memediasi jaringan iklan lain. Jaringan iklan yang dimediasi LevelPlay mencakup Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.).</li>
 <li><strong>Yang mereka baca</strong> — jaringan iklan membaca <strong>pengenal iklan</strong> perangkat (IDFA/IDFV), perkiraan negara dan bahasa, model perangkat, versi OS, dan versi aplikasi. <strong>Mereka membacanya langsung dari perangkat Anda; kami tidak pernah menerima maupun menyimpannya.</strong></li>
 <li><strong>Yang tidak dikirim</strong> — nilai-nilai di bagian 2 (pet Anda, level, pengaturan, catatan pemberian makan) tidak pernah diteruskan ke jaringan iklan. Aplikasi tidak memiliki kode yang memasukkannya ke dalam permintaan iklan.</li>
 <li><strong>Persetujuan pelacakan</strong> — saat pertama kali membuka aplikasi, permintaan <strong>App Tracking Transparency</strong> dari Apple muncul satu kali. Anda dapat menolak dan tetap menggunakan semua fitur; Anda akan melihat iklan yang tidak dipersonalisasi. Anda dapat mengubahnya kapan saja di <em>Pengaturan → Privasi &amp; Keamanan → Pelacakan</em>.</li>
@@ -1706,7 +1816,7 @@
 <li><strong>Iklan tetap ada meskipun berlangganan.</strong> Kedua tempat hanya menampilkan iklan saat Anda mengetuknya, sehingga langganan (Buka semuanya) bukan produk penghapus iklan.</li>
 </ul>
 
-<p>Jaringan iklan menangani data sesuai kebijakan mereka sendiri — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Kebijakan Privasi Unity/LevelPlay</a>.</p>
+<p>Jaringan iklan menangani data sesuai kebijakan mereka sendiri — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Kebijakan Privasi Unity/LevelPlay</a> · <a href="https://liftoff.io/privacy-policy/">Kebijakan Privasi Liftoff</a> · <a href="https://www.facebook.com/privacy/policy/">Kebijakan Privasi Meta</a>.</p>
 
 <p><strong>Pembayaran ditangani oleh App Store.</strong> Semua yang dijual di aplikasi (paket pet, Buka semuanya, camilan, langganan) dibayar melalui App Store. Detail kartu langsung dikirim ke Apple — <strong>kami tidak pernah melihat, menerima, maupun menyimpannya.</strong> Aplikasi hanya mengetahui apakah sesuatu telah dibeli dan teks harga yang diberikan oleh toko.</p>
 
@@ -1731,7 +1841,17 @@
 <table>
 <tr><th>Penerima</th><th>Item</th><th>Tujuan</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) dan jaringan iklan yang dimediasi</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) dan jaringan iklan yang dimediasi</td>
+  <td>Pengenal iklan, versi perangkat / OS / aplikasi, perkiraan negara dan bahasa</td>
+  <td>Menampilkan iklan dan mengukur kinerja</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>Pengenal iklan, versi perangkat / OS / aplikasi, perkiraan negara dan bahasa</td>
+  <td>Menampilkan iklan dan mengukur kinerja</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>Pengenal iklan, versi perangkat / OS / aplikasi, perkiraan negara dan bahasa</td>
   <td>Menampilkan iklan dan mengukur kinerja</td>
 </tr>
@@ -1838,7 +1958,7 @@
 <ul>
 <li><strong>Iklan muncul di dua tempat sahaja</strong> — <strong>iklan segi empat</strong> pada skrin memancing yang dibuka apabila <strong>anda mengetik "Ikan"</strong> pada tab Membesar (ia tertutup sendiri selepas 4 saat dan memberikan anda ikan), dan <strong>video ganjaran</strong> yang dimainkan <strong>hanya apabila anda mengetik "Daging"</strong>. Tiada iklan yang muncul semasa aplikasi dibuka atau semasa bertukar skrin, dan tiada sepanduk di bahagian bawah skrin.</li>
 <li><strong>Tiada ciri yang dikunci di sebalik iklan.</strong> Ikan dan Daging hanyalah cara pilihan untuk menambah masa tahap; anda boleh menggunakan setiap skrin dan ciri tanpanya. Ikan dan Daging hanya diberikan apabila iklannya dipaparkan: Ikan selepas iklan segi empat dipaparkan selama 4 saat, Daging selepas anda menonton iklannya hingga habis. Jika iklan gagal dimuatkan, makanan tidak diberikan dan anda boleh terus mengetik semula.</li>
-<li><strong>Rangkaian iklan</strong> — iklan disiarkan melalui <strong>LevelPlay (dahulunya ironSource)</strong> milik Unity, yang mungkin mengantara rangkaian iklan lain (seperti Unity Ads, Liftoff dan Meta Audience Network).</li>
+<li><strong>Rangkaian iklan</strong> — iklan disiarkan melalui <strong>LevelPlay (dahulunya ironSource)</strong> milik Unity, yang mungkin mengantara rangkaian iklan lain. Rangkaian iklan yang diantara oleh LevelPlay termasuk Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.).</li>
 <li><strong>Perkara yang dibaca</strong> — rangkaian iklan membaca <strong>pengecam pengiklanan</strong> peranti (IDFA/IDFV), anggaran negara dan bahasa, model peranti, versi OS dan versi aplikasi. <strong>Mereka membacanya terus daripada peranti anda; kami tidak pernah menerima atau menyimpannya.</strong></li>
 <li><strong>Perkara yang tidak dihantar</strong> — nilai dalam bahagian 2 (haiwan peliharaan, tahap, seting, rekod pemberian makanan anda) tidak pernah diserahkan kepada rangkaian iklan. Aplikasi tidak mempunyai kod yang memasukkannya ke dalam permintaan iklan.</li>
 <li><strong>Persetujuan penjejakan</strong> — kali pertama anda membuka aplikasi, gesaan <strong>App Tracking Transparency</strong> daripada Apple muncul sekali. Anda boleh menolak dan kekal menggunakan semua ciri; anda akan melihat iklan yang tidak diperibadikan. Anda boleh mengubahnya pada bila-bila masa di <em>Seting → Privasi &amp; Keselamatan → Penjejakan</em>.</li>
@@ -1846,7 +1966,7 @@
 <li><strong>Iklan kekal walaupun dengan langganan.</strong> Kedua-dua tempat hanya memaparkan iklan apabila anda mengetiknya, jadi langganan (Buka semua) bukan produk pembuang iklan.</li>
 </ul>
 
-<p>Rangkaian iklan mengendalikan data mengikut dasar mereka sendiri — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Dasar Privasi Unity/LevelPlay</a>.</p>
+<p>Rangkaian iklan mengendalikan data mengikut dasar mereka sendiri — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Dasar Privasi Unity/LevelPlay</a> · <a href="https://liftoff.io/privacy-policy/">Dasar Privasi Liftoff</a> · <a href="https://www.facebook.com/privacy/policy/">Dasar Privasi Meta</a>.</p>
 
 <p><strong>Pembayaran dikendalikan oleh App Store.</strong> Semua yang dijual dalam aplikasi (pek haiwan peliharaan, Buka semua, snek, langganan) dibayar melalui App Store. Butiran kad dihantar terus kepada Apple — <strong>kami tidak pernah melihat, menerima atau menyimpannya.</strong> Aplikasi hanya mengetahui sama ada sesuatu telah dibeli dan teks harga yang diberikan oleh kedai.</p>
 
@@ -1871,7 +1991,17 @@
 <table>
 <tr><th>Penerima</th><th>Item</th><th>Tujuan</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) dan rangkaian iklan yang diantara</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) dan rangkaian iklan yang diantara</td>
+  <td>Pengecam pengiklanan, versi peranti / OS / aplikasi, anggaran negara dan bahasa</td>
+  <td>Memaparkan iklan dan mengukur prestasi</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>Pengecam pengiklanan, versi peranti / OS / aplikasi, anggaran negara dan bahasa</td>
+  <td>Memaparkan iklan dan mengukur prestasi</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>Pengecam pengiklanan, versi peranti / OS / aplikasi, anggaran negara dan bahasa</td>
   <td>Memaparkan iklan dan mengukur prestasi</td>
 </tr>
@@ -1978,7 +2108,7 @@
 <ul>
 <li><strong>Quảng cáo chỉ xuất hiện ở hai nơi</strong> — một <strong>quảng cáo hình vuông</strong> trên màn hình câu cá, mở ra khi <strong>bạn chạm vào "Cá"</strong> ở tab Lớn lên (tự đóng sau 4 giây và tặng bạn cá), và một <strong>video có thưởng</strong> chỉ phát <strong>khi bạn chạm vào "Thịt"</strong>. Không có quảng cáo bật lên khi mở ứng dụng hay khi chuyển màn hình, và không có biểu ngữ ở cuối màn hình.</li>
 <li><strong>Không có tính năng nào bị khóa sau quảng cáo.</strong> Cá và Thịt chỉ là cách tùy chọn để cộng thêm thời gian cấp độ; bạn có thể dùng mọi màn hình và tính năng mà không cần chúng. Cá và Thịt chỉ được tặng khi quảng cáo hiển thị: Cá sau khi quảng cáo vuông hiện 4 giây, Thịt khi bạn xem hết quảng cáo. Nếu quảng cáo không tải được, bạn sẽ không nhận được món ăn và có thể chạm lại ngay.</li>
-<li><strong>Mạng quảng cáo</strong> — quảng cáo được phân phối qua <strong>LevelPlay (trước đây là ironSource)</strong> của Unity, có thể làm trung gian cho các mạng quảng cáo khác (như Unity Ads, Liftoff và Meta Audience Network).</li>
+<li><strong>Mạng quảng cáo</strong> — quảng cáo được phân phối qua <strong>LevelPlay (trước đây là ironSource)</strong> của Unity, có thể làm trung gian cho các mạng quảng cáo khác. Các mạng quảng cáo do LevelPlay trung gian bao gồm Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.).</li>
 <li><strong>Những gì họ đọc</strong> — các mạng quảng cáo đọc <strong>mã định danh quảng cáo</strong> của thiết bị (IDFA/IDFV), quốc gia và ngôn ngữ ước tính, kiểu máy, phiên bản hệ điều hành và phiên bản ứng dụng. <strong>Họ đọc trực tiếp từ thiết bị của bạn; chúng tôi không bao giờ nhận hay lưu giữ chúng.</strong></li>
 <li><strong>Những gì không được gửi</strong> — các giá trị ở mục 2 (thú cưng, cấp độ, cài đặt, nhật ký cho ăn của bạn) không bao giờ được chuyển cho các mạng quảng cáo. Ứng dụng không có mã nào đưa chúng vào yêu cầu quảng cáo.</li>
 <li><strong>Đồng ý theo dõi</strong> — lần đầu bạn mở ứng dụng, lời nhắc <strong>App Tracking Transparency</strong> của Apple sẽ xuất hiện một lần. Bạn có thể từ chối mà vẫn giữ mọi tính năng; thay vào đó bạn sẽ thấy quảng cáo không được cá nhân hóa. Bạn có thể thay đổi bất cứ lúc nào trong <em>Cài đặt → Quyền riêng tư &amp; Bảo mật → Theo dõi</em>.</li>
@@ -1986,7 +2116,7 @@
 <li><strong>Quảng cáo vẫn còn khi đăng ký.</strong> Cả hai nơi chỉ hiện quảng cáo khi bạn chạm vào, nên gói đăng ký (Mở khóa tất cả) không phải là sản phẩm xóa quảng cáo.</li>
 </ul>
 
-<p>Các mạng quảng cáo xử lý dữ liệu theo chính sách riêng của họ — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Chính sách quyền riêng tư của Unity/LevelPlay</a>.</p>
+<p>Các mạng quảng cáo xử lý dữ liệu theo chính sách riêng của họ — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Chính sách quyền riêng tư của Unity/LevelPlay</a> · <a href="https://liftoff.io/privacy-policy/">Chính sách quyền riêng tư của Liftoff</a> · <a href="https://www.facebook.com/privacy/policy/">Chính sách quyền riêng tư của Meta</a>.</p>
 
 <p><strong>Thanh toán do App Store xử lý.</strong> Mọi thứ được bán trong ứng dụng (gói thú cưng, Mở khóa tất cả, đồ ăn vặt, gói đăng ký) đều được thanh toán qua App Store. Thông tin thẻ được gửi thẳng cho Apple — <strong>chúng tôi không bao giờ xem, nhận hay lưu giữ chúng.</strong> Ứng dụng chỉ biết một món đã được mua hay chưa và chuỗi giá do cửa hàng cung cấp.</p>
 
@@ -2011,7 +2141,17 @@
 <table>
 <tr><th>Bên nhận</th><th>Hạng mục</th><th>Mục đích</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) và các mạng quảng cáo trung gian</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) và các mạng quảng cáo trung gian</td>
+  <td>Mã định danh quảng cáo, phiên bản thiết bị / hệ điều hành / ứng dụng, quốc gia và ngôn ngữ ước tính</td>
+  <td>Hiển thị quảng cáo và đo lường hiệu quả</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>Mã định danh quảng cáo, phiên bản thiết bị / hệ điều hành / ứng dụng, quốc gia và ngôn ngữ ước tính</td>
+  <td>Hiển thị quảng cáo và đo lường hiệu quả</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>Mã định danh quảng cáo, phiên bản thiết bị / hệ điều hành / ứng dụng, quốc gia và ngôn ngữ ước tính</td>
   <td>Hiển thị quảng cáo và đo lường hiệu quả</td>
 </tr>
@@ -2118,7 +2258,7 @@
 <ul>
 <li><strong>โฆษณาปรากฏเพียงสองตำแหน่งเท่านั้น</strong> — <strong>โฆษณาสี่เหลี่ยม</strong>บนหน้าจอตกปลาที่เปิดขึ้นเมื่อ<strong>คุณแตะ "ปลา"</strong> ในแท็บเติบโต (ปิดเองหลังจาก 4 วินาทีและให้ปลาแก่คุณ) และ<strong>วิดีโอรับรางวัล</strong>ที่เล่น<strong>เฉพาะเมื่อคุณแตะ "เนื้อย่าง"</strong> ไม่มีโฆษณาที่เด้งขึ้นตอนเปิดแอปหรือระหว่างเปลี่ยนหน้าจอ และไม่มีแบนเนอร์ที่ด้านล่างของหน้าจอ</li>
 <li><strong>ไม่มีฟีเจอร์ใดถูกล็อกไว้หลังโฆษณา</strong> ปลาและเนื้อย่างเป็นเพียงทางเลือกในการเพิ่มเวลาเลเวล คุณสามารถใช้ทุกหน้าจอและทุกฟีเจอร์ได้โดยไม่ต้องใช้สิ่งเหล่านี้ ปลาและเนื้อย่างจะได้รับเมื่อโฆษณาแสดงเท่านั้น ปลาหลังจากโฆษณาสี่เหลี่ยมแสดงครบ 4 วินาที และเนื้อย่างเมื่อดูโฆษณาจนจบ หากโหลดโฆษณาไม่สำเร็จจะไม่ได้รับอาหาร และแตะใหม่ได้ทันที</li>
-<li><strong>เครือข่ายโฆษณา</strong> — โฆษณาให้บริการผ่าน <strong>LevelPlay (เดิมชื่อ ironSource)</strong> ของ Unity ซึ่งอาจเป็นตัวกลางให้เครือข่ายโฆษณาอื่น (เช่น Unity Ads, Liftoff และ Meta Audience Network)</li>
+<li><strong>เครือข่ายโฆษณา</strong> — โฆษณาให้บริการผ่าน <strong>LevelPlay (เดิมชื่อ ironSource)</strong> ของ Unity ซึ่งอาจเป็นตัวกลางให้เครือข่ายโฆษณาอื่น เครือข่ายโฆษณาที่ LevelPlay เป็นตัวกลางให้ ได้แก่ Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.) ด้วย</li>
 <li><strong>สิ่งที่อ่าน</strong> — เครือข่ายโฆษณาอ่าน<strong>ตัวระบุโฆษณา</strong>ของอุปกรณ์ (IDFA/IDFV) ประเทศและภาษาโดยประมาณ รุ่นอุปกรณ์ เวอร์ชัน OS และเวอร์ชันแอป <strong>เครือข่ายโฆษณาอ่านค่าเหล่านี้โดยตรงจากอุปกรณ์ของคุณ เราไม่เคยได้รับหรือเก็บค่าเหล่านี้</strong></li>
 <li><strong>สิ่งที่ไม่ได้ส่ง</strong> — ค่าในข้อ 2 (สัตว์เลี้ยง เลเวล การตั้งค่า บันทึกการให้อาหารของคุณ) จะไม่ถูกส่งต่อให้เครือข่ายโฆษณา แอปไม่มีโค้ดที่ใส่ค่าเหล่านี้ลงในคำขอโฆษณา</li>
 <li><strong>ความยินยอมในการติดตาม</strong> — เมื่อคุณเปิดแอปครั้งแรก หน้าต่าง <strong>App Tracking Transparency</strong> ของ Apple จะปรากฏหนึ่งครั้ง คุณสามารถปฏิเสธและยังใช้ทุกฟีเจอร์ได้ โดยจะเห็นโฆษณาที่ไม่ได้ปรับให้เหมาะกับคุณแทน คุณเปลี่ยนการตั้งค่านี้ได้ทุกเมื่อที่ <em>การตั้งค่า → ความเป็นส่วนตัวและความปลอดภัย → การติดตาม</em></li>
@@ -2126,7 +2266,7 @@
 <li><strong>โฆษณายังคงอยู่แม้สมัครรับข้อมูล</strong> ทั้งสองตำแหน่งจะแสดงโฆษณาเฉพาะเมื่อคุณแตะเท่านั้น การสมัครรับข้อมูล (ปลดล็อกทั้งหมด) จึงไม่ใช่ผลิตภัณฑ์สำหรับนำโฆษณาออก</li>
 </ul>
 
-<p>เครือข่ายโฆษณาจัดการข้อมูลตามนโยบายของตนเอง — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">นโยบายความเป็นส่วนตัวของ Unity/LevelPlay</a></p>
+<p>เครือข่ายโฆษณาจัดการข้อมูลตามนโยบายของตนเอง — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">นโยบายความเป็นส่วนตัวของ Unity/LevelPlay</a> · <a href="https://liftoff.io/privacy-policy/">นโยบายความเป็นส่วนตัวของ Liftoff</a> · <a href="https://www.facebook.com/privacy/policy/">นโยบายความเป็นส่วนตัวของ Meta</a></p>
 
 <p><strong>การชำระเงินดำเนินการโดย App Store</strong> ทุกสิ่งที่ขายในแอป (แพ็กสัตว์เลี้ยง ปลดล็อกทั้งหมด ขนม การสมัครรับข้อมูล) ชำระผ่าน App Store รายละเอียดบัตรจะส่งตรงไปยัง Apple — <strong>เราไม่เคยเห็น ได้รับ หรือเก็บข้อมูลเหล่านั้น</strong> แอปทราบเพียงว่ามีการซื้อหรือไม่ และข้อความราคาที่สโตร์ให้มา</p>
 
@@ -2151,7 +2291,17 @@
 <table>
 <tr><th>ผู้รับ</th><th>รายการ</th><th>วัตถุประสงค์</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) และเครือข่ายโฆษณาที่เป็นตัวกลาง</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) และเครือข่ายโฆษณาที่เป็นตัวกลาง</td>
+  <td>ตัวระบุโฆษณา, เวอร์ชันอุปกรณ์ / OS / แอป, ประเทศและภาษาโดยประมาณ</td>
+  <td>แสดงโฆษณาและวัดผลการทำงาน</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>ตัวระบุโฆษณา, เวอร์ชันอุปกรณ์ / OS / แอป, ประเทศและภาษาโดยประมาณ</td>
+  <td>แสดงโฆษณาและวัดผลการทำงาน</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>ตัวระบุโฆษณา, เวอร์ชันอุปกรณ์ / OS / แอป, ประเทศและภาษาโดยประมาณ</td>
   <td>แสดงโฆษณาและวัดผลการทำงาน</td>
 </tr>
@@ -2258,7 +2408,7 @@
 <ul>
 <li><strong>विज्ञापन केवल दो जगह दिखते हैं</strong> — बढ़त टैब पर <strong>आपके "मछली" टैप करने पर</strong> खुलने वाली मछली पकड़ने की स्क्रीन पर एक <strong>चौकोर विज्ञापन</strong> (यह 4 सेकंड बाद अपने-आप बंद हो जाता है और आपको मछली देता है), और एक <strong>रिवॉर्ड वीडियो</strong> जो <strong>केवल आपके "मांस" टैप करने पर</strong> चलता है। ऐप खुलने पर या स्क्रीन बदलते समय अपने-आप आने वाले विज्ञापन नहीं हैं, और स्क्रीन के नीचे कोई बैनर नहीं है।</li>
 <li><strong>कोई भी सुविधा विज्ञापनों के पीछे लॉक नहीं है।</strong> मछली और मांस लेवल समय बढ़ाने के केवल वैकल्पिक तरीके हैं; आप इनके बिना हर स्क्रीन और सुविधा का उपयोग कर सकते हैं। मछली और मांस केवल तब मिलते हैं जब उनका विज्ञापन दिखे: मछली चौकोर विज्ञापन के 4 सेकंड दिखने के बाद, और मांस विज्ञापन अंत तक देखने के बाद। विज्ञापन लोड न हो तो भोजन नहीं मिलता, और आप बिना इंतज़ार दोबारा टैप कर सकते हैं।</li>
-<li><strong>विज्ञापन नेटवर्क</strong> — विज्ञापन Unity के <strong>LevelPlay (पहले ironSource)</strong> के ज़रिए दिखाए जाते हैं, जो अन्य विज्ञापन नेटवर्क (जैसे Unity Ads, Liftoff और Meta Audience Network) की मध्यस्थता कर सकता है।</li>
+<li><strong>विज्ञापन नेटवर्क</strong> — विज्ञापन Unity के <strong>LevelPlay (पहले ironSource)</strong> के ज़रिए दिखाए जाते हैं, जो अन्य विज्ञापन नेटवर्क की मध्यस्थता कर सकता है। LevelPlay द्वारा मध्यस्थ किए जाने वाले विज्ञापन नेटवर्क में Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.) शामिल हैं।</li>
 <li><strong>वे क्या पढ़ते हैं</strong> — विज्ञापन नेटवर्क डिवाइस का <strong>विज्ञापन पहचानकर्ता</strong> (IDFA/IDFV), अनुमानित देश और भाषा, डिवाइस मॉडल, OS संस्करण और ऐप संस्करण पढ़ते हैं। <strong>वे इन्हें सीधे आपके डिवाइस से पढ़ते हैं; हम इन्हें न कभी प्राप्त करते हैं, न रखते हैं।</strong></li>
 <li><strong>क्या नहीं भेजा जाता</strong> — अनुभाग 2 के मान (आपका पेट, लेवल, सेटिंग्ज़, खिलाने का रिकॉर्ड) कभी विज्ञापन नेटवर्क को नहीं दिए जाते। ऐप में ऐसा कोई कोड नहीं है जो इन्हें विज्ञापन अनुरोध में डाले।</li>
 <li><strong>ट्रैकिंग सहमति</strong> — पहली बार ऐप खोलने पर Apple का <strong>App Tracking Transparency</strong> संकेत एक बार दिखता है। आप मना कर सकते हैं और हर सुविधा का उपयोग जारी रख सकते हैं; इसके बजाय आपको गैर-वैयक्तिकृत विज्ञापन दिखेंगे। आप इसे कभी भी <em>सेटिंग्ज़ → गोपनीयता और सुरक्षा → ट्रैकिंग</em> में बदल सकते हैं।</li>
@@ -2266,7 +2416,7 @@
 <li><strong>सब्सक्रिप्शन के साथ भी विज्ञापन रहते हैं।</strong> दोनों जगह विज्ञापन केवल तभी दिखते हैं जब आप टैप करते हैं, इसलिए सब्सक्रिप्शन (सब अनलॉक करें) विज्ञापन हटाने वाला उत्पाद नहीं है।</li>
 </ul>
 
-<p>विज्ञापन नेटवर्क डेटा को अपनी नीतियों के अनुसार संभालते हैं — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay गोपनीयता नीति</a>।</p>
+<p>विज्ञापन नेटवर्क डेटा को अपनी नीतियों के अनुसार संभालते हैं — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay गोपनीयता नीति</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff गोपनीयता नीति</a> · <a href="https://www.facebook.com/privacy/policy/">Meta गोपनीयता नीति</a>।</p>
 
 <p><strong>भुगतान App Store द्वारा संभाले जाते हैं।</strong> ऐप में बिकने वाली हर चीज़ (पेट पैक, सब अनलॉक करें, स्नैक्स, सब्सक्रिप्शन) का भुगतान App Store के ज़रिए होता है। कार्ड का विवरण सीधे Apple को जाता है — <strong>हम उसे न कभी देखते हैं, न प्राप्त करते हैं, न रखते हैं।</strong> ऐप को केवल यह पता चलता है कि कुछ ख़रीदा गया या नहीं, और स्टोर द्वारा दिया गया मूल्य पाठ।</p>
 
@@ -2291,7 +2441,17 @@
 <table>
 <tr><th>प्राप्तकर्ता</th><th>आइटम</th><th>उद्देश्य</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) और मध्यस्थ विज्ञापन नेटवर्क</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) और मध्यस्थ विज्ञापन नेटवर्क</td>
+  <td>विज्ञापन पहचानकर्ता, डिवाइस / OS / ऐप संस्करण, अनुमानित देश और भाषा</td>
+  <td>विज्ञापन दिखाना और प्रदर्शन मापना</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>विज्ञापन पहचानकर्ता, डिवाइस / OS / ऐप संस्करण, अनुमानित देश और भाषा</td>
+  <td>विज्ञापन दिखाना और प्रदर्शन मापना</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>विज्ञापन पहचानकर्ता, डिवाइस / OS / ऐप संस्करण, अनुमानित देश और भाषा</td>
   <td>विज्ञापन दिखाना और प्रदर्शन मापना</td>
 </tr>
@@ -2398,7 +2558,7 @@
 <ul>
 <li><strong>تظهر الإعلانات في موضعين فقط</strong> — <strong>إعلان مربّع</strong> على شاشة الصيد التي تُفتح عندما <strong>تنقر على «سمكة»</strong> في تبويب النمو (يُغلق تلقائيًا بعد 4 ثوانٍ ويمنحك السمكة)، و<strong>فيديو بمكافأة</strong> لا يُعرض <strong>إلا عندما تنقر على «لحم»</strong>. لا توجد إعلانات تظهر عند فتح التطبيق أو بين الشاشات، ولا يوجد شريط إعلاني أسفل الشاشة.</li>
 <li><strong>لا توجد ميزة مقفلة خلف الإعلانات.</strong> السمكة واللحم مجرد طريقتين اختياريتين لإضافة وقت إلى المستوى؛ ويمكنك استخدام كل شاشة وميزة بدونهما. لا تحصل على السمكة واللحم إلا عند ظهور إعلانهما: السمكة بعد ظهور الإعلان المربع لمدة 4 ثوانٍ، واللحم بعد مشاهدة إعلانه حتى النهاية. وإذا تعذّر تحميل الإعلان فلن تحصل على الطعام، ويمكنك النقر مجددًا دون انتظار.</li>
-<li><strong>شبكة الإعلانات</strong> — تُعرض الإعلانات عبر <strong>LevelPlay (ironSource سابقًا)</strong> التابعة لـ Unity، والتي قد تتوسط لشبكات إعلانات أخرى (مثل Unity Ads، Liftoff وMeta Audience Network).</li>
+<li><strong>شبكة الإعلانات</strong> — تُعرض الإعلانات عبر <strong>LevelPlay (ironSource سابقًا)</strong> التابعة لـ Unity، والتي قد تتوسط لشبكات إعلانات أخرى. من شبكات الإعلانات التي يتوسّط لها LevelPlay: Unity Ads، Liftoff Monetize، Meta Audience Network (Meta Platforms, Inc.).</li>
 <li><strong>ما تقرؤه</strong> — تقرأ شبكات الإعلانات <strong>معرّف الإعلانات</strong> الخاص بالجهاز (IDFA/IDFV)، والبلد واللغة التقريبيين، وطراز الجهاز، وإصدار نظام التشغيل، وإصدار التطبيق. <strong>تقرؤها مباشرةً من جهازك؛ ونحن لا نتلقاها ولا نحتفظ بها أبدًا.</strong></li>
 <li><strong>ما لا يُرسل</strong> — القيم الواردة في القسم 2 (حيوانك الأليف، والمستويات، والإعدادات، وسجل الإطعام) لا تُمرَّر أبدًا إلى شبكات الإعلانات. ولا يحتوي التطبيق على أي شيفرة تضعها في طلب إعلان.</li>
 <li><strong>الموافقة على التتبع</strong> — عند فتح التطبيق لأول مرة، تظهر نافذة <strong>App Tracking Transparency</strong> من Apple مرة واحدة. يمكنك الرفض والاحتفاظ بجميع الميزات؛ وستظهر لك إعلانات غير مخصّصة بدلًا من ذلك. ويمكنك تغيير ذلك في أي وقت من <em>الإعدادات ← الخصوصية والأمن ← التتبع</em>.</li>
@@ -2406,7 +2566,7 @@
 <li><strong>تبقى الإعلانات مع الاشتراك.</strong> لا يعرض الموضعان إعلانًا إلا عندما تنقر عليهما، لذا فإن الاشتراك (افتح كل شيء) ليس منتجًا لإزالة الإعلانات.</li>
 </ul>
 
-<p>تتعامل شبكات الإعلانات مع البيانات وفق سياساتها الخاصة — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">سياسة الخصوصية لـ Unity/LevelPlay</a>.</p>
+<p>تتعامل شبكات الإعلانات مع البيانات وفق سياساتها الخاصة — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">سياسة الخصوصية لـ Unity/LevelPlay</a> · <a href="https://liftoff.io/privacy-policy/">سياسة الخصوصية لـ Liftoff</a> · <a href="https://www.facebook.com/privacy/policy/">سياسة الخصوصية لـ Meta</a>.</p>
 
 <p><strong>يتولى App Store معالجة المدفوعات.</strong> كل ما يُباع داخل التطبيق (حزم الحيوانات الأليفة، وافتح كل شيء، والوجبات الخفيفة، والاشتراكات) يُدفع عبر App Store. تذهب بيانات البطاقة مباشرةً إلى Apple — <strong>نحن لا نراها ولا نتلقاها ولا نحتفظ بها أبدًا.</strong> لا يعرف التطبيق إلا ما إذا تم شراء شيء ما ونص السعر الذي يوفّره المتجر.</p>
 
@@ -2431,7 +2591,17 @@
 <table>
 <tr><th>الجهة المستلِمة</th><th>البنود</th><th>الغرض</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) وشبكات الإعلانات التي تتوسط لها</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) وشبكات الإعلانات التي تتوسط لها</td>
+  <td>معرّف الإعلانات، وإصدار الجهاز / نظام التشغيل / التطبيق، والبلد واللغة التقريبيان</td>
+  <td>عرض الإعلانات وقياس الأداء</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>معرّف الإعلانات، وإصدار الجهاز / نظام التشغيل / التطبيق، والبلد واللغة التقريبيان</td>
+  <td>عرض الإعلانات وقياس الأداء</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>معرّف الإعلانات، وإصدار الجهاز / نظام التشغيل / التطبيق، والبلد واللغة التقريبيان</td>
   <td>عرض الإعلانات وقياس الأداء</td>
 </tr>
@@ -2538,7 +2708,7 @@
 <ul>
 <li><strong>广告只出现在两个地方</strong> — 在“成长”标签中<strong>您点按“鱼”</strong>时打开的钓鱼画面上的<strong>方形广告</strong>（4 秒后自动关闭并给您鱼），以及<strong>仅在您点按“肉”时</strong>播放的<strong>激励视频</strong>。没有启动时或切换画面时弹出的广告，屏幕底部也没有横幅广告。</li>
 <li><strong>没有任何功能被广告锁住。</strong>鱼和肉是增加等级时间的可选方式；不使用它们也可以使用所有画面和功能。鱼和肉只在对应广告展示后发放 — 鱼在方形广告显示 4 秒后发放，肉在您看完其广告后发放。如果广告加载失败，则不会发放食物，您可以立即再次点按。</li>
-<li><strong>广告网络</strong> — 广告通过 Unity 的 <strong>LevelPlay（原 ironSource）</strong>投放，它可能会聚合其他广告网络（例如 Unity Ads、Liftoff 和 Meta Audience Network）。</li>
+<li><strong>广告网络</strong> — 广告通过 Unity 的 <strong>LevelPlay（原 ironSource）</strong>投放，它可能会聚合其他广告网络。LevelPlay 所聚合的广告网络包括 Unity Ads、Liftoff Monetize、Meta Audience Network（Meta Platforms, Inc.）。</li>
 <li><strong>读取的内容</strong> — 广告网络会读取设备的<strong>广告标识符</strong>（IDFA/IDFV）、大致的国家和语言、设备型号、操作系统版本和应用版本。<strong>这些内容由它们直接从您的设备读取；我们绝不会接收或保存。</strong></li>
 <li><strong>不会发送的内容</strong> — 第 2 条中的值（您的宠物、等级、设置、喂食记录）绝不会传给广告网络。应用中没有任何把它们放进广告请求的代码。</li>
 <li><strong>跟踪同意</strong> — 您首次打开应用时，Apple 的<strong>应用跟踪透明度</strong>提示会出现一次。您可以拒绝并保留所有功能；届时您将看到非个性化广告。您可以随时在<em>设置 → 隐私与安全性 → 跟踪</em>中更改。</li>
@@ -2546,7 +2716,7 @@
 <li><strong>订阅后广告依然保留。</strong>两个地方都只在您点按时才展示广告，因此订阅（全部解锁）不是去除广告的商品。</li>
 </ul>
 
-<p>广告网络按照其各自的政策处理数据 — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay 隐私政策</a>。</p>
+<p>广告网络按照其各自的政策处理数据 — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay 隐私政策</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff 隐私政策</a> · <a href="https://www.facebook.com/privacy/policy/">Meta 隐私政策</a>。</p>
 
 <p><strong>付款由 App Store 处理。</strong>应用内出售的所有内容（宠物包、全部解锁、零食、订阅）都通过 App Store 付款。银行卡信息直接发送给 Apple — <strong>我们绝不会看到、接收或保存。</strong>应用只会得知是否已购买以及商店提供的价格文字。</p>
 
@@ -2571,7 +2741,17 @@
 <table>
 <tr><th>接收方</th><th>项目</th><th>目的</th></tr>
 <tr>
-  <td>Unity Technologies（LevelPlay / ironSource）及其聚合的广告网络</td>
+  <td>Unity Technologies（LevelPlay / ironSource · Unity Ads）及其聚合的广告网络</td>
+  <td>广告标识符、设备 / 操作系统 / 应用版本、大致的国家和语言</td>
+  <td>展示广告和衡量效果</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>广告标识符、设备 / 操作系统 / 应用版本、大致的国家和语言</td>
+  <td>展示广告和衡量效果</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>广告标识符、设备 / 操作系统 / 应用版本、大致的国家和语言</td>
   <td>展示广告和衡量效果</td>
 </tr>
@@ -2680,7 +2860,7 @@
 <ul>
 <li><strong>বিজ্ঞাপন শুধু দুটি জায়গায় আসে</strong> — বৃদ্ধি ট্যাবে <strong>আপনি "মাছ" ট্যাপ করলে</strong> যে মাছ ধরার স্ক্রিন খোলে তাতে একটি <strong>বর্গাকার বিজ্ঞাপন</strong> (এটি 4 সেকেন্ড পর নিজে বন্ধ হয়ে আপনাকে মাছ দেয়), এবং একটি <strong>পুরস্কারযুক্ত ভিডিও</strong> যা <strong>শুধু আপনি "মাংস" ট্যাপ করলে</strong> চলে। অ্যাপ খোলার সময় বা স্ক্রিনের মাঝে কোনো বিজ্ঞাপন ভেসে ওঠে না, এবং স্ক্রিনের নিচে কোনো ব্যানার নেই।</li>
 <li><strong>কোনো ফিচার বিজ্ঞাপনের পেছনে আটকানো নেই।</strong> মাছ ও মাংস লেভেলের সময় বাড়ানোর ঐচ্ছিক উপায়; এগুলো ছাড়াই আপনি প্রতিটি স্ক্রিন ও ফিচার ব্যবহার করতে পারেন। মাছ ও মাংস শুধু তাদের বিজ্ঞাপন দেখানো হলেই দেওয়া হয় — মাছ বর্গাকার বিজ্ঞাপন 4 সেকেন্ড স্ক্রিনে থাকার পর, আর মাংস তার বিজ্ঞাপন শেষ পর্যন্ত দেখার পর। বিজ্ঞাপন লোড না হলে কোনো খাবার দেওয়া হয় না, এবং আপনি সঙ্গে সঙ্গে আবার ট্যাপ করতে পারেন।</li>
-<li><strong>বিজ্ঞাপন নেটওয়ার্ক</strong> — বিজ্ঞাপন Unity-র <strong>LevelPlay (পূর্বে ironSource)</strong>-এর মাধ্যমে পরিবেশিত হয়, যা অন্যান্য বিজ্ঞাপন নেটওয়ার্কের (যেমন Unity Ads, Liftoff ও Meta Audience Network) মধ্যস্থতা করতে পারে।</li>
+<li><strong>বিজ্ঞাপন নেটওয়ার্ক</strong> — বিজ্ঞাপন Unity-র <strong>LevelPlay (পূর্বে ironSource)</strong>-এর মাধ্যমে পরিবেশিত হয়, যা অন্যান্য বিজ্ঞাপন নেটওয়ার্কের মধ্যস্থতা করতে পারে। LevelPlay যে বিজ্ঞাপন নেটওয়ার্কগুলোর মধ্যস্থতা করে, তার মধ্যে Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.) অন্তর্ভুক্ত।</li>
 <li><strong>তারা যা পড়ে</strong> — বিজ্ঞাপন নেটওয়ার্কগুলো ডিভাইসের <strong>বিজ্ঞাপন শনাক্তকারী</strong> (IDFA/IDFV), আনুমানিক দেশ ও ভাষা, ডিভাইস মডেল, OS সংস্করণ ও অ্যাপ সংস্করণ পড়ে। <strong>তারা এগুলো সরাসরি আপনার ডিভাইস থেকে পড়ে; আমরা কখনো এগুলো গ্রহণ বা সংরক্ষণ করি না।</strong></li>
 <li><strong>যা পাঠানো হয় না</strong> — অনুচ্ছেদ 2-এর মানগুলো (আপনার পোষা প্রাণী, লেভেল, সেটিংস, খাওয়ানোর রেকর্ড) কখনো বিজ্ঞাপন নেটওয়ার্কে দেওয়া হয় না। অ্যাপে এমন কোনো কোড নেই যা এগুলো বিজ্ঞাপন অনুরোধে রাখে।</li>
 <li><strong>ট্র্যাকিং সম্মতি</strong> — প্রথমবার অ্যাপ খুললে Apple-এর <strong>App Tracking Transparency</strong> বার্তা একবার দেখা যায়। আপনি প্রত্যাখ্যান করেও প্রতিটি ফিচার রাখতে পারেন; তার বদলে অ-ব্যক্তিগতকৃত বিজ্ঞাপন দেখবেন। আপনি যেকোনো সময় <em>Settings → Privacy &amp; Security → Tracking</em>-এ এটি বদলাতে পারেন।</li>
@@ -2688,7 +2868,7 @@
 <li><strong>সাবস্ক্রিপশনেও বিজ্ঞাপন থাকে।</strong> দুটি জায়গাই শুধু আপনি ট্যাপ করলে বিজ্ঞাপন দেখায়, তাই সাবস্ক্রিপশন (সব আনলক) বিজ্ঞাপন সরানোর পণ্য নয়।</li>
 </ul>
 
-<p>বিজ্ঞাপন নেটওয়ার্কগুলো নিজেদের নীতি অনুযায়ী তথ্য পরিচালনা করে — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay গোপনীয়তা নীতি</a>।</p>
+<p>বিজ্ঞাপন নেটওয়ার্কগুলো নিজেদের নীতি অনুযায়ী তথ্য পরিচালনা করে — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay গোপনীয়তা নীতি</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff গোপনীয়তা নীতি</a> · <a href="https://www.facebook.com/privacy/policy/">Meta গোপনীয়তা নীতি</a>।</p>
 
 <p><strong>পেমেন্ট App Store পরিচালনা করে।</strong> অ্যাপে বিক্রি হওয়া সবকিছু (পোষা প্রাণীর প্যাক, সব আনলক, স্ন্যাকস, সাবস্ক্রিপশন) App Store-এর মাধ্যমে পরিশোধ করা হয়। কার্ডের বিবরণ সরাসরি Apple-এর কাছে যায় — <strong>আমরা কখনো সেগুলো দেখি না, গ্রহণ করি না বা সংরক্ষণ করি না।</strong> অ্যাপ শুধু জানে কিছু কেনা হয়েছে কি না এবং স্টোরের দেওয়া মূল্যের লেখা।</p>
 
@@ -2713,7 +2893,17 @@
 <table>
 <tr><th>প্রাপক</th><th>বিষয়</th><th>উদ্দেশ্য</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) ও মধ্যস্থতাকৃত বিজ্ঞাপন নেটওয়ার্ক</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) ও মধ্যস্থতাকৃত বিজ্ঞাপন নেটওয়ার্ক</td>
+  <td>বিজ্ঞাপন শনাক্তকারী, ডিভাইস / OS / অ্যাপ সংস্করণ, আনুমানিক দেশ ও ভাষা</td>
+  <td>বিজ্ঞাপন দেখানো ও কার্যকারিতা পরিমাপ</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>বিজ্ঞাপন শনাক্তকারী, ডিভাইস / OS / অ্যাপ সংস্করণ, আনুমানিক দেশ ও ভাষা</td>
+  <td>বিজ্ঞাপন দেখানো ও কার্যকারিতা পরিমাপ</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>বিজ্ঞাপন শনাক্তকারী, ডিভাইস / OS / অ্যাপ সংস্করণ, আনুমানিক দেশ ও ভাষা</td>
   <td>বিজ্ঞাপন দেখানো ও কার্যকারিতা পরিমাপ</td>
 </tr>
@@ -2820,7 +3010,7 @@
 <ul>
 <li><strong>اشتہارات صرف دو جگہوں پر آتے ہیں</strong> — مچھلی پکڑنے کی اسکرین پر ایک <strong>مربع اشتہار</strong> جو گروتھ ٹیب پر <strong>آپ کے "مچھلی" پر ٹیپ کرنے</strong> سے کھلتی ہے (یہ 4 سیکنڈ بعد خود بند ہو کر آپ کو مچھلی دے دیتا ہے)، اور ایک <strong>انعامی ویڈیو</strong> جو <strong>صرف آپ کے "گوشت" پر ٹیپ کرنے پر</strong> چلتی ہے۔ ایپ کھولتے وقت یا اسکرینوں کے درمیان کوئی اشتہار نہیں ابھرتا، اور اسکرین کے نیچے کوئی بینر نہیں ہے۔</li>
 <li><strong>کوئی فیچر اشتہارات کے پیچھے بند نہیں۔</strong> مچھلی اور گوشت لیول کا وقت بڑھانے کے اختیاری طریقے ہیں؛ آپ ان کے بغیر ہر اسکرین اور فیچر استعمال کر سکتے ہیں۔ مچھلی اور گوشت صرف تب دیے جاتے ہیں جب ان کا اشتہار دکھایا جائے — مچھلی مربع اشتہار کے 4 سیکنڈ اسکرین پر رہنے کے بعد، اور گوشت اس کا اشتہار آخر تک دیکھنے کے بعد۔ اگر اشتہار لوڈ نہ ہو تو کوئی کھانا نہیں دیا جاتا، اور آپ فوراً دوبارہ ٹیپ کر سکتے ہیں۔</li>
-<li><strong>اشتہاری نیٹ ورک</strong> — اشتہارات Unity کے <strong>LevelPlay (سابقہ ironSource)</strong> کے ذریعے دکھائے جاتے ہیں، جو دیگر اشتہاری نیٹ ورکس (جیسے Unity Ads، Liftoff اور Meta Audience Network) کی ثالثی کر سکتا ہے۔</li>
+<li><strong>اشتہاری نیٹ ورک</strong> — اشتہارات Unity کے <strong>LevelPlay (سابقہ ironSource)</strong> کے ذریعے دکھائے جاتے ہیں، جو دیگر اشتہاری نیٹ ورکس کی ثالثی کر سکتا ہے۔ LevelPlay جن اشتہاری نیٹ ورکس کی ثالثی کرتا ہے ان میں Unity Ads، Liftoff Monetize، Meta Audience Network (Meta Platforms, Inc.) شامل ہیں۔</li>
 <li><strong>وہ کیا پڑھتے ہیں</strong> — اشتہاری نیٹ ورکس آلے کا <strong>اشتہاری شناخت کنندہ</strong> (IDFA/IDFV)، تخمینی ملک اور زبان، آلے کا ماڈل، OS ورژن اور ایپ ورژن پڑھتے ہیں۔ <strong>وہ انہیں براہِ راست آپ کے آلے سے پڑھتے ہیں؛ ہم انہیں کبھی وصول یا محفوظ نہیں کرتے۔</strong></li>
 <li><strong>کیا نہیں بھیجا جاتا</strong> — سیکشن 2 کی اقدار (آپ کا پالتو، لیولز، ترتیبات، کھلانے کا ریکارڈ) کبھی اشتہاری نیٹ ورکس کو نہیں دی جاتیں۔ ایپ میں کوئی ایسا کوڈ نہیں جو انہیں اشتہاری درخواست میں ڈالے۔</li>
 <li><strong>ٹریکنگ کی رضامندی</strong> — جب آپ پہلی بار ایپ کھولتے ہیں تو Apple کا <strong>App Tracking Transparency</strong> پیغام ایک بار ظاہر ہوتا ہے۔ آپ انکار کر کے بھی ہر فیچر رکھ سکتے ہیں؛ اس کے بجائے آپ کو غیر ذاتی نوعیت کے اشتہارات دکھائی دیں گے۔ آپ اسے کسی بھی وقت <em>Settings → Privacy &amp; Security → Tracking</em> میں بدل سکتے ہیں۔</li>
@@ -2828,7 +3018,7 @@
 <li><strong>سبسکرپشن کے ساتھ بھی اشتہارات رہتے ہیں۔</strong> دونوں جگہیں صرف آپ کے ٹیپ کرنے پر اشتہار دکھاتی ہیں، اس لیے سبسکرپشن (سب کچھ ان لاک) اشتہارات ہٹانے کی پروڈکٹ نہیں ہے۔</li>
 </ul>
 
-<p>اشتہاری نیٹ ورکس ڈیٹا کو اپنی پالیسیوں کے تحت سنبھالتے ہیں — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay کی رازداری کی پالیسی</a>۔</p>
+<p>اشتہاری نیٹ ورکس ڈیٹا کو اپنی پالیسیوں کے تحت سنبھالتے ہیں — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay کی رازداری کی پالیسی</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff کی رازداری کی پالیسی</a> · <a href="https://www.facebook.com/privacy/policy/">Meta کی رازداری کی پالیسی</a>۔</p>
 
 <p><strong>ادائیگیاں App Store سنبھالتا ہے۔</strong> ایپ میں فروخت ہونے والی ہر چیز (پالتو پیکس، سب کچھ ان لاک، اسنیکس، سبسکرپشنز) کی ادائیگی App Store کے ذریعے ہوتی ہے۔ کارڈ کی تفصیلات سیدھی Apple کو جاتی ہیں — <strong>ہم انہیں کبھی نہیں دیکھتے، وصول کرتے یا محفوظ کرتے۔</strong> ایپ کو صرف یہ معلوم ہوتا ہے کہ کچھ خریدا گیا یا نہیں اور اسٹور کی فراہم کردہ قیمت کی عبارت۔</p>
 
@@ -2853,7 +3043,17 @@
 <table>
 <tr><th>وصول کنندہ</th><th>اشیاء</th><th>مقصد</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) اور ثالثی شدہ اشتہاری نیٹ ورکس</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) اور ثالثی شدہ اشتہاری نیٹ ورکس</td>
+  <td>اشتہاری شناخت کنندہ، آلہ / OS / ایپ ورژن، تخمینی ملک اور زبان</td>
+  <td>اشتہارات دکھانا اور کارکردگی ناپنا</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>اشتہاری شناخت کنندہ، آلہ / OS / ایپ ورژن، تخمینی ملک اور زبان</td>
+  <td>اشتہارات دکھانا اور کارکردگی ناپنا</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>اشتہاری شناخت کنندہ، آلہ / OS / ایپ ورژن، تخمینی ملک اور زبان</td>
   <td>اشتہارات دکھانا اور کارکردگی ناپنا</td>
 </tr>
@@ -2960,7 +3160,7 @@
 <ul>
 <li><strong>Sa dalawang lugar lamang lumalabas ang mga ad</strong> — isang <strong>parisukat na ad</strong> sa screen ng pangingisda na bumubukas kapag <strong>tina-tap ninyo ang "Isda"</strong> sa tab na Paglaki (kusa itong nagsasara pagkalipas ng 4 na segundo at ibinibigay sa inyo ang isda), at isang <strong>rewarded video</strong> na tumutugtog <strong>lamang kapag tina-tap ninyo ang "Karne"</strong>. Walang ad na sumusulpot sa pagbukas ng app o sa pagitan ng mga screen, at walang banner sa ibaba ng screen.</li>
 <li><strong>Walang feature na nakakandado sa likod ng mga ad.</strong> Ang isda at karne ay mga opsyonal na paraan para magdagdag ng oras sa level; magagamit ninyo ang bawat screen at feature nang wala ang mga ito. Ibinibigay lamang ang isda at karne kapag naipakita ang kanilang ad — ang isda matapos manatili sa screen ang parisukat na ad nang 4 na segundo, at ang karne matapos ninyong panoorin ang ad nito hanggang dulo. Kung hindi mag-load ang ad, walang pagkaing ibibigay, at maaari kayong mag-tap ulit kaagad.</li>
-<li><strong>Ad network</strong> — ang mga ad ay inihahatid sa pamamagitan ng <strong>LevelPlay (dating ironSource)</strong> ng Unity, na maaaring mamagitan sa iba pang ad network (gaya ng Unity Ads, Liftoff at Meta Audience Network).</li>
+<li><strong>Ad network</strong> — ang mga ad ay inihahatid sa pamamagitan ng <strong>LevelPlay (dating ironSource)</strong> ng Unity, na maaaring mamagitan sa iba pang ad network. Kabilang sa mga ad network na ipinamamagitan ng LevelPlay ang Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.).</li>
 <li><strong>Ang binabasa nila</strong> — binabasa ng mga ad network ang <strong>advertising identifier</strong> ng device (IDFA/IDFV), tinatayang bansa at wika, modelo ng device, bersyon ng OS at bersyon ng app. <strong>Binabasa nila ang mga ito direkta mula sa inyong device; hindi namin kailanman natatanggap o itinatago ang mga ito.</strong></li>
 <li><strong>Ang hindi ipinapadala</strong> — ang mga value sa seksyon 2 (ang inyong alaga, mga level, mga setting, talaan ng pagpapakain) ay hindi kailanman ipinapasa sa mga ad network. Walang code ang app na naglalagay ng mga ito sa isang ad request.</li>
 <li><strong>Pahintulot sa tracking</strong> — sa unang beses na buksan ninyo ang app, lalabas nang isang beses ang prompt ng <strong>App Tracking Transparency</strong> ng Apple. Maaari ninyong tanggihan at mananatili ang bawat feature; makakakita na lamang kayo ng mga hindi personalized na ad. Mababago ninyo ito anumang oras sa <em>Settings → Privacy &amp; Security → Tracking</em>.</li>
@@ -2968,7 +3168,7 @@
 <li><strong>Nananatili ang mga ad kahit may subscription.</strong> Sa parehong lugar, lumalabas lamang ang ad kapag tina-tap ninyo ang mga ito, kaya ang subscription (i-unlock lahat) ay hindi produktong nag-aalis ng ad.</li>
 </ul>
 
-<p>Pinangangasiwaan ng mga ad network ang datos ayon sa sarili nilang mga patakaran — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Patakaran sa Privacy ng Unity/LevelPlay</a>.</p>
+<p>Pinangangasiwaan ng mga ad network ang datos ayon sa sarili nilang mga patakaran — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Patakaran sa Privacy ng Unity/LevelPlay</a> · <a href="https://liftoff.io/privacy-policy/">Patakaran sa Privacy ng Liftoff</a> · <a href="https://www.facebook.com/privacy/policy/">Patakaran sa Privacy ng Meta</a>.</p>
 
 <p><strong>Ang mga pagbabayad ay pinangangasiwaan ng App Store.</strong> Lahat ng ibinebenta sa app (mga pet pack, i-unlock lahat, mga meryenda, mga subscription) ay binabayaran sa pamamagitan ng App Store. Ang mga detalye ng card ay direktang napupunta sa Apple — <strong>hindi namin kailanman nakikita, natatanggap o itinatago ang mga ito.</strong> Ang nalalaman lamang ng app ay kung may nabili at ang tekstong presyo na ibinibigay ng store.</p>
 
@@ -2993,7 +3193,17 @@
 <table>
 <tr><th>Tatanggap</th><th>Mga item</th><th>Layunin</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) at mga ad network na pinamamagitanan nito</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) at mga ad network na pinamamagitanan nito</td>
+  <td>Advertising identifier, bersyon ng device / OS / app, tinatayang bansa at wika</td>
+  <td>Pagpapakita ng mga ad at pagsukat ng resulta</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>Advertising identifier, bersyon ng device / OS / app, tinatayang bansa at wika</td>
+  <td>Pagpapakita ng mga ad at pagsukat ng resulta</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>Advertising identifier, bersyon ng device / OS / app, tinatayang bansa at wika</td>
   <td>Pagpapakita ng mga ad at pagsukat ng resulta</td>
 </tr>
@@ -3102,7 +3312,7 @@
 <ul>
 <li><strong>விளம்பரங்கள் இரண்டு இடங்களில் மட்டுமே வரும்</strong> — வளர்ச்சி தாவலில் <strong>நீங்கள் "மீன்" தட்டும்போது</strong> திறக்கும் மீன்பிடித் திரையில் ஒரு <strong>சதுர விளம்பரம்</strong> (4 விநாடிகளுக்குப் பிறகு அது தானாக மூடி உங்களுக்கு மீனைக் கொடுக்கும்), மற்றும் <strong>நீங்கள் "இறைச்சி" தட்டும்போது மட்டும்</strong> ஓடும் ஒரு <strong>வெகுமதி வீடியோ</strong>. செயலியைத் திறக்கும்போதோ திரைகளுக்கு இடையிலோ தோன்றும் விளம்பரங்கள் இல்லை, திரையின் அடியில் பேனரும் இல்லை.</li>
 <li><strong>எந்த அம்சமும் விளம்பரங்களுக்குப் பின்னால் பூட்டப்படவில்லை.</strong> மீனும் இறைச்சியும் நிலை நேரத்தைச் சேர்க்கும் விருப்ப வழிகள்; அவை இல்லாமலும் ஒவ்வொரு திரையையும் அம்சத்தையும் பயன்படுத்தலாம். அவற்றின் விளம்பரம் காட்டப்பட்டால் மட்டுமே மீனும் இறைச்சியும் கொடுக்கப்படும் — சதுர விளம்பரம் 4 விநாடிகள் திரையில் இருந்த பிறகு மீன், அதன் விளம்பரத்தை இறுதிவரை பார்த்த பிறகு இறைச்சி. விளம்பரம் ஏறவில்லை என்றால் உணவு கொடுக்கப்படாது, உடனே மீண்டும் தட்டலாம்.</li>
-<li><strong>விளம்பர நெட்வொர்க்</strong> — விளம்பரங்கள் Unity-இன் <strong>LevelPlay (முன்பு ironSource)</strong> வழியாக வழங்கப்படுகின்றன, இது பிற விளம்பர நெட்வொர்க்குகளுக்கு (Unity Ads, Liftoff, Meta Audience Network போன்றவை) இடைநிலையாகச் செயல்படலாம்.</li>
+<li><strong>விளம்பர நெட்வொர்க்</strong> — விளம்பரங்கள் Unity-இன் <strong>LevelPlay (முன்பு ironSource)</strong> வழியாக வழங்கப்படுகின்றன, இது பிற விளம்பர நெட்வொர்க்குகளுக்கு இடைநிலையாகச் செயல்படலாம். LevelPlay இடைநிலைப்படுத்தும் விளம்பர நெட்வொர்க்குகளில் Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.) அடங்கும்.</li>
 <li><strong>அவை படிப்பவை</strong> — விளம்பர நெட்வொர்க்குகள் சாதனத்தின் <strong>விளம்பர அடையாளங்காட்டி</strong> (IDFA/IDFV), தோராயமான நாடு மற்றும் மொழி, சாதன மாடல், OS பதிப்பு மற்றும் செயலிப் பதிப்பைப் படிக்கின்றன. <strong>அவை இவற்றை நேரடியாக உங்கள் சாதனத்திலிருந்து படிக்கின்றன; நாங்கள் இவற்றை ஒருபோதும் பெறுவதோ வைத்திருப்பதோ இல்லை.</strong></li>
 <li><strong>அனுப்பப்படாதவை</strong> — பிரிவு 2-இல் உள்ள மதிப்புகள் (உங்கள் செல்லப் பிராணி, நிலைகள், அமைப்புகள், உணவளிப்புப் பதிவு) ஒருபோதும் விளம்பர நெட்வொர்க்குகளுக்குக் கொடுக்கப்படுவதில்லை. அவற்றை விளம்பரக் கோரிக்கையில் வைக்கும் எந்தக் குறியீடும் செயலியில் இல்லை.</li>
 <li><strong>கண்காணிப்பு ஒப்புதல்</strong> — நீங்கள் முதன்முறை செயலியைத் திறக்கும்போது Apple-இன் <strong>App Tracking Transparency</strong> அறிவிப்பு ஒருமுறை தோன்றும். நீங்கள் மறுத்தாலும் ஒவ்வொரு அம்சமும் இருக்கும்; அதற்குப் பதிலாகத் தனிப்பயனாக்கப்படாத விளம்பரங்களைப் பார்ப்பீர்கள். இதை எப்போது வேண்டுமானாலும் <em>Settings → Privacy &amp; Security → Tracking</em>-இல் மாற்றலாம்.</li>
@@ -3110,7 +3320,7 @@
 <li><strong>சந்தாவிலும் விளம்பரங்கள் இருக்கும்.</strong> இரண்டு இடங்களும் நீங்கள் தட்டும்போது மட்டுமே விளம்பரம் காட்டுவதால், சந்தா (அனைத்தையும் திறத்தல்) விளம்பரம் நீக்கும் தயாரிப்பு அல்ல.</li>
 </ul>
 
-<p>விளம்பர நெட்வொர்க்குகள் தரவைத் தங்கள் சொந்தக் கொள்கைகளின்படி கையாளுகின்றன — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay தனியுரிமைக் கொள்கை</a>.</p>
+<p>விளம்பர நெட்வொர்க்குகள் தரவைத் தங்கள் சொந்தக் கொள்கைகளின்படி கையாளுகின்றன — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay தனியுரிமைக் கொள்கை</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff தனியுரிமைக் கொள்கை</a> · <a href="https://www.facebook.com/privacy/policy/">Meta தனியுரிமைக் கொள்கை</a>.</p>
 
 <p><strong>கட்டணங்களை App Store கையாளுகிறது.</strong> செயலியில் விற்கப்படும் அனைத்தும் (செல்லப் பிராணி தொகுப்புகள், அனைத்தையும் திறத்தல், தின்பண்டங்கள், சந்தாக்கள்) App Store வழியாகச் செலுத்தப்படுகின்றன. அட்டை விவரங்கள் நேரடியாக Apple-க்குச் செல்கின்றன — <strong>நாங்கள் அவற்றை ஒருபோதும் பார்ப்பதோ, பெறுவதோ, வைத்திருப்பதோ இல்லை.</strong> ஏதேனும் வாங்கப்பட்டதா என்பதும் ஸ்டோர் வழங்கும் விலை உரையும் மட்டுமே செயலிக்குத் தெரியும்.</p>
 
@@ -3135,7 +3345,17 @@
 <table>
 <tr><th>பெறுநர்</th><th>உருப்படிகள்</th><th>நோக்கம்</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) மற்றும் இடைநிலைப்படுத்தப்பட்ட விளம்பர நெட்வொர்க்குகள்</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) மற்றும் இடைநிலைப்படுத்தப்பட்ட விளம்பர நெட்வொர்க்குகள்</td>
+  <td>விளம்பர அடையாளங்காட்டி, சாதனம் / OS / செயலிப் பதிப்பு, தோராயமான நாடு மற்றும் மொழி</td>
+  <td>விளம்பரங்களைக் காட்டுதல் மற்றும் செயல்திறனை அளவிடுதல்</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>விளம்பர அடையாளங்காட்டி, சாதனம் / OS / செயலிப் பதிப்பு, தோராயமான நாடு மற்றும் மொழி</td>
+  <td>விளம்பரங்களைக் காட்டுதல் மற்றும் செயல்திறனை அளவிடுதல்</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>விளம்பர அடையாளங்காட்டி, சாதனம் / OS / செயலிப் பதிப்பு, தோராயமான நாடு மற்றும் மொழி</td>
   <td>விளம்பரங்களைக் காட்டுதல் மற்றும் செயல்திறனை அளவிடுதல்</td>
 </tr>
@@ -3242,7 +3462,7 @@
 <ul>
 <li><strong>ప్రకటనలు రెండు చోట్ల మాత్రమే వస్తాయి</strong> — ఎదుగుదల ట్యాబ్‌లో <strong>మీరు "చేప" నొక్కినప్పుడు</strong> తెరుచుకునే చేపలు పట్టే స్క్రీన్‌పై ఒక <strong>చతురస్ర ప్రకటన</strong> (4 సెకన్ల తర్వాత అది దానంతటదే మూసుకుని మీకు చేపను ఇస్తుంది), మరియు <strong>మీరు "మాంసం" నొక్కినప్పుడు మాత్రమే</strong> ప్లే అయ్యే ఒక <strong>రివార్డ్ వీడియో</strong>. యాప్ తెరిచినప్పుడు లేదా స్క్రీన్‌ల మధ్య పాప్ అయ్యే ప్రకటనలు లేవు, స్క్రీన్ దిగువన బ్యానర్ కూడా లేదు.</li>
 <li><strong>ఏ ఫీచర్ కూడా ప్రకటనల వెనుక లాక్ చేయబడలేదు.</strong> చేప మరియు మాంసం లెవెల్ సమయాన్ని జోడించే ఐచ్ఛిక మార్గాలు; అవి లేకుండానే ప్రతి స్క్రీన్‌ను, ఫీచర్‌ను వాడవచ్చు. వాటి ప్రకటన చూపబడినప్పుడు మాత్రమే చేప మరియు మాంసం ఇవ్వబడతాయి — చతురస్ర ప్రకటన 4 సెకన్లు స్క్రీన్‌పై ఉన్న తర్వాత చేప, దాని ప్రకటనను చివరి వరకు చూసిన తర్వాత మాంసం. ప్రకటన లోడ్ కాకపోతే ఆహారం ఇవ్వబడదు, మీరు వెంటనే మళ్లీ నొక్కవచ్చు.</li>
-<li><strong>ప్రకటన నెట్‌వర్క్</strong> — ప్రకటనలు Unity యొక్క <strong>LevelPlay (గతంలో ironSource)</strong> ద్వారా అందించబడతాయి, ఇది ఇతర ప్రకటన నెట్‌వర్క్‌లకు (Unity Ads, Liftoff, Meta Audience Network వంటివి) మధ్యవర్తిత్వం చేయవచ్చు.</li>
+<li><strong>ప్రకటన నెట్‌వర్క్</strong> — ప్రకటనలు Unity యొక్క <strong>LevelPlay (గతంలో ironSource)</strong> ద్వారా అందించబడతాయి, ఇది ఇతర ప్రకటన నెట్‌వర్క్‌లకు మధ్యవర్తిత్వం చేయవచ్చు. LevelPlay మధ్యవర్తిత్వం చేసే ప్రకటన నెట్‌వర్క్‌లలో Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.) ఉంటుంది.</li>
 <li><strong>అవి చదివేవి</strong> — ప్రకటన నెట్‌వర్క్‌లు పరికరం యొక్క <strong>ప్రకటన ఐడెంటిఫైయర్</strong> (IDFA/IDFV), సుమారు దేశం మరియు భాష, పరికర మోడల్, OS వెర్షన్ మరియు యాప్ వెర్షన్‌ను చదువుతాయి. <strong>అవి వీటిని నేరుగా మీ పరికరం నుండి చదువుతాయి; మేము వీటిని ఎప్పుడూ స్వీకరించము, ఉంచుకోము.</strong></li>
 <li><strong>పంపబడనివి</strong> — విభాగం 2లోని విలువలు (మీ పెంపుడు జంతువు, లెవెల్స్, సెట్టింగ్‌లు, తినిపించిన రికార్డు) ఎప్పుడూ ప్రకటన నెట్‌వర్క్‌లకు ఇవ్వబడవు. వాటిని ప్రకటన అభ్యర్థనలో పెట్టే కోడ్ యాప్‌లో లేదు.</li>
 <li><strong>ట్రాకింగ్ సమ్మతి</strong> — మీరు మొదటిసారి యాప్ తెరిచినప్పుడు Apple యొక్క <strong>App Tracking Transparency</strong> సందేశం ఒకసారి కనిపిస్తుంది. మీరు తిరస్కరించినా ప్రతి ఫీచర్ ఉంటుంది; బదులుగా వ్యక్తిగతీకరించని ప్రకటనలు చూస్తారు. దీన్ని ఎప్పుడైనా <em>Settings → Privacy &amp; Security → Tracking</em>లో మార్చవచ్చు.</li>
@@ -3250,7 +3470,7 @@
 <li><strong>సబ్‌స్క్రిప్షన్‌తో కూడా ప్రకటనలు ఉంటాయి.</strong> రెండు చోట్లా మీరు నొక్కినప్పుడు మాత్రమే ప్రకటన చూపబడుతుంది, కాబట్టి సబ్‌స్క్రిప్షన్ (అన్నీ అన్‌లాక్) ప్రకటనలను తొలగించే ఉత్పత్తి కాదు.</li>
 </ul>
 
-<p>ప్రకటన నెట్‌వర్క్‌లు డేటాను తమ సొంత విధానాల ప్రకారం నిర్వహిస్తాయి — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay గోప్యతా విధానం</a>.</p>
+<p>ప్రకటన నెట్‌వర్క్‌లు డేటాను తమ సొంత విధానాల ప్రకారం నిర్వహిస్తాయి — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay గోప్యతా విధానం</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff గోప్యతా విధానం</a> · <a href="https://www.facebook.com/privacy/policy/">Meta గోప్యతా విధానం</a>.</p>
 
 <p><strong>చెల్లింపులను App Store నిర్వహిస్తుంది.</strong> యాప్‌లో అమ్మే ప్రతిదీ (పెంపుడు జంతువు ప్యాక్‌లు, అన్నీ అన్‌లాక్, స్నాక్స్, సబ్‌స్క్రిప్షన్‌లు) App Store ద్వారా చెల్లించబడుతుంది. కార్డ్ వివరాలు నేరుగా Apple‌కు వెళ్తాయి — <strong>మేము వాటిని ఎప్పుడూ చూడము, స్వీకరించము, ఉంచుకోము.</strong> ఏదైనా కొన్నారా లేదా మరియు స్టోర్ అందించే ధర పాఠ్యం మాత్రమే యాప్‌కు తెలుస్తుంది.</p>
 
@@ -3275,7 +3495,17 @@
 <table>
 <tr><th>స్వీకర్త</th><th>అంశాలు</th><th>ప్రయోజనం</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) మరియు మధ్యవర్తిత్వం చేయబడిన ప్రకటన నెట్‌వర్క్‌లు</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) మరియు మధ్యవర్తిత్వం చేయబడిన ప్రకటన నెట్‌వర్క్‌లు</td>
+  <td>ప్రకటన ఐడెంటిఫైయర్, పరికరం / OS / యాప్ వెర్షన్, సుమారు దేశం మరియు భాష</td>
+  <td>ప్రకటనలు చూపించడం మరియు పనితీరును కొలవడం</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>ప్రకటన ఐడెంటిఫైయర్, పరికరం / OS / యాప్ వెర్షన్, సుమారు దేశం మరియు భాష</td>
+  <td>ప్రకటనలు చూపించడం మరియు పనితీరును కొలవడం</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>ప్రకటన ఐడెంటిఫైయర్, పరికరం / OS / యాప్ వెర్షన్, సుమారు దేశం మరియు భాష</td>
   <td>ప్రకటనలు చూపించడం మరియు పనితీరును కొలవడం</td>
 </tr>
@@ -3382,7 +3612,7 @@
 <ul>
 <li><strong>ကြော်ငြာများသည် နေရာနှစ်ခုတွင်သာ ပေါ်ပါသည်</strong> — ကြီးထွားမှု တဘ်တွင် <strong>သင် "ငါး" ကို နှိပ်သည့်အခါ</strong> ပွင့်လာသော ငါးမျှားမျက်နှာပြင်ပေါ်ရှိ <strong>စတုရန်းကြော်ငြာ</strong> (4 စက္ကန့်အကြာတွင် အလိုအလျောက် ပိတ်ပြီး သင့်ကို ငါးပေးသည်) နှင့် <strong>သင် "အသား" ကို နှိပ်မှသာ</strong> ဖွင့်သော <strong>ဆုလာဘ်ဗီဒီယို</strong>။ အက်ပ်ဖွင့်ချိန် သို့မဟုတ် မျက်နှာပြင်များကြားတွင် ပေါ်လာသော ကြော်ငြာ မရှိဘဲ မျက်နှာပြင်အောက်ခြေတွင် ဘန်နာလည်း မရှိပါ။</li>
 <li><strong>မည်သည့်လုပ်ဆောင်ချက်ကိုမျှ ကြော်ငြာနောက်တွင် မပိတ်ထားပါ။</strong> ငါးနှင့် အသားသည် အဆင့်အချိန် တိုးရန် ရွေးချယ်နိုင်သော နည်းလမ်းများဖြစ်ပြီး ၎င်းတို့မပါဘဲ မျက်နှာပြင်နှင့် လုပ်ဆောင်ချက်တိုင်းကို သုံးနိုင်ပါသည်။ ငါးနှင့် အသားကို ၎င်းတို့၏ကြော်ငြာ ပြသမှသာ ပေးပါသည် — ငါးကို စတုရန်းကြော်ငြာ မျက်နှာပြင်ပေါ်တွင် 4 စက္ကန့် ရှိပြီးနောက်၊ အသားကို ၎င်း၏ကြော်ငြာကို အဆုံးထိ ကြည့်ပြီးနောက် ပေးပါသည်။ ကြော်ငြာ မတင်နိုင်လျှင် အစာ မပေးဘဲ ချက်ချင်း ထပ်နှိပ်နိုင်ပါသည်။</li>
-<li><strong>ကြော်ငြာကွန်ရက်</strong> — ကြော်ငြာများကို Unity ၏ <strong>LevelPlay (ယခင် ironSource)</strong> မှတစ်ဆင့် ပြသပြီး ၎င်းသည် အခြားကြော်ငြာကွန်ရက်များ (Unity Ads, Liftoff နှင့် Meta Audience Network ကဲ့သို့) ကို ကြားခံပေးနိုင်ပါသည်။</li>
+<li><strong>ကြော်ငြာကွန်ရက်</strong> — ကြော်ငြာများကို Unity ၏ <strong>LevelPlay (ယခင် ironSource)</strong> မှတစ်ဆင့် ပြသပြီး ၎င်းသည် အခြားကြော်ငြာကွန်ရက်များ ကို ကြားခံပေးနိုင်ပါသည်။ LevelPlay က ကြားခံပေးသော ကြော်ငြာကွန်ရက်များတွင် Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.) ပါဝင်သည်။</li>
 <li><strong>၎င်းတို့ ဖတ်သည်များ</strong> — ကြော်ငြာကွန်ရက်များသည် စက်၏ <strong>ကြော်ငြာ ID</strong> (IDFA/IDFV)၊ ခန့်မှန်းနိုင်ငံနှင့် ဘာသာစကား၊ စက်မော်ဒယ်၊ OS ဗားရှင်းနှင့် အက်ပ်ဗားရှင်းကို ဖတ်ပါသည်။ <strong>၎င်းတို့သည် ဤအရာများကို သင့်စက်မှ တိုက်ရိုက်ဖတ်ပြီး ကျွန်ုပ်တို့ ဘယ်တော့မှ လက်မခံ၊ မသိမ်းဆည်းပါ။</strong></li>
 <li><strong>မပို့သည်များ</strong> — အပိုင်း 2 ရှိ တန်ဖိုးများ (သင့်အိမ်မွေးတိရစ္ဆာန်၊ အဆင့်များ၊ ဆက်တင်များ၊ အစာကျွေးမှတ်တမ်း) ကို ကြော်ငြာကွန်ရက်များထံ ဘယ်တော့မှ မပေးပါ။ ၎င်းတို့ကို ကြော်ငြာတောင်းဆိုမှုထဲ ထည့်သည့် ကုဒ် အက်ပ်တွင် မရှိပါ။</li>
 <li><strong>ခြေရာခံခြင်း သဘောတူညီချက်</strong> — အက်ပ်ကို ပထမဆုံးဖွင့်သည့်အခါ Apple ၏ <strong>App Tracking Transparency</strong> မေးခွန်း တစ်ကြိမ် ပေါ်လာပါသည်။ ငြင်းပယ်ပြီးလည်း လုပ်ဆောင်ချက်တိုင်း ရှိနေမည်ဖြစ်ပြီး ယင်းအစား ကိုယ်ပိုင်မပြုလုပ်ထားသော ကြော်ငြာများကို မြင်ရပါမည်။ ၎င်းကို <em>Settings → Privacy &amp; Security → Tracking</em> တွင် အချိန်မရွေး ပြောင်းနိုင်ပါသည်။</li>
@@ -3390,7 +3620,7 @@
 <li><strong>စာရင်းသွင်းမှု ရှိလည်း ကြော်ငြာများ ကျန်ပါသည်။</strong> နေရာနှစ်ခုစလုံးသည် သင်နှိပ်မှသာ ကြော်ငြာပြသဖြင့် စာရင်းသွင်းမှု (အားလုံးဖွင့်) သည် ကြော်ငြာဖယ်ရှားသည့် ထုတ်ကုန် မဟုတ်ပါ။</li>
 </ul>
 
-<p>ကြော်ငြာကွန်ရက်များသည် ဒေတာကို ၎င်းတို့၏ကိုယ်ပိုင်မူဝါဒများအတိုင်း ကိုင်တွယ်ပါသည် — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay ကိုယ်ရေးအချက်အလက်ဆိုင်ရာ မူဝါဒ</a>။</p>
+<p>ကြော်ငြာကွန်ရက်များသည် ဒေတာကို ၎င်းတို့၏ကိုယ်ပိုင်မူဝါဒများအတိုင်း ကိုင်တွယ်ပါသည် — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay ကိုယ်ရေးအချက်အလက်ဆိုင်ရာ မူဝါဒ</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff ကိုယ်ရေးအချက်အလက်ဆိုင်ရာ မူဝါဒ</a> · <a href="https://www.facebook.com/privacy/policy/">Meta ကိုယ်ရေးအချက်အလက်ဆိုင်ရာ မူဝါဒ</a>။</p>
 
 <p><strong>ငွေပေးချေမှုများကို App Store က ကိုင်တွယ်ပါသည်။</strong> အက်ပ်တွင် ရောင်းသမျှ (အိမ်မွေးတိရစ္ဆာန် အထုပ်များ၊ အားလုံးဖွင့်၊ မုန့်များ၊ စာရင်းသွင်းမှုများ) ကို App Store မှတစ်ဆင့် ပေးချေပါသည်။ ကတ်အသေးစိတ်များသည် Apple ထံ တိုက်ရိုက်သွားပါသည် — <strong>ကျွန်ုပ်တို့ ၎င်းတို့ကို ဘယ်တော့မှ မမြင်၊ လက်မခံ၊ မသိမ်းဆည်းပါ။</strong> အက်ပ်သည် တစ်ခုခု ဝယ်ခဲ့သလားနှင့် စတိုးက ပေးသော စျေးနှုန်းစာသားကိုသာ သိပါသည်။</p>
 
@@ -3415,7 +3645,17 @@
 <table>
 <tr><th>လက်ခံသူ</th><th>အချက်များ</th><th>ရည်ရွယ်ချက်</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) နှင့် ကြားခံထားသော ကြော်ငြာကွန်ရက်များ</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) နှင့် ကြားခံထားသော ကြော်ငြာကွန်ရက်များ</td>
+  <td>ကြော်ငြာ ID၊ စက် / OS / အက်ပ်ဗားရှင်း၊ ခန့်မှန်းနိုင်ငံနှင့် ဘာသာစကား</td>
+  <td>ကြော်ငြာပြခြင်းနှင့် စွမ်းဆောင်ရည် တိုင်းတာခြင်း</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>ကြော်ငြာ ID၊ စက် / OS / အက်ပ်ဗားရှင်း၊ ခန့်မှန်းနိုင်ငံနှင့် ဘာသာစကား</td>
+  <td>ကြော်ငြာပြခြင်းနှင့် စွမ်းဆောင်ရည် တိုင်းတာခြင်း</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>ကြော်ငြာ ID၊ စက် / OS / အက်ပ်ဗားရှင်း၊ ခန့်မှန်းနိုင်ငံနှင့် ဘာသာစကား</td>
   <td>ကြော်ငြာပြခြင်းနှင့် စွမ်းဆောင်ရည် တိုင်းတာခြင်း</td>
 </tr>

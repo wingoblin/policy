@@ -59,7 +59,7 @@
 <ul>
 <li><strong>Sa dalawang lugar lamang lumalabas ang mga ad</strong> — isang <strong>parisukat na ad</strong> sa screen ng pangingisda na bumubukas kapag <strong>tina-tap ninyo ang "Isda"</strong> sa tab na Paglaki (kusa itong nagsasara pagkalipas ng 4 na segundo at ibinibigay sa inyo ang isda), at isang <strong>rewarded video</strong> na tumutugtog <strong>lamang kapag tina-tap ninyo ang "Karne"</strong>. Walang ad na sumusulpot sa pagbukas ng app o sa pagitan ng mga screen, at walang banner sa ibaba ng screen.</li>
 <li><strong>Walang feature na nakakandado sa likod ng mga ad.</strong> Ang isda at karne ay mga opsyonal na paraan para magdagdag ng oras sa level; magagamit ninyo ang bawat screen at feature nang wala ang mga ito. Ibinibigay lamang ang isda at karne kapag naipakita ang kanilang ad — ang isda matapos manatili sa screen ang parisukat na ad nang 4 na segundo, at ang karne matapos ninyong panoorin ang ad nito hanggang dulo. Kung hindi mag-load ang ad, walang pagkaing ibibigay, at maaari kayong mag-tap ulit kaagad.</li>
-<li><strong>Ad network</strong> — ang mga ad ay inihahatid sa pamamagitan ng <strong>LevelPlay (dating ironSource)</strong> ng Unity, na maaaring mamagitan sa iba pang ad network (gaya ng Unity Ads, Liftoff at Meta Audience Network).</li>
+<li><strong>Ad network</strong> — ang mga ad ay inihahatid sa pamamagitan ng <strong>LevelPlay (dating ironSource)</strong> ng Unity, na maaaring mamagitan sa iba pang ad network. Kabilang sa mga ad network na ipinamamagitan ng LevelPlay ang Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.).</li>
 <li><strong>Ang binabasa nila</strong> — binabasa ng mga ad network ang <strong>advertising identifier</strong> ng device (IDFA/IDFV), tinatayang bansa at wika, modelo ng device, bersyon ng OS at bersyon ng app. <strong>Binabasa nila ang mga ito direkta mula sa inyong device; hindi namin kailanman natatanggap o itinatago ang mga ito.</strong></li>
 <li><strong>Ang hindi ipinapadala</strong> — ang mga value sa seksyon 2 (ang inyong alaga, mga level, mga setting, talaan ng pagpapakain) ay hindi kailanman ipinapasa sa mga ad network. Walang code ang app na naglalagay ng mga ito sa isang ad request.</li>
 <li><strong>Pahintulot sa tracking</strong> — sa unang beses na buksan ninyo ang app, lalabas nang isang beses ang prompt ng <strong>App Tracking Transparency</strong> ng Apple. Maaari ninyong tanggihan at mananatili ang bawat feature; makakakita na lamang kayo ng mga hindi personalized na ad. Mababago ninyo ito anumang oras sa <em>Settings → Privacy &amp; Security → Tracking</em>.</li>
@@ -67,7 +67,7 @@
 <li><strong>Nananatili ang mga ad kahit may subscription.</strong> Sa parehong lugar, lumalabas lamang ang ad kapag tina-tap ninyo ang mga ito, kaya ang subscription (i-unlock lahat) ay hindi produktong nag-aalis ng ad.</li>
 </ul>
 
-<p>Pinangangasiwaan ng mga ad network ang datos ayon sa sarili nilang mga patakaran — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Patakaran sa Privacy ng Unity/LevelPlay</a>.</p>
+<p>Pinangangasiwaan ng mga ad network ang datos ayon sa sarili nilang mga patakaran — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Patakaran sa Privacy ng Unity/LevelPlay</a> · <a href="https://liftoff.io/privacy-policy/">Patakaran sa Privacy ng Liftoff</a> · <a href="https://www.facebook.com/privacy/policy/">Patakaran sa Privacy ng Meta</a>.</p>
 
 <p><strong>Ang mga pagbabayad ay pinangangasiwaan ng App Store.</strong> Lahat ng ibinebenta sa app (mga pet pack, i-unlock lahat, mga meryenda, mga subscription) ay binabayaran sa pamamagitan ng App Store. Ang mga detalye ng card ay direktang napupunta sa Apple — <strong>hindi namin kailanman nakikita, natatanggap o itinatago ang mga ito.</strong> Ang nalalaman lamang ng app ay kung may nabili at ang tekstong presyo na ibinibigay ng store.</p>
 
@@ -92,7 +92,17 @@
 <table>
 <tr><th>Tatanggap</th><th>Mga item</th><th>Layunin</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) at mga ad network na pinamamagitanan nito</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) at mga ad network na pinamamagitanan nito</td>
+  <td>Advertising identifier, bersyon ng device / OS / app, tinatayang bansa at wika</td>
+  <td>Pagpapakita ng mga ad at pagsukat ng resulta</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>Advertising identifier, bersyon ng device / OS / app, tinatayang bansa at wika</td>
+  <td>Pagpapakita ng mga ad at pagsukat ng resulta</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>Advertising identifier, bersyon ng device / OS / app, tinatayang bansa at wika</td>
   <td>Pagpapakita ng mga ad at pagsukat ng resulta</td>
 </tr>

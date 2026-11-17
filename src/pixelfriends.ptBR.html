@@ -59,7 +59,7 @@
 <ul>
 <li><strong>Os anúncios aparecem em apenas dois lugares</strong> — um <strong>anúncio quadrado</strong> na tela de pesca que abre quando <strong>você toca em "Peixe"</strong> na aba Crescer (ele fecha sozinho após 4 segundos e dá o peixe a você), e um <strong>vídeo premiado</strong> que é exibido <strong>somente quando você toca em "Carne"</strong>. Não há anúncios que aparecem ao abrir o app ou entre telas, nem banner na parte inferior da tela.</li>
 <li><strong>Nenhum recurso fica bloqueado por anúncios.</strong> Peixe e Carne são formas opcionais de adicionar tempo de nível; você pode usar todas as telas e recursos sem eles. O Peixe e a Carne só são dados quando o anúncio aparece: o Peixe depois de 4 segundos do anúncio quadrado na tela e a Carne depois que você assiste ao anúncio até o fim. Se o anúncio não carregar, a comida não é dada e você pode tocar de novo sem esperar.</li>
-<li><strong>Rede de anúncios</strong> — os anúncios são veiculados pelo <strong>LevelPlay (antigo ironSource)</strong> da Unity, que pode fazer a mediação de outras redes de anúncios (como Unity Ads, a Liftoff e Meta Audience Network).</li>
+<li><strong>Rede de anúncios</strong> — os anúncios são veiculados pelo <strong>LevelPlay (antigo ironSource)</strong> da Unity, que pode fazer a mediação de outras redes de anúncios. Entre as redes de anúncios intermediadas pelo LevelPlay estão Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.).</li>
 <li><strong>O que elas leem</strong> — as redes de anúncios leem o <strong>identificador de publicidade</strong> do dispositivo (IDFA/IDFV), país e idioma aproximados, modelo do dispositivo, versão do sistema operacional e versão do app. <strong>Elas leem esses dados diretamente do seu dispositivo; nós nunca os recebemos nem os guardamos.</strong></li>
 <li><strong>O que não é enviado</strong> — os valores da seção 2 (seu pet, níveis, ajustes, registro de alimentação) nunca são repassados às redes de anúncios. O app não tem nenhum código que os coloque em uma solicitação de anúncio.</li>
 <li><strong>Consentimento de rastreamento</strong> — na primeira vez que você abre o app, o aviso de <strong>App Tracking Transparency</strong> da Apple aparece uma vez. Você pode recusar e manter todos os recursos; em vez disso, verá anúncios não personalizados. Você pode mudar isso a qualquer momento em <em>Ajustes → Privacidade e Segurança → Rastreamento</em>.</li>
@@ -67,7 +67,7 @@
 <li><strong>Os anúncios continuam com uma assinatura.</strong> Os dois lugares só mostram um anúncio quando você toca neles, então a assinatura (Desbloqueie tudo) não é um produto para remover anúncios.</li>
 </ul>
 
-<p>As redes de anúncios tratam os dados de acordo com suas próprias políticas — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Política de Privacidade da Unity/LevelPlay</a>.</p>
+<p>As redes de anúncios tratam os dados de acordo com suas próprias políticas — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Política de Privacidade da Unity/LevelPlay</a> · <a href="https://liftoff.io/privacy-policy/">Política de Privacidade da Liftoff</a> · <a href="https://www.facebook.com/privacy/policy/">Política de Privacidade da Meta</a>.</p>
 
 <p><strong>Os pagamentos são processados pela App Store.</strong> Tudo o que é vendido no app (pacotes de pets, Desbloqueie tudo, petiscos, assinaturas) é pago pela App Store. Os dados do cartão vão diretamente para a Apple — <strong>nós nunca os vemos, recebemos nem guardamos.</strong> O app só fica sabendo se algo foi comprado e o texto de preço fornecido pela loja.</p>
 
@@ -92,7 +92,17 @@
 <table>
 <tr><th>Destinatário</th><th>Itens</th><th>Finalidade</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) e redes de anúncios mediadas</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) e redes de anúncios mediadas</td>
+  <td>Identificador de publicidade, versão do dispositivo / sistema operacional / app, país e idioma aproximados</td>
+  <td>Exibir anúncios e medir o desempenho</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>Identificador de publicidade, versão do dispositivo / sistema operacional / app, país e idioma aproximados</td>
+  <td>Exibir anúncios e medir o desempenho</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>Identificador de publicidade, versão do dispositivo / sistema operacional / app, país e idioma aproximados</td>
   <td>Exibir anúncios e medir o desempenho</td>
 </tr>

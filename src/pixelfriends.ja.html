@@ -59,7 +59,7 @@
 <ul>
 <li><strong>広告が出るのは2か所だけです</strong> — 成長タブで<strong>「お魚」をタップしたとき</strong>に開く釣りの画面の<strong>四角い広告</strong>（4秒後に自動で閉じ、お魚がもらえます）と、<strong>「お肉」をタップしたときだけ</strong>再生される<strong>リワード動画</strong>です。起動時や画面の切り替え時に出る広告も、画面下部のバナーもありません。</li>
 <li><strong>広告を見ないと使えない機能はありません。</strong>お魚とお肉はレベルの時間を増やすための任意の手段で、それらを使わなくてもすべての画面と機能を利用できます。お魚とお肉は広告が表示されたときだけもらえます。お魚は四角い広告が表示されてから4秒後、お肉は広告を最後まで見たときです。広告を読み込めなかった場合はもらえませんが、待たずにもう一度タップできます。</li>
-<li><strong>広告ネットワーク</strong> — 広告は Unity の <strong>LevelPlay（旧 ironSource）</strong>を通じて配信され、LevelPlay は他の広告ネットワーク（Unity Ads、Liftoff、Meta Audience Network など）を仲介することがあります。</li>
+<li><strong>広告ネットワーク</strong> — 広告は Unity の <strong>LevelPlay（旧 ironSource）</strong>を通じて配信され、LevelPlay は他の広告ネットワークを仲介することがあります。LevelPlay が仲介する広告ネットワークには、Unity Ads、Liftoff Monetize、Meta Audience Network（Meta Platforms, Inc.）が含まれます。</li>
 <li><strong>読み取るもの</strong> — 広告ネットワークは端末の<strong>広告識別子</strong>（IDFA/IDFV）、おおよその国と言語、端末の機種、OS のバージョン、アプリのバージョンを読み取ります。<strong>これらは端末から直接読み取られ、私たちが受け取ったり保管したりすることはありません。</strong></li>
 <li><strong>送られないもの</strong> — 第2項の値（ペット、レベル、設定、ごはんの記録）が広告ネットワークに渡ることはありません。アプリにはそれらを広告リクエストに含めるコードがありません。</li>
 <li><strong>トラッキングの同意</strong> — 初めてアプリを開いたとき、Apple の <strong>App Tracking Transparency</strong> の確認画面が一度だけ表示されます。許可しなくてもすべての機能を使え、代わりにパーソナライズされていない広告が表示されます。この設定は<em>設定 → プライバシーとセキュリティ → トラッキング</em>でいつでも変更できます。</li>
@@ -67,7 +67,7 @@
 <li><strong>サブスクリプション中も広告は残ります。</strong>どちらの場所も、タップしたときにだけ広告が出るため、サブスクリプション（ぜんぶ開ける）は広告を消すための商品ではありません。</li>
 </ul>
 
-<p>広告ネットワークは各社のポリシーに従ってデータを取り扱います — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay プライバシーポリシー</a>。</p>
+<p>広告ネットワークは各社のポリシーに従ってデータを取り扱います — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay プライバシーポリシー</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff プライバシーポリシー</a> · <a href="https://www.facebook.com/privacy/policy/">Meta プライバシーポリシー</a>。</p>
 
 <p><strong>決済は App Store が処理します。</strong>アプリ内で販売するもの（ペットパック、ぜんぶ開ける、おやつ、サブスクリプション）はすべて App Store で支払われます。カード情報は直接 Apple に送られ、<strong>私たちが見たり、受け取ったり、保管したりすることはありません。</strong>アプリが知るのは、購入されたかどうかと、ストアが提供する価格の表示だけです。</p>
 
@@ -92,7 +92,17 @@
 <table>
 <tr><th>受け取る者</th><th>項目</th><th>目的</th></tr>
 <tr>
-  <td>Unity Technologies（LevelPlay / ironSource）および仲介される広告ネットワーク</td>
+  <td>Unity Technologies（LevelPlay / ironSource · Unity Ads）および仲介される広告ネットワーク</td>
+  <td>広告識別子、端末 / OS / アプリのバージョン、おおよその国と言語</td>
+  <td>広告の表示と効果の測定</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>広告識別子、端末 / OS / アプリのバージョン、おおよその国と言語</td>
+  <td>広告の表示と効果の測定</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>広告識別子、端末 / OS / アプリのバージョン、おおよその国と言語</td>
   <td>広告の表示と効果の測定</td>
 </tr>

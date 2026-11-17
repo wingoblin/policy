@@ -59,7 +59,7 @@
 <ul>
 <li><strong>广告只出现在两个地方</strong> — 在“成长”标签中<strong>您点按“鱼”</strong>时打开的钓鱼画面上的<strong>方形广告</strong>（4 秒后自动关闭并给您鱼），以及<strong>仅在您点按“肉”时</strong>播放的<strong>激励视频</strong>。没有启动时或切换画面时弹出的广告，屏幕底部也没有横幅广告。</li>
 <li><strong>没有任何功能被广告锁住。</strong>鱼和肉是增加等级时间的可选方式；不使用它们也可以使用所有画面和功能。鱼和肉只在对应广告展示后发放 — 鱼在方形广告显示 4 秒后发放，肉在您看完其广告后发放。如果广告加载失败，则不会发放食物，您可以立即再次点按。</li>
-<li><strong>广告网络</strong> — 广告通过 Unity 的 <strong>LevelPlay（原 ironSource）</strong>投放，它可能会聚合其他广告网络（例如 Unity Ads、Liftoff 和 Meta Audience Network）。</li>
+<li><strong>广告网络</strong> — 广告通过 Unity 的 <strong>LevelPlay（原 ironSource）</strong>投放，它可能会聚合其他广告网络。LevelPlay 所聚合的广告网络包括 Unity Ads、Liftoff Monetize、Meta Audience Network（Meta Platforms, Inc.）。</li>
 <li><strong>读取的内容</strong> — 广告网络会读取设备的<strong>广告标识符</strong>（IDFA/IDFV）、大致的国家和语言、设备型号、操作系统版本和应用版本。<strong>这些内容由它们直接从您的设备读取；我们绝不会接收或保存。</strong></li>
 <li><strong>不会发送的内容</strong> — 第 2 条中的值（您的宠物、等级、设置、喂食记录）绝不会传给广告网络。应用中没有任何把它们放进广告请求的代码。</li>
 <li><strong>跟踪同意</strong> — 您首次打开应用时，Apple 的<strong>应用跟踪透明度</strong>提示会出现一次。您可以拒绝并保留所有功能；届时您将看到非个性化广告。您可以随时在<em>设置 → 隐私与安全性 → 跟踪</em>中更改。</li>
@@ -67,7 +67,7 @@
 <li><strong>订阅后广告依然保留。</strong>两个地方都只在您点按时才展示广告，因此订阅（全部解锁）不是去除广告的商品。</li>
 </ul>
 
-<p>广告网络按照其各自的政策处理数据 — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay 隐私政策</a>。</p>
+<p>广告网络按照其各自的政策处理数据 — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay 隐私政策</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff 隐私政策</a> · <a href="https://www.facebook.com/privacy/policy/">Meta 隐私政策</a>。</p>
 
 <p><strong>付款由 App Store 处理。</strong>应用内出售的所有内容（宠物包、全部解锁、零食、订阅）都通过 App Store 付款。银行卡信息直接发送给 Apple — <strong>我们绝不会看到、接收或保存。</strong>应用只会得知是否已购买以及商店提供的价格文字。</p>
 
@@ -92,7 +92,17 @@
 <table>
 <tr><th>接收方</th><th>项目</th><th>目的</th></tr>
 <tr>
-  <td>Unity Technologies（LevelPlay / ironSource）及其聚合的广告网络</td>
+  <td>Unity Technologies（LevelPlay / ironSource · Unity Ads）及其聚合的广告网络</td>
+  <td>广告标识符、设备 / 操作系统 / 应用版本、大致的国家和语言</td>
+  <td>展示广告和衡量效果</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>广告标识符、设备 / 操作系统 / 应用版本、大致的国家和语言</td>
+  <td>展示广告和衡量效果</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>广告标识符、设备 / 操作系统 / 应用版本、大致的国家和语言</td>
   <td>展示广告和衡量效果</td>
 </tr>

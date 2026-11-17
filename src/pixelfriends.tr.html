@@ -59,7 +59,7 @@
 <ul>
 <li><strong>Reklamlar yalnızca iki yerde görünür</strong> — Gelişim sekmesinde <strong>“Balık”a dokunduğunuzda</strong> açılan balık tutma ekranındaki <strong>kare reklam</strong> (4 saniye sonra kendiliğinden kapanır ve size balığı verir) ve <strong>yalnızca “Et”e dokunduğunuzda</strong> oynatılan <strong>ödüllü video</strong>. Açılışta veya ekranlar arasında beliren reklam yoktur ve ekranın altında banner yoktur.</li>
 <li><strong>Hiçbir özellik reklamların arkasına kilitlenmez.</strong> Balık ve et, seviye süresi eklemenin yalnızca isteğe bağlı yollarıdır; her ekranı ve özelliği bunlar olmadan kullanabilirsiniz. Balık ve et yalnızca reklamları gösterildiğinde verilir — balık, kare reklam 4 saniye ekranda kaldıktan sonra; et, reklamını sonuna kadar izledikten sonra. Bir reklam yüklenemezse yiyecek verilmez ve hemen yeniden dokunabilirsiniz.</li>
-<li><strong>Reklam ağı</strong> — reklamlar Unity’nin <strong>LevelPlay (eski adıyla ironSource)</strong> hizmeti üzerinden sunulur; bu hizmet diğer reklam ağlarına (Unity Ads, Liftoff ve Meta Audience Network gibi) aracılık edebilir.</li>
+<li><strong>Reklam ağı</strong> — reklamlar Unity’nin <strong>LevelPlay (eski adıyla ironSource)</strong> hizmeti üzerinden sunulur; bu hizmet diğer reklam ağlarına aracılık edebilir. LevelPlay’in aracılık ettiği reklam ağları arasında Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.) da bulunur.</li>
 <li><strong>Neyi okudukları</strong> — reklam ağları cihazın <strong>reklam tanımlayıcısını</strong> (IDFA/IDFV), yaklaşık ülke ve dili, cihaz modelini, işletim sistemi sürümünü ve uygulama sürümünü okur. <strong>Bunları doğrudan cihazınızdan okurlar; biz bunları hiçbir zaman almayız ve saklamayız.</strong></li>
 <li><strong>Neyin gönderilmediği</strong> — Bölüm 2’deki değerler (evcil hayvanınız, seviyeler, ayarlar, besleme kaydı) hiçbir zaman reklam ağlarına iletilmez. Uygulamada bunları bir reklam isteğine koyan hiçbir kod yoktur.</li>
 <li><strong>İzleme onayı</strong> — uygulamayı ilk açtığınızda Apple’ın <strong>App Tracking Transparency</strong> istemi bir kez görünür. Reddedip tüm özellikleri kullanmaya devam edebilirsiniz; bunun yerine kişiselleştirilmemiş reklamlar görürsünüz. Bunu istediğiniz zaman <em>Ayarlar → Gizlilik ve Güvenlik → İzleme</em> bölümünden değiştirebilirsiniz.</li>
@@ -67,7 +67,7 @@
 <li><strong>Abonelikte de reklamlar kalır.</strong> Her iki yer de yalnızca siz dokunduğunuzda reklam gösterir; bu nedenle abonelik (“Tümünü aç”) bir reklam kaldırma ürünü değildir.</li>
 </ul>
 
-<p>Reklam ağları verileri kendi politikalarına göre işler — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay Gizlilik Politikası</a>.</p>
+<p>Reklam ağları verileri kendi politikalarına göre işler — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity/LevelPlay Gizlilik Politikası</a> · <a href="https://liftoff.io/privacy-policy/">Liftoff Gizlilik Politikası</a> · <a href="https://www.facebook.com/privacy/policy/">Meta Gizlilik Politikası</a>.</p>
 
 <p><strong>Ödemeler App Store tarafından yürütülür.</strong> Uygulamada satılan her şey (evcil hayvan paketleri, “Tümünü aç”, atıştırmalıklar, abonelikler) App Store üzerinden ödenir. Kart bilgileri doğrudan Apple’a gider — <strong>bunları hiçbir zaman görmeyiz, almayız ve saklamayız.</strong> Uygulama yalnızca bir şeyin satın alınıp alınmadığını ve mağazanın sağladığı fiyat metnini öğrenir.</p>
 
@@ -92,7 +92,17 @@
 <table>
 <tr><th>Alıcı</th><th>Öğeler</th><th>Amaç</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) ve aracılık edilen reklam ağları</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) ve aracılık edilen reklam ağları</td>
+  <td>Reklam tanımlayıcısı, cihaz / işletim sistemi / uygulama sürümü, yaklaşık ülke ve dil</td>
+  <td>Reklam göstermek ve performansı ölçmek</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>Reklam tanımlayıcısı, cihaz / işletim sistemi / uygulama sürümü, yaklaşık ülke ve dil</td>
+  <td>Reklam göstermek ve performansı ölçmek</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>Reklam tanımlayıcısı, cihaz / işletim sistemi / uygulama sürümü, yaklaşık ülke ve dil</td>
   <td>Reklam göstermek ve performansı ölçmek</td>
 </tr>

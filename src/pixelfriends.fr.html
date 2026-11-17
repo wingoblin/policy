@@ -59,7 +59,7 @@
 <ul>
 <li><strong>Les publicités n’apparaissent qu’à deux endroits</strong> — une <strong>publicité carrée</strong> sur l’écran de pêche qui s’ouvre lorsque <strong>vous touchez « Poisson »</strong> dans l’onglet Croissance (elle se ferme d’elle-même au bout de 4 secondes et vous donne le poisson), et une <strong>vidéo récompensée</strong> qui ne se lance <strong>que lorsque vous touchez « Viande »</strong>. Il n’y a aucune publicité qui s’affiche au lancement ou entre les écrans, ni de bannière en bas de l’écran.</li>
 <li><strong>Aucune fonctionnalité n’est bloquée derrière une publicité.</strong> Le Poisson et la Viande sont des moyens facultatifs d’ajouter du temps de niveau ; vous pouvez utiliser tous les écrans et toutes les fonctionnalités sans eux. Le Poisson et la Viande ne sont donnés que lorsque leur publicité s’affiche : le Poisson après 4 secondes d’affichage de la publicité carrée, la Viande après avoir regardé sa publicité jusqu’au bout. Si la publicité ne se charge pas, rien n’est donné et vous pouvez toucher à nouveau sans attendre.</li>
-<li><strong>Régie publicitaire</strong> — les publicités sont diffusées via <strong>LevelPlay (anciennement ironSource)</strong> de Unity, qui peut assurer la médiation d’autres régies publicitaires (comme Unity Ads, Liftoff et Meta Audience Network).</li>
+<li><strong>Régie publicitaire</strong> — les publicités sont diffusées via <strong>LevelPlay (anciennement ironSource)</strong> de Unity, qui peut assurer la médiation d’autres régies publicitaires. Parmi les réseaux publicitaires médiatisés par LevelPlay figurent Unity Ads, Liftoff Monetize, Meta Audience Network (Meta Platforms, Inc.).</li>
 <li><strong>Ce qu’elles lisent</strong> — les régies publicitaires lisent l’<strong>identifiant publicitaire</strong> de l’appareil (IDFA/IDFV), le pays et la langue approximatifs, le modèle de l’appareil, la version du système d’exploitation et la version de l’app. <strong>Elles les lisent directement depuis votre appareil ; nous ne les recevons ni ne les conservons jamais.</strong></li>
 <li><strong>Ce qui n’est pas envoyé</strong> — les valeurs de la section 2 (votre animal, vos niveaux, vos réglages, votre historique des repas) ne sont jamais transmises aux régies publicitaires. L’app ne contient aucun code qui les inclut dans une requête publicitaire.</li>
 <li><strong>Consentement au suivi</strong> — la première fois que vous ouvrez l’app, la demande <strong>App Tracking Transparency</strong> d’Apple s’affiche une seule fois. Vous pouvez refuser et conserver toutes les fonctionnalités ; vous verrez alors des publicités non personnalisées. Vous pouvez modifier ce choix à tout moment dans <em>Réglages → Confidentialité et sécurité → Suivi</em>.</li>
@@ -67,7 +67,7 @@
 <li><strong>Les publicités restent avec un abonnement.</strong> Les deux endroits n’affichent une publicité que lorsque vous les touchez ; l’abonnement (Tout débloquer) n’est donc pas un produit de suppression des publicités.</li>
 </ul>
 
-<p>Les régies publicitaires traitent les données selon leurs propres politiques — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Politique de confidentialité de Unity/LevelPlay</a>.</p>
+<p>Les régies publicitaires traitent les données selon leurs propres politiques — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Politique de confidentialité de Unity/LevelPlay</a> · <a href="https://liftoff.io/privacy-policy/">Politique de confidentialité de Liftoff</a> · <a href="https://www.facebook.com/privacy/policy/">Politique de confidentialité de Meta</a>.</p>
 
 <p><strong>Les paiements sont gérés par l’App Store.</strong> Tout ce qui est vendu dans l’app (packs d’animaux, Tout débloquer, friandises, abonnements) est payé via l’App Store. Les données de carte vont directement à Apple — <strong>nous ne les voyons, ne les recevons ni ne les conservons jamais.</strong> L’app sait seulement si un achat a eu lieu et connaît le texte de prix fourni par la boutique.</p>
 
@@ -92,7 +92,17 @@
 <table>
 <tr><th>Destinataire</th><th>Éléments</th><th>Finalité</th></tr>
 <tr>
-  <td>Unity Technologies (LevelPlay / ironSource) et les régies publicitaires en médiation</td>
+  <td>Unity Technologies (LevelPlay / ironSource · Unity Ads) et les régies publicitaires en médiation</td>
+  <td>Identifiant publicitaire, version de l’appareil / du système / de l’app, pays et langue approximatifs</td>
+  <td>Afficher des publicités et mesurer leurs performances</td>
+</tr>
+<tr>
+  <td>Liftoff Mobile, Inc. (Liftoff Monetize)</td>
+  <td>Identifiant publicitaire, version de l’appareil / du système / de l’app, pays et langue approximatifs</td>
+  <td>Afficher des publicités et mesurer leurs performances</td>
+</tr>
+<tr>
+  <td>Meta Platforms, Inc. (Meta Audience Network)</td>
   <td>Identifiant publicitaire, version de l’appareil / du système / de l’app, pays et langue approximatifs</td>
   <td>Afficher des publicités et mesurer leurs performances</td>
 </tr>
