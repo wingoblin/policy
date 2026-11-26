@@ -88,7 +88,7 @@
 <section class="lang" data-lang="ko">
 <h1>Deep Galaxy 개인정보 처리방침</h1>
 
-<p><strong>시행일:</strong> 2026년 11월 18일<br /><strong>문의:</strong> contact@nemofactory.co.kr</p>
+<p><strong>시행일:</strong> 2026년 11월 26일<br /><strong>문의:</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>한 줄 요약.</strong> Deep Galaxy 에는 <strong>계정·로그인·분석 도구가 없고, 이용자 정보를 저장하는 서버도 없습니다.</strong> 행성·달·별·블랙홀은 앱 안에 든 그림으로 기기에서 직접 그립니다. 무료 천체를 보러 갈 때 이용자가 직접 고르실 때만 <strong>보상형 광고</strong>가 나오며, 광고 네트워크가 무엇을 읽어 가는지는 <strong>4항</strong>에 적었습니다. <strong>우주 Pro</strong> 를 사시면 광고 기능을 아예 켜지 않습니다.</p>
 
@@ -104,6 +104,8 @@
 <table>
 <tr><th>권한</th><th>왜 필요한가</th></tr>
 <tr><td><strong>추적 허용</strong>(선택, iPhone ATT)</td><td>맞춤 광고를 위해 광고 식별자(IDFA)를 쓰려고(4항). 거절하셔도 앱은 전부 그대로 동작하며, 맞춤 광고 대신 일반 광고가 나옵니다</td></tr>
+<tr><td><strong>광고 ID</strong>(Android, 설치 시 자동 허용)</td><td>광고 네트워크가 기기의 광고 ID 를 읽어 광고를 보여 주고 성과를 재려고(4항). 묻는 창은 따로 뜨지 않으며, 기기 설정에서 언제든 재설정하거나 삭제하실 수 있습니다(4항)</td></tr>
+<tr><td><strong>인터넷·네트워크 상태</strong>(설치 시 자동 허용)</td><td>앱 상태 파일·광고·스토어 결제와 통신하려고(5항)</td></tr>
 </table>
 <p>카메라·마이크·사진·위치·연락처·캘린더·건강 정보에는 접근하지 않으며, 해당 권한을 요청하지 않습니다.</p>
 
@@ -111,9 +113,10 @@
 <ul>
 <li><strong>광고는 한 자리뿐입니다</strong> — 무료 천체(해·수성·금성·지구·달·화성·목성과 목성의 위성)를 보러 갈 때 <strong>「광고 보고 보기」를 직접 고르셨을 때만</strong> 재생되는 <strong>보상형 동영상 광고</strong>입니다. 끝까지 보시면 그 천체로 갑니다. 앱을 켜거나 화면을 넘길 때 저절로 뜨는 광고, 띠 배너는 없습니다.</li>
 <li><strong>광고 네트워크</strong> — Unity 의 <strong>LevelPlay(구 ironSource)</strong> 를 통해 광고가 표시되며, 광고 파트너는 <strong>Unity Ads</strong>, <strong>Liftoff</strong> 와 <strong>Meta Audience Network</strong> 입니다.</li>
-<li><strong>읽어 가는 것</strong> — 광고 식별자(IDFA·IDFV / 광고 ID), 기기·OS·앱 버전·언어 같은 기기 정보, 접속 IP 로 짐작한 대략적인 국가·도시, 광고를 본·누른 기록, 광고 코드의 동작 기록. 이 값은 <strong>광고 네트워크가 이용자의 기기에서 직접 읽어 가며, 저희는 받지도 보관하지도 않습니다.</strong></li>
+<li><strong>읽어 가는 것</strong> — 광고 식별자(IDFA·IDFV / Android 광고 ID·앱 세트 ID), 기기·OS·앱 버전·언어 같은 기기 정보, 접속 IP 로 짐작한 대략적인 국가·도시, 광고를 본·누른 기록, 광고 코드의 동작 기록. 이 값은 <strong>광고 네트워크가 이용자의 기기에서 직접 읽어 가며, 저희는 받지도 보관하지도 않습니다.</strong></li>
 <li><strong>설치된 앱 정보</strong>(Android) — 광고 사업자의 코드가 기기에 어떤 앱이 설치되어 있는지 확인할 수 있습니다. 광고를 보고 설치했는지 세거나, 이미 설치한 앱의 광고를 다시 띄우지 않는 데 쓰입니다. <strong>저희 앱이 읽는 것이 아니고, 저희에게 오지도 않습니다.</strong></li>
 <li><strong>추적 동의</strong> — 우주 Pro 를 사지 않은 이용자가 앱을 처음 켤 때 애플의 <strong>추적 허용 요청(ATT)</strong> 창이 한 번 뜹니다. 허용하지 않으시면 맞춤이 아닌 광고가 나오며, 모든 기능을 그대로 쓰실 수 있습니다. 허용 여부는 <em>설정 → 개인정보 보호 및 보안 → 추적</em> 에서 언제든 바꾸실 수 있습니다.</li>
+<li><strong>Android 광고 ID 끄기</strong> — Android 에는 추적 허용 창이 없습니다. 맞춤 광고를 원하지 않으시면 <em>설정 → 개인정보 보호 → 광고</em>(기기에 따라 <em>설정 → Google → 광고</em>)에서 광고 ID 를 <strong>삭제</strong>하거나 <strong>재설정</strong>하실 수 있습니다. 삭제하시면 광고 네트워크에는 광고 ID 대신 0 으로만 채워진 값이 가며, 모든 기능은 그대로 쓰실 수 있습니다.</li>
 <li><strong>우주 Pro 를 사신 뒤</strong> — 광고 기능(광고 네트워크의 코드)을 켜지 않으며 추적 허용 창도 띄우지 않습니다.</li>
 </ul>
 <p><strong>유럽경제지역(EEA)·영국·스위스 이용자</strong><br />이 지역에서는 위 광고 파트너(Unity, Liftoff, Meta)가 맞춤 광고에 기기를 써도 되는지 <strong>광고를 요청하기 전에</strong> 앱 안에서 먼저 여쭙니다. 「거부」는 「동의」만큼 쉽게 고르실 수 있고, 어느 쪽이든 모든 기능을 그대로 쓰시며 광고도 표시됩니다. 거부하시면 맞춤이 아닌 광고만 나갑니다. 맞춤 광고는 <strong>이용자의 동의</strong>(GDPR 제6조 제1항 a호)에, 맞춤이 아닌 광고 표시와 광고 오작동 방어(2항)는 <strong>정당한 이익</strong>(같은 항 f호)에 근거합니다. 선택은 앱의 설정 &gt; 맞춤 광고 설정에서 <strong>언제든 바꾸거나 철회</strong>하실 수 있고, 다음 광고 요청부터 적용됩니다. iPhone 에서는 추적 허용 요청(ATT)을 먼저 띄우고, 허용하신 경우에만 이 질문이 이어집니다. 허용하지 않으시면 이 질문 없이 맞춤이 아닌 광고만 나갑니다. 광고 네트워크는 표준계약조항 등 자체 보호 장치에 따라 정보를 미국 등으로 옮길 수 있습니다. 저희는 이용자를 알아볼 정보를 갖고 있지 않으므로, 광고 정보의 열람·삭제는 광고 식별자를 초기화하시거나 위 광고 네트워크에 직접 요청하시는 것이 가장 빠릅니다.</p>
@@ -134,9 +137,9 @@
 <p>저희가 제3자에게 넘기거나 판매하는 정보는 없습니다. 결제는 애플·구글이 자체 방침에 따라 직접 처리합니다. 다만 광고 네트워크가 기기에서 직접 읽어 가는 값(4항)은 해당 업체의 해외 서버로 전송됩니다.</p>
 <table>
 <tr><th>받는 곳</th><th>항목</th><th>목적</th></tr>
-<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>광고 식별자, 기기·OS·앱 버전, 대략적 국가·언어, 광고 상호작용</td><td>광고 표시 및 성과 측정</td></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>광고 식별자, 기기·OS·앱 버전, 대략적 국가·언어, 광고 상호작용, 설치된 앱 정보(Android)</td><td>광고 표시, 성과 측정, 광고 부정 사용 방지</td></tr>
 </table>
-<p>원하지 않으시면 추적 허용을 끄셔서 광고 식별자 제공을 막으실 수 있습니다.</p>
+<p>원하지 않으시면 iPhone 에서는 추적 허용을 끄시고, Android 에서는 광고 ID 를 삭제하셔서 광고 식별자 제공을 막으실 수 있습니다(4항).</p>
 
 <h2>7. 보관 기간과 삭제</h2>
 <p>저희가 보관하는 이용자 데이터가 없어 삭제를 요청하실 대상도 없습니다. 광고 네트워크가 읽어 간 값은 해당 업체의 방침에 따라 보관·삭제됩니다. 기기의 값은 앱을 삭제하면 함께 지워집니다. 문의로 받은 메일은 답변에 필요한 동안만 보관하고 그 뒤에 지웁니다.</p>
@@ -145,7 +148,7 @@
 <p>행성·달 지도와 별 자료는 Solar System Scope(CC BY 4.0), NASA·USGS(퍼블릭 도메인), HYG Database(CC BY-SA 4.0)에서 가져왔습니다. 전체 출처는 앱의 설정 › 출처에 있습니다.</p>
 
 <h2>9. 아동</h2>
-<p>앱은 만 13세 미만 아동을 대상으로 하지 않으며, 저희는 아동의 개인정보를 알면서 수집하지 않습니다. 광고 식별자는 추적 허용을 끄시면 맞춤 광고에 쓰이지 않습니다.</p>
+<p>앱은 만 13세 미만 아동을 대상으로 하지 않으며, 저희는 아동의 개인정보를 알면서 수집하지 않습니다. 광고 식별자는 추적 허용을 끄시거나(iPhone) 광고 ID 를 삭제하시면(Android) 맞춤 광고에 쓰이지 않습니다.</p>
 
 <h2>10. 이용자의 권리</h2>
 <p>이용자는 개인정보 보호법에 따라 열람·정정·삭제·처리정지를 요구하실 수 있습니다. 다만 저희가 보유한 개인정보가 없어 요청하실 대상이 없으며, 기기의 값은 앱을 삭제해 언제든 직접 지우실 수 있습니다.</p>
@@ -180,7 +183,7 @@
 <section class="lang" data-lang="en">
 <h1>Deep Galaxy — Privacy Policy</h1>
 
-<p><strong>Effective:</strong> November 18, 2026<br /><strong>Contact:</strong> contact@nemofactory.co.kr</p>
+<p><strong>Effective:</strong> November 26, 2026<br /><strong>Contact:</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>In one line.</strong> Deep Galaxy has <strong>no accounts, no sign-in, no analytics and no server that stores your information.</strong> The planets, moons, stars and black hole are drawn on your device from images built into the app. A <strong>rewarded ad</strong> plays only when you choose it yourself on the way to a free destination; what the ad network reads is described in <strong>section 4</strong>. If you buy <strong>Space Pro</strong>, the ad features are never turned on.</p>
 
@@ -196,6 +199,8 @@
 <table>
 <tr><th>Permission</th><th>Why</th></tr>
 <tr><td><strong>Tracking</strong> (optional, iPhone ATT)</td><td>To use the advertising identifier (IDFA) for personalized ads (section 4). If you decline, the whole app works the same and you see non-personalized ads instead</td></tr>
+<tr><td><strong>Advertising ID</strong> (Android, granted at install)</td><td>So the ad networks can read the device's Advertising ID to show ads and measure their performance (section 4). No prompt is shown; you can reset or delete it in your device settings at any time (section 4)</td></tr>
+<tr><td><strong>Internet and network state</strong> (granted at install)</td><td>To reach the app status file, ads and store purchases (section 5)</td></tr>
 </table>
 <p>The app does not access the camera, microphone, photos, location, contacts, calendars or health data, and does not ask for those permissions.</p>
 
@@ -203,9 +208,10 @@
 <ul>
 <li><strong>Ads appear in one place only</strong> — a <strong>rewarded video ad</strong> that plays <strong>only when you choose "Watch an ad"</strong> yourself on the way to a free destination (the Sun, Mercury, Venus, Earth, the Moon, Mars, Jupiter and Jupiter's moons). If you watch it to the end, you go there. There are no ads that pop up by themselves when you open the app or move between screens, and no banner ads.</li>
 <li><strong>Ad network</strong> — ads are shown through Unity's <strong>LevelPlay (formerly ironSource)</strong>; the ad partners are <strong>Unity Ads</strong>, <strong>Liftoff</strong> and <strong>Meta Audience Network</strong>.</li>
-<li><strong>What they read</strong> — the advertising identifier (IDFA, IDFV / Advertising ID), device information such as device, OS, app version and language, approximate country and city inferred from your IP address, records of ads viewed and tapped, and logs of the ad code's behavior. <strong>Ad networks read these directly from your device; we never receive or keep them.</strong></li>
+<li><strong>What they read</strong> — the advertising identifier (IDFA, IDFV / Android Advertising ID, App Set ID), device information such as device, OS, app version and language, approximate country and city inferred from your IP address, records of ads viewed and tapped, and logs of the ad code's behavior. <strong>Ad networks read these directly from your device; we never receive or keep them.</strong></li>
 <li><strong>Installed apps</strong> (Android) — the advertising providers' code can check which apps are installed on the device, to count whether an ad led to an install and to avoid showing ads for apps you already have. <strong>Deep Galaxy does not read this, and it never reaches us.</strong></li>
 <li><strong>Tracking consent</strong> — the first time a user who has not bought Space Pro opens the app, Apple's <strong>App Tracking Transparency (ATT)</strong> prompt appears once. If you do not allow it, you see non-personalized ads and can still use every feature. You can change this any time in <em>Settings → Privacy &amp; Security → Tracking</em>.</li>
+<li><strong>Turning off the Android Advertising ID</strong> — Android has no tracking prompt. If you do not want personalized ads, go to <em>Settings → Privacy → Ads</em> (on some devices <em>Settings → Google → Ads</em>) and <strong>delete</strong> or <strong>reset</strong> your Advertising ID. Once it is deleted, ad networks receive only a string of zeros instead of the ID, and every feature keeps working.</li>
 <li><strong>After you buy Space Pro</strong> — the ad features (the ad networks' code) are not turned on, and the tracking prompt is not shown.</li>
 </ul>
 <p><strong>Users in the EEA, the UK and Switzerland</strong><br />In these regions, the app first asks inside the app whether the ad partners above (Unity, Liftoff, Meta) may use your device for personalized ads — <strong>before any ad is requested.</strong> "Decline" is as easy as "Accept", and either way every feature works and ads still appear; declining just makes them non-personalized. We rely on <strong>your consent</strong> (GDPR Art. 6(1)(a)) for personalized ads, and on our <strong>legitimate interest</strong> (Art. 6(1)(f)) for showing non-personalized ads and for the ad misuse guard (section 2). You can <strong>change or withdraw your choice at any time</strong> in the app's Settings &gt; Ad privacy; it applies from the next ad request. On iPhone, the tracking (ATT) prompt comes first, and this question follows only if you allow tracking; if you do not, only non-personalized ads are shown without this question. The ad networks may transfer data to the United States and other countries under their own safeguards, such as Standard Contractual Clauses. Because we hold nothing that identifies you, requests to access or delete ad data are best made by resetting your advertising identifier or directly to the ad networks above.</p>
@@ -226,9 +232,9 @@
 <p>We pass on or sell no information to third parties. Payments are processed directly by Apple and Google under their own policies. However, the values ad networks read directly from your device (section 4) are sent to those companies' servers abroad.</p>
 <table>
 <tr><th>Recipient</th><th>Items</th><th>Purpose</th></tr>
-<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Advertising identifier, device / OS / app version, approximate country and language, ad interactions</td><td>Showing ads and measuring performance</td></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Advertising identifier, device / OS / app version, approximate country and language, ad interactions, installed apps (Android)</td><td>Showing ads, measuring performance and preventing ad fraud</td></tr>
 </table>
-<p>If you do not want this, turn off tracking to stop the advertising identifier from being provided.</p>
+<p>If you do not want this, turn off tracking on iPhone, or delete your Advertising ID on Android, to stop the advertising identifier from being provided (section 4).</p>
 
 <h2>7. Retention and deletion</h2>
 <p>We keep no user data, so there is nothing for you to ask us to delete. Values read by ad networks are kept and deleted under their own policies. Values on your device are deleted when you delete the app. Emails received through Contact are kept only as long as needed to reply, then deleted.</p>
@@ -237,7 +243,7 @@
 <p>Planet and moon maps and star data come from Solar System Scope (CC BY 4.0), NASA and USGS (public domain) and the HYG Database (CC BY-SA 4.0). Full credits are in the app under Settings › Credits.</p>
 
 <h2>9. Children</h2>
-<p>The app is not directed at children under 13, and we do not knowingly collect children's personal information. If tracking is turned off, the advertising identifier is not used for personalized ads.</p>
+<p>The app is not directed at children under 13, and we do not knowingly collect children's personal information. If tracking is turned off (iPhone) or the Advertising ID is deleted (Android), the advertising identifier is not used for personalized ads.</p>
 
 <h2>10. Your rights</h2>
 <p>Under applicable privacy laws you may request access, correction, deletion or suspension of processing of your personal information. However, we hold no personal information, so there is nothing to request; you can delete the values on your device yourself at any time by deleting the app.</p>
@@ -273,7 +279,7 @@
 <section class="lang" data-lang="ja">
 <h1>Deep Galaxy プライバシーポリシー</h1>
 
-<p><strong>施行日:</strong> 2026年11月18日<br /><strong>お問い合わせ:</strong> contact@nemofactory.co.kr</p>
+<p><strong>施行日:</strong> 2026年11月26日<br /><strong>お問い合わせ:</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>ひとことで言うと。</strong> Deep Galaxy には<strong>アカウント・ログイン・分析ツールがなく、利用者の情報を保存するサーバーもありません。</strong>惑星・衛星・星・ブラックホールは、アプリに含まれる画像からデバイス上で直接描いています。無料の天体を見に行くときに利用者がご自身で選んだ場合にだけ<strong>リワード広告</strong>が流れます。広告ネットワークが何を読み取るかは<strong>第4項</strong>に記載しています。<strong>宇宙 Pro</strong> をご購入いただくと、広告の機能は一切起動しません。</p>
 
@@ -289,6 +295,8 @@
 <table>
 <tr><th>権限</th><th>必要な理由</th></tr>
 <tr><td><strong>トラッキングの許可</strong>（任意、iPhone ATT）</td><td>パーソナライズ広告のために広告識別子（IDFA）を使うため（第4項）。拒否してもアプリはすべてそのまま動作し、パーソナライズ広告の代わりに一般的な広告が表示されます</td></tr>
+<tr><td><strong>広告 ID</strong>（Android、インストール時に自動で許可）</td><td>広告ネットワークがデバイスの広告 ID を読み取り、広告を表示して成果を測定するため（第4項）。確認画面は表示されず、デバイスの設定でいつでもリセットまたは削除できます（第4項）</td></tr>
+<tr><td><strong>インターネット・ネットワーク状態</strong>（インストール時に自動で許可）</td><td>アプリの状態ファイル・広告・ストアでの購入と通信するため（第5項）</td></tr>
 </table>
 <p>カメラ・マイク・写真・位置情報・連絡先・カレンダー・ヘルスケア情報にはアクセスせず、これらの権限も求めません。</p>
 
@@ -296,9 +304,10 @@
 <ul>
 <li><strong>広告は一か所だけです</strong> — 無料の天体（太陽・水星・金星・地球・月・火星・木星と木星の衛星）を見に行くときに、<strong>「広告を見て行く」をご自身で選んだ場合にだけ</strong>再生される<strong>リワード動画広告</strong>です。最後までご覧いただくと、その天体へ移動します。アプリを開いたときや画面を移るときに勝手に出る広告や、バナー広告はありません。</li>
 <li><strong>広告ネットワーク</strong> — Unity の <strong>LevelPlay（旧 ironSource）</strong>を通じて広告が表示され、広告パートナーは <strong>Unity Ads</strong>、<strong>Liftoff</strong> と <strong>Meta Audience Network</strong> です。</li>
-<li><strong>読み取られるもの</strong> — 広告識別子（IDFA・IDFV／広告 ID）、デバイス・OS・アプリのバージョン・言語などのデバイス情報、接続 IP から推定したおおよその国・都市、広告の表示・タップの記録、広告コードの動作記録。これらの値は<strong>広告ネットワークが利用者のデバイスから直接読み取り、当方は受け取ることも保管することもありません。</strong></li>
+<li><strong>読み取られるもの</strong> — 広告識別子（IDFA・IDFV／Android 広告 ID・App Set ID）、デバイス・OS・アプリのバージョン・言語などのデバイス情報、接続 IP から推定したおおよその国・都市、広告の表示・タップの記録、広告コードの動作記録。これらの値は<strong>広告ネットワークが利用者のデバイスから直接読み取り、当方は受け取ることも保管することもありません。</strong></li>
 <li><strong>インストール済みアプリの情報</strong>（Android） — 広告事業者のコードが、デバイスにどのアプリがインストールされているかを確認することがあります。広告経由でインストールされたかを数えたり、すでにインストールしたアプリの広告を再び表示しないために使われます。<strong>当方のアプリが読み取るものではなく、当方に届くこともありません。</strong></li>
 <li><strong>トラッキングの同意</strong> — 宇宙 Pro を購入していない利用者がアプリを初めて開くと、Apple の<strong>トラッキング許可のリクエスト（ATT）</strong>が一度表示されます。許可しない場合はパーソナライズされていない広告が表示され、すべての機能をそのままお使いいただけます。許可するかどうかは<em>設定 → プライバシーとセキュリティ → トラッキング</em>でいつでも変更できます。</li>
+<li><strong>Android の広告 ID をオフにする</strong> — Android にはトラッキング許可の画面がありません。パーソナライズ広告を望まない場合は、<em>設定 → プライバシー → 広告</em>（デバイスによっては<em>設定 → Google → 広告</em>）で広告 ID を<strong>削除</strong>または<strong>リセット</strong>できます。削除すると、広告ネットワークには広告 ID の代わりに 0 だけが並んだ値が送られ、すべての機能をそのままお使いいただけます。</li>
 <li><strong>宇宙 Pro のご購入後</strong> — 広告の機能（広告ネットワークのコード）を起動せず、トラッキング許可の画面も表示しません。</li>
 </ul>
 <p><strong>欧州経済領域（EEA）・英国・スイスの利用者</strong><br />これらの地域では、上記の広告パートナー（Unity、Liftoff、Meta）がパーソナライズ広告のためにデバイスを使ってよいかを、<strong>広告をリクエストする前に</strong>アプリ内で先にお尋ねします。「拒否」は「同意」と同じくらい簡単に選べ、どちらを選んでもすべての機能をそのままお使いいただけ、広告も表示されます。拒否した場合はパーソナライズされていない広告だけが表示されます。パーソナライズ広告は<strong>利用者の同意</strong>（GDPR 第6条第1項(a)）に、パーソナライズされていない広告の表示と広告の誤作動防止（第2項）は<strong>正当な利益</strong>（同項(f)）に基づきます。選択はアプリの設定 &gt; 広告のプライバシーで<strong>いつでも変更または撤回</strong>でき、次の広告リクエストから適用されます。iPhone ではトラッキング許可のリクエスト（ATT）を先に表示し、許可した場合にだけこの質問が続きます。許可しない場合は、この質問なしにパーソナライズされていない広告だけが表示されます。広告ネットワークは標準契約条項など独自の保護措置に従い、情報を米国などへ移転することがあります。当方は利用者を特定できる情報を持っていないため、広告情報の閲覧・削除は、広告識別子をリセットするか、上記の広告ネットワークに直接ご依頼いただくのが最も早い方法です。</p>
@@ -319,9 +328,9 @@
 <p>当方が第三者に提供したり販売したりする情報はありません。決済は Apple・Google が各社のポリシーに従って直接処理します。ただし、広告ネットワークがデバイスから直接読み取る値（第4項）は、各社の海外サーバーに送信されます。</p>
 <table>
 <tr><th>受け取る者</th><th>項目</th><th>目的</th></tr>
-<tr><td>Unity Technologies（LevelPlay / ironSource・Unity Ads）、Liftoff、Meta Platforms, Inc.（Meta Audience Network）</td><td>広告識別子、デバイス・OS・アプリのバージョン、おおよその国・言語、広告とのやり取り</td><td>広告の表示と成果の測定</td></tr>
+<tr><td>Unity Technologies（LevelPlay / ironSource・Unity Ads）、Liftoff、Meta Platforms, Inc.（Meta Audience Network）</td><td>広告識別子、デバイス・OS・アプリのバージョン、おおよその国・言語、広告とのやり取り、インストール済みアプリの情報（Android）</td><td>広告の表示、成果の測定、広告の不正利用の防止</td></tr>
 </table>
-<p>望まない場合は、トラッキングの許可をオフにして広告識別子の提供を止めることができます。</p>
+<p>望まない場合は、iPhone ではトラッキングの許可をオフにし、Android では広告 ID を削除することで、広告識別子の提供を止めることができます（第4項）。</p>
 
 <h2>7. 保管期間と削除</h2>
 <p>当方が保管する利用者データはないため、削除をご依頼いただく対象もありません。広告ネットワークが読み取った値は、各社のポリシーに従って保管・削除されます。デバイス上の値はアプリを削除すると一緒に消えます。お問い合わせで受け取ったメールは、返信に必要な間だけ保管し、その後削除します。</p>
@@ -330,7 +339,7 @@
 <p>惑星・衛星の地図と星のデータは Solar System Scope（CC BY 4.0）、NASA・USGS（パブリックドメイン）、HYG Database（CC BY-SA 4.0）から取得しました。すべての出典はアプリの設定 › 出典にあります。</p>
 
 <h2>9. 子ども</h2>
-<p>アプリは13歳未満の子どもを対象としておらず、当方は子どもの個人情報を知りながら収集することはありません。トラッキングの許可をオフにすると、広告識別子はパーソナライズ広告に使われません。</p>
+<p>アプリは13歳未満の子どもを対象としておらず、当方は子どもの個人情報を知りながら収集することはありません。トラッキングの許可をオフにするか（iPhone）、広告 ID を削除すると（Android）、広告識別子はパーソナライズ広告に使われません。</p>
 
 <h2>10. 利用者の権利</h2>
 <p>利用者は、適用される法律に基づき、個人情報の閲覧・訂正・削除・処理の停止を求めることができます。ただし、当方が保有する個人情報はないため請求の対象がなく、デバイス上の値はアプリを削除していつでもご自身で消すことができます。</p>
@@ -366,7 +375,7 @@
 <section class="lang" data-lang="zhHant">
 <h1>Deep Galaxy 隱私權政策</h1>
 
-<p><strong>生效日期：</strong>2026年11月18日<br /><strong>聯絡方式：</strong>contact@nemofactory.co.kr</p>
+<p><strong>生效日期：</strong>2026年11月26日<br /><strong>聯絡方式：</strong>contact@nemofactory.co.kr</p>
 
 <p><strong>一句話說明。</strong>Deep Galaxy <strong>沒有帳號、登入或分析工具，也沒有儲存使用者資料的伺服器。</strong>行星、衛星、恆星和黑洞都是用 App 內建的圖片直接在你的裝置上繪製。只有在你前往免費天體時自己選擇，才會播放<strong>獎勵廣告</strong>；廣告聯播網會讀取哪些資料，請見<strong>第 4 條</strong>。購買<strong>宇宙 Pro</strong> 後，廣告功能完全不會啟動。</p>
 
@@ -382,6 +391,8 @@
 <table>
 <tr><th>權限</th><th>為什麼需要</th></tr>
 <tr><td><strong>允許追蹤</strong>（選擇性，iPhone ATT）</td><td>為了個人化廣告使用廣告識別碼（IDFA）（第 4 條）。即使拒絕，App 的所有功能仍照常運作，會改為顯示一般廣告</td></tr>
+<tr><td><strong>廣告 ID</strong>（Android，安裝時自動授予）</td><td>讓廣告聯播網讀取裝置的廣告 ID，以顯示廣告並評估成效（第 4 條）。不會另外跳出詢問視窗，你可以隨時在裝置設定中重設或刪除（第 4 條）</td></tr>
+<tr><td><strong>網際網路與網路狀態</strong>（安裝時自動授予）</td><td>用於連線至 App 狀態檔案、廣告與商店購買（第 5 條）</td></tr>
 </table>
 <p>App 不會存取相機、麥克風、照片、位置、聯絡人、行事曆或健康資料，也不會要求這些權限。</p>
 
@@ -389,9 +400,10 @@
 <ul>
 <li><strong>廣告只有一處</strong> — 前往免費天體（太陽、水星、金星、地球、月球、火星、木星與木星的衛星）時，<strong>只有在你自己選擇「看廣告前往」時</strong>才會播放的<strong>獎勵影片廣告</strong>。看完後就會前往該天體。開啟 App 或切換畫面時不會自動跳出廣告，也沒有橫幅廣告。</li>
 <li><strong>廣告聯播網</strong> — 廣告透過 Unity 的 <strong>LevelPlay（前身為 ironSource）</strong>顯示，廣告合作夥伴為 <strong>Unity Ads</strong>、<strong>Liftoff</strong> 和 <strong>Meta Audience Network</strong>。</li>
-<li><strong>讀取的資料</strong> — 廣告識別碼（IDFA、IDFV／廣告 ID）、裝置、作業系統、App 版本、語言等裝置資訊、由連線 IP 推測的大致國家與城市、廣告的觀看與點按紀錄、廣告程式碼的運作紀錄。這些值<strong>由廣告聯播網直接從你的裝置讀取，我們不會收到也不會保存。</strong></li>
+<li><strong>讀取的資料</strong> — 廣告識別碼（IDFA、IDFV／Android 廣告 ID、App Set ID）、裝置、作業系統、App 版本、語言等裝置資訊、由連線 IP 推測的大致國家與城市、廣告的觀看與點按紀錄、廣告程式碼的運作紀錄。這些值<strong>由廣告聯播網直接從你的裝置讀取，我們不會收到也不會保存。</strong></li>
 <li><strong>已安裝的 App 資訊</strong>（Android） — 廣告業者的程式碼可能會確認裝置上安裝了哪些 App，用來計算是否因看廣告而安裝，或避免再次顯示已安裝 App 的廣告。<strong>這不是我們的 App 讀取的，也不會傳到我們這裡。</strong></li>
 <li><strong>追蹤同意</strong> — 尚未購買宇宙 Pro 的使用者第一次開啟 App 時，會出現一次 Apple 的<strong>追蹤許可請求（ATT）</strong>視窗。若不允許，會顯示非個人化廣告，所有功能仍可照常使用。是否允許可隨時在<em>設定 → 隱私權與安全性 → 追蹤</em>中變更。</li>
+<li><strong>關閉 Android 廣告 ID</strong> — Android 沒有追蹤許可視窗。如果不想看到個人化廣告，可以在<em>設定 → 隱私權 → 廣告</em>（部分裝置為<em>設定 → Google → 廣告</em>）中<strong>刪除</strong>或<strong>重設</strong>廣告 ID。刪除後，廣告聯播網只會收到全部為 0 的值而非廣告 ID，所有功能仍可照常使用。</li>
 <li><strong>購買宇宙 Pro 之後</strong> — 不會啟動廣告功能（廣告聯播網的程式碼），也不會顯示追蹤許可視窗。</li>
 </ul>
 <p><strong>歐洲經濟區（EEA）、英國與瑞士的使用者</strong><br />在這些地區，App 會<strong>在請求廣告之前</strong>，先在 App 內詢問上述廣告合作夥伴（Unity、Liftoff、Meta）是否可以為個人化廣告使用你的裝置。「拒絕」和「同意」一樣容易選擇，無論選哪一個，所有功能都能照常使用，也會顯示廣告。拒絕時只會顯示非個人化廣告。個人化廣告以<strong>你的同意</strong>（GDPR 第 6 條第 1 項 (a) 款）為依據，非個人化廣告的顯示與廣告防誤觸（第 2 條）以<strong>正當利益</strong>（同項 (f) 款）為依據。你可以隨時在 App 的設定 &gt; 廣告隱私中<strong>變更或撤回</strong>選擇，並從下一次廣告請求開始套用。在 iPhone 上會先顯示追蹤許可請求（ATT），只有在你允許時才會接著出現這個問題；若不允許，則不會詢問，只顯示非個人化廣告。廣告聯播網可能依標準契約條款等自身的保護措施，將資料傳輸至美國等地。由於我們沒有任何能辨識你的資料，若要查閱或刪除廣告資料，最快的方法是重設廣告識別碼，或直接向上述廣告聯播網提出請求。</p>
@@ -412,9 +424,9 @@
 <p>我們不會將任何資料提供或販售給第三方。付款由 Apple、Google 依各自政策直接處理。不過，廣告聯播網直接從裝置讀取的值（第 4 條）會傳送到該公司位於海外的伺服器。</p>
 <table>
 <tr><th>接收者</th><th>項目</th><th>目的</th></tr>
-<tr><td>Unity Technologies（LevelPlay / ironSource · Unity Ads）、Liftoff、Meta Platforms, Inc.（Meta Audience Network）</td><td>廣告識別碼、裝置／作業系統／App 版本、大致國家與語言、廣告互動</td><td>顯示廣告與成效評估</td></tr>
+<tr><td>Unity Technologies（LevelPlay / ironSource · Unity Ads）、Liftoff、Meta Platforms, Inc.（Meta Audience Network）</td><td>廣告識別碼、裝置／作業系統／App 版本、大致國家與語言、廣告互動、已安裝的 App 資訊（Android）</td><td>顯示廣告、成效評估與防止廣告詐欺</td></tr>
 </table>
-<p>如果不希望這樣，可以關閉允許追蹤，阻止提供廣告識別碼。</p>
+<p>如果不希望這樣，可以在 iPhone 上關閉允許追蹤，或在 Android 上刪除廣告 ID，阻止提供廣告識別碼（第 4 條）。</p>
 
 <h2>7. 保存期間與刪除</h2>
 <p>我們沒有保存任何使用者資料，因此也沒有可要求刪除的對象。廣告聯播網讀取的值依各公司的政策保存與刪除。裝置上的值會在刪除 App 時一併刪除。透過聯絡我們收到的郵件，只會在回覆所需期間保存，之後即刪除。</p>
@@ -423,7 +435,7 @@
 <p>行星與衛星的地圖及星體資料取自 Solar System Scope（CC BY 4.0）、NASA 與 USGS（公有領域）以及 HYG Database（CC BY-SA 4.0）。完整出處請見 App 的設定 › 出處。</p>
 
 <h2>9. 兒童</h2>
-<p>App 並非以未滿 13 歲的兒童為對象，我們也不會在知情的情況下收集兒童的個人資料。關閉允許追蹤後，廣告識別碼就不會用於個人化廣告。</p>
+<p>App 並非以未滿 13 歲的兒童為對象，我們也不會在知情的情況下收集兒童的個人資料。關閉允許追蹤（iPhone）或刪除廣告 ID（Android）後，廣告識別碼就不會用於個人化廣告。</p>
 
 <h2>10. 你的權利</h2>
 <p>你可以依適用的法律要求查閱、更正、刪除或停止處理你的個人資料。不過，我們沒有保存任何個人資料，因此沒有可要求的對象；裝置上的值可以隨時透過刪除 App 自行清除。</p>
@@ -459,7 +471,7 @@
 <section class="lang" data-lang="es">
 <h1>Deep Galaxy — Política de privacidad</h1>
 
-<p><strong>Vigente desde:</strong> 18 de noviembre de 2026<br /><strong>Contacto:</strong> contact@nemofactory.co.kr</p>
+<p><strong>Vigente desde:</strong> 26 de noviembre de 2026<br /><strong>Contacto:</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>En una línea.</strong> Deep Galaxy <strong>no tiene cuentas, ni inicio de sesión, ni herramientas de análisis, ni ningún servidor que guarde tu información.</strong> Los planetas, lunas, estrellas y el agujero negro se dibujan en tu dispositivo a partir de imágenes incluidas en la app. Un <strong>anuncio con recompensa</strong> se reproduce solo cuando tú lo eliges al ir a un destino gratuito; lo que lee la red publicitaria se describe en la <strong>sección 4</strong>. Si compras <strong>Espacio Pro</strong>, las funciones de anuncios nunca se activan.</p>
 
@@ -475,6 +487,8 @@
 <table>
 <tr><th>Permiso</th><th>Para qué</th></tr>
 <tr><td><strong>Rastreo</strong> (opcional, ATT en iPhone)</td><td>Para usar el identificador de publicidad (IDFA) en anuncios personalizados (sección 4). Si lo rechazas, toda la app funciona igual y verás anuncios no personalizados</td></tr>
+<tr><td><strong>ID de publicidad</strong> (Android, concedido al instalar)</td><td>Para que las redes publicitarias puedan leer el ID de publicidad del dispositivo para mostrar anuncios y medir su rendimiento (sección 4). No se muestra ninguna solicitud; puedes restablecerlo o eliminarlo cuando quieras en los ajustes del dispositivo (sección 4)</td></tr>
+<tr><td><strong>Internet y estado de la red</strong> (concedido al instalar)</td><td>Para conectarse con el archivo de estado de la app, los anuncios y las compras en la tienda (sección 5)</td></tr>
 </table>
 <p>La app no accede a la cámara, el micrófono, las fotos, la ubicación, los contactos, los calendarios ni los datos de salud, y no pide esos permisos.</p>
 
@@ -482,9 +496,10 @@
 <ul>
 <li><strong>Los anuncios aparecen en un solo lugar</strong>: un <strong>anuncio de video con recompensa</strong> que se reproduce <strong>solo cuando tú eliges «Ver un anuncio»</strong> al ir a un destino gratuito (el Sol, Mercurio, Venus, la Tierra, la Luna, Marte, Júpiter y las lunas de Júpiter). Si lo ves hasta el final, vas allí. No hay anuncios que aparezcan solos al abrir la app o al pasar de una pantalla a otra, ni anuncios de banner.</li>
 <li><strong>Red publicitaria</strong>: los anuncios se muestran a través de <strong>LevelPlay (antes ironSource)</strong> de Unity; los socios publicitarios son <strong>Unity Ads</strong>, <strong>Liftoff</strong> y <strong>Meta Audience Network</strong>.</li>
-<li><strong>Lo que leen</strong>: el identificador de publicidad (IDFA, IDFV / ID de publicidad), información del dispositivo como el modelo, el sistema operativo, la versión de la app y el idioma, el país y la ciudad aproximados deducidos de tu dirección IP, registros de anuncios vistos y tocados, y registros del funcionamiento del código publicitario. <strong>Las redes publicitarias leen estos datos directamente desde tu dispositivo; nosotros nunca los recibimos ni los guardamos.</strong></li>
+<li><strong>Lo que leen</strong>: el identificador de publicidad (IDFA, IDFV / ID de publicidad de Android, App Set ID), información del dispositivo como el modelo, el sistema operativo, la versión de la app y el idioma, el país y la ciudad aproximados deducidos de tu dirección IP, registros de anuncios vistos y tocados, y registros del funcionamiento del código publicitario. <strong>Las redes publicitarias leen estos datos directamente desde tu dispositivo; nosotros nunca los recibimos ni los guardamos.</strong></li>
 <li><strong>Apps instaladas</strong> (Android): el código de los proveedores de publicidad puede comprobar qué apps están instaladas en el dispositivo, para contar si un anuncio llevó a una instalación y para no mostrar anuncios de apps que ya tienes. <strong>Deep Galaxy no lee esta información y nunca nos llega.</strong></li>
 <li><strong>Consentimiento de rastreo</strong>: la primera vez que un usuario que no ha comprado Espacio Pro abre la app, aparece una vez la solicitud de <strong>Transparencia de Rastreo de Apps (ATT)</strong> de Apple. Si no lo permites, verás anuncios no personalizados y podrás seguir usando todas las funciones. Puedes cambiarlo cuando quieras en <em>Ajustes → Privacidad y seguridad → Rastreo</em>.</li>
+<li><strong>Desactivar el ID de publicidad de Android</strong>: Android no tiene solicitud de rastreo. Si no quieres anuncios personalizados, ve a <em>Ajustes → Privacidad → Anuncios</em> (en algunos dispositivos, <em>Ajustes → Google → Anuncios</em>) y <strong>elimina</strong> o <strong>restablece</strong> tu ID de publicidad. Una vez eliminado, las redes publicitarias solo reciben una cadena de ceros en lugar del ID, y todas las funciones siguen funcionando.</li>
 <li><strong>Después de comprar Espacio Pro</strong>: las funciones de anuncios (el código de las redes publicitarias) no se activan y no se muestra la solicitud de rastreo.</li>
 </ul>
 <p><strong>Usuarios del EEE, el Reino Unido y Suiza</strong><br />En estas regiones, la app pregunta primero dentro de la app si los socios publicitarios anteriores (Unity, Liftoff, Meta) pueden usar tu dispositivo para anuncios personalizados, <strong>antes de solicitar cualquier anuncio.</strong> «Rechazar» es tan fácil como «Aceptar», y en ambos casos todas las funciones siguen disponibles y se siguen mostrando anuncios; si rechazas, solo serán no personalizados. Nos basamos en <strong>tu consentimiento</strong> (art. 6.1.a del RGPD) para los anuncios personalizados, y en nuestro <strong>interés legítimo</strong> (art. 6.1.f) para mostrar anuncios no personalizados y para la protección contra el mal uso de anuncios (sección 2). Puedes <strong>cambiar o retirar tu elección en cualquier momento</strong> en Ajustes &gt; Privacidad de anuncios de la app; se aplica desde la siguiente solicitud de anuncio. En iPhone, primero aparece la solicitud de rastreo (ATT), y esta pregunta solo sigue si permites el rastreo; si no, solo se muestran anuncios no personalizados sin esta pregunta. Las redes publicitarias pueden transferir datos a Estados Unidos y otros países con sus propias garantías, como las Cláusulas Contractuales Tipo. Como no guardamos nada que te identifique, la forma más rápida de acceder a los datos publicitarios o eliminarlos es restablecer tu identificador de publicidad o solicitarlo directamente a las redes publicitarias mencionadas.</p>
@@ -505,9 +520,9 @@
 <p>No cedemos ni vendemos información a terceros. Los pagos los procesan directamente Apple y Google según sus propias políticas. Sin embargo, los valores que las redes publicitarias leen directamente de tu dispositivo (sección 4) se envían a los servidores de esas empresas en el extranjero.</p>
 <table>
 <tr><th>Destinatario</th><th>Datos</th><th>Finalidad</th></tr>
-<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Identificador de publicidad, dispositivo / sistema operativo / versión de la app, país e idioma aproximados, interacciones con anuncios</td><td>Mostrar anuncios y medir su rendimiento</td></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Identificador de publicidad, dispositivo / sistema operativo / versión de la app, país e idioma aproximados, interacciones con anuncios, apps instaladas (Android)</td><td>Mostrar anuncios, medir su rendimiento y prevenir el fraude publicitario</td></tr>
 </table>
-<p>Si no lo deseas, desactiva el rastreo para impedir que se proporcione el identificador de publicidad.</p>
+<p>Si no lo deseas, desactiva el rastreo en iPhone o elimina tu ID de publicidad en Android para impedir que se proporcione el identificador de publicidad (sección 4).</p>
 
 <h2>7. Conservación y eliminación</h2>
 <p>No guardamos datos de usuarios, así que no hay nada que nos tengas que pedir que eliminemos. Los valores leídos por las redes publicitarias se conservan y eliminan según sus propias políticas. Los valores de tu dispositivo se eliminan al borrar la app. Los correos recibidos por Contacto se conservan solo el tiempo necesario para responder y después se eliminan.</p>
@@ -516,7 +531,7 @@
 <p>Los mapas de planetas y lunas y los datos de estrellas proceden de Solar System Scope (CC BY 4.0), NASA y USGS (dominio público) y la HYG Database (CC BY-SA 4.0). Los créditos completos están en la app, en Ajustes › Créditos.</p>
 
 <h2>9. Menores</h2>
-<p>La app no está dirigida a menores de 13 años, y no recopilamos a sabiendas información personal de menores. Si el rastreo está desactivado, el identificador de publicidad no se usa para anuncios personalizados.</p>
+<p>La app no está dirigida a menores de 13 años, y no recopilamos a sabiendas información personal de menores. Si el rastreo está desactivado (iPhone) o el ID de publicidad se ha eliminado (Android), el identificador de publicidad no se usa para anuncios personalizados.</p>
 
 <h2>10. Tus derechos</h2>
 <p>Según las leyes de privacidad aplicables, puedes solicitar el acceso, la rectificación, la eliminación o la suspensión del tratamiento de tu información personal. Sin embargo, no guardamos información personal, así que no hay nada que solicitar; puedes borrar los valores de tu dispositivo tú mismo en cualquier momento eliminando la app.</p>
@@ -552,7 +567,7 @@
 <section class="lang" data-lang="fr">
 <h1>Deep Galaxy — Politique de confidentialité</h1>
 
-<p><strong>Date d’entrée en vigueur :</strong> 18 novembre 2026<br /><strong>Contact :</strong> contact@nemofactory.co.kr</p>
+<p><strong>Date d’entrée en vigueur :</strong> 26 novembre 2026<br /><strong>Contact :</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>En une ligne.</strong> Deep Galaxy <strong>n’a ni compte, ni connexion, ni outil d’analyse, ni serveur qui conserve vos informations.</strong> Les planètes, les lunes, les étoiles et le trou noir sont dessinés sur votre appareil à partir d’images intégrées à l’app. Une <strong>annonce avec récompense</strong> n’est diffusée que lorsque vous la choisissez vous-même en allant vers une destination gratuite ; ce que lit le réseau publicitaire est décrit à la <strong>section 4</strong>. Si vous achetez <strong>Espace Pro</strong>, les fonctions publicitaires ne sont jamais activées.</p>
 
@@ -568,6 +583,8 @@
 <table>
 <tr><th>Autorisation</th><th>Pourquoi</th></tr>
 <tr><td><strong>Suivi</strong> (facultatif, ATT sur iPhone)</td><td>Pour utiliser l’identifiant publicitaire (IDFA) pour des annonces personnalisées (section 4). Si vous refusez, toute l’app fonctionne de la même façon et vous voyez des annonces non personnalisées</td></tr>
+<tr><td><strong>Identifiant publicitaire</strong> (Android, accordé à l’installation)</td><td>Pour que les réseaux publicitaires puissent lire l’identifiant publicitaire de l’appareil afin d’afficher des annonces et d’en mesurer les performances (section 4). Aucune demande ne s’affiche ; vous pouvez le réinitialiser ou le supprimer à tout moment dans les paramètres de l’appareil (section 4)</td></tr>
+<tr><td><strong>Internet et état du réseau</strong> (accordé à l’installation)</td><td>Pour communiquer avec le fichier d’état de l’app, les annonces et les achats dans la boutique (section 5)</td></tr>
 </table>
 <p>L’app n’accède pas à l’appareil photo, au micro, aux photos, à la position, aux contacts, aux calendriers ni aux données de santé, et ne demande pas ces autorisations.</p>
 
@@ -575,9 +592,10 @@
 <ul>
 <li><strong>Les annonces n’apparaissent qu’à un seul endroit</strong> : une <strong>vidéo avec récompense</strong> diffusée <strong>uniquement lorsque vous choisissez « Regarder une annonce »</strong> vous-même en allant vers une destination gratuite (le Soleil, Mercure, Vénus, la Terre, la Lune, Mars, Jupiter et les lunes de Jupiter). Si vous la regardez jusqu’au bout, vous y allez. Aucune annonce ne s’affiche d’elle-même à l’ouverture de l’app ou en changeant d’écran, et il n’y a pas de bannière.</li>
 <li><strong>Réseau publicitaire</strong> : les annonces sont affichées via <strong>LevelPlay (anciennement ironSource)</strong> de Unity ; les partenaires publicitaires sont <strong>Unity Ads</strong>, <strong>Liftoff</strong> et <strong>Meta Audience Network</strong>.</li>
-<li><strong>Ce qu’ils lisent</strong> : l’identifiant publicitaire (IDFA, IDFV / identifiant publicitaire Android), des informations sur l’appareil comme le modèle, le système, la version de l’app et la langue, le pays et la ville approximatifs déduits de votre adresse IP, l’historique des annonces vues et touchées, et les journaux de fonctionnement du code publicitaire. <strong>Les réseaux publicitaires lisent ces données directement depuis votre appareil ; nous ne les recevons ni ne les conservons jamais.</strong></li>
+<li><strong>Ce qu’ils lisent</strong> : l’identifiant publicitaire (IDFA, IDFV / identifiant publicitaire Android, App Set ID), des informations sur l’appareil comme le modèle, le système, la version de l’app et la langue, le pays et la ville approximatifs déduits de votre adresse IP, l’historique des annonces vues et touchées, et les journaux de fonctionnement du code publicitaire. <strong>Les réseaux publicitaires lisent ces données directement depuis votre appareil ; nous ne les recevons ni ne les conservons jamais.</strong></li>
 <li><strong>Apps installées</strong> (Android) : le code des prestataires publicitaires peut vérifier quelles apps sont installées sur l’appareil, pour savoir si une annonce a mené à une installation et éviter d’afficher des annonces pour des apps que vous avez déjà. <strong>Deep Galaxy ne lit pas ces informations et elles ne nous parviennent jamais.</strong></li>
 <li><strong>Consentement au suivi</strong> : la première fois qu’un utilisateur qui n’a pas acheté Espace Pro ouvre l’app, la demande <strong>App Tracking Transparency (ATT)</strong> d’Apple s’affiche une fois. Si vous ne l’autorisez pas, vous voyez des annonces non personnalisées et pouvez utiliser toutes les fonctions. Vous pouvez modifier ce choix à tout moment dans <em>Réglages → Confidentialité et sécurité → Suivi</em>.</li>
+<li><strong>Désactiver l’identifiant publicitaire Android</strong> : Android n’a pas de demande de suivi. Si vous ne souhaitez pas d’annonces personnalisées, allez dans <em>Paramètres → Confidentialité → Annonces</em> (sur certains appareils, <em>Paramètres → Google → Annonces</em>) et <strong>supprimez</strong> ou <strong>réinitialisez</strong> votre identifiant publicitaire. Une fois celui-ci supprimé, les réseaux publicitaires ne reçoivent qu’une suite de zéros à la place de l’identifiant, et toutes les fonctions continuent de marcher.</li>
 <li><strong>Après l’achat d’Espace Pro</strong> : les fonctions publicitaires (le code des réseaux publicitaires) ne sont pas activées et la demande de suivi n’est pas affichée.</li>
 </ul>
 <p><strong>Utilisateurs de l’EEE, du Royaume-Uni et de la Suisse</strong><br />Dans ces régions, l’app vous demande d’abord, dans l’app, si les partenaires publicitaires ci-dessus (Unity, Liftoff, Meta) peuvent utiliser votre appareil pour des annonces personnalisées — <strong>avant toute demande d’annonce.</strong> « Refuser » est aussi simple qu’« Accepter », et dans les deux cas toutes les fonctions restent disponibles et des annonces s’affichent ; si vous refusez, elles sont simplement non personnalisées. Nous nous fondons sur <strong>votre consentement</strong> (art. 6, par. 1, point a) du RGPD) pour les annonces personnalisées, et sur notre <strong>intérêt légitime</strong> (art. 6, par. 1, point f)) pour l’affichage d’annonces non personnalisées et la protection contre l’usage abusif des annonces (section 2). Vous pouvez <strong>modifier ou retirer votre choix à tout moment</strong> dans Réglages &gt; Confidentialité des annonces de l’app ; il s’applique dès la demande d’annonce suivante. Sur iPhone, la demande de suivi (ATT) s’affiche d’abord, et cette question ne suit que si vous autorisez le suivi ; sinon, seules des annonces non personnalisées sont affichées, sans cette question. Les réseaux publicitaires peuvent transférer des données vers les États-Unis et d’autres pays selon leurs propres garanties, comme les clauses contractuelles types. Comme nous ne détenons rien qui vous identifie, le moyen le plus rapide d’accéder aux données publicitaires ou de les supprimer est de réinitialiser votre identifiant publicitaire ou de vous adresser directement aux réseaux publicitaires ci-dessus.</p>
@@ -598,9 +616,9 @@
 <p>Nous ne transmettons ni ne vendons aucune information à des tiers. Les paiements sont traités directement par Apple et Google selon leurs propres politiques. Toutefois, les valeurs que les réseaux publicitaires lisent directement depuis votre appareil (section 4) sont envoyées aux serveurs de ces entreprises à l’étranger.</p>
 <table>
 <tr><th>Destinataire</th><th>Données</th><th>Finalité</th></tr>
-<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Identifiant publicitaire, appareil / système / version de l’app, pays et langue approximatifs, interactions avec les annonces</td><td>Affichage des annonces et mesure des performances</td></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Identifiant publicitaire, appareil / système / version de l’app, pays et langue approximatifs, interactions avec les annonces, apps installées (Android)</td><td>Affichage des annonces, mesure des performances et prévention de la fraude publicitaire</td></tr>
 </table>
-<p>Si vous ne le souhaitez pas, désactivez le suivi pour empêcher la transmission de l’identifiant publicitaire.</p>
+<p>Si vous ne le souhaitez pas, désactivez le suivi sur iPhone, ou supprimez votre identifiant publicitaire sur Android, pour empêcher la transmission de l’identifiant publicitaire (section 4).</p>
 
 <h2>7. Conservation et suppression</h2>
 <p>Nous ne conservons aucune donnée utilisateur ; il n’y a donc rien à nous demander de supprimer. Les valeurs lues par les réseaux publicitaires sont conservées et supprimées selon leurs propres politiques. Les valeurs de votre appareil sont supprimées lorsque vous supprimez l’app. Les e-mails reçus via Contact ne sont conservés que le temps nécessaire pour répondre, puis supprimés.</p>
@@ -609,7 +627,7 @@
 <p>Les cartes des planètes et des lunes et les données d’étoiles proviennent de Solar System Scope (CC BY 4.0), de la NASA et de l’USGS (domaine public) et de la HYG Database (CC BY-SA 4.0). Les crédits complets se trouvent dans l’app, sous Réglages › Crédits.</p>
 
 <h2>9. Enfants</h2>
-<p>L’app ne s’adresse pas aux enfants de moins de 13 ans, et nous ne collectons pas sciemment d’informations personnelles sur des enfants. Si le suivi est désactivé, l’identifiant publicitaire n’est pas utilisé pour des annonces personnalisées.</p>
+<p>L’app ne s’adresse pas aux enfants de moins de 13 ans, et nous ne collectons pas sciemment d’informations personnelles sur des enfants. Si le suivi est désactivé (iPhone) ou si l’identifiant publicitaire a été supprimé (Android), l’identifiant publicitaire n’est pas utilisé pour des annonces personnalisées.</p>
 
 <h2>10. Vos droits</h2>
 <p>Conformément aux lois applicables, vous pouvez demander l’accès, la rectification, la suppression ou la suspension du traitement de vos informations personnelles. Toutefois, nous ne détenons aucune information personnelle, il n’y a donc rien à demander ; vous pouvez supprimer vous-même à tout moment les valeurs de votre appareil en supprimant l’app.</p>
@@ -645,7 +663,7 @@
 <section class="lang" data-lang="ptBR">
 <h1>Deep Galaxy — Política de Privacidade</h1>
 
-<p><strong>Vigência:</strong> 18 de novembro de 2026<br /><strong>Contato:</strong> contact@nemofactory.co.kr</p>
+<p><strong>Vigência:</strong> 26 de novembro de 2026<br /><strong>Contato:</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>Em uma linha.</strong> O Deep Galaxy <strong>não tem contas, login, ferramentas de análise nem servidor que guarde suas informações.</strong> Os planetas, luas, estrelas e o buraco negro são desenhados no seu dispositivo a partir de imagens incluídas no app. Um <strong>anúncio premiado</strong> só é exibido quando você mesmo escolhe assisti-lo ao ir para um destino gratuito; o que a rede de anúncios lê está descrito na <strong>seção 4</strong>. Se você comprar o <strong>Espaço Pro</strong>, os recursos de anúncios nunca são ativados.</p>
 
@@ -661,6 +679,8 @@
 <table>
 <tr><th>Permissão</th><th>Por quê</th></tr>
 <tr><td><strong>Rastreamento</strong> (opcional, ATT no iPhone)</td><td>Para usar o identificador de publicidade (IDFA) em anúncios personalizados (seção 4). Se você recusar, o app inteiro funciona da mesma forma e você vê anúncios não personalizados</td></tr>
+<tr><td><strong>ID de publicidade</strong> (Android, concedida na instalação)</td><td>Para que as redes de anúncios possam ler o ID de publicidade do dispositivo para exibir anúncios e medir o desempenho (seção 4). Nenhuma solicitação é exibida; você pode redefini-lo ou excluí-lo a qualquer momento nas configurações do dispositivo (seção 4)</td></tr>
+<tr><td><strong>Internet e estado da rede</strong> (concedida na instalação)</td><td>Para se comunicar com o arquivo de status do app, os anúncios e as compras na loja (seção 5)</td></tr>
 </table>
 <p>O app não acessa câmera, microfone, fotos, localização, contatos, calendários nem dados de saúde, e não pede essas permissões.</p>
 
@@ -668,9 +688,10 @@
 <ul>
 <li><strong>Os anúncios aparecem em um só lugar</strong> — um <strong>vídeo premiado</strong> que só é exibido <strong>quando você mesmo escolhe "Assistir a um anúncio"</strong> ao ir para um destino gratuito (o Sol, Mercúrio, Vênus, a Terra, a Lua, Marte, Júpiter e as luas de Júpiter). Se assistir até o fim, você vai até lá. Não há anúncios que aparecem sozinhos ao abrir o app ou mudar de tela, nem banners.</li>
 <li><strong>Rede de anúncios</strong> — os anúncios são exibidos pelo <strong>LevelPlay (antigo ironSource)</strong> da Unity; os parceiros de anúncios são a <strong>Unity Ads</strong>, a <strong>Liftoff</strong> e a <strong>Meta Audience Network</strong>.</li>
-<li><strong>O que elas leem</strong> — o identificador de publicidade (IDFA, IDFV / ID de publicidade), informações do dispositivo como modelo, sistema, versão do app e idioma, país e cidade aproximados inferidos do seu endereço IP, registros de anúncios vistos e tocados, e registros do funcionamento do código de anúncios. <strong>As redes de anúncios leem isso diretamente do seu dispositivo; nós nunca recebemos nem guardamos esses dados.</strong></li>
+<li><strong>O que elas leem</strong> — o identificador de publicidade (IDFA, IDFV / ID de publicidade do Android, App Set ID), informações do dispositivo como modelo, sistema, versão do app e idioma, país e cidade aproximados inferidos do seu endereço IP, registros de anúncios vistos e tocados, e registros do funcionamento do código de anúncios. <strong>As redes de anúncios leem isso diretamente do seu dispositivo; nós nunca recebemos nem guardamos esses dados.</strong></li>
 <li><strong>Apps instalados</strong> (Android) — o código dos provedores de anúncios pode verificar quais apps estão instalados no dispositivo, para contar se um anúncio levou a uma instalação e evitar mostrar anúncios de apps que você já tem. <strong>O Deep Galaxy não lê essas informações, e elas nunca chegam até nós.</strong></li>
 <li><strong>Consentimento de rastreamento</strong> — na primeira vez que um usuário que não comprou o Espaço Pro abre o app, a solicitação de <strong>Transparência no Rastreamento de Apps (ATT)</strong> da Apple aparece uma vez. Se você não permitir, verá anúncios não personalizados e poderá usar todos os recursos. Você pode mudar isso a qualquer momento em <em>Ajustes → Privacidade e Segurança → Rastreamento</em>.</li>
+<li><strong>Desativar o ID de publicidade do Android</strong> — o Android não tem solicitação de rastreamento. Se você não quiser anúncios personalizados, vá em <em>Configurações → Privacidade → Anúncios</em> (em alguns dispositivos, <em>Configurações → Google → Anúncios</em>) e <strong>exclua</strong> ou <strong>redefina</strong> seu ID de publicidade. Depois de excluído, as redes de anúncios recebem apenas uma sequência de zeros no lugar do ID, e todos os recursos continuam funcionando.</li>
 <li><strong>Depois de comprar o Espaço Pro</strong> — os recursos de anúncios (o código das redes de anúncios) não são ativados e a solicitação de rastreamento não é exibida.</li>
 </ul>
 <p><strong>Usuários do EEE, do Reino Unido e da Suíça</strong><br />Nessas regiões, o app pergunta primeiro, dentro do app, se os parceiros de anúncios acima (Unity, Liftoff, Meta) podem usar seu dispositivo para anúncios personalizados — <strong>antes de qualquer solicitação de anúncio.</strong> "Recusar" é tão fácil quanto "Aceitar", e em ambos os casos todos os recursos funcionam e os anúncios continuam aparecendo; se recusar, eles serão apenas não personalizados. Para anúncios personalizados nos baseamos no <strong>seu consentimento</strong> (art. 6.º, n.º 1, alínea a) do RGPD), e no nosso <strong>interesse legítimo</strong> (art. 6.º, n.º 1, alínea f)) para exibir anúncios não personalizados e para a proteção contra uso indevido de anúncios (seção 2). Você pode <strong>mudar ou retirar sua escolha a qualquer momento</strong> em Ajustes &gt; Privacidade de anúncios do app; a mudança vale a partir da próxima solicitação de anúncio. No iPhone, a solicitação de rastreamento (ATT) aparece primeiro, e esta pergunta só vem depois se você permitir o rastreamento; se não permitir, apenas anúncios não personalizados são exibidos, sem esta pergunta. As redes de anúncios podem transferir dados para os Estados Unidos e outros países com suas próprias salvaguardas, como as Cláusulas Contratuais Padrão. Como não guardamos nada que identifique você, a forma mais rápida de acessar ou excluir dados de anúncios é redefinir seu identificador de publicidade ou fazer o pedido diretamente às redes de anúncios acima.</p>
@@ -691,9 +712,9 @@
 <p>Não repassamos nem vendemos informações a terceiros. Os pagamentos são processados diretamente pela Apple e pelo Google conforme suas próprias políticas. No entanto, os valores que as redes de anúncios leem diretamente do seu dispositivo (seção 4) são enviados aos servidores dessas empresas no exterior.</p>
 <table>
 <tr><th>Destinatário</th><th>Dados</th><th>Finalidade</th></tr>
-<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Identificador de publicidade, dispositivo / sistema / versão do app, país e idioma aproximados, interações com anúncios</td><td>Exibir anúncios e medir o desempenho</td></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Identificador de publicidade, dispositivo / sistema / versão do app, país e idioma aproximados, interações com anúncios, apps instalados (Android)</td><td>Exibir anúncios, medir o desempenho e evitar fraudes de anúncios</td></tr>
 </table>
-<p>Se não quiser isso, desative o rastreamento para impedir o fornecimento do identificador de publicidade.</p>
+<p>Se não quiser isso, desative o rastreamento no iPhone ou exclua seu ID de publicidade no Android para impedir o fornecimento do identificador de publicidade (seção 4).</p>
 
 <h2>7. Retenção e exclusão</h2>
 <p>Não guardamos dados de usuários, então não há nada que você precise nos pedir para excluir. Os valores lidos pelas redes de anúncios são guardados e excluídos conforme as políticas delas. Os valores no seu dispositivo são apagados quando você exclui o app. Os e-mails recebidos pelo Contato são guardados só pelo tempo necessário para responder e depois são excluídos.</p>
@@ -702,7 +723,7 @@
 <p>Os mapas de planetas e luas e os dados de estrelas vêm do Solar System Scope (CC BY 4.0), da NASA e do USGS (domínio público) e do HYG Database (CC BY-SA 4.0). Os créditos completos estão no app, em Ajustes › Créditos.</p>
 
 <h2>9. Crianças</h2>
-<p>O app não é direcionado a crianças menores de 13 anos, e não coletamos intencionalmente informações pessoais de crianças. Se o rastreamento estiver desativado, o identificador de publicidade não é usado para anúncios personalizados.</p>
+<p>O app não é direcionado a crianças menores de 13 anos, e não coletamos intencionalmente informações pessoais de crianças. Se o rastreamento estiver desativado (iPhone) ou o ID de publicidade tiver sido excluído (Android), o identificador de publicidade não é usado para anúncios personalizados.</p>
 
 <h2>10. Seus direitos</h2>
 <p>De acordo com as leis de privacidade aplicáveis, você pode solicitar acesso, correção, exclusão ou suspensão do tratamento das suas informações pessoais. No entanto, não guardamos informações pessoais, então não há nada a solicitar; você pode apagar os valores do seu dispositivo a qualquer momento excluindo o app.</p>
@@ -738,7 +759,7 @@
 <section class="lang" data-lang="de">
 <h1>Deep Galaxy – Datenschutzerklärung</h1>
 
-<p><strong>Gültig ab:</strong> 18. November 2026<br /><strong>Kontakt:</strong> contact@nemofactory.co.kr</p>
+<p><strong>Gültig ab:</strong> 26. November 2026<br /><strong>Kontakt:</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>In einem Satz.</strong> Deep Galaxy hat <strong>keine Konten, keine Anmeldung, keine Analysewerkzeuge und keinen Server, der Ihre Daten speichert.</strong> Planeten, Monde, Sterne und das Schwarze Loch werden aus Bildern, die in der App enthalten sind, direkt auf Ihrem Gerät gezeichnet. Eine <strong>Werbung mit Belohnung</strong> läuft nur, wenn Sie sie auf dem Weg zu einem kostenlosen Ziel selbst auswählen; was das Werbenetzwerk ausliest, steht in <strong>Abschnitt 4</strong>. Wenn Sie <strong>Weltall Pro</strong> kaufen, werden die Werbefunktionen gar nicht erst eingeschaltet.</p>
 
@@ -754,6 +775,8 @@
 <table>
 <tr><th>Berechtigung</th><th>Wozu</th></tr>
 <tr><td><strong>Tracking</strong> (optional, ATT auf dem iPhone)</td><td>Um die Werbe-ID (IDFA) für personalisierte Werbung zu nutzen (Abschnitt 4). Wenn Sie ablehnen, funktioniert die ganze App genauso und Sie sehen nicht personalisierte Werbung</td></tr>
+<tr><td><strong>Werbe-ID</strong> (Android, bei der Installation erteilt)</td><td>Damit die Werbenetzwerke die Werbe-ID des Geräts auslesen können, um Werbung anzuzeigen und den Erfolg zu messen (Abschnitt 4). Es erscheint keine Abfrage; Sie können die Werbe-ID jederzeit in den Geräteeinstellungen zurücksetzen oder löschen (Abschnitt 4)</td></tr>
+<tr><td><strong>Internet und Netzwerkstatus</strong> (bei der Installation erteilt)</td><td>Um die App-Statusdatei, Werbung und Store-Käufe zu erreichen (Abschnitt 5)</td></tr>
 </table>
 <p>Die App greift nicht auf Kamera, Mikrofon, Fotos, Standort, Kontakte, Kalender oder Gesundheitsdaten zu und fragt diese Berechtigungen nicht an.</p>
 
@@ -761,9 +784,10 @@
 <ul>
 <li><strong>Werbung gibt es nur an einer Stelle</strong> – ein <strong>Video mit Belohnung</strong>, das <strong>nur läuft, wenn Sie selbst „Werbung ansehen“ wählen</strong>, auf dem Weg zu einem kostenlosen Ziel (Sonne, Merkur, Venus, Erde, Mond, Mars, Jupiter und die Jupitermonde). Wenn Sie es bis zum Ende ansehen, geht es dorthin. Es gibt keine Werbung, die beim Öffnen der App oder beim Wechseln von Bildschirmen von selbst erscheint, und keine Banner.</li>
 <li><strong>Werbenetzwerk</strong> – Werbung wird über <strong>LevelPlay (ehemals ironSource)</strong> von Unity angezeigt; die Werbepartner sind <strong>Unity Ads</strong>, <strong>Liftoff</strong> und <strong>Meta Audience Network</strong>.</li>
-<li><strong>Was ausgelesen wird</strong> – die Werbe-ID (IDFA, IDFV / Werbe-ID), Geräteinformationen wie Gerät, Betriebssystem, App-Version und Sprache, ungefähres Land und ungefähre Stadt anhand Ihrer IP-Adresse, Aufzeichnungen über angesehene und angetippte Anzeigen sowie Protokolle über das Verhalten des Werbecodes. <strong>Die Werbenetzwerke lesen diese Daten direkt von Ihrem Gerät aus; wir erhalten oder speichern sie nie.</strong></li>
+<li><strong>Was ausgelesen wird</strong> – die Werbe-ID (IDFA, IDFV / Android-Werbe-ID, App-Set-ID), Geräteinformationen wie Gerät, Betriebssystem, App-Version und Sprache, ungefähres Land und ungefähre Stadt anhand Ihrer IP-Adresse, Aufzeichnungen über angesehene und angetippte Anzeigen sowie Protokolle über das Verhalten des Werbecodes. <strong>Die Werbenetzwerke lesen diese Daten direkt von Ihrem Gerät aus; wir erhalten oder speichern sie nie.</strong></li>
 <li><strong>Installierte Apps</strong> (Android) – der Code der Werbeanbieter kann prüfen, welche Apps auf dem Gerät installiert sind, um zu zählen, ob eine Anzeige zu einer Installation geführt hat, und um keine Werbung für Apps anzuzeigen, die Sie bereits haben. <strong>Deep Galaxy liest diese Informationen nicht, und sie erreichen uns nie.</strong></li>
 <li><strong>Tracking-Einwilligung</strong> – wenn eine Person, die Weltall Pro nicht gekauft hat, die App zum ersten Mal öffnet, erscheint einmal Apples Abfrage <strong>App-Tracking-Transparenz (ATT)</strong>. Wenn Sie es nicht erlauben, sehen Sie nicht personalisierte Werbung und können alle Funktionen weiter nutzen. Sie können dies jederzeit unter <em>Einstellungen → Datenschutz &amp; Sicherheit → Tracking</em> ändern.</li>
+<li><strong>Android-Werbe-ID ausschalten</strong> – Android hat keine Tracking-Abfrage. Wenn Sie keine personalisierte Werbung möchten, können Sie unter <em>Einstellungen → Datenschutz → Anzeigen</em> (auf manchen Geräten <em>Einstellungen → Google → Anzeigen</em>) Ihre Werbe-ID <strong>löschen</strong> oder <strong>zurücksetzen</strong>. Nach dem Löschen erhalten die Werbenetzwerke statt der ID nur eine Folge von Nullen, und alle Funktionen bleiben nutzbar.</li>
 <li><strong>Nach dem Kauf von Weltall Pro</strong> – die Werbefunktionen (der Code der Werbenetzwerke) werden nicht eingeschaltet, und die Tracking-Abfrage wird nicht angezeigt.</li>
 </ul>
 <p><strong>Nutzer im EWR, im Vereinigten Königreich und in der Schweiz</strong><br />In diesen Regionen fragt die App zuerst in der App, ob die oben genannten Werbepartner (Unity, Liftoff, Meta) Ihr Gerät für personalisierte Werbung nutzen dürfen – <strong>bevor eine Anzeige angefordert wird.</strong> „Ablehnen“ ist genauso einfach wie „Zustimmen“, und in beiden Fällen funktionieren alle Funktionen und Werbung wird angezeigt; wenn Sie ablehnen, ist sie lediglich nicht personalisiert. Für personalisierte Werbung stützen wir uns auf <strong>Ihre Einwilligung</strong> (Art. 6 Abs. 1 lit. a DSGVO), für die Anzeige nicht personalisierter Werbung und den Schutz gegen Werbemissbrauch (Abschnitt 2) auf unser <strong>berechtigtes Interesse</strong> (Art. 6 Abs. 1 lit. f). Sie können Ihre Wahl <strong>jederzeit ändern oder widerrufen</strong> unter Einstellungen &gt; Werbe-Datenschutz in der App; die Änderung gilt ab der nächsten Anzeigenanfrage. Auf dem iPhone erscheint zuerst die Tracking-Abfrage (ATT), und diese Frage folgt nur, wenn Sie Tracking erlauben; andernfalls wird ohne diese Frage nur nicht personalisierte Werbung angezeigt. Die Werbenetzwerke können Daten nach ihren eigenen Schutzmaßnahmen, etwa Standardvertragsklauseln, in die USA und andere Länder übermitteln. Da wir nichts speichern, was Sie identifiziert, wenden Sie sich für Auskunft über oder Löschung von Werbedaten am schnellsten an die oben genannten Werbenetzwerke oder setzen Ihre Werbe-ID zurück.</p>
@@ -784,9 +808,9 @@
 <p>Wir geben keine Informationen an Dritte weiter und verkaufen keine. Zahlungen werden direkt von Apple und Google nach deren eigenen Richtlinien abgewickelt. Die Werte, die Werbenetzwerke direkt von Ihrem Gerät auslesen (Abschnitt 4), werden jedoch an die Server dieser Unternehmen im Ausland übertragen.</p>
 <table>
 <tr><th>Empfänger</th><th>Daten</th><th>Zweck</th></tr>
-<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Werbe-ID, Gerät / Betriebssystem / App-Version, ungefähres Land und Sprache, Interaktionen mit Anzeigen</td><td>Anzeige von Werbung und Erfolgsmessung</td></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Werbe-ID, Gerät / Betriebssystem / App-Version, ungefähres Land und Sprache, Interaktionen mit Anzeigen, installierte Apps (Android)</td><td>Anzeige von Werbung, Erfolgsmessung und Verhinderung von Werbebetrug</td></tr>
 </table>
-<p>Wenn Sie das nicht möchten, schalten Sie Tracking aus, um die Weitergabe der Werbe-ID zu verhindern.</p>
+<p>Wenn Sie das nicht möchten, schalten Sie auf dem iPhone Tracking aus oder löschen Sie auf Android Ihre Werbe-ID, um die Weitergabe der Werbe-ID zu verhindern (Abschnitt 4).</p>
 
 <h2>7. Speicherdauer und Löschung</h2>
 <p>Wir speichern keine Nutzerdaten, daher gibt es nichts, dessen Löschung Sie bei uns beantragen müssten. Von Werbenetzwerken ausgelesene Werte werden nach deren eigenen Richtlinien gespeichert und gelöscht. Werte auf Ihrem Gerät werden gelöscht, wenn Sie die App löschen. Über Kontakt erhaltene E-Mails werden nur so lange aufbewahrt, wie es für die Antwort nötig ist, und danach gelöscht.</p>
@@ -795,7 +819,7 @@
 <p>Karten von Planeten und Monden sowie Sterndaten stammen von Solar System Scope (CC BY 4.0), NASA und USGS (gemeinfrei) und der HYG Database (CC BY-SA 4.0). Alle Quellenangaben finden Sie in der App unter Einstellungen › Quellen.</p>
 
 <h2>9. Kinder</h2>
-<p>Die App richtet sich nicht an Kinder unter 13 Jahren, und wir erheben wissentlich keine personenbezogenen Daten von Kindern. Ist Tracking ausgeschaltet, wird die Werbe-ID nicht für personalisierte Werbung genutzt.</p>
+<p>Die App richtet sich nicht an Kinder unter 13 Jahren, und wir erheben wissentlich keine personenbezogenen Daten von Kindern. Ist Tracking ausgeschaltet (iPhone) oder die Werbe-ID gelöscht (Android), wird die Werbe-ID nicht für personalisierte Werbung genutzt.</p>
 
 <h2>10. Ihre Rechte</h2>
 <p>Nach geltendem Datenschutzrecht können Sie Auskunft, Berichtigung, Löschung oder Einschränkung der Verarbeitung Ihrer personenbezogenen Daten verlangen. Da wir jedoch keine personenbezogenen Daten besitzen, gibt es nichts zu beantragen; die Werte auf Ihrem Gerät können Sie jederzeit selbst löschen, indem Sie die App löschen.</p>
@@ -831,7 +855,7 @@
 <section class="lang" data-lang="it">
 <h1>Deep Galaxy — Informativa sulla privacy</h1>
 
-<p><strong>In vigore dal:</strong> 18 novembre 2026<br /><strong>Contatto:</strong> contact@nemofactory.co.kr</p>
+<p><strong>In vigore dal:</strong> 26 novembre 2026<br /><strong>Contatto:</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>In una riga.</strong> Deep Galaxy <strong>non ha account, accesso, strumenti di analisi né alcun server che conservi le tue informazioni.</strong> Pianeti, lune, stelle e il buco nero vengono disegnati sul tuo dispositivo a partire da immagini incluse nell’app. Un <strong>annuncio con premio</strong> viene riprodotto solo quando lo scegli tu andando verso una destinazione gratuita; ciò che legge la rete pubblicitaria è descritto nella <strong>sezione 4</strong>. Se acquisti <strong>Spazio Pro</strong>, le funzioni pubblicitarie non vengono mai attivate.</p>
 
@@ -847,6 +871,8 @@
 <table>
 <tr><th>Autorizzazione</th><th>Perché</th></tr>
 <tr><td><strong>Tracciamento</strong> (facoltativo, ATT su iPhone)</td><td>Per usare l’identificativo pubblicitario (IDFA) per annunci personalizzati (sezione 4). Se rifiuti, tutta l’app funziona allo stesso modo e vedi annunci non personalizzati</td></tr>
+<tr><td><strong>ID pubblicità</strong> (Android, concesso all’installazione)</td><td>Perché le reti pubblicitarie possano leggere l’ID pubblicità del dispositivo per mostrare annunci e misurarne il rendimento (sezione 4). Non compare alcuna richiesta; puoi reimpostarlo o eliminarlo in qualsiasi momento nelle impostazioni del dispositivo (sezione 4)</td></tr>
+<tr><td><strong>Internet e stato della rete</strong> (concesso all’installazione)</td><td>Per comunicare con il file di stato dell’app, gli annunci e gli acquisti nello store (sezione 5)</td></tr>
 </table>
 <p>L’app non accede a fotocamera, microfono, foto, posizione, contatti, calendari o dati sulla salute, e non chiede queste autorizzazioni.</p>
 
@@ -854,9 +880,10 @@
 <ul>
 <li><strong>Gli annunci compaiono in un solo punto</strong> — un <strong>video con premio</strong> che viene riprodotto <strong>solo quando scegli tu «Guarda un annuncio»</strong> andando verso una destinazione gratuita (il Sole, Mercurio, Venere, la Terra, la Luna, Marte, Giove e le lune di Giove). Se lo guardi fino alla fine, ci vai. Non ci sono annunci che compaiono da soli quando apri l’app o cambi schermata, né banner.</li>
 <li><strong>Rete pubblicitaria</strong> — gli annunci sono mostrati tramite <strong>LevelPlay (ex ironSource)</strong> di Unity; i partner pubblicitari sono <strong>Unity Ads</strong>, <strong>Liftoff</strong> e <strong>Meta Audience Network</strong>.</li>
-<li><strong>Cosa leggono</strong> — l’identificativo pubblicitario (IDFA, IDFV / ID pubblicità), informazioni sul dispositivo come modello, sistema operativo, versione dell’app e lingua, paese e città approssimativi dedotti dal tuo indirizzo IP, registri degli annunci visti e toccati e registri del funzionamento del codice pubblicitario. <strong>Le reti pubblicitarie leggono questi dati direttamente dal tuo dispositivo; noi non li riceviamo né li conserviamo mai.</strong></li>
+<li><strong>Cosa leggono</strong> — l’identificativo pubblicitario (IDFA, IDFV / ID pubblicità Android, App Set ID), informazioni sul dispositivo come modello, sistema operativo, versione dell’app e lingua, paese e città approssimativi dedotti dal tuo indirizzo IP, registri degli annunci visti e toccati e registri del funzionamento del codice pubblicitario. <strong>Le reti pubblicitarie leggono questi dati direttamente dal tuo dispositivo; noi non li riceviamo né li conserviamo mai.</strong></li>
 <li><strong>App installate</strong> (Android) — il codice dei fornitori pubblicitari può verificare quali app sono installate sul dispositivo, per contare se un annuncio ha portato a un’installazione ed evitare di mostrare annunci di app che hai già. <strong>Deep Galaxy non legge queste informazioni, che non arrivano mai a noi.</strong></li>
 <li><strong>Consenso al tracciamento</strong> — la prima volta che un utente che non ha acquistato Spazio Pro apre l’app, compare una volta la richiesta di <strong>Trasparenza sul tracciamento delle app (ATT)</strong> di Apple. Se non lo consenti, vedi annunci non personalizzati e puoi usare tutte le funzioni. Puoi cambiare questa scelta in qualsiasi momento in <em>Impostazioni → Privacy e sicurezza → Tracciamento</em>.</li>
+<li><strong>Disattivare l’ID pubblicità Android</strong> — Android non ha una richiesta di tracciamento. Se non desideri annunci personalizzati, vai in <em>Impostazioni → Privacy → Annunci</em> (su alcuni dispositivi <em>Impostazioni → Google → Annunci</em>) ed <strong>elimina</strong> o <strong>reimposta</strong> il tuo ID pubblicità. Una volta eliminato, le reti pubblicitarie ricevono solo una sequenza di zeri al posto dell’ID, e tutte le funzioni continuano a funzionare.</li>
 <li><strong>Dopo l’acquisto di Spazio Pro</strong> — le funzioni pubblicitarie (il codice delle reti pubblicitarie) non vengono attivate e la richiesta di tracciamento non viene mostrata.</li>
 </ul>
 <p><strong>Utenti nel SEE, nel Regno Unito e in Svizzera</strong><br />In queste regioni l’app chiede prima, all’interno dell’app, se i partner pubblicitari sopra indicati (Unity, Liftoff, Meta) possono usare il tuo dispositivo per annunci personalizzati — <strong>prima di richiedere qualsiasi annuncio.</strong> «Rifiuta» è facile quanto «Accetta», e in entrambi i casi tutte le funzioni restano disponibili e gli annunci vengono comunque mostrati; se rifiuti, saranno solo non personalizzati. Per gli annunci personalizzati ci basiamo sul <strong>tuo consenso</strong> (art. 6, par. 1, lett. a) GDPR), e sul nostro <strong>legittimo interesse</strong> (art. 6, par. 1, lett. f)) per mostrare annunci non personalizzati e per la protezione contro l’uso improprio degli annunci (sezione 2). Puoi <strong>cambiare o revocare la tua scelta in qualsiasi momento</strong> in Impostazioni &gt; Privacy annunci dell’app; si applica dalla richiesta di annuncio successiva. Su iPhone compare prima la richiesta di tracciamento (ATT), e questa domanda segue solo se consenti il tracciamento; altrimenti vengono mostrati solo annunci non personalizzati, senza questa domanda. Le reti pubblicitarie possono trasferire dati negli Stati Uniti e in altri paesi secondo le proprie garanzie, come le clausole contrattuali tipo. Poiché non conserviamo nulla che ti identifichi, il modo più rapido per accedere ai dati pubblicitari o cancellarli è reimpostare l’identificativo pubblicitario o rivolgersi direttamente alle reti pubblicitarie sopra indicate.</p>
@@ -877,9 +904,9 @@
 <p>Non cediamo né vendiamo informazioni a terzi. I pagamenti sono elaborati direttamente da Apple e Google secondo le proprie informative. Tuttavia, i valori che le reti pubblicitarie leggono direttamente dal tuo dispositivo (sezione 4) vengono inviati ai server di tali aziende all’estero.</p>
 <table>
 <tr><th>Destinatario</th><th>Dati</th><th>Finalità</th></tr>
-<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Identificativo pubblicitario, dispositivo / sistema operativo / versione dell’app, paese e lingua approssimativi, interazioni con gli annunci</td><td>Mostrare annunci e misurarne il rendimento</td></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Identificativo pubblicitario, dispositivo / sistema operativo / versione dell’app, paese e lingua approssimativi, interazioni con gli annunci, app installate (Android)</td><td>Mostrare annunci, misurarne il rendimento e prevenire le frodi pubblicitarie</td></tr>
 </table>
-<p>Se non lo desideri, disattiva il tracciamento per impedire che venga fornito l’identificativo pubblicitario.</p>
+<p>Se non lo desideri, disattiva il tracciamento su iPhone o elimina il tuo ID pubblicità su Android per impedire che venga fornito l’identificativo pubblicitario (sezione 4).</p>
 
 <h2>7. Conservazione e cancellazione</h2>
 <p>Non conserviamo dati degli utenti, quindi non c’è nulla di cui chiederci la cancellazione. I valori letti dalle reti pubblicitarie sono conservati e cancellati secondo le loro informative. I valori sul tuo dispositivo vengono eliminati quando elimini l’app. Le e-mail ricevute tramite Contatti sono conservate solo per il tempo necessario a rispondere, poi vengono eliminate.</p>
@@ -888,7 +915,7 @@
 <p>Le mappe di pianeti e lune e i dati delle stelle provengono da Solar System Scope (CC BY 4.0), NASA e USGS (pubblico dominio) e HYG Database (CC BY-SA 4.0). I crediti completi sono nell’app, in Impostazioni › Crediti.</p>
 
 <h2>9. Minori</h2>
-<p>L’app non è rivolta a minori di 13 anni, e non raccogliamo consapevolmente informazioni personali di minori. Se il tracciamento è disattivato, l’identificativo pubblicitario non viene usato per annunci personalizzati.</p>
+<p>L’app non è rivolta a minori di 13 anni, e non raccogliamo consapevolmente informazioni personali di minori. Se il tracciamento è disattivato (iPhone) o l’ID pubblicità è stato eliminato (Android), l’identificativo pubblicitario non viene usato per annunci personalizzati.</p>
 
 <h2>10. I tuoi diritti</h2>
 <p>In base alle leggi sulla privacy applicabili puoi chiedere l’accesso, la rettifica, la cancellazione o la sospensione del trattamento delle tue informazioni personali. Tuttavia non conserviamo informazioni personali, quindi non c’è nulla da richiedere; puoi eliminare tu stesso in qualsiasi momento i valori sul dispositivo eliminando l’app.</p>
@@ -924,7 +951,7 @@
 <section class="lang" data-lang="pl">
 <h1>Deep Galaxy — Polityka prywatności</h1>
 
-<p><strong>Obowiązuje od:</strong> 18 listopada 2026 r.<br /><strong>Kontakt:</strong> contact@nemofactory.co.kr</p>
+<p><strong>Obowiązuje od:</strong> 26 listopada 2026 r.<br /><strong>Kontakt:</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>W jednym zdaniu.</strong> Deep Galaxy <strong>nie ma kont, logowania, narzędzi analitycznych ani serwera, który przechowywałby Twoje dane.</strong> Planety, księżyce, gwiazdy i czarna dziura są rysowane na Twoim urządzeniu z obrazów wbudowanych w aplikację. <strong>Reklama z nagrodą</strong> jest odtwarzana tylko wtedy, gdy sam ją wybierzesz w drodze do darmowego celu; to, co odczytuje sieć reklamowa, opisano w <strong>sekcji 4</strong>. Jeśli kupisz <strong>Kosmos Pro</strong>, funkcje reklamowe nigdy nie są włączane.</p>
 
@@ -940,6 +967,8 @@
 <table>
 <tr><th>Uprawnienie</th><th>Po co</th></tr>
 <tr><td><strong>Śledzenie</strong> (opcjonalne, ATT na iPhonie)</td><td>Aby używać identyfikatora wyświetlania reklam (IDFA) do reklam spersonalizowanych (sekcja 4). Jeśli odmówisz, cała aplikacja działa tak samo, a zamiast tego widzisz reklamy niespersonalizowane</td></tr>
+<tr><td><strong>Identyfikator wyświetlania reklam</strong> (Android, przyznawany przy instalacji)</td><td>Aby sieci reklamowe mogły odczytać identyfikator wyświetlania reklam urządzenia w celu wyświetlania reklam i pomiaru ich skuteczności (sekcja 4). Nie pojawia się żadna prośba; w każdej chwili możesz go zresetować lub usunąć w ustawieniach urządzenia (sekcja 4)</td></tr>
+<tr><td><strong>Internet i stan sieci</strong> (przyznawane przy instalacji)</td><td>Aby łączyć się z plikiem stanu aplikacji, reklamami i zakupami w sklepie (sekcja 5)</td></tr>
 </table>
 <p>Aplikacja nie korzysta z aparatu, mikrofonu, zdjęć, lokalizacji, kontaktów, kalendarzy ani danych o zdrowiu i nie prosi o te uprawnienia.</p>
 
@@ -947,9 +976,10 @@
 <ul>
 <li><strong>Reklamy pojawiają się tylko w jednym miejscu</strong> — to <strong>reklama wideo z nagrodą</strong>, odtwarzana <strong>tylko wtedy, gdy sam wybierzesz „Obejrzyj reklamę”</strong> w drodze do darmowego celu (Słońce, Merkury, Wenus, Ziemia, Księżyc, Mars, Jowisz i księżyce Jowisza). Jeśli obejrzysz ją do końca, przeniesiesz się tam. Nie ma reklam, które pojawiają się same po otwarciu aplikacji lub przejściu między ekranami, ani reklam banerowych.</li>
 <li><strong>Sieć reklamowa</strong> — reklamy są wyświetlane za pośrednictwem <strong>LevelPlay (dawniej ironSource)</strong> firmy Unity; partnerami reklamowymi są <strong>Unity Ads</strong>, <strong>Liftoff</strong> i <strong>Meta Audience Network</strong>.</li>
-<li><strong>Co odczytują</strong> — identyfikator wyświetlania reklam (IDFA, IDFV / Advertising ID), informacje o urządzeniu, takie jak model, system, wersja aplikacji i język, przybliżony kraj i miasto ustalone na podstawie adresu IP, zapisy obejrzanych i stukniętych reklam oraz logi działania kodu reklamowego. <strong>Sieci reklamowe odczytują je bezpośrednio z Twojego urządzenia; my nigdy ich nie otrzymujemy ani nie przechowujemy.</strong></li>
+<li><strong>Co odczytują</strong> — identyfikator wyświetlania reklam (IDFA, IDFV / identyfikator wyświetlania reklam Androida, App Set ID), informacje o urządzeniu, takie jak model, system, wersja aplikacji i język, przybliżony kraj i miasto ustalone na podstawie adresu IP, zapisy obejrzanych i stukniętych reklam oraz logi działania kodu reklamowego. <strong>Sieci reklamowe odczytują je bezpośrednio z Twojego urządzenia; my nigdy ich nie otrzymujemy ani nie przechowujemy.</strong></li>
 <li><strong>Zainstalowane aplikacje</strong> (Android) — kod dostawców reklam może sprawdzić, jakie aplikacje są zainstalowane na urządzeniu, aby policzyć, czy reklama doprowadziła do instalacji, i nie pokazywać reklam aplikacji, które już są. <strong>Deep Galaxy tego nie odczytuje i nigdy do nas to nie trafia.</strong></li>
 <li><strong>Zgoda na śledzenie</strong> — gdy użytkownik, który nie kupił Kosmos Pro, po raz pierwszy otwiera aplikację, jednorazowo pojawia się prośba <strong>App Tracking Transparency (ATT)</strong> firmy Apple. Jeśli nie wyrazisz zgody, zobaczysz reklamy niespersonalizowane i nadal możesz korzystać ze wszystkich funkcji. Możesz to zmienić w dowolnej chwili w <em>Ustawienia → Prywatność i ochrona → Śledzenie</em>.</li>
+<li><strong>Wyłączanie identyfikatora wyświetlania reklam na Androidzie</strong> — Android nie wyświetla prośby o zgodę na śledzenie. Jeśli nie chcesz reklam spersonalizowanych, przejdź do <em>Ustawienia → Prywatność → Reklamy</em> (na niektórych urządzeniach <em>Ustawienia → Google → Reklamy</em>) i <strong>usuń</strong> lub <strong>zresetuj</strong> identyfikator wyświetlania reklam. Po jego usunięciu sieci reklamowe otrzymują zamiast niego tylko ciąg zer, a wszystkie funkcje działają dalej.</li>
 <li><strong>Po zakupie Kosmos Pro</strong> — funkcje reklamowe (kod sieci reklamowych) nie są włączane, a prośba o zgodę na śledzenie się nie pojawia.</li>
 </ul>
 <p><strong>Użytkownicy w EOG, Wielkiej Brytanii i Szwajcarii</strong><br />W tych regionach aplikacja najpierw pyta w samej aplikacji, czy powyżsi partnerzy reklamowi (Unity, Liftoff, Meta) mogą używać Twojego urządzenia do reklam spersonalizowanych — <strong>zanim zostanie wysłane jakiekolwiek żądanie reklamy.</strong> „Odrzuć” jest równie łatwe jak „Akceptuj”, a w obu przypadkach wszystkie funkcje działają i reklamy nadal się pojawiają; odrzucenie sprawia jedynie, że nie są spersonalizowane. Podstawą wyświetlania reklam spersonalizowanych jest <strong>Twoja zgoda</strong> (RODO, art. 6 ust. 1 lit. a), a podstawą wyświetlania reklam niespersonalizowanych oraz ochrony przed nadużyciami reklam (sekcja 2) jest nasz <strong>prawnie uzasadniony interes</strong> (RODO, art. 6 ust. 1 lit. f). Swój wybór możesz <strong>w każdej chwili zmienić lub wycofać</strong> w Ustawieniach aplikacji &gt; Prywatność reklam; zmiana obowiązuje od następnego żądania reklamy. Na iPhonie najpierw pojawia się prośba o zgodę na śledzenie (ATT), a to pytanie następuje tylko wtedy, gdy na nie zezwolisz; jeśli nie zezwolisz, wyświetlane są tylko reklamy niespersonalizowane, bez tego pytania. Sieci reklamowe mogą przekazywać dane do Stanów Zjednoczonych i innych państw na podstawie własnych zabezpieczeń, takich jak standardowe klauzule umowne. Ponieważ nie przechowujemy niczego, co pozwalałoby Cię zidentyfikować, żądania dostępu do danych reklamowych lub ich usunięcia najlepiej zrealizować, resetując identyfikator wyświetlania reklam lub kierując je bezpośrednio do wymienionych wyżej sieci reklamowych.</p>
@@ -970,9 +1000,9 @@
 <p>Nie przekazujemy ani nie sprzedajemy żadnych informacji podmiotom trzecim. Płatności są przetwarzane bezpośrednio przez Apple i Google zgodnie z ich własnymi zasadami. Jednak wartości, które sieci reklamowe odczytują bezpośrednio z Twojego urządzenia (sekcja 4), są wysyłane na zagraniczne serwery tych firm.</p>
 <table>
 <tr><th>Odbiorca</th><th>Dane</th><th>Cel</th></tr>
-<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Identyfikator wyświetlania reklam, urządzenie / system / wersja aplikacji, przybliżony kraj i język, interakcje z reklamami</td><td>Wyświetlanie reklam i pomiar ich skuteczności</td></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Identyfikator wyświetlania reklam, urządzenie / system / wersja aplikacji, przybliżony kraj i język, interakcje z reklamami, zainstalowane aplikacje (Android)</td><td>Wyświetlanie reklam, pomiar ich skuteczności i zapobieganie oszustwom reklamowym</td></tr>
 </table>
-<p>Jeśli tego nie chcesz, wyłącz śledzenie, aby identyfikator wyświetlania reklam nie był udostępniany.</p>
+<p>Jeśli tego nie chcesz, wyłącz śledzenie na iPhonie lub usuń identyfikator wyświetlania reklam na Androidzie, aby identyfikator wyświetlania reklam nie był udostępniany (sekcja 4).</p>
 
 <h2>7. Przechowywanie i usuwanie</h2>
 <p>Nie przechowujemy danych użytkowników, więc nie ma nic, o usunięcie czego musiałbyś nas prosić. Wartości odczytane przez sieci reklamowe są przechowywane i usuwane zgodnie z ich własnymi zasadami. Wartości na Twoim urządzeniu są usuwane po usunięciu aplikacji. E-maile otrzymane przez Kontakt przechowujemy tylko tak długo, jak to potrzebne do udzielenia odpowiedzi, a następnie je usuwamy.</p>
@@ -981,7 +1011,7 @@
 <p>Mapy planet i księżyców oraz dane o gwiazdach pochodzą z Solar System Scope (CC BY 4.0), NASA i USGS (domena publiczna) oraz HYG Database (CC BY-SA 4.0). Pełna lista źródeł znajduje się w aplikacji w Ustawienia › Źródła.</p>
 
 <h2>9. Dzieci</h2>
-<p>Aplikacja nie jest skierowana do dzieci poniżej 13 roku życia i nie zbieramy świadomie danych osobowych dzieci. Jeśli śledzenie jest wyłączone, identyfikator wyświetlania reklam nie jest używany do reklam spersonalizowanych.</p>
+<p>Aplikacja nie jest skierowana do dzieci poniżej 13 roku życia i nie zbieramy świadomie danych osobowych dzieci. Jeśli śledzenie jest wyłączone (iPhone) lub identyfikator wyświetlania reklam jest usunięty (Android), identyfikator wyświetlania reklam nie jest używany do reklam spersonalizowanych.</p>
 
 <h2>10. Twoje prawa</h2>
 <p>Zgodnie z obowiązującymi przepisami o ochronie prywatności możesz żądać dostępu do swoich danych osobowych, ich sprostowania, usunięcia lub ograniczenia przetwarzania. Nie przechowujemy jednak żadnych danych osobowych, więc nie ma czego żądać; wartości na swoim urządzeniu możesz w każdej chwili sam usunąć, usuwając aplikację.</p>
@@ -1017,7 +1047,7 @@
 <section class="lang" data-lang="tr">
 <h1>Deep Galaxy — Gizlilik Politikası</h1>
 
-<p><strong>Yürürlük tarihi:</strong> 18 Kasım 2026<br /><strong>İletişim:</strong> contact@nemofactory.co.kr</p>
+<p><strong>Yürürlük tarihi:</strong> 26 Kasım 2026<br /><strong>İletişim:</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>Tek cümlede.</strong> Deep Galaxy’de <strong>hesap, giriş, analiz aracı ve bilgilerinizi saklayan bir sunucu yoktur.</strong> Gezegenler, uydular, yıldızlar ve kara delik, uygulamanın içindeki görsellerden cihazınızda çizilir. <strong>Ödüllü reklam</strong> yalnızca ücretsiz bir hedefe giderken onu kendiniz seçtiğinizde oynatılır; reklam ağının neyi okuduğu <strong>Bölüm 4</strong>’te açıklanmıştır. <strong>Uzay Pro</strong> satın alırsanız reklam özellikleri hiç açılmaz.</p>
 
@@ -1033,6 +1063,8 @@
 <table>
 <tr><th>İzin</th><th>Neden</th></tr>
 <tr><td><strong>İzleme</strong> (isteğe bağlı, iPhone ATT)</td><td>Kişiselleştirilmiş reklamlar için reklam kimliğini (IDFA) kullanmak (Bölüm 4). Reddederseniz uygulamanın tamamı aynı şekilde çalışır ve bunun yerine kişiselleştirilmemiş reklamlar görürsünüz</td></tr>
+<tr><td><strong>Reklam kimliği</strong> (Android, yüklemede verilir)</td><td>Reklam ağlarının reklam göstermek ve performansı ölçmek için cihazın reklam kimliğini okuyabilmesi (Bölüm 4). Herhangi bir istem gösterilmez; istediğiniz zaman cihaz ayarlarından sıfırlayabilir veya silebilirsiniz (Bölüm 4)</td></tr>
+<tr><td><strong>İnternet ve ağ durumu</strong> (yüklemede verilir)</td><td>Uygulama durum dosyasına, reklamlara ve mağaza satın alımlarına erişmek (Bölüm 5)</td></tr>
 </table>
 <p>Uygulama kameraya, mikrofona, fotoğraflara, konuma, kişilere, takvimlere veya sağlık verilerine erişmez ve bu izinleri istemez.</p>
 
@@ -1040,9 +1072,10 @@
 <ul>
 <li><strong>Reklam yalnızca tek bir yerde çıkar</strong> — ücretsiz bir hedefe (Güneş, Merkür, Venüs, Dünya, Ay, Mars, Jüpiter ve Jüpiter’in uyduları) giderken <strong>yalnızca “Reklam izle”yi kendiniz seçtiğinizde</strong> oynatılan bir <strong>ödüllü video reklam</strong>. Sonuna kadar izlerseniz oraya gidersiniz. Uygulamayı açtığınızda veya ekranlar arasında geçtiğinizde kendiliğinden çıkan reklam ya da banner reklam yoktur.</li>
 <li><strong>Reklam ağı</strong> — reklamlar Unity’nin <strong>LevelPlay (eski adıyla ironSource)</strong> hizmeti üzerinden gösterilir; reklam ortakları <strong>Unity Ads</strong>, <strong>Liftoff</strong> ve <strong>Meta Audience Network</strong>’tür.</li>
-<li><strong>Okudukları</strong> — reklam kimliği (IDFA, IDFV / Advertising ID), cihaz, işletim sistemi, uygulama sürümü ve dil gibi cihaz bilgileri, IP adresinizden tahmin edilen yaklaşık ülke ve şehir, izlenen ve dokunulan reklam kayıtları ve reklam kodunun çalışmasına ilişkin günlükler. <strong>Reklam ağları bunları doğrudan cihazınızdan okur; biz hiçbir zaman almaz ve saklamayız.</strong></li>
+<li><strong>Okudukları</strong> — reklam kimliği (IDFA, IDFV / Android reklam kimliği, App Set ID), cihaz, işletim sistemi, uygulama sürümü ve dil gibi cihaz bilgileri, IP adresinizden tahmin edilen yaklaşık ülke ve şehir, izlenen ve dokunulan reklam kayıtları ve reklam kodunun çalışmasına ilişkin günlükler. <strong>Reklam ağları bunları doğrudan cihazınızdan okur; biz hiçbir zaman almaz ve saklamayız.</strong></li>
 <li><strong>Yüklü uygulamalar</strong> (Android) — reklam sağlayıcılarının kodu, bir reklamın yüklemeye yol açıp açmadığını saymak ve zaten sahip olduğunuz uygulamaların reklamını göstermemek için cihazda hangi uygulamaların yüklü olduğunu kontrol edebilir. <strong>Deep Galaxy bunu okumaz ve bu bilgi bize asla ulaşmaz.</strong></li>
 <li><strong>İzleme onayı</strong> — Uzay Pro satın almamış bir kullanıcı uygulamayı ilk kez açtığında Apple’ın <strong>App Tracking Transparency (ATT)</strong> istemi bir kez görünür. İzin vermezseniz kişiselleştirilmemiş reklamlar görürsünüz ve tüm özellikleri kullanmaya devam edebilirsiniz. Bunu istediğiniz zaman <em>Ayarlar → Gizlilik ve Güvenlik → İzleme</em> bölümünden değiştirebilirsiniz.</li>
+<li><strong>Android reklam kimliğini kapatma</strong> — Android’de izleme istemi yoktur. Kişiselleştirilmiş reklam istemiyorsanız <em>Ayarlar → Gizlilik → Reklamlar</em> (bazı cihazlarda <em>Ayarlar → Google → Reklamlar</em>) bölümüne gidip reklam kimliğinizi <strong>silin</strong> veya <strong>sıfırlayın</strong>. Silindikten sonra reklam ağları kimlik yerine yalnızca sıfırlardan oluşan bir dize alır ve tüm özellikler çalışmaya devam eder.</li>
 <li><strong>Uzay Pro satın aldıktan sonra</strong> — reklam özellikleri (reklam ağlarının kodu) açılmaz ve izleme istemi gösterilmez.</li>
 </ul>
 <p><strong>AEA, Birleşik Krallık ve İsviçre’deki kullanıcılar</strong><br />Bu bölgelerde uygulama, <strong>herhangi bir reklam istenmeden önce</strong>, yukarıdaki reklam ortaklarının (Unity, Liftoff, Meta) kişiselleştirilmiş reklamlar için cihazınızı kullanıp kullanamayacağını önce uygulama içinde sorar. “Reddet” seçeneği “Kabul et” kadar kolaydır; hangisini seçerseniz seçin tüm özellikler çalışır ve reklamlar görünmeye devam eder; reddetmek yalnızca reklamları kişiselleştirilmemiş hâle getirir. Kişiselleştirilmiş reklamlar için <strong>açık rızanıza</strong> (GDPR (AB Genel Veri Koruma Tüzüğü) md. 6/1(a)), kişiselleştirilmemiş reklamların gösterilmesi ve reklamların kötüye kullanımına karşı koruma (Bölüm 2) için ise <strong>meşru menfaatimize</strong> (md. 6/1(f)) dayanırız. Uygulamanın Ayarlar &gt; Reklam gizliliği bölümünden <strong>tercihinizi istediğiniz zaman değiştirebilir veya geri çekebilirsiniz</strong>; değişiklik bir sonraki reklam isteğinden itibaren geçerli olur. iPhone’da önce izleme istemi (ATT) görünür ve bu soru yalnızca izlemeye izin verirseniz ardından gelir; izin vermezseniz bu soru sorulmadan yalnızca kişiselleştirilmemiş reklamlar gösterilir. Reklam ağları verileri, Standart Sözleşme Maddeleri gibi kendi güvenceleri çerçevesinde Amerika Birleşik Devletleri’ne ve diğer ülkelere aktarabilir. Sizi tanımlayan hiçbir bilgiyi tutmadığımız için reklam verilerine erişim veya bunların silinmesi taleplerinin, reklam kimliğinizi sıfırlayarak ya da doğrudan yukarıdaki reklam ağlarına yöneltilmesi en uygun yoldur.</p>
@@ -1063,9 +1096,9 @@
 <p>Hiçbir bilgiyi üçüncü taraflara aktarmaz veya satmayız. Ödemeler, kendi politikaları çerçevesinde doğrudan Apple ve Google tarafından işlenir. Ancak reklam ağlarının doğrudan cihazınızdan okuduğu değerler (Bölüm 4) bu şirketlerin yurt dışındaki sunucularına gönderilir.</p>
 <table>
 <tr><th>Alıcı</th><th>Veriler</th><th>Amaç</th></tr>
-<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Reklam kimliği, cihaz / işletim sistemi / uygulama sürümü, yaklaşık ülke ve dil, reklam etkileşimleri</td><td>Reklam göstermek ve performansı ölçmek</td></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Reklam kimliği, cihaz / işletim sistemi / uygulama sürümü, yaklaşık ülke ve dil, reklam etkileşimleri, yüklü uygulamalar (Android)</td><td>Reklam göstermek, performansı ölçmek ve reklam sahtekârlığını önlemek</td></tr>
 </table>
-<p>Bunu istemiyorsanız, reklam kimliğinin sağlanmasını durdurmak için izlemeyi kapatın.</p>
+<p>Bunu istemiyorsanız, reklam kimliğinin sağlanmasını durdurmak için iPhone’da izlemeyi kapatın veya Android’de reklam kimliğinizi silin (Bölüm 4).</p>
 
 <h2>7. Saklama ve silme</h2>
 <p>Hiçbir kullanıcı verisi saklamadığımız için bizden silmemizi isteyeceğiniz bir şey yoktur. Reklam ağlarının okuduğu değerler kendi politikalarına göre saklanır ve silinir. Cihazınızdaki değerler uygulamayı sildiğinizde silinir. İletişim yoluyla alınan e-postalar yalnızca yanıt vermek için gereken süre boyunca saklanır, ardından silinir.</p>
@@ -1074,7 +1107,7 @@
 <p>Gezegen ve uydu haritaları ile yıldız verileri Solar System Scope (CC BY 4.0), NASA ve USGS (kamu malı) ve HYG Database’den (CC BY-SA 4.0) alınmıştır. Tüm kaynaklar uygulamada Ayarlar › Kaynaklar bölümündedir.</p>
 
 <h2>9. Çocuklar</h2>
-<p>Uygulama 13 yaşın altındaki çocuklara yönelik değildir ve çocukların kişisel verilerini bilerek toplamayız. İzleme kapalıysa reklam kimliği kişiselleştirilmiş reklamlar için kullanılmaz.</p>
+<p>Uygulama 13 yaşın altındaki çocuklara yönelik değildir ve çocukların kişisel verilerini bilerek toplamayız. İzleme kapalıysa (iPhone) veya reklam kimliği silinmişse (Android) reklam kimliği kişiselleştirilmiş reklamlar için kullanılmaz.</p>
 
 <h2>10. Haklarınız</h2>
 <p>Yürürlükteki gizlilik yasaları kapsamında kişisel verilerinize erişim, bunların düzeltilmesi, silinmesi veya işlenmesinin durdurulmasını talep edebilirsiniz. Ancak hiçbir kişisel veri tutmadığımız için talep edilecek bir şey yoktur; cihazınızdaki değerleri uygulamayı silerek istediğiniz zaman kendiniz silebilirsiniz.</p>
@@ -1110,7 +1143,7 @@
 <section class="lang" data-lang="id">
 <h1>Kebijakan Privasi Deep Galaxy</h1>
 
-<p><strong>Berlaku sejak:</strong> 18 November 2026<br /><strong>Kontak:</strong> contact@nemofactory.co.kr</p>
+<p><strong>Berlaku sejak:</strong> 26 November 2026<br /><strong>Kontak:</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>Ringkasnya.</strong> Deep Galaxy <strong>tidak memiliki akun, login, alat analitik, maupun server yang menyimpan informasi Anda.</strong> Planet, bulan, bintang, dan lubang hitam digambar langsung di perangkat Anda dari gambar yang ada di dalam aplikasi. <strong>Iklan berhadiah</strong> hanya diputar saat Anda sendiri memilihnya ketika menuju tujuan gratis; apa yang dibaca jaringan iklan dijelaskan di <strong>bagian 4</strong>. Jika Anda membeli <strong>Antariksa Pro</strong>, fitur iklan tidak pernah dinyalakan.</p>
 
@@ -1126,6 +1159,8 @@
 <table>
 <tr><th>Izin</th><th>Mengapa diperlukan</th></tr>
 <tr><td><strong>Izinkan pelacakan</strong> (opsional, ATT iPhone)</td><td>Untuk menggunakan ID iklan (IDFA) bagi iklan yang dipersonalisasi (bagian 4). Jika Anda menolak, seluruh aplikasi tetap berfungsi sama dan Anda akan melihat iklan umum, bukan iklan yang dipersonalisasi</td></tr>
+<tr><td><strong>ID Iklan</strong> (Android, diberikan saat pemasangan)</td><td>Agar jaringan iklan dapat membaca ID Iklan perangkat untuk menampilkan iklan dan mengukur kinerjanya (bagian 4). Tidak ada jendela permintaan; Anda dapat menyetel ulang atau menghapusnya kapan saja di setelan perangkat (bagian 4)</td></tr>
+<tr><td><strong>Internet dan status jaringan</strong> (diberikan saat pemasangan)</td><td>Untuk mengakses file status aplikasi, iklan, dan pembelian di toko (bagian 5)</td></tr>
 </table>
 <p>Aplikasi tidak mengakses kamera, mikrofon, foto, lokasi, kontak, kalender, atau data kesehatan, dan tidak meminta izin tersebut.</p>
 
@@ -1133,9 +1168,10 @@
 <ul>
 <li><strong>Iklan hanya ada di satu tempat</strong> — <strong>iklan video berhadiah</strong> yang diputar <strong>hanya saat Anda sendiri memilih "Tonton iklan"</strong> ketika menuju tujuan gratis (Matahari, Merkurius, Venus, Bumi, Bulan, Mars, Jupiter, dan bulan-bulan Jupiter). Jika ditonton sampai selesai, Anda akan dibawa ke sana. Tidak ada iklan yang muncul sendiri saat membuka aplikasi atau berpindah layar, dan tidak ada iklan banner.</li>
 <li><strong>Jaringan iklan</strong> — iklan ditampilkan melalui <strong>LevelPlay (sebelumnya ironSource)</strong> milik Unity; mitra iklannya adalah <strong>Unity Ads</strong>, <strong>Liftoff</strong> dan <strong>Meta Audience Network</strong>.</li>
-<li><strong>Yang dibaca</strong> — ID iklan (IDFA, IDFV / ID Iklan), informasi perangkat seperti perangkat, OS, versi aplikasi, dan bahasa, perkiraan negara dan kota berdasarkan IP koneksi, catatan iklan yang dilihat dan diketuk, serta catatan cara kerja kode iklan. <strong>Nilai ini dibaca jaringan iklan langsung dari perangkat Anda; kami tidak pernah menerima atau menyimpannya.</strong></li>
+<li><strong>Yang dibaca</strong> — ID iklan (IDFA, IDFV / ID Iklan Android, App Set ID), informasi perangkat seperti perangkat, OS, versi aplikasi, dan bahasa, perkiraan negara dan kota berdasarkan IP koneksi, catatan iklan yang dilihat dan diketuk, serta catatan cara kerja kode iklan. <strong>Nilai ini dibaca jaringan iklan langsung dari perangkat Anda; kami tidak pernah menerima atau menyimpannya.</strong></li>
 <li><strong>Aplikasi terpasang</strong> (Android) — kode penyedia iklan dapat memeriksa aplikasi apa saja yang terpasang di perangkat, untuk menghitung apakah suatu iklan menghasilkan pemasangan dan untuk menghindari menampilkan iklan aplikasi yang sudah Anda miliki. <strong>Deep Galaxy tidak membaca informasi ini, dan informasi ini tidak pernah sampai ke kami.</strong></li>
 <li><strong>Persetujuan pelacakan</strong> — saat pengguna yang belum membeli Antariksa Pro membuka aplikasi untuk pertama kalinya, jendela <strong>permintaan izin pelacakan (ATT)</strong> Apple muncul sekali. Jika Anda tidak mengizinkan, Anda akan melihat iklan yang tidak dipersonalisasi dan tetap dapat memakai semua fitur. Anda dapat mengubahnya kapan saja di <em>Pengaturan → Privasi &amp; Keamanan → Pelacakan</em>.</li>
+<li><strong>Mematikan ID Iklan Android</strong> — Android tidak memiliki jendela permintaan izin pelacakan. Jika tidak menginginkan iklan yang dipersonalisasi, buka <em>Setelan → Privasi → Iklan</em> (di beberapa perangkat <em>Setelan → Google → Iklan</em>) lalu <strong>hapus</strong> atau <strong>reset</strong> ID Iklan Anda. Setelah dihapus, jaringan iklan hanya menerima deretan angka nol sebagai pengganti ID, dan semua fitur tetap berfungsi.</li>
 <li><strong>Setelah membeli Antariksa Pro</strong> — fitur iklan (kode jaringan iklan) tidak dinyalakan, dan jendela permintaan izin pelacakan tidak ditampilkan.</li>
 </ul>
 <p><strong>Pengguna di Kawasan Ekonomi Eropa (EEA), Inggris, dan Swiss</strong><br />Di wilayah ini, aplikasi lebih dulu menanyakan di dalam aplikasi apakah mitra iklan di atas (Unity, Liftoff, Meta) boleh menggunakan perangkat Anda untuk iklan yang dipersonalisasi — <strong>sebelum iklan apa pun diminta.</strong> “Tolak” semudah “Setuju”, dan apa pun pilihan Anda, semua fitur tetap berfungsi dan iklan tetap muncul; menolak hanya membuat iklan tidak dipersonalisasi. Kami mengandalkan <strong>persetujuan Anda</strong> (GDPR Pasal 6 ayat (1) huruf a) untuk iklan yang dipersonalisasi, dan <strong>kepentingan sah</strong> kami (Pasal 6 ayat (1) huruf f) untuk menampilkan iklan yang tidak dipersonalisasi serta untuk perlindungan penyalahgunaan iklan (bagian 2). Anda dapat <strong>mengubah atau menarik pilihan Anda kapan saja</strong> di Pengaturan aplikasi &gt; Privasi iklan; perubahan berlaku mulai permintaan iklan berikutnya. Di iPhone, permintaan izin pelacakan (ATT) muncul lebih dulu, dan pertanyaan ini hanya menyusul jika Anda mengizinkan pelacakan; jika tidak, hanya iklan yang tidak dipersonalisasi yang ditampilkan tanpa pertanyaan ini. Jaringan iklan dapat mentransfer data ke Amerika Serikat dan negara lain berdasarkan perlindungan mereka sendiri, seperti Klausul Kontrak Standar. Karena kami tidak menyimpan apa pun yang mengidentifikasi Anda, permintaan akses atau penghapusan data iklan paling baik dilakukan dengan menyetel ulang ID iklan Anda atau langsung kepada jaringan iklan yang tercantum di atas.</p>
@@ -1156,9 +1192,9 @@
 <p>Kami tidak memberikan atau menjual informasi apa pun kepada pihak ketiga. Pembayaran diproses langsung oleh Apple dan Google sesuai kebijakan mereka sendiri. Namun, nilai yang dibaca jaringan iklan langsung dari perangkat (bagian 4) dikirim ke server perusahaan tersebut di luar negeri.</p>
 <table>
 <tr><th>Penerima</th><th>Data</th><th>Tujuan</th></tr>
-<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>ID iklan, perangkat / OS / versi aplikasi, perkiraan negara dan bahasa, interaksi iklan</td><td>Menampilkan iklan dan mengukur kinerja</td></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>ID iklan, perangkat / OS / versi aplikasi, perkiraan negara dan bahasa, interaksi iklan, aplikasi terpasang (Android)</td><td>Menampilkan iklan, mengukur kinerja, dan mencegah penipuan iklan</td></tr>
 </table>
-<p>Jika tidak menginginkannya, matikan izin pelacakan agar ID iklan tidak diberikan.</p>
+<p>Jika tidak menginginkannya, matikan izin pelacakan di iPhone, atau hapus ID Iklan di Android, agar ID iklan tidak diberikan (bagian 4).</p>
 
 <h2>7. Masa penyimpanan dan penghapusan</h2>
 <p>Kami tidak menyimpan data pengguna, jadi tidak ada yang perlu Anda minta untuk dihapus. Nilai yang dibaca jaringan iklan disimpan dan dihapus sesuai kebijakan mereka. Nilai di perangkat ikut terhapus saat aplikasi dihapus. Email yang diterima melalui Kontak hanya disimpan selama diperlukan untuk membalas, lalu dihapus.</p>
@@ -1167,7 +1203,7 @@
 <p>Peta planet dan bulan serta data bintang berasal dari Solar System Scope (CC BY 4.0), NASA dan USGS (domain publik), serta HYG Database (CC BY-SA 4.0). Daftar sumber lengkap ada di aplikasi pada Pengaturan › Sumber.</p>
 
 <h2>9. Anak-anak</h2>
-<p>Aplikasi ini tidak ditujukan untuk anak di bawah 13 tahun, dan kami tidak dengan sengaja mengumpulkan informasi pribadi anak-anak. Jika izin pelacakan dimatikan, ID iklan tidak digunakan untuk iklan yang dipersonalisasi.</p>
+<p>Aplikasi ini tidak ditujukan untuk anak di bawah 13 tahun, dan kami tidak dengan sengaja mengumpulkan informasi pribadi anak-anak. Jika izin pelacakan dimatikan (iPhone) atau ID Iklan dihapus (Android), ID iklan tidak digunakan untuk iklan yang dipersonalisasi.</p>
 
 <h2>10. Hak Anda</h2>
 <p>Berdasarkan undang-undang privasi yang berlaku, Anda dapat meminta akses, perbaikan, penghapusan, atau penghentian pemrosesan informasi pribadi Anda. Namun, kami tidak memiliki informasi pribadi apa pun, jadi tidak ada yang dapat diminta; nilai di perangkat dapat Anda hapus sendiri kapan saja dengan menghapus aplikasi.</p>
@@ -1203,7 +1239,7 @@
 <section class="lang" data-lang="ms">
 <h1>Dasar Privasi Deep Galaxy</h1>
 
-<p><strong>Berkuat kuasa:</strong> 18 November 2026<br /><strong>Hubungi:</strong> contact@nemofactory.co.kr</p>
+<p><strong>Berkuat kuasa:</strong> 26 November 2026<br /><strong>Hubungi:</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>Ringkasnya.</strong> Deep Galaxy <strong>tidak mempunyai akaun, log masuk, alat analitik atau pelayan yang menyimpan maklumat anda.</strong> Planet, bulan, bintang dan lohong hitam dilukis terus pada peranti anda daripada imej yang terkandung dalam apl. <strong>Iklan berganjaran</strong> hanya dimainkan apabila anda sendiri memilihnya semasa menuju ke destinasi percuma; apa yang dibaca oleh rangkaian iklan diterangkan dalam <strong>seksyen 4</strong>. Jika anda membeli <strong>Angkasa Pro</strong>, fungsi iklan tidak pernah dihidupkan.</p>
 
@@ -1219,6 +1255,8 @@
 <table>
 <tr><th>Kebenaran</th><th>Mengapa perlu</th></tr>
 <tr><td><strong>Benarkan penjejakan</strong> (pilihan, ATT iPhone)</td><td>Untuk menggunakan pengecam pengiklanan (IDFA) bagi iklan yang diperibadikan (seksyen 4). Jika anda menolak, seluruh apl tetap berfungsi seperti biasa dan anda akan melihat iklan umum dan bukannya iklan yang diperibadikan</td></tr>
+<tr><td><strong>ID Pengiklanan</strong> (Android, diberikan semasa pemasangan)</td><td>Supaya rangkaian iklan boleh membaca ID Pengiklanan peranti untuk memaparkan iklan dan mengukur prestasinya (seksyen 4). Tiada tetingkap permintaan dipaparkan; anda boleh menetapkan semula atau memadamkannya dalam tetapan peranti bila-bila masa (seksyen 4)</td></tr>
+<tr><td><strong>Internet dan keadaan rangkaian</strong> (diberikan semasa pemasangan)</td><td>Untuk mencapai fail status apl, iklan dan pembelian di kedai (seksyen 5)</td></tr>
 </table>
 <p>Apl tidak mengakses kamera, mikrofon, foto, lokasi, kenalan, kalendar atau data kesihatan, dan tidak meminta kebenaran tersebut.</p>
 
@@ -1226,9 +1264,10 @@
 <ul>
 <li><strong>Iklan hanya ada di satu tempat</strong> — <strong>iklan video berganjaran</strong> yang dimainkan <strong>hanya apabila anda sendiri memilih "Tonton iklan"</strong> semasa menuju ke destinasi percuma (Matahari, Utarid, Zuhrah, Bumi, Bulan, Marikh, Musytari dan bulan-bulan Musytari). Jika ditonton hingga habis, anda akan dibawa ke sana. Tiada iklan yang muncul sendiri apabila membuka apl atau bertukar skrin, dan tiada iklan sepanduk.</li>
 <li><strong>Rangkaian iklan</strong> — iklan dipaparkan melalui <strong>LevelPlay (dahulunya ironSource)</strong> milik Unity; rakan iklannya ialah <strong>Unity Ads</strong>, <strong>Liftoff</strong> dan <strong>Meta Audience Network</strong>.</li>
-<li><strong>Apa yang dibaca</strong> — pengecam pengiklanan (IDFA, IDFV / ID Pengiklanan), maklumat peranti seperti peranti, OS, versi apl dan bahasa, anggaran negara dan bandar berdasarkan IP sambungan, rekod iklan yang dilihat dan diketik, serta rekod operasi kod iklan. <strong>Nilai ini dibaca oleh rangkaian iklan terus daripada peranti anda; kami tidak pernah menerima atau menyimpannya.</strong></li>
+<li><strong>Apa yang dibaca</strong> — pengecam pengiklanan (IDFA, IDFV / ID Pengiklanan Android, App Set ID), maklumat peranti seperti peranti, OS, versi apl dan bahasa, anggaran negara dan bandar berdasarkan IP sambungan, rekod iklan yang dilihat dan diketik, serta rekod operasi kod iklan. <strong>Nilai ini dibaca oleh rangkaian iklan terus daripada peranti anda; kami tidak pernah menerima atau menyimpannya.</strong></li>
 <li><strong>Aplikasi yang dipasang</strong> (Android) — kod penyedia pengiklanan boleh menyemak aplikasi yang dipasang pada peranti, untuk mengira sama ada iklan membawa kepada pemasangan dan mengelakkan paparan iklan bagi aplikasi yang sudah anda miliki. <strong>Deep Galaxy tidak membaca maklumat ini, dan ia tidak sekali-kali sampai kepada kami.</strong></li>
 <li><strong>Persetujuan penjejakan</strong> — apabila pengguna yang belum membeli Angkasa Pro membuka apl buat kali pertama, tetingkap <strong>permintaan kebenaran penjejakan (ATT)</strong> Apple muncul sekali. Jika anda tidak membenarkannya, anda akan melihat iklan yang tidak diperibadikan dan masih boleh menggunakan semua fungsi. Anda boleh menukarnya bila-bila masa di <em>Seting → Privasi &amp; Keselamatan → Penjejakan</em>.</li>
+<li><strong>Mematikan ID Pengiklanan Android</strong> — Android tiada tetingkap permintaan kebenaran penjejakan. Jika anda tidak mahu iklan yang diperibadikan, pergi ke <em>Tetapan → Privasi → Iklan</em> (pada sesetengah peranti <em>Tetapan → Google → Iklan</em>) dan <strong>padam</strong> atau <strong>tetapkan semula</strong> ID Pengiklanan anda. Selepas dipadam, rangkaian iklan hanya menerima rentetan sifar sebagai ganti ID, dan semua fungsi tetap berfungsi.</li>
 <li><strong>Selepas membeli Angkasa Pro</strong> — fungsi iklan (kod rangkaian iklan) tidak dihidupkan, dan tetingkap permintaan kebenaran penjejakan tidak dipaparkan.</li>
 </ul>
 <p><strong>Pengguna di Kawasan Ekonomi Eropah (EEA), UK dan Switzerland</strong><br />Di rantau ini, apl terlebih dahulu bertanya di dalam apl sama ada rakan iklan di atas (Unity, Liftoff, Meta) boleh menggunakan peranti anda untuk iklan yang diperibadikan — <strong>sebelum sebarang iklan diminta.</strong> “Tolak” semudah “Setuju”, dan walau apa pun pilihan anda, setiap fungsi tetap boleh digunakan dan iklan masih dipaparkan; menolak hanya menjadikan iklan itu tidak diperibadikan. Kami bergantung pada <strong>persetujuan anda</strong> (GDPR Perkara 6(1)(a)) untuk iklan yang diperibadikan, dan pada <strong>kepentingan sah</strong> kami (Perkara 6(1)(f)) untuk memaparkan iklan yang tidak diperibadikan serta untuk perlindungan penyalahgunaan iklan (seksyen 2). Anda boleh <strong>mengubah atau menarik balik pilihan anda pada bila-bila masa</strong> dalam Tetapan apl &gt; Privasi iklan; ia berkuat kuasa mulai permintaan iklan seterusnya. Pada iPhone, permintaan kebenaran penjejakan (ATT) dipaparkan dahulu, dan soalan ini hanya menyusul jika anda membenarkan penjejakan; jika tidak, hanya iklan yang tidak diperibadikan dipaparkan tanpa soalan ini. Rangkaian iklan mungkin memindahkan data ke Amerika Syarikat dan negara lain di bawah perlindungan mereka sendiri, seperti Klausa Kontrak Standard. Oleh sebab kami tidak menyimpan apa-apa yang mengenal pasti anda, permintaan untuk mengakses atau memadam data iklan paling baik dibuat dengan menetapkan semula pengecam pengiklanan anda atau terus kepada rangkaian iklan yang disenaraikan di atas.</p>
@@ -1249,9 +1288,9 @@
 <p>Kami tidak memberikan atau menjual sebarang maklumat kepada pihak ketiga. Pembayaran diproses terus oleh Apple dan Google mengikut dasar mereka sendiri. Walau bagaimanapun, nilai yang dibaca oleh rangkaian iklan terus daripada peranti (seksyen 4) dihantar ke pelayan syarikat tersebut di luar negara.</p>
 <table>
 <tr><th>Penerima</th><th>Butiran</th><th>Tujuan</th></tr>
-<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Pengecam pengiklanan, peranti / OS / versi apl, anggaran negara dan bahasa, interaksi iklan</td><td>Memaparkan iklan dan mengukur prestasi</td></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Pengecam pengiklanan, peranti / OS / versi apl, anggaran negara dan bahasa, interaksi iklan, aplikasi yang dipasang (Android)</td><td>Memaparkan iklan, mengukur prestasi dan mencegah penipuan iklan</td></tr>
 </table>
-<p>Jika anda tidak mahu, matikan kebenaran penjejakan untuk menghalang pengecam pengiklanan daripada diberikan.</p>
+<p>Jika anda tidak mahu, matikan kebenaran penjejakan pada iPhone, atau padam ID Pengiklanan pada Android, untuk menghalang pengecam pengiklanan daripada diberikan (seksyen 4).</p>
 
 <h2>7. Tempoh penyimpanan dan pemadaman</h2>
 <p>Kami tidak menyimpan data pengguna, jadi tiada apa-apa untuk anda minta dipadam. Nilai yang dibaca oleh rangkaian iklan disimpan dan dipadam mengikut dasar mereka. Nilai pada peranti dipadam bersama apabila apl dipadam. E-mel yang diterima melalui Hubungi hanya disimpan selama diperlukan untuk membalas, kemudian dipadam.</p>
@@ -1260,7 +1299,7 @@
 <p>Peta planet dan bulan serta data bintang diambil daripada Solar System Scope (CC BY 4.0), NASA dan USGS (domain awam) serta HYG Database (CC BY-SA 4.0). Senarai sumber penuh ada dalam apl di Tetapan › Sumber.</p>
 
 <h2>9. Kanak-kanak</h2>
-<p>Apl ini tidak ditujukan kepada kanak-kanak bawah 13 tahun, dan kami tidak dengan sengaja mengumpul maklumat peribadi kanak-kanak. Jika kebenaran penjejakan dimatikan, pengecam pengiklanan tidak digunakan untuk iklan yang diperibadikan.</p>
+<p>Apl ini tidak ditujukan kepada kanak-kanak bawah 13 tahun, dan kami tidak dengan sengaja mengumpul maklumat peribadi kanak-kanak. Jika kebenaran penjejakan dimatikan (iPhone) atau ID Pengiklanan dipadam (Android), pengecam pengiklanan tidak digunakan untuk iklan yang diperibadikan.</p>
 
 <h2>10. Hak anda</h2>
 <p>Di bawah undang-undang privasi yang terpakai, anda boleh meminta akses, pembetulan, pemadaman atau penghentian pemprosesan maklumat peribadi anda. Walau bagaimanapun, kami tidak memegang sebarang maklumat peribadi, jadi tiada apa-apa untuk diminta; nilai pada peranti boleh anda padam sendiri bila-bila masa dengan memadam apl.</p>
@@ -1296,7 +1335,7 @@
 <section class="lang" data-lang="vi">
 <h1>Chính sách quyền riêng tư của Deep Galaxy</h1>
 
-<p><strong>Ngày hiệu lực:</strong> 18 tháng 11 năm 2026<br /><strong>Liên hệ:</strong> contact@nemofactory.co.kr</p>
+<p><strong>Ngày hiệu lực:</strong> 26 tháng 11 năm 2026<br /><strong>Liên hệ:</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>Tóm tắt.</strong> Deep Galaxy <strong>không có tài khoản, đăng nhập, công cụ phân tích, cũng không có máy chủ lưu thông tin của bạn.</strong> Các hành tinh, mặt trăng, ngôi sao và hố đen được vẽ ngay trên thiết bị của bạn từ hình ảnh có sẵn trong ứng dụng. <strong>Quảng cáo có thưởng</strong> chỉ phát khi chính bạn chọn nó trên đường đến một điểm đến miễn phí; mạng quảng cáo đọc những gì được nêu ở <strong>mục 4</strong>. Nếu bạn mua <strong>Vũ trụ Pro</strong>, tính năng quảng cáo sẽ không bao giờ được bật.</p>
 
@@ -1312,6 +1351,8 @@
 <table>
 <tr><th>Quyền</th><th>Vì sao cần</th></tr>
 <tr><td><strong>Cho phép theo dõi</strong> (tuỳ chọn, ATT trên iPhone)</td><td>Để dùng mã định danh quảng cáo (IDFA) cho quảng cáo được cá nhân hoá (mục 4). Nếu bạn từ chối, toàn bộ ứng dụng vẫn hoạt động như cũ và bạn sẽ thấy quảng cáo thông thường thay vì quảng cáo cá nhân hoá</td></tr>
+<tr><td><strong>ID quảng cáo</strong> (Android, cấp khi cài đặt)</td><td>Để mạng quảng cáo đọc được ID quảng cáo của thiết bị nhằm hiển thị quảng cáo và đo lường hiệu quả (mục 4). Không có cửa sổ hỏi; bạn có thể đặt lại hoặc xoá ID này trong phần cài đặt của thiết bị bất cứ lúc nào (mục 4)</td></tr>
+<tr><td><strong>Internet và trạng thái mạng</strong> (cấp khi cài đặt)</td><td>Để truy cập tệp trạng thái ứng dụng, quảng cáo và giao dịch mua qua cửa hàng (mục 5)</td></tr>
 </table>
 <p>Ứng dụng không truy cập camera, micrô, ảnh, vị trí, danh bạ, lịch hay dữ liệu sức khoẻ, và không xin các quyền đó.</p>
 
@@ -1319,9 +1360,10 @@
 <ul>
 <li><strong>Quảng cáo chỉ có ở một chỗ</strong> — <strong>quảng cáo video có thưởng</strong> chỉ phát <strong>khi chính bạn chọn "Xem quảng cáo"</strong> trên đường đến một điểm đến miễn phí (Mặt Trời, Sao Thủy, Sao Kim, Trái Đất, Mặt Trăng, Sao Hỏa, Sao Mộc và các mặt trăng của Sao Mộc). Xem hết, bạn sẽ đến đó. Không có quảng cáo tự bật lên khi mở ứng dụng hay chuyển màn hình, và không có quảng cáo biểu ngữ.</li>
 <li><strong>Mạng quảng cáo</strong> — quảng cáo được hiển thị thông qua <strong>LevelPlay (trước đây là ironSource)</strong> của Unity; các đối tác quảng cáo là <strong>Unity Ads</strong>, <strong>Liftoff</strong> và <strong>Meta Audience Network</strong>.</li>
-<li><strong>Những gì được đọc</strong> — mã định danh quảng cáo (IDFA, IDFV / ID quảng cáo), thông tin thiết bị như máy, hệ điều hành, phiên bản ứng dụng và ngôn ngữ, quốc gia và thành phố ước đoán từ IP kết nối, lịch sử xem và chạm quảng cáo, và nhật ký hoạt động của mã quảng cáo. <strong>Các giá trị này do mạng quảng cáo đọc trực tiếp từ thiết bị của bạn; chúng tôi không bao giờ nhận hay lưu giữ.</strong></li>
+<li><strong>Những gì được đọc</strong> — mã định danh quảng cáo (IDFA, IDFV / ID quảng cáo Android, App Set ID), thông tin thiết bị như máy, hệ điều hành, phiên bản ứng dụng và ngôn ngữ, quốc gia và thành phố ước đoán từ IP kết nối, lịch sử xem và chạm quảng cáo, và nhật ký hoạt động của mã quảng cáo. <strong>Các giá trị này do mạng quảng cáo đọc trực tiếp từ thiết bị của bạn; chúng tôi không bao giờ nhận hay lưu giữ.</strong></li>
 <li><strong>Ứng dụng đã cài đặt</strong> (Android) — mã của các nhà cung cấp quảng cáo có thể kiểm tra những ứng dụng nào được cài đặt trên thiết bị, để tính xem một quảng cáo có dẫn đến lượt cài đặt hay không và tránh hiển thị quảng cáo cho những ứng dụng bạn đã có. <strong>Deep Galaxy không đọc thông tin này, và thông tin này không bao giờ đến được chỗ chúng tôi.</strong></li>
 <li><strong>Đồng ý theo dõi</strong> — khi người dùng chưa mua Vũ trụ Pro mở ứng dụng lần đầu, cửa sổ <strong>yêu cầu cho phép theo dõi (ATT)</strong> của Apple sẽ hiện một lần. Nếu bạn không cho phép, bạn sẽ thấy quảng cáo không được cá nhân hoá và vẫn dùng được mọi tính năng. Bạn có thể thay đổi bất cứ lúc nào trong <em>Cài đặt → Quyền riêng tư &amp; Bảo mật → Theo dõi</em>.</li>
+<li><strong>Tắt ID quảng cáo trên Android</strong> — Android không có cửa sổ yêu cầu cho phép theo dõi. Nếu không muốn quảng cáo cá nhân hoá, hãy vào <em>Cài đặt → Quyền riêng tư → Quảng cáo</em> (trên một số máy là <em>Cài đặt → Google → Quảng cáo</em>) rồi <strong>xoá</strong> hoặc <strong>đặt lại</strong> ID quảng cáo. Sau khi xoá, mạng quảng cáo chỉ nhận được một chuỗi số 0 thay cho ID, và mọi tính năng vẫn hoạt động bình thường.</li>
 <li><strong>Sau khi mua Vũ trụ Pro</strong> — tính năng quảng cáo (mã của mạng quảng cáo) không được bật, và cửa sổ yêu cầu cho phép theo dõi không hiện.</li>
 </ul>
 <p><strong>Người dùng tại Khu vực Kinh tế Châu Âu (EEA), Vương quốc Anh và Thụy Sĩ</strong><br />Tại các khu vực này, ứng dụng sẽ hỏi trước ngay trong ứng dụng liệu các đối tác quảng cáo nêu trên (Unity, Liftoff, Meta) có được dùng thiết bị của bạn cho quảng cáo được cá nhân hoá hay không — <strong>trước khi bất kỳ quảng cáo nào được yêu cầu.</strong> Chọn “Từ chối” cũng dễ như chọn “Đồng ý”, và dù chọn bên nào thì mọi tính năng vẫn hoạt động và quảng cáo vẫn hiển thị; từ chối chỉ khiến quảng cáo không được cá nhân hoá. Chúng tôi dựa trên <strong>sự đồng ý của bạn</strong> (GDPR Điều 6 khoản 1 điểm a) đối với quảng cáo được cá nhân hoá, và trên <strong>lợi ích hợp pháp</strong> của chúng tôi (Điều 6 khoản 1 điểm f) đối với việc hiển thị quảng cáo không được cá nhân hoá và việc chống lạm dụng quảng cáo (mục 2). Bạn có thể <strong>thay đổi hoặc rút lại lựa chọn bất cứ lúc nào</strong> trong Cài đặt của ứng dụng &gt; Quyền riêng tư quảng cáo; thay đổi áp dụng từ yêu cầu quảng cáo tiếp theo. Trên iPhone, cửa sổ yêu cầu cho phép theo dõi (ATT) hiện trước, và câu hỏi này chỉ tiếp theo nếu bạn cho phép theo dõi; nếu không, chỉ quảng cáo không được cá nhân hoá được hiển thị mà không có câu hỏi này. Các mạng quảng cáo có thể chuyển dữ liệu sang Hoa Kỳ và các quốc gia khác theo các biện pháp bảo vệ riêng của họ, chẳng hạn như Điều khoản hợp đồng tiêu chuẩn. Vì chúng tôi không lưu giữ bất cứ thứ gì nhận dạng được bạn, cách tốt nhất để yêu cầu truy cập hoặc xoá dữ liệu quảng cáo là đặt lại mã định danh quảng cáo của bạn hoặc liên hệ trực tiếp với các mạng quảng cáo nêu trên.</p>
@@ -1342,9 +1384,9 @@
 <p>Chúng tôi không chuyển giao hay bán thông tin nào cho bên thứ ba. Thanh toán do Apple và Google trực tiếp xử lý theo chính sách riêng của họ. Tuy nhiên, các giá trị mà mạng quảng cáo đọc trực tiếp từ thiết bị (mục 4) được gửi đến máy chủ ở nước ngoài của các công ty đó.</p>
 <table>
 <tr><th>Bên nhận</th><th>Hạng mục</th><th>Mục đích</th></tr>
-<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Mã định danh quảng cáo, thiết bị / hệ điều hành / phiên bản ứng dụng, quốc gia và ngôn ngữ ước đoán, tương tác với quảng cáo</td><td>Hiển thị quảng cáo và đo lường hiệu quả</td></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Mã định danh quảng cáo, thiết bị / hệ điều hành / phiên bản ứng dụng, quốc gia và ngôn ngữ ước đoán, tương tác với quảng cáo, ứng dụng đã cài đặt (Android)</td><td>Hiển thị quảng cáo, đo lường hiệu quả và ngăn chặn gian lận quảng cáo</td></tr>
 </table>
-<p>Nếu không muốn, bạn có thể tắt cho phép theo dõi để chặn việc cung cấp mã định danh quảng cáo.</p>
+<p>Nếu không muốn, bạn có thể tắt cho phép theo dõi trên iPhone, hoặc xoá ID quảng cáo trên Android, để chặn việc cung cấp mã định danh quảng cáo (mục 4).</p>
 
 <h2>7. Thời gian lưu giữ và xoá</h2>
 <p>Chúng tôi không lưu giữ dữ liệu người dùng nào nên cũng không có gì để bạn yêu cầu xoá. Các giá trị mạng quảng cáo đã đọc được lưu và xoá theo chính sách của họ. Giá trị trên thiết bị bị xoá cùng khi xoá ứng dụng. Email nhận được qua Liên hệ chỉ được giữ trong thời gian cần để trả lời, sau đó bị xoá.</p>
@@ -1353,7 +1395,7 @@
 <p>Bản đồ hành tinh, mặt trăng và dữ liệu sao lấy từ Solar System Scope (CC BY 4.0), NASA và USGS (phạm vi công cộng) và HYG Database (CC BY-SA 4.0). Toàn bộ nguồn được liệt kê trong ứng dụng tại Cài đặt › Nguồn.</p>
 
 <h2>9. Trẻ em</h2>
-<p>Ứng dụng không dành cho trẻ em dưới 13 tuổi, và chúng tôi không cố ý thu thập thông tin cá nhân của trẻ em. Nếu tắt cho phép theo dõi, mã định danh quảng cáo sẽ không được dùng cho quảng cáo cá nhân hoá.</p>
+<p>Ứng dụng không dành cho trẻ em dưới 13 tuổi, và chúng tôi không cố ý thu thập thông tin cá nhân của trẻ em. Nếu tắt cho phép theo dõi (iPhone) hoặc xoá ID quảng cáo (Android), mã định danh quảng cáo sẽ không được dùng cho quảng cáo cá nhân hoá.</p>
 
 <h2>10. Quyền của bạn</h2>
 <p>Theo luật về quyền riêng tư hiện hành, bạn có thể yêu cầu xem, sửa, xoá hoặc ngừng xử lý thông tin cá nhân của mình. Tuy nhiên, chúng tôi không nắm giữ thông tin cá nhân nào nên không có gì để yêu cầu; giá trị trên thiết bị bạn có thể tự xoá bất cứ lúc nào bằng cách xoá ứng dụng.</p>
@@ -1389,7 +1431,7 @@
 <section class="lang" data-lang="th">
 <h1>นโยบายความเป็นส่วนตัวของ Deep Galaxy</h1>
 
-<p><strong>มีผลบังคับใช้:</strong> 18 พฤศจิกายน 2026<br /><strong>ติดต่อ:</strong> contact@nemofactory.co.kr</p>
+<p><strong>มีผลบังคับใช้:</strong> 26 พฤศจิกายน 2026<br /><strong>ติดต่อ:</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>สรุปสั้น ๆ</strong> Deep Galaxy <strong>ไม่มีบัญชี ไม่มีการเข้าสู่ระบบ ไม่มีเครื่องมือวิเคราะห์ และไม่มีเซิร์ฟเวอร์ที่เก็บข้อมูลของคุณ</strong> ดาวเคราะห์ ดวงจันทร์ ดวงดาว และหลุมดำ วาดขึ้นบนอุปกรณ์ของคุณโดยตรงจากภาพที่อยู่ในแอป <strong>โฆษณาแบบให้รางวัล</strong>จะเล่นเฉพาะเมื่อคุณเลือกเองระหว่างไปยังจุดหมายที่ดูได้ฟรี สิ่งที่เครือข่ายโฆษณาอ่านไปอธิบายไว้ใน<strong>ข้อ 4</strong> หากคุณซื้อ <strong>อวกาศ Pro</strong> ฟีเจอร์โฆษณาจะไม่ถูกเปิดเลย</p>
 
@@ -1405,6 +1447,8 @@
 <table>
 <tr><th>สิทธิ์</th><th>ทำไมจึงต้องใช้</th></tr>
 <tr><td><strong>อนุญาตการติดตาม</strong> (ไม่บังคับ, ATT บน iPhone)</td><td>เพื่อใช้ตัวระบุโฆษณา (IDFA) สำหรับโฆษณาที่ปรับให้เหมาะกับคุณ (ข้อ 4) หากปฏิเสธ แอปทั้งหมดยังทำงานได้ตามเดิม และจะแสดงโฆษณาทั่วไปแทนโฆษณาที่ปรับให้เหมาะกับคุณ</td></tr>
+<tr><td><strong>รหัสโฆษณา</strong> (Android, ได้รับเมื่อติดตั้ง)</td><td>เพื่อให้เครือข่ายโฆษณาอ่านรหัสโฆษณาของอุปกรณ์ได้ สำหรับแสดงโฆษณาและวัดผล (ข้อ 4) ไม่มีหน้าต่างขออนุญาต คุณรีเซ็ตหรือลบรหัสนี้ได้ทุกเมื่อในการตั้งค่าของอุปกรณ์ (ข้อ 4)</td></tr>
+<tr><td><strong>อินเทอร์เน็ตและสถานะเครือข่าย</strong> (ได้รับเมื่อติดตั้ง)</td><td>เพื่อเข้าถึงไฟล์สถานะแอป โฆษณา และการซื้อผ่านสโตร์ (ข้อ 5)</td></tr>
 </table>
 <p>แอปไม่เข้าถึงกล้อง ไมโครโฟน รูปภาพ ตำแหน่ง รายชื่อติดต่อ ปฏิทิน หรือข้อมูลสุขภาพ และไม่ขอสิทธิ์เหล่านั้น</p>
 
@@ -1412,9 +1456,10 @@
 <ul>
 <li><strong>โฆษณามีเพียงตำแหน่งเดียว</strong> — คือ<strong>โฆษณาวิดีโอแบบให้รางวัล</strong>ที่จะเล่น<strong>เฉพาะเมื่อคุณเลือก "ดูโฆษณา" ด้วยตัวเอง</strong>ระหว่างไปยังจุดหมายที่ดูได้ฟรี (ดวงอาทิตย์ ดาวพุธ ดาวศุกร์ โลก ดวงจันทร์ ดาวอังคาร ดาวพฤหัสบดี และดวงจันทร์ของดาวพฤหัสบดี) หากดูจนจบ คุณจะได้ไปยังที่นั่น ไม่มีโฆษณาที่ขึ้นเองเมื่อเปิดแอปหรือเปลี่ยนหน้า และไม่มีแบนเนอร์</li>
 <li><strong>เครือข่ายโฆษณา</strong> — โฆษณาแสดงผ่าน <strong>LevelPlay (เดิมคือ ironSource)</strong> ของ Unity พาร์ทเนอร์โฆษณาคือ <strong>Unity Ads</strong>, <strong>Liftoff</strong> และ <strong>Meta Audience Network</strong></li>
-<li><strong>สิ่งที่อ่านไป</strong> — ตัวระบุโฆษณา (IDFA, IDFV / รหัสโฆษณา) ข้อมูลอุปกรณ์ เช่น รุ่นอุปกรณ์ ระบบปฏิบัติการ เวอร์ชันแอป และภาษา ประเทศและเมืองโดยประมาณที่คาดจาก IP ที่เชื่อมต่อ ประวัติการดูและแตะโฆษณา และบันทึกการทำงานของโค้ดโฆษณา <strong>ค่าเหล่านี้เครือข่ายโฆษณาอ่านจากอุปกรณ์ของคุณโดยตรง เราไม่ได้รับและไม่ได้เก็บไว้</strong></li>
+<li><strong>สิ่งที่อ่านไป</strong> — ตัวระบุโฆษณา (IDFA, IDFV / รหัสโฆษณาของ Android, App Set ID) ข้อมูลอุปกรณ์ เช่น รุ่นอุปกรณ์ ระบบปฏิบัติการ เวอร์ชันแอป และภาษา ประเทศและเมืองโดยประมาณที่คาดจาก IP ที่เชื่อมต่อ ประวัติการดูและแตะโฆษณา และบันทึกการทำงานของโค้ดโฆษณา <strong>ค่าเหล่านี้เครือข่ายโฆษณาอ่านจากอุปกรณ์ของคุณโดยตรง เราไม่ได้รับและไม่ได้เก็บไว้</strong></li>
 <li><strong>แอปที่ติดตั้ง</strong> (Android) — โค้ดของผู้ให้บริการโฆษณาสามารถตรวจสอบได้ว่ามีแอปใดติดตั้งอยู่บนอุปกรณ์ เพื่อนับว่าโฆษณานำไปสู่การติดตั้งหรือไม่ และเพื่อหลีกเลี่ยงการแสดงโฆษณาของแอปที่คุณมีอยู่แล้ว <strong>Deep Galaxy ไม่อ่านข้อมูลนี้ และข้อมูลนี้ไม่เคยมาถึงเรา</strong></li>
 <li><strong>การยินยอมให้ติดตาม</strong> — เมื่อผู้ใช้ที่ยังไม่ได้ซื้อ อวกาศ Pro เปิดแอปครั้งแรก หน้าต่าง<strong>ขออนุญาตการติดตาม (ATT)</strong> ของ Apple จะแสดงขึ้นหนึ่งครั้ง หากไม่อนุญาต จะแสดงโฆษณาที่ไม่ได้ปรับให้เหมาะกับคุณ และคุณยังใช้ทุกฟีเจอร์ได้ตามเดิม คุณเปลี่ยนการอนุญาตได้ทุกเมื่อที่ <em>การตั้งค่า → ความเป็นส่วนตัวและความปลอดภัย → การติดตาม</em></li>
+<li><strong>การปิดรหัสโฆษณาของ Android</strong> — Android ไม่มีหน้าต่างขออนุญาตการติดตาม หากไม่ต้องการโฆษณาที่ปรับให้เหมาะกับคุณ ให้ไปที่ <em>การตั้งค่า → ความเป็นส่วนตัว → โฆษณา</em> (ในบางอุปกรณ์คือ <em>การตั้งค่า → Google → โฆษณา</em>) แล้ว<strong>ลบ</strong>หรือ<strong>รีเซ็ต</strong>รหัสโฆษณา เมื่อลบแล้ว เครือข่ายโฆษณาจะได้รับเพียงชุดตัวเลขศูนย์แทนรหัส และทุกฟีเจอร์ยังใช้งานได้ตามเดิม</li>
 <li><strong>หลังจากซื้อ อวกาศ Pro</strong> — ฟีเจอร์โฆษณา (โค้ดของเครือข่ายโฆษณา) จะไม่ถูกเปิด และจะไม่แสดงหน้าต่างขออนุญาตการติดตาม</li>
 </ul>
 <p><strong>ผู้ใช้ในเขตเศรษฐกิจยุโรป (EEA) สหราชอาณาจักร และสวิตเซอร์แลนด์</strong><br />ในภูมิภาคเหล่านี้ แอปจะถามภายในแอปก่อนว่าพาร์ทเนอร์โฆษณาข้างต้น (Unity, Liftoff, Meta) สามารถใช้อุปกรณ์ของคุณเพื่อแสดงโฆษณาที่ปรับให้เหมาะกับคุณได้หรือไม่ <strong>ก่อนที่จะมีการขอโฆษณาใด ๆ</strong> การเลือก “ปฏิเสธ” ง่ายพอ ๆ กับ “ยอมรับ” และไม่ว่าจะเลือกแบบใด ทุกฟีเจอร์ยังใช้งานได้และโฆษณายังคงแสดงตามปกติ การปฏิเสธเพียงทำให้โฆษณาไม่ถูกปรับให้เหมาะกับคุณ เราอาศัย<strong>ความยินยอมของคุณ</strong> (GDPR มาตรา 6(1)(a)) สำหรับโฆษณาที่ปรับให้เหมาะกับคุณ และอาศัย<strong>ประโยชน์อันชอบธรรม</strong>ของเรา (มาตรา 6(1)(f)) สำหรับการแสดงโฆษณาที่ไม่ได้ปรับให้เหมาะกับคุณและการป้องกันการใช้โฆษณาผิดปกติ (ข้อ 2) คุณ<strong>เปลี่ยนหรือถอนตัวเลือกได้ทุกเมื่อ</strong>ที่ การตั้งค่าของแอป &gt; ความเป็นส่วนตัวของโฆษณา โดยมีผลตั้งแต่การขอโฆษณาครั้งถัดไป บน iPhone หน้าต่างขออนุญาตการติดตาม (ATT) จะแสดงก่อน และคำถามนี้จะตามมาเฉพาะเมื่อคุณอนุญาตการติดตาม หากไม่อนุญาต จะแสดงเฉพาะโฆษณาที่ไม่ได้ปรับให้เหมาะกับคุณโดยไม่มีคำถามนี้ เครือข่ายโฆษณาอาจโอนข้อมูลไปยังสหรัฐอเมริกาและประเทศอื่น ๆ ภายใต้มาตรการคุ้มครองของตนเอง เช่น ข้อสัญญามาตรฐาน (Standard Contractual Clauses) เนื่องจากเราไม่ได้เก็บข้อมูลใดที่ระบุตัวคุณได้ วิธีที่ดีที่สุดในการขอเข้าถึงหรือลบข้อมูลโฆษณาคือการรีเซ็ตตัวระบุโฆษณาของคุณ หรือติดต่อเครือข่ายโฆษณาข้างต้นโดยตรง</p>
@@ -1435,9 +1480,9 @@
 <p>เราไม่ได้ส่งต่อหรือขายข้อมูลใดให้บุคคลที่สาม การชำระเงิน Apple และ Google ดำเนินการโดยตรงตามนโยบายของตน อย่างไรก็ตาม ค่าที่เครือข่ายโฆษณาอ่านจากอุปกรณ์โดยตรง (ข้อ 4) จะถูกส่งไปยังเซิร์ฟเวอร์ในต่างประเทศของบริษัทนั้น</p>
 <table>
 <tr><th>ผู้รับ</th><th>รายการ</th><th>วัตถุประสงค์</th></tr>
-<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>ตัวระบุโฆษณา, อุปกรณ์ / ระบบปฏิบัติการ / เวอร์ชันแอป, ประเทศและภาษาโดยประมาณ, การโต้ตอบกับโฆษณา</td><td>แสดงโฆษณาและวัดผล</td></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>ตัวระบุโฆษณา, อุปกรณ์ / ระบบปฏิบัติการ / เวอร์ชันแอป, ประเทศและภาษาโดยประมาณ, การโต้ตอบกับโฆษณา, แอปที่ติดตั้ง (Android)</td><td>แสดงโฆษณา วัดผล และป้องกันการฉ้อโกงโฆษณา</td></tr>
 </table>
-<p>หากไม่ต้องการ คุณปิดการอนุญาตการติดตามเพื่อไม่ให้มีการให้ตัวระบุโฆษณาได้</p>
+<p>หากไม่ต้องการ คุณปิดการอนุญาตการติดตามบน iPhone หรือลบรหัสโฆษณาบน Android เพื่อไม่ให้มีการให้ตัวระบุโฆษณาได้ (ข้อ 4)</p>
 
 <h2>7. ระยะเวลาการเก็บรักษาและการลบ</h2>
 <p>เราไม่ได้เก็บข้อมูลผู้ใช้ จึงไม่มีสิ่งใดให้คุณขอลบ ค่าที่เครือข่ายโฆษณาอ่านไปจะถูกเก็บและลบตามนโยบายของบริษัทนั้น ค่าในอุปกรณ์จะถูกลบไปพร้อมกันเมื่อลบแอป อีเมลที่ได้รับผ่านการติดต่อจะเก็บไว้เฉพาะช่วงที่จำเป็นต่อการตอบกลับ แล้วจึงลบ</p>
@@ -1446,7 +1491,7 @@
 <p>แผนที่ดาวเคราะห์และดวงจันทร์ รวมถึงข้อมูลดวงดาว มาจาก Solar System Scope (CC BY 4.0), NASA และ USGS (สาธารณสมบัติ) และ HYG Database (CC BY-SA 4.0) แหล่งที่มาทั้งหมดอยู่ในแอปที่ การตั้งค่า › แหล่งที่มา</p>
 
 <h2>9. เด็ก</h2>
-<p>แอปนี้ไม่ได้มุ่งเป้าไปที่เด็กอายุต่ำกว่า 13 ปี และเราไม่เก็บข้อมูลส่วนบุคคลของเด็กโดยรู้เห็น หากปิดการอนุญาตการติดตาม ตัวระบุโฆษณาจะไม่ถูกใช้สำหรับโฆษณาที่ปรับให้เหมาะกับคุณ</p>
+<p>แอปนี้ไม่ได้มุ่งเป้าไปที่เด็กอายุต่ำกว่า 13 ปี และเราไม่เก็บข้อมูลส่วนบุคคลของเด็กโดยรู้เห็น หากปิดการอนุญาตการติดตาม (iPhone) หรือลบรหัสโฆษณา (Android) ตัวระบุโฆษณาจะไม่ถูกใช้สำหรับโฆษณาที่ปรับให้เหมาะกับคุณ</p>
 
 <h2>10. สิทธิ์ของคุณ</h2>
 <p>ตามกฎหมายคุ้มครองข้อมูลส่วนบุคคลที่ใช้บังคับ คุณขอเข้าถึง แก้ไข ลบ หรือระงับการประมวลผลข้อมูลส่วนบุคคลได้ อย่างไรก็ตาม เราไม่ได้ถือครองข้อมูลส่วนบุคคลใด จึงไม่มีสิ่งใดให้ขอ ส่วนค่าในอุปกรณ์ คุณลบเองได้ทุกเมื่อด้วยการลบแอป</p>
@@ -1482,7 +1527,7 @@
 <section class="lang" data-lang="hi">
 <h1>Deep Galaxy गोपनीयता नीति</h1>
 
-<p><strong>प्रभावी तिथि:</strong> 18 नवंबर 2026<br /><strong>संपर्क:</strong> contact@nemofactory.co.kr</p>
+<p><strong>प्रभावी तिथि:</strong> 26 नवंबर 2026<br /><strong>संपर्क:</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>संक्षेप में।</strong> Deep Galaxy में <strong>कोई खाता, लॉग-इन, एनालिटिक्स टूल या आपकी जानकारी सहेजने वाला सर्वर नहीं है।</strong> ग्रह, चंद्रमा, तारे और ब्लैक होल ऐप में मौजूद चित्रों से सीधे आपके डिवाइस पर बनाए जाते हैं। <strong>रिवॉर्ड विज्ञापन</strong> केवल तभी चलता है जब किसी मुफ़्त गंतव्य की ओर जाते समय आप ख़ुद उसे चुनते हैं; विज्ञापन नेटवर्क क्या पढ़ते हैं, यह <strong>खंड 4</strong> में बताया गया है। अगर आप <strong>अंतरिक्ष Pro</strong> ख़रीदते हैं, तो विज्ञापन सुविधाएँ कभी चालू नहीं की जातीं।</p>
 
@@ -1498,6 +1543,8 @@
 <table>
 <tr><th>अनुमति</th><th>क्यों ज़रूरी है</th></tr>
 <tr><td><strong>ट्रैकिंग की अनुमति</strong> (वैकल्पिक, iPhone ATT)</td><td>व्यक्तिगत विज्ञापनों के लिए विज्ञापन पहचानकर्ता (IDFA) का उपयोग करने हेतु (खंड 4)। मना करने पर भी पूरा ऐप वैसे ही काम करता है, और व्यक्तिगत विज्ञापनों की जगह सामान्य विज्ञापन दिखते हैं</td></tr>
+<tr><td><strong>विज्ञापन ID</strong> (Android, इंस्टॉल के समय दी गई)</td><td>ताकि विज्ञापन नेटवर्क डिवाइस का विज्ञापन ID पढ़कर विज्ञापन दिखा सकें और उनका प्रदर्शन माप सकें (खंड 4)। कोई अनुमति-अनुरोध नहीं दिखता; आप इसे कभी भी डिवाइस की सेटिंग में रीसेट कर सकते हैं या मिटा सकते हैं (खंड 4)</td></tr>
+<tr><td><strong>इंटरनेट और नेटवर्क स्थिति</strong> (इंस्टॉल के समय दी गई)</td><td>ऐप स्थिति फ़ाइल, विज्ञापनों और स्टोर भुगतान से जुड़ने के लिए (खंड 5)</td></tr>
 </table>
 <p>ऐप कैमरा, माइक्रोफ़ोन, फ़ोटो, स्थान, संपर्क, कैलेंडर या स्वास्थ्य डेटा तक नहीं पहुँचता, और ये अनुमतियाँ नहीं माँगता।</p>
 
@@ -1505,9 +1552,10 @@
 <ul>
 <li><strong>विज्ञापन केवल एक जगह है</strong> — किसी मुफ़्त गंतव्य (सूर्य, बुध, शुक्र, पृथ्वी, चंद्रमा, मंगल, बृहस्पति और बृहस्पति के चंद्रमा) की ओर जाते समय <strong>जब आप ख़ुद "विज्ञापन देखें" चुनते हैं, केवल तभी</strong> चलने वाला <strong>रिवॉर्ड वीडियो विज्ञापन</strong>। अंत तक देखने पर आप वहाँ पहुँच जाते हैं। ऐप खोलने या स्क्रीन बदलने पर अपने-आप आने वाले विज्ञापन या बैनर विज्ञापन नहीं हैं।</li>
 <li><strong>विज्ञापन नेटवर्क</strong> — विज्ञापन Unity के <strong>LevelPlay (पहले ironSource)</strong> के ज़रिए दिखाए जाते हैं; विज्ञापन पार्टनर <strong>Unity Ads</strong>, <strong>Liftoff</strong> और <strong>Meta Audience Network</strong> हैं।</li>
-<li><strong>क्या पढ़ा जाता है</strong> — विज्ञापन पहचानकर्ता (IDFA, IDFV / विज्ञापन ID), डिवाइस, OS, ऐप वर्ज़न और भाषा जैसी डिवाइस जानकारी, कनेक्शन IP से अनुमानित लगभग देश और शहर, विज्ञापन देखने और टैप करने का रिकॉर्ड, और विज्ञापन कोड के चलने का रिकॉर्ड। <strong>ये मान विज्ञापन नेटवर्क सीधे आपके डिवाइस से पढ़ते हैं; हम इन्हें न प्राप्त करते हैं, न रखते हैं।</strong></li>
+<li><strong>क्या पढ़ा जाता है</strong> — विज्ञापन पहचानकर्ता (IDFA, IDFV / Android विज्ञापन ID, ऐप सेट ID), डिवाइस, OS, ऐप वर्ज़न और भाषा जैसी डिवाइस जानकारी, कनेक्शन IP से अनुमानित लगभग देश और शहर, विज्ञापन देखने और टैप करने का रिकॉर्ड, और विज्ञापन कोड के चलने का रिकॉर्ड। <strong>ये मान विज्ञापन नेटवर्क सीधे आपके डिवाइस से पढ़ते हैं; हम इन्हें न प्राप्त करते हैं, न रखते हैं।</strong></li>
 <li><strong>इंस्टॉल किए गए ऐप</strong> (Android) — विज्ञापन प्रदाताओं का कोड यह जाँच सकता है कि डिवाइस पर कौन-से ऐप इंस्टॉल हैं, ताकि यह गिना जा सके कि किसी विज्ञापन से इंस्टॉल हुआ या नहीं और उन ऐप के विज्ञापन न दिखाए जाएँ जो आपके पास पहले से हैं। <strong>Deep Galaxy इसे नहीं पढ़ता, और यह हम तक कभी नहीं पहुँचता।</strong></li>
 <li><strong>ट्रैकिंग की सहमति</strong> — जिस उपयोगकर्ता ने अंतरिक्ष Pro नहीं ख़रीदा है, वह जब पहली बार ऐप खोलता है, तो Apple का <strong>ट्रैकिंग अनुमति अनुरोध (ATT)</strong> एक बार दिखता है। अनुमति न देने पर गैर-व्यक्तिगत विज्ञापन दिखते हैं, और आप सभी सुविधाएँ वैसे ही इस्तेमाल कर सकते हैं। अनुमति आप कभी भी <em>सेटिंग्ज़ → गोपनीयता और सुरक्षा → ट्रैकिंग</em> में बदल सकते हैं।</li>
+<li><strong>Android विज्ञापन ID बंद करना</strong> — Android पर ट्रैकिंग अनुमति का कोई अनुरोध नहीं दिखता। अगर आप व्यक्तिगत विज्ञापन नहीं चाहते, तो <em>सेटिंग → निजता → विज्ञापन</em> (कुछ डिवाइस पर <em>सेटिंग → Google → विज्ञापन</em>) में जाकर अपना विज्ञापन ID <strong>मिटा</strong> या <strong>रीसेट</strong> कर सकते हैं। मिटाने के बाद विज्ञापन नेटवर्क को ID की जगह केवल शून्यों वाला मान मिलता है, और सभी सुविधाएँ वैसे ही काम करती रहती हैं।</li>
 <li><strong>अंतरिक्ष Pro ख़रीदने के बाद</strong> — विज्ञापन सुविधाएँ (विज्ञापन नेटवर्क का कोड) चालू नहीं की जातीं, और ट्रैकिंग अनुमति अनुरोध भी नहीं दिखाया जाता।</li>
 </ul>
 <p><strong>यूरोपीय आर्थिक क्षेत्र (EEA), यूके और स्विट्ज़रलैंड के उपयोगकर्ता</strong><br />इन क्षेत्रों में ऐप पहले ऐप के अंदर ही पूछता है कि क्या ऊपर बताए गए विज्ञापन पार्टनर (Unity, Liftoff, Meta) व्यक्तिगत विज्ञापनों के लिए आपके डिवाइस का उपयोग कर सकते हैं — <strong>कोई भी विज्ञापन अनुरोध किए जाने से पहले।</strong> “अस्वीकार करें” चुनना उतना ही आसान है जितना “स्वीकार करें”, और दोनों ही स्थितियों में हर सुविधा काम करती है और विज्ञापन दिखते रहते हैं; अस्वीकार करने से वे बस व्यक्तिगत नहीं रहते। व्यक्तिगत विज्ञापनों के लिए हम <strong>आपकी सहमति</strong> (GDPR अनुच्छेद 6(1)(a)) पर, और गैर-व्यक्तिगत विज्ञापन दिखाने तथा विज्ञापन दुरुपयोग से सुरक्षा (खंड 2) के लिए अपने <strong>वैध हित</strong> (अनुच्छेद 6(1)(f)) पर निर्भर करते हैं। आप ऐप की सेटिंग्स &gt; विज्ञापन गोपनीयता में <strong>किसी भी समय अपना विकल्प बदल या वापस ले सकते हैं</strong>; यह अगले विज्ञापन अनुरोध से लागू होता है। iPhone पर पहले ट्रैकिंग अनुमति अनुरोध (ATT) दिखता है, और यह प्रश्न केवल तभी आता है जब आप ट्रैकिंग की अनुमति देते हैं; अनुमति न देने पर यह प्रश्न पूछे बिना केवल गैर-व्यक्तिगत विज्ञापन दिखाए जाते हैं। विज्ञापन नेटवर्क अपने स्वयं के सुरक्षा उपायों, जैसे मानक संविदात्मक खंड (Standard Contractual Clauses), के तहत डेटा को संयुक्त राज्य अमेरिका और अन्य देशों में स्थानांतरित कर सकते हैं। चूँकि हमारे पास ऐसा कुछ नहीं है जो आपकी पहचान करे, विज्ञापन डेटा तक पहुँच या उसे मिटाने का अनुरोध करने का सबसे अच्छा तरीका है अपना विज्ञापन पहचानकर्ता रीसेट करना या सीधे ऊपर बताए गए विज्ञापन नेटवर्क से संपर्क करना।</p>
@@ -1528,9 +1576,9 @@
 <p>हम कोई भी जानकारी तीसरे पक्ष को न देते हैं, न बेचते हैं। भुगतान Apple और Google अपनी नीतियों के अनुसार सीधे संसाधित करते हैं। हालाँकि, विज्ञापन नेटवर्क द्वारा सीधे डिवाइस से पढ़े गए मान (खंड 4) उन कंपनियों के विदेशी सर्वरों पर भेजे जाते हैं।</p>
 <table>
 <tr><th>प्राप्तकर्ता</th><th>आइटम</th><th>उद्देश्य</th></tr>
-<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>विज्ञापन पहचानकर्ता, डिवाइस / OS / ऐप वर्ज़न, लगभग देश और भाषा, विज्ञापन इंटरैक्शन</td><td>विज्ञापन दिखाना और प्रदर्शन मापना</td></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>विज्ञापन पहचानकर्ता, डिवाइस / OS / ऐप वर्ज़न, लगभग देश और भाषा, विज्ञापन इंटरैक्शन, इंस्टॉल किए गए ऐप (Android)</td><td>विज्ञापन दिखाना, प्रदर्शन मापना और विज्ञापन धोखाधड़ी रोकना</td></tr>
 </table>
-<p>अगर आप यह नहीं चाहते, तो ट्रैकिंग की अनुमति बंद करके विज्ञापन पहचानकर्ता दिया जाना रोक सकते हैं।</p>
+<p>अगर आप यह नहीं चाहते, तो iPhone पर ट्रैकिंग की अनुमति बंद करके, या Android पर अपना विज्ञापन ID मिटाकर, विज्ञापन पहचानकर्ता दिया जाना रोक सकते हैं (खंड 4)।</p>
 
 <h2>7. संग्रहण अवधि और मिटाना</h2>
 <p>हम कोई उपयोगकर्ता डेटा नहीं रखते, इसलिए मिटाने का अनुरोध करने के लिए कुछ नहीं है। विज्ञापन नेटवर्क द्वारा पढ़े गए मान उनकी नीतियों के अनुसार रखे और मिटाए जाते हैं। डिवाइस के मान ऐप हटाने पर साथ में मिट जाते हैं। संपर्क के ज़रिए मिले ईमेल केवल जवाब देने के लिए ज़रूरी समय तक रखे जाते हैं, फिर मिटा दिए जाते हैं।</p>
@@ -1539,7 +1587,7 @@
 <p>ग्रहों और चंद्रमाओं के नक्शे और तारों का डेटा Solar System Scope (CC BY 4.0), NASA और USGS (सार्वजनिक डोमेन) और HYG Database (CC BY-SA 4.0) से लिया गया है। सभी स्रोत ऐप में सेटिंग्स › स्रोत में दिए गए हैं।</p>
 
 <h2>9. बच्चे</h2>
-<p>यह ऐप 13 वर्ष से कम आयु के बच्चों के लिए नहीं है, और हम जानबूझकर बच्चों की व्यक्तिगत जानकारी एकत्र नहीं करते। ट्रैकिंग की अनुमति बंद होने पर विज्ञापन पहचानकर्ता का उपयोग व्यक्तिगत विज्ञापनों के लिए नहीं होता।</p>
+<p>यह ऐप 13 वर्ष से कम आयु के बच्चों के लिए नहीं है, और हम जानबूझकर बच्चों की व्यक्तिगत जानकारी एकत्र नहीं करते। ट्रैकिंग की अनुमति बंद होने पर (iPhone) या विज्ञापन ID मिटाने पर (Android) विज्ञापन पहचानकर्ता का उपयोग व्यक्तिगत विज्ञापनों के लिए नहीं होता।</p>
 
 <h2>10. आपके अधिकार</h2>
 <p>लागू गोपनीयता क़ानूनों के तहत आप अपनी व्यक्तिगत जानकारी देखने, सुधारने, मिटाने या उसका प्रसंस्करण रोकने का अनुरोध कर सकते हैं। हालाँकि, हमारे पास कोई व्यक्तिगत जानकारी नहीं है, इसलिए अनुरोध करने के लिए कुछ नहीं है; डिवाइस के मान आप कभी भी ऐप हटाकर ख़ुद मिटा सकते हैं।</p>
@@ -1575,7 +1623,7 @@
 <section class="lang" data-lang="ar" dir="rtl">
 <h1>سياسة الخصوصية لتطبيق Deep Galaxy</h1>
 
-<p><strong>تاريخ السريان:</strong> 18 نوفمبر 2026<br /><strong>التواصل:</strong> contact@nemofactory.co.kr</p>
+<p><strong>تاريخ السريان:</strong> 26 نوفمبر 2026<br /><strong>التواصل:</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>باختصار.</strong> لا يحتوي Deep Galaxy على <strong>حسابات ولا تسجيل دخول ولا أدوات تحليلات، ولا يوجد خادم يحفظ معلوماتك.</strong> تُرسَم الكواكب والأقمار والنجوم والثقب الأسود على جهازك مباشرةً من صور مضمّنة في التطبيق. لا يُعرَض <strong>إعلان بمكافأة</strong> إلا عندما تختاره بنفسك في طريقك إلى وجهة مجانية، وما تقرؤه شبكة الإعلانات مذكور في <strong>القسم 4</strong>. إذا اشتريت <strong>الفضاء Pro</strong>، فلا تُفعَّل ميزات الإعلانات أبدًا.</p>
 
@@ -1591,6 +1639,8 @@
 <table>
 <tr><th>الإذن</th><th>سبب الحاجة إليه</th></tr>
 <tr><td><strong>السماح بالتتبع</strong> (اختياري، ATT على iPhone)</td><td>لاستخدام معرّف الإعلانات (IDFA) في الإعلانات المخصّصة (القسم 4). إن رفضت، يعمل التطبيق كله كما هو، وتظهر لك إعلانات عامة بدل الإعلانات المخصّصة</td></tr>
+<tr><td><strong>معرّف الإعلانات</strong> (Android، يُمنح عند التثبيت)</td><td>لكي تقرأ شبكات الإعلانات معرّف الإعلانات على الجهاز لعرض الإعلانات وقياس أدائها (القسم 4). لا تظهر أي نافذة طلب، ويمكنك إعادة ضبطه أو حذفه من إعدادات الجهاز في أي وقت (القسم 4)</td></tr>
+<tr><td><strong>الإنترنت وحالة الشبكة</strong> (يُمنح عند التثبيت)</td><td>للاتصال بملف حالة التطبيق والإعلانات ومدفوعات المتجر (القسم 5)</td></tr>
 </table>
 <p>لا يصل التطبيق إلى الكاميرا أو الميكروفون أو الصور أو الموقع أو جهات الاتصال أو التقويمات أو البيانات الصحية، ولا يطلب هذه الأذونات.</p>
 
@@ -1598,9 +1648,10 @@
 <ul>
 <li><strong>الإعلانات في مكان واحد فقط</strong> — <strong>إعلان فيديو بمكافأة</strong> لا يُعرَض <strong>إلا عندما تختار بنفسك «شاهد إعلانًا»</strong> في طريقك إلى وجهة مجانية (الشمس وعطارد والزهرة والأرض والقمر والمريخ والمشتري وأقمار المشتري). إذا شاهدته حتى النهاية، تنتقل إلى هناك. لا توجد إعلانات تظهر من تلقاء نفسها عند فتح التطبيق أو الانتقال بين الشاشات، ولا إعلانات بانر.</li>
 <li><strong>شبكة الإعلانات</strong> — تُعرَض الإعلانات عبر <strong>LevelPlay (ironSource سابقًا)</strong> من Unity، وشركاء الإعلانات هم <strong>Unity Ads</strong>، <strong>Liftoff</strong> و<strong>Meta Audience Network</strong>.</li>
-<li><strong>ما يُقرأ</strong> — معرّف الإعلانات (IDFA وIDFV / معرّف الإعلانات على Android)، ومعلومات الجهاز مثل الطراز ونظام التشغيل وإصدار التطبيق واللغة، والبلد والمدينة التقريبيان المستنتجان من عنوان IP، وسجلّ الإعلانات التي شوهدت أو نُقر عليها، وسجلّات عمل شيفرة الإعلانات. <strong>تقرأ شبكات الإعلانات هذه القيم مباشرةً من جهازك، ونحن لا نتلقاها ولا نحتفظ بها.</strong></li>
+<li><strong>ما يُقرأ</strong> — معرّف الإعلانات (IDFA وIDFV / معرّف الإعلانات على Android وApp Set ID)، ومعلومات الجهاز مثل الطراز ونظام التشغيل وإصدار التطبيق واللغة، والبلد والمدينة التقريبيان المستنتجان من عنوان IP، وسجلّ الإعلانات التي شوهدت أو نُقر عليها، وسجلّات عمل شيفرة الإعلانات. <strong>تقرأ شبكات الإعلانات هذه القيم مباشرةً من جهازك، ونحن لا نتلقاها ولا نحتفظ بها.</strong></li>
 <li><strong>التطبيقات المثبّتة</strong> (Android) — يمكن لشيفرة مزوّدي الإعلانات التحقق من التطبيقات المثبّتة على الجهاز، لاحتساب ما إذا أدّى إعلان إلى تثبيت ولتجنّب عرض إعلانات لتطبيقات لديك بالفعل. <strong>لا يقرأ Deep Galaxy هذه المعلومات، ولا تصل إلينا أبدًا.</strong></li>
 <li><strong>الموافقة على التتبع</strong> — عندما يفتح مستخدم لم يشترِ الفضاء Pro التطبيقَ لأول مرة، تظهر نافذة <strong>طلب السماح بالتتبع (ATT)</strong> من Apple مرة واحدة. إذا لم تسمح بذلك، تظهر لك إعلانات غير مخصّصة ويمكنك مواصلة استخدام كل الميزات. ويمكنك تغيير ذلك في أي وقت من <em>الإعدادات ← الخصوصية والأمن ← التتبع</em>.</li>
+<li><strong>إيقاف معرّف الإعلانات على Android</strong> — لا توجد على Android نافذة طلب السماح بالتتبع. إن لم ترغب في الإعلانات المخصّصة، فانتقل إلى <em>الإعدادات ← الخصوصية ← الإعلانات</em> (أو <em>الإعدادات ← Google ← الإعلانات</em> في بعض الأجهزة) و<strong>احذف</strong> معرّف الإعلانات أو <strong>أعد ضبطه</strong>. بعد حذفه، لا تتلقى شبكات الإعلانات سوى سلسلة من الأصفار بدل المعرّف، وتبقى كل الميزات تعمل كما هي.</li>
 <li><strong>بعد شراء الفضاء Pro</strong> — لا تُفعَّل ميزات الإعلانات (شيفرة شبكات الإعلانات)، ولا تظهر نافذة طلب السماح بالتتبع.</li>
 </ul>
 <p><strong>المستخدمون في المنطقة الاقتصادية الأوروبية (EEA) والمملكة المتحدة وسويسرا</strong><br />في هذه المناطق، يسأل التطبيق أولًا داخل التطبيق عمّا إذا كان يجوز لشركاء الإعلانات المذكورين أعلاه (Unity، Liftoff وMeta) استخدام جهازك لعرض إعلانات مخصّصة — <strong>قبل طلب أي إعلان.</strong> اختيار «رفض» سهل مثل اختيار «موافقة»، وفي الحالتين تعمل كل الميزات وتظل الإعلانات تظهر؛ الرفض يجعلها غير مخصّصة فحسب. نستند في الإعلانات المخصّصة إلى <strong>موافقتك</strong> (اللائحة العامة لحماية البيانات GDPR، المادة 6(1)(أ))، وفي عرض الإعلانات غير المخصّصة والحماية من إساءة استخدام الإعلانات (القسم 2) إلى <strong>مصلحتنا المشروعة</strong> (المادة 6(1)(و)). يمكنك <strong>تغيير اختيارك أو سحبه في أي وقت</strong> من إعدادات التطبيق &gt; خصوصية الإعلانات؛ ويسري ذلك بدءًا من طلب الإعلان التالي. على iPhone، تظهر نافذة طلب السماح بالتتبع (ATT) أولًا، ولا يأتي هذا السؤال إلا إذا سمحت بالتتبع؛ وإن لم تسمح، فلا تُعرض إلا إعلانات غير مخصّصة دون هذا السؤال. قد تنقل شبكات الإعلانات البيانات إلى الولايات المتحدة ودول أخرى وفق ضماناتها الخاصة، مثل البنود التعاقدية القياسية. ولأننا لا نحتفظ بأي شيء يعرّف بهويتك، فإن أفضل طريقة لطلب الاطلاع على بيانات الإعلانات أو حذفها هي إعادة تعيين معرّف الإعلانات لديك أو التوجّه مباشرةً إلى شبكات الإعلانات المذكورة أعلاه.</p>
@@ -1621,9 +1672,9 @@
 <p>لا نسلّم أي معلومات لأطراف ثالثة ولا نبيعها. تعالج Apple وGoogle المدفوعات مباشرةً وفق سياساتهما. غير أن القيم التي تقرؤها شبكات الإعلانات مباشرةً من الجهاز (القسم 4) تُرسَل إلى خوادم تلك الشركات خارج البلاد.</p>
 <table>
 <tr><th>الجهة المستلمة</th><th>البيانات</th><th>الغرض</th></tr>
-<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>معرّف الإعلانات، الجهاز / نظام التشغيل / إصدار التطبيق، البلد واللغة التقريبيان، التفاعل مع الإعلانات</td><td>عرض الإعلانات وقياس أدائها</td></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>معرّف الإعلانات، الجهاز / نظام التشغيل / إصدار التطبيق، البلد واللغة التقريبيان، التفاعل مع الإعلانات، التطبيقات المثبّتة (Android)</td><td>عرض الإعلانات وقياس أدائها ومنع الاحتيال الإعلاني</td></tr>
 </table>
-<p>إن لم ترغب في ذلك، يمكنك إيقاف السماح بالتتبع لمنع تقديم معرّف الإعلانات.</p>
+<p>إن لم ترغب في ذلك، يمكنك إيقاف السماح بالتتبع على iPhone، أو حذف معرّف الإعلانات على Android، لمنع تقديم معرّف الإعلانات (القسم 4).</p>
 
 <h2>7. مدة الاحتفاظ والحذف</h2>
 <p>لا نحتفظ بأي بيانات للمستخدمين، لذا لا يوجد ما تطلب حذفه. القيم التي تقرؤها شبكات الإعلانات تُحفَظ وتُحذَف وفق سياساتها. وتُحذف القيم الموجودة على الجهاز مع حذف التطبيق. أما الرسائل الواردة عبر التواصل فلا نحتفظ بها إلا طوال المدة اللازمة للرد، ثم نحذفها.</p>
@@ -1632,7 +1683,7 @@
 <p>خرائط الكواكب والأقمار وبيانات النجوم مأخوذة من Solar System Scope (CC BY 4.0) وNASA وUSGS (ملكية عامة) وقاعدة بيانات HYG (CC BY-SA 4.0). المصادر الكاملة موجودة في التطبيق ضمن الإعدادات › المصادر.</p>
 
 <h2>9. الأطفال</h2>
-<p>التطبيق غير موجّه للأطفال دون 13 عامًا، ولا نجمع عن علم المعلومات الشخصية للأطفال. وعند إيقاف السماح بالتتبع، لا يُستخدم معرّف الإعلانات للإعلانات المخصّصة.</p>
+<p>التطبيق غير موجّه للأطفال دون 13 عامًا، ولا نجمع عن علم المعلومات الشخصية للأطفال. وعند إيقاف السماح بالتتبع (iPhone) أو حذف معرّف الإعلانات (Android)، لا يُستخدم معرّف الإعلانات للإعلانات المخصّصة.</p>
 
 <h2>10. حقوقك</h2>
 <p>بموجب قوانين الخصوصية المعمول بها، يحق لك طلب الاطلاع على معلوماتك الشخصية أو تصحيحها أو حذفها أو إيقاف معالجتها. غير أننا لا نحتفظ بأي معلومات شخصية، لذا لا يوجد ما تطلبه، ويمكنك حذف القيم الموجودة على الجهاز بنفسك في أي وقت بحذف التطبيق.</p>
@@ -1668,7 +1719,7 @@
 <section class="lang" data-lang="bn">
 <h1>Deep Galaxy গোপনীয়তা নীতি</h1>
 
-<p><strong>কার্যকর:</strong> 18 নভেম্বর 2026<br /><strong>যোগাযোগ:</strong> contact@nemofactory.co.kr</p>
+<p><strong>কার্যকর:</strong> 26 নভেম্বর 2026<br /><strong>যোগাযোগ:</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>এক কথায়।</strong> Deep Galaxy-তে <strong>কোনো অ্যাকাউন্ট, লগইন বা অ্যানালিটিক্স টুল নেই, এবং আপনার তথ্য রাখার কোনো সার্ভারও নেই।</strong> গ্রহ, চাঁদ, তারা ও ব্ল্যাক হোল অ্যাপের ভেতরে থাকা ছবি দিয়ে সরাসরি আপনার ডিভাইসে আঁকা হয়। কোনো বিনামূল্যের গন্তব্যে যাওয়ার পথে আপনি নিজে বেছে নিলে তবেই <strong>পুরস্কারভিত্তিক বিজ্ঞাপন</strong> চলে; বিজ্ঞাপন নেটওয়ার্ক কী পড়ে নেয় তা <strong>অনুচ্ছেদ 4</strong>-এ লেখা আছে। <strong>মহাকাশ Pro</strong> কিনলে বিজ্ঞাপনের ফিচার কখনো চালুই হয় না।</p>
 
@@ -1684,6 +1735,8 @@
 <table>
 <tr><th>অনুমতি</th><th>কেন দরকার</th></tr>
 <tr><td><strong>ট্র্যাকিং অনুমতি</strong> (ঐচ্ছিক, iPhone ATT)</td><td>ব্যক্তিগতকৃত বিজ্ঞাপনের জন্য বিজ্ঞাপন শনাক্তকারী (IDFA) ব্যবহার করতে (অনুচ্ছেদ 4)। প্রত্যাখ্যান করলেও পুরো অ্যাপ আগের মতোই চলে, এবং ব্যক্তিগতকৃত বিজ্ঞাপনের বদলে সাধারণ বিজ্ঞাপন দেখায়</td></tr>
+<tr><td><strong>বিজ্ঞাপন আইডি</strong> (Android, ইনস্টলের সময় দেওয়া)</td><td>যাতে বিজ্ঞাপন নেটওয়ার্ক ডিভাইসের বিজ্ঞাপন আইডি পড়ে বিজ্ঞাপন দেখাতে ও তার কার্যকারিতা পরিমাপ করতে পারে (অনুচ্ছেদ 4)। কোনো অনুরোধ দেখানো হয় না; ডিভাইসের সেটিংসে যেকোনো সময় এটি রিসেট করতে বা মুছে ফেলতে পারেন (অনুচ্ছেদ 4)</td></tr>
+<tr><td><strong>ইন্টারনেট ও নেটওয়ার্ক অবস্থা</strong> (ইনস্টলের সময় দেওয়া)</td><td>অ্যাপ স্ট্যাটাস ফাইল, বিজ্ঞাপন ও স্টোর পেমেন্টের সঙ্গে যোগাযোগ করতে (অনুচ্ছেদ 5)</td></tr>
 </table>
 <p>অ্যাপটি ক্যামেরা, মাইক্রোফোন, ছবি, অবস্থান, পরিচিতি, ক্যালেন্ডার বা স্বাস্থ্য তথ্যে প্রবেশ করে না, এবং এসব অনুমতি চায় না।</p>
 
@@ -1691,9 +1744,10 @@
 <ul>
 <li><strong>বিজ্ঞাপন শুধু এক জায়গায়</strong> — কোনো বিনামূল্যের গন্তব্যে (সূর্য, বুধ, শুক্র, পৃথিবী, চাঁদ, মঙ্গল, বৃহস্পতি ও বৃহস্পতির চাঁদ) যাওয়ার পথে <strong>আপনি নিজে “বিজ্ঞাপন দেখে যান” বেছে নিলে তবেই</strong> চলে এমন একটি <strong>পুরস্কারভিত্তিক ভিডিও বিজ্ঞাপন</strong>। শেষ পর্যন্ত দেখলে আপনি সেখানে চলে যান। অ্যাপ খোলার সময় বা স্ক্রিন বদলানোর সময় নিজে থেকে আসা কোনো বিজ্ঞাপন নেই, ব্যানার বিজ্ঞাপনও নেই।</li>
 <li><strong>বিজ্ঞাপন নেটওয়ার্ক</strong> — বিজ্ঞাপন দেখানো হয় Unity-এর <strong>LevelPlay (আগে ironSource)</strong>-এর মাধ্যমে; বিজ্ঞাপন অংশীদার হলো <strong>Unity Ads</strong>, <strong>Liftoff</strong> ও <strong>Meta Audience Network</strong>।</li>
-<li><strong>যা পড়ে নেয়</strong> — বিজ্ঞাপন শনাক্তকারী (IDFA, IDFV / বিজ্ঞাপন আইডি), ডিভাইস, OS, অ্যাপ সংস্করণ ও ভাষার মতো ডিভাইস তথ্য, সংযোগের IP থেকে অনুমান করা আনুমানিক দেশ ও শহর, বিজ্ঞাপন দেখা ও ট্যাপ করার রেকর্ড, এবং বিজ্ঞাপন কোডের কাজের রেকর্ড। <strong>এই মানগুলো বিজ্ঞাপন নেটওয়ার্ক সরাসরি আপনার ডিভাইস থেকে পড়ে নেয়; আমরা পাই না, রাখিও না।</strong></li>
+<li><strong>যা পড়ে নেয়</strong> — বিজ্ঞাপন শনাক্তকারী (IDFA, IDFV / Android বিজ্ঞাপন আইডি, App Set ID), ডিভাইস, OS, অ্যাপ সংস্করণ ও ভাষার মতো ডিভাইস তথ্য, সংযোগের IP থেকে অনুমান করা আনুমানিক দেশ ও শহর, বিজ্ঞাপন দেখা ও ট্যাপ করার রেকর্ড, এবং বিজ্ঞাপন কোডের কাজের রেকর্ড। <strong>এই মানগুলো বিজ্ঞাপন নেটওয়ার্ক সরাসরি আপনার ডিভাইস থেকে পড়ে নেয়; আমরা পাই না, রাখিও না।</strong></li>
 <li><strong>ইনস্টল করা অ্যাপ</strong> (Android) — বিজ্ঞাপন প্রদানকারীদের কোড ডিভাইসে কোন কোন অ্যাপ ইনস্টল আছে তা পরীক্ষা করতে পারে, কোনো বিজ্ঞাপন থেকে ইনস্টল হয়েছে কি না গোনার জন্য এবং আপনার কাছে আগে থেকে থাকা অ্যাপের বিজ্ঞাপন না দেখানোর জন্য। <strong>Deep Galaxy এটি পড়ে না, এবং এটি কখনো আমাদের কাছে পৌঁছায় না।</strong></li>
 <li><strong>ট্র্যাকিং সম্মতি</strong> — যিনি মহাকাশ Pro কেনেননি এমন ব্যবহারকারী প্রথমবার অ্যাপ খুললে Apple-এর <strong>ট্র্যাকিং অনুমতির অনুরোধ (ATT)</strong> একবার দেখায়। অনুমতি না দিলে ব্যক্তিগতকৃত নয় এমন বিজ্ঞাপন দেখায়, এবং সব ফিচার আগের মতো ব্যবহার করা যায়। অনুমতি যেকোনো সময় <em>Settings → Privacy &amp; Security → Tracking</em>-এ বদলানো যায়।</li>
+<li><strong>Android বিজ্ঞাপন আইডি বন্ধ করা</strong> — Android-এ ট্র্যাকিং অনুমতির কোনো অনুরোধ নেই। ব্যক্তিগতকৃত বিজ্ঞাপন না চাইলে <em>Settings → Privacy → Ads</em> (কিছু ডিভাইসে <em>Settings → Google → Ads</em>)-এ গিয়ে আপনার বিজ্ঞাপন আইডি <strong>মুছে ফেলতে</strong> বা <strong>রিসেট</strong> করতে পারেন। মুছে ফেললে বিজ্ঞাপন নেটওয়ার্ক আইডির বদলে শুধু শূন্য দিয়ে ভরা একটি মান পায়, এবং সব ফিচার আগের মতোই চলে।</li>
 <li><strong>মহাকাশ Pro কেনার পরে</strong> — বিজ্ঞাপনের ফিচার (বিজ্ঞাপন নেটওয়ার্কের কোড) চালু হয় না, এবং ট্র্যাকিং অনুমতির অনুরোধও দেখানো হয় না।</li>
 </ul>
 <p><strong>ইউরোপীয় অর্থনৈতিক অঞ্চল (EEA), যুক্তরাজ্য ও সুইজারল্যান্ডের ব্যবহারকারী</strong><br />এই অঞ্চলগুলোতে, উপরের বিজ্ঞাপন অংশীদাররা (Unity, Liftoff, Meta) ব্যক্তিগতকৃত বিজ্ঞাপনের জন্য আপনার ডিভাইস ব্যবহার করতে পারবে কি না, তা অ্যাপের ভেতরে আগে জিজ্ঞেস করা হয় — <strong>কোনো বিজ্ঞাপন অনুরোধ করার আগেই।</strong> “প্রত্যাখ্যান” বেছে নেওয়া “সম্মতি”-র মতোই সহজ, এবং যেটিই বেছে নিন, প্রতিটি ফিচার কাজ করে এবং বিজ্ঞাপনও দেখা যায়; প্রত্যাখ্যান করলে সেগুলো শুধু ব্যক্তিগতকৃত হয় না। ব্যক্তিগতকৃত বিজ্ঞাপনের জন্য আমরা <strong>আপনার সম্মতির</strong> (GDPR অনুচ্ছেদ 6(1)(a)) উপর, আর ব্যক্তিগতকৃত নয় এমন বিজ্ঞাপন দেখানো ও বিজ্ঞাপনের অপব্যবহার প্রতিরোধের (এই নীতির অনুচ্ছেদ 2) জন্য আমাদের <strong>বৈধ স্বার্থের</strong> (GDPR অনুচ্ছেদ 6(1)(f)) উপর নির্ভর করি। আপনি অ্যাপের সেটিংস &gt; বিজ্ঞাপনের গোপনীয়তা-য় গিয়ে <strong>যেকোনো সময় আপনার পছন্দ বদলাতে বা প্রত্যাহার করতে পারেন</strong>; এটি পরের বিজ্ঞাপন অনুরোধ থেকে কার্যকর হয়। iPhone-এ আগে ট্র্যাকিং অনুমতির অনুরোধ (ATT) দেখানো হয়, এবং আপনি ট্র্যাকিংয়ের অনুমতি দিলে তবেই এই প্রশ্নটি আসে; অনুমতি না দিলে এই প্রশ্ন ছাড়াই শুধু ব্যক্তিগতকৃত নয় এমন বিজ্ঞাপন দেখানো হয়। বিজ্ঞাপন নেটওয়ার্কগুলো নিজেদের সুরক্ষাব্যবস্থা, যেমন মানক চুক্তিভিত্তিক ধারা (Standard Contractual Clauses), অনুযায়ী ডেটা যুক্তরাষ্ট্র ও অন্যান্য দেশে স্থানান্তর করতে পারে। আপনাকে শনাক্ত করে এমন কিছুই আমাদের কাছে না থাকায়, বিজ্ঞাপন ডেটা দেখার বা মোছার অনুরোধের সবচেয়ে ভালো উপায় হলো আপনার বিজ্ঞাপন শনাক্তকারী রিসেট করা অথবা সরাসরি উপরের বিজ্ঞাপন নেটওয়ার্কগুলোর কাছে যাওয়া।</p>
@@ -1714,9 +1768,9 @@
 <p>আমরা কোনো তথ্য তৃতীয় পক্ষকে দিই না বা বিক্রি করি না। পেমেন্ট Apple ও Google নিজেদের নীতি অনুযায়ী সরাসরি প্রক্রিয়া করে। তবে বিজ্ঞাপন নেটওয়ার্ক সরাসরি ডিভাইস থেকে যে মান পড়ে (অনুচ্ছেদ 4), তা সংশ্লিষ্ট কোম্পানির বিদেশি সার্ভারে পাঠানো হয়।</p>
 <table>
 <tr><th>প্রাপক</th><th>বিষয়</th><th>উদ্দেশ্য</th></tr>
-<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>বিজ্ঞাপন শনাক্তকারী, ডিভাইস / OS / অ্যাপ সংস্করণ, আনুমানিক দেশ ও ভাষা, বিজ্ঞাপনের সঙ্গে মিথস্ক্রিয়া</td><td>বিজ্ঞাপন দেখানো ও কার্যকারিতা পরিমাপ</td></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>বিজ্ঞাপন শনাক্তকারী, ডিভাইস / OS / অ্যাপ সংস্করণ, আনুমানিক দেশ ও ভাষা, বিজ্ঞাপনের সঙ্গে মিথস্ক্রিয়া, ইনস্টল করা অ্যাপ (Android)</td><td>বিজ্ঞাপন দেখানো, কার্যকারিতা পরিমাপ ও বিজ্ঞাপন জালিয়াতি প্রতিরোধ</td></tr>
 </table>
-<p>না চাইলে ট্র্যাকিং অনুমতি বন্ধ করে বিজ্ঞাপন শনাক্তকারী দেওয়া আটকাতে পারেন।</p>
+<p>না চাইলে iPhone-এ ট্র্যাকিং অনুমতি বন্ধ করে, বা Android-এ বিজ্ঞাপন আইডি মুছে ফেলে, বিজ্ঞাপন শনাক্তকারী দেওয়া আটকাতে পারেন (অনুচ্ছেদ 4)।</p>
 
 <h2>7. সংরক্ষণের মেয়াদ ও মুছে ফেলা</h2>
 <p>আমরা কোনো ব্যবহারকারীর ডেটা রাখি না, তাই মুছতে বলার মতো কিছু নেই। বিজ্ঞাপন নেটওয়ার্কের পড়া মান তাদের নীতি অনুযায়ী রাখা ও মোছা হয়। ডিভাইসের মান অ্যাপ মুছলে একসঙ্গে মুছে যায়। যোগাযোগের মাধ্যমে পাওয়া ইমেল শুধু উত্তর দেওয়ার জন্য যতদিন দরকার ততদিন রাখা হয়, তারপর মুছে ফেলা হয়।</p>
@@ -1725,7 +1779,7 @@
 <p>গ্রহ ও চাঁদের মানচিত্র এবং তারার ডেটা এসেছে Solar System Scope (CC BY 4.0), NASA ও USGS (পাবলিক ডোমেইন) এবং HYG Database (CC BY-SA 4.0) থেকে। পূর্ণ উৎস তালিকা অ্যাপের সেটিংস › উৎস-তে আছে।</p>
 
 <h2>9. শিশু</h2>
-<p>অ্যাপটি 13 বছরের কম বয়সী শিশুদের জন্য নয়, এবং আমরা জেনেশুনে শিশুদের ব্যক্তিগত তথ্য সংগ্রহ করি না। ট্র্যাকিং অনুমতি বন্ধ করলে বিজ্ঞাপন শনাক্তকারী ব্যক্তিগতকৃত বিজ্ঞাপনে ব্যবহার হয় না।</p>
+<p>অ্যাপটি 13 বছরের কম বয়সী শিশুদের জন্য নয়, এবং আমরা জেনেশুনে শিশুদের ব্যক্তিগত তথ্য সংগ্রহ করি না। ট্র্যাকিং অনুমতি বন্ধ করলে (iPhone) বা বিজ্ঞাপন আইডি মুছে ফেললে (Android) বিজ্ঞাপন শনাক্তকারী ব্যক্তিগতকৃত বিজ্ঞাপনে ব্যবহার হয় না।</p>
 
 <h2>10. আপনার অধিকার</h2>
 <p>প্রযোজ্য গোপনীয়তা আইন অনুযায়ী আপনি আপনার ব্যক্তিগত তথ্য দেখা, সংশোধন, মুছে ফেলা বা প্রক্রিয়াকরণ বন্ধের অনুরোধ করতে পারেন। তবে আমাদের কাছে কোনো ব্যক্তিগত তথ্য নেই, তাই অনুরোধ করার মতো কিছু নেই; ডিভাইসের মান যেকোনো সময় অ্যাপ মুছে নিজেই মুছে ফেলতে পারেন।</p>
@@ -1761,7 +1815,7 @@
 <section class="lang" data-lang="ur" dir="rtl">
 <h1>Deep Galaxy رازداری کی پالیسی</h1>
 
-<p><strong>نافذ العمل:</strong> 18 نومبر 2026<br /><strong>رابطہ:</strong> contact@nemofactory.co.kr</p>
+<p><strong>نافذ العمل:</strong> 26 نومبر 2026<br /><strong>رابطہ:</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>ایک سطر میں۔</strong> Deep Galaxy میں <strong>نہ اکاؤنٹ ہے، نہ لاگ اِن، نہ کوئی تجزیاتی ٹول، اور نہ ہی آپ کی معلومات محفوظ کرنے والا کوئی سرور۔</strong> سیارے، چاند، ستارے اور بلیک ہول ایپ میں موجود تصاویر سے براہِ راست آپ کی ڈیوائس پر بنائے جاتے ہیں۔ <strong>انعامی اشتہار</strong> صرف تب چلتا ہے جب آپ کسی مفت منزل کی طرف جاتے ہوئے خود اسے چنیں؛ اشتہاری نیٹ ورک کیا پڑھتا ہے، یہ <strong>حصہ 4</strong> میں لکھا ہے۔ اگر آپ <strong>خلا Pro</strong> خرید لیں تو اشتہارات کی سہولیات کبھی آن ہی نہیں ہوتیں۔</p>
 
@@ -1777,6 +1831,8 @@
 <table>
 <tr><th>اجازت</th><th>کیوں ضروری ہے</th></tr>
 <tr><td><strong>ٹریکنگ کی اجازت</strong> (اختیاری، iPhone ATT)</td><td>ذاتی نوعیت کے اشتہارات کے لیے اشتہاری شناخت کنندہ (IDFA) استعمال کرنے کے لیے (حصہ 4)۔ انکار پر بھی پوری ایپ ویسے ہی چلتی ہے، اور ذاتی نوعیت کے اشتہارات کی جگہ عام اشتہار دکھائے جاتے ہیں</td></tr>
+<tr><td><strong>اشتہاری ID</strong> (Android، انسٹال کے وقت دی گئی)</td><td>تاکہ اشتہاری نیٹ ورک ڈیوائس کی اشتہاری ID پڑھ کر اشتہار دکھا سکیں اور ان کی کارکردگی ناپ سکیں (حصہ 4)۔ کوئی درخواست نہیں دکھائی جاتی؛ آپ اسے کسی بھی وقت ڈیوائس کی سیٹنگز میں ری سیٹ یا ڈیلیٹ کر سکتے ہیں (حصہ 4)</td></tr>
+<tr><td><strong>انٹرنیٹ اور نیٹ ورک کی حالت</strong> (انسٹال کے وقت دی گئی)</td><td>ایپ اسٹیٹس فائل، اشتہارات اور اسٹور ادائیگیوں سے رابطے کے لیے (حصہ 5)</td></tr>
 </table>
 <p>ایپ کیمرا، مائیکروفون، تصاویر، مقام، رابطوں، کیلنڈر یا صحت کی معلومات تک رسائی نہیں کرتی، اور یہ اجازتیں نہیں مانگتی۔</p>
 
@@ -1784,9 +1840,10 @@
 <ul>
 <li><strong>اشتہار صرف ایک جگہ ہے</strong> — کسی مفت منزل (سورج، عطارد، زہرہ، زمین، چاند، مریخ، مشتری اور مشتری کے چاند) کی طرف جاتے ہوئے <strong>جب آپ خود "اشتہار دیکھ کر جائیں" چنیں، صرف تب</strong> چلنے والا <strong>انعامی ویڈیو اشتہار</strong>۔ آخر تک دیکھنے پر آپ وہاں پہنچ جاتے ہیں۔ ایپ کھولنے یا اسکرین بدلنے پر خود بخود آنے والے اشتہار یا بینر اشتہار نہیں ہیں۔</li>
 <li><strong>اشتہاری نیٹ ورک</strong> — اشتہار Unity کے <strong>LevelPlay (سابقہ ironSource)</strong> کے ذریعے دکھائے جاتے ہیں؛ اشتہاری شراکت دار <strong>Unity Ads</strong>، <strong>Liftoff</strong> اور <strong>Meta Audience Network</strong> ہیں۔</li>
-<li><strong>کیا پڑھا جاتا ہے</strong> — اشتہاری شناخت کنندہ (IDFA، IDFV / اشتہاری ID)، ڈیوائس، OS، ایپ ورژن اور زبان جیسی ڈیوائس معلومات، کنکشن کے IP سے اندازہ لگایا گیا تقریبی ملک اور شہر، اشتہار دیکھنے اور ٹیپ کرنے کا ریکارڈ، اور اشتہاری کوڈ کے چلنے کا ریکارڈ۔ <strong>یہ قدریں اشتہاری نیٹ ورک براہِ راست آپ کی ڈیوائس سے پڑھتے ہیں؛ ہم انہیں نہ وصول کرتے ہیں نہ رکھتے ہیں۔</strong></li>
+<li><strong>کیا پڑھا جاتا ہے</strong> — اشتہاری شناخت کنندہ (IDFA، IDFV / Android اشتہاری ID، App Set ID)، ڈیوائس، OS، ایپ ورژن اور زبان جیسی ڈیوائس معلومات، کنکشن کے IP سے اندازہ لگایا گیا تقریبی ملک اور شہر، اشتہار دیکھنے اور ٹیپ کرنے کا ریکارڈ، اور اشتہاری کوڈ کے چلنے کا ریکارڈ۔ <strong>یہ قدریں اشتہاری نیٹ ورک براہِ راست آپ کی ڈیوائس سے پڑھتے ہیں؛ ہم انہیں نہ وصول کرتے ہیں نہ رکھتے ہیں۔</strong></li>
 <li><strong>انسٹال شدہ ایپس</strong> (Android) — اشتہار فراہم کرنے والوں کا کوڈ یہ جانچ سکتا ہے کہ آلے پر کون سی ایپس انسٹال ہیں، تاکہ گنا جا سکے کہ کسی اشتہار سے انسٹال ہوا یا نہیں اور ان ایپس کے اشتہارات نہ دکھائے جائیں جو آپ کے پاس پہلے سے ہیں۔ <strong>Deep Galaxy اسے نہیں پڑھتی، اور یہ کبھی ہم تک نہیں پہنچتا۔</strong></li>
 <li><strong>ٹریکنگ کی رضامندی</strong> — جس صارف نے خلا Pro نہیں خریدا وہ جب پہلی بار ایپ کھولتا ہے تو Apple کی <strong>ٹریکنگ اجازت کی درخواست (ATT)</strong> ایک بار دکھائی دیتی ہے۔ اجازت نہ دینے پر غیر ذاتی اشتہارات دکھائے جاتے ہیں اور تمام سہولیات ویسے ہی استعمال کی جا سکتی ہیں۔ اجازت آپ کسی بھی وقت <em>Settings → Privacy &amp; Security → Tracking</em> میں بدل سکتے ہیں۔</li>
+<li><strong>Android اشتہاری ID بند کرنا</strong> — Android پر ٹریکنگ کی اجازت کی کوئی درخواست نہیں ہوتی۔ اگر آپ ذاتی نوعیت کے اشتہارات نہیں چاہتے تو <em>Settings → Privacy → Ads</em> (کچھ ڈیوائسز پر <em>Settings → Google → Ads</em>) میں جا کر اپنی اشتہاری ID <strong>ڈیلیٹ</strong> یا <strong>ری سیٹ</strong> کر سکتے ہیں۔ ڈیلیٹ کرنے کے بعد اشتہاری نیٹ ورک کو ID کی جگہ صرف صفروں پر مشتمل ایک قدر ملتی ہے، اور تمام سہولیات ویسے ہی چلتی رہتی ہیں۔</li>
 <li><strong>خلا Pro خریدنے کے بعد</strong> — اشتہارات کی سہولیات (اشتہاری نیٹ ورک کا کوڈ) آن نہیں ہوتیں، اور ٹریکنگ اجازت کی درخواست بھی نہیں دکھائی جاتی۔</li>
 </ul>
 <p><strong>یورپی اقتصادی علاقہ (EEA)، برطانیہ اور سوئٹزرلینڈ کے صارفین</strong><br />ان علاقوں میں ایپ پہلے ایپ کے اندر پوچھتی ہے کہ کیا اوپر دیے گئے اشتہاری شراکت دار (Unity، Liftoff، Meta) ذاتی نوعیت کے اشتہارات کے لیے آپ کی ڈیوائس استعمال کر سکتے ہیں — <strong>کسی بھی اشتہار کی درخواست سے پہلے۔</strong> "انکار" چننا اتنا ہی آسان ہے جتنا "منظور"، اور دونوں صورتوں میں ہر سہولت کام کرتی ہے اور اشتہارات بھی دکھتے ہیں؛ انکار سے وہ بس ذاتی نوعیت کے نہیں رہتے۔ ذاتی نوعیت کے اشتہارات کے لیے ہم <strong>آپ کی رضامندی</strong> (GDPR آرٹیکل 6(1)(a)) پر، اور غیر ذاتی اشتہارات دکھانے اور اشتہارات کے غلط استعمال سے بچاؤ (حصہ 2) کے لیے اپنے <strong>جائز مفاد</strong> (آرٹیکل 6(1)(f)) پر انحصار کرتے ہیں۔ آپ ایپ کی ترتیبات &gt; اشتہارات کی رازداری میں <strong>کسی بھی وقت اپنا انتخاب بدل یا واپس لے سکتے ہیں</strong>؛ یہ اگلی اشتہاری درخواست سے لاگو ہوتا ہے۔ iPhone پر پہلے ٹریکنگ اجازت کی درخواست (ATT) دکھائی جاتی ہے، اور یہ سوال صرف تب آتا ہے جب آپ ٹریکنگ کی اجازت دیں؛ اجازت نہ دینے پر یہ سوال پوچھے بغیر صرف غیر ذاتی اشتہارات دکھائے جاتے ہیں۔ اشتہاری نیٹ ورک اپنے حفاظتی انتظامات، جیسے معیاری معاہداتی شقوں (Standard Contractual Clauses)، کے تحت ڈیٹا امریکہ اور دیگر ممالک منتقل کر سکتے ہیں۔ چونکہ ہمارے پاس آپ کی شناخت کرنے والی کوئی چیز نہیں، اس لیے اشتہاری ڈیٹا تک رسائی یا اسے حذف کرنے کی درخواست کا بہترین طریقہ یہ ہے کہ اپنا اشتہاری شناخت کنندہ ری سیٹ کریں یا براہِ راست اوپر دیے گئے اشتہاری نیٹ ورکس سے رجوع کریں۔</p>
@@ -1807,9 +1864,9 @@
 <p>ہم کوئی بھی معلومات تیسرے فریق کو نہ دیتے ہیں نہ بیچتے ہیں۔ ادائیگیاں Apple اور Google اپنی پالیسیوں کے مطابق براہِ راست پروسیس کرتے ہیں۔ البتہ اشتہاری نیٹ ورک کی براہِ راست ڈیوائس سے پڑھی گئی قدریں (حصہ 4) ان کمپنیوں کے بیرونِ ملک سرورز پر بھیجی جاتی ہیں۔</p>
 <table>
 <tr><th>وصول کنندہ</th><th>اشیاء</th><th>مقصد</th></tr>
-<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>اشتہاری شناخت کنندہ، ڈیوائس / OS / ایپ ورژن، تقریبی ملک اور زبان، اشتہارات سے تعامل</td><td>اشتہار دکھانا اور کارکردگی ناپنا</td></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>اشتہاری شناخت کنندہ، ڈیوائس / OS / ایپ ورژن، تقریبی ملک اور زبان، اشتہارات سے تعامل، انسٹال شدہ ایپس (Android)</td><td>اشتہار دکھانا، کارکردگی ناپنا اور اشتہاری دھوکہ دہی روکنا</td></tr>
 </table>
-<p>اگر آپ یہ نہیں چاہتے تو ٹریکنگ کی اجازت بند کر کے اشتہاری شناخت کنندہ کی فراہمی روک سکتے ہیں۔</p>
+<p>اگر آپ یہ نہیں چاہتے تو iPhone پر ٹریکنگ کی اجازت بند کر کے، یا Android پر اپنی اشتہاری ID ڈیلیٹ کر کے، اشتہاری شناخت کنندہ کی فراہمی روک سکتے ہیں (حصہ 4)۔</p>
 
 <h2>7. محفوظ رکھنے کی مدت اور حذف کرنا</h2>
 <p>ہم کوئی صارف ڈیٹا نہیں رکھتے، اس لیے حذف کرنے کی درخواست کے لیے کچھ نہیں ہے۔ اشتہاری نیٹ ورک کی پڑھی گئی قدریں ان کی پالیسیوں کے مطابق رکھی اور حذف کی جاتی ہیں۔ ڈیوائس کی قدریں ایپ حذف کرنے پر ساتھ ہی مٹ جاتی ہیں۔ رابطے کے ذریعے موصول ای میلز صرف جواب دینے کے لیے ضروری مدت تک رکھی جاتی ہیں، پھر حذف کر دی جاتی ہیں۔</p>
@@ -1818,7 +1875,7 @@
 <p>سیاروں اور چاندوں کے نقشے اور ستاروں کا ڈیٹا Solar System Scope (CC BY 4.0)، NASA اور USGS (پبلک ڈومین) اور HYG Database (CC BY-SA 4.0) سے لیا گیا ہے۔ مکمل ماخذ ایپ میں ترتیبات › ماخذ میں موجود ہیں۔</p>
 
 <h2>9. بچے</h2>
-<p>ایپ 13 سال سے کم عمر بچوں کے لیے نہیں ہے، اور ہم جان بوجھ کر بچوں کی ذاتی معلومات جمع نہیں کرتے۔ ٹریکنگ کی اجازت بند ہو تو اشتہاری شناخت کنندہ ذاتی نوعیت کے اشتہارات کے لیے استعمال نہیں ہوتا۔</p>
+<p>ایپ 13 سال سے کم عمر بچوں کے لیے نہیں ہے، اور ہم جان بوجھ کر بچوں کی ذاتی معلومات جمع نہیں کرتے۔ ٹریکنگ کی اجازت بند ہو (iPhone) یا اشتہاری ID ڈیلیٹ کر دی جائے (Android) تو اشتہاری شناخت کنندہ ذاتی نوعیت کے اشتہارات کے لیے استعمال نہیں ہوتا۔</p>
 
 <h2>10. آپ کے حقوق</h2>
 <p>قابلِ اطلاق رازداری کے قوانین کے تحت آپ اپنی ذاتی معلومات دیکھنے، درست کرنے، حذف کرنے یا اس کی پروسیسنگ روکنے کی درخواست کر سکتے ہیں۔ البتہ ہمارے پاس کوئی ذاتی معلومات نہیں، اس لیے درخواست کے لیے کچھ نہیں ہے؛ ڈیوائس کی قدریں آپ کسی بھی وقت ایپ حذف کر کے خود مٹا سکتے ہیں۔</p>
@@ -1854,7 +1911,7 @@
 <section class="lang" data-lang="fil">
 <h1>Patakaran sa Privacy ng Deep Galaxy</h1>
 
-<p><strong>Petsa ng bisa:</strong> Nobyembre 18, 2026<br /><strong>Makipag-ugnayan:</strong> contact@nemofactory.co.kr</p>
+<p><strong>Petsa ng bisa:</strong> Nobyembre 26, 2026<br /><strong>Makipag-ugnayan:</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>Sa isang linya.</strong> Ang Deep Galaxy ay <strong>walang account, walang login, walang analytics at walang server na nag-iimbak ng impormasyon mo.</strong> Ang mga planeta, buwan, bituin at black hole ay iginuguhit sa device mo mula sa mga larawang nasa loob ng app. May <strong>rewarded ad</strong> lang na nagpe-play kapag ikaw mismo ang pumili nito papunta sa isang libreng destinasyon; nakasulat sa <strong>seksyon 4</strong> kung ano ang binabasa ng ad network. Kapag bumili ka ng <strong>Space Pro</strong>, hindi kailanman binubuksan ang mga feature ng ads.</p>
 
@@ -1870,6 +1927,8 @@
 <table>
 <tr><th>Pahintulot</th><th>Bakit kailangan</th></tr>
 <tr><td><strong>Pagpayag sa tracking</strong> (opsyonal, iPhone ATT)</td><td>Para magamit ang advertising identifier (IDFA) sa personalized ads (seksyon 4). Kung tatanggi ka, gagana pa rin ang buong app gaya ng dati, at makakakita ka ng karaniwang ads sa halip na personalized ads</td></tr>
+<tr><td><strong>Advertising ID</strong> (Android, ibinibigay sa pag-install)</td><td>Para mabasa ng mga ad network ang Advertising ID ng device para magpakita ng ads at sukatin ang performance nito (seksyon 4). Walang lumalabas na prompt; puwede mo itong i-reset o i-delete anumang oras sa settings ng device (seksyon 4)</td></tr>
+<tr><td><strong>Internet at network state</strong> (ibinibigay sa pag-install)</td><td>Para maabot ang app status file, ads at mga pagbili sa store (seksyon 5)</td></tr>
 </table>
 <p>Hindi ina-access ng app ang camera, mikropono, mga larawan, lokasyon, contacts, kalendaryo o impormasyong pangkalusugan, at hindi nito hinihingi ang mga pahintulot na iyon.</p>
 
@@ -1877,9 +1936,10 @@
 <ul>
 <li><strong>Isang lugar lang may ads</strong> — isang <strong>rewarded video ad</strong> na nagpe-play <strong>lang kapag ikaw mismo ang pumili ng "Manood ng ad"</strong> papunta sa isang libreng destinasyon (ang Araw, Mercury, Venus, Earth, ang Buwan, Mars, Jupiter at ang mga buwan ng Jupiter). Kapag pinanood mo hanggang dulo, pupunta ka roon. Walang ads na kusang lumalabas kapag binuksan ang app o lumipat ng screen, at walang banner ads.</li>
 <li><strong>Ad network</strong> — ipinapakita ang ads sa pamamagitan ng <strong>LevelPlay (dating ironSource)</strong> ng Unity; ang mga ad partner ay <strong>Unity Ads</strong>, <strong>Liftoff</strong> at <strong>Meta Audience Network</strong>.</li>
-<li><strong>Ang binabasa</strong> — ang advertising identifier (IDFA, IDFV / Advertising ID), impormasyon ng device gaya ng device, OS, bersyon ng app at wika, tinatayang bansa at lungsod batay sa IP ng koneksyon, record ng mga ad na napanood at na-tap, at mga log ng pagtakbo ng ad code. <strong>Direktang binabasa ng mga ad network ang mga value na ito mula sa device mo; hindi namin kailanman natatanggap o itinatago ang mga ito.</strong></li>
+<li><strong>Ang binabasa</strong> — ang advertising identifier (IDFA, IDFV / Android Advertising ID, App Set ID), impormasyon ng device gaya ng device, OS, bersyon ng app at wika, tinatayang bansa at lungsod batay sa IP ng koneksyon, record ng mga ad na napanood at na-tap, at mga log ng pagtakbo ng ad code. <strong>Direktang binabasa ng mga ad network ang mga value na ito mula sa device mo; hindi namin kailanman natatanggap o itinatago ang mga ito.</strong></li>
 <li><strong>Mga naka-install na app</strong> (Android) — maaaring suriin ng code ng mga provider ng advertising kung aling mga app ang naka-install sa device, upang mabilang kung humantong sa pag-install ang isang ad at upang hindi magpakita ng ad para sa mga app na mayroon na kayo. <strong>Hindi ito binabasa ng Deep Galaxy, at hindi ito kailanman nakararating sa amin.</strong></li>
 <li><strong>Pahintulot sa tracking</strong> — sa unang pagbukas ng app ng user na hindi pa bumibili ng Space Pro, lalabas nang isang beses ang <strong>App Tracking Transparency (ATT)</strong> prompt ng Apple. Kung hindi ka papayag, makakakita ka ng hindi personalized na ads at magagamit mo pa rin ang lahat ng feature. Puwede mo itong baguhin anumang oras sa <em>Settings → Privacy &amp; Security → Tracking</em>.</li>
+<li><strong>Pag-off ng Android Advertising ID</strong> — walang tracking prompt sa Android. Kung ayaw mo ng personalized ads, pumunta sa <em>Settings → Privacy → Ads</em> (sa ilang device, <em>Settings → Google → Ads</em>) at <strong>i-delete</strong> o <strong>i-reset</strong> ang Advertising ID mo. Kapag na-delete na, puro sero na lang ang matatanggap ng mga ad network sa halip na ang ID, at gagana pa rin ang lahat ng feature.</li>
 <li><strong>Pagkatapos bumili ng Space Pro</strong> — hindi binubuksan ang mga feature ng ads (ang code ng mga ad network), at hindi ipinapakita ang tracking prompt.</li>
 </ul>
 <p><strong>Mga user sa European Economic Area (EEA), UK at Switzerland</strong><br />Sa mga rehiyong ito, unang itatanong ng app sa loob mismo ng app kung puwedeng gamitin ng mga ad partner sa itaas (Unity, Liftoff, Meta) ang device mo para sa personalized ads — <strong>bago humiling ng anumang ad.</strong> Kasindali ng "Accept" ang "Decline", at alinman ang piliin mo, gumagana pa rin ang bawat feature at lumalabas pa rin ang ads; ginagawa lang ng pagtanggi na hindi personalized ang mga ito. Umaasa kami sa <strong>pahintulot mo</strong> (GDPR Art. 6(1)(a)) para sa personalized ads, at sa aming <strong>lehitimong interes</strong> (Art. 6(1)(f)) para sa pagpapakita ng hindi personalized na ads at para sa proteksyon laban sa maling paggamit ng ads (seksyon 2). Puwede mong <strong>baguhin o bawiin ang pinili mo anumang oras</strong> sa Settings ng app &gt; Ad privacy; magkakabisa ito mula sa susunod na ad request. Sa iPhone, ang ATT prompt ang unang lalabas, at susunod lang ang tanong na ito kung papayagan mo ang tracking; kung hindi, hindi personalized na ads lang ang ipapakita nang walang tanong na ito. Maaaring ilipat ng mga ad network ang data sa United States at iba pang bansa sa ilalim ng sarili nilang mga pananggalang, tulad ng Standard Contractual Clauses. Dahil wala kaming hawak na anumang nagpapakilala sa iyo, pinakamainam na gawin ang mga kahilingang i-access o i-delete ang ad data sa pamamagitan ng pag-reset ng advertising identifier mo o nang direkta sa mga ad network na nakalista sa itaas.</p>
@@ -1900,9 +1960,9 @@
 <p>Wala kaming ibinibigay o ibinebentang impormasyon sa third party. Direktang pinoproseso ng Apple at Google ang mga bayad ayon sa sarili nilang patakaran. Gayunman, ang mga value na direktang binabasa ng mga ad network mula sa device (seksyon 4) ay ipinapadala sa mga server ng mga kumpanyang iyon sa ibang bansa.</p>
 <table>
 <tr><th>Tatanggap</th><th>Mga item</th><th>Layunin</th></tr>
-<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Advertising identifier, device / OS / bersyon ng app, tinatayang bansa at wika, interaksyon sa ads</td><td>Pagpapakita ng ads at pagsukat ng performance</td></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Advertising identifier, device / OS / bersyon ng app, tinatayang bansa at wika, interaksyon sa ads, mga naka-install na app (Android)</td><td>Pagpapakita ng ads, pagsukat ng performance at pagpigil sa ad fraud</td></tr>
 </table>
-<p>Kung ayaw mo nito, patayin ang pagpayag sa tracking para hindi maibigay ang advertising identifier.</p>
+<p>Kung ayaw mo nito, patayin ang pagpayag sa tracking sa iPhone, o i-delete ang Advertising ID sa Android, para hindi maibigay ang advertising identifier (seksyon 4).</p>
 
 <h2>7. Pagtatago at pagbura</h2>
 <p>Wala kaming itinatagong data ng user, kaya walang kailangang hilingin na burahin. Ang mga value na binasa ng mga ad network ay itinatago at binubura ayon sa kanilang patakaran. Nabubura ang mga value sa device kasabay ng pagbura ng app. Ang mga email na natanggap sa pamamagitan ng Makipag-ugnayan ay itinatago lang habang kailangan para sumagot, at pagkatapos ay binubura.</p>
@@ -1911,7 +1971,7 @@
 <p>Ang mga mapa ng planeta at buwan at ang data ng bituin ay mula sa Solar System Scope (CC BY 4.0), NASA at USGS (public domain) at sa HYG Database (CC BY-SA 4.0). Nasa app ang buong listahan ng pinagmulan sa Settings › Mga pinagmulan.</p>
 
 <h2>9. Mga bata</h2>
-<p>Hindi para sa mga batang wala pang 13 taong gulang ang app, at hindi namin sadyang kinokolekta ang personal na impormasyon ng mga bata. Kapag naka-off ang pagpayag sa tracking, hindi ginagamit ang advertising identifier para sa personalized ads.</p>
+<p>Hindi para sa mga batang wala pang 13 taong gulang ang app, at hindi namin sadyang kinokolekta ang personal na impormasyon ng mga bata. Kapag naka-off ang pagpayag sa tracking (iPhone) o na-delete ang Advertising ID (Android), hindi ginagamit ang advertising identifier para sa personalized ads.</p>
 
 <h2>10. Ang iyong mga karapatan</h2>
 <p>Ayon sa mga naaangkop na batas sa privacy, puwede mong hilingin ang pag-access, pagtama, pagbura o pagpapahinto ng pagproseso ng personal na impormasyon mo. Gayunman, wala kaming hawak na personal na impormasyon, kaya walang mahihiling; ang mga value sa device ay puwede mong burahin mismo anumang oras sa pamamagitan ng pagbura ng app.</p>
@@ -1947,7 +2007,7 @@
 <section class="lang" data-lang="ta">
 <h1>Deep Galaxy தனியுரிமைக் கொள்கை</h1>
 
-<p><strong>நடைமுறைக்கு வரும் நாள்:</strong> 18 நவம்பர் 2026<br /><strong>தொடர்புக்கு:</strong> contact@nemofactory.co.kr</p>
+<p><strong>நடைமுறைக்கு வரும் நாள்:</strong> 26 நவம்பர் 2026<br /><strong>தொடர்புக்கு:</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>ஒரே வரியில்.</strong> Deep Galaxy-இல் <strong>கணக்கு, உள்நுழைவு, பகுப்பாய்வுக் கருவிகள் எதுவும் இல்லை; உங்கள் தகவலைச் சேமிக்கும் சேவையகமும் இல்லை.</strong> கோள்கள், நிலவுகள், விண்மீன்கள், கருந்துளை ஆகியவை செயலிக்குள் உள்ள படங்களைக் கொண்டு உங்கள் சாதனத்திலேயே நேரடியாக வரையப்படுகின்றன. இலவச இடத்துக்குச் செல்லும்போது நீங்களே தேர்ந்தெடுத்தால் மட்டுமே <strong>வெகுமதி விளம்பரம்</strong> ஒளிபரப்பாகும்; விளம்பர நெட்வொர்க் எதைப் படிக்கிறது என்பது <strong>பிரிவு 4</strong>-இல் எழுதப்பட்டுள்ளது. <strong>விண்வெளி Pro</strong> வாங்கினால், விளம்பர அம்சங்கள் ஒருபோதும் இயக்கப்படுவதில்லை.</p>
 
@@ -1963,6 +2023,8 @@
 <table>
 <tr><th>அனுமதி</th><th>ஏன் தேவை</th></tr>
 <tr><td><strong>கண்காணிப்பு அனுமதி</strong> (விருப்பத்தேர்வு, iPhone ATT)</td><td>தனிப்பயனாக்கப்பட்ட விளம்பரங்களுக்கு விளம்பர அடையாளங்காட்டியை (IDFA) பயன்படுத்த (பிரிவு 4). மறுத்தாலும் செயலி முழுவதும் அப்படியே இயங்கும்; தனிப்பயனாக்கப்பட்ட விளம்பரங்களுக்குப் பதிலாகப் பொது விளம்பரங்கள் காட்டப்படும்</td></tr>
+<tr><td><strong>விளம்பர ID</strong> (Android, நிறுவும்போது வழங்கப்படும்)</td><td>விளம்பர நெட்வொர்க்குகள் சாதனத்தின் விளம்பர ID-யைப் படித்து விளம்பரங்களைக் காட்டவும் அவற்றின் செயல்திறனை அளவிடவும் (பிரிவு 4). எந்தக் கோரிக்கையும் காட்டப்படாது; சாதன அமைப்புகளில் எப்போது வேண்டுமானாலும் இதை மீட்டமைக்கலாம் அல்லது நீக்கலாம் (பிரிவு 4)</td></tr>
+<tr><td><strong>இணையம் மற்றும் நெட்வொர்க் நிலை</strong> (நிறுவும்போது வழங்கப்படும்)</td><td>செயலி நிலைக் கோப்பு, விளம்பரங்கள், ஸ்டோர் கட்டணங்களுடன் தொடர்புகொள்ள (பிரிவு 5)</td></tr>
 </table>
 <p>செயலி கேமரா, மைக்ரோஃபோன், புகைப்படங்கள், இருப்பிடம், தொடர்புகள், நாட்காட்டி அல்லது உடல்நலத் தகவலை அணுகுவதில்லை; அந்த அனுமதிகளையும் கேட்பதில்லை.</p>
 
@@ -1970,9 +2032,10 @@
 <ul>
 <li><strong>விளம்பரம் ஒரே இடத்தில் மட்டுமே</strong> — இலவச இடத்துக்கு (சூரியன், புதன், வெள்ளி, பூமி, நிலவு, செவ்வாய், வியாழன், வியாழனின் நிலவுகள்) செல்லும்போது <strong>"விளம்பரம் பார்த்துச் செல்" என்பதை நீங்களே தேர்ந்தெடுத்தால் மட்டுமே</strong> ஒளிபரப்பாகும் <strong>வெகுமதி வீடியோ விளம்பரம்</strong>. இறுதிவரை பார்த்தால் அங்கே செல்வீர்கள். செயலியைத் திறக்கும்போதோ திரைகளுக்கு இடையே நகரும்போதோ தானாகத் தோன்றும் விளம்பரங்களோ பேனர் விளம்பரங்களோ இல்லை.</li>
 <li><strong>விளம்பர நெட்வொர்க்</strong> — Unity-இன் <strong>LevelPlay (முன்பு ironSource)</strong> வழியாக விளம்பரங்கள் காட்டப்படுகின்றன; விளம்பரக் கூட்டாளர்கள் <strong>Unity Ads</strong>, <strong>Liftoff</strong>, <strong>Meta Audience Network</strong>.</li>
-<li><strong>படிக்கப்படுபவை</strong> — விளம்பர அடையாளங்காட்டி (IDFA, IDFV / விளம்பர ID), சாதனம், OS, செயலிப் பதிப்பு, மொழி போன்ற சாதனத் தகவல், இணைப்பு IP-யிலிருந்து ஊகிக்கப்படும் தோராயமான நாடு மற்றும் நகரம், விளம்பரங்களைப் பார்த்த/தட்டிய பதிவு, விளம்பரக் குறியீட்டின் இயக்கப் பதிவு. <strong>இந்த மதிப்புகளை விளம்பர நெட்வொர்க்குகள் உங்கள் சாதனத்திலிருந்து நேரடியாகப் படிக்கின்றன; நாங்கள் பெறுவதுமில்லை, வைத்திருப்பதுமில்லை.</strong></li>
+<li><strong>படிக்கப்படுபவை</strong> — விளம்பர அடையாளங்காட்டி (IDFA, IDFV / Android விளம்பர ID, App Set ID), சாதனம், OS, செயலிப் பதிப்பு, மொழி போன்ற சாதனத் தகவல், இணைப்பு IP-யிலிருந்து ஊகிக்கப்படும் தோராயமான நாடு மற்றும் நகரம், விளம்பரங்களைப் பார்த்த/தட்டிய பதிவு, விளம்பரக் குறியீட்டின் இயக்கப் பதிவு. <strong>இந்த மதிப்புகளை விளம்பர நெட்வொர்க்குகள் உங்கள் சாதனத்திலிருந்து நேரடியாகப் படிக்கின்றன; நாங்கள் பெறுவதுமில்லை, வைத்திருப்பதுமில்லை.</strong></li>
 <li><strong>நிறுவப்பட்ட ஆப்கள்</strong> (Android) — ஒரு விளம்பரம் நிறுவலுக்கு வழிவகுத்ததா என்று கணக்கிடவும், உங்களிடம் ஏற்கனவே உள்ள ஆப்களுக்கு விளம்பரம் காட்டுவதைத் தவிர்க்கவும், சாதனத்தில் எந்தெந்த ஆப்கள் நிறுவப்பட்டுள்ளன என்பதை விளம்பர வழங்குநர்களின் குறியீடு சரிபார்க்கலாம். <strong>Deep Galaxy இதைப் படிப்பதில்லை, இது ஒருபோதும் எங்களை வந்தடைவதில்லை.</strong></li>
 <li><strong>கண்காணிப்பு ஒப்புதல்</strong> — விண்வெளி Pro வாங்காத பயனர் முதல் முறையாகச் செயலியைத் திறக்கும்போது Apple-இன் <strong>கண்காணிப்பு அனுமதிக் கோரிக்கை (ATT)</strong> ஒருமுறை தோன்றும். அனுமதிக்காவிட்டால் தனிப்பயனாக்கப்படாத விளம்பரங்கள் காட்டப்படும்; எல்லா அம்சங்களையும் அப்படியே பயன்படுத்தலாம். அனுமதியை எப்போது வேண்டுமானாலும் <em>Settings → Privacy &amp; Security → Tracking</em>-இல் மாற்றலாம்.</li>
+<li><strong>Android விளம்பர ID-யை முடக்குதல்</strong> — Android-இல் கண்காணிப்பு அனுமதிக் கோரிக்கை இல்லை. தனிப்பயனாக்கப்பட்ட விளம்பரங்கள் வேண்டாமெனில், <em>Settings → Privacy → Ads</em> (சில சாதனங்களில் <em>Settings → Google → Ads</em>)-இல் உங்கள் விளம்பர ID-யை <strong>நீக்கலாம்</strong> அல்லது <strong>மீட்டமைக்கலாம்</strong>. நீக்கிய பிறகு, விளம்பர நெட்வொர்க்குகளுக்கு ID-க்குப் பதிலாகப் பூஜ்ஜியங்கள் மட்டுமே கொண்ட மதிப்பு கிடைக்கும்; எல்லா அம்சங்களும் அப்படியே இயங்கும்.</li>
 <li><strong>விண்வெளி Pro வாங்கிய பிறகு</strong> — விளம்பர அம்சங்கள் (விளம்பர நெட்வொர்க்குகளின் குறியீடு) இயக்கப்படுவதில்லை; கண்காணிப்பு அனுமதிக் கோரிக்கையும் காட்டப்படுவதில்லை.</li>
 </ul>
 <p><strong>ஐரோப்பியப் பொருளாதாரப் பகுதி (EEA), ஐக்கிய இராச்சியம், சுவிட்சர்லாந்து பயனர்கள்</strong><br />இந்தப் பகுதிகளில், மேலே உள்ள விளம்பரக் கூட்டாளர்கள் (Unity, Liftoff, Meta) தனிப்பயனாக்கப்பட்ட விளம்பரங்களுக்கு உங்கள் சாதனத்தைப் பயன்படுத்தலாமா என்று செயலிக்குள்ளேயே முதலில் கேட்கப்படுகிறது — <strong>எந்த விளம்பரமும் கோரப்படுவதற்கு முன்பே.</strong> “மறு” என்பதைத் தேர்வது “ஏற்கிறேன்” என்பதைப் போலவே எளிது; எதைத் தேர்ந்தாலும் ஒவ்வொரு வசதியும் வேலை செய்யும், விளம்பரங்களும் தொடர்ந்து வரும்; மறுத்தால் அவை தனிப்பயனாக்கப்படாது, அவ்வளவுதான். தனிப்பயனாக்கப்பட்ட விளம்பரங்களுக்கு <strong>உங்கள் ஒப்புதலையும்</strong> (GDPR பிரிவு 6(1)(a)), தனிப்பயனாக்கப்படாத விளம்பரங்களைக் காட்டுவதற்கும் விளம்பரத் தவறான பயன்பாட்டுத் தடுப்புக்கும் (இந்தக் கொள்கையின் பிரிவு 2) எங்கள் <strong>நியாயமான நலனையும்</strong> (GDPR பிரிவு 6(1)(f)) அடிப்படையாகக் கொள்கிறோம். செயலியின் அமைப்புகள் &gt; விளம்பரத் தனியுரிமை என்பதில் <strong>எப்போது வேண்டுமானாலும் உங்கள் தேர்வை மாற்றலாம் அல்லது திரும்பப் பெறலாம்</strong>; அடுத்த விளம்பரக் கோரிக்கையிலிருந்து அது பொருந்தும். iPhone-இல் முதலில் கண்காணிப்பு அனுமதிக் கோரிக்கை (ATT) தோன்றும்; நீங்கள் கண்காணிப்பை அனுமதித்தால் மட்டுமே இந்தக் கேள்வி தொடரும். அனுமதிக்காவிட்டால், இந்தக் கேள்வி இல்லாமல் தனிப்பயனாக்கப்படாத விளம்பரங்கள் மட்டுமே காட்டப்படும். விளம்பர நெட்வொர்க்குகள் நிலையான ஒப்பந்த விதிகள் (Standard Contractual Clauses) போன்ற தங்கள் சொந்தப் பாதுகாப்பு ஏற்பாடுகளின் கீழ் தரவை அமெரிக்கா மற்றும் பிற நாடுகளுக்கு மாற்றக்கூடும். உங்களை அடையாளம் காட்டும் எதையும் நாங்கள் வைத்திருக்காததால், விளம்பரத் தரவை அணுக அல்லது நீக்கக் கோர சிறந்த வழி உங்கள் விளம்பர அடையாளங்காட்டியை மீட்டமைப்பது அல்லது மேலே உள்ள விளம்பர நெட்வொர்க்குகளை நேரடியாக அணுகுவதுதான்.</p>
@@ -1993,9 +2056,9 @@
 <p>நாங்கள் எந்தத் தகவலையும் மூன்றாம் தரப்புக்கு வழங்குவதோ விற்பதோ இல்லை. கட்டணங்களை Apple-உம் Google-உம் தங்கள் கொள்கைகளின்படி நேரடியாகச் செயலாக்குகின்றன. இருப்பினும், விளம்பர நெட்வொர்க்குகள் சாதனத்திலிருந்து நேரடியாகப் படிக்கும் மதிப்புகள் (பிரிவு 4) அந்த நிறுவனங்களின் வெளிநாட்டுச் சேவையகங்களுக்கு அனுப்பப்படுகின்றன.</p>
 <table>
 <tr><th>பெறுநர்</th><th>உருப்படிகள்</th><th>நோக்கம்</th></tr>
-<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>விளம்பர அடையாளங்காட்டி, சாதனம் / OS / செயலிப் பதிப்பு, தோராயமான நாடு மற்றும் மொழி, விளம்பர ஊடாடல்</td><td>விளம்பரங்களைக் காட்டுதல், செயல்திறனை அளவிடுதல்</td></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>விளம்பர அடையாளங்காட்டி, சாதனம் / OS / செயலிப் பதிப்பு, தோராயமான நாடு மற்றும் மொழி, விளம்பர ஊடாடல், நிறுவப்பட்ட ஆப்கள் (Android)</td><td>விளம்பரங்களைக் காட்டுதல், செயல்திறனை அளவிடுதல், விளம்பர மோசடியைத் தடுத்தல்</td></tr>
 </table>
-<p>இது வேண்டாமெனில், கண்காணிப்பு அனுமதியை முடக்கி விளம்பர அடையாளங்காட்டி வழங்கப்படுவதைத் தடுக்கலாம்.</p>
+<p>இது வேண்டாமெனில், iPhone-இல் கண்காணிப்பு அனுமதியை முடக்கியோ, Android-இல் விளம்பர ID-யை நீக்கியோ விளம்பர அடையாளங்காட்டி வழங்கப்படுவதைத் தடுக்கலாம் (பிரிவு 4).</p>
 
 <h2>7. வைத்திருக்கும் காலமும் நீக்குதலும்</h2>
 <p>நாங்கள் பயனர் தரவு எதையும் வைத்திருப்பதில்லை; எனவே நீக்கக் கோர எதுவும் இல்லை. விளம்பர நெட்வொர்க்குகள் படித்த மதிப்புகள் அவற்றின் கொள்கைகளின்படி வைக்கப்பட்டு நீக்கப்படுகின்றன. சாதனத்தில் உள்ள மதிப்புகள் செயலியை நீக்கும்போது சேர்ந்து அழிகின்றன. தொடர்பு மூலம் பெறப்பட்ட மின்னஞ்சல்கள் பதிலளிக்கத் தேவையான காலம் வரை மட்டுமே வைக்கப்பட்டு, பின்னர் நீக்கப்படுகின்றன.</p>
@@ -2004,7 +2067,7 @@
 <p>கோள், நிலவு வரைபடங்களும் விண்மீன் தரவும் Solar System Scope (CC BY 4.0), NASA, USGS (பொதுக் களம்), HYG Database (CC BY-SA 4.0) ஆகியவற்றிலிருந்து எடுக்கப்பட்டவை. முழு மூலங்களும் செயலியில் அமைப்புகள் › மூலங்கள் என்பதில் உள்ளன.</p>
 
 <h2>9. குழந்தைகள்</h2>
-<p>இந்தச் செயலி 13 வயதுக்குட்பட்ட குழந்தைகளுக்கானது அல்ல; குழந்தைகளின் தனிப்பட்ட தகவலை நாங்கள் தெரிந்தே சேகரிப்பதில்லை. கண்காணிப்பு அனுமதியை முடக்கினால், விளம்பர அடையாளங்காட்டி தனிப்பயனாக்கப்பட்ட விளம்பரங்களுக்குப் பயன்படுத்தப்படாது.</p>
+<p>இந்தச் செயலி 13 வயதுக்குட்பட்ட குழந்தைகளுக்கானது அல்ல; குழந்தைகளின் தனிப்பட்ட தகவலை நாங்கள் தெரிந்தே சேகரிப்பதில்லை. கண்காணிப்பு அனுமதியை முடக்கினால் (iPhone) அல்லது விளம்பர ID-யை நீக்கினால் (Android), விளம்பர அடையாளங்காட்டி தனிப்பயனாக்கப்பட்ட விளம்பரங்களுக்குப் பயன்படுத்தப்படாது.</p>
 
 <h2>10. உங்கள் உரிமைகள்</h2>
 <p>பொருந்தும் தனியுரிமைச் சட்டங்களின்படி, உங்கள் தனிப்பட்ட தகவலை அணுக, திருத்த, நீக்க அல்லது செயலாக்கத்தை நிறுத்தக் கோரலாம். இருப்பினும், எங்களிடம் தனிப்பட்ட தகவல் எதுவும் இல்லாததால் கோர எதுவும் இல்லை; சாதனத்தில் உள்ள மதிப்புகளைச் செயலியை நீக்குவதன் மூலம் எப்போது வேண்டுமானாலும் நீங்களே அழிக்கலாம்.</p>
@@ -2040,7 +2103,7 @@
 <section class="lang" data-lang="te">
 <h1>Deep Galaxy గోప్యతా విధానం</h1>
 
-<p><strong>అమలులోకి వచ్చే తేదీ:</strong> 18 నవంబర్ 2026<br /><strong>సంప్రదించండి:</strong> contact@nemofactory.co.kr</p>
+<p><strong>అమలులోకి వచ్చే తేదీ:</strong> 26 నవంబర్ 2026<br /><strong>సంప్రదించండి:</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>ఒక్క వాక్యంలో.</strong> Deep Galaxy లో <strong>ఖాతా, లాగిన్, విశ్లేషణ సాధనాలు ఏవీ లేవు; మీ సమాచారాన్ని నిల్వ చేసే సర్వర్ కూడా లేదు.</strong> గ్రహాలు, చంద్రులు, నక్షత్రాలు, కృష్ణబిలం యాప్‌లోనే ఉన్న చిత్రాలతో మీ పరికరంలో నేరుగా గీయబడతాయి. ఉచిత గమ్యానికి వెళ్తున్నప్పుడు మీరే ఎంచుకుంటే మాత్రమే <strong>రివార్డ్ ప్రకటన</strong> ప్లే అవుతుంది; ప్రకటన నెట్‌వర్క్ ఏమి చదువుతుందో <strong>విభాగం 4</strong> లో రాశాం. <strong>అంతరిక్షం Pro</strong> కొంటే, ప్రకటన సదుపాయాలు అసలు ఆన్ కావు.</p>
 
@@ -2056,6 +2119,8 @@
 <table>
 <tr><th>అనుమతి</th><th>ఎందుకు అవసరం</th></tr>
 <tr><td><strong>ట్రాకింగ్ అనుమతి</strong> (ఐచ్ఛికం, iPhone ATT)</td><td>వ్యక్తిగతీకరించిన ప్రకటనల కోసం ప్రకటన గుర్తింపు (IDFA) ను ఉపయోగించడానికి (విభాగం 4). తిరస్కరించినా యాప్ మొత్తం అలాగే పనిచేస్తుంది; వ్యక్తిగతీకరించిన ప్రకటనలకు బదులు సాధారణ ప్రకటనలు కనిపిస్తాయి</td></tr>
+<tr><td><strong>ప్రకటన ID</strong> (Android, ఇన్‌స్టాల్ సమయంలో ఇవ్వబడుతుంది)</td><td>ప్రకటన నెట్‌వర్క్‌లు పరికరం యొక్క ప్రకటన ID ని చదివి ప్రకటనలు చూపడానికి, వాటి పనితీరు కొలవడానికి (విభాగం 4). ఎలాంటి అభ్యర్థన కనిపించదు; పరికర సెట్టింగ్‌లలో ఎప్పుడైనా దీన్ని రీసెట్ చేయవచ్చు లేదా తొలగించవచ్చు (విభాగం 4)</td></tr>
+<tr><td><strong>ఇంటర్నెట్, నెట్‌వర్క్ స్థితి</strong> (ఇన్‌స్టాల్ సమయంలో ఇవ్వబడుతుంది)</td><td>యాప్ స్థితి ఫైల్, ప్రకటనలు, స్టోర్ చెల్లింపులతో అనుసంధానం కావడానికి (విభాగం 5)</td></tr>
 </table>
 <p>యాప్ కెమెరా, మైక్రోఫోన్, ఫోటోలు, స్థానం, పరిచయాలు, క్యాలెండర్ లేదా ఆరోగ్య సమాచారాన్ని యాక్సెస్ చేయదు; ఆ అనుమతులను అడగదు.</p>
 
@@ -2063,9 +2128,10 @@
 <ul>
 <li><strong>ప్రకటన ఒకే ఒక చోట</strong> — ఉచిత గమ్యానికి (సూర్యుడు, బుధుడు, శుక్రుడు, భూమి, చంద్రుడు, అంగారకుడు, గురుడు, గురుడి చంద్రులు) వెళ్తున్నప్పుడు <strong>"యాడ్ చూసి వెళ్లండి" ను మీరే ఎంచుకున్నప్పుడు మాత్రమే</strong> ప్లే అయ్యే <strong>రివార్డ్ వీడియో ప్రకటన</strong>. చివరి వరకు చూస్తే, మీరు అక్కడికి వెళ్తారు. యాప్ తెరిచినప్పుడు లేదా స్క్రీన్ మారినప్పుడు వాటంతట అవే వచ్చే ప్రకటనలు, బ్యానర్ ప్రకటనలు లేవు.</li>
 <li><strong>ప్రకటన నెట్‌వర్క్</strong> — Unity యొక్క <strong>LevelPlay (గతంలో ironSource)</strong> ద్వారా ప్రకటనలు చూపబడతాయి; ప్రకటన భాగస్వాములు <strong>Unity Ads</strong>, <strong>Liftoff</strong>, <strong>Meta Audience Network</strong>.</li>
-<li><strong>చదివేవి</strong> — ప్రకటన గుర్తింపు (IDFA, IDFV / ప్రకటన ID), పరికరం, OS, యాప్ వెర్షన్, భాష వంటి పరికర సమాచారం, కనెక్షన్ IP నుండి అంచనా వేసిన సుమారు దేశం మరియు నగరం, ప్రకటనలు చూసిన/నొక్కిన రికార్డు, ప్రకటన కోడ్ పనితీరు రికార్డు. <strong>ఈ విలువలను ప్రకటన నెట్‌వర్క్‌లు మీ పరికరం నుండి నేరుగా చదువుతాయి; మేము అందుకోము, ఉంచుకోము.</strong></li>
+<li><strong>చదివేవి</strong> — ప్రకటన గుర్తింపు (IDFA, IDFV / Android ప్రకటన ID, App Set ID), పరికరం, OS, యాప్ వెర్షన్, భాష వంటి పరికర సమాచారం, కనెక్షన్ IP నుండి అంచనా వేసిన సుమారు దేశం మరియు నగరం, ప్రకటనలు చూసిన/నొక్కిన రికార్డు, ప్రకటన కోడ్ పనితీరు రికార్డు. <strong>ఈ విలువలను ప్రకటన నెట్‌వర్క్‌లు మీ పరికరం నుండి నేరుగా చదువుతాయి; మేము అందుకోము, ఉంచుకోము.</strong></li>
 <li><strong>ఇన్‌స్టాల్ చేసిన యాప్‌లు</strong> (Android) — ఒక ప్రకటన ఇన్‌స్టాల్‌కు దారితీసిందో లేదో లెక్కించడానికి, మీ వద్ద ఇప్పటికే ఉన్న యాప్‌లకు ప్రకటనలు చూపకుండా ఉండటానికి, పరికరంలో ఏ యాప్‌లు ఇన్‌స్టాల్ చేయబడి ఉన్నాయో ప్రకటన ప్రదాతల కోడ్ తనిఖీ చేయగలదు. <strong>Deep Galaxy దీన్ని చదవదు, ఇది ఎప్పుడూ మమ్మల్ని చేరదు.</strong></li>
 <li><strong>ట్రాకింగ్ సమ్మతి</strong> — అంతరిక్షం Pro కొనని వినియోగదారు మొదటిసారి యాప్ తెరిచినప్పుడు Apple యొక్క <strong>ట్రాకింగ్ అనుమతి అభ్యర్థన (ATT)</strong> ఒకసారి కనిపిస్తుంది. అనుమతించకపోతే వ్యక్తిగతీకరించని ప్రకటనలు కనిపిస్తాయి; అన్ని సదుపాయాలను అలాగే ఉపయోగించవచ్చు. అనుమతిని ఎప్పుడైనా <em>Settings → Privacy &amp; Security → Tracking</em> లో మార్చవచ్చు.</li>
+<li><strong>Android ప్రకటన ID ని ఆపివేయడం</strong> — Android లో ట్రాకింగ్ అనుమతి అభ్యర్థన ఉండదు. వ్యక్తిగతీకరించిన ప్రకటనలు వద్దనుకుంటే, <em>Settings → Privacy → Ads</em> (కొన్ని పరికరాల్లో <em>Settings → Google → Ads</em>) లో మీ ప్రకటన ID ని <strong>తొలగించవచ్చు</strong> లేదా <strong>రీసెట్ చేయవచ్చు</strong>. తొలగించిన తర్వాత, ప్రకటన నెట్‌వర్క్‌లకు ID కి బదులు సున్నాలు మాత్రమే ఉన్న విలువ అందుతుంది; అన్ని సదుపాయాలు అలాగే పనిచేస్తాయి.</li>
 <li><strong>అంతరిక్షం Pro కొన్న తర్వాత</strong> — ప్రకటన సదుపాయాలు (ప్రకటన నెట్‌వర్క్‌ల కోడ్) ఆన్ కావు; ట్రాకింగ్ అనుమతి అభ్యర్థన కూడా చూపబడదు.</li>
 </ul>
 <p><strong>యూరోపియన్ ఆర్థిక ప్రాంతం (EEA), యునైటెడ్ కింగ్‌డమ్, స్విట్జర్లాండ్ వినియోగదారులు</strong><br />ఈ ప్రాంతాల్లో, పైన ఉన్న ప్రకటన భాగస్వాములు (Unity, Liftoff, Meta) వ్యక్తిగతీకరించిన ప్రకటనల కోసం మీ పరికరాన్ని ఉపయోగించవచ్చా అని యాప్ లోపలే ముందుగా అడుగుతుంది — <strong>ఏ ప్రకటననూ అభ్యర్థించక ముందే.</strong> “తిరస్కరించు” ఎంచుకోవడం “అంగీకరించు” అంత సులభం; ఏది ఎంచుకున్నా ప్రతి ఫీచర్ పనిచేస్తుంది, ప్రకటనలు కూడా కనిపిస్తాయి; తిరస్కరిస్తే అవి వ్యక్తిగతీకరించబడవు, అంతే. వ్యక్తిగతీకరించిన ప్రకటనలకు <strong>మీ సమ్మతి</strong> (GDPR ఆర్టికల్ 6(1)(a)) పైన, వ్యక్తిగతీకరించని ప్రకటనలు చూపడానికి మరియు ప్రకటన దుర్వినియోగ నివారణకు (విభాగం 2) మా <strong>చట్టబద్ధమైన ప్రయోజనం</strong> (ఆర్టికల్ 6(1)(f)) పైన ఆధారపడతాము. యాప్ సెట్టింగ్‌లు &gt; ప్రకటనల గోప్యత‌లో <strong>ఎప్పుడైనా మీ ఎంపికను మార్చవచ్చు లేదా ఉపసంహరించుకోవచ్చు</strong>; ఇది తదుపరి ప్రకటన అభ్యర్థన నుండి వర్తిస్తుంది. iPhone‌లో ముందుగా ట్రాకింగ్ అనుమతి అభ్యర్థన (ATT) కనిపిస్తుంది; మీరు ట్రాకింగ్‌ను అనుమతిస్తేనే ఈ ప్రశ్న తర్వాత వస్తుంది. అనుమతించకపోతే, ఈ ప్రశ్న లేకుండా వ్యక్తిగతీకరించని ప్రకటనలు మాత్రమే చూపబడతాయి. ప్రకటన నెట్‌వర్క్‌లు ప్రామాణిక ఒప్పంద నిబంధనలు (Standard Contractual Clauses) వంటి తమ సొంత రక్షణల కింద డేటాను యునైటెడ్ స్టేట్స్ మరియు ఇతర దేశాలకు బదిలీ చేయవచ్చు. మిమ్మల్ని గుర్తించే ఏదీ మా వద్ద లేనందున, ప్రకటన డేటాను చూడాలన్నా తొలగించాలన్నా ఉత్తమ మార్గం మీ ప్రకటన గుర్తింపును రీసెట్ చేయడం లేదా పైన ఉన్న ప్రకటన నెట్‌వర్క్‌లను నేరుగా సంప్రదించడం.</p>
@@ -2086,9 +2152,9 @@
 <p>మేము ఏ సమాచారాన్నీ మూడవ పక్షానికి ఇవ్వము, అమ్మము. చెల్లింపులను Apple, Google తమ విధానాల ప్రకారం నేరుగా ప్రాసెస్ చేస్తాయి. అయితే, ప్రకటన నెట్‌వర్క్‌లు పరికరం నుండి నేరుగా చదివే విలువలు (విభాగం 4) ఆయా సంస్థల విదేశీ సర్వర్‌లకు పంపబడతాయి.</p>
 <table>
 <tr><th>స్వీకర్త</th><th>అంశాలు</th><th>ఉద్దేశం</th></tr>
-<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>ప్రకటన గుర్తింపు, పరికరం / OS / యాప్ వెర్షన్, సుమారు దేశం మరియు భాష, ప్రకటన పరస్పర చర్య</td><td>ప్రకటనలు చూపడం, పనితీరు కొలవడం</td></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>ప్రకటన గుర్తింపు, పరికరం / OS / యాప్ వెర్షన్, సుమారు దేశం మరియు భాష, ప్రకటన పరస్పర చర్య, ఇన్‌స్టాల్ చేసిన యాప్‌లు (Android)</td><td>ప్రకటనలు చూపడం, పనితీరు కొలవడం, ప్రకటన మోసాన్ని నివారించడం</td></tr>
 </table>
-<p>ఇది వద్దనుకుంటే, ట్రాకింగ్ అనుమతిని ఆపివేసి ప్రకటన గుర్తింపు అందించబడకుండా అడ్డుకోవచ్చు.</p>
+<p>ఇది వద్దనుకుంటే, iPhone లో ట్రాకింగ్ అనుమతిని ఆపివేసి, లేదా Android లో ప్రకటన ID ని తొలగించి, ప్రకటన గుర్తింపు అందించబడకుండా అడ్డుకోవచ్చు (విభాగం 4).</p>
 
 <h2>7. నిల్వ వ్యవధి, తొలగింపు</h2>
 <p>మేము ఏ వినియోగదారు డేటానూ ఉంచుకోము, కాబట్టి తొలగించమని అడగడానికి ఏమీ లేదు. ప్రకటన నెట్‌వర్క్‌లు చదివిన విలువలు వాటి విధానాల ప్రకారం నిల్వ చేయబడి తొలగించబడతాయి. పరికరంలోని విలువలు యాప్‌ను తొలగించినప్పుడు వాటితో పాటే తొలగిపోతాయి. సంప్రదింపు ద్వారా అందిన ఇమెయిల్‌లు సమాధానం ఇవ్వడానికి అవసరమైనంత కాలం మాత్రమే ఉంచబడి, ఆ తర్వాత తొలగించబడతాయి.</p>
@@ -2097,7 +2163,7 @@
 <p>గ్రహాలు, చంద్రుల పటాలు మరియు నక్షత్ర డేటా Solar System Scope (CC BY 4.0), NASA, USGS (పబ్లిక్ డొమైన్), HYG Database (CC BY-SA 4.0) నుండి తీసుకోబడ్డాయి. పూర్తి మూలాలు యాప్‌లో సెట్టింగ్‌లు › మూలాలు లో ఉన్నాయి.</p>
 
 <h2>9. పిల్లలు</h2>
-<p>ఈ యాప్ 13 ఏళ్లలోపు పిల్లల కోసం ఉద్దేశించినది కాదు; మేము తెలిసి పిల్లల వ్యక్తిగత సమాచారాన్ని సేకరించము. ట్రాకింగ్ అనుమతిని ఆపివేస్తే, ప్రకటన గుర్తింపు వ్యక్తిగతీకరించిన ప్రకటనలకు ఉపయోగించబడదు.</p>
+<p>ఈ యాప్ 13 ఏళ్లలోపు పిల్లల కోసం ఉద్దేశించినది కాదు; మేము తెలిసి పిల్లల వ్యక్తిగత సమాచారాన్ని సేకరించము. ట్రాకింగ్ అనుమతిని ఆపివేస్తే (iPhone) లేదా ప్రకటన ID ని తొలగిస్తే (Android), ప్రకటన గుర్తింపు వ్యక్తిగతీకరించిన ప్రకటనలకు ఉపయోగించబడదు.</p>
 
 <h2>10. మీ హక్కులు</h2>
 <p>వర్తించే గోప్యతా చట్టాల ప్రకారం, మీ వ్యక్తిగత సమాచారాన్ని చూడటానికి, సరిచేయడానికి, తొలగించడానికి లేదా ప్రాసెసింగ్‌ను ఆపడానికి మీరు అభ్యర్థించవచ్చు. అయితే, మా వద్ద ఏ వ్యక్తిగత సమాచారమూ లేనందున అభ్యర్థించడానికి ఏమీ లేదు; పరికరంలోని విలువలను యాప్‌ను తొలగించడం ద్వారా ఎప్పుడైనా మీరే తొలగించవచ్చు.</p>
@@ -2133,7 +2199,7 @@
 <section class="lang" data-lang="my">
 <h1>Deep Galaxy ကိုယ်ရေးအချက်အလက်ဆိုင်ရာ မူဝါဒ</h1>
 
-<p><strong>အသက်ဝင်သည့်နေ့:</strong> 2026 ခုနှစ် နိုဝင်ဘာ 18 ရက်<br /><strong>ဆက်သွယ်ရန်:</strong> contact@nemofactory.co.kr</p>
+<p><strong>အသက်ဝင်သည့်နေ့:</strong> 2026 ခုနှစ် နိုဝင်ဘာ 26 ရက်<br /><strong>ဆက်သွယ်ရန်:</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>တစ်ကြောင်းတည်းဖြင့်။</strong> Deep Galaxy တွင် <strong>အကောင့်၊ အကောင့်ဝင်ခြင်း၊ ခွဲခြမ်းစိတ်ဖြာရေး ကိရိယာ မရှိသလို သင့်အချက်အလက်ကို သိမ်းဆည်းသော ဆာဗာလည်း မရှိပါ။</strong> ဂြိုဟ်များ၊ လများ၊ ကြယ်များနှင့် တွင်းနက်ကို အက်ပ်အတွင်း ပါဝင်သော ပုံများဖြင့် သင့်စက်ပေါ်တွင် တိုက်ရိုက် ရေးဆွဲပါသည်။ အခမဲ့ နေရာတစ်ခုသို့ သွားစဉ် သင်ကိုယ်တိုင် ရွေးချယ်မှသာ <strong>ဆုလာဘ်ကြော်ငြာ</strong> ပြသပါသည်၊ ကြော်ငြာကွန်ရက်က ဘာကို ဖတ်ယူသည်ကို <strong>အပိုင်း 4</strong> တွင် ရေးထားပါသည်။ <strong>Space Pro</strong> ကို ဝယ်ပါက ကြော်ငြာ လုပ်ဆောင်ချက်များကို လုံးဝ မဖွင့်ပါ။</p>
 
@@ -2149,6 +2215,8 @@
 <table>
 <tr><th>ခွင့်ပြုချက်</th><th>ဘာကြောင့် လိုအပ်သနည်း</th></tr>
 <tr><td><strong>ခြေရာခံခွင့်</strong> (ရွေးချယ်နိုင်၊ iPhone ATT)</td><td>စိတ်ကြိုက်ကြော်ငြာများအတွက် ကြော်ငြာ ID (IDFA) ကို အသုံးပြုရန် (အပိုင်း 4)။ ငြင်းပယ်လျှင်လည်း အက်ပ်တစ်ခုလုံး ယခင်အတိုင်း အလုပ်လုပ်ပြီး စိတ်ကြိုက်ကြော်ငြာအစား ယေဘုယျကြော်ငြာများ ပြပါမည်</td></tr>
+<tr><td><strong>Advertising ID</strong> (Android၊ ထည့်သွင်းချိန်တွင် ခွင့်ပြုပြီး)</td><td>ကြော်ငြာကွန်ရက်များက စက်၏ Advertising ID ကို ဖတ်၍ ကြော်ငြာပြရန်နှင့် စွမ်းဆောင်ရည် တိုင်းတာရန် (အပိုင်း 4)။ မည်သည့် တောင်းဆိုချက်မျှ မပေါ်ပါ။ စက်၏ ဆက်တင်တွင် အချိန်မရွေး ပြန်လည်သတ်မှတ်နိုင် သို့မဟုတ် ဖျက်နိုင်ပါသည် (အပိုင်း 4)</td></tr>
+<tr><td><strong>အင်တာနက်နှင့် ကွန်ရက် အခြေအနေ</strong> (ထည့်သွင်းချိန်တွင် ခွင့်ပြုပြီး)</td><td>အက်ပ်အခြေအနေဖိုင်၊ ကြော်ငြာနှင့် စတိုး ငွေပေးချေမှုတို့နှင့် ချိတ်ဆက်ရန် (အပိုင်း 5)</td></tr>
 </table>
 <p>အက်ပ်သည် ကင်မရာ၊ မိုက်ခရိုဖုန်း၊ ဓာတ်ပုံ၊ တည်နေရာ၊ အဆက်အသွယ်များ၊ ပြက္ခဒိန် သို့မဟုတ် ကျန်းမာရေးအချက်အလက်ကို မဝင်ရောက်ဘဲ ထိုခွင့်ပြုချက်များကိုလည်း မတောင်းပါ။</p>
 
@@ -2156,9 +2224,10 @@
 <ul>
 <li><strong>ကြော်ငြာသည် နေရာတစ်ခုတည်းတွင်သာ ရှိပါသည်</strong> — အခမဲ့ နေရာ (နေ၊ ဗုဒ္ဓဟူးဂြိုဟ်၊ သောကြာဂြိုဟ်၊ ကမ္ဘာ၊ လ၊ အင်္ဂါဂြိုဟ်၊ ကြာသပတေးဂြိုဟ်နှင့် ကြာသပတေး၏ လများ) သို့ သွားစဉ် <strong>"ကြော်ငြာကြည့်ပြီး သွားရန်" ကို သင်ကိုယ်တိုင် ရွေးမှသာ</strong> ပြသသော <strong>ဆုလာဘ် ဗီဒီယိုကြော်ငြာ</strong> ဖြစ်ပါသည်။ အဆုံးထိ ကြည့်လျှင် ထိုနေရာသို့ ရောက်ပါမည်။ အက်ပ်ဖွင့်ချိန် သို့မဟုတ် စခရင်ပြောင်းချိန်တွင် အလိုအလျောက် ပေါ်လာသော ကြော်ငြာ သို့မဟုတ် ဘဏ်နာကြော်ငြာ မရှိပါ။</li>
 <li><strong>ကြော်ငြာကွန်ရက်</strong> — ကြော်ငြာများကို Unity ၏ <strong>LevelPlay (ယခင် ironSource)</strong> မှတစ်ဆင့် ပြသပြီး ကြော်ငြာ မိတ်ဖက်များမှာ <strong>Unity Ads</strong>, <strong>Liftoff</strong> နှင့် <strong>Meta Audience Network</strong> ဖြစ်ပါသည်။</li>
-<li><strong>ဖတ်ယူသည့်အရာ</strong> — ကြော်ငြာ ID (IDFA၊ IDFV / Advertising ID)၊ စက်၊ OS၊ အက်ပ်ဗားရှင်း၊ ဘာသာစကား စသည့် စက်အချက်အလက်၊ ချိတ်ဆက်ထားသော IP မှ ခန့်မှန်းသည့် နိုင်ငံနှင့် မြို့၊ ကြော်ငြာ ကြည့်ခြင်း/နှိပ်ခြင်း မှတ်တမ်း၊ ကြော်ငြာကုဒ်၏ လုပ်ဆောင်မှု မှတ်တမ်း။ <strong>ဤတန်ဖိုးများကို ကြော်ငြာကွန်ရက်များက သင့်စက်မှ တိုက်ရိုက် ဖတ်ယူပြီး ကျွန်ုပ်တို့ မလက်ခံ၊ မသိမ်းဆည်းပါ။</strong></li>
+<li><strong>ဖတ်ယူသည့်အရာ</strong> — ကြော်ငြာ ID (IDFA၊ IDFV / Android Advertising ID၊ App Set ID)၊ စက်၊ OS၊ အက်ပ်ဗားရှင်း၊ ဘာသာစကား စသည့် စက်အချက်အလက်၊ ချိတ်ဆက်ထားသော IP မှ ခန့်မှန်းသည့် နိုင်ငံနှင့် မြို့၊ ကြော်ငြာ ကြည့်ခြင်း/နှိပ်ခြင်း မှတ်တမ်း၊ ကြော်ငြာကုဒ်၏ လုပ်ဆောင်မှု မှတ်တမ်း။ <strong>ဤတန်ဖိုးများကို ကြော်ငြာကွန်ရက်များက သင့်စက်မှ တိုက်ရိုက် ဖတ်ယူပြီး ကျွန်ုပ်တို့ မလက်ခံ၊ မသိမ်းဆည်းပါ။</strong></li>
 <li><strong>ထည့်သွင်းထားသော အက်ပ်များ</strong> (Android) — ကြော်ငြာတစ်ခုကြောင့် ထည့်သွင်းမှု ဖြစ်ခဲ့သလား ရေတွက်ရန်နှင့် သင့်ထံ ရှိပြီးသား အက်ပ်များအတွက် ကြော်ငြာ မပြမိစေရန် ကြော်ငြာပံ့ပိုးသူများ၏ ကုဒ်သည် စက်ပစ္စည်းပေါ်တွင် မည်သည့်အက်ပ်များ ထည့်သွင်းထားသည်ကို စစ်ဆေးနိုင်ပါသည်။ <strong>Deep Galaxy က ၎င်းကို မဖတ်ပါ၊ ကျွန်ုပ်တို့ထံလည်း ဘယ်တော့မှ မရောက်ပါ။</strong></li>
 <li><strong>ခြေရာခံခြင်း သဘောတူညီချက်</strong> — Space Pro မဝယ်ရသေးသော အသုံးပြုသူက အက်ပ်ကို ပထမဆုံးအကြိမ် ဖွင့်သည့်အခါ Apple ၏ <strong>ခြေရာခံခွင့် တောင်းဆိုချက် (ATT)</strong> တစ်ကြိမ် ပေါ်လာပါမည်။ ခွင့်မပြုပါက စိတ်ကြိုက်မဟုတ်သော ကြော်ငြာများ ပြပြီး လုပ်ဆောင်ချက်အားလုံးကို ဆက်သုံးနိုင်ပါသည်။ ခွင့်ပြုမပြုကို <em>Settings → Privacy &amp; Security → Tracking</em> တွင် အချိန်မရွေး ပြောင်းနိုင်ပါသည်။</li>
+<li><strong>Android Advertising ID ကို ပိတ်ခြင်း</strong> — Android တွင် ခြေရာခံခွင့် တောင်းဆိုချက် မရှိပါ။ စိတ်ကြိုက်ကြော်ငြာ မလိုလားပါက <em>Settings → Privacy → Ads</em> (စက်အချို့တွင် <em>Settings → Google → Ads</em>) သို့ သွား၍ သင့် Advertising ID ကို <strong>ဖျက်</strong>နိုင် သို့မဟုတ် <strong>ပြန်လည်သတ်မှတ်</strong>နိုင်ပါသည်။ ဖျက်ပြီးနောက် ကြော်ငြာကွန်ရက်များသည် ID အစား သုညများသာ ပါသော တန်ဖိုးကိုသာ ရရှိပြီး လုပ်ဆောင်ချက်အားလုံး ဆက်လက် အလုပ်လုပ်ပါသည်။</li>
 <li><strong>Space Pro ဝယ်ပြီးနောက်</strong> — ကြော်ငြာ လုပ်ဆောင်ချက်များ (ကြော်ငြာကွန်ရက်များ၏ ကုဒ်) ကို မဖွင့်ဘဲ ခြေရာခံခွင့် တောင်းဆိုချက်ကိုလည်း မပြပါ။</li>
 </ul>
 <p><strong>ဥရောပ စီးပွားရေးဒေသ (EEA)၊ ယူကေနှင့် ဆွစ်ဇာလန်ရှိ အသုံးပြုသူများ</strong><br />ဤဒေသများတွင် အထက်ပါ ကြော်ငြာ မိတ်ဖက်များ (Unity, Liftoff, Meta) က စိတ်ကြိုက်ကြော်ငြာများအတွက် သင့်စက်ကို အသုံးပြုနိုင်မလားဟု <strong>မည်သည့်ကြော်ငြာကိုမျှ မတောင်းဆိုမီ</strong> အက်ပ်အတွင်း၌ ဦးစွာ မေးပါသည်။ “ငြင်းမည်” ကို ရွေးခြင်းသည် “သဘောတူမည်” ကဲ့သို့ပင် လွယ်ကူပြီး မည်သည့်ဘက်ကို ရွေးသည်ဖြစ်စေ လုပ်ဆောင်ချက်တိုင်း အလုပ်လုပ်ကာ ကြော်ငြာများလည်း ဆက်ပေါ်ပါသည် — ငြင်းလျှင် ၎င်းတို့သည် စိတ်ကြိုက်ကြော်ငြာ မဟုတ်ရုံသာ ဖြစ်ပါသည်။ စိတ်ကြိုက်ကြော်ငြာများအတွက် <strong>သင့်သဘောတူညီချက်</strong> (GDPR ပုဒ်မ 6(1)(a)) ကို လည်းကောင်း၊ စိတ်ကြိုက်မဟုတ်သော ကြော်ငြာများ ပြသခြင်းနှင့် ကြော်ငြာ အလွဲသုံးစားမှု ကာကွယ်ရေး (အပိုင်း 2) အတွက် ကျွန်ုပ်တို့၏ <strong>တရားဝင် အကျိုးစီးပွား</strong> (ပုဒ်မ 6(1)(f)) ကို လည်းကောင်း အခြေခံပါသည်။ အက်ပ်၏ ဆက်တင် &gt; ကြော်ငြာ ကိုယ်ရေးလုံခြုံမှု တွင် <strong>သင့်ရွေးချယ်မှုကို အချိန်မရွေး ပြောင်းလဲ သို့မဟုတ် ရုပ်သိမ်းနိုင်ပြီး</strong> နောက်ကြော်ငြာ တောင်းဆိုမှုမှစ၍ အကျိုးသက်ရောက်ပါသည်။ iPhone တွင် ခြေရာခံခွင့် တောင်းဆိုချက် (ATT) ကို ဦးစွာ ပြပြီး ခြေရာခံခြင်းကို သင်ခွင့်ပြုမှသာ ဤမေးခွန်း ဆက်ပေါ်ပါသည်။ ခွင့်မပြုပါက ဤမေးခွန်းမပါဘဲ စိတ်ကြိုက်မဟုတ်သော ကြော်ငြာများသာ ပြပါသည်။ ကြော်ငြာကွန်ရက်များသည် စံစာချုပ်အပိုဒ်များ (Standard Contractual Clauses) ကဲ့သို့ ၎င်းတို့ကိုယ်ပိုင် အကာအကွယ်များအောက်တွင် ဒေတာကို အမေရိကန်နှင့် အခြားနိုင်ငံများသို့ လွှဲပြောင်းနိုင်ပါသည်။ သင့်ကို ခွဲခြားသိနိုင်သည့် မည်သည့်အရာကိုမျှ ကျွန်ုပ်တို့ မသိမ်းထားသောကြောင့် ကြော်ငြာဒေတာကို ကြည့်ရှုရန် သို့မဟုတ် ဖျက်ရန် တောင်းဆိုလိုပါက သင့်ကြော်ငြာ ID ကို ပြန်လည်သတ်မှတ်ခြင်း သို့မဟုတ် အထက်ပါ ကြော်ငြာကွန်ရက်များထံ တိုက်ရိုက် ဆက်သွယ်ခြင်းသည် အကောင်းဆုံးဖြစ်ပါသည်။</p>
@@ -2179,9 +2248,9 @@
 <p>ကျွန်ုပ်တို့သည် မည်သည့် အချက်အလက်ကိုမျှ ပြင်ပအဖွဲ့ထံ မပေး၊ မရောင်းပါ။ ငွေပေးချေမှုကို Apple နှင့် Google က ၎င်းတို့၏ မူဝါဒအတိုင်း တိုက်ရိုက် လုပ်ဆောင်ပါသည်။ သို့ရာတွင် ကြော်ငြာကွန်ရက်များက စက်မှ တိုက်ရိုက် ဖတ်ယူသော တန်ဖိုးများ (အပိုင်း 4) ကို ထိုကုမ္ပဏီများ၏ နိုင်ငံခြားရှိ ဆာဗာများသို့ ပို့ပါသည်။</p>
 <table>
 <tr><th>လက်ခံသူ</th><th>အချက်များ</th><th>ရည်ရွယ်ချက်</th></tr>
-<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>ကြော်ငြာ ID၊ စက် / OS / အက်ပ်ဗားရှင်း၊ ခန့်မှန်း နိုင်ငံနှင့် ဘာသာစကား၊ ကြော်ငြာ အပြန်အလှန်ဆက်ဆံမှု</td><td>ကြော်ငြာ ပြသခြင်းနှင့် စွမ်းဆောင်ရည် တိုင်းတာခြင်း</td></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>ကြော်ငြာ ID၊ စက် / OS / အက်ပ်ဗားရှင်း၊ ခန့်မှန်း နိုင်ငံနှင့် ဘာသာစကား၊ ကြော်ငြာ အပြန်အလှန်ဆက်ဆံမှု၊ ထည့်သွင်းထားသော အက်ပ်များ (Android)</td><td>ကြော်ငြာ ပြသခြင်း၊ စွမ်းဆောင်ရည် တိုင်းတာခြင်းနှင့် ကြော်ငြာ လိမ်လည်မှု ကာကွယ်ခြင်း</td></tr>
 </table>
-<p>မလိုလားပါက ခြေရာခံခွင့်ကို ပိတ်၍ ကြော်ငြာ ID ပေးခြင်းကို တားဆီးနိုင်ပါသည်။</p>
+<p>မလိုလားပါက iPhone တွင် ခြေရာခံခွင့်ကို ပိတ်၍ သို့မဟုတ် Android တွင် Advertising ID ကို ဖျက်၍ ကြော်ငြာ ID ပေးခြင်းကို တားဆီးနိုင်ပါသည် (အပိုင်း 4)။</p>
 
 <h2>7. သိမ်းဆည်းကာလနှင့် ဖျက်ခြင်း</h2>
 <p>ကျွန်ုပ်တို့ သိမ်းထားသော အသုံးပြုသူဒေတာ မရှိသဖြင့် ဖျက်ရန် တောင်းဆိုစရာလည်း မရှိပါ။ ကြော်ငြာကွန်ရက်များ ဖတ်ယူသော တန်ဖိုးများကို ၎င်းတို့၏ မူဝါဒအတိုင်း သိမ်းဆည်း၊ ဖျက်ပါသည်။ စက်ပေါ်ရှိ တန်ဖိုးများသည် အက်ပ်ကို ဖျက်လျှင် တစ်ပါတည်း ပျက်သွားပါသည်။ ဆက်သွယ်ရန်မှတစ်ဆင့် ရရှိသော အီးမေးလ်များကို ပြန်စာပို့ရန် လိုအပ်သည့် ကာလအတွင်းသာ သိမ်းထားပြီး ထို့နောက် ဖျက်ပါသည်။</p>
@@ -2190,7 +2259,7 @@
 <p>ဂြိုဟ်နှင့် လ မြေပုံများနှင့် ကြယ်ဒေတာကို Solar System Scope (CC BY 4.0)၊ NASA နှင့် USGS (အများပိုင်) နှင့် HYG Database (CC BY-SA 4.0) မှ ရယူထားပါသည်။ ရင်းမြစ် အပြည့်အစုံကို အက်ပ်၏ ဆက်တင် › ရင်းမြစ်များ တွင် ကြည့်နိုင်ပါသည်။</p>
 
 <h2>9. ကလေးများ</h2>
-<p>ဤအက်ပ်သည် အသက် 13 နှစ်အောက် ကလေးများကို ရည်ရွယ်ထားခြင်း မဟုတ်ဘဲ ကျွန်ုပ်တို့သည် ကလေးများ၏ ကိုယ်ရေးအချက်အလက်ကို သိလျက်နှင့် မစုဆောင်းပါ။ ခြေရာခံခွင့်ကို ပိတ်ထားလျှင် ကြော်ငြာ ID ကို စိတ်ကြိုက်ကြော်ငြာအတွက် မသုံးပါ။</p>
+<p>ဤအက်ပ်သည် အသက် 13 နှစ်အောက် ကလေးများကို ရည်ရွယ်ထားခြင်း မဟုတ်ဘဲ ကျွန်ုပ်တို့သည် ကလေးများ၏ ကိုယ်ရေးအချက်အလက်ကို သိလျက်နှင့် မစုဆောင်းပါ။ ခြေရာခံခွင့်ကို ပိတ်ထားလျှင် (iPhone) သို့မဟုတ် Advertising ID ကို ဖျက်ထားလျှင် (Android) ကြော်ငြာ ID ကို စိတ်ကြိုက်ကြော်ငြာအတွက် မသုံးပါ။</p>
 
 <h2>10. သင့်အခွင့်အရေးများ</h2>
 <p>သက်ဆိုင်ရာ ကိုယ်ရေးအချက်အလက် ကာကွယ်ရေး ဥပဒေများအရ သင့်ကိုယ်ရေးအချက်အလက်ကို ကြည့်ရှုခြင်း၊ ပြင်ဆင်ခြင်း၊ ဖျက်ခြင်း သို့မဟုတ် လုပ်ဆောင်မှု ရပ်တန့်ခြင်းကို တောင်းဆိုနိုင်ပါသည်။ သို့ရာတွင် ကျွန်ုပ်တို့ထံ ကိုယ်ရေးအချက်အလက် မရှိသဖြင့် တောင်းဆိုစရာ မရှိပါ၊ စက်ပေါ်ရှိ တန်ဖိုးများကို အက်ပ်ဖျက်ခြင်းဖြင့် အချိန်မရွေး ကိုယ်တိုင် ဖျက်နိုင်ပါသည်။</p>

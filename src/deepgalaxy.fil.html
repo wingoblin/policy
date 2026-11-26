@@ -1,6 +1,6 @@
 <h1>Patakaran sa Privacy ng Deep Galaxy</h1>
 
-<p><strong>Petsa ng bisa:</strong> Nobyembre 18, 2026<br /><strong>Makipag-ugnayan:</strong> contact@nemofactory.co.kr</p>
+<p><strong>Petsa ng bisa:</strong> Nobyembre 26, 2026<br /><strong>Makipag-ugnayan:</strong> contact@nemofactory.co.kr</p>
 
 <p><strong>Sa isang linya.</strong> Ang Deep Galaxy ay <strong>walang account, walang login, walang analytics at walang server na nag-iimbak ng impormasyon mo.</strong> Ang mga planeta, buwan, bituin at black hole ay iginuguhit sa device mo mula sa mga larawang nasa loob ng app. May <strong>rewarded ad</strong> lang na nagpe-play kapag ikaw mismo ang pumili nito papunta sa isang libreng destinasyon; nakasulat sa <strong>seksyon 4</strong> kung ano ang binabasa ng ad network. Kapag bumili ka ng <strong>Space Pro</strong>, hindi kailanman binubuksan ang mga feature ng ads.</p>
 
@@ -16,6 +16,8 @@
 <table>
 <tr><th>Pahintulot</th><th>Bakit kailangan</th></tr>
 <tr><td><strong>Pagpayag sa tracking</strong> (opsyonal, iPhone ATT)</td><td>Para magamit ang advertising identifier (IDFA) sa personalized ads (seksyon 4). Kung tatanggi ka, gagana pa rin ang buong app gaya ng dati, at makakakita ka ng karaniwang ads sa halip na personalized ads</td></tr>
+<tr><td><strong>Advertising ID</strong> (Android, ibinibigay sa pag-install)</td><td>Para mabasa ng mga ad network ang Advertising ID ng device para magpakita ng ads at sukatin ang performance nito (seksyon 4). Walang lumalabas na prompt; puwede mo itong i-reset o i-delete anumang oras sa settings ng device (seksyon 4)</td></tr>
+<tr><td><strong>Internet at network state</strong> (ibinibigay sa pag-install)</td><td>Para maabot ang app status file, ads at mga pagbili sa store (seksyon 5)</td></tr>
 </table>
 <p>Hindi ina-access ng app ang camera, mikropono, mga larawan, lokasyon, contacts, kalendaryo o impormasyong pangkalusugan, at hindi nito hinihingi ang mga pahintulot na iyon.</p>
 
@@ -23,9 +25,10 @@
 <ul>
 <li><strong>Isang lugar lang may ads</strong> — isang <strong>rewarded video ad</strong> na nagpe-play <strong>lang kapag ikaw mismo ang pumili ng "Manood ng ad"</strong> papunta sa isang libreng destinasyon (ang Araw, Mercury, Venus, Earth, ang Buwan, Mars, Jupiter at ang mga buwan ng Jupiter). Kapag pinanood mo hanggang dulo, pupunta ka roon. Walang ads na kusang lumalabas kapag binuksan ang app o lumipat ng screen, at walang banner ads.</li>
 <li><strong>Ad network</strong> — ipinapakita ang ads sa pamamagitan ng <strong>LevelPlay (dating ironSource)</strong> ng Unity; ang mga ad partner ay <strong>Unity Ads</strong>, <strong>Liftoff</strong> at <strong>Meta Audience Network</strong>.</li>
-<li><strong>Ang binabasa</strong> — ang advertising identifier (IDFA, IDFV / Advertising ID), impormasyon ng device gaya ng device, OS, bersyon ng app at wika, tinatayang bansa at lungsod batay sa IP ng koneksyon, record ng mga ad na napanood at na-tap, at mga log ng pagtakbo ng ad code. <strong>Direktang binabasa ng mga ad network ang mga value na ito mula sa device mo; hindi namin kailanman natatanggap o itinatago ang mga ito.</strong></li>
+<li><strong>Ang binabasa</strong> — ang advertising identifier (IDFA, IDFV / Android Advertising ID, App Set ID), impormasyon ng device gaya ng device, OS, bersyon ng app at wika, tinatayang bansa at lungsod batay sa IP ng koneksyon, record ng mga ad na napanood at na-tap, at mga log ng pagtakbo ng ad code. <strong>Direktang binabasa ng mga ad network ang mga value na ito mula sa device mo; hindi namin kailanman natatanggap o itinatago ang mga ito.</strong></li>
 <li><strong>Mga naka-install na app</strong> (Android) — maaaring suriin ng code ng mga provider ng advertising kung aling mga app ang naka-install sa device, upang mabilang kung humantong sa pag-install ang isang ad at upang hindi magpakita ng ad para sa mga app na mayroon na kayo. <strong>Hindi ito binabasa ng Deep Galaxy, at hindi ito kailanman nakararating sa amin.</strong></li>
 <li><strong>Pahintulot sa tracking</strong> — sa unang pagbukas ng app ng user na hindi pa bumibili ng Space Pro, lalabas nang isang beses ang <strong>App Tracking Transparency (ATT)</strong> prompt ng Apple. Kung hindi ka papayag, makakakita ka ng hindi personalized na ads at magagamit mo pa rin ang lahat ng feature. Puwede mo itong baguhin anumang oras sa <em>Settings → Privacy &amp; Security → Tracking</em>.</li>
+<li><strong>Pag-off ng Android Advertising ID</strong> — walang tracking prompt sa Android. Kung ayaw mo ng personalized ads, pumunta sa <em>Settings → Privacy → Ads</em> (sa ilang device, <em>Settings → Google → Ads</em>) at <strong>i-delete</strong> o <strong>i-reset</strong> ang Advertising ID mo. Kapag na-delete na, puro sero na lang ang matatanggap ng mga ad network sa halip na ang ID, at gagana pa rin ang lahat ng feature.</li>
 <li><strong>Pagkatapos bumili ng Space Pro</strong> — hindi binubuksan ang mga feature ng ads (ang code ng mga ad network), at hindi ipinapakita ang tracking prompt.</li>
 </ul>
 <p><strong>Mga user sa European Economic Area (EEA), UK at Switzerland</strong><br />Sa mga rehiyong ito, unang itatanong ng app sa loob mismo ng app kung puwedeng gamitin ng mga ad partner sa itaas (Unity, Liftoff, Meta) ang device mo para sa personalized ads — <strong>bago humiling ng anumang ad.</strong> Kasindali ng "Accept" ang "Decline", at alinman ang piliin mo, gumagana pa rin ang bawat feature at lumalabas pa rin ang ads; ginagawa lang ng pagtanggi na hindi personalized ang mga ito. Umaasa kami sa <strong>pahintulot mo</strong> (GDPR Art. 6(1)(a)) para sa personalized ads, at sa aming <strong>lehitimong interes</strong> (Art. 6(1)(f)) para sa pagpapakita ng hindi personalized na ads at para sa proteksyon laban sa maling paggamit ng ads (seksyon 2). Puwede mong <strong>baguhin o bawiin ang pinili mo anumang oras</strong> sa Settings ng app &gt; Ad privacy; magkakabisa ito mula sa susunod na ad request. Sa iPhone, ang ATT prompt ang unang lalabas, at susunod lang ang tanong na ito kung papayagan mo ang tracking; kung hindi, hindi personalized na ads lang ang ipapakita nang walang tanong na ito. Maaaring ilipat ng mga ad network ang data sa United States at iba pang bansa sa ilalim ng sarili nilang mga pananggalang, tulad ng Standard Contractual Clauses. Dahil wala kaming hawak na anumang nagpapakilala sa iyo, pinakamainam na gawin ang mga kahilingang i-access o i-delete ang ad data sa pamamagitan ng pag-reset ng advertising identifier mo o nang direkta sa mga ad network na nakalista sa itaas.</p>
@@ -46,9 +49,9 @@
 <p>Wala kaming ibinibigay o ibinebentang impormasyon sa third party. Direktang pinoproseso ng Apple at Google ang mga bayad ayon sa sarili nilang patakaran. Gayunman, ang mga value na direktang binabasa ng mga ad network mula sa device (seksyon 4) ay ipinapadala sa mga server ng mga kumpanyang iyon sa ibang bansa.</p>
 <table>
 <tr><th>Tatanggap</th><th>Mga item</th><th>Layunin</th></tr>
-<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Advertising identifier, device / OS / bersyon ng app, tinatayang bansa at wika, interaksyon sa ads</td><td>Pagpapakita ng ads at pagsukat ng performance</td></tr>
+<tr><td>Unity Technologies (LevelPlay / ironSource · Unity Ads), Liftoff, Meta Platforms, Inc. (Meta Audience Network)</td><td>Advertising identifier, device / OS / bersyon ng app, tinatayang bansa at wika, interaksyon sa ads, mga naka-install na app (Android)</td><td>Pagpapakita ng ads, pagsukat ng performance at pagpigil sa ad fraud</td></tr>
 </table>
-<p>Kung ayaw mo nito, patayin ang pagpayag sa tracking para hindi maibigay ang advertising identifier.</p>
+<p>Kung ayaw mo nito, patayin ang pagpayag sa tracking sa iPhone, o i-delete ang Advertising ID sa Android, para hindi maibigay ang advertising identifier (seksyon 4).</p>
 
 <h2>7. Pagtatago at pagbura</h2>
 <p>Wala kaming itinatagong data ng user, kaya walang kailangang hilingin na burahin. Ang mga value na binasa ng mga ad network ay itinatago at binubura ayon sa kanilang patakaran. Nabubura ang mga value sa device kasabay ng pagbura ng app. Ang mga email na natanggap sa pamamagitan ng Makipag-ugnayan ay itinatago lang habang kailangan para sumagot, at pagkatapos ay binubura.</p>
@@ -57,7 +60,7 @@
 <p>Ang mga mapa ng planeta at buwan at ang data ng bituin ay mula sa Solar System Scope (CC BY 4.0), NASA at USGS (public domain) at sa HYG Database (CC BY-SA 4.0). Nasa app ang buong listahan ng pinagmulan sa Settings › Mga pinagmulan.</p>
 
 <h2>9. Mga bata</h2>
-<p>Hindi para sa mga batang wala pang 13 taong gulang ang app, at hindi namin sadyang kinokolekta ang personal na impormasyon ng mga bata. Kapag naka-off ang pagpayag sa tracking, hindi ginagamit ang advertising identifier para sa personalized ads.</p>
+<p>Hindi para sa mga batang wala pang 13 taong gulang ang app, at hindi namin sadyang kinokolekta ang personal na impormasyon ng mga bata. Kapag naka-off ang pagpayag sa tracking (iPhone) o na-delete ang Advertising ID (Android), hindi ginagamit ang advertising identifier para sa personalized ads.</p>
 
 <h2>10. Ang iyong mga karapatan</h2>
 <p>Ayon sa mga naaangkop na batas sa privacy, puwede mong hilingin ang pag-access, pagtama, pagbura o pagpapahinto ng pagproseso ng personal na impormasyon mo. Gayunman, wala kaming hawak na personal na impormasyon, kaya walang mahihiling; ang mga value sa device ay puwede mong burahin mismo anumang oras sa pamamagitan ng pagbura ng app.</p>
